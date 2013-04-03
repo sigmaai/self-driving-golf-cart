@@ -13,6 +13,18 @@ This project has several different modules.
 3. Path planning
 4. Engineering
 
+Localization and other features coming soon...
+
+## Running the code
+1. Please download/clone the repository.
+2. Make sure that you have all the [dependencies](./requirements.txt) installed. 
+
+To run the autonomous software, do 
+
+`python3 drive.py`. 
+
+(Please use python3 instead of python2, because the ML models are saved in the python3 formate)
+
 ## Steering
 The software behind the steering system is largly inspired by work done by [Nvidia](https://arxiv.org/pdf/1604.07316.pdf). The hardware system is custom designed in house. Here is a video demo.
 
@@ -34,6 +46,19 @@ Understanding the work around the vehicle through segmentation, and making decis
 ## Path Planning
 
 Coming soon...
+
+## Localization
+
+Coming soon...
+
+## Development process
+We have completed phase 1 of the development process, which mainly includes:
+
+- Implementing control-by-wire system. (hardware)
+- Implement the autonomous steering system.
+- Implement the obstacle avoidence system. 
+
+For the second phase of the development process, we will focus on making the system safer and more reliable. For details, please refer to the [CHECKLIST](./CHECKLIST.md)
 
 ## Contact / Info
 If you are interested in the detailed development process of this project, you can visit Neil's blog at [neilnie.com](neilnie.com) to find out more about it. Neil will make sure to keep you posted about all of the latest development on the club. 
