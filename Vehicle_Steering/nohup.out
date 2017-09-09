@@ -1,0 +1,41 @@
+[I 02:40:29.652 NotebookApp] Writing notebook server cookie secret to /run/user/1000/jupyter/notebook_cookie_secret
+[I 02:40:30.467 NotebookApp] Serving notebooks from local directory: /home/ubuntu/ALVNS/Vehicle_Steering
+[I 02:40:30.467 NotebookApp] 0 active kernels 
+[I 02:40:30.467 NotebookApp] The Jupyter Notebook is running at: https://[all ip addresses on your system]:8888/
+[I 02:40:30.467 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[I 02:41:10.804 NotebookApp] 302 GET / (107.107.63.231) 0.80ms
+[I 02:41:11.701 NotebookApp] 302 GET /tree? (107.107.63.231) 0.95ms
+[I 02:41:18.746 NotebookApp] 302 POST /login?next=%2Ftree%3F (107.107.63.231) 2.69ms
+[I 02:41:33.900 NotebookApp] Creating new notebook in 
+[W 02:41:39.907 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170909024029 (107.107.63.231) 10.29ms referer=https://ec2-34-214-52-54.us-west-2.compute.amazonaws.com:8888/notebooks/Untitled.ipynb?kernel_name=python3
+[I 02:41:40.024 NotebookApp] Kernel started: e8342d68-e92f-477f-b308-c5be3d0786cf
+[I 02:41:40.766 NotebookApp] Adapting to protocol v5.1 for kernel e8342d68-e92f-477f-b308-c5be3d0786cf
+[I 02:43:40.362 NotebookApp] Saving file at /Vehicle_Steering_With_DenseNet.ipynb
+[I 02:45:41.057 NotebookApp] Saving file at /Vehicle_Steering_With_DenseNet.ipynb
+[I 02:46:48.453 NotebookApp] Interrupted...
+[I 02:46:48.453 NotebookApp] Shutting down kernels
+[I 02:46:48.755 NotebookApp] Kernel shutdown: e8342d68-e92f-477f-b308-c5be3d0786cf
+[I 02:47:48.530 NotebookApp] Serving notebooks from local directory: /home/ubuntu/ALVNS/Vehicle_Steering
+[I 02:47:48.530 NotebookApp] 0 active kernels 
+[I 02:47:48.531 NotebookApp] The Jupyter Notebook is running at: https://[all ip addresses on your system]:8888/
+[I 02:47:48.531 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[I 02:47:56.230 NotebookApp] Kernel started: bef2efd8-c5b6-4607-bedc-7543dd331bfd
+[I 02:47:57.083 NotebookApp] Adapting to protocol v5.1 for kernel bef2efd8-c5b6-4607-bedc-7543dd331bfd
+[I 02:49:56.720 NotebookApp] Saving file at /Vehicle_Steering_With_DenseNet.ipynb
+[I 02:51:56.782 NotebookApp] Saving file at /Vehicle_Steering_With_DenseNet.ipynb
+[I 02:53:59.256 NotebookApp] Saving file at /Vehicle_Steering_With_DenseNet.ipynb
+[I 02:54:47.060 NotebookApp] Saving file at /Vehicle_Steering_With_DenseNet.ipynb
+[I 02:54:52.489 NotebookApp] Creating new file in 
+[I 02:55:29.670 NotebookApp] Adapting to protocol v5.1 for kernel bef2efd8-c5b6-4607-bedc-7543dd331bfd
+[I 02:57:30.176 NotebookApp] Saving file at /Vehicle_Steering_With_DenseNet.ipynb
+[I 02:59:30.604 NotebookApp] Saving file at /Vehicle_Steering_With_DenseNet.ipynb
+OpenCV Error: Assertion failed (scn == 3 || scn == 4) in ipp_cvtColor, file /opt/conda/conda-bld/opencv_1491943970124/work/opencv-3.1.0/modules/imgproc/src/color.cpp, line 7341
+OpenCV Error: Assertion failed (scn == 3 || scn == 4) in ipp_cvtColor, file /opt/conda/conda-bld/opencv_1491943970124/work/opencv-3.1.0/modules/imgproc/src/color.cpp, line 7341
+[I 03:01:30.722 NotebookApp] Saving file at /Vehicle_Steering_With_DenseNet.ipynb
+OpenCV Error: Assertion failed (scn == 3 || scn == 4) in ipp_cvtColor, file /opt/conda/conda-bld/opencv_1491943970124/work/opencv-3.1.0/modules/imgproc/src/color.cpp, line 7341
+[I 03:03:30.518 NotebookApp] Saving file at /Vehicle_Steering_With_DenseNet.ipynb
+[I 03:05:29.917 NotebookApp] Saving file at /Vehicle_Steering_With_DenseNet.ipynb
+[I 03:05:41.609 NotebookApp] Saving file at /Vehicle_Steering_With_DenseNet.ipynb
+[I 03:05:51.816 NotebookApp] Interrupted...
+[I 03:05:51.816 NotebookApp] Shutting down kernels
+[I 03:05:52.418 NotebookApp] Kernel shutdown: bef2efd8-c5b6-4607-bedc-7543dd331bfd

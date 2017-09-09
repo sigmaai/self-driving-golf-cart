@@ -1,0 +1,15 @@
+[I 19:59:24.956 NotebookApp] Writing notebook server cookie secret to /run/user/1000/jupyter/notebook_cookie_secret
+[I 19:59:25.984 NotebookApp] Serving notebooks from local directory: /home/ubuntu/ALVNS/DenseNet
+[I 19:59:25.984 NotebookApp] 0 active kernels 
+[I 19:59:25.984 NotebookApp] The Jupyter Notebook is running at: https://[all ip addresses on your system]:8888/
+[I 19:59:25.984 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[I 19:59:46.849 NotebookApp] 302 GET / (71.234.179.0) 0.74ms
+[I 19:59:46.954 NotebookApp] 302 GET /tree? (71.234.179.0) 0.98ms
+[I 19:59:49.554 NotebookApp] 302 POST /login?next=%2Ftree%3F (71.234.179.0) 6.25ms
+[I 19:59:53.030 NotebookApp] Creating new notebook in 
+[W 19:59:53.826 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170904195924 (71.234.179.0) 9.90ms referer=https://ec2-35-166-170-255.us-west-2.compute.amazonaws.com:8888/notebooks/Untitled.ipynb?kernel_name=python3
+[I 19:59:53.931 NotebookApp] Kernel started: 19c085c2-cef0-4fa6-922d-66aac5e91b85
+[I 19:59:54.763 NotebookApp] Adapting to protocol v5.1 for kernel 19c085c2-cef0-4fa6-922d-66aac5e91b85
+[I 20:01:13.045 NotebookApp] Interrupted...
+[I 20:01:13.045 NotebookApp] Shutting down kernels
+[I 20:01:13.346 NotebookApp] Kernel shutdown: 19c085c2-cef0-4fa6-922d-66aac5e91b85
