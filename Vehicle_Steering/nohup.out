@@ -39,3 +39,121 @@ OpenCV Error: Assertion failed (scn == 3 || scn == 4) in ipp_cvtColor, file /opt
 [I 03:05:51.816 NotebookApp] Interrupted...
 [I 03:05:51.816 NotebookApp] Shutting down kernels
 [I 03:05:52.418 NotebookApp] Kernel shutdown: bef2efd8-c5b6-4607-bedc-7543dd331bfd
+[I 23:00:02.141 NotebookApp] Writing notebook server cookie secret to /run/user/1000/jupyter/notebook_cookie_secret
+[I 23:00:02.943 NotebookApp] Serving notebooks from local directory: /home/ubuntu/ALVNS/Vehicle_Steering
+[I 23:00:02.943 NotebookApp] 0 active kernels 
+[I 23:00:02.943 NotebookApp] The Jupyter Notebook is running at: https://[all ip addresses on your system]:8888/
+[I 23:00:02.943 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[I 23:00:44.244 NotebookApp] 302 GET / (166.172.61.88) 0.63ms
+[I 23:00:44.374 NotebookApp] 302 GET /tree? (166.172.61.88) 0.89ms
+[W 23:00:53.338 NotebookApp] 401 POST /login?next=%2Ftree%3F (166.172.61.88) 1.59ms referer=https://ec2-34-210-140-192.us-west-2.compute.amazonaws.com:8888/login?next=%2Ftree%3F
+[W 23:00:53.483 NotebookApp] 404 GET /apple-touch-icon-precomposed.png (166.172.61.88) 8.59ms referer=None
+[W 23:00:53.631 NotebookApp] 404 GET /apple-touch-icon.png (166.172.61.88) 1.03ms referer=None
+[W 23:00:54.006 NotebookApp] 404 GET /apple-touch-icon-precomposed.png (166.172.61.88) 1.37ms referer=None
+[W 23:00:54.151 NotebookApp] 404 GET /apple-touch-icon.png (166.172.61.88) 1.35ms referer=None
+[W 23:00:55.279 NotebookApp] 404 GET /apple-touch-icon-precomposed.png (166.172.61.88) 1.25ms referer=None
+[W 23:00:55.407 NotebookApp] 404 GET /apple-touch-icon.png (166.172.61.88) 1.28ms referer=None
+[W 23:00:55.521 NotebookApp] 401 POST /login?next=%2Ftree%3F (166.172.61.88) 1.33ms referer=https://ec2-34-210-140-192.us-west-2.compute.amazonaws.com:8888/login?next=%2Ftree%3F
+[W 23:00:56.670 NotebookApp] 401 POST /login?next=%2Ftree%3F (166.172.61.88) 2.46ms referer=https://ec2-34-210-140-192.us-west-2.compute.amazonaws.com:8888/login?next=%2Ftree%3F
+[W 23:00:56.965 NotebookApp] 404 GET /apple-touch-icon-precomposed.png (166.172.61.88) 1.03ms referer=None
+[W 23:00:57.113 NotebookApp] 404 GET /apple-touch-icon.png (166.172.61.88) 1.04ms referer=None
+[I 23:00:58.359 NotebookApp] 302 POST /login?next=%2Ftree%3F (166.172.61.88) 1.47ms
+[W 23:01:06.815 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170910230002 (166.172.61.88) 3.40ms referer=https://ec2-34-210-140-192.us-west-2.compute.amazonaws.com:8888/notebooks/Vehicle_Steering_With_DenseNet.ipynb
+[I 23:01:07.180 NotebookApp] Kernel started: 9e30b977-58c4-4cc7-9c11-c36365c84811
+[I 23:01:07.926 NotebookApp] Adapting to protocol v5.1 for kernel 9e30b977-58c4-4cc7-9c11-c36365c84811
+[I 23:03:09.261 NotebookApp] Saving file at /Vehicle_Steering_With_DenseNet.ipynb
+[W 23:13:32.264 NotebookApp] Replacing stale connection: 9e30b977-58c4-4cc7-9c11-c36365c84811:C29DDF38B6744ACDBF7EAE814E38B0AD
+[I 23:13:32.656 NotebookApp] Adapting to protocol v5.1 for kernel 9e30b977-58c4-4cc7-9c11-c36365c84811
+[W 23:35:32.658 NotebookApp] WebSocket ping timeout after 119863 ms.
+[I 23:36:03.708 NotebookApp] The port 8888 is already in use, trying another port.
+[I 23:36:03.716 NotebookApp] Serving notebooks from local directory: /home/ubuntu/ALVNS/Vehicle_Steering
+[I 23:36:03.716 NotebookApp] 0 active kernels 
+[I 23:36:03.716 NotebookApp] The Jupyter Notebook is running at: https://[all ip addresses on your system]:8889/
+[I 23:36:03.716 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[I 23:36:36.002 NotebookApp] 302 POST /login?next=%2Ftree%3F (166.172.61.88) 1.18ms
+[W 23:36:42.521 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170910230002 (166.172.61.88) 1.25ms referer=https://52.10.94.211:8888/notebooks/Vehicle_Steering_With_DenseNet.ipynb
+[I 23:36:43.817 NotebookApp] Adapting to protocol v5.1 for kernel 9e30b977-58c4-4cc7-9c11-c36365c84811
+[I 23:37:25.484 NotebookApp] Interrupted...
+[I 23:37:25.485 NotebookApp] Shutting down kernels
+[W 23:43:31.772 NotebookApp] Replacing stale connection: 9e30b977-58c4-4cc7-9c11-c36365c84811:EDF5D1F71CE44A9DBEA0FFA90CA4D10D
+[I 23:43:32.059 NotebookApp] Adapting to protocol v5.1 for kernel 9e30b977-58c4-4cc7-9c11-c36365c84811
+[I 00:18:31.404 NotebookApp] The port 8888 is already in use, trying another port.
+[I 00:18:31.412 NotebookApp] Serving notebooks from local directory: /home/ubuntu/ALVNS/Vehicle_Steering
+[I 00:18:31.412 NotebookApp] 0 active kernels 
+[I 00:18:31.412 NotebookApp] The Jupyter Notebook is running at: https://[all ip addresses on your system]:8889/
+[I 00:18:31.412 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[I 00:19:44.402 NotebookApp] Interrupted...
+[I 00:19:44.403 NotebookApp] Shutting down kernels
+[W 00:24:15.940 NotebookApp] SSL Error on 9 ('166.171.185.128', 55348): [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:645)
+[W 00:24:16.071 NotebookApp] SSL Error on 8 ('166.171.185.128', 3547): [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:645)
+[W 00:24:16.350 NotebookApp] SSL Error on 8 ('166.171.185.128', 29939): [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:645)
+[W 00:24:16.748 NotebookApp] SSL Error on 8 ('166.171.185.128', 11949): [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:645)
+[W 00:25:43.950 NotebookApp] SSL Error on 9 ('166.171.185.128', 46773): [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:645)
+[W 00:25:44.089 NotebookApp] SSL Error on 8 ('166.171.185.128', 1587): [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:645)
+[W 00:25:44.351 NotebookApp] SSL Error on 8 ('166.171.185.128', 42225): [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:645)
+[W 00:25:49.669 NotebookApp] SSL Error on 8 ('166.171.185.128', 57073): [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:645)
+[I 00:26:07.451 NotebookApp] 302 GET / (166.171.185.128) 0.47ms
+[I 00:26:07.591 NotebookApp] 302 GET /tree? (166.171.185.128) 0.57ms
+[I 00:26:20.422 NotebookApp] 302 POST /login?next=%2Ftree%3F (166.171.185.128) 1.09ms
+[W 00:26:32.434 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170910230002 (166.171.185.128) 1.33ms referer=https://52.10.94.211:8888/notebooks/Vehicle_Steering_With_DenseNet.ipynb
+[I 00:26:34.313 NotebookApp] Adapting to protocol v5.1 for kernel 9e30b977-58c4-4cc7-9c11-c36365c84811
+[I 00:28:33.826 NotebookApp] Saving file at /Vehicle_Steering_With_DenseNet.ipynb
+[I 00:29:26.474 NotebookApp] The port 8888 is already in use, trying another port.
+[I 00:29:26.492 NotebookApp] Serving notebooks from local directory: /home/ubuntu/ALVNS/Vehicle_Steering
+[I 00:29:26.492 NotebookApp] 0 active kernels 
+[I 00:29:26.492 NotebookApp] The Jupyter Notebook is running at: https://[all ip addresses on your system]:8889/
+[I 00:29:26.492 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[I 00:29:34.970 NotebookApp] 302 GET / (166.171.185.128) 0.44ms
+[W 00:29:48.515 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170910230002 (166.171.185.128) 1.38ms referer=https://52.10.94.211:8888/notebooks/Vehicle_Steering_With_DenseNet.ipynb
+[I 00:29:50.343 NotebookApp] Adapting to protocol v5.1 for kernel 9e30b977-58c4-4cc7-9c11-c36365c84811
+[I 00:30:02.063 NotebookApp] Interrupted...
+[I 00:30:02.064 NotebookApp] Shutting down kernels
+[I 00:33:23.102 NotebookApp] The port 8888 is already in use, trying another port.
+[I 00:33:23.112 NotebookApp] Serving notebooks from local directory: /home/ubuntu/ALVNS/Vehicle_Steering
+[I 00:33:23.112 NotebookApp] 0 active kernels 
+[I 00:33:23.112 NotebookApp] The Jupyter Notebook is running at: https://[all ip addresses on your system]:8889/
+[I 00:33:23.112 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[I 00:33:26.100 NotebookApp] 302 GET / (166.171.185.128) 0.47ms
+[W 00:33:34.794 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170910230002 (166.171.185.128) 1.48ms referer=https://52.10.94.211:8888/notebooks/Vehicle_Steering_With_DenseNet.ipynb
+[I 00:33:36.714 NotebookApp] Adapting to protocol v5.1 for kernel 9e30b977-58c4-4cc7-9c11-c36365c84811
+[I 00:33:52.504 NotebookApp] Interrupted...
+[I 00:33:52.504 NotebookApp] Shutting down kernels
+[C 00:34:46.320 NotebookApp] received signal 15, stopping
+[I 00:34:46.321 NotebookApp] Shutting down kernels
+[I 00:34:46.422 NotebookApp] Kernel shutdown: 9e30b977-58c4-4cc7-9c11-c36365c84811
+[I 01:04:57.771 NotebookApp] Serving notebooks from local directory: /home/ubuntu/ALVNS/Vehicle_Steering
+[I 01:04:57.772 NotebookApp] 0 active kernels 
+[I 01:04:57.772 NotebookApp] The Jupyter Notebook is running at: https://[all ip addresses on your system]:8888/
+[I 01:04:57.772 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[I 01:05:16.726 NotebookApp] 302 GET / (166.171.185.128) 0.76ms
+[I 01:05:33.955 NotebookApp] Kernel started: 4918cd07-a419-46ee-856d-db3d356ff400
+[I 01:05:35.209 NotebookApp] Adapting to protocol v5.1 for kernel 4918cd07-a419-46ee-856d-db3d356ff400
+[I 01:07:34.616 NotebookApp] Saving file at /Vehicle_Steering_With_DenseNet.ipynb
+OpenCV Error: Assertion failed (scn == 3 || scn == 4) in ipp_cvtColor, file /opt/conda/conda-bld/opencv_1491943970124/work/opencv-3.1.0/modules/imgproc/src/color.cpp, line 7341
+[I 01:09:34.115 NotebookApp] Saving file at /Vehicle_Steering_With_DenseNet.ipynb
+[I 01:10:53.045 NotebookApp] Kernel started: 4df79d14-ade3-4471-9e1e-14ec4e97789a
+[I 01:10:55.332 NotebookApp] Adapting to protocol v5.1 for kernel 4df79d14-ade3-4471-9e1e-14ec4e97789a
+[I 01:13:02.592 NotebookApp] Adapting to protocol v5.1 for kernel 4918cd07-a419-46ee-856d-db3d356ff400
+[W 01:19:32.593 NotebookApp] WebSocket ping timeout after 119815 ms.
+[W 11:32:55.280 NotebookApp] SSL Error on 9 ('91.196.50.33', 49341): [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:748)
+[W 22:01:57.064 NotebookApp] SSL Error on 9 ('216.158.238.186', 65535): [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:748)
+[W 05:01:11.396 NotebookApp] SSL Error on 9 ('91.196.50.33', 46062): [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:748)
+[W 06:17:32.211 NotebookApp] SSL Error on 9 ('212.92.105.117', 50273): [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:748)
+[W 06:43:52.652 NotebookApp] SSL Error on 9 ('212.92.105.117', 52360): [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:748)
+[W 21:42:01.508 NotebookApp] SSL Error on 9 ('188.92.74.16', 427): [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:748)
+[W 01:07:24.130 NotebookApp] SSL Error on 9 ('91.196.50.33', 35005): [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:748)
+[W 06:20:13.691 NotebookApp] SSL Error on 9 ('122.228.210.156', 54007): [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:748)
+[W 06:20:14.245 NotebookApp] SSL Error on 9 ('122.228.210.156', 54536): [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:748)
+[W 06:20:14.801 NotebookApp] SSL Error on 9 ('122.228.210.156', 55205): [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:748)
+[W 06:20:15.353 NotebookApp] SSL Error on 9 ('122.228.210.156', 56251): [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:748)
+[W 06:20:15.904 NotebookApp] SSL Error on 9 ('122.228.210.156', 57084): [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:748)
+[W 06:20:16.493 NotebookApp] SSL Error on 9 ('122.228.210.156', 57720): [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:748)
+[W 06:20:17.044 NotebookApp] SSL Error on 9 ('122.228.210.156', 58561): [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:748)
+[W 06:20:17.605 NotebookApp] SSL Error on 9 ('122.228.210.156', 59179): [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:748)
+[W 06:20:18.156 NotebookApp] SSL Error on 9 ('122.228.210.156', 59684): [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:748)
+[W 15:45:39.566 NotebookApp] SSL Error on 9 ('196.52.43.53', 10000): [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:748)
+[W 21:04:47.415 NotebookApp] SSL Error on 9 ('91.196.50.33', 35764): [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:748)
+[C 21:05:54.104 NotebookApp] received signal 15, stopping
+[I 21:05:54.105 NotebookApp] Shutting down kernels
+[I 21:05:54.206 NotebookApp] Kernel shutdown: 4918cd07-a419-46ee-856d-db3d356ff400
+[I 21:05:54.207 NotebookApp] Kernel shutdown: 4df79d14-ade3-4471-9e1e-14ec4e97789a
