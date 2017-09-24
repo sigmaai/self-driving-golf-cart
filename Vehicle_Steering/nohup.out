@@ -157,3 +157,545 @@ OpenCV Error: Assertion failed (scn == 3 || scn == 4) in ipp_cvtColor, file /opt
 [I 21:05:54.105 NotebookApp] Shutting down kernels
 [I 21:05:54.206 NotebookApp] Kernel shutdown: 4918cd07-a419-46ee-856d-db3d356ff400
 [I 21:05:54.207 NotebookApp] Kernel shutdown: 4df79d14-ade3-4471-9e1e-14ec4e97789a
+[I 18:59:05.169 NotebookApp] Serving notebooks from local directory: /home/ubuntu/ALVNS/Vehicle_Steering
+[I 18:59:05.170 NotebookApp] 0 active kernels 
+[I 18:59:05.170 NotebookApp] The Jupyter Notebook is running at: https://[all ip addresses on your system]:8888/
+[I 18:59:05.170 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 19:01:31.129 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170922185904 (192.40.59.112) 13.58ms referer=https://ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888/notebooks/Vehicle_Steering_With_DenseNet.ipynb
+[I 19:03:44.375 NotebookApp] Kernel started: 2132049e-4759-4cf6-aa01-fc44eba843a4
+[I 19:03:45.905 NotebookApp] Adapting to protocol v5.1 for kernel 2132049e-4759-4cf6-aa01-fc44eba843a4
+2017-09-22 19:04:20.964949: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-09-22 19:04:20.965015: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-09-22 19:04:20.965026: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-09-22 19:04:21.336956: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:893] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2017-09-22 19:04:21.337258: I tensorflow/core/common_runtime/gpu/gpu_device.cc:940] Found device 0 with properties: 
+name: GRID K520
+major: 3 minor: 0 memoryClockRate (GHz) 0.797
+pciBusID 0000:00:03.0
+Total memory: 3.94GiB
+Free memory: 3.90GiB
+2017-09-22 19:04:21.337287: I tensorflow/core/common_runtime/gpu/gpu_device.cc:961] DMA: 0 
+2017-09-22 19:04:21.337297: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   Y 
+2017-09-22 19:04:21.337310: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GRID K520, pci bus id: 0000:00:03.0)
+2017-09-22 19:04:33.506644: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:247] PoolAllocator: After 3797 get requests, put_count=3770 evicted_count=1000 eviction_rate=0.265252 and unsatisfied allocation rate=0.296813
+2017-09-22 19:04:33.506709: I tensorflow/core/common_runtime/gpu/pool_allocator.cc:259] Raising pool_size_limit_ from 100 to 110
+[W 19:05:15.906 NotebookApp] WebSocket ping timeout after 90000 ms.
+[E 19:05:16.006 NotebookApp] Uncaught exception GET /api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=A6748AE939A1488289767BC1FA9E4108 (192.40.59.112)
+    HTTPServerRequest(protocol='https', host='ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', method='GET', uri='/api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=A6748AE939A1488289767BC1FA9E4108', version='HTTP/1.1', remote_ip='192.40.59.112', headers={'Upgrade': 'websocket', 'Connection': 'Upgrade', 'Host': 'ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Origin': 'https://ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Cookie': 'username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888="2|1:0|10:1506106702|64:username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888|44:YmFiNWIyYTM4ZmQwNDA3MDkyMWJjOTUwNjI2OWQ5NzA=|1c53a5a7b690532dbb59491e5be8c4b02c84921c281a5a5ada658ca314b5ef74"; _xsrf=2|2e5bd9d4|4951bae078b62dea79dfd87531f72f35|1506106693', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Sec-Websocket-Key': 'pcDIbDH6xE/k259Abaq2rQ==', 'Sec-Websocket-Version': '13', 'Sec-Websocket-Extensions': 'x-webkit-deflate-frame', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38'})
+    Traceback (most recent call last):
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/web.py", line 1467, in _stack_context_handle_exception
+        raise_exc_info((type, value, traceback))
+      File "<string>", line 4, in raise_exc_info
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/stack_context.py", line 316, in wrapped
+        ret = fn(*args, **kwargs)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 191, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 392, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/base/zmqhandlers.py", line 258, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/websocket.py", line 249, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+[E 19:05:16.353 NotebookApp] Uncaught exception GET /api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=A6748AE939A1488289767BC1FA9E4108 (192.40.59.112)
+    HTTPServerRequest(protocol='https', host='ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', method='GET', uri='/api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=A6748AE939A1488289767BC1FA9E4108', version='HTTP/1.1', remote_ip='192.40.59.112', headers={'Upgrade': 'websocket', 'Connection': 'Upgrade', 'Host': 'ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Origin': 'https://ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Cookie': 'username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888="2|1:0|10:1506106702|64:username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888|44:YmFiNWIyYTM4ZmQwNDA3MDkyMWJjOTUwNjI2OWQ5NzA=|1c53a5a7b690532dbb59491e5be8c4b02c84921c281a5a5ada658ca314b5ef74"; _xsrf=2|2e5bd9d4|4951bae078b62dea79dfd87531f72f35|1506106693', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Sec-Websocket-Key': 'pcDIbDH6xE/k259Abaq2rQ==', 'Sec-Websocket-Version': '13', 'Sec-Websocket-Extensions': 'x-webkit-deflate-frame', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38'})
+    Traceback (most recent call last):
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/web.py", line 1467, in _stack_context_handle_exception
+        raise_exc_info((type, value, traceback))
+      File "<string>", line 4, in raise_exc_info
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/stack_context.py", line 316, in wrapped
+        ret = fn(*args, **kwargs)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 191, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 392, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/base/zmqhandlers.py", line 258, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/websocket.py", line 249, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+[E 19:05:16.699 NotebookApp] Uncaught exception GET /api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=A6748AE939A1488289767BC1FA9E4108 (192.40.59.112)
+    HTTPServerRequest(protocol='https', host='ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', method='GET', uri='/api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=A6748AE939A1488289767BC1FA9E4108', version='HTTP/1.1', remote_ip='192.40.59.112', headers={'Upgrade': 'websocket', 'Connection': 'Upgrade', 'Host': 'ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Origin': 'https://ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Cookie': 'username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888="2|1:0|10:1506106702|64:username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888|44:YmFiNWIyYTM4ZmQwNDA3MDkyMWJjOTUwNjI2OWQ5NzA=|1c53a5a7b690532dbb59491e5be8c4b02c84921c281a5a5ada658ca314b5ef74"; _xsrf=2|2e5bd9d4|4951bae078b62dea79dfd87531f72f35|1506106693', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Sec-Websocket-Key': 'pcDIbDH6xE/k259Abaq2rQ==', 'Sec-Websocket-Version': '13', 'Sec-Websocket-Extensions': 'x-webkit-deflate-frame', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38'})
+    Traceback (most recent call last):
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/web.py", line 1467, in _stack_context_handle_exception
+        raise_exc_info((type, value, traceback))
+      File "<string>", line 4, in raise_exc_info
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/stack_context.py", line 316, in wrapped
+        ret = fn(*args, **kwargs)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 191, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 392, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/base/zmqhandlers.py", line 258, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/websocket.py", line 249, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+[E 19:05:17.045 NotebookApp] Uncaught exception GET /api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=A6748AE939A1488289767BC1FA9E4108 (192.40.59.112)
+    HTTPServerRequest(protocol='https', host='ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', method='GET', uri='/api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=A6748AE939A1488289767BC1FA9E4108', version='HTTP/1.1', remote_ip='192.40.59.112', headers={'Upgrade': 'websocket', 'Connection': 'Upgrade', 'Host': 'ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Origin': 'https://ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Cookie': 'username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888="2|1:0|10:1506106702|64:username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888|44:YmFiNWIyYTM4ZmQwNDA3MDkyMWJjOTUwNjI2OWQ5NzA=|1c53a5a7b690532dbb59491e5be8c4b02c84921c281a5a5ada658ca314b5ef74"; _xsrf=2|2e5bd9d4|4951bae078b62dea79dfd87531f72f35|1506106693', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Sec-Websocket-Key': 'pcDIbDH6xE/k259Abaq2rQ==', 'Sec-Websocket-Version': '13', 'Sec-Websocket-Extensions': 'x-webkit-deflate-frame', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38'})
+    Traceback (most recent call last):
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/web.py", line 1467, in _stack_context_handle_exception
+        raise_exc_info((type, value, traceback))
+      File "<string>", line 4, in raise_exc_info
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/stack_context.py", line 316, in wrapped
+        ret = fn(*args, **kwargs)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 191, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 392, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/base/zmqhandlers.py", line 258, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/websocket.py", line 249, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+[E 19:05:17.393 NotebookApp] Uncaught exception GET /api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=A6748AE939A1488289767BC1FA9E4108 (192.40.59.112)
+    HTTPServerRequest(protocol='https', host='ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', method='GET', uri='/api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=A6748AE939A1488289767BC1FA9E4108', version='HTTP/1.1', remote_ip='192.40.59.112', headers={'Upgrade': 'websocket', 'Connection': 'Upgrade', 'Host': 'ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Origin': 'https://ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Cookie': 'username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888="2|1:0|10:1506106702|64:username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888|44:YmFiNWIyYTM4ZmQwNDA3MDkyMWJjOTUwNjI2OWQ5NzA=|1c53a5a7b690532dbb59491e5be8c4b02c84921c281a5a5ada658ca314b5ef74"; _xsrf=2|2e5bd9d4|4951bae078b62dea79dfd87531f72f35|1506106693', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Sec-Websocket-Key': 'pcDIbDH6xE/k259Abaq2rQ==', 'Sec-Websocket-Version': '13', 'Sec-Websocket-Extensions': 'x-webkit-deflate-frame', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38'})
+    Traceback (most recent call last):
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/web.py", line 1467, in _stack_context_handle_exception
+        raise_exc_info((type, value, traceback))
+      File "<string>", line 4, in raise_exc_info
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/stack_context.py", line 316, in wrapped
+        ret = fn(*args, **kwargs)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 191, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 392, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/base/zmqhandlers.py", line 258, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/websocket.py", line 249, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+[E 19:05:17.738 NotebookApp] Uncaught exception GET /api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=A6748AE939A1488289767BC1FA9E4108 (192.40.59.112)
+    HTTPServerRequest(protocol='https', host='ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', method='GET', uri='/api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=A6748AE939A1488289767BC1FA9E4108', version='HTTP/1.1', remote_ip='192.40.59.112', headers={'Upgrade': 'websocket', 'Connection': 'Upgrade', 'Host': 'ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Origin': 'https://ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Cookie': 'username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888="2|1:0|10:1506106702|64:username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888|44:YmFiNWIyYTM4ZmQwNDA3MDkyMWJjOTUwNjI2OWQ5NzA=|1c53a5a7b690532dbb59491e5be8c4b02c84921c281a5a5ada658ca314b5ef74"; _xsrf=2|2e5bd9d4|4951bae078b62dea79dfd87531f72f35|1506106693', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Sec-Websocket-Key': 'pcDIbDH6xE/k259Abaq2rQ==', 'Sec-Websocket-Version': '13', 'Sec-Websocket-Extensions': 'x-webkit-deflate-frame', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38'})
+    Traceback (most recent call last):
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/web.py", line 1467, in _stack_context_handle_exception
+        raise_exc_info((type, value, traceback))
+      File "<string>", line 4, in raise_exc_info
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/stack_context.py", line 316, in wrapped
+        ret = fn(*args, **kwargs)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 191, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 392, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/base/zmqhandlers.py", line 258, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/websocket.py", line 249, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+[E 19:05:18.085 NotebookApp] Uncaught exception GET /api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=A6748AE939A1488289767BC1FA9E4108 (192.40.59.112)
+    HTTPServerRequest(protocol='https', host='ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', method='GET', uri='/api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=A6748AE939A1488289767BC1FA9E4108', version='HTTP/1.1', remote_ip='192.40.59.112', headers={'Upgrade': 'websocket', 'Connection': 'Upgrade', 'Host': 'ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Origin': 'https://ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Cookie': 'username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888="2|1:0|10:1506106702|64:username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888|44:YmFiNWIyYTM4ZmQwNDA3MDkyMWJjOTUwNjI2OWQ5NzA=|1c53a5a7b690532dbb59491e5be8c4b02c84921c281a5a5ada658ca314b5ef74"; _xsrf=2|2e5bd9d4|4951bae078b62dea79dfd87531f72f35|1506106693', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Sec-Websocket-Key': 'pcDIbDH6xE/k259Abaq2rQ==', 'Sec-Websocket-Version': '13', 'Sec-Websocket-Extensions': 'x-webkit-deflate-frame', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38'})
+    Traceback (most recent call last):
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/web.py", line 1467, in _stack_context_handle_exception
+        raise_exc_info((type, value, traceback))
+      File "<string>", line 4, in raise_exc_info
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/stack_context.py", line 316, in wrapped
+        ret = fn(*args, **kwargs)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 191, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 392, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/base/zmqhandlers.py", line 258, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/websocket.py", line 249, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+[E 19:05:18.432 NotebookApp] Uncaught exception GET /api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=A6748AE939A1488289767BC1FA9E4108 (192.40.59.112)
+    HTTPServerRequest(protocol='https', host='ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', method='GET', uri='/api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=A6748AE939A1488289767BC1FA9E4108', version='HTTP/1.1', remote_ip='192.40.59.112', headers={'Upgrade': 'websocket', 'Connection': 'Upgrade', 'Host': 'ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Origin': 'https://ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Cookie': 'username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888="2|1:0|10:1506106702|64:username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888|44:YmFiNWIyYTM4ZmQwNDA3MDkyMWJjOTUwNjI2OWQ5NzA=|1c53a5a7b690532dbb59491e5be8c4b02c84921c281a5a5ada658ca314b5ef74"; _xsrf=2|2e5bd9d4|4951bae078b62dea79dfd87531f72f35|1506106693', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Sec-Websocket-Key': 'pcDIbDH6xE/k259Abaq2rQ==', 'Sec-Websocket-Version': '13', 'Sec-Websocket-Extensions': 'x-webkit-deflate-frame', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38'})
+    Traceback (most recent call last):
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/web.py", line 1467, in _stack_context_handle_exception
+        raise_exc_info((type, value, traceback))
+      File "<string>", line 4, in raise_exc_info
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/stack_context.py", line 316, in wrapped
+        ret = fn(*args, **kwargs)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 191, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 392, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/base/zmqhandlers.py", line 258, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/websocket.py", line 249, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+[E 19:05:18.779 NotebookApp] Uncaught exception GET /api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=A6748AE939A1488289767BC1FA9E4108 (192.40.59.112)
+    HTTPServerRequest(protocol='https', host='ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', method='GET', uri='/api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=A6748AE939A1488289767BC1FA9E4108', version='HTTP/1.1', remote_ip='192.40.59.112', headers={'Upgrade': 'websocket', 'Connection': 'Upgrade', 'Host': 'ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Origin': 'https://ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Cookie': 'username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888="2|1:0|10:1506106702|64:username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888|44:YmFiNWIyYTM4ZmQwNDA3MDkyMWJjOTUwNjI2OWQ5NzA=|1c53a5a7b690532dbb59491e5be8c4b02c84921c281a5a5ada658ca314b5ef74"; _xsrf=2|2e5bd9d4|4951bae078b62dea79dfd87531f72f35|1506106693', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Sec-Websocket-Key': 'pcDIbDH6xE/k259Abaq2rQ==', 'Sec-Websocket-Version': '13', 'Sec-Websocket-Extensions': 'x-webkit-deflate-frame', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38'})
+    Traceback (most recent call last):
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/web.py", line 1467, in _stack_context_handle_exception
+        raise_exc_info((type, value, traceback))
+      File "<string>", line 4, in raise_exc_info
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/stack_context.py", line 316, in wrapped
+        ret = fn(*args, **kwargs)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 191, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 392, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/base/zmqhandlers.py", line 258, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/websocket.py", line 249, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+[E 19:05:19.124 NotebookApp] Uncaught exception GET /api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=A6748AE939A1488289767BC1FA9E4108 (192.40.59.112)
+    HTTPServerRequest(protocol='https', host='ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', method='GET', uri='/api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=A6748AE939A1488289767BC1FA9E4108', version='HTTP/1.1', remote_ip='192.40.59.112', headers={'Upgrade': 'websocket', 'Connection': 'Upgrade', 'Host': 'ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Origin': 'https://ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Cookie': 'username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888="2|1:0|10:1506106702|64:username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888|44:YmFiNWIyYTM4ZmQwNDA3MDkyMWJjOTUwNjI2OWQ5NzA=|1c53a5a7b690532dbb59491e5be8c4b02c84921c281a5a5ada658ca314b5ef74"; _xsrf=2|2e5bd9d4|4951bae078b62dea79dfd87531f72f35|1506106693', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Sec-Websocket-Key': 'pcDIbDH6xE/k259Abaq2rQ==', 'Sec-Websocket-Version': '13', 'Sec-Websocket-Extensions': 'x-webkit-deflate-frame', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38'})
+    Traceback (most recent call last):
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/web.py", line 1467, in _stack_context_handle_exception
+        raise_exc_info((type, value, traceback))
+      File "<string>", line 4, in raise_exc_info
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/stack_context.py", line 316, in wrapped
+        ret = fn(*args, **kwargs)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 191, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 392, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/base/zmqhandlers.py", line 258, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/websocket.py", line 249, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+[E 19:05:19.472 NotebookApp] Uncaught exception GET /api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=A6748AE939A1488289767BC1FA9E4108 (192.40.59.112)
+    HTTPServerRequest(protocol='https', host='ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', method='GET', uri='/api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=A6748AE939A1488289767BC1FA9E4108', version='HTTP/1.1', remote_ip='192.40.59.112', headers={'Upgrade': 'websocket', 'Connection': 'Upgrade', 'Host': 'ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Origin': 'https://ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Cookie': 'username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888="2|1:0|10:1506106702|64:username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888|44:YmFiNWIyYTM4ZmQwNDA3MDkyMWJjOTUwNjI2OWQ5NzA=|1c53a5a7b690532dbb59491e5be8c4b02c84921c281a5a5ada658ca314b5ef74"; _xsrf=2|2e5bd9d4|4951bae078b62dea79dfd87531f72f35|1506106693', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Sec-Websocket-Key': 'pcDIbDH6xE/k259Abaq2rQ==', 'Sec-Websocket-Version': '13', 'Sec-Websocket-Extensions': 'x-webkit-deflate-frame', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38'})
+    Traceback (most recent call last):
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/web.py", line 1467, in _stack_context_handle_exception
+        raise_exc_info((type, value, traceback))
+      File "<string>", line 4, in raise_exc_info
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/stack_context.py", line 316, in wrapped
+        ret = fn(*args, **kwargs)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 191, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 392, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/base/zmqhandlers.py", line 258, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/websocket.py", line 249, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+[E 19:05:19.818 NotebookApp] Uncaught exception GET /api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=A6748AE939A1488289767BC1FA9E4108 (192.40.59.112)
+    HTTPServerRequest(protocol='https', host='ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', method='GET', uri='/api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=A6748AE939A1488289767BC1FA9E4108', version='HTTP/1.1', remote_ip='192.40.59.112', headers={'Upgrade': 'websocket', 'Connection': 'Upgrade', 'Host': 'ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Origin': 'https://ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Cookie': 'username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888="2|1:0|10:1506106702|64:username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888|44:YmFiNWIyYTM4ZmQwNDA3MDkyMWJjOTUwNjI2OWQ5NzA=|1c53a5a7b690532dbb59491e5be8c4b02c84921c281a5a5ada658ca314b5ef74"; _xsrf=2|2e5bd9d4|4951bae078b62dea79dfd87531f72f35|1506106693', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Sec-Websocket-Key': 'pcDIbDH6xE/k259Abaq2rQ==', 'Sec-Websocket-Version': '13', 'Sec-Websocket-Extensions': 'x-webkit-deflate-frame', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38'})
+    Traceback (most recent call last):
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/web.py", line 1467, in _stack_context_handle_exception
+        raise_exc_info((type, value, traceback))
+      File "<string>", line 4, in raise_exc_info
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/stack_context.py", line 316, in wrapped
+        ret = fn(*args, **kwargs)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 191, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 392, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/base/zmqhandlers.py", line 258, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/websocket.py", line 249, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+[E 19:05:20.165 NotebookApp] Uncaught exception GET /api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=A6748AE939A1488289767BC1FA9E4108 (192.40.59.112)
+    HTTPServerRequest(protocol='https', host='ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', method='GET', uri='/api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=A6748AE939A1488289767BC1FA9E4108', version='HTTP/1.1', remote_ip='192.40.59.112', headers={'Upgrade': 'websocket', 'Connection': 'Upgrade', 'Host': 'ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Origin': 'https://ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Cookie': 'username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888="2|1:0|10:1506106702|64:username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888|44:YmFiNWIyYTM4ZmQwNDA3MDkyMWJjOTUwNjI2OWQ5NzA=|1c53a5a7b690532dbb59491e5be8c4b02c84921c281a5a5ada658ca314b5ef74"; _xsrf=2|2e5bd9d4|4951bae078b62dea79dfd87531f72f35|1506106693', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Sec-Websocket-Key': 'pcDIbDH6xE/k259Abaq2rQ==', 'Sec-Websocket-Version': '13', 'Sec-Websocket-Extensions': 'x-webkit-deflate-frame', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38'})
+    Traceback (most recent call last):
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/web.py", line 1467, in _stack_context_handle_exception
+        raise_exc_info((type, value, traceback))
+      File "<string>", line 4, in raise_exc_info
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/stack_context.py", line 316, in wrapped
+        ret = fn(*args, **kwargs)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 191, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 392, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/base/zmqhandlers.py", line 258, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/websocket.py", line 249, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+[E 19:05:20.511 NotebookApp] Uncaught exception GET /api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=A6748AE939A1488289767BC1FA9E4108 (192.40.59.112)
+    HTTPServerRequest(protocol='https', host='ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', method='GET', uri='/api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=A6748AE939A1488289767BC1FA9E4108', version='HTTP/1.1', remote_ip='192.40.59.112', headers={'Upgrade': 'websocket', 'Connection': 'Upgrade', 'Host': 'ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Origin': 'https://ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Cookie': 'username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888="2|1:0|10:1506106702|64:username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888|44:YmFiNWIyYTM4ZmQwNDA3MDkyMWJjOTUwNjI2OWQ5NzA=|1c53a5a7b690532dbb59491e5be8c4b02c84921c281a5a5ada658ca314b5ef74"; _xsrf=2|2e5bd9d4|4951bae078b62dea79dfd87531f72f35|1506106693', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Sec-Websocket-Key': 'pcDIbDH6xE/k259Abaq2rQ==', 'Sec-Websocket-Version': '13', 'Sec-Websocket-Extensions': 'x-webkit-deflate-frame', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38'})
+    Traceback (most recent call last):
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/web.py", line 1467, in _stack_context_handle_exception
+        raise_exc_info((type, value, traceback))
+      File "<string>", line 4, in raise_exc_info
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/stack_context.py", line 316, in wrapped
+        ret = fn(*args, **kwargs)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 191, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 392, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/base/zmqhandlers.py", line 258, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/websocket.py", line 249, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+[E 19:05:20.858 NotebookApp] Uncaught exception GET /api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=A6748AE939A1488289767BC1FA9E4108 (192.40.59.112)
+    HTTPServerRequest(protocol='https', host='ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', method='GET', uri='/api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=A6748AE939A1488289767BC1FA9E4108', version='HTTP/1.1', remote_ip='192.40.59.112', headers={'Upgrade': 'websocket', 'Connection': 'Upgrade', 'Host': 'ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Origin': 'https://ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Cookie': 'username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888="2|1:0|10:1506106702|64:username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888|44:YmFiNWIyYTM4ZmQwNDA3MDkyMWJjOTUwNjI2OWQ5NzA=|1c53a5a7b690532dbb59491e5be8c4b02c84921c281a5a5ada658ca314b5ef74"; _xsrf=2|2e5bd9d4|4951bae078b62dea79dfd87531f72f35|1506106693', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Sec-Websocket-Key': 'pcDIbDH6xE/k259Abaq2rQ==', 'Sec-Websocket-Version': '13', 'Sec-Websocket-Extensions': 'x-webkit-deflate-frame', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38'})
+    Traceback (most recent call last):
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/web.py", line 1467, in _stack_context_handle_exception
+        raise_exc_info((type, value, traceback))
+      File "<string>", line 4, in raise_exc_info
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/stack_context.py", line 316, in wrapped
+        ret = fn(*args, **kwargs)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 191, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 392, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/base/zmqhandlers.py", line 258, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/websocket.py", line 249, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+[I 19:05:41.432 NotebookApp] Adapting to protocol v5.1 for kernel 2132049e-4759-4cf6-aa01-fc44eba843a4
+[I 19:07:59.538 NotebookApp] Saving file at /Vehicle_Steering_With_DenseNet.ipynb
+[I 19:11:28.305 NotebookApp] Saving file at /Vehicle_Steering_With_DenseNet.ipynb
+[I 19:11:39.313 NotebookApp] Kernel interrupted: 2132049e-4759-4cf6-aa01-fc44eba843a4
+[I 19:12:34.049 NotebookApp] 302 GET / (192.40.59.112) 0.53ms
+[I 19:12:51.342 NotebookApp] Adapting to protocol v5.1 for kernel 2132049e-4759-4cf6-aa01-fc44eba843a4
+[I 19:13:26.104 NotebookApp] Kernel interrupted: 2132049e-4759-4cf6-aa01-fc44eba843a4
+[I 19:13:46.439 NotebookApp] Kernel interrupted: 2132049e-4759-4cf6-aa01-fc44eba843a4
+[I 19:13:55.996 NotebookApp] Saving file at /Vehicle_Steering_With_DenseNet.ipynb
+[I 19:14:06.859 NotebookApp] Adapting to protocol v5.1 for kernel 2132049e-4759-4cf6-aa01-fc44eba843a4
+[I 19:14:19.212 NotebookApp] Saving file at /Vehicle_Steering_With_DenseNet.ipynb
+[I 19:14:26.433 NotebookApp] Saving file at /Vehicle_Steering_With_DenseNet.ipynb
+[I 19:15:19.198 NotebookApp] Saving file at /Vehicle_Steering_With_DenseNet.ipynb
+[I 19:18:28.621 NotebookApp] Saving file at /Vehicle_Steering_With_DenseNet.ipynb
+[I 19:20:09.670 NotebookApp] Adapting to protocol v5.1 for kernel 2132049e-4759-4cf6-aa01-fc44eba843a4
+[I 19:24:23.679 NotebookApp] Saving file at /Vehicle_Steering_With_DenseNet.ipynb
+[I 19:29:57.533 NotebookApp] Saving file at /Vehicle_Steering_With_DenseNet.ipynb
+[I 19:35:41.109 NotebookApp] Saving file at /Vehicle_Steering_With_DenseNet.ipynb
+[I 19:36:37.607 NotebookApp] Saving file at /Vehicle_Steering_With_DenseNet.ipynb
+[I 19:41:09.776 NotebookApp] Saving file at /Vehicle_Steering_With_DenseNet.ipynb
+[W 19:56:09.671 NotebookApp] WebSocket ping timeout after 119696 ms.
+[E 19:56:09.880 NotebookApp] Uncaught exception GET /api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=CC525D1136B1480BB0E09C5C04CF120B (192.40.59.112)
+    HTTPServerRequest(protocol='https', host='ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', method='GET', uri='/api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=CC525D1136B1480BB0E09C5C04CF120B', version='HTTP/1.1', remote_ip='192.40.59.112', headers={'Upgrade': 'websocket', 'Connection': 'Upgrade', 'Host': 'ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Origin': 'https://ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Cookie': 'username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888="2|1:0|10:1506106702|64:username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888|44:YmFiNWIyYTM4ZmQwNDA3MDkyMWJjOTUwNjI2OWQ5NzA=|1c53a5a7b690532dbb59491e5be8c4b02c84921c281a5a5ada658ca314b5ef74"; _xsrf=2|2e5bd9d4|4951bae078b62dea79dfd87531f72f35|1506106693', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Sec-Websocket-Key': 'zgcUJQkYjxJ+szfmqdnP9g==', 'Sec-Websocket-Version': '13', 'Sec-Websocket-Extensions': 'x-webkit-deflate-frame', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38'})
+    Traceback (most recent call last):
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/web.py", line 1467, in _stack_context_handle_exception
+        raise_exc_info((type, value, traceback))
+      File "<string>", line 4, in raise_exc_info
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/stack_context.py", line 316, in wrapped
+        ret = fn(*args, **kwargs)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 191, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 392, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/base/zmqhandlers.py", line 258, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/websocket.py", line 249, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+[E 19:56:10.228 NotebookApp] Uncaught exception GET /api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=CC525D1136B1480BB0E09C5C04CF120B (192.40.59.112)
+    HTTPServerRequest(protocol='https', host='ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', method='GET', uri='/api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=CC525D1136B1480BB0E09C5C04CF120B', version='HTTP/1.1', remote_ip='192.40.59.112', headers={'Upgrade': 'websocket', 'Connection': 'Upgrade', 'Host': 'ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Origin': 'https://ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Cookie': 'username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888="2|1:0|10:1506106702|64:username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888|44:YmFiNWIyYTM4ZmQwNDA3MDkyMWJjOTUwNjI2OWQ5NzA=|1c53a5a7b690532dbb59491e5be8c4b02c84921c281a5a5ada658ca314b5ef74"; _xsrf=2|2e5bd9d4|4951bae078b62dea79dfd87531f72f35|1506106693', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Sec-Websocket-Key': 'zgcUJQkYjxJ+szfmqdnP9g==', 'Sec-Websocket-Version': '13', 'Sec-Websocket-Extensions': 'x-webkit-deflate-frame', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38'})
+    Traceback (most recent call last):
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/web.py", line 1467, in _stack_context_handle_exception
+        raise_exc_info((type, value, traceback))
+      File "<string>", line 4, in raise_exc_info
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/stack_context.py", line 316, in wrapped
+        ret = fn(*args, **kwargs)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 191, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 392, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/base/zmqhandlers.py", line 258, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/websocket.py", line 249, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+[E 19:56:10.577 NotebookApp] Uncaught exception GET /api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=CC525D1136B1480BB0E09C5C04CF120B (192.40.59.112)
+    HTTPServerRequest(protocol='https', host='ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', method='GET', uri='/api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=CC525D1136B1480BB0E09C5C04CF120B', version='HTTP/1.1', remote_ip='192.40.59.112', headers={'Upgrade': 'websocket', 'Connection': 'Upgrade', 'Host': 'ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Origin': 'https://ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Cookie': 'username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888="2|1:0|10:1506106702|64:username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888|44:YmFiNWIyYTM4ZmQwNDA3MDkyMWJjOTUwNjI2OWQ5NzA=|1c53a5a7b690532dbb59491e5be8c4b02c84921c281a5a5ada658ca314b5ef74"; _xsrf=2|2e5bd9d4|4951bae078b62dea79dfd87531f72f35|1506106693', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Sec-Websocket-Key': 'zgcUJQkYjxJ+szfmqdnP9g==', 'Sec-Websocket-Version': '13', 'Sec-Websocket-Extensions': 'x-webkit-deflate-frame', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38'})
+    Traceback (most recent call last):
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/web.py", line 1467, in _stack_context_handle_exception
+        raise_exc_info((type, value, traceback))
+      File "<string>", line 4, in raise_exc_info
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/stack_context.py", line 316, in wrapped
+        ret = fn(*args, **kwargs)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 191, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 392, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/base/zmqhandlers.py", line 258, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/websocket.py", line 249, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+[E 19:56:10.924 NotebookApp] Uncaught exception GET /api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=CC525D1136B1480BB0E09C5C04CF120B (192.40.59.112)
+    HTTPServerRequest(protocol='https', host='ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', method='GET', uri='/api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=CC525D1136B1480BB0E09C5C04CF120B', version='HTTP/1.1', remote_ip='192.40.59.112', headers={'Upgrade': 'websocket', 'Connection': 'Upgrade', 'Host': 'ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Origin': 'https://ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Cookie': 'username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888="2|1:0|10:1506106702|64:username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888|44:YmFiNWIyYTM4ZmQwNDA3MDkyMWJjOTUwNjI2OWQ5NzA=|1c53a5a7b690532dbb59491e5be8c4b02c84921c281a5a5ada658ca314b5ef74"; _xsrf=2|2e5bd9d4|4951bae078b62dea79dfd87531f72f35|1506106693', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Sec-Websocket-Key': 'zgcUJQkYjxJ+szfmqdnP9g==', 'Sec-Websocket-Version': '13', 'Sec-Websocket-Extensions': 'x-webkit-deflate-frame', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38'})
+    Traceback (most recent call last):
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/web.py", line 1467, in _stack_context_handle_exception
+        raise_exc_info((type, value, traceback))
+      File "<string>", line 4, in raise_exc_info
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/stack_context.py", line 316, in wrapped
+        ret = fn(*args, **kwargs)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 191, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 392, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/base/zmqhandlers.py", line 258, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/websocket.py", line 249, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+[E 19:56:11.271 NotebookApp] Uncaught exception GET /api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=CC525D1136B1480BB0E09C5C04CF120B (192.40.59.112)
+    HTTPServerRequest(protocol='https', host='ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', method='GET', uri='/api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=CC525D1136B1480BB0E09C5C04CF120B', version='HTTP/1.1', remote_ip='192.40.59.112', headers={'Upgrade': 'websocket', 'Connection': 'Upgrade', 'Host': 'ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Origin': 'https://ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Cookie': 'username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888="2|1:0|10:1506106702|64:username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888|44:YmFiNWIyYTM4ZmQwNDA3MDkyMWJjOTUwNjI2OWQ5NzA=|1c53a5a7b690532dbb59491e5be8c4b02c84921c281a5a5ada658ca314b5ef74"; _xsrf=2|2e5bd9d4|4951bae078b62dea79dfd87531f72f35|1506106693', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Sec-Websocket-Key': 'zgcUJQkYjxJ+szfmqdnP9g==', 'Sec-Websocket-Version': '13', 'Sec-Websocket-Extensions': 'x-webkit-deflate-frame', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38'})
+    Traceback (most recent call last):
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/web.py", line 1467, in _stack_context_handle_exception
+        raise_exc_info((type, value, traceback))
+      File "<string>", line 4, in raise_exc_info
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/stack_context.py", line 316, in wrapped
+        ret = fn(*args, **kwargs)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 191, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 392, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/base/zmqhandlers.py", line 258, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/websocket.py", line 249, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+[E 19:56:11.619 NotebookApp] Uncaught exception GET /api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=CC525D1136B1480BB0E09C5C04CF120B (192.40.59.112)
+    HTTPServerRequest(protocol='https', host='ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', method='GET', uri='/api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=CC525D1136B1480BB0E09C5C04CF120B', version='HTTP/1.1', remote_ip='192.40.59.112', headers={'Upgrade': 'websocket', 'Connection': 'Upgrade', 'Host': 'ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Origin': 'https://ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Cookie': 'username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888="2|1:0|10:1506106702|64:username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888|44:YmFiNWIyYTM4ZmQwNDA3MDkyMWJjOTUwNjI2OWQ5NzA=|1c53a5a7b690532dbb59491e5be8c4b02c84921c281a5a5ada658ca314b5ef74"; _xsrf=2|2e5bd9d4|4951bae078b62dea79dfd87531f72f35|1506106693', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Sec-Websocket-Key': 'zgcUJQkYjxJ+szfmqdnP9g==', 'Sec-Websocket-Version': '13', 'Sec-Websocket-Extensions': 'x-webkit-deflate-frame', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38'})
+    Traceback (most recent call last):
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/web.py", line 1467, in _stack_context_handle_exception
+        raise_exc_info((type, value, traceback))
+      File "<string>", line 4, in raise_exc_info
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/stack_context.py", line 316, in wrapped
+        ret = fn(*args, **kwargs)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 191, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 392, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/base/zmqhandlers.py", line 258, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/websocket.py", line 249, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+[E 19:56:11.967 NotebookApp] Uncaught exception GET /api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=CC525D1136B1480BB0E09C5C04CF120B (192.40.59.112)
+    HTTPServerRequest(protocol='https', host='ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', method='GET', uri='/api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=CC525D1136B1480BB0E09C5C04CF120B', version='HTTP/1.1', remote_ip='192.40.59.112', headers={'Upgrade': 'websocket', 'Connection': 'Upgrade', 'Host': 'ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Origin': 'https://ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Cookie': 'username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888="2|1:0|10:1506106702|64:username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888|44:YmFiNWIyYTM4ZmQwNDA3MDkyMWJjOTUwNjI2OWQ5NzA=|1c53a5a7b690532dbb59491e5be8c4b02c84921c281a5a5ada658ca314b5ef74"; _xsrf=2|2e5bd9d4|4951bae078b62dea79dfd87531f72f35|1506106693', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Sec-Websocket-Key': 'zgcUJQkYjxJ+szfmqdnP9g==', 'Sec-Websocket-Version': '13', 'Sec-Websocket-Extensions': 'x-webkit-deflate-frame', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38'})
+    Traceback (most recent call last):
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/web.py", line 1467, in _stack_context_handle_exception
+        raise_exc_info((type, value, traceback))
+      File "<string>", line 4, in raise_exc_info
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/stack_context.py", line 316, in wrapped
+        ret = fn(*args, **kwargs)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 191, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 392, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/base/zmqhandlers.py", line 258, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/websocket.py", line 249, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+[E 19:56:12.314 NotebookApp] Uncaught exception GET /api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=CC525D1136B1480BB0E09C5C04CF120B (192.40.59.112)
+    HTTPServerRequest(protocol='https', host='ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', method='GET', uri='/api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=CC525D1136B1480BB0E09C5C04CF120B', version='HTTP/1.1', remote_ip='192.40.59.112', headers={'Upgrade': 'websocket', 'Connection': 'Upgrade', 'Host': 'ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Origin': 'https://ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Cookie': 'username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888="2|1:0|10:1506106702|64:username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888|44:YmFiNWIyYTM4ZmQwNDA3MDkyMWJjOTUwNjI2OWQ5NzA=|1c53a5a7b690532dbb59491e5be8c4b02c84921c281a5a5ada658ca314b5ef74"; _xsrf=2|2e5bd9d4|4951bae078b62dea79dfd87531f72f35|1506106693', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Sec-Websocket-Key': 'zgcUJQkYjxJ+szfmqdnP9g==', 'Sec-Websocket-Version': '13', 'Sec-Websocket-Extensions': 'x-webkit-deflate-frame', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38'})
+    Traceback (most recent call last):
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/web.py", line 1467, in _stack_context_handle_exception
+        raise_exc_info((type, value, traceback))
+      File "<string>", line 4, in raise_exc_info
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/stack_context.py", line 316, in wrapped
+        ret = fn(*args, **kwargs)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 191, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 392, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/base/zmqhandlers.py", line 258, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/websocket.py", line 249, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+[E 19:56:12.662 NotebookApp] Uncaught exception GET /api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=CC525D1136B1480BB0E09C5C04CF120B (192.40.59.112)
+    HTTPServerRequest(protocol='https', host='ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', method='GET', uri='/api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=CC525D1136B1480BB0E09C5C04CF120B', version='HTTP/1.1', remote_ip='192.40.59.112', headers={'Upgrade': 'websocket', 'Connection': 'Upgrade', 'Host': 'ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Origin': 'https://ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Cookie': 'username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888="2|1:0|10:1506106702|64:username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888|44:YmFiNWIyYTM4ZmQwNDA3MDkyMWJjOTUwNjI2OWQ5NzA=|1c53a5a7b690532dbb59491e5be8c4b02c84921c281a5a5ada658ca314b5ef74"; _xsrf=2|2e5bd9d4|4951bae078b62dea79dfd87531f72f35|1506106693', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Sec-Websocket-Key': 'zgcUJQkYjxJ+szfmqdnP9g==', 'Sec-Websocket-Version': '13', 'Sec-Websocket-Extensions': 'x-webkit-deflate-frame', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38'})
+    Traceback (most recent call last):
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/web.py", line 1467, in _stack_context_handle_exception
+        raise_exc_info((type, value, traceback))
+      File "<string>", line 4, in raise_exc_info
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/stack_context.py", line 316, in wrapped
+        ret = fn(*args, **kwargs)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 191, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 392, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/base/zmqhandlers.py", line 258, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/websocket.py", line 249, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+[E 19:56:13.010 NotebookApp] Uncaught exception GET /api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=CC525D1136B1480BB0E09C5C04CF120B (192.40.59.112)
+    HTTPServerRequest(protocol='https', host='ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', method='GET', uri='/api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=CC525D1136B1480BB0E09C5C04CF120B', version='HTTP/1.1', remote_ip='192.40.59.112', headers={'Upgrade': 'websocket', 'Connection': 'Upgrade', 'Host': 'ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Origin': 'https://ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Cookie': 'username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888="2|1:0|10:1506106702|64:username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888|44:YmFiNWIyYTM4ZmQwNDA3MDkyMWJjOTUwNjI2OWQ5NzA=|1c53a5a7b690532dbb59491e5be8c4b02c84921c281a5a5ada658ca314b5ef74"; _xsrf=2|2e5bd9d4|4951bae078b62dea79dfd87531f72f35|1506106693', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Sec-Websocket-Key': 'zgcUJQkYjxJ+szfmqdnP9g==', 'Sec-Websocket-Version': '13', 'Sec-Websocket-Extensions': 'x-webkit-deflate-frame', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38'})
+    Traceback (most recent call last):
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/web.py", line 1467, in _stack_context_handle_exception
+        raise_exc_info((type, value, traceback))
+      File "<string>", line 4, in raise_exc_info
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/stack_context.py", line 316, in wrapped
+        ret = fn(*args, **kwargs)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 191, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 392, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/base/zmqhandlers.py", line 258, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/websocket.py", line 249, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+[E 19:56:13.357 NotebookApp] Uncaught exception GET /api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=CC525D1136B1480BB0E09C5C04CF120B (192.40.59.112)
+    HTTPServerRequest(protocol='https', host='ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', method='GET', uri='/api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=CC525D1136B1480BB0E09C5C04CF120B', version='HTTP/1.1', remote_ip='192.40.59.112', headers={'Upgrade': 'websocket', 'Connection': 'Upgrade', 'Host': 'ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Origin': 'https://ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Cookie': 'username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888="2|1:0|10:1506106702|64:username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888|44:YmFiNWIyYTM4ZmQwNDA3MDkyMWJjOTUwNjI2OWQ5NzA=|1c53a5a7b690532dbb59491e5be8c4b02c84921c281a5a5ada658ca314b5ef74"; _xsrf=2|2e5bd9d4|4951bae078b62dea79dfd87531f72f35|1506106693', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Sec-Websocket-Key': 'zgcUJQkYjxJ+szfmqdnP9g==', 'Sec-Websocket-Version': '13', 'Sec-Websocket-Extensions': 'x-webkit-deflate-frame', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38'})
+    Traceback (most recent call last):
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/web.py", line 1467, in _stack_context_handle_exception
+        raise_exc_info((type, value, traceback))
+      File "<string>", line 4, in raise_exc_info
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/stack_context.py", line 316, in wrapped
+        ret = fn(*args, **kwargs)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 191, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 392, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/base/zmqhandlers.py", line 258, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/websocket.py", line 249, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+[E 19:56:13.705 NotebookApp] Uncaught exception GET /api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=CC525D1136B1480BB0E09C5C04CF120B (192.40.59.112)
+    HTTPServerRequest(protocol='https', host='ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', method='GET', uri='/api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=CC525D1136B1480BB0E09C5C04CF120B', version='HTTP/1.1', remote_ip='192.40.59.112', headers={'Upgrade': 'websocket', 'Connection': 'Upgrade', 'Host': 'ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Origin': 'https://ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Cookie': 'username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888="2|1:0|10:1506106702|64:username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888|44:YmFiNWIyYTM4ZmQwNDA3MDkyMWJjOTUwNjI2OWQ5NzA=|1c53a5a7b690532dbb59491e5be8c4b02c84921c281a5a5ada658ca314b5ef74"; _xsrf=2|2e5bd9d4|4951bae078b62dea79dfd87531f72f35|1506106693', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Sec-Websocket-Key': 'zgcUJQkYjxJ+szfmqdnP9g==', 'Sec-Websocket-Version': '13', 'Sec-Websocket-Extensions': 'x-webkit-deflate-frame', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38'})
+    Traceback (most recent call last):
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/web.py", line 1467, in _stack_context_handle_exception
+        raise_exc_info((type, value, traceback))
+      File "<string>", line 4, in raise_exc_info
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/stack_context.py", line 316, in wrapped
+        ret = fn(*args, **kwargs)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 191, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 392, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/base/zmqhandlers.py", line 258, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/websocket.py", line 249, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+[E 19:56:14.052 NotebookApp] Uncaught exception GET /api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=CC525D1136B1480BB0E09C5C04CF120B (192.40.59.112)
+    HTTPServerRequest(protocol='https', host='ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', method='GET', uri='/api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=CC525D1136B1480BB0E09C5C04CF120B', version='HTTP/1.1', remote_ip='192.40.59.112', headers={'Upgrade': 'websocket', 'Connection': 'Upgrade', 'Host': 'ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Origin': 'https://ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Cookie': 'username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888="2|1:0|10:1506106702|64:username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888|44:YmFiNWIyYTM4ZmQwNDA3MDkyMWJjOTUwNjI2OWQ5NzA=|1c53a5a7b690532dbb59491e5be8c4b02c84921c281a5a5ada658ca314b5ef74"; _xsrf=2|2e5bd9d4|4951bae078b62dea79dfd87531f72f35|1506106693', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Sec-Websocket-Key': 'zgcUJQkYjxJ+szfmqdnP9g==', 'Sec-Websocket-Version': '13', 'Sec-Websocket-Extensions': 'x-webkit-deflate-frame', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38'})
+    Traceback (most recent call last):
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/web.py", line 1467, in _stack_context_handle_exception
+        raise_exc_info((type, value, traceback))
+      File "<string>", line 4, in raise_exc_info
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/stack_context.py", line 316, in wrapped
+        ret = fn(*args, **kwargs)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 191, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 392, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/base/zmqhandlers.py", line 258, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/websocket.py", line 249, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+[E 19:56:14.400 NotebookApp] Uncaught exception GET /api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=CC525D1136B1480BB0E09C5C04CF120B (192.40.59.112)
+    HTTPServerRequest(protocol='https', host='ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', method='GET', uri='/api/kernels/2132049e-4759-4cf6-aa01-fc44eba843a4/channels?session_id=CC525D1136B1480BB0E09C5C04CF120B', version='HTTP/1.1', remote_ip='192.40.59.112', headers={'Upgrade': 'websocket', 'Connection': 'Upgrade', 'Host': 'ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Origin': 'https://ec2-35-166-218-188.us-west-2.compute.amazonaws.com:8888', 'Cookie': 'username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888="2|1:0|10:1506106702|64:username-ec2-35-166-218-188-us-west-2-compute-amazonaws-com-8888|44:YmFiNWIyYTM4ZmQwNDA3MDkyMWJjOTUwNjI2OWQ5NzA=|1c53a5a7b690532dbb59491e5be8c4b02c84921c281a5a5ada658ca314b5ef74"; _xsrf=2|2e5bd9d4|4951bae078b62dea79dfd87531f72f35|1506106693', 'Pragma': 'no-cache', 'Cache-Control': 'no-cache', 'Sec-Websocket-Key': 'zgcUJQkYjxJ+szfmqdnP9g==', 'Sec-Websocket-Version': '13', 'Sec-Websocket-Extensions': 'x-webkit-deflate-frame', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38'})
+    Traceback (most recent call last):
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/web.py", line 1467, in _stack_context_handle_exception
+        raise_exc_info((type, value, traceback))
+      File "<string>", line 4, in raise_exc_info
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/stack_context.py", line 316, in wrapped
+        ret = fn(*args, **kwargs)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 191, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/services/kernels/handlers.py", line 392, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/notebook/base/zmqhandlers.py", line 258, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/ubuntu/miniconda3/envs/tensorflow/lib/python3.6/site-packages/tornado/websocket.py", line 249, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+2017-09-22 20:28:51.130962: W tensorflow/core/common_runtime/bfc_allocator.cc:217] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.47GiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory is available.
+2017-09-22 20:28:52.021583: W tensorflow/core/common_runtime/bfc_allocator.cc:217] Allocator (GPU_0_bfc) ran out of memory trying to allocate 3.71GiB. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory is available.
+[C 20:55:15.498 NotebookApp] received signal 15, stopping
+[I 20:55:15.499 NotebookApp] Shutting down kernels
+[I 20:55:15.600 NotebookApp] Kernel shutdown: 2132049e-4759-4cf6-aa01-fc44eba843a4
