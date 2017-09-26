@@ -3,6 +3,8 @@ import cv2
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
+import keras as K
+from keras.models import load_model
 
 from keras.optimizers import Adam
 
@@ -79,7 +81,9 @@ def train_test_split(data):
     x = data["filename"]
     y = data["angle"]
 
-
+def root_mean_squared_error(y_true, y_pred):
+        return K.backend.sqrt(K.backend.mean(K.backend.square(y_pred - y_true), axis=-1)) 
+    
 if __name__ == "__main__":
 
     train_data = get_dataset("/home/ubuntu/dataset/udacity-driving/")
@@ -90,7 +94,14 @@ if __name__ == "__main__":
     nb_filters = 24 # (2 * growth_rate)
     model = densenet.DenseNet(nb_classes=1, img_dim=(480, 640, 3), depth = depth, nb_dense_block = 3, growth_rate = growth_rate, nb_filter = nb_filters, dropout_rate=0.50)
     model.summary()
-    model.compile(loss='mse', optimizer=Adam(lr=1e-3), metrics=['mse', 'acc'])
+
+
+    model.compile(optimizer = "rmsprop", loss = root_mean_squared_error, 
+              metrics =["accuracy"])
 
     train_generator = generate_train_batch(train_data, 1)
-    history = model.fit_generator(train_generator, steps_per_epoch=1000, epochs=5, verbose=1)
+    history = model.fit_generator(train_generator, steps_per_epoch=500, epochs=10, verbose=1)
+    
+    
+
+    model.save('my_model.h5')  # creates a HDF5 file 'my_model.h5'
