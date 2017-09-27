@@ -3,8 +3,6 @@ import os, sys
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib
-import steering_img_util
 from keras.models import load_model
 
 from keras.models import Model, Sequential
@@ -86,6 +84,6 @@ if __name__ == "__main__":
               metrics=["accuracy"])
 
     generator = generate_train_batch(steering_labels, 1)
-    history = model.fit_generator(generator, steps_per_epoch=10000, epochs=5, verbose=1)
+    history = model.fit_generator(generator, steps_per_epoch=10000, epochs=10, verbose=1)
 
     model.save('trained.h5')
