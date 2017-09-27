@@ -1,8 +1,14 @@
-import pandas as pd
-import os, sys
+import csv
+
 import cv2
 import numpy as np
-import densenet
+
+from sklearn.model_selection import train_test_split
+from sklearn.utils import shuffle
+
+from keras.models import Sequential
+from keras.layers import Reshape, Dense, Flatten, Dropout, Lambda, Cropping2D, Convolution2D,MaxPooling2D
+from keras.layers.advanced_activations import LeakyReLU
 
 # parameter
 batch_size = 16
@@ -10,44 +16,47 @@ epochs = 5
 dropout_rate = 0.2
 leaky = 0.1
 
-# dataset
-os.chdir("/home/ubuntu/dataset/udacity-driving")
-training_set = pd.read_csv('interpolated.csv')
-train_batch_num = int(len(training_set) / batch_size)
+def get_train_valid_arr(path):
+    arr = []
+    with open(path) as f:
+        reader = csv.reader(f)
+        next(reader)
+        for line in reader:
+            arr.append(line)
+    arr = arr[:data_range]
+    train_arr, valid_arr = train_test_split(arr, test_size=0.2)
+    return train_arr, valid_arr
 
-# generator
-from sklearn.utils import shuffle
-def generate_train_batch(data, batch_size = 16):
-    img_rows = 480
-    img_cols = 640
-    
-    batch_images = np.zeros((batch_size, img_rows, img_cols, 3))
-    angles = np.zeros((batch_size, 1))
-    while 1:
-        shuffle(data)
-        for i_batch in range(0,len(data),batch_size):
-            for i in range(batch_size):
-                i_line = i_batch + i
-                
-                # get image & label
-                file_name = data.iloc[i_line]["filename"]
-                img = cv2.imread(file_name)
-                f = float(data.iloc[i_line]["angle"]) # float( * 180.00 / 3.14159265359 )
+def generator(arr):
+    num = len(arr)
+    while True:
+        shuffle(arr)
+        for i in range(0, num, batch_size):
+            batch_lines = arr[i:i + batch_size]
 
-                batch_images[i] = img
-                angles[i] = f
-            yield batch_images, angles
-            
-train_generator = generate_train_batch(training_set,batch_size)
+            images = []
+            steerings = []
+            for line in batch_lines:
+                center_path = line[0]
+                steering = float(line[3])
+                image = cv2.imread(center_path)
+                images.append(preprocess(image))
+                steerings.append(steering)
 
-# build model
-from keras.optimizers import Adam
-from keras.models import Sequential
-from keras.layers import Dense, Flatten, Dropout, Lambda, Cropping2D, Convolution2D,MaxPooling2D
-from keras.layers.advanced_activations import LeakyReLU
+                image_flip=np.fliplr(image)
+                images.append(preprocess(image_flip))
+                steerings.append(-steering)
+
+            X_train = np.array(images)
+            y_train = np.array(steerings)
+
+            yield shuffle(X_train, y_train)
+
+def preprocess(img):
+    return cv.resize(img,(0,0),fx=0.5,fy=0.5)
+
 model = Sequential()
-model.add(Reshape((120,160,3), input_shape=(480,640,3))
-model.add(Lambda(lambda x: x / 255.0 - 0.5))
+model.add(Lambda(lambda x: x / 255.0 - 0.5,input_shape=(240,320,3)))
 
 relu1=LeakyReLU(alpha=leaky)
 model.add(Convolution2D(16,(5,5),strides=(1,1),padding='valid'))
@@ -67,13 +76,25 @@ model.add(relu3)
 model.add(Dropout(dropout_rate))
 model.add(MaxPooling2D((2, 2), strides=(2, 2)))
 
-model.add(Flatten())
-model.add(Dense(512,activation='relu'))
+relu4 = LeakyReLU(alpha=leaky)
+model.add(Convolution2D(48, (5, 5), strides=(1, 1), padding='valid'))
+model.add(relu4)
 model.add(Dropout(dropout_rate))
-model.add(Dense(512,activation='relu'))
+model.add(MaxPooling2D((2, 2), strides=(2, 2)))
+
+relu5 = LeakyReLU(alpha=leaky)
+model.add(Convolution2D(60, (5, 5), strides=(1, 1), padding='valid'))
+model.add(relu5)
+model.add(Dropout(dropout_rate))
+model.add(MaxPooling2D((2, 2), strides=(2, 2)))
+
+model.add(Flatten())
+model.add(Dense(256,activation='relu'))
+model.add(Dropout(dropout_rate))
+model.add(Dense(256,activation='relu'))
 model.add(Dense(1))
 model.summary()
-#model = densenet.DenseNet(nb_classes=1, img_dim=(480,640,3), depth=10, nb_dense_block=3, growth_rate=12, nb_filter=32, dropout_rate=dropout_rate, weight_decay=1E-4)
+
 #optimizer = Adam(lr=1e-3) # Using Adam instead of SGD to speed up training
 #model.compile(loss='mse', optimizer=optimizer, metrics=['mse', 'acc'])
 
