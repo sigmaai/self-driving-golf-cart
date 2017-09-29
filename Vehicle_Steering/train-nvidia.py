@@ -40,14 +40,38 @@ def generate_train_batch(data, batch_size = 16):
             b,g,r = cv2.split(img_bgr)       # get b,g,r
             rgb_img = cv2.merge([r,g,b])     # switch it to rgb
             
-            f =  float(steering_labels.iloc[i_line]["angle"]) * 57.2958 #float(* 180.00 / 3.14159265359 )
+            f =  float(steering_labels.iloc[i_line]["angle"]) #* 57.2958 #float(* 180.00 / 3.14159265359 )
     
             batch_images[i_batch] = rgb_img
             angles[i_batch] = f
         yield batch_images, angles
 
-def root_mean_squared_error(y_true, y_pred):
-        return K.backend.sqrt(K.backend.mean(K.backend.square(y_pred - y_true), axis=-1)) 
+def create_nvidia_model1():
+    model = Sequential()
+
+    model.add(Conv2D(24, 5, 5, subsample=(2, 2), border_mode="same", input_shape=(480, 640, 3)))
+    model.add(Activation('relu'))
+    model.add(Conv2D(36, 5, 5, subsample=(2, 2), border_mode="same"))
+    model.add(Activation('relu'))
+    model.add(Conv2D(48, 5, 5, subsample=(2, 2), border_mode="same"))
+    model.add(Activation('relu'))
+    model.add(Conv2D(64, 3, 3, subsample=(2, 2), border_mode="same"))
+    model.add(Activation('relu'))
+    model.add(Conv2D(64, 3, 3, subsample=(2, 2), border_mode="same"))
+    model.add(Flatten())
+    model.add(Activation('relu'))
+    model.add(Dense(200))
+    model.add(Activation('relu'))
+    model.add(Dense(50))
+    model.add(Activation('relu'))
+    model.add(Dense(10))
+    model.add(Activation('relu'))
+    model.add(Dense(1))
+
+    model.compile(optimizer="adam", loss="mse")
+
+    print('Model is created and compiled..')
+    return model
     
 if __name__ == "__main__":
 
@@ -55,35 +79,10 @@ if __name__ == "__main__":
     print(steering_labels.shape)
     steering_labels.head()
     
-    # frame size
-    nrows = 480
-    ncols = 640
-
-    # model start here
-    model = Sequential()
-
-    model.add(MaxPooling2D(pool_size=(2, 2), strides=None, padding='valid', input_shape=(480, 640, 3)))
-    model.add(BatchNormalization(epsilon=0.001, axis=1))
-    model.add(Conv2D(12,(5,5),padding='valid', activation='relu', strides=(2,2)))
-    model.add(Conv2D(12,(5,5),padding='valid', activation='relu', strides=(2,2)))
-    model.add(Conv2D(24,(5,5),padding='valid', activation='relu', strides=(2,2)))
-    model.add(Conv2D(24,(3,3),padding='valid', activation='relu', strides=(1,1)))
-    model.add(Conv2D(48,(3,3),padding='valid', activation='relu', strides=(1,1)))
-    model.add(Flatten())
-    model.add(Dense(500, activation='relu'))
-    model.add(Dense(100, activation='relu'))
-    model.add(Dense(50, activation='relu'))
-    model.add(Dense(10, activation='relu'))
-    model.add(Dense(1, activation=None))
-
+    model = create_nvidia_model1()
     model.summary()
-    
-    adam = Adam(lr=0.0001)
-    model.compile(loss=root_mean_squared_error,
-              optimizer=adam,
-              metrics=["accuracy"])
-
+    # model start here
     generator = generate_train_batch(steering_labels, 1)
-    history = model.fit_generator(generator, steps_per_epoch=10000, epochs=10, verbose=1)
+    history = model.fit_generator(generator, steps_per_epoch=10000, epochs=5, verbose=1)
 
-    model.save('trained.h5')
+    model.save('trained-v3.h5')
