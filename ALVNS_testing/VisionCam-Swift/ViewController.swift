@@ -26,44 +26,57 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     private var rootLayer:CALayer! = nil
     private var detectionOverlay:CALayer! = nil
     private var detectedRectangleLayer:CAShapeLayer! = nil
+    @IBOutlet weak var label: UILabel!
     
-    // Vision parts
-    private var requests = [VNRequest]()
+    private var model = steering_model_v3()
     
-    func setupVision()
-    {
-        // Setup Vision parts
-        // Create the model for the CoreML based request
-        guard let steeringModel = try? VNCoreMLModel(for: steering_v1().model)
-            else { fatalError("can't load Vision ML model")}
-        let steeringRequest = VNCoreMLRequest(model: steeringModel, completionHandler: handleSteeringOutput)
-        steeringRequest.imageCropAndScaleOption = VNImageCropAndScaleOption.centerCrop
-        
-        let rectangleDetectionRequest = VNDetectRectanglesRequest(completionHandler:self.handleRectangles)
-        rectangleDetectionRequest.minimumSize = 0.1
-        rectangleDetectionRequest.maximumObservations = 20
-        
-        self.requests = [rectangleDetectionRequest, steeringRequest]
+    override func viewDidLoad(){
+        super.viewDidLoad()
+        setupAVCapture()
+//        let image = UIImage.init(named: "1475187062173202962.jpg")
+//        let cvBuffer = buffer(from: image!)
+//        predictSteeringAngle(input: cvBuffer)
     }
     
-    func handleSteeringOutput(request: VNRequest, error: Error?) {
-        guard let observations = request.results
-            else { print("no results: \(error!)"); return }
+    func buffer(from image: UIImage) -> CVPixelBuffer? {
+        let attrs = [kCVPixelBufferCGImageCompatibilityKey: kCFBooleanTrue, kCVPixelBufferCGBitmapContextCompatibilityKey: kCFBooleanTrue] as CFDictionary
+        var pixelBuffer : CVPixelBuffer?
+        let status = CVPixelBufferCreate(kCFAllocatorDefault, Int(image.size.width), Int(image.size.height), kCVPixelFormatType_32ARGB, attrs, &pixelBuffer)
+        guard (status == kCVReturnSuccess) else {
+            return nil
+        }
         
-        let classifications = observations[0...4] // use up to top 4 results
-            .flatMap({ $0 as? VNClassificationObservation }) // ignore unexpected classes
-            .filter({ $0.confidence > 0.3 }) // skip low-confidence classifications
-            .map(self.textForClassification) // extract displayable text
+        CVPixelBufferLockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
+        let pixelData = CVPixelBufferGetBaseAddress(pixelBuffer!)
         
+        let rgbColorSpace = CGColorSpaceCreateDeviceRGB()
+        let context = CGContext(data: pixelData, width: Int(image.size.width), height: Int(image.size.height), bitsPerComponent: 8, bytesPerRow: CVPixelBufferGetBytesPerRow(pixelBuffer!), space: rgbColorSpace, bitmapInfo: CGImageAlphaInfo.noneSkipFirst.rawValue)
+        
+        context?.translateBy(x: 0, y: image.size.height)
+        context?.scaleBy(x: 1.0, y: -1.0)
+        
+        UIGraphicsPushContext(context!)
+        image.draw(in: CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height))
+        UIGraphicsPopContext()
+        CVPixelBufferUnlockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
+        
+        return pixelBuffer
+    }
+    
+    override func didReceiveMemoryWarning(){
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func predictSteeringAngle(input: CVPixelBuffer?){
+
+        guard let prediction = try? model.prediction(image: input!) else {
+            return
+        }
         DispatchQueue.main.async { // perform all UI updates on the main queue
-            self.textLayer.string = "Classification: \n" + classifications.joined(separator: "\n")
+            self.label.text = "\(prediction.angle[0])"
         }
-    }
-    func handleRectangles(request: VNRequest, error: Error?) {
-        DispatchQueue.main.async {
-            // perform all the UI updates on the main queue
-            self.drawVisionRequestResults(request.results as! [VNObservation])
-        }
+        print(prediction.angle)
     }
     
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection)
@@ -71,80 +84,76 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
             return
         }
-        var requestOptions:[VNImageOption : Any] = [:]
         
-        if let cameraIntrinsicData = CMGetAttachment(sampleBuffer, kCMSampleBufferAttachmentKey_CameraIntrinsicMatrix, nil) {
-            requestOptions = [.cameraIntrinsics:cameraIntrinsicData]
+        let ciimage : CIImage = CIImage(cvPixelBuffer: pixelBuffer)
+        let image : UIImage = self.convert(cmage: ciimage)
+        let resized = resizeImage(image: image, newWidth: 880)
+        //let cropped  = cropToBounds(image: resized!, width: 640, height: 480)
+        let cropped = cropImage(imageToCrop: resized!, toRect: CGRect.init(x: (resized?.size.width)! / 4, y: 0.0, width: 640, height: 480))
+        let cvBuffer = buffer(from: cropped)
+        predictSteeringAngle(input: cvBuffer)
+    }
+    
+    func cropImage(imageToCrop:UIImage, toRect rect:CGRect) -> UIImage{
+        
+        let imageRef:CGImage = imageToCrop.cgImage!.cropping(to: rect)!
+        let cropped:UIImage = UIImage(cgImage:imageRef)
+        return cropped
+    }
+    
+    func cropToBounds(image: UIImage, width: Double, height: Double) -> UIImage {
+        
+        let contextImage: UIImage = UIImage.init(cgImage: image.cgImage!)
+        
+        let contextSize: CGSize = contextImage.size
+        
+        var posX: CGFloat = 0.0
+        var posY: CGFloat = 0.0
+        var cgwidth: CGFloat = CGFloat(width)
+        var cgheight: CGFloat = CGFloat(height)
+        
+        // See what size is longer and create the center off of that
+        if contextSize.width > contextSize.height {
+            posX = ((contextSize.width - contextSize.height) / 2)
+            posY = 0
+            cgwidth = contextSize.height
+            cgheight = contextSize.height
+        } else {
+            posX = 0
+            posY = ((contextSize.height - contextSize.width) / 2)
+            cgwidth = contextSize.width
+            cgheight = contextSize.width
         }
         
-        let exifOrientation = self.exifOrientationFromDeviceOrientation()
+        let rect: CGRect = CGRect.init(x: posX, y: posY, width: cgwidth, height: cgheight)
         
-        let imageRequestHandler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: CGImagePropertyOrientation(rawValue: UInt32(exifOrientation))!, options: requestOptions)
-        do {
-            try imageRequestHandler.perform(self.requests)
-            
-        } catch {
-            print(error)
-        }
+        // Create bitmap image from context using the rect
+        let imageRef: CGImage = (contextImage.cgImage?.cropping(to: rect))!
+        // Create a new image based on the imageRef and rotate back to the original orientation
+        let image = UIImage.init(cgImage: imageRef, scale: image.scale, orientation: image.imageOrientation)
+        return image
     }
     
-    func drawVisionRequestResults(_ results:[VNObservation])
-    {
-        CATransaction.begin()
-        CATransaction.setValue(kCFBooleanTrue, forKey:kCATransactionDisableActions)
+    func resizeImage(image: UIImage, newWidth: CGFloat) -> UIImage? {
         
-        detectedRectangleLayer.isHidden = true // hide by default - it will be 'unhidden' while iterating through the observations
+        let scale = newWidth / image.size.width
+        let newHeight = image.size.height * scale
+        UIGraphicsBeginImageContext(CGSize.init(width: newWidth, height: newHeight))
+        image.draw(in: CGRect.init(x: 0, y: 0, width: newWidth, height: newHeight))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
         
-        let boxOutline = CGMutablePath()
+        return newImage
+    }
+
+    
+    // Convert CIImage to CGImage
+    func convert(cmage:CIImage) -> UIImage{
         
-        for observation in results
-        {
-            if observation is VNRectangleObservation
-            {
-                let rectangleObservation = observation as! VNRectangleObservation
-                var topLeft = rectangleObservation.topLeft
-                var topRight = rectangleObservation.topRight
-                var bottomLeft = rectangleObservation.bottomLeft
-                var bottomRight = rectangleObservation.bottomRight
-                
-                // scale to previewLayer
-                topLeft.x *= bufferSize.width
-                topLeft.y *= bufferSize.height
-                topRight.x *= bufferSize.width
-                topRight.y *= bufferSize.height
-                bottomLeft.x *= bufferSize.width
-                bottomLeft.y *= bufferSize.height
-                bottomRight.x *= bufferSize.width
-                bottomRight.y *= bufferSize.height
-                
-                boxOutline.move(to: topLeft)
-                boxOutline.addLine(to: topRight)
-                boxOutline.addLine(to: bottomRight)
-                boxOutline.addLine(to: bottomLeft)
-                boxOutline.addLine(to: topLeft)
-            }
-        }
-        detectedRectangleLayer.path = boxOutline
-        detectedRectangleLayer.isHidden = false;
-        self.updateLayerGeometry()
-        CATransaction.commit()
-    }
-    
-    func textForClassification(_ classification: VNClassificationObservation) -> String {
-        // strip off prefix from classification identifier as it is just a non-human-readable identifier
-        let index = classification.identifier.index(classification.identifier.startIndex, offsetBy: 10)
-        let readableIdentifier = classification.identifier.substring(from: index)
-        return "\(readableIdentifier) \n     Confidence: \(String(format: "%.2f", classification.confidence)) \n"
-    }
-    
-    override func viewDidLoad(){
-        super.viewDidLoad()
-        setupAVCapture()
-    }
-    
-    override func didReceiveMemoryWarning(){
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        let context:CIContext = CIContext.init(options: nil)
+        let cgImage:CGImage = context.createCGImage(cmage, from: cmage.extent)!
+        let image:UIImage = UIImage.init(cgImage: cgImage)
+        return image
     }
     
     func setupAVCapture(){
@@ -220,9 +229,52 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         self.setupLayers()
         self.updateLayerGeometry()
         
-        self.setupVision()
+        if let connection =  self.previewLayer?.connection  {
+            
+            let currentDevice: UIDevice = UIDevice.current
+            
+            let orientation: UIDeviceOrientation = currentDevice.orientation
+            
+            let previewLayerConnection : AVCaptureConnection = connection
+            
+            if previewLayerConnection.isVideoOrientationSupported {
+                
+                switch (orientation) {
+                case .portrait: updatePreviewLayer(layer: previewLayerConnection, orientation: .portrait)
+                
+                    break
+                    
+                case .landscapeRight: updatePreviewLayer(layer: previewLayerConnection, orientation: .landscapeLeft)
+                
+                    break
+                    
+                case .landscapeLeft: updatePreviewLayer(layer: previewLayerConnection, orientation: .landscapeRight)
+                
+                    break
+                    
+                case .portraitUpsideDown: updatePreviewLayer(layer: previewLayerConnection, orientation: .portraitUpsideDown)
+                
+                    break
+                    
+                default: updatePreviewLayer(layer: previewLayerConnection, orientation: .portrait)
+                
+                    break
+                }
+            }
+        }
+        
+        //self.setupVision()
         session.startRunning()
     }
+    
+    private func updatePreviewLayer(layer: AVCaptureConnection, orientation: AVCaptureVideoOrientation) {
+        
+        layer.videoOrientation = orientation
+        
+        previewLayer.frame = self.view.bounds
+        
+    }
+
     
     // clean up capture setup
     func teardownAVCapture()
@@ -281,50 +333,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         
     }
     
-    func exifOrientationFromDeviceOrientation() -> Int32
-    {
-        
-        let curDeviceOrientation = UIDevice.current.orientation
-        let exifOrientation:Int32
-        
-        /* kCGImagePropertyOrientation values
-         The intended display orientation of the image. If present, this key is a CFNumber value with the same value as defined
-         by the TIFF and EXIF specifications -- see enumeration of integer constants.
-         The value specified where the origin (0,0) of the image is located. If not present, a value of 1 is assumed.
-         
-         used when calling featuresInImage: options: The value for this key is an integer NSNumber from 1..8 as found in kCGImagePropertyOrientation.
-         If present, the detection will be done based on that orientation but the coordinates in the returned features will still be based on those of the image. */
-        /*
-         enum {
-         EXIF_0ROW_TOP_0COL_LEFT            = 1, //   1  =  0th row is at the top, and 0th column is on the left (THE DEFAULT).
-         EXIF_0ROW_TOP_0COL_RIGHT            = 2, //   2  =  0th row is at the top, and 0th column is on the right.
-         EXIF_0ROW_BOTTOM_0COL_RIGHT      = 3, //   3  =  0th row is at the bottom, and 0th column is on the right.
-         EXIF_0ROW_BOTTOM_0COL_LEFT       = 4, //   4  =  0th row is at the bottom, and 0th column is on the left.
-         EXIF_0ROW_LEFT_0COL_TOP          = 5, //   5  =  0th row is on the left, and 0th column is the top.
-         EXIF_0ROW_RIGHT_0COL_TOP         = 6, //   6  =  0th row is on the right, and 0th column is the top.
-         EXIF_0ROW_RIGHT_0COL_BOTTOM      = 7, //   7  =  0th row is on the right, and 0th column is the bottom.
-         EXIF_0ROW_LEFT_0COL_BOTTOM       = 8  //   8  =  0th row is on the left, and 0th column is the bottom.
-         };
-         */
-        
-        switch curDeviceOrientation {
-        case UIDeviceOrientation.portraitUpsideDown:  // Device oriented vertically, home button on the top
-            exifOrientation = 8
-        case UIDeviceOrientation.landscapeLeft:       // Device oriented horizontally, home button on the right
-            exifOrientation = 1
-        case UIDeviceOrientation.landscapeRight:      // Device oriented horizontally, home button on the left
-            exifOrientation = 3
-        case UIDeviceOrientation.portrait:            // Device oriented vertically, home button on the bottom
-            exifOrientation = 6
-        default:
-            exifOrientation = 6                       // assume portrait when held flat
-        }
-        return exifOrientation
-    }
-    
-    
     func captureOutput(_ captureOutput: AVCaptureOutput, didDrop didDropSampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        
         // print("frame dropped")
     }
 }
