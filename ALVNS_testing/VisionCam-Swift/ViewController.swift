@@ -28,7 +28,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     private var detectedRectangleLayer:CAShapeLayer! = nil
     @IBOutlet weak var label: UILabel!
     
-    private var model = steering_model_v3()
+    private var model = steering_model_v4()
     
     override func viewDidLoad(){
         super.viewDidLoad()
@@ -75,6 +75,8 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         }
         DispatchQueue.main.async { // perform all UI updates on the main queue
             self.label.text = "\(prediction.angle[0])"
+            let tr = CGAffineTransform.identity.rotated(by: -CGFloat.init(prediction.angle[0]))
+            self.label.transform = tr
         }
         print(prediction.angle)
     }
@@ -256,14 +258,12 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
                 
                     break
                     
-                default: updatePreviewLayer(layer: previewLayerConnection, orientation: .portrait)
+                default: updatePreviewLayer(layer: previewLayerConnection, orientation: .landscapeRight)
                 
                     break
                 }
             }
         }
-        
-        //self.setupVision()
         session.startRunning()
     }
     
@@ -301,16 +301,6 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         detectedRectangleLayer.fillColor = fillColor
         detectionOverlay.addSublayer(detectedRectangleLayer)
         rootLayer.addSublayer(detectionOverlay)
-        
-        let textLayerRect = rootLayer.bounds.insetBy(dx: 20.0, dy: 20.0)
-        textLayer = CATextLayer();
-        textLayer.name = "TextOverlay"
-        textLayer.frame = textLayerRect
-        textLayer.shadowOpacity = 0.7
-        textLayer.contentsGravity = kCAGravityTopLeft
-        textLayer.fontSize = 24.0
-        textLayer.contentsScale = 2.0 // retina rendering
-        rootLayer.addSublayer(textLayer)
     }
     
     func updateLayerGeometry()
