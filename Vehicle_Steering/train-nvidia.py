@@ -125,8 +125,7 @@ if __name__ == "__main__":
     model = create_nvidia_model1()
     model.summary()
     # model start here
-    model = load_model("trained-v5.h5")
     generator = generate_train_batch(steering_labels, 1)
     history = model.fit_generator(generator, steps_per_epoch=10000, epochs=5, verbose=1)
 
-    model.save('trained-v6.h5')
+    model.save('trained-v4.h5')
