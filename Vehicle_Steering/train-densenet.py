@@ -1,12 +1,24 @@
-import densenet
+import pandas as pd
+import os, sys
 import cv2
 import numpy as np
-import pandas as pd
-from sklearn.model_selection import train_test_split
-import keras as K
-from keras.models import load_model
+import matplotlib.pyplot as plt
+import densenet
 
+from keras.models import Model, Sequential
+from keras.layers.core import Dense, Dropout, Activation, Flatten
+from keras.layers.convolutional import Conv2D, Conv2DTranspose, UpSampling2D
+from keras.layers.pooling import AveragePooling2D, MaxPooling2D
+from keras.layers.pooling import GlobalAveragePooling2D
+from keras.layers import Input
+from keras.layers.normalization import BatchNormalization
+from keras.regularizers import l2
+from keras.utils import plot_model
 from keras.optimizers import Adam
+from keras.models import load_model
+import keras as K
+
+steering_labels = None
 
 def rotate(img):
     row, col, channel = img.shape
@@ -42,66 +54,59 @@ def random_transform(img):
         img = gamma(img)
     return img
 
+def generate_train_batch(data, batch_size = 16):
 
-def generate_train_batch(data, batch_size=16):
-    
     img_rows = 480
     img_cols = 640
-
+    
     batch_images = np.zeros((batch_size, img_rows, img_cols, 3))
     angles = np.zeros((batch_size, 1))
-    
     while 1:
         for i_batch in range(batch_size):
-            i_line = np.random.randint(len(data))
-
-            # get image & label
-            file_name = data.iloc[i_line]["filename"]
-            img = cv2.imread("/home/ubuntu/dataset/udacity-driving/" + file_name)
-            f = float(data.iloc[i_line]["angle"])  # float( * 180.00 / 3.14159265359 )
-
-            i = np.random.randint(1)
+            i_line = np.random.randint(2000)
+            i_line = i_line+len(data)-2000
+            
+            file_name = steering_labels.iloc[i_line]["filename"]
+            img_bgr = cv2.imread("/home/ubuntu/dataset/udacity-driving/" + file_name)
+            
+            b,g,r = cv2.split(img_bgr)       # get b,g,r
+            rgb_img = cv2.merge([r,g,b])     # switch it to rgb
+            
+            f =  float(steering_labels.iloc[i_line]["angle"]) #* 57.2958 #float(* 180.00 / 3.14159265359 )
+    
+            i = np.random.randint(3)
             if i == 0:
-                flipped_image = cv2.flip(img, 1)
+                rgb_img = cv2.flip(rgb_img, 1)
                 f = f * -1.0
-                img = random_transform(flipped_image)
-
-            batch_images[i_batch] = img
+            if i == 1:
+                rgb_img = random_transform(rgb_img)
+    
+            batch_images[i_batch] = rgb_img
             angles[i_batch] = f
+            
         yield batch_images, angles
-
-def get_dataset(path):
-    steering_labels = pd.read_csv(path + "/interpolated.csv")
-    print(steering_labels.shape)
-    # steering_labels.head()
-    return steering_labels
-
-def train_test_split(data):
-
-    x = data["filename"]
-    y = data["angle"]
-
-def root_mean_squared_error(y_true, y_pred):
-        return K.backend.sqrt(K.backend.mean(K.backend.square(y_pred - y_true), axis=-1)) 
     
 if __name__ == "__main__":
 
-    train_data = get_dataset("/home/ubuntu/dataset/udacity-driving/")
-    print(train_data.shape)
-    print(len(train_data))
-    depth = 10
+    steering_labels = pd.read_csv("/home/ubuntu/dataset/udacity-driving/interpolated.csv")
+    print(steering_labels.shape)
+    steering_labels.head()
+    
+    depth = 13
     growth_rate = 12
     nb_filters = 24 # (2 * growth_rate)
-    model = densenet.DenseNet(nb_classes=1, img_dim=(480, 640, 3), depth = depth, nb_dense_block = 3, growth_rate = growth_rate, nb_filter = nb_filters, dropout_rate=0.50)
+    model = densenet.DenseNet(nb_classes=1, 
+                              img_dim=(480, 640, 3), 
+                              depth = depth, 
+                              nb_dense_block = 3, 
+                              growth_rate = growth_rate, 
+                              nb_filter = nb_filters, 
+                              dropout_rate=0.1)
+    model.compile(optimizer=Adam(lr=1e-4), loss="mse")
     model.summary()
+    # model start here
+    generator = generate_train_batch(steering_labels, 1)
+    history = model.fit_generator(generator, steps_per_epoch=10000, epochs=5, verbose=1)
 
+    model.save('trained-v9.h5')
 
-    model.compile(optimizer = "rmsprop", loss = root_mean_squared_error, 
-              metrics =["accuracy"])
-
-    train_generator = generate_train_batch(train_data, 1)
-    history = model.fit_generator(train_generator, steps_per_epoch=500, epochs=10, verbose=1)
-    
-    
-
-    model.save('my_model.h5')  # creates a HDF5 file 'my_model.h5'
