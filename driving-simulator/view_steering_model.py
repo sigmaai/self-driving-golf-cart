@@ -1,13 +1,11 @@
 #!/usr/bin/env python
-import argparse
 import cv2
 import numpy as np
 import h5py
 import pygame
-import json
 import pandas as pd
 from keras.models import load_model
-import matplotlib.pyplot as plt
+import time
 
 # pygame.init()
 # size = (640, 480)
@@ -18,6 +16,14 @@ import matplotlib.pyplot as plt
 
 # ***** get perspective transform for images *****
 from skimage import transform as tf
+
+pygame.init()
+size = (640, 480)
+pygame.display.set_caption("comma.ai data viewer")
+screen = pygame.display.set_mode(size)
+camera_surface = pygame.surface.Surface((640, 480), 0, 24)
+
+clock = pygame.time.Clock()
 
 rsrc = \
     [[43.45456230828867, 118.00743250075844],
@@ -63,7 +69,7 @@ def perspective_tform(x, y):
 #     if row >= 0 and row < height and col >= 0 and col < width:
 #         img[row-sz:row+sz, col-sz:col+sz] = color
 
-def draw_pt(img, x, y, color, sz=3):
+def draw_pt(img, x, y, color, sz=2):
 
     row, col = perspective_tform(x, y)
 
@@ -119,14 +125,19 @@ if __name__ == "__main__":
 
     # default dataset is the validation data on the highway
     log = pd.read_csv(data_path + "interpolated.csv")
-    skip = 1000
+    print(len(log))
+    skip = 30000
 
-    im = None
-    plt.ion()
-    plt.show()
+    # im = None
+    # plt.ion()
+    # plt.show()
 
-    # # skip to highway skip * 100
-    for i in range(skip, skip*100):
+    for i in range(skip, skip*10):
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                break
+
         if (i%3 == 0):
             if i % 100 == 0:
                 print("%.2f seconds elapsed" % (i / 100.0))
@@ -134,20 +145,27 @@ if __name__ == "__main__":
             file_name = log.iloc[i]["filename"]
             img = cv2.imread(data_path + file_name)
 
+            b, g, r = cv2.split(img)  # get b,g,r
+            img = cv2.merge([r, g, b])  # switch it to rgb
             image = np.array([img])  # the model expects 4D array
+
             predicted_steers = model.predict(image)
             angle_steers = log['angle'][i]
-
             speed = log["speed"][i]
-            print(-predicted_steers[0][0]/10)
-            print(speed)
 
-            draw_path_on(img, speed, -angle_steers*100)
-            draw_path_on(img, speed, -predicted_steers[0][0]*100, (0, 255, 0))
+            draw_path_on(img, speed, angle_steers*50)
+            draw_path_on(img, speed, predicted_steers[0][0]*50, (0, 255, 0))
 
-            plt.imshow(img)
-            plt.pause(0.0001)
-            plt.draw()
+            myfont = pygame.font.SysFont("monospace", 18)
 
-    pygame.quit()
+            # render text
+            label1 = myfont.render("Blue: Label", 1, (0, 0, 255))
+            label2 = myfont.render("Green: Prediction", 1, (0, 255, 0))
 
+            # Display
+            pygame.surfarray.blit_array(camera_surface, img.swapaxes(0, 1))
+            screen.blit(camera_surface, (0, 0))
+            screen.blit(label1, (150, 400))
+            screen.blit(label2, (350, 400))
+            pygame.display.flip()
+            clock.tick(60)
