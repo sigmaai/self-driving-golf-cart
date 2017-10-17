@@ -115,7 +115,7 @@ def draw_path_on(img, speed_ms, angle_steers, color=(0,0,255)):
 if __name__ == "__main__":
 
     data_path = "/Volumes/Personal_Drive/Datasets/Udacity_Self-Driving-Car/dataset/"
-    model_path = "/Users/yongyangnie/Documents/Developer/ALVNS/driving-simulator/trained-v11.h5"
+    model_path = "/Users/yongyangnie/Documents/Developer/ALVNS/driving-simulator/trained-v12.h5"
 
     # load model
     model = load_model(model_path)
@@ -126,11 +126,7 @@ if __name__ == "__main__":
     # default dataset is the validation data on the highway
     log = pd.read_csv(data_path + "interpolated.csv")
     print(len(log))
-    skip = 30000
-
-    # im = None
-    # plt.ion()
-    # plt.show()
+    skip = 10000
 
     for i in range(skip, skip*10):
 
