@@ -51,30 +51,36 @@ def random_transform(img):
         img = gamma(img)
     return img
 
+def random_number(length):
+    i_line = np.random.randint(2000)
+    i_line = i_line+length-2000
+    while i_line % 3 != 0:
+        i_line = np.random.randint(2000)
+        i_line = i_line+length-2000
+    return i_line
+
 def generate_train_batch(data, batch_size = 16):
 
-    img_rows = 280
+    img_rows = 480
     img_cols = 640
     
     batch_images = np.zeros((batch_size, img_rows, img_cols, 3))
     angles = np.zeros((batch_size, 1))
     while 1:
         for i_batch in range(batch_size):
+
+            n = random_number(len(data))
+            if n % 3 != 0:
+                n = random_number(len(data))
             
-            i_line = np.random.randint(2000)
-            i_line = i_line+len(data)-2000
-            
-            file_name = steering_labels.iloc[i_line]["filename"]
+            file_name = steering_labels.iloc[n]["filename"]
             img_bgr = cv2.imread("/home/ubuntu/dataset/udacity-driving/" + file_name)
-            
-            crop_img = img_bgr[200:480, 0:640]
-            
-            b,g,r = cv2.split(crop_img)       # get b,g,r
+            b,g,r = cv2.split(img_bgr)       # get b,g,r
             rgb_img = cv2.merge([r,g,b])     # switch it to rgb
             
-            f =  float(steering_labels.iloc[i_line]["angle"])
+            f =  float(steering_labels.iloc[n]["angle"])
     
-            i = np.random.randint(3)
+            i = 2
             if i == 0:
                 rgb_img = cv2.flip(rgb_img, 1)
                 f = f * -1.0
@@ -89,7 +95,7 @@ def generate_train_batch(data, batch_size = 16):
 def create_nvidia_model1():
     model = Sequential()
 
-    model.add(MaxPooling2D(pool_size=(2, 2), strides=None, padding='valid', data_format=None, input_shape=(280, 640, 3)))
+    model.add(MaxPooling2D(pool_size=(2, 2), strides=None, padding='valid', data_format=None, input_shape=(480, 640, 3)))
     model.add(Conv2D(24, (5, 5), padding="same", strides = 2))
     model.add(Activation('relu'))
     model.add(Conv2D(36, (3, 3), padding="same", strides = 2))
@@ -123,6 +129,6 @@ if __name__ == "__main__":
     model = create_nvidia_model1()
     model.summary()
     
-    model.fit_generator(generate_train_batch(steering_labels, 1), samples_per_epoch=10000, nb_epoch=5, validation_data=generate_train_batch(steering_labels, 1), nb_val_samples=1000)
+    model.fit_generator(generate_train_batch(steering_labels, 1), samples_per_epoch=10000, nb_epoch=5, validation_data=generate_train_batch(steering_labels, 1), nb_val_samples=500)
 
-    model.save('trained-v11.h5')
+    model.save('trained-v12.h5')
