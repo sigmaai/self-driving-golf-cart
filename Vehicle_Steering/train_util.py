@@ -12,11 +12,11 @@ def bgr_rgb(img):
     return img
 
 
-def load_image(image_file):
+def load_image(dir, image_file):
     """
     Load RGB images from a file
     """
-    img = cv2.imread(image_file)
+    img = cv2.imread(dir + str(image_file))
     return bgr_rgb(img)
 
 
@@ -89,12 +89,12 @@ def random_brightness(image):
     return cv2.cvtColor(hsv, cv2.COLOR_HSV2RGB)
 
 
-def augument(img_path, steering_angle, range_x=100, range_y=10):
+def augument(dir, img_path, steering_angle, range_x=100, range_y=10):
     """
     Generate an augumented image and adjust steering angle.
     (The steering angle is associated with the center image)
     """
-    image = load_image(img_path)
+    image = load_image(dir, img_path)
     image, steering_angle = random_flip(image, steering_angle)
     image, steering_angle = random_translate(image, steering_angle, range_x, range_y)
     image = random_shadow(image)
@@ -102,7 +102,7 @@ def augument(img_path, steering_angle, range_x=100, range_y=10):
     return image, steering_angle
 
 
-def batch_generator(data, batch_size, is_training):
+def batch_generator(dir, data, batch_size, is_training):
     """
     Generate training image give image paths and associated steering angles
     """
@@ -112,13 +112,13 @@ def batch_generator(data, batch_size, is_training):
     while True:
         i = 0
         for index in np.random.permutation(data.shape[0]):
-            center_path = data[index]["filename"]
-            steering_angle = data[index]["angle"]
+            center_path = data[index][5]
+            steering_angle = data[index][6]
             # argumentation
             if is_training and np.random.rand() < 0.6:
-                image, steering_angle = augument(data, center_path, steering_angle)
+                image, steering_angle = augument(dir, center_path, steering_angle)
             else:
-                image = load_image(center_path)
+                image = load_image(dir, center_path)
             # add the image and steering angle to the batch
             images[i] = image
             steers[i] = steering_angle

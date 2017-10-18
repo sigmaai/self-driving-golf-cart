@@ -44,14 +44,20 @@ def create_nvidia_model1():
     
 if __name__ == "__main__":
 
-    steering_labels = pd.read_csv("/home/ubuntu/dataset/udacity-driving/interpolated.csv")
+    dir = "/Volumes/Personal_Drive/Datasets/Udacity_Self-Driving-Car/dataset/"
+
+    steering_labels = pd.read_csv(dir + "interpolated.csv")
     print(steering_labels.shape)
     steering_labels.head()
     
     model = create_nvidia_model1()
     model.summary()
-    
-    model.fit_generator(train_util.batch_generator(steering_labels.values, 8, True), samples_per_epoch=10000, nb_epoch=5,
-                        validation_data=train_util.batch_generator(steering_labels.values, 8, False), nb_val_samples=500)
+
+
+    model.fit_generator(train_util.batch_generator(dir, steering_labels.values, 8, True),
+                        samples_per_epoch=1,
+                        nb_epoch=5,
+                        validation_data=train_util.batch_generator(dir, steering_labels.values, 8, False),
+                        nb_val_samples=500)
 
     model.save('trained-v13.h5')
