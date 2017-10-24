@@ -7,7 +7,7 @@ from keras.models import Model, Sequential
 from keras.layers.core import Dense, Activation, Flatten
 from keras.layers.convolutional import Conv2D
 from keras.layers.pooling import AveragePooling2D, MaxPooling2D
-from keras.layers import Input
+from keras.layers import Input, Lambda
 from keras.layers.normalization import BatchNormalization
 from keras.optimizers import Adam
 from keras.models import load_model
@@ -17,7 +17,9 @@ import keras as K
 def create_nvidia_model1():
     model = Sequential()
 
-    model.add(MaxPooling2D(pool_size=(2, 2), strides=None, padding='valid', data_format=None, input_shape=(480, 640, 3)))
+    model.add(Lambda(lambda x: x / 127.5 - 1.0, input_shape=(480, 640, 3)))
+    # input_shape=(480, 640, 3)
+    # model.add(MaxPooling2D(pool_size=(2, 2), strides=None, padding='valid', data_format=None, ))
     model.add(Conv2D(24, (5, 5), padding="same", strides = 2))
     model.add(Activation('relu'))
     model.add(Conv2D(36, (3, 3), padding="same", strides = 2))
@@ -27,15 +29,21 @@ def create_nvidia_model1():
     model.add(Conv2D(64, (3, 3), padding="same", strides = 2))
     model.add(Activation('relu'))
     model.add(Conv2D(64, (3, 3), padding="same", strides = 2))
+    
     model.add(Flatten())
     model.add(Activation('relu'))
+    
     model.add(Dense(256))
     model.add(Activation('relu'))
+    
     model.add(Dense(128))
     model.add(Activation('relu'))
+    
     model.add(Dense(64))
     model.add(Activation('relu'))
+    
     model.add(Dense(1))
+    
     adam = Adam(lr=1e-4)
     model.compile(optimizer=adam, loss="mse")
 
@@ -44,19 +52,22 @@ def create_nvidia_model1():
     
 if __name__ == "__main__":
 
-    dir = "/home/ubuntu/dataset/udacity-driving/"
+    dir = "/home/ubuntu/dataset/udacity-driving-testing-ds/"
 
-    steering_labels = pd.read_csv(dir + "interpolated.csv")
+    #steering_label1 = pd.read_csv("/home/ubuntu/dataset/udacity-driving/interpolated.csv")
+    steering_label2 = pd.read_csv("/home/ubuntu/dataset/udacity-driving-testing-ds/interpolated.csv")
+    #whole = [steering_label1, steering_label2]
+    #steering_labels = pd.concat(whole)
+    steering_labels = steering_label2
     print(steering_labels.shape)
-    steering_labels.head()
     
     model = create_nvidia_model1()
     model.summary()
 
 
-    model.fit_generator(train_util.batch_generator(dir, steering_labels.values, 8, True),
-                        steps_per_epoch=5000, epochs=3, verbose=1,
-                        validation_data=train_util.batch_generator(dir, steering_labels.values, 8, False),
-                        validation_steps=500)
+    model.fit_generator(train_util.batch_generator(dir, steering_labels.values, 4, True),
+                        steps_per_epoch=2000, epochs=10, verbose=1,
+                        validation_data=train_util.batch_generator(dir, steering_labels.values, 2, False),
+                        validation_steps=200)
 
-    model.save('trained-v16.h5')
+    model.save('trained2-v2.h5')
