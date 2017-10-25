@@ -15,41 +15,34 @@ import keras as K
 
 
 def create_nvidia_model1():
+    
     model = Sequential()
 
-    model.add(Lambda(lambda x: x / 127.5 - 1.0, input_shape=(480, 640, 3)))
-    # input_shape=(480, 640, 3)
-    # model.add(MaxPooling2D(pool_size=(2, 2), strides=None, padding='valid', data_format=None, ))
-    model.add(Conv2D(24, (5, 5), padding="same", strides = 2))
+    model.add(Conv2D(24, (5, 5), padding="same", strides = 2, input_shape=(480, 640, 3)))
     model.add(Activation('relu'))
-    model.add(Conv2D(36, (3, 3), padding="same", strides = 2))
+    model.add(Conv2D(36, (5, 5), padding="same", strides = 2))
     model.add(Activation('relu'))
-    model.add(Conv2D(48, (3, 3), padding="same", strides = 2))
+    model.add(Conv2D(48, (5, 5), padding="same", strides = 2))
     model.add(Activation('relu'))
     model.add(Conv2D(64, (3, 3), padding="same", strides = 2))
     model.add(Activation('relu'))
     model.add(Conv2D(64, (3, 3), padding="same", strides = 2))
-    
     model.add(Flatten())
     model.add(Activation('relu'))
-    
+    model.add(Dense(512))
+    model.add(Activation('relu'))
     model.add(Dense(256))
     model.add(Activation('relu'))
-    
     model.add(Dense(128))
     model.add(Activation('relu'))
-    
-    model.add(Dense(64))
-    model.add(Activation('relu'))
-    
     model.add(Dense(1))
-    
     adam = Adam(lr=1e-4)
     model.compile(optimizer=adam, loss="mse")
 
     print('Model is created and compiled..')
     return model
-    
+
+
 if __name__ == "__main__":
 
     dir = "/home/ubuntu/dataset/udacity-driving-testing-ds/"
@@ -62,12 +55,12 @@ if __name__ == "__main__":
     print(steering_labels.shape)
     
     model = create_nvidia_model1()
+    #model = load_model("./trained2-v4.h5")
     model.summary()
 
-
     model.fit_generator(train_util.batch_generator(dir, steering_labels.values, 4, True),
-                        steps_per_epoch=2000, epochs=10, verbose=1,
+                        steps_per_epoch=2000, epochs=15, verbose=1,
                         validation_data=train_util.batch_generator(dir, steering_labels.values, 2, False),
                         validation_steps=200)
 
-    model.save('trained2-v2.h5')
+    model.save('trained2-v4.h5')

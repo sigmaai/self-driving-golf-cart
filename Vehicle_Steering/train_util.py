@@ -61,7 +61,7 @@ def augument(dir, img_path, steering_angle):
     
     a = np.random.randint(0, 3, [1, 4]).astype('bool')[0]
     if a[0] == 1:
-        image = rotate(image)
+        image, steering_angle = random_flip(image, steering_angle)
     if a[1] == 1:
         image = blur(image)
     if a[2] == 1:
