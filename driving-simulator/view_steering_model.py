@@ -60,15 +60,6 @@ def perspective_tform(x, y):
 # ***** functions to draw lines *****
 
 
-# def draw_pt(img, x, y, color, sz=1):
-#
-#     # row, col = perspective_tform(x, y)
-#     row, col = x.astype(int), y.astype(int)
-#     height, width = img.shape[0], img.shape[1]
-#
-#     if row >= 0 and row < height and col >= 0 and col < width:
-#         img[row-sz:row+sz, col-sz:col+sz] = color
-
 def draw_pt(img, x, y, color, sz=2):
 
     row, col = perspective_tform(x, y)
@@ -96,6 +87,7 @@ def calc_curvature(v_ego, angle_steers, angle_offset=0):
 
 
 def calc_lookahead_offset(v_ego, angle_steers, d_lookahead, angle_offset=0):
+
     # this function returns the lateral offset given the steering angle, speed and the lookahead distance
     curvature = calc_curvature(v_ego, angle_steers, angle_offset)
 
@@ -105,6 +97,7 @@ def calc_lookahead_offset(v_ego, angle_steers, d_lookahead, angle_offset=0):
 
 
 def draw_path_on(img, speed_ms, angle_steers, color=(0,0,255)):
+
     path_x = np.arange(0., 50.1, 0.5)
     path_y, _ = calc_lookahead_offset(speed_ms, angle_steers, path_x)
     draw_path(img, path_x, path_y, color)
@@ -134,7 +127,7 @@ if __name__ == "__main__":
             if event.type == pygame.QUIT:
                 break
 
-        if (i%3 == 0):
+        if i % 3 == 0:
             if i % 100 == 0:
                 print("%.2f seconds elapsed" % (i / 100.0))
 

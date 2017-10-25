@@ -29,6 +29,7 @@ def random_flip(image, steering_angle):
         steering_angle = -steering_angle
     return image, steering_angle
 
+
 def rotate(img):
     row, col, channel = img.shape
     angle = np.random.uniform(-15, 15)
@@ -58,7 +59,7 @@ def augument(dir, img_path, steering_angle):
     (The steering angle is associated with the center image)
     """
     image = load_image(dir, img_path)
-    
+
     a = np.random.randint(0, 3, [1, 4]).astype('bool')[0]
     if a[0] == 1:
         image, steering_angle = random_flip(image, steering_angle)
@@ -70,6 +71,7 @@ def augument(dir, img_path, steering_angle):
         image, steering_angle = random_flip(image, steering_angle)
     return image, steering_angle
 
+
 def batch_generator(dir, data, batch_size, is_training):
     """
     Generate training image give image paths and associated steering angles
@@ -80,17 +82,19 @@ def batch_generator(dir, data, batch_size, is_training):
     while True:
         i = 0
         for index in np.random.permutation(data.shape[0]):
-            center_path = data[index][5]
-            steering_angle = data[index][6]
-            # argumentation
-            if is_training and np.random.rand() < 0.6:
-                image, steering_angle = augument(dir, center_path, steering_angle)
-            else:
-                image = load_image(dir, center_path)
-            # add the image and steering angle to the batch
-            images[i] = image
-            steers[i] = steering_angle
-            i += 1
-            if i == batch_size:
-                break
+            if index % 3 == 0:
+                center_path = data[index][5]
+                steering_angle = data[index][6]
+                # argumentation
+                if is_training and np.random.rand() < 0.6:
+                    image, steering_angle = augument(dir, center_path, steering_angle)
+                else:
+                    image = load_image(dir, center_path)
+                # add the image and steering angle to the batch
+                images[i] = image
+                steers[i] = steering_angle
+                i += 1
+                if i == batch_size:
+                    break
+
         yield images, steers

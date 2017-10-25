@@ -47,15 +47,15 @@ if __name__ == "__main__":
 
     dir = "/home/ubuntu/dataset/udacity-driving-testing-ds/"
 
-    #steering_label1 = pd.read_csv("/home/ubuntu/dataset/udacity-driving/interpolated.csv")
+    # steering_label1 = pd.read_csv("/home/ubuntu/dataset/udacity-driving/interpolated.csv")
     steering_label2 = pd.read_csv("/home/ubuntu/dataset/udacity-driving-testing-ds/interpolated.csv")
-    #whole = [steering_label1, steering_label2]
-    #steering_labels = pd.concat(whole)
+    # whole = [steering_label1, steering_label2]
+    # steering_labels = pd.concat(whole)
     steering_labels = steering_label2
     print(steering_labels.shape)
     
     model = create_nvidia_model1()
-    #model = load_model("./trained2-v4.h5")
+    # model = load_model("./trained2-v4.h5")
     model.summary()
 
     model.fit_generator(train_util.batch_generator(dir, steering_labels.values, 4, True),
@@ -63,4 +63,4 @@ if __name__ == "__main__":
                         validation_data=train_util.batch_generator(dir, steering_labels.values, 2, False),
                         validation_steps=200)
 
-    model.save('trained2-v4.h5')
+    model.save('trained3-v1.h5')
