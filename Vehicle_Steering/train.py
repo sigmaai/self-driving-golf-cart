@@ -59,8 +59,8 @@ if __name__ == "__main__":
     model.summary()
 
     model.fit_generator(train_util.batch_generator(dir, steering_labels.values, 4, True),
-                        steps_per_epoch=2000, epochs=15, verbose=1,
+                        steps_per_epoch=2000, epochs=20, verbose=1,
                         validation_data=train_util.batch_generator(dir, steering_labels.values, 2, False),
                         validation_steps=200)
 
-    model.save('trained3-v1.h5')
+    model.save('trained3-v2.h5')
