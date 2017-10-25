@@ -82,7 +82,7 @@ def batch_generator(dir, data, batch_size, is_training):
     while True:
         i = 0
         for index in np.random.permutation(data.shape[0]):
-            if index % 3 == 0:
+            if (index+1) % 3 == 0:
                 center_path = data[index][5]
                 steering_angle = data[index][6]
                 # argumentation

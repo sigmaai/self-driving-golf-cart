@@ -23,6 +23,7 @@ from flask import Flask
 #input output
 from io import BytesIO
 import cv2
+import scipy.misc
 
 #load our saved model
 from keras.models import load_model
@@ -39,7 +40,7 @@ model = None
 prev_image_array = None
 
 #set min/max speed for our autonomous car
-MAX_SPEED = 25
+MAX_SPEED = 15
 MIN_SPEED = 5
 
 #and a speed limit
@@ -63,13 +64,13 @@ def telemetry(sid, data):
             image = utils.preprocess(image) # apply the preprocessing
             image = np.array([image])       # the model expects 4D array
             # predict the steering angle for the image
-            steering_angle =  -1.2 * float(model.predict(image, batch_size=1))
+            steering_angle =  -0.75 * float(model.predict(image, batch_size=1))
             # lower the throttle as the speed increases
             # if the speed is above the current speed limit, we are on a downhill.
             # make sure we slow down first and then go back to the original max speed.
             global speed_limit
             if speed > speed_limit:
-                speed_limit = MIN_SPEED  # slow down
+                speed_limit = MIN_SPEED  # slow sdown
             else:
                 speed_limit = MAX_SPEED
             throttle = 1.0 - steering_angle**2 - (speed/speed_limit)**2
@@ -83,9 +84,8 @@ def telemetry(sid, data):
         if args.image_folder != '':
             timestamp = datetime.utcnow().strftime('%Y_%m_%d_%H_%M_%S_%f')[:-3]
             image_filename = os.path.join(args.image_folder, timestamp)
-            image.save('{}.jpg'.format(image_filename))
+            scipy.misc.imsave(image_filename, image)
     else:
-        
         sio.emit('manual', data={}, skip_sid=True)
 
 

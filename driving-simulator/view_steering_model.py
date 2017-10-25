@@ -19,7 +19,7 @@ from skimage import transform as tf
 
 pygame.init()
 size = (640, 480)
-pygame.display.set_caption("comma.ai data viewer")
+pygame.display.set_caption("self driving data viewer")
 screen = pygame.display.set_mode(size)
 camera_surface = pygame.surface.Surface((640, 480), 0, 24)
 
@@ -107,8 +107,8 @@ def draw_path_on(img, speed_ms, angle_steers, color=(0,0,255)):
 
 if __name__ == "__main__":
 
-    data_path = "/Volumes/Personal_Drive/Datasets/Udacity_Self-Driving-Car/dataset/"
-    model_path = "/Users/yongyangnie/Documents/Developer/ALVNS/driving-simulator/trained-v12.h5"
+    data_path = "/Volumes/Personal_Drive/Datasets/Udacity_Self-Driving-Car/udacity-driving-testing-ds/"
+    model_path = "/Users/yongyangnie/Documents/Developer/ALVNS/driving-simulator/trained3-v1.h5"
 
     # load model
     model = load_model(model_path)
@@ -119,9 +119,9 @@ if __name__ == "__main__":
     # default dataset is the validation data on the highway
     log = pd.read_csv(data_path + "interpolated.csv")
     print(len(log))
-    skip = 10000
+    skip = 0
 
-    for i in range(skip, skip*10):
+    for i in range(skip, len(log)):
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:

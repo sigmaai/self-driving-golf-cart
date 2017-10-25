@@ -123,7 +123,7 @@ def IOU_calc_loss(y_true, y_pred):
 if __name__ == "__main__":
 
     os.chdir("/Volumes/Personal_Drive/Datasets/Vehicle_Detection/")
-    df_vehicles = prepare_database("https://www.floydhub.com/neilnie/datasets/")
+    df_vehicles = prepare_database("")
 
     smooth = 1.
     model = get_small_unet()
