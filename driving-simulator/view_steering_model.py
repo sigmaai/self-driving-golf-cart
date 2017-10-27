@@ -5,7 +5,7 @@ import h5py
 import pygame
 import pandas as pd
 from keras.models import load_model
-import time
+import os
 
 # pygame.init()
 # size = (640, 480)
@@ -96,65 +96,119 @@ def calc_lookahead_offset(v_ego, angle_steers, d_lookahead, angle_offset=0):
     return y_actual, curvature
 
 
-def draw_path_on(img, speed_ms, angle_steers, color=(0,0,255)):
+def draw_path_on(img, speed_ms, angle_steers, color=(0, 0, 255)):
 
-    path_x = np.arange(0., 50.1, 0.5)
+    path_x = np.arange(0., 60, 1.0)
     path_y, _ = calc_lookahead_offset(speed_ms, angle_steers, path_x)
     draw_path(img, path_x, path_y, color)
 
 # ***** main loop *****
 
 
+# if __name__ == "__main__":
+#
+#     data_path = "/Volumes/Personal_Drive/Datasets/Udacity_Self-Driving-Car/udacity-driving-testing-ds/"
+#     model_path = "/Users/yongyangnie/Documents/Developer/ALVNS/driving-simulator/trained3-v1-2.h5"
+#
+#     # load model
+#     model = load_model(model_path)
+#
+#     model.compile("sgd", "mse")
+#     model.summary()
+#
+#     # default dataset is the validation data on the highway
+#     log = pd.read_csv(data_path + "interpolated.csv")
+#     print(len(log))
+#     skip = 0
+#
+#     for i in range(skip, len(log)):
+#
+#         for event in pygame.event.get():
+#             if event.type == pygame.QUIT:
+#                 break
+#
+#         if (i+1) % 3 == 0:
+#             if i % 100 == 0:
+#                 print("%.2f seconds elapsed" % (i / 100.0))
+#
+#             file_name = log.iloc[i]["filename"]
+#             img = cv2.imread(data_path + file_name)
+#             print(file_name)
+#
+#             b, g, r = cv2.split(img)  # get b,g,r
+#             img = cv2.merge([r, g, b])  # switch it to rgb
+#             image = np.array([img])  # the model expects 4D array
+#
+#             predicted_steers = model.predict(image)
+#             angle_steers = log['angle'][i]
+#             speed = log["speed"][i]
+#
+#             draw_path_on(img, speed, angle_steers*50)
+#             draw_path_on(img, speed, predicted_steers[0][0]*50, (0, 255, 0))
+#
+#             myfont = pygame.font.SysFont("monospace", 18)
+#
+#             # render text
+#             label1 = myfont.render("Blue: Label", 1, (0, 0, 255))
+#             label2 = myfont.render("Green: Prediction", 1, (0, 255, 0))
+#
+#             # Display
+#             pygame.surfarray.blit_array(camera_surface, img.swapaxes(0, 1))
+#             screen.blit(camera_surface, (0, 0))
+#             screen.blit(label1, (150, 400))
+#             screen.blit(label2, (350, 400))
+#             pygame.display.flip()
+#             clock.tick(60)
+
 if __name__ == "__main__":
 
-    data_path = "/Volumes/Personal_Drive/Datasets/Udacity_Self-Driving-Car/udacity-driving-testing-ds/"
-    model_path = "/Users/yongyangnie/Documents/Developer/ALVNS/driving-simulator/trained3-v1.h5"
+    data_path = "/Volumes/Personal_Drive/Datasets/Udacity_Self-Driving-Car/small-testing-ds/"
+    model_path = "/Users/yongyangnie/Documents/Developer/ALVNS/driving-simulator/trained3-v1-2.h5"
 
     # load model
     model = load_model(model_path)
-
     model.compile("sgd", "mse")
     model.summary()
 
     # default dataset is the validation data on the highway
     log = pd.read_csv(data_path + "interpolated.csv")
-    print(len(log))
     skip = 0
+    print(len(log))
 
-    for i in range(skip, len(log)):
+    for i in range(0, len(log)):
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 break
 
-        if i % 3 == 0:
-            if i % 100 == 0:
-                print("%.2f seconds elapsed" % (i / 100.0))
+        if i % 100 == 0:
+            print("%.2f seconds elapsed" % (i / 100.0))
 
-            file_name = log.iloc[i]["filename"]
-            img = cv2.imread(data_path + file_name)
+        path = log["frame_id"][i]
+        angle_steers = log['steering_angle'][i]
 
-            b, g, r = cv2.split(img)  # get b,g,r
-            img = cv2.merge([r, g, b])  # switch it to rgb
-            image = np.array([img])  # the model expects 4D array
+        img = cv2.imread(data_path + "center/" + str(path) + ".jpg")
 
-            predicted_steers = model.predict(image)
-            angle_steers = log['angle'][i]
-            speed = log["speed"][i]
+        b, g, r = cv2.split(img)  # get b,g,r
+        img = cv2.merge([r, g, b])  # switch it to rgb
+        image = np.array([img])  # the model expects 4D array
 
-            draw_path_on(img, speed, angle_steers*50)
-            draw_path_on(img, speed, predicted_steers[0][0]*50, (0, 255, 0))
+        predicted_steers = model.predict(image)
+        speed = 0
 
-            myfont = pygame.font.SysFont("monospace", 18)
+        draw_path_on(img, speed, angle_steers * 25)
+        draw_path_on(img, speed, predicted_steers[0][0] * 25, (0, 255, 0))
 
-            # render text
-            label1 = myfont.render("Blue: Label", 1, (0, 0, 255))
-            label2 = myfont.render("Green: Prediction", 1, (0, 255, 0))
+        myfont = pygame.font.SysFont("monospace", 18)
 
-            # Display
-            pygame.surfarray.blit_array(camera_surface, img.swapaxes(0, 1))
-            screen.blit(camera_surface, (0, 0))
-            screen.blit(label1, (150, 400))
-            screen.blit(label2, (350, 400))
-            pygame.display.flip()
-            clock.tick(60)
+        # render text
+        label1 = myfont.render("Blue: Label", 1, (0, 0, 255))
+        label2 = myfont.render("Green: Prediction", 1, (0, 255, 0))
+
+        # Display
+        pygame.surfarray.blit_array(camera_surface, img.swapaxes(0, 1))
+        screen.blit(camera_surface, (0, 0))
+        screen.blit(label1, (150, 400))
+        screen.blit(label2, (350, 400))
+        pygame.display.flip()
+        clock.tick(60)
