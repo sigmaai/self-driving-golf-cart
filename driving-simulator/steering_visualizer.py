@@ -5,7 +5,10 @@ Revised and used by Neil Nie
 '''
 
 from __future__ import print_function
-
+from keras.models import Model, Sequential
+from keras.layers.core import Dense, Activation, Flatten
+from keras.layers.convolutional import Conv2D
+from keras.optimizers import Adam
 import argparse
 import sys
 import numpy as np
@@ -20,6 +23,7 @@ matplotlib.use("Agg")
 import matplotlib.backends.backend_agg as agg
 import pylab
 from pygame.locals import *
+
 
 pygame.init()
 size = (320*2, 160*4)
@@ -68,8 +72,10 @@ def perspective_tform(x, y):
 # ***** functions to draw lines *****
 def draw_pt(img, x, y, color, sz=2):
     row, col = perspective_tform(x, y)
-    if row >= 0 and row < img.shape[0] / 2 and \
-                    col >= 0 and col < img.shape[1] / 2:
+    row = row * 2
+    col = col * 2
+    if row >= 0 and row < img.shape[0] * 2 / 2 and \
+                    col >= 0 and col < img.shape[1] * 2 / 2:
         img[int(row - sz):int(row + sz), int(col - sz):int(col + sz)] = color
 
 
@@ -101,9 +107,37 @@ def calc_lookahead_offset(v_ego, angle_steers, d_lookahead, angle_offset=0):
 
 
 def draw_path_on(img, speed_ms, angle_steers, color=(0, 0, 255)):
-    path_x = np.arange(3., 50.0, 1.0) #50.1
+    path_x = np.arange(0, 50.1, 0.5) #50.1
     path_y, _ = calc_lookahead_offset(speed_ms, angle_steers, path_x)
     draw_path(img, path_x, path_y, color)
+
+
+def create_nvidia_model():
+    model = Sequential()
+
+    model.add(Conv2D(24, (5, 5), padding="same", strides=2, input_shape=(480, 640, 3)))
+    model.add(Activation('relu'))
+    model.add(Conv2D(36, (5, 5), padding="same", strides=2))
+    model.add(Activation('relu'))
+    model.add(Conv2D(48, (5, 5), padding="same", strides=2))
+    model.add(Activation('relu'))
+    model.add(Conv2D(64, (3, 3), padding="same", strides=2))
+    model.add(Activation('relu'))
+    model.add(Conv2D(64, (3, 3), padding="same", strides=2))
+    model.add(Flatten())
+    model.add(Activation('relu'))
+    model.add(Dense(512))
+    model.add(Activation('relu'))
+    model.add(Dense(256))
+    model.add(Activation('relu'))
+    model.add(Dense(128))
+    model.add(Activation('relu'))
+    model.add(Dense(1))
+    adam = Adam(lr=1e-4)
+    model.compile(optimizer=adam, loss="mse")
+
+    print('Model is created and compiled..')
+    return model
 
 
 # ***** main loop *****
@@ -117,8 +151,8 @@ if __name__ == "__main__":
 
     dataset_path = args.dataset
     camera = args.camera
-    model = load_model(args.model)
-    model.compile("sgd", "mse")
+    model = create_nvidia_model()
+    model.load_weights(args.model)
     model.summary()
 
     # steerings and images
@@ -168,8 +202,8 @@ if __name__ == "__main__":
         draw_path_on(img, speed_ms, actual_steers / 5.0)
         draw_path_on(img, speed_ms, predicted_steers / 5.0, (255, 0, 0))
 
-        A.append(predicted_steers)
-        B.append(df_truth['steering_angle'].loc[i])
+        A.append(df_truth['steering_angle'].loc[i])
+        B.append(predicted_steers)
         line1.set_ydata(A)
         line1.set_xdata(range(len(A)))
         line2.set_ydata(B)
@@ -186,8 +220,6 @@ if __name__ == "__main__":
         screen.blit(surf, (0, 480))
 
         # draw on
-        # img = img[160: 480, 0: 640]
-
         pygame.surfarray.blit_array(camera_surface, img.swapaxes(0, 1))
         screen.blit(camera_surface, (0, 0))
 
