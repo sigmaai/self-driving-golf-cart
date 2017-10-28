@@ -1,19 +1,12 @@
-#parsing command line arguments
-import argparse
-#decoding camera images
-import base64
-#for frametimestamp saving
+import argparse # parsing command line arguments
+import base64 # decoding camera images
 from datetime import datetime
 #reading and writing files
-import os
-#high level file operations
+import os #high level file operations
 import shutil
-#matrix math
 import numpy as np
-#real-time server
-import socketio
-#concurrent networking 
-import eventlet
+import socketio #real-time server
+import eventlet #concurrent networking
 #web server gateway interface
 import eventlet.wsgi
 #image manipulation
@@ -24,11 +17,12 @@ from flask import Flask
 from io import BytesIO
 import cv2
 import scipy.misc
-
-#load our saved model
+from keras.models import Model, Sequential
+from keras.layers.core import Dense, Activation, Flatten
+from keras.layers.convolutional import Conv2D
+from keras.optimizers import Adam
 from keras.models import load_model
-
-#helper class
+import keras as K
 import utils
 
 #initialize our server
@@ -64,7 +58,7 @@ def telemetry(sid, data):
             image = utils.preprocess(image) # apply the preprocessing
             image = np.array([image])       # the model expects 4D array
             # predict the steering angle for the image
-            steering_angle =  -0.75 * float(model.predict(image, batch_size=1))
+            steering_angle =  -1 * float(model.predict(image, batch_size=1))
             # lower the throttle as the speed increases
             # if the speed is above the current speed limit, we are on a downhill.
             # make sure we slow down first and then go back to the original max speed.
@@ -105,6 +99,34 @@ def send_control(steering_angle, throttle):
         skip_sid=True)
 
 
+def create_nvidia_model1():
+    model = Sequential()
+
+    model.add(Conv2D(24, (5, 5), padding="same", strides=2, input_shape=(480, 640, 3)))
+    model.add(Activation('relu'))
+    model.add(Conv2D(36, (5, 5), padding="same", strides=2))
+    model.add(Activation('relu'))
+    model.add(Conv2D(48, (5, 5), padding="same", strides=2))
+    model.add(Activation('relu'))
+    model.add(Conv2D(64, (3, 3), padding="same", strides=2))
+    model.add(Activation('relu'))
+    model.add(Conv2D(64, (3, 3), padding="same", strides=2))
+    model.add(Flatten())
+    model.add(Activation('relu'))
+    model.add(Dense(512))
+    model.add(Activation('relu'))
+    model.add(Dense(256))
+    model.add(Activation('relu'))
+    model.add(Dense(128))
+    model.add(Activation('relu'))
+    model.add(Dense(1))
+    adam = Adam(lr=1e-4)
+    model.compile(optimizer=adam, loss="mse")
+
+    print('Model is created and compiled..')
+    return model
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Remote Driving')
     parser.add_argument(
@@ -122,7 +144,8 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     #load model
-    model = load_model(args.model)
+    model = create_nvidia_model1()
+    model.load_weights(args.model)
     model.summary()
 
     if args.image_folder != '':
