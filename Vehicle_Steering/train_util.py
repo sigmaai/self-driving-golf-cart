@@ -2,7 +2,7 @@ import cv2, os
 import numpy as np
 import matplotlib.image as mpimg
 
-IMAGE_HEIGHT, IMAGE_WIDTH, IMAGE_CHANNELS = 480, 640, 3
+IMAGE_HEIGHT, IMAGE_WIDTH, IMAGE_CHANNELS = 128, 128, 3
 INPUT_SHAPE = (IMAGE_HEIGHT, IMAGE_WIDTH, IMAGE_CHANNELS)
 
 
@@ -16,7 +16,7 @@ def load_image(dir, image_file):
     """
     Load RGB images from a file
     """
-    img = cv2.imread(dir + str(image_file))
+    img = cv2.imread(image_file)
     return bgr_rgb(img)
 
 
@@ -78,11 +78,11 @@ def batch_generator(dir, data, batch_size, is_training):
     """
     images = np.empty([batch_size, IMAGE_HEIGHT, IMAGE_WIDTH, IMAGE_CHANNELS])
     steers = np.empty(batch_size)
-    
+
     while True:
         i = 0
         for index in np.random.permutation(data.shape[0]):
-            center_path = data[index][5]
+            center_path = dir + str(data[index][5])
             steering_angle = data[index][6]
                 
             # argumentation
@@ -90,12 +90,41 @@ def batch_generator(dir, data, batch_size, is_training):
                 image, steering_angle = augument(dir, center_path, steering_angle)
             else:
                 image = load_image(dir, center_path)
+                
+            image = image[160:480, 0:640]
+            image = cv2.resize(image, (128, 128))
                 # add the image and steering angle to the batch
-                images[i] = image
-                steers[i] = steering_angle
-                i += 1
+            images[i] = image
+            steers[i] = steering_angle
+            i += 1
             if i == batch_size:
                 break
-                
- 
+         
+        yield images, steers
+        
+def validation_generator(dir, data, batch_size):
+    
+    """
+    Generate training image give image paths and associated steering angles
+    """
+    images = np.empty([batch_size, IMAGE_HEIGHT, IMAGE_WIDTH, IMAGE_CHANNELS])
+    steers = np.empty(batch_size)
+    
+    while True:
+        i = 0
+        for index in np.random.permutation(data.shape[0]):
+            
+            path = dir + "center/" + str(data["frame_id"][i]) + ".jpg"
+            steering_angle = data["steering_angle"][1]
+
+            image = load_image(dir, path)
+            image = image[160:480, 0:640]
+            image = cv2.resize(image, (128, 128))
+                # add the image and steering angle to the batch
+            images[i] = image
+            steers[i] = steering_angle
+            i += 1
+            if i == batch_size:
+                break
+         
         yield images, steers
