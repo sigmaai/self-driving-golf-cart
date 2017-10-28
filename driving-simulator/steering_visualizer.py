@@ -115,7 +115,7 @@ def draw_path_on(img, speed_ms, angle_steers, color=(0, 0, 255)):
 def create_nvidia_model():
     model = Sequential()
 
-    model.add(Conv2D(24, (5, 5), padding="same", strides=2, input_shape=(480, 640, 3)))
+    model.add(Conv2D(24, (5, 5), padding="same", strides=2, input_shape=(128, 128, 3)))
     model.add(Activation('relu'))
     model.add(Conv2D(36, (5, 5), padding="same", strides=2))
     model.add(Activation('relu'))
@@ -138,6 +138,13 @@ def create_nvidia_model():
 
     print('Model is created and compiled..')
     return model
+
+def preprocess_img(img):
+	b, g, r = cv2.split(img)  # get b,g,r
+    img = cv2.merge([r, g, b])  # switch it to rgb
+    img = img[160: 480, 0:640]
+    img = cv2.resize(img, (128, 128))
+    return img
 
 
 # ***** main loop *****
@@ -192,9 +199,7 @@ if __name__ == "__main__":
 
         path = dataset_path + "center/" + str(df_truth["frame_id"][i]) + ".jpg"
         img = cv2.imread(path)
-        b, g, r = cv2.split(img)  # get b,g,r
-        img = cv2.merge([r, g, b])  # switch it to rgb
-        image = np.array([img])  # the model expects 4D array
+        image = np.array([preprocess_img(img)])  # the model expects 4D array
 
         predicted_steers = model.predict(image)[0][0]
         actual_steers = df_truth['steering_angle'].loc[i]

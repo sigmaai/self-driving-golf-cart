@@ -13,7 +13,7 @@ RED =   (255,   0,   0)
 
 data_path = "/Volumes/Personal_Drive/Datasets/Udacity_Self-Driving-Car/small-testing-ds/"
 true = pd.read_csv("/Volumes/Personal_Drive/Datasets/Udacity_Self-Driving-Car/small-testing-ds/interpolated.csv")
-model_path = "/Users/yongyangnie/Documents/Developer/ALVNS/driving-simulator/trained3-v1-2.h5"
+model_path = "/Users/yongyangnie/Documents/Developer/ALVNS/driving-simulator/trained5-v2.h5"
 
 model = load_model(model_path)
 model.compile("sgd", "mse")

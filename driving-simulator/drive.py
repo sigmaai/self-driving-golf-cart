@@ -34,7 +34,7 @@ model = None
 prev_image_array = None
 
 #set min/max speed for our autonomous car
-MAX_SPEED = 15
+MAX_SPEED = 20
 MIN_SPEED = 5
 
 #and a speed limit
@@ -56,9 +56,11 @@ def telemetry(sid, data):
         try:
             image = np.asarray(image)       # from PIL image to numpy array
             image = utils.preprocess(image) # apply the preprocessing
+            image = image[160: 480, 0:640]
+            image = cv2.resize(image, (128, 128))
             image = np.array([image])       # the model expects 4D array
             # predict the steering angle for the image
-            steering_angle =  -1 * float(model.predict(image, batch_size=1))
+            steering_angle =  -1.0 * float(model.predict(image, batch_size=1))
             # lower the throttle as the speed increases
             # if the speed is above the current speed limit, we are on a downhill.
             # make sure we slow down first and then go back to the original max speed.
@@ -102,7 +104,7 @@ def send_control(steering_angle, throttle):
 def create_nvidia_model1():
     model = Sequential()
 
-    model.add(Conv2D(24, (5, 5), padding="same", strides=2, input_shape=(480, 640, 3)))
+    model.add(Conv2D(24, (5, 5), padding="same", strides=2, input_shape=(128, 128, 3)))
     model.add(Activation('relu'))
     model.add(Conv2D(36, (5, 5), padding="same", strides=2))
     model.add(Activation('relu'))
