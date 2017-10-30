@@ -74,7 +74,7 @@ if __name__ == "__main__":
     print(center_labels.shape)
         
     model = create_nvidia_model()
-    model.load_weights("./trained5-v2.h5")
+    model.load_weights("./trained5-v3.h5")
     model.summary()
 
     training_gen = train_util.batch_generator(dir, center_labels, 4, True)
@@ -85,5 +85,5 @@ if __name__ == "__main__":
                         validation_data=validation_gen,
                         validation_steps=600)
 
-    model.save('trained5-v3.h5')
+    model.save('trained5-v4.h5')
 
