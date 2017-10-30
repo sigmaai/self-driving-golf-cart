@@ -141,10 +141,10 @@ def create_nvidia_model():
 
 def preprocess_img(img):
 	b, g, r = cv2.split(img)  # get b,g,r
-    img = cv2.merge([r, g, b])  # switch it to rgb
-    img = img[160: 480, 0:640]
-    img = cv2.resize(img, (128, 128))
-    return img
+	img = cv2.merge([r, g, b])  # switch it to rgb
+	img = img[160: 480, 0:640]
+	img = cv2.resize(img, (128, 128))
+	return img
 
 
 # ***** main loop *****
