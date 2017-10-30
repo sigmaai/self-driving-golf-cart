@@ -34,8 +34,8 @@ model = None
 prev_image_array = None
 
 #set min/max speed for our autonomous car
-MAX_SPEED = 20
-MIN_SPEED = 5
+MAX_SPEED = 25
+MIN_SPEED = 10
 
 #and a speed limit
 speed_limit = MAX_SPEED
@@ -60,7 +60,7 @@ def telemetry(sid, data):
             image = cv2.resize(image, (128, 128))
             image = np.array([image])       # the model expects 4D array
             # predict the steering angle for the image
-            steering_angle =  -1.0 * float(model.predict(image, batch_size=1))
+            steering_angle =  -0.75 * float(model.predict(image, batch_size=1))
             # lower the throttle as the speed increases
             # if the speed is above the current speed limit, we are on a downhill.
             # make sure we slow down first and then go back to the original max speed.

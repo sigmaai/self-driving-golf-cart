@@ -2,7 +2,7 @@ import cv2, os
 import numpy as np
 import matplotlib.image as mpimg
 
-IMAGE_HEIGHT, IMAGE_WIDTH, IMAGE_CHANNELS = 128, 128, 3
+IMAGE_HEIGHT, IMAGE_WIDTH, IMAGE_CHANNELS = 256, 256, 3
 INPUT_SHAPE = (IMAGE_HEIGHT, IMAGE_WIDTH, IMAGE_CHANNELS)
 
 
@@ -92,7 +92,7 @@ def batch_generator(dir, data, batch_size, is_training):
                 image = load_image(dir, center_path)
                 
             image = image[160:480, 0:640]
-            image = cv2.resize(image, (128, 128))
+            image = cv2.resize(image, (256, 256))
                 # add the image and steering angle to the batch
             images[i] = image
             steers[i] = steering_angle
@@ -119,7 +119,7 @@ def validation_generator(dir, data, batch_size):
 
             image = load_image(dir, path)
             image = image[160:480, 0:640]
-            image = cv2.resize(image, (128, 128))
+            image = cv2.resize(image, (256, 256))
                 # add the image and steering angle to the batch
             images[i] = image
             steers[i] = steering_angle
