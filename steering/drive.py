@@ -1,36 +1,32 @@
 import argparse # parsing command line arguments
 import base64 # decoding camera images
 from datetime import datetime
-#reading and writing files
-import os #high level file operations
+import os #high level file operations #reading and writing files
 import shutil
 import numpy as np
 import socketio #real-time server
 import eventlet #concurrent networking
-#web server gateway interface
 import eventlet.wsgi
-#image manipulation
-from PIL import Image
-#web framework
-from flask import Flask
-#input output
-from io import BytesIO
+from PIL import Image #image manipulation
+from flask import Flask #web framework
+from io import BytesIO #input output
 import cv2
 import scipy.misc
+
 from keras.models import Model, Sequential
 from keras.layers.core import Dense, Activation, Flatten
 from keras.layers.convolutional import Conv2D
 from keras.optimizers import Adam
 from keras.models import load_model
 import keras as K
-import utils
+import simulation_utils
+import model
+
 
 #initialize our server
 sio = socketio.Server()
 #our flask (web) app
 app = Flask(__name__)
-#init our model and image array as empty
-model = None
 prev_image_array = None
 
 #set min/max speed for our autonomous car
@@ -55,12 +51,10 @@ def telemetry(sid, data):
         
         try:
             image = np.asarray(image)       # from PIL image to numpy array
-            image = utils.preprocess(image) # apply the preprocessing
-            image = image[160: 480, 0:640]
-            image = cv2.resize(image, (128, 128))
+            image = simulation_utils.preprocess(image) # apply the preprocessing
             image = np.array([image])       # the model expects 4D array
             # predict the steering angle for the image
-            steering_angle =  -0.75 * float(model.predict(image, batch_size=1))
+            steering_angle =  -1.5 * float(cnn.predict(image, batch_size=1))
             # lower the throttle as the speed increases
             # if the speed is above the current speed limit, we are on a downhill.
             # make sure we slow down first and then go back to the original max speed.
@@ -101,34 +95,6 @@ def send_control(steering_angle, throttle):
         skip_sid=True)
 
 
-def create_nvidia_model1():
-    model = Sequential()
-
-    model.add(Conv2D(24, (5, 5), padding="same", strides=2, input_shape=(128, 128, 3)))
-    model.add(Activation('relu'))
-    model.add(Conv2D(36, (5, 5), padding="same", strides=2))
-    model.add(Activation('relu'))
-    model.add(Conv2D(48, (5, 5), padding="same", strides=2))
-    model.add(Activation('relu'))
-    model.add(Conv2D(64, (3, 3), padding="same", strides=2))
-    model.add(Activation('relu'))
-    model.add(Conv2D(64, (3, 3), padding="same", strides=2))
-    model.add(Flatten())
-    model.add(Activation('relu'))
-    model.add(Dense(512))
-    model.add(Activation('relu'))
-    model.add(Dense(256))
-    model.add(Activation('relu'))
-    model.add(Dense(128))
-    model.add(Activation('relu'))
-    model.add(Dense(1))
-    adam = Adam(lr=1e-4)
-    model.compile(optimizer=adam, loss="mse")
-
-    print('Model is created and compiled..')
-    return model
-
-
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Remote Driving')
     parser.add_argument(
@@ -146,9 +112,10 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     #load model
-    model = create_nvidia_model1()
-    model.load_weights(args.model)
-    model.summary()
+    cnn = model.small_vgg_network()
+    # cnn = model.nvidia_network()
+    cnn.load_weights(args.model)
+    cnn.summary()
 
     if args.image_folder != '':
         print("Creating image folder at {}".format(args.image_folder))

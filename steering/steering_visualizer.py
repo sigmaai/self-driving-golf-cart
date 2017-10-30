@@ -22,6 +22,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.backends.backend_agg as agg
 import pylab
+import model
 from pygame.locals import *
 
 
@@ -112,39 +113,12 @@ def draw_path_on(img, speed_ms, angle_steers, color=(0, 0, 255)):
     draw_path(img, path_x, path_y, color)
 
 
-def create_nvidia_model():
-    model = Sequential()
-
-    model.add(Conv2D(24, (5, 5), padding="same", strides=2, input_shape=(128, 128, 3)))
-    model.add(Activation('relu'))
-    model.add(Conv2D(36, (5, 5), padding="same", strides=2))
-    model.add(Activation('relu'))
-    model.add(Conv2D(48, (5, 5), padding="same", strides=2))
-    model.add(Activation('relu'))
-    model.add(Conv2D(64, (3, 3), padding="same", strides=2))
-    model.add(Activation('relu'))
-    model.add(Conv2D(64, (3, 3), padding="same", strides=2))
-    model.add(Flatten())
-    model.add(Activation('relu'))
-    model.add(Dense(512))
-    model.add(Activation('relu'))
-    model.add(Dense(256))
-    model.add(Activation('relu'))
-    model.add(Dense(128))
-    model.add(Activation('relu'))
-    model.add(Dense(1))
-    adam = Adam(lr=1e-4)
-    model.compile(optimizer=adam, loss="mse")
-
-    print('Model is created and compiled..')
-    return model
-
 def preprocess_img(img):
-	b, g, r = cv2.split(img)  # get b,g,r
-	img = cv2.merge([r, g, b])  # switch it to rgb
-	img = img[160: 480, 0:640]
-	img = cv2.resize(img, (128, 128))
-	return img
+    b, g, r = cv2.split(img)  # get b,g,r
+    img = cv2.merge([r, g, b])  # switch it to rgb
+    img = img[160: 480, 0:640]
+    img = cv2.resize(img, (256, 256))
+    return img
 
 
 # ***** main loop *****
@@ -158,9 +132,9 @@ if __name__ == "__main__":
 
     dataset_path = args.dataset
     camera = args.camera
-    model = create_nvidia_model()
-    model.load_weights(args.model)
-    model.summary()
+    cnn = model.small_vgg_network()
+    cnn.load_weights(args.model)
+    cnn.summary()
 
     # steerings and images
     steering_labels = path.join(dataset_path, 'interpolated.csv')
@@ -195,13 +169,13 @@ if __name__ == "__main__":
                 break
 
         if i%100 == 0:
-           print('%.2f seconds elapsed' % (i/20))
+            print('%.2f seconds elapsed' % (i/20))
 
         path = dataset_path + "center/" + str(df_truth["frame_id"][i]) + ".jpg"
         img = cv2.imread(path)
         image = np.array([preprocess_img(img)])  # the model expects 4D array
 
-        predicted_steers = model.predict(image)[0][0]
+        predicted_steers = cnn.predict(image)[0][0]
         actual_steers = df_truth['steering_angle'].loc[i]
 
         draw_path_on(img, speed_ms, actual_steers / 5.0)
