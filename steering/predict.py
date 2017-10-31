@@ -3,40 +3,10 @@ from keras.models import load_model
 import pandas as pd
 import glob
 import argparse
-from keras.models import Model, Sequential
-from keras.layers.core import Dense, Activation, Flatten
-from keras.layers.convolutional import Conv2D
-from keras.optimizers import Adam
-from keras.models import load_model
-import keras as K
 import cv2
+import utils
+import model
 
-def create_nvidia_model1():
-    model = Sequential()
-
-    model.add(Conv2D(24, (5, 5), padding="same", strides=2, input_shape=(128, 128, 3)))
-    model.add(Activation('relu'))
-    model.add(Conv2D(36, (5, 5), padding="same", strides=2))
-    model.add(Activation('relu'))
-    model.add(Conv2D(48, (5, 5), padding="same", strides=2))
-    model.add(Activation('relu'))
-    model.add(Conv2D(64, (3, 3), padding="same", strides=2))
-    model.add(Activation('relu'))
-    model.add(Conv2D(64, (3, 3), padding="same", strides=2))
-    model.add(Flatten())
-    model.add(Activation('relu'))
-    model.add(Dense(512))
-    model.add(Activation('relu'))
-    model.add(Dense(256))
-    model.add(Activation('relu'))
-    model.add(Dense(128))
-    model.add(Activation('relu'))
-    model.add(Dense(1))
-    adam = Adam(lr=1e-4)
-    model.compile(optimizer=adam, loss="mse")
-
-    print('Model is created and compiled..')
-    return model
 
 if __name__ == "__main__":
 
@@ -54,7 +24,7 @@ if __name__ == "__main__":
     output_path = args.output_path
 
     print("Loading model...")
-    model = create_nvidia_model1()
+    model = model.nvidia_network()
     model.load_weights(model_path)
 
     print("loading dataset")

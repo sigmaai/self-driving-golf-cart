@@ -13,12 +13,6 @@ from io import BytesIO #input output
 import cv2
 import scipy.misc
 
-from keras.models import Model, Sequential
-from keras.layers.core import Dense, Activation, Flatten
-from keras.layers.convolutional import Conv2D
-from keras.optimizers import Adam
-from keras.models import load_model
-import keras as K
 import simulation_utils
 import model
 
@@ -54,7 +48,7 @@ def telemetry(sid, data):
             image = simulation_utils.preprocess(image) # apply the preprocessing
             image = np.array([image])       # the model expects 4D array
             # predict the steering angle for the image
-            steering_angle =  -1.5 * float(cnn.predict(image, batch_size=1))
+            steering_angle =  -1.0 * float(cnn.predict(image, batch_size=1))
             # lower the throttle as the speed increases
             # if the speed is above the current speed limit, we are on a downhill.
             # make sure we slow down first and then go back to the original max speed.
@@ -90,29 +84,27 @@ def send_control(steering_angle, throttle):
         "steer",
         data={
             'steering_angle': steering_angle.__str__(),
-            'throttle': throttle.__str__()
-        },
+            'throttle': throttle.__str__()},
         skip_sid=True)
 
 
 if __name__ == '__main__':
+
     parser = argparse.ArgumentParser(description='Remote Driving')
     parser.add_argument(
         'model',
         type=str,
-        help='Path to model h5 file. Model should be on the same path.'
-    )
+        help='Path to model h5 file. Model should be on the same path.')
     parser.add_argument(
         'image_folder',
         type=str,
         nargs='?',
         default='',
-        help='Path to image folder. This is where the images from the run will be saved.'
-    )
+        help='Path to image folder. This is where the images from the run will be saved.')
     args = parser.parse_args()
 
     #load model
-    cnn = model.small_vgg_network()
+    cnn = model.commaai_model()
     # cnn = model.nvidia_network()
     cnn.load_weights(args.model)
     cnn.summary()

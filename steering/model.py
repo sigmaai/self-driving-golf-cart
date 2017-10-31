@@ -41,13 +41,13 @@ def small_vgg_network():
 
     model = Sequential()
     model.add(Conv2D(32, (3, 3), activation='relu', padding='same', input_shape=(256, 256, 3)))
-    model.add(MaxPooling2D((2, 2), strides=(2, 2)))
+    model.add(MaxPooling2D((2, 2), strides=2))
     model.add(Dropout(0.25))
     model.add(Conv2D(64, (3, 3), activation='relu', padding='same'))
-    model.add(MaxPooling2D((2, 2), strides=(2, 2)))
+    model.add(MaxPooling2D((2, 2), strides=2))
     model.add(Dropout(0.25))
     model.add(Conv2D(128, (3, 3), activation='relu', padding='same'))
-    model.add(MaxPooling2D((2, 2), strides=(2, 2)))
+    model.add(MaxPooling2D((2, 2), strides=2))
     model.add(Dropout(0.5))
 
     model.add(Flatten())
@@ -62,16 +62,16 @@ def small_vgg_network():
     
     return model
 
-def commaai_model(time_len=1):
+def commaai_model():
     
     ch, row, col = 3, 160, 320  # camera format
     model = Sequential()
     model.add(Lambda(lambda x: x/127.5 - 1., input_shape=(row, col, ch), output_shape=(row, col, ch)))
-    model.add(Conv2D(16, (8, 8), subsample=(4, 4), padding="same"))
+    model.add(Conv2D(16, (8, 8), strides=4, padding="same"))
     model.add(ELU())
-    model.add(Conv2D(32, (5, 5), subsample=(2, 2), padding="same"))
+    model.add(Conv2D(32, (5, 5), strides=2, padding="same"))
     model.add(ELU())
-    model.add(Conv2D(64, (5, 5), subsample=(2, 2), padding="same"))
+    model.add(Conv2D(64, (5, 5), strides=2, padding="same"))
     model.add(Flatten())
     model.add(Dropout(.2))
     model.add(ELU())
@@ -80,7 +80,8 @@ def commaai_model(time_len=1):
     model.add(ELU())
     model.add(Dense(1))
 
-    model.compile(optimizer="adam", loss=root_mean_squared_error)
+    adam = Adam(lr=1e-4)
+    model.compile(optimizer=adam, loss=root_mean_squared_error)
 
     return model
 
