@@ -4,6 +4,9 @@ import numpy as np
 import train_util
 import model
 
+dir = "/home/ubuntu/dataset/udacity-driving-testing-ds/"
+val_dir = "/home/ubuntu/dataset/small-testing-ds/"
+
 def clean_steering_label(steering_labels):
     
     center_labels = np.array([steering_labels[2]])
@@ -23,25 +26,22 @@ def clean_steering_label(steering_labels):
 
 if __name__ == "__main__":
 
-    dir = "/home/ubuntu/dataset/udacity-driving-testing-ds/"
-    val_dir = "/home/ubuntu/dataset/small-testing-ds/"
-    
-    labels = pd.read_csv("/home/ubuntu/dataset/udacity-driving-testing-ds/interpolated.csv")
+    labels = pd.read_csv(dir + "interpolated.csv")
     val_labels = pd.read_csv(val_dir + "interpolated.csv")
     center_labels = clean_steering_label(labels.values)
     print(center_labels.shape)
         
-    cnn = model.small_vgg_network()
-    # cnn.load_weights("./trained5-v3.h5")
+    cnn = model.commaai_model()
+    # cnn.load_weights("./trained-vgg-v1.h5")
     cnn.summary()
 
     training_gen = train_util.batch_generator(dir, center_labels, 4, True)
     validation_gen = train_util.validation_generator(val_dir, val_labels, 2)
     
     cnn.fit_generator(training_gen,
-                        steps_per_epoch=3000, epochs=8, verbose=1,
-                        validation_data=validation_gen,
-                        validation_steps=600)
+                      steps_per_epoch=3000, epochs=10, verbose=1,
+                      validation_data=validation_gen,
+                      validation_steps=600)
 
-    model.save('trained-vgg-v1.h5')
+    cnn.save('trained-cai-v1.h5')
 

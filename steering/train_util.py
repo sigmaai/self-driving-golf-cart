@@ -2,7 +2,7 @@ import cv2, os
 import numpy as np
 import matplotlib.image as mpimg
 
-IMAGE_HEIGHT, IMAGE_WIDTH, IMAGE_CHANNELS = 256, 256, 3
+IMAGE_HEIGHT, IMAGE_WIDTH, IMAGE_CHANNELS = 160, 320, 3
 INPUT_SHAPE = (IMAGE_HEIGHT, IMAGE_WIDTH, IMAGE_CHANNELS)
 
 
@@ -17,6 +17,8 @@ def load_image(dir, image_file):
     Load RGB images from a file
     """
     img = cv2.imread(image_file)
+    img = img[160:480, 0:640]
+    img = cv2.resize(img, (320, 160))
     return bgr_rgb(img)
 
 
@@ -39,18 +41,61 @@ def rotate(img):
     return rotated_img
 
 
-def gamma(img):
-    gamma = np.random.uniform(0.5, 1.2)
-    invGamma = 1.0 / gamma
-    table = np.array([((i / 255.0) ** invGamma) * 255 for i in np.arange(0, 256)]).astype("uint8")
-    new_img = cv2.LUT(img, table)
-    return new_img
-
-
 def blur(img):
     r_int = np.random.randint(0, 2)
     odd_size = 2 * r_int + 1
     return cv2.GaussianBlur(img, (odd_size, odd_size), 0)
+
+
+def random_shadow(image):
+    """
+    Generates and adds random shadow
+    """
+    # (x1, y1) and (x2, y2) forms a line
+    # xm, ym gives all the locations of the image
+    x1, y1 = IMAGE_WIDTH * np.random.rand(), 0
+    x2, y2 = IMAGE_WIDTH * np.random.rand(), IMAGE_HEIGHT
+    xm, ym = np.mgrid[0:IMAGE_HEIGHT, 0:IMAGE_WIDTH]
+
+    # mathematically speaking, we want to set 1 below the line and zero otherwise
+    # Our coordinate is up side down.  So, the above the line: 
+    # (ym-y1)/(xm-x1) > (y2-y1)/(x2-x1)
+    # as x2 == x1 causes zero-division problem, we'll write it in the below form:
+    # (ym-y1)*(x2-x1) - (y2-y1)*(xm-x1) > 0
+    mask = np.zeros_like(image[:, :, 1])
+    mask[(ym - y1) * (x2 - x1) - (y2 - y1) * (xm - x1) > 0] = 1
+
+    # choose which side should have shadow and adjust saturation
+    cond = mask == np.random.randint(2)
+    s_ratio = np.random.uniform(low=0.2, high=0.5)
+
+    # adjust Saturation in HLS(Hue, Light, Saturation)
+    hls = cv2.cvtColor(image, cv2.COLOR_RGB2HLS)
+    hls[:, :, 1][cond] = hls[:, :, 1][cond] * s_ratio
+    return cv2.cvtColor(hls, cv2.COLOR_HLS2RGB)
+
+def random_translate(image, steering_angle, range_x, range_y):
+    """
+    Randomly shift the image virtially and horizontally (translation).
+    """
+    trans_x = range_x * (np.random.rand() - 0.5)
+    trans_y = range_y * (np.random.rand() - 0.5)
+    steering_angle += trans_x * 0.002
+    trans_m = np.float32([[1, 0, trans_x], [0, 1, trans_y]])
+    height, width = image.shape[:2]
+    image = cv2.warpAffine(image, trans_m, (width, height))
+    return image, steering_angle
+
+
+def random_brightness(image):
+    """
+    Randomly adjust brightness of the image.
+    """
+    # HSV (Hue, Saturation, Value) is also called HSB ('B' for Brightness).
+    hsv = cv2.cvtColor(image, cv2.COLOR_RGB2HSV)
+    ratio = 1.0 + 0.4 * (np.random.rand() - 0.5)
+    hsv[:,:,2] =  hsv[:,:,2] * ratio
+    return cv2.cvtColor(hsv, cv2.COLOR_HSV2RGB)
 
 
 def augument(dir, img_path, steering_angle):
@@ -60,15 +105,17 @@ def augument(dir, img_path, steering_angle):
     """
     image = load_image(dir, img_path)
 
-    a = np.random.randint(0, 3, [1, 4]).astype('bool')[0]
+    a = np.random.randint(0, 3, [1, 5]).astype('bool')[0]
     if a[0] == 1:
-        image, steering_angle = random_flip(image, steering_angle)
+        image = random_shadow(image)
     if a[1] == 1:
         image = blur(image)
     if a[2] == 1:
-        image = gamma(image)
+        image = random_brightness(image)
     if a[3] == 1:
         image, steering_angle = random_flip(image, steering_angle)
+    if a[4] == 1:
+        image, steering_angle = random_translate(image, steering_angle, 10, 10)
     return image, steering_angle
 
 
@@ -90,9 +137,6 @@ def batch_generator(dir, data, batch_size, is_training):
                 image, steering_angle = augument(dir, center_path, steering_angle)
             else:
                 image = load_image(dir, center_path)
-                
-            image = image[160:480, 0:640]
-            image = cv2.resize(image, (256, 256))
                 # add the image and steering angle to the batch
             images[i] = image
             steers[i] = steering_angle
@@ -118,9 +162,6 @@ def validation_generator(dir, data, batch_size):
             steering_angle = data["steering_angle"][1]
 
             image = load_image(dir, path)
-            image = image[160:480, 0:640]
-            image = cv2.resize(image, (256, 256))
-                # add the image and steering angle to the batch
             images[i] = image
             steers[i] = steering_angle
             i += 1

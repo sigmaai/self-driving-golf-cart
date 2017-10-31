@@ -2,7 +2,7 @@ from keras.models import Model, Sequential
 from keras.layers.core import Dense, Activation, Flatten
 from keras.layers.convolutional import Conv2D
 from keras.layers.pooling import AveragePooling2D, MaxPooling2D
-from keras.layers import Input, Lambda, Dropout
+from keras.layers import Input, Lambda, Dropout, ELU
 from keras.layers.normalization import BatchNormalization
 from keras.optimizers import Adam
 from keras.models import load_model
@@ -61,7 +61,30 @@ def small_vgg_network():
     model.compile(optimizer=adam, loss=root_mean_squared_error)
     
     return model
- 
+
+def commaai_model(time_len=1):
+    
+    ch, row, col = 3, 160, 320  # camera format
+    model = Sequential()
+    model.add(Lambda(lambda x: x/127.5 - 1., input_shape=(row, col, ch), output_shape=(row, col, ch)))
+    model.add(Conv2D(16, (8, 8), subsample=(4, 4), padding="same"))
+    model.add(ELU())
+    model.add(Conv2D(32, (5, 5), subsample=(2, 2), padding="same"))
+    model.add(ELU())
+    model.add(Conv2D(64, (5, 5), subsample=(2, 2), padding="same"))
+    model.add(Flatten())
+    model.add(Dropout(.2))
+    model.add(ELU())
+    model.add(Dense(512))
+    model.add(Dropout(.5))
+    model.add(ELU())
+    model.add(Dense(1))
+
+    model.compile(optimizer="adam", loss=root_mean_squared_error)
+
+    return model
+
+
 def root_mean_squared_error(y_true, y_pred):
         return K.backend.sqrt(K.backend.mean(K.backend.square(y_pred - y_true), axis=-1)) 
 

@@ -114,12 +114,12 @@ def draw_path_on(img, speed_ms, angle_steers, color=(0, 0, 255)):
 
 
 def preprocess_img(img):
+    
     b, g, r = cv2.split(img)  # get b,g,r
     img = cv2.merge([r, g, b])  # switch it to rgb
     img = img[160: 480, 0:640]
-    img = cv2.resize(img, (256, 256))
+    img = cv2.resize(img, (320, 160))
     return img
-
 
 # ***** main loop *****
 if __name__ == "__main__":
