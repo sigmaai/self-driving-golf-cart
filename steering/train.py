@@ -5,18 +5,19 @@ import utils
 import model
 
 dir = "/home/ubuntu/dataset/udacity-driving-testing-ds/"
+dir2 = "/home/ubuntu/dataset/udacity-driving/"
 val_dir = "/home/ubuntu/dataset/small-testing-ds/"
 
-labels = pd.read_csv(dir + "interpolated.csv")
+labels = pd.read_csv(dir2 + "interpolated.csv")
 val_labels = pd.read_csv(val_dir + "interpolated.csv")
 center_labels = utils.clean_steering_label(labels.values)
 print(center_labels.shape)
 
 cnn = model.commaai_model()
-# cnn.load_weights("./trained-vgg-v1.h5")
+cnn.load_weights("./trained-cai-v4.h5")
 cnn.summary()
 
-training_gen = utils.batch_generator(dir, center_labels, 8, True)
+training_gen = utils.batch_generator(dir2, center_labels, 8, True)
 validation_gen = utils.validation_generator(val_dir, val_labels, 2)
 
 cnn.fit_generator(training_gen,
@@ -24,4 +25,4 @@ cnn.fit_generator(training_gen,
                   validation_data=validation_gen,
                   validation_steps=1000)
 
-cnn.save('trained-cai-v1.h5')
+cnn.save('trained-cai-v5.h5')
