@@ -12,8 +12,7 @@ from flask import Flask #web framework
 from io import BytesIO #input output
 import cv2
 import scipy.misc
-
-import simulation_utils
+import utils
 import model
 
 
@@ -45,7 +44,7 @@ def telemetry(sid, data):
         
         try:
             image = np.asarray(image)       # from PIL image to numpy array
-            image = simulation_utils.preprocess(image) # apply the preprocessing
+            image = utils.preprocess(image) # apply the preprocessing
             image = np.array([image])       # the model expects 4D array
             # predict the steering angle for the image
             steering_angle =  -1.0 * float(cnn.predict(image, batch_size=1))
