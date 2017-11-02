@@ -12,7 +12,7 @@ def nvidia_network():
     
     model = Sequential()
 
-    model.add(Conv2D(24, (5, 5), padding="same", strides = 2, input_shape=(256, 256, 3)))
+    model.add(Conv2D(24, (5, 5), padding="same", strides = 2, input_shape=(160, 320, 3)))
     model.add(Activation('relu'))
     model.add(Conv2D(36, (5, 5), padding="same", strides = 2))
     model.add(Activation('relu'))
@@ -40,7 +40,7 @@ def nvidia_network():
 def small_vgg_network():
 
     model = Sequential()
-    model.add(Conv2D(32, (3, 3), activation='relu', padding='same', input_shape=(256, 256, 3)))
+    model.add(Conv2D(32, (3, 3), activation='relu', padding='same', input_shape=(160, 320, 3)))
     model.add(MaxPooling2D((2, 2), strides=2))
     model.add(Dropout(0.25))
     model.add(Conv2D(64, (3, 3), activation='relu', padding='same'))

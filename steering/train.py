@@ -15,14 +15,14 @@ labels = utils.preprocess_dataset(dir, dir2)
 print(labels.shape)
 val_labels = pd.read_csv(val_dir + "interpolated.csv")
 
-cnn = model.commaai_model()
-cnn.load_weights("./trained-vgg-v4.h5")
+cnn = model.nvidia_network()
+# cnn.load_weights("./trained-nvd-v1.h5")
 cnn.summary()
 
-training_gen = utils.batch_generator(dir, labels, 8, True)
+training_gen = utils.batch_generator(labels, 8, True)
 validation_gen = utils.validation_generator(val_dir, val_labels, 2)
 
 cnn.fit_generator(training_gen,
-                  steps_per_epoch=4000, epochs=10, verbose=1,)
+                  steps_per_epoch=4000, epochs=20, verbose=1)
 
-cnn.save('trained-cai-v5.h5')
+cnn.save('trained-nvd-v1.h5')
