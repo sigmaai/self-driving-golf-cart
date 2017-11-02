@@ -23,8 +23,8 @@ app = Flask(__name__)
 prev_image_array = None
 
 #set min/max speed for our autonomous car
-MAX_SPEED = 25
-MIN_SPEED = 10
+MAX_SPEED = 20
+MIN_SPEED = 5
 
 #and a speed limit
 speed_limit = MAX_SPEED
@@ -104,9 +104,9 @@ if __name__ == '__main__':
 
     #load model
     cnn = model.commaai_model()
-    # cnn = model.nvidia_network()
-    cnn.load_weights(args.model)
     cnn.summary()
+    cnn.load_weights(args.model)
+    
 
     if args.image_folder != '':
         print("Creating image folder at {}".format(args.image_folder))
