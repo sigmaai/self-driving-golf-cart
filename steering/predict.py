@@ -21,7 +21,7 @@ model_path = args.model
 output_path = args.output_path
 
 print("Loading model...")
-model = model.nvidia_network()
+model = model.commaai_model()
 model.load_weights(model_path)
 
 print("loading dataset")
