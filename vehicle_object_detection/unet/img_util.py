@@ -83,8 +83,6 @@ def get_image_name(df,ind,size=(640,300),augmentation=False, trans_range=20, sca
     img = cv2.resize(img,size)
     name_str = file_name.split('/')
     name_str = name_str[-1]
-    #print(name_str)
-    #print(file_name)
     bb_boxes = df[df['Frame'] == name_str].reset_index()
     img_size_post = np.shape(img)
 
@@ -101,6 +99,14 @@ def get_image_name(df,ind,size=(640,300),augmentation=False, trans_range=20, sca
     #bb_boxes = bb_boxes[bb_boxes['Area']>400]
 
     return name_str, img, bb_boxes
+
+
+def get_image_path(path,size=(640,300)):
+
+    img = cv2.imread(path, 1)
+    img = cv2.resize(img, size)
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    return img
 
 def get_mask_seg(img,bb_boxes_f):
 

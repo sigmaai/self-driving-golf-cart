@@ -3,11 +3,12 @@ import img_util
 import os
 import cv2
 
-#### Training generator, generates augmented images
+img_rows = 640
+img_cols = 960
+
+# Training generator, generates augmented images
 def generate_train_batch(data,batch_size = 32):
-    ##### Image size,
-    img_rows = 640
-    img_cols = 960
+
     batch_images = np.zeros((batch_size, img_rows, img_cols, 3))
     batch_masks = np.zeros((batch_size, img_rows, img_cols, 1))
     while 1:
@@ -24,11 +25,10 @@ def generate_train_batch(data,batch_size = 32):
             batch_masks[i_batch] =img_mask
         yield batch_images, batch_masks
 
-#### Testing generator, generates augmented images
+
+# Testing generator, generates augmented images
 def generate_test_batch(data,batch_size = 32):
-      ##### Image size,
-    img_rows = 640
-    img_cols = 960
+
     batch_images = np.zeros((batch_size, img_rows, img_cols, 3))
     batch_masks = np.zeros((batch_size, img_rows, img_cols, 1))
     while 1:

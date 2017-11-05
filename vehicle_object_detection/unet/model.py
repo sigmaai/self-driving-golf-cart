@@ -1,14 +1,23 @@
-import keras
+import keras as K
 from keras.models import Model
 from keras.layers import Input, merge, Convolution2D, MaxPooling2D, UpSampling2D,Lambda
-from keras.models import load_model
-from keras.optimizers import Adam
-from keras.callbacks import ModelCheckpoint, LearningRateScheduler
-from keras import backend as K
+
+smooth = 1.
+img_rows = 640
+img_cols = 960
+
+def IOU_calc(y_true, y_pred):
+    y_true_f = K.flatten(y_true)
+    y_pred_f = K.flatten(y_pred)
+    intersection = K.sum(y_true_f * y_pred_f)
+
+    return 2*(intersection + smooth) / (K.sum(y_true_f) + K.sum(y_pred_f) + smooth)
+
+
+def IOU_calc_loss(y_true, y_pred):
+    return -IOU_calc(y_true, y_pred)
 
 def fcn_model():
-    img_rows = 640
-    img_cols = 960
 
     inputs = Input((img_rows, img_cols, 3))
     inputs_norm = Lambda(lambda x: x/127.5 - 1.)

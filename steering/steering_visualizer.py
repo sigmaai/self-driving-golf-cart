@@ -5,12 +5,7 @@ Revised and used by Neil Nie
 '''
 
 from __future__ import print_function
-from keras.models import Model, Sequential
-from keras.layers.core import Dense, Activation, Flatten
-from keras.layers.convolutional import Conv2D
-from keras.optimizers import Adam
 import argparse
-import sys
 import numpy as np
 import cv2
 import pygame
