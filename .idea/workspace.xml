@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9d6eb70-00d3-4b11-88c3-998eeea85bdb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vehicle_object_detection/yolo/config.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vehicle_object_detection/yolo/model.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicle_object_detection/.floydexpt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicle_object_detection/.floydignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicle_object_detection/.ipynb_checkpoints/vehicle_detection_with_yolo-checkpoint.ipynb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicle_object_detection/img_util.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicle_object_detection/model.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicle_object_detection/object-detection-Unet-train-IoU.ipynb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicle_object_detection/test_images/test1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicle_object_detection/train-1.h5" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicle_object_detection/train.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicle_object_detection/train_util.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicle_object_detection/vehicle_detection_with_yolo.ipynb" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/steering/steering_visualizer.py" afterPath="$PROJECT_DIR$/steering/steering_visualizer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vehicle_object_detection/yolo/.ipynb_checkpoints/vehicle_detection_yolo-checkpoint.ipynb" afterPath="$PROJECT_DIR$/vehicle_object_detection/yolo/.ipynb_checkpoints/vehicle_detection_yolo-checkpoint.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vehicle_object_detection/yolo/preprocessing.py" afterPath="$PROJECT_DIR$/vehicle_object_detection/yolo/preprocessing.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vehicle_object_detection/yolo/vehicle_detection_yolo.ipynb" afterPath="$PROJECT_DIR$/vehicle_object_detection/yolo/vehicle_detection_yolo.ipynb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,18 +24,7 @@
     <SUITE FILE_PATH="coverage/ALVNS$view_steering_model.coverage" NAME="view_steering_model Coverage Results" MODIFIED="1509061317721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/driving-simulator" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="detection_visualizer.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vehicle_object_detection/detection_visualizer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="915">
-              <caret line="76" column="60" lean-forward="false" selection-start-line="76" selection-start-column="60" selection-end-line="76" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -112,13 +90,13 @@
         <option value="$PROJECT_DIR$/vehicle_object_detection/img_util.py" />
         <option value="$PROJECT_DIR$/vehicle_object_detection/detection_visualizer.py" />
         <option value="$PROJECT_DIR$/vehicle_object_detection/util.py" />
-        <option value="$PROJECT_DIR$/vehicle_object_detection/yolo/preprocessing.py" />
         <option value="$PROJECT_DIR$/vehicle_object_detection/yolo/config.py" />
         <option value="$PROJECT_DIR$/vehicle_object_detection/yolo/model.py" />
         <option value="$PROJECT_DIR$/vehicle_object_detection/unet/model.py" />
         <option value="$PROJECT_DIR$/vehicle_object_detection/yolo/vehicle_detection_yolo.ipynb" />
         <option value="$PROJECT_DIR$/vehicle_object_detection/unet/train_util.py" />
         <option value="$PROJECT_DIR$/vehicle_object_detection/unet/train.py" />
+        <option value="$PROJECT_DIR$/vehicle_object_detection/yolo/preprocessing.py" />
       </list>
     </option>
   </component>
@@ -168,6 +146,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -178,19 +158,12 @@
             <path>
               <item name="ALVNS" type="b2602c69:ProjectViewProjectNode" />
               <item name="ALVNS" type="462c0819:PsiDirectoryNode" />
-              <item name="steering" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ALVNS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ALVNS" type="462c0819:PsiDirectoryNode" />
               <item name="vehicle_object_detection" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -359,9 +332,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="12" y="31" width="1401" height="837" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33922002" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34437087" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -412,7 +384,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vehicle_steering/Vehicle Steering ConvNet.ipynb" />
     <entry file="file://$PROJECT_DIR$/driving-simulator/view_steering_model.py" />
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pygame/surfarray.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -531,44 +502,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vehicle_object_detection/detection_testing.py" />
-    <entry file="file://$PROJECT_DIR$/vehicle_object_detection/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="87" lean-forward="false" selection-start-line="2" selection-start-column="87" selection-end-line="2" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vehicle_object_detection/img_util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="102" column="0" lean-forward="false" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vehicle_object_detection/util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="45" column="26" lean-forward="false" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vehicle_object_detection/object-detection-Unet-train-IoU.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vehicle_object_detection/preprocessing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/vehicle_object_detection/model.py" />
+    <entry file="file://$PROJECT_DIR$/vehicle_object_detection/img_util.py" />
+    <entry file="file://$PROJECT_DIR$/vehicle_object_detection/util.py" />
+    <entry file="file://$PROJECT_DIR$/vehicle_object_detection/object-detection-Unet-train-IoU.ipynb" />
+    <entry file="file://$PROJECT_DIR$/vehicle_object_detection/preprocessing.py" />
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/keras/utils/data_utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1172">
@@ -581,19 +519,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="685">
           <caret line="152" column="22" lean-forward="false" selection-start-line="152" selection-start-column="22" selection-end-line="152" selection-end-column="22" />
-          <folding>
-            <element signature="e#123#160#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vehicle_object_detection/yolo/preprocessing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-642">
-          <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#9#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -608,9 +533,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-13">
           <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -618,7 +540,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="10" lean-forward="true" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -633,9 +554,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -643,9 +561,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
           <caret line="43" column="51" lean-forward="false" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -653,16 +568,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1573">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vehicle_object_detection/detection_visualizer.py" />
+    <entry file="file://$PROJECT_DIR$/vehicle_object_detection/yolo/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#42#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vehicle_object_detection/detection_visualizer.py">
+    <entry file="file://$PROJECT_DIR$/vehicle_object_detection/yolo/preprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="76" column="60" lean-forward="false" selection-start-line="76" selection-start-column="60" selection-end-line="76" selection-end-column="60" />
+        <state relative-caret-position="90">
+          <caret line="6" column="32" lean-forward="false" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
           <folding />
         </state>
       </provider>

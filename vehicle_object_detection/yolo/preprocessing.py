@@ -4,7 +4,7 @@ import copy
 import numpy as np
 import imgaug as ia
 from imgaug import augmenters as iaa
-import keras.utils.Sequence as Sequence
+from keras.utils import Sequence
 import xml.etree.ElementTree as ET
 from utils import BoundBox, normalize, bbox_iou
 
