@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9d6eb70-00d3-4b11-88c3-998eeea85bdb" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicle_object_detection/yolo/config.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicle_object_detection/yolo/model.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicle_object_detection/yolo/preprocessing.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicle_object_detection/yolo/utils.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vehicle_object_detection/yolo/vehicle_detection_yolo.ipynb" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vehicle_object_detection/yolo/.ipynb_checkpoints/vehicle_detection_yolo-checkpoint.ipynb" afterPath="$PROJECT_DIR$/vehicle_object_detection/yolo/.ipynb_checkpoints/vehicle_detection_yolo-checkpoint.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vehicle_object_detection/yolo/preprocessing.py" afterPath="$PROJECT_DIR$/vehicle_object_detection/yolo/preprocessing.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vehicle_object_detection/yolo/vehicle_detection_yolo.ipynb" afterPath="$PROJECT_DIR$/vehicle_object_detection/yolo/vehicle_detection_yolo.ipynb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,14 +20,52 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/ALVNS$train__1_.coverage" NAME="train (1) Coverage Results" MODIFIED="1509564066777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/steering" />
     <SUITE FILE_PATH="coverage/ALVNS$detection_visualizer.coverage" NAME="detection_visualizer Coverage Results" MODIFIED="1509806914388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vehicle_object_detection" />
+    <SUITE FILE_PATH="coverage/ALVNS$train__2_.coverage" NAME="train (2) Coverage Results" MODIFIED="1510365741370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vehicle_object_detection/yolo" />
     <SUITE FILE_PATH="coverage/ALVNS$train.coverage" NAME="train Coverage Results" MODIFIED="1509055138309" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Vehicle_Steering" />
     <SUITE FILE_PATH="coverage/ALVNS$game.coverage" NAME="game Coverage Results" MODIFIED="1508095377453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/driving-simulator" />
+    <SUITE FILE_PATH="coverage/ALVNS$test_yolo.coverage" NAME="test_yolo Coverage Results" MODIFIED="1510371006474" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vehicle_object_detection/yolo" />
     <SUITE FILE_PATH="coverage/ALVNS$ALVNS.coverage" NAME="ALVNS Coverage Results" MODIFIED="1509419520089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/ALVNS$utils.coverage" NAME="utils Coverage Results" MODIFIED="1509463345891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/steering" />
     <SUITE FILE_PATH="coverage/ALVNS$view_steering_model.coverage" NAME="view_steering_model Coverage Results" MODIFIED="1509061317721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/driving-simulator" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <expand />
+    <select />
+  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="test_yolo.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vehicle_object_detection/yolo/test_yolo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2032">
+              <caret line="149" column="26" lean-forward="true" selection-start-line="149" selection-start-column="26" selection-end-line="149" selection-end-column="26" />
+              <folding>
+                <element signature="e#81#96#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="configs.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vehicle_object_detection/yolo/configs/configs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -57,6 +98,7 @@
       <find>augument</find>
       <find>preprocess_img</find>
       <find>test_new_img</find>
+      <find>parse_annotation</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -93,10 +135,13 @@
         <option value="$PROJECT_DIR$/vehicle_object_detection/yolo/config.py" />
         <option value="$PROJECT_DIR$/vehicle_object_detection/yolo/model.py" />
         <option value="$PROJECT_DIR$/vehicle_object_detection/unet/model.py" />
-        <option value="$PROJECT_DIR$/vehicle_object_detection/yolo/vehicle_detection_yolo.ipynb" />
         <option value="$PROJECT_DIR$/vehicle_object_detection/unet/train_util.py" />
         <option value="$PROJECT_DIR$/vehicle_object_detection/unet/train.py" />
+        <option value="$PROJECT_DIR$/vehicle_object_detection/yolo/train.py" />
         <option value="$PROJECT_DIR$/vehicle_object_detection/yolo/preprocessing.py" />
+        <option value="$PROJECT_DIR$/vehicle_object_detection/yolo/vehicle_detection_yolo.ipynb" />
+        <option value="$PROJECT_DIR$/vehicle_object_detection/yolo/test_yolo.py" />
+        <option value="$PROJECT_DIR$/vehicle_object_detection/yolo/configs/configs.py" />
       </list>
     </option>
   </component>
@@ -106,11 +151,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="12" />
-    <option name="y" value="31" />
-    <option name="width" value="1401" />
-    <option name="height" value="837" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="722" />
+    <option name="width" value="718" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -131,6 +175,9 @@
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -146,7 +193,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -158,12 +204,31 @@
             <path>
               <item name="ALVNS" type="b2602c69:ProjectViewProjectNode" />
               <item name="ALVNS" type="462c0819:PsiDirectoryNode" />
+              <item name="steering" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ALVNS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ALVNS" type="462c0819:PsiDirectoryNode" />
               <item name="vehicle_object_detection" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ALVNS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ALVNS" type="462c0819:PsiDirectoryNode" />
+              <item name="vehicle_object_detection" type="462c0819:PsiDirectoryNode" />
+              <item name="yolo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ALVNS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ALVNS" type="462c0819:PsiDirectoryNode" />
+              <item name="vehicle_object_detection" type="462c0819:PsiDirectoryNode" />
+              <item name="yolo" type="462c0819:PsiDirectoryNode" />
+              <item name="configs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -188,7 +253,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.detection_visualizer">
+  <component name="RunManager" selected="Python.test_yolo">
     <configuration name="ALVNS" type="Python.Ipnb" factoryName="Jupyter Notebook">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -224,6 +289,24 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
+    <configuration name="test_yolo" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/vehicle_object_detection/yolo" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ALVNS" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vehicle_object_detection/yolo/test_yolo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <configuration name="train (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -242,20 +325,20 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="train" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="train (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Vehicle_Steering" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/vehicle_object_detection/yolo" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ALVNS" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Vehicle_Steering/train.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vehicle_object_detection/yolo/train.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -278,39 +361,21 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="view_steering_model" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/driving-simulator" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ALVNS" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/driving-simulator/view_steering_model.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Jupyter Notebook.ALVNS" />
-      <item index="1" class="java.lang.String" itemvalue="Python.view_steering_model" />
-      <item index="2" class="java.lang.String" itemvalue="Python.train" />
-      <item index="3" class="java.lang.String" itemvalue="Python.train (1)" />
-      <item index="4" class="java.lang.String" itemvalue="Python.utils" />
-      <item index="5" class="java.lang.String" itemvalue="Python.detection_visualizer" />
+      <item index="1" class="java.lang.String" itemvalue="Python.train (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Python.utils" />
+      <item index="3" class="java.lang.String" itemvalue="Python.detection_visualizer" />
+      <item index="4" class="java.lang.String" itemvalue="Python.train (2)" />
+      <item index="5" class="java.lang.String" itemvalue="Python.test_yolo" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.detection_visualizer" />
-        <item index="1" class="java.lang.String" itemvalue="Python.train (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.utils" />
-        <item index="3" class="java.lang.String" itemvalue="Python.train" />
-        <item index="4" class="java.lang.String" itemvalue="Python.view_steering_model" />
+        <item index="0" class="java.lang.String" itemvalue="Python.test_yolo" />
+        <item index="1" class="java.lang.String" itemvalue="Python.train (2)" />
+        <item index="2" class="java.lang.String" itemvalue="Python.detection_visualizer" />
+        <item index="3" class="java.lang.String" itemvalue="Python.train (1)" />
+        <item index="4" class="java.lang.String" itemvalue="Python.utils" />
       </list>
     </recent_temporary>
   </component>
@@ -331,17 +396,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="12" y="31" width="1401" height="837" extended-state="0" />
+    <frame x="722" y="0" width="718" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34437087" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884097" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884097" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29514825" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988167" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32769045" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32769045" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2648126" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884097" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32769045" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39892185" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -379,28 +445,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="3" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/driving-simulator/view_steering_model.py" />
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pygame/surfarray.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vehicle_steering/Vehicle Steering ConvNet.ipynb" />
-    <entry file="file://$PROJECT_DIR$/driving-simulator/view_steering_model.py" />
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pygame/_numpysurfarray.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2220">
-          <caret line="155" column="0" lean-forward="false" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vehicle_steering/Vehicle Steering ConvNet.ipynb" />
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/skimage/transform/_geometric.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -511,14 +560,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1172">
           <caret line="345" column="8" lean-forward="false" selection-start-line="345" selection-start-column="8" selection-end-line="345" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/steering/steering_visualizer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="685">
-          <caret line="152" column="22" lean-forward="false" selection-start-line="152" selection-start-column="22" selection-end-line="152" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -540,13 +581,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="10" lean-forward="true" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vehicle_object_detection/yolo/vehicle_detection_yolo.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="2" />
         </state>
       </provider>
     </entry>
@@ -576,17 +610,71 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/steering/train-densenet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-358">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/steering/steering_visualizer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-46">
+          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/xml/etree/ElementTree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="596" column="0" lean-forward="false" selection-start-line="596" selection-start-column="0" selection-end-line="596" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vehicle_object_detection/yolo/preprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="32" lean-forward="false" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
-          <folding />
+        <state relative-caret-position="-293">
+          <caret line="27" column="36" lean-forward="false" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vehicle_object_detection/yolo/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="99" column="39" lean-forward="true" selection-start-line="99" selection-start-column="39" selection-end-line="99" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vehicle_object_detection/yolo/vehicle_detection_yolo.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vehicle_object_detection/yolo/configs/configs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vehicle_object_detection/yolo/test_yolo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2032">
+          <caret line="149" column="26" lean-forward="true" selection-start-line="149" selection-start-column="26" selection-end-line="149" selection-end-column="26" />
+          <folding>
+            <element signature="e#81#96#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
