@@ -8,3 +8,6 @@ test_path = "./images"
 output_path = "./output"
 score_threshold = 0.5
 iou_threshold = 0.5
+test_dataset = "/Users/yongyangnie/Desktop/testing_dataset/"
+width = 480
+height = 640

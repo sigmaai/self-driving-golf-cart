@@ -9,17 +9,13 @@ import argparse
 import numpy as np
 import cv2
 import pygame
-import json
 import pandas as pd
 from os import path
-from keras.models import load_model
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.backends.backend_agg as agg
 import pylab
 import model
-from pygame.locals import *
-
 
 pygame.init()
 size = (320*2, 160*4)
