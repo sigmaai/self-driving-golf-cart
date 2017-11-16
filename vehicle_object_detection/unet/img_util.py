@@ -4,9 +4,8 @@ from __future__ import print_function
 import os
 import cv2
 import matplotlib.pyplot as plt
-from matplotlib.patches import Rectangle
 import numpy as np
-import glob
+
 
 def augment_brightness_camera_images(image):
 
