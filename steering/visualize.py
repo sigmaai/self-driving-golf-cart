@@ -3,13 +3,10 @@ import pandas as pd
 import pygame
 import glob
 import cv2
+import configs
 from keras.models import load_model
 
-BLACK = (  0,   0,   0)
-WHITE = (255, 255, 255)
-BLUE =  (  0,   0, 255)
-GREEN = (  0, 255,   0)
-RED =   (255,   0,   0)
+
 
 data_path = "/Volumes/Personal_Drive/Datasets/Udacity_Self-Driving-Car/small-testing-ds/"
 true = pd.read_csv("/Volumes/Personal_Drive/Datasets/Udacity_Self-Driving-Car/small-testing-ds/interpolated.csv")
@@ -54,17 +51,17 @@ for i in range(5000):
 
     # draw steering wheel
     radius = 50
-    pygame.draw.circle(screen, WHITE, [320, 300], radius, 2) 
+    pygame.draw.circle(screen, configs.WHITE, [320, 300], radius, 2)
 
     # draw cricle for true angle
     x = radius * np.cos(np.pi/2 + true_angle)
     y = radius * np.sin(np.pi/2 + true_angle)
-    pygame.draw.circle(screen, WHITE, [320 + int(x), 300 - int(y)], 7)
+    pygame.draw.circle(screen, configs.WHITE, [320 + int(x), 300 - int(y)], 7)
     
     # draw cricle for predicted angle
     x = radius * np.cos(np.pi/2 + angle)
     y = radius * np.sin(np.pi/2 + angle)
-    pygame.draw.circle(screen, BLACK, [320 + int(x), 300 - int(y)], 5) 
+    pygame.draw.circle(screen, configs.BLACK, [320 + int(x), 300 - int(y)], 5)
     
     pygame.display.flip()
     pygame.time.Clock().tick(60)

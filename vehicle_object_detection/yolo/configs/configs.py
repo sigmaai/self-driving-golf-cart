@@ -8,6 +8,6 @@ test_path = "./images"
 output_path = "./output"
 score_threshold = 0.5
 iou_threshold = 0.5
-test_dataset = "/Users/yongyangnie/Desktop/testing_dataset/"
+test_dataset = "/Volumes/Personal_Drive/Datasets/udacity-driving/validation/"
 width = 480
 height = 640

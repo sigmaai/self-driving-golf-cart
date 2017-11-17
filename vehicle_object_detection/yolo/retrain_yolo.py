@@ -40,10 +40,12 @@ argparser.add_argument(
     help='path to classes file, defaults to pascal_classes.txt',
     default=os.path.join('..', 'DATA', 'underwater_classes.txt'))
 
+
 # Default anchor boxes
 YOLO_ANCHORS = np.array(
     ((0.57273, 0.677385), (1.87446, 2.06253), (3.33843, 5.47434),
      (7.88282, 3.52778), (9.77052, 9.16828)))
+
 
 def _main(args):
     data_path = os.path.expanduser(args.data_path)
@@ -102,6 +104,7 @@ def get_anchors(anchors_path):
         Warning("Could not open anchors file, using default.")
         return YOLO_ANCHORS
 
+
 def process_data(images, boxes=None):
     '''processes the data'''
     images = [PIL.Image.fromarray(i) for i in images]
@@ -144,6 +147,7 @@ def process_data(images, boxes=None):
     else:
         return np.array(processed_images)
 
+
 def get_detector_mask(boxes, anchors):
     '''
     Precompute detectors_mask and matching_true_boxes for training.
@@ -158,6 +162,7 @@ def get_detector_mask(boxes, anchors):
         detectors_mask[i], matching_true_boxes[i] = preprocess_true_boxes(box, anchors, [416, 416])
 
     return np.array(detectors_mask), np.array(matching_true_boxes)
+
 
 def create_model(anchors, class_names, load_pretrained=True, freeze_body=True):
     '''
@@ -210,7 +215,6 @@ def create_model(anchors, class_names, load_pretrained=True, freeze_body=True):
 
     # Place model loss on CPU to reduce GPU memory usage.
     with tf.device('/cpu:0'):
-        # TODO: Replace Lambda with custom Keras layer for loss.
         model_loss = Lambda(
             yolo_loss,
             output_shape=(1, ),
@@ -221,11 +225,10 @@ def create_model(anchors, class_names, load_pretrained=True, freeze_body=True):
                            detectors_mask_input, matching_boxes_input
                        ])
 
-    model = Model(
-        [model_body.input, boxes_input, detectors_mask_input,
-         matching_boxes_input], model_loss)
+    model = Model([model_body.input, boxes_input, detectors_mask_input,matching_boxes_input], model_loss)
 
     return model_body, model
+
 
 def train(model, class_names, anchors, image_data, boxes, detectors_mask, matching_true_boxes, validation_split=0.1):
     '''
@@ -337,7 +340,6 @@ def draw(model_body, class_names, anchors, image_data, image_set='val',
         # To display (pauses the program):
         # plt.imshow(image_with_boxes, interpolation='nearest')
         # plt.show()
-
 
 
 if __name__ == '__main__':

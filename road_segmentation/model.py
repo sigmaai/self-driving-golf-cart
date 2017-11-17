@@ -1,10 +1,10 @@
-import keras as K
+from keras import backend as K
 from keras.models import Model
-from keras.layers import Input, merge, Convolution2D, MaxPooling2D, UpSampling2D,Lambda
+from keras.layers import Input, merge, Convolution2D, MaxPooling2D, UpSampling2D,Lambda, Flatten
 
 smooth = 1.
-img_rows = 640
-img_cols = 960
+img_rows = 480
+img_cols = 640
 
 
 def IOU_calc(y_true, y_pred):
@@ -59,8 +59,9 @@ def fcn_model():
     conv9 = Convolution2D(8, (3, 3), activation='relu', padding='same')(up9)
     conv9 = Convolution2D(8, (3, 3), activation='relu', padding='same')(conv9)
 
-    conv10 = Convolution2D(1, (1, 1), activation='sigmoid')(conv9)
+    conv10 = Convolution2D(3, (1, 1), activation='sigmoid')(conv9)
 
     model = Model(input=inputs, output=conv10)
     print(model.summary())
+
     return model

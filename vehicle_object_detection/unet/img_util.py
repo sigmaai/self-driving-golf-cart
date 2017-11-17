@@ -107,18 +107,22 @@ def get_image_path(path,size=(640,300)):
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     return img
 
+
 def get_mask_seg(img,bb_boxes_f):
 
-    #### Get mask
-
-    img_mask = np.zeros_like(img[:,:,0])
+    # Get mask
+    img_mask = np.zeros_like(img[:, :, 0])
     for i in range(len(bb_boxes_f)):
         #plot_bbox(bb_boxes,i,'g')
-        bb_box_i = [bb_boxes_f.iloc[i]['xmin'],bb_boxes_f.iloc[i]['ymin'],
-                bb_boxes_f.iloc[i]['xmax'],bb_boxes_f.iloc[i]['ymax']]
-        img_mask[int(bb_box_i[1]): int(bb_box_i[3]), int(bb_box_i[0]): int(bb_box_i[2])]= 1.
-        img_mask = np.reshape(img_mask,(np.shape(img_mask)[0],np.shape(img_mask)[1],1))
+        bb_box_i = [bb_boxes_f.iloc[i]['xmin'],
+                    bb_boxes_f.iloc[i]['ymin'],
+                    bb_boxes_f.iloc[i]['xmax'],
+                    bb_boxes_f.iloc[i]['ymax']]
+
+        img_mask[int(bb_box_i[1]): int(bb_box_i[3]), int(bb_box_i[0]): int(bb_box_i[2])] = 1.
+        img_mask = np.reshape(img_mask, (np.shape(img_mask)[0], np.shape(img_mask)[1],1))
     return img_mask
+
 
 def plot_image_mask(im,im_mask):
     ### Function to plot image mask
@@ -132,9 +136,10 @@ def plot_image_mask(im,im_mask):
     plt.imshow(im_mask[:,:,0])
     plt.axis('off')
     plt.subplot(1,3,3)
-    plt.imshow(cv2.bitwise_and(im,im,mask=im_mask));
+    plt.imshow(cv2.bitwise_and(im,im,mask=im_mask))
     plt.axis('off')
-    plt.show();
+    plt.show()
+
 
 def plot_bbox(bb_boxes,ind_bb,color='r',linewidth=2):
     ### Plot bounding box
@@ -149,6 +154,7 @@ def plot_bbox(bb_boxes,ind_bb,color='r',linewidth=2):
                   bb_box_i[3],bb_box_i[1]],
              color,linewidth=linewidth)
 
+
 def plot_image_bbox(im,bb_boxes):
     ### Plot image and bounding box
     plt.imshow(im)
@@ -159,4 +165,4 @@ def plot_image_bbox(im,bb_boxes):
                 bb_boxes.iloc[i]['xmax'],bb_boxes.iloc[i]['ymax']]
         plt.plot(bb_box_i[0],bb_box_i[1],'rs')
         plt.plot(bb_box_i[2],bb_box_i[3],'bs')
-    plt.axis('off');
+    plt.axis('off')
