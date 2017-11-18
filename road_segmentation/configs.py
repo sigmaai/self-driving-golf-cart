@@ -1,4 +1,4 @@
-data_path = "/Volumes/Personal_Drive/Datasets/"
+data_path = "/Users/yongyangnie/Documents/Developer/ALVNS/road-semantic-segmentation/data/"
 mask_path = "/Volumes/Personal_Drive/Datasets/data_road/training/gt_image_2/"
 batch_size = 12
 img_height = 480

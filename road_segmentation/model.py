@@ -59,7 +59,7 @@ def fcn_model():
     conv9 = Convolution2D(8, (3, 3), activation='relu', padding='same')(up9)
     conv9 = Convolution2D(8, (3, 3), activation='relu', padding='same')(conv9)
 
-    conv10 = Convolution2D(3, (1, 1), activation='sigmoid')(conv9)
+    conv10 = Convolution2D(2, (1, 1), activation='sigmoid')(conv9)
 
     model = Model(input=inputs, output=conv10)
     print(model.summary())

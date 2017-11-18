@@ -7,10 +7,10 @@ import shutil
 import zipfile
 import time
 import tensorflow as tf
-from scipy import ndimage
 from glob import glob
 from urllib.request import urlretrieve
 from tqdm import tqdm
+
 
 class DLProgress(tqdm):
     last_block = 0
@@ -115,7 +115,7 @@ def gen_batch_function(data_folder, image_shape):
                 gt_image_file = label_paths[os.path.basename(image_file)]
                 image = scipy.misc.imread(image_file)
                 gt_image = scipy.misc.imread(gt_image_file)
-                #image, gt_image = random_crop(image, gt_image) #Random crop augmentation
+                # image, gt_image = random_crop(image, gt_image) #Random crop augmentation
                 image = scipy.misc.imresize(image, image_shape)
                 contr = random.uniform(0.85, 1.15) # Contrast augmentation
                 bright = random.randint(-45, 30) # Brightness augmentation
@@ -124,12 +124,8 @@ def gen_batch_function(data_folder, image_shape):
                 gt_bg = np.all(gt_image == background_color, axis=2)
                 gt_bg = gt_bg.reshape(*gt_bg.shape, 1)
                 gt_image = np.concatenate((gt_bg, np.invert(gt_bg)), axis=2)
-                #gt_sr = np.all(gt_image == sideroad_color, axis=2)
-                #gt_sr = gt_sr.reshape(*gt_sr.shape, 1)
-                #gt_r = np.all(gt_image == road_color, axis=2)
-                #gt_r = gt_r.reshape(*gt_r.shape, 1)
-                
-                #gt_image = np.concatenate((gt_bg, gt_r, gt_sr), axis=2) 
+
+                print(gt_image.shape)
                 images.append(image)
                 gt_images.append(gt_image)
 
@@ -169,7 +165,6 @@ def gen_test_output(sess, logits, keep_prob, image_pl, data_folder, image_shape,
         mask = scipy.misc.toimage(mask)
         yield os.path.basename(image_file), np.array(street_im)
 
-        
 
 def save_inference_samples(runs_dir, data_dir, sess, image_shape, logits, keep_prob, input_image, num_classes):
     

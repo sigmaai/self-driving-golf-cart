@@ -1,3 +1,4 @@
 media/
 *.h5
 road-semantic-segmentation/data
+road-semantic-segmentation/model

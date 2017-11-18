@@ -9,13 +9,14 @@ import numpy as np
 
 def augment_brightness_camera_images(image):
 
-    ### Augment brightness
+    # Augment brightness
     image1 = cv2.cvtColor(image,cv2.COLOR_RGB2HSV)
     random_bright = .25+np.random.uniform()
     #print(random_bright)
     image1[:,:,2] = image1[:,:,2]*random_bright
     image1 = cv2.cvtColor(image1,cv2.COLOR_HSV2RGB)
     return image1
+
 
 def trans_image(image,bb_boxes_f,trans_range):
     # Translation augmentation
@@ -34,6 +35,7 @@ def trans_image(image,bb_boxes_f,trans_range):
     image_tr = cv2.warpAffine(image,Trans_M,(cols,rows))
 
     return image_tr,bb_boxes_f
+
 
 def stretch_image(img,bb_boxes_f,scale_range):
     # Stretching augmentation
@@ -70,6 +72,7 @@ def stretch_image(img,bb_boxes_f,scale_range):
     bb_boxes_f['ymax'] = (bb_boxes_f['ymax'] - p1[1]) / (p3[1]-p1[1]) * img.shape[0]
 
     return img,bb_boxes_f
+
 
 def get_image_name(df,ind,size=(640,300),augmentation=False, trans_range=20, scale_range=20):
     ### Get image by name
