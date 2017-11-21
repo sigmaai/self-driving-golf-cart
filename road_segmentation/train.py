@@ -5,19 +5,20 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 from keras.optimizers import Adam
+from keras.metrics import binary_accuracy
 
 smooth = 1.
 model = m.fcn_model()
-model.compile(optimizer=Adam(lr=1e-4), loss=m.IOU_calc_loss, metrics=[m.IOU_calc])
+model.compile(optimizer=Adam(lr=1e-4), loss="binary_crossentropy", metrics=[binary_accuracy])
 
 train_generator = utils.gen_batch_function(os.path.join(configs.data_path, 'data_road/training'), (configs.img_height, configs.img_width), 8)
 model.fit_generator(train_generator,
-                    steps_per_epoch=1000,
+                    steps_per_epoch=500,
                     epochs=1, verbose=1,
                     callbacks=None, validation_data=None)
 model.save('./segmentation-train-1.h5')
 
-### Plotting generator output
+# Plotting generator output
 
 images, targets = next(train_generator)
 
