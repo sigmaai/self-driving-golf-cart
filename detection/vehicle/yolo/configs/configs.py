@@ -1,5 +1,8 @@
-import sys
-import os
+# -----------------------------------
+# config.py, configerations for vechicle detection
+# (c) Neil Nie, 2017
+# All Rights Reserved.
+# -----------------------------------
 
 model_path = "./yolo_keras.h5"
 anchors_path = "./configs/yolo_keras_anchors.txt"
