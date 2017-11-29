@@ -2,7 +2,6 @@
 """Run a YOLO_v2 style detection model on test images."""
 import colorsys
 import cv2
-import os
 import random
 import pandas as pd
 
@@ -11,7 +10,7 @@ from keras import backend as K
 from keras.models import load_model
 from PIL import Image, ImageDraw, ImageFont
 
-import configs.configs as configs
+import model_data.configs as configs
 from yad2k.models.keras_yolo import yolo_eval, yolo_head
 import pygame
 
@@ -61,6 +60,7 @@ if __name__ == '__main__':
 
     yolo_model = load_model(configs.model_path)
 
+    yolo_model.summary()
     # Verify model, anchors, and classes are compatible
     num_classes = len(class_names)
     num_anchors = len(anchors)
@@ -96,7 +96,7 @@ if __name__ == '__main__':
         path = configs.test_dataset + "center/" + str(df_truth["frame_id"][i]) + ".jpg"
 
         image = Image.open(path)
-        resized_image = image.resize((608, 608), Image.BICUBIC)
+        resized_image = image.resize((416, 416), Image.BICUBIC)
         image_data = np.array(resized_image, dtype='float32')
 
         image_data /= 255.

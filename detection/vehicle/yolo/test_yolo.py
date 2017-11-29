@@ -1,5 +1,6 @@
 #! /usr/bin/env python
 """Run a YOLO_v2 style detection model on test images."""
+import argparse
 import colorsys
 import imghdr
 import os
@@ -10,30 +11,72 @@ from keras import backend as K
 from keras.models import load_model
 from PIL import Image, ImageDraw, ImageFont
 
-import configs.configs as configs
 from yad2k.models.keras_yolo import yolo_eval, yolo_head
 
+parser = argparse.ArgumentParser(
+    description='Run a YOLO_v2 style detection model on test images..')
+parser.add_argument(
+    'model_path',
+    help='path to h5 model file containing body'
+    'of a YOLO_v2 model')
+parser.add_argument(
+    '-a',
+    '--anchors_path',
+    help='path to anchors file, defaults to yolo_anchors.txt',
+    default='model_data/yolo_anchors.txt')
+parser.add_argument(
+    '-c',
+    '--classes_path',
+    help='path to classes file, defaults to coco_classes.txt',
+    default='model_data/coco_classes.txt')
+parser.add_argument(
+    '-t',
+    '--test_path',
+    help='path to directory of test images, defaults to images/',
+    default='images')
+parser.add_argument(
+    '-o',
+    '--output_path',
+    help='path to output test images, defaults to images/out',
+    default='images/out')
+parser.add_argument(
+    '-s',
+    '--score_threshold',
+    type=float,
+    help='threshold for bounding box scores, default .3',
+    default=.3)
+parser.add_argument(
+    '-iou',
+    '--iou_threshold',
+    type=float,
+    help='threshold for non max suppression IOU, default .5',
+    default=.5)
 
-def _main():
 
-    test_path = os.path.expanduser(configs.test_path)
+def _main(args):
+    model_path = os.path.expanduser(args.model_path)
+    assert model_path.endswith('.h5'), 'Keras model must be a .h5 file.'
+    anchors_path = os.path.expanduser(args.anchors_path)
+    classes_path = os.path.expanduser(args.classes_path)
+    test_path = os.path.expanduser(args.test_path)
+    output_path = os.path.expanduser(args.output_path)
 
-    if not os.path.exists(configs.output_path):
-        print('Creating output path {}'.format(configs.output_path))
-        os.mkdir(configs.output_path)
+    if not os.path.exists(output_path):
+        print('Creating output path {}'.format(output_path))
+        os.mkdir(output_path)
 
     sess = K.get_session()  # TODO: Remove dependence on Tensorflow session.
 
-    with open(configs.classes_path) as f:
+    with open(classes_path) as f:
         class_names = f.readlines()
     class_names = [c.strip() for c in class_names]
 
-    with open(configs.anchors_path) as f:
+    with open(anchors_path) as f:
         anchors = f.readline()
         anchors = [float(x) for x in anchors.split(',')]
         anchors = np.array(anchors).reshape(-1, 2)
 
-    yolo_model = load_model(configs.model_path)
+    yolo_model = load_model(model_path)
 
     # Verify model, anchors, and classes are compatible
     num_classes = len(class_names)
@@ -44,7 +87,7 @@ def _main():
         'Mismatch between model and given anchor and class sizes. ' \
         'Specify matching anchors and classes with --anchors_path and ' \
         '--classes_path flags.'
-    print('{} model, anchors, and classes loaded.'.format(configs.model_path))
+    print('{} model, anchors, and classes loaded.'.format(model_path))
 
     # Check if model is fully convolutional, assuming channel last order.
     model_image_size = yolo_model.layers[0].input_shape[1:3]
@@ -68,8 +111,8 @@ def _main():
     boxes, scores, classes = yolo_eval(
         yolo_outputs,
         input_image_shape,
-        score_threshold=configs.score_threshold,
-        iou_threshold=configs.iou_threshold)
+        score_threshold=args.score_threshold,
+        iou_threshold=args.iou_threshold)
 
     for image_file in os.listdir(test_path):
         try:
@@ -143,9 +186,9 @@ def _main():
             draw.text(text_origin, label, fill=(0, 0, 0), font=font)
             del draw
 
-        image.save(os.path.join(configs.output_path, image_file), quality=90)
+        image.save(os.path.join(output_path, image_file), quality=90)
     sess.close()
 
 
 if __name__ == '__main__':
-    _main()
+    _main(parser.parse_args())

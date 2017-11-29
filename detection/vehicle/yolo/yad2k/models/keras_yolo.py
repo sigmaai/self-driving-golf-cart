@@ -9,9 +9,19 @@ from keras.layers.merge import concatenate
 from keras.models import Model
 
 from ..utils import compose
-from .keras_darknet19 import DarknetConv2D, DarknetConv2D_BN_Leaky, darknet_body
+from .keras_darknet19 import (DarknetConv2D, DarknetConv2D_BN_Leaky,
+                              darknet_body)
 
 sys.path.append('..')
+
+voc_anchors = np.array(
+    [[1.08, 1.19], [3.42, 4.41], [6.63, 11.38], [9.42, 5.11], [16.62, 10.52]])
+
+voc_classes = [
+    "aeroplane", "bicycle", "bird", "boat", "bottle", "bus", "car", "cat",
+    "chair", "cow", "diningtable", "dog", "horse", "motorbike", "person",
+    "pottedplant", "sheep", "sofa", "train", "tvmonitor"
+]
 
 
 def space_to_depth_x2(x):
@@ -139,8 +149,11 @@ def yolo_boxes_to_corners(box_xy, box_wh):
     ])
 
 
-def yolo_loss(args, anchors, num_classes, rescore_confidence=False, print_loss=False):
-
+def yolo_loss(args,
+              anchors,
+              num_classes,
+              rescore_confidence=False,
+              print_loss=False):
     """YOLO localization loss function.
 
     Parameters
@@ -312,7 +325,6 @@ def yolo_eval(yolo_outputs,
               max_boxes=10,
               score_threshold=.6,
               iou_threshold=.5):
-
     """Evaluate YOLO model on given input batch and return filtered boxes."""
     box_xy, box_wh, box_confidence, box_class_probs = yolo_outputs
     boxes = yolo_boxes_to_corners(box_xy, box_wh)

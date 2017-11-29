@@ -4,9 +4,9 @@
 # All Rights Reserved.
 # -----------------------------------
 
-model_path = "./yolo_keras.h5"
-anchors_path = "./configs/yolo_keras_anchors.txt"
-classes_path = "./configs/coco_classes.txt"
+model_path = "./tiny-yolo.h5"
+anchors_path = "./model_data/yolo_anchors.txt"
+classes_path = "./model_data/pascal_classes.txt"
 test_path = "./images"
 output_path = "./output"
 score_threshold = 0.5

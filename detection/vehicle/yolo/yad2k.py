@@ -27,9 +27,9 @@ from yad2k.models.keras_yolo import (space_to_depth_x2,
 
 parser = argparse.ArgumentParser(
     description='Yet Another Darknet To Keras Converter.')
-parser.add_argument('--config_path', help='Path to Darknet cfg file.')
-parser.add_argument('--weights_path', help='Path to Darknet weights file.')
-parser.add_argument('--output_path', help='Path to output Keras model file.')
+parser.add_argument('config_path', help='Path to Darknet cfg file.')
+parser.add_argument('weights_path', help='Path to Darknet weights file.')
+parser.add_argument('output_path', help='Path to output Keras model file.')
 parser.add_argument(
     '-p',
     '--plot_model',
@@ -64,7 +64,6 @@ def unique_config_sections(config_file):
 
 # %%
 def _main(args):
-	
     config_path = os.path.expanduser(args.config_path)
     weights_path = os.path.expanduser(args.weights_path)
     assert config_path.endswith('.cfg'), '{} is not a .cfg file'.format(
