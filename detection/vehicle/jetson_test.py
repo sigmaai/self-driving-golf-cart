@@ -25,7 +25,7 @@ import cv2
 import numpy as np
 import colorsys
 from keras import backend as K
-from PIL import ImageDraw, ImageFont
+from PIL import ImageDraw, ImageFont, Image
 import model_data.configs as configs
 from keras.models import load_model
 from yad2k.models.keras_yolo import yolo_eval, yolo_head
@@ -34,7 +34,7 @@ import random
 
 def read_cam():
 
-    sess = K.get_session()  # TODO: Remove dependence on Tensorflow session.
+    sess = K.get_session()  
 
     with open(configs.classes_path) as f:
         class_names = f.readlines()
@@ -62,7 +62,6 @@ def read_cam():
     random.seed(None)       # Reset seed to default.
 
     # Generate output tensor targets for filtered bounding boxes.
-    # TODO: Wrap these backend operations with Keras layers.
     yolo_outputs = yolo_head(yolo_model.output, anchors, len(class_names))
     input_image_shape = K.placeholder(shape=(2, ))
     boxes, scores, classes = yolo_eval(yolo_outputs, input_image_shape, score_threshold=configs.score_threshold, iou_threshold=configs.iou_threshold)
@@ -74,7 +73,7 @@ def read_cam():
 
         windowName = "car detection"
         cv2.namedWindow(windowName, cv2.WINDOW_NORMAL)
-        cv2.resizeWindow(windowName, 1280, 720)
+        cv2.resizeWindow(windowName, 416, 416)
         cv2.moveWindow(windowName, 0, 0)
         cv2.setWindowTitle(windowName, "car detection")
 
@@ -109,6 +108,9 @@ def read_cam():
                                       size=np.floor(3e-2 * image.shape[1] + 0.5).astype('int32'))
             thickness = (image.shape[0] + image.shape[1]) // 300
 
+            array = np.uint8((image))
+            image = Image.fromarray(array)
+
             # draw the bounding boxes
             for i, c in reversed(list(enumerate(out_classes))):
                 predicted_class = class_names[c]
@@ -122,8 +124,8 @@ def read_cam():
                 top, left, bottom, right = box
                 top = max(0, np.floor(top + 0.5).astype('int32'))
                 left = max(0, np.floor(left + 0.5).astype('int32'))
-                bottom = min(image.shape[1], np.floor(bottom + 0.5).astype('int32'))
-                right = min(image.shape[0], np.floor(right + 0.5).astype('int32'))
+                bottom = min(image.size[1], np.floor(bottom + 0.5).astype('int32'))
+                right = min(image.size[0], np.floor(right + 0.5).astype('int32'))
 
                 if top - label_size[1] >= 0:
                     text_origin = np.array([left, top - label_size[1]])
@@ -137,7 +139,7 @@ def read_cam():
                 draw.text(text_origin, label, fill=(0, 0, 0), font=font)
                 del draw
 
-            displayBuf = image
+            displayBuf = np.array(image)
 
             # show the stuff
             # -----------------------------------------------------
