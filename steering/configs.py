@@ -9,7 +9,7 @@ weights_path = "./"
 image_width = 640
 image_height = 480
 load_weights = False
-steering_weights_destination = "./"
+model_path = "./"
 
 BLACK = (  0,   0,   0)
 WHITE = (255, 255, 255)

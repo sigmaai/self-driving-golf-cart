@@ -4,11 +4,9 @@
 # All Rights Reserved.
 # -----------------------------------
 
-model_path = "./tiny-yolo.h5"
-anchors_path = "./model_data/yolo_anchors.txt"
-classes_path = "./model_data/pascal_classes.txt"
-test_path = "./images"
-output_path = "./output"
+model_path = "./detection/vehicle/tiny-yolo.h5"
+anchors_path = "./detection/vehicle/model_data/yolo_anchors.txt"
+classes_path = "./detection/vehicle/model_data/pascal_classes.txt"
 score_threshold = 0.5
 iou_threshold = 0.5
 test_dataset = "/Volumes/Personal_Drive/Datasets/udacity-driving/validation/"

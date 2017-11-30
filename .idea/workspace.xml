@@ -2,50 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9d6eb70-00d3-4b11-88c3-998eeea85bdb" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/other.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/detection/vehicle/vehicle_detector.py" />
       <change beforePath="$PROJECT_DIR$/.idea/ALVNS.iml" afterPath="$PROJECT_DIR$/.idea/ALVNS.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/other.xml" afterPath="$PROJECT_DIR$/.idea/other.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/unet/detection_visualizer.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/unet/img_util.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/unet/model.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/unet/object-detection-Unet-train-IoU.ipynb" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/unet/test_images/test1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/unet/train.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/unet/train_util.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/unet/visualizer_util.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yolo/.ipynb_checkpoints/vehicle_detection_yolo-checkpoint.ipynb" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yolo/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yolo/font/FiraMono-Medium.otf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yolo/font/SIL Open Font License.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yolo/jetson_test.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yolo/model_data/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yolo/model_data/coco_classes.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yolo/model_data/configs.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yolo/model_data/pascal_classes.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yolo/model_data/yolo_anchors.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yolo/output/dog.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yolo/output/eagle.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yolo/output/giraffe.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yolo/output/horses.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yolo/output/person.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yolo/output/scream.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yolo/test_yolo.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yolo/visualize_detection.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yolo/voc_conversion_scripts/voc_to_hdf5.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yolo/voc_conversion_scripts/voc_to_tfrecords.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yolo/yad2k.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yolo/yad2k/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yolo/yad2k/bin/activate" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yolo/yad2k/bin/conda" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yolo/yad2k/bin/deactivate" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yolo/yad2k/models/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yolo/yad2k/models/keras_darknet19.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yolo/yad2k/models/keras_yolo.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yolo/yad2k/utils/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yolo/yad2k/utils/draw_boxes.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yolo/yad2k/utils/utils.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/detection/vehicle/model_data/configs.py" afterPath="$PROJECT_DIR$/detection/vehicle/model_data/configs.py" />
+      <change beforePath="$PROJECT_DIR$/detection/vehicle/test_yolo.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/detection/vehicle/vehicle_detector.py" afterPath="$PROJECT_DIR$/detection/vehicle/vehicle_detector.py" />
       <change beforePath="$PROJECT_DIR$/drive.py" afterPath="$PROJECT_DIR$/drive.py" />
+      <change beforePath="$PROJECT_DIR$/road-segmentation/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/road-segmentation/configs.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/road-segmentation/image_augmentation.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/road-segmentation/model.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/road-segmentation/train.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/road-segmentation/utils.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/road-segmentation/visualization.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/steering/configs.py" afterPath="$PROJECT_DIR$/steering/configs.py" />
+      <change beforePath="$PROJECT_DIR$/steering/densenet.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/steering/drive.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/steering/steering_predictor.py" afterPath="$PROJECT_DIR$/steering/steering_predictor.py" />
+      <change beforePath="$PROJECT_DIR$/steering/steering_visualizer.py" afterPath="$PROJECT_DIR$/steering/steering_visualizer.py" />
+      <change beforePath="$PROJECT_DIR$/steering/train-densenet.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/steering/visualize.py" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -86,43 +63,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="drive.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="drive.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/drive.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="390">
+              <caret line="26" column="46" lean-forward="true" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
               <folding>
-                <element signature="e#136#175#0" expanded="true" />
+                <element signature="e#136#193#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jetson_test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/detection/vehicle/jetson_test.py">
+      <file leaf-file-name="steering_predictor.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/steering/steering_predictor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="687">
-              <caret line="148" column="21" lean-forward="true" selection-start-line="82" selection-start-column="11" selection-end-line="148" selection-end-column="21" />
-              <folding />
+            <state relative-caret-position="1680">
+              <caret line="112" column="34" lean-forward="true" selection-start-line="112" selection-start-column="34" selection-end-line="112" selection-end-column="34" />
+              <folding>
+                <element signature="e#1#19#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_yolo.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/detection/vehicle/test_yolo.py">
+      <file leaf-file-name="steering_visualizer.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/steering/steering_visualizer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="162" column="23" lean-forward="false" selection-start-line="162" selection-start-column="23" selection-end-line="162" selection-end-column="23" />
-              <folding />
+            <state relative-caret-position="234">
+              <caret line="65" column="11" lean-forward="false" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="11" />
+              <folding>
+                <element signature="e#123#160#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vehicle_detector.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/detection/vehicle/vehicle_detector.py">
+      <file leaf-file-name="configs.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/steering/configs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="5" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+            <state relative-caret-position="60">
+              <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -139,14 +120,11 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>camera_images</find>
-      <find>randNumLabel</find>
       <find>model</find>
       <find>random_flip</find>
       <find>preprocess</find>
       <find>load_image</find>
       <find>augument</find>
-      <find>preprocess_img</find>
       <find>test_new_img</find>
       <find>parse_annotation</find>
       <find>model_image_size</find>
@@ -169,6 +147,9 @@
       <find>num_anchors</find>
       <find>model_output_channels</find>
       <find>model_output_channel</find>
+      <find>speed_ms</find>
+      <find>preprocess_img</find>
+      <find>class_names</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -177,7 +158,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/steering/Vehicle Steering ConvNet.ipynb" />
         <option value="$PROJECT_DIR$/steering/model.py" />
         <option value="$PROJECT_DIR$/steering/train_util.py" />
         <option value="$PROJECT_DIR$/steering/drive.py" />
@@ -201,7 +181,6 @@
         <option value="$PROJECT_DIR$/road_segmentation/segmentation_visualization.py" />
         <option value="$PROJECT_DIR$/vehicle_object_detection/yolo/retrain_yolo.py" />
         <option value="$PROJECT_DIR$/steering/utils.py" />
-        <option value="$PROJECT_DIR$/steering/configs.py" />
         <option value="$PROJECT_DIR$/steering/visualize.py" />
         <option value="$PROJECT_DIR$/vehicle_object_detection/unet/object-detection-Unet-train-IoU.ipynb" />
         <option value="$PROJECT_DIR$/steering/train.py" />
@@ -220,14 +199,16 @@
         <option value="$PROJECT_DIR$/LICENSE" />
         <option value="$PROJECT_DIR$/road_segmentation/visualization.py" />
         <option value="$PROJECT_DIR$/road-segmentation/visualization.py" />
-        <option value="$PROJECT_DIR$/steering/steering_predictor.py" />
-        <option value="$PROJECT_DIR$/steering/steering_visualizer.py" />
         <option value="$PROJECT_DIR$/detection/vehicle/yolo/configs/configs.py" />
         <option value="$PROJECT_DIR$/detection/vehicle/yolo/model_data/configs.py" />
         <option value="$PROJECT_DIR$/detection/vehicle/yolo/visualize_detection.py" />
         <option value="$PROJECT_DIR$/detection/vehicle/yolo/jetson_test.py" />
-        <option value="$PROJECT_DIR$/drive.py" />
         <option value="$PROJECT_DIR$/detection/vehicle/vehicle_detector.py" />
+        <option value="$PROJECT_DIR$/detection/vehicle/model_data/configs.py" />
+        <option value="$PROJECT_DIR$/steering/configs.py" />
+        <option value="$PROJECT_DIR$/steering/steering_visualizer.py" />
+        <option value="$PROJECT_DIR$/steering/steering_predictor.py" />
+        <option value="$PROJECT_DIR$/drive.py" />
       </list>
     </option>
   </component>
@@ -237,7 +218,8 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="20" />
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="877" />
@@ -297,6 +279,18 @@
               <item name="detection" type="462c0819:PsiDirectoryNode" />
               <item name="vehicle" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ALVNS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ALVNS" type="462c0819:PsiDirectoryNode" />
+              <item name="detection" type="462c0819:PsiDirectoryNode" />
+              <item name="vehicle" type="462c0819:PsiDirectoryNode" />
+              <item name="model_data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ALVNS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ALVNS" type="462c0819:PsiDirectoryNode" />
+              <item name="steering" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -328,7 +322,27 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.jetson_test">
+  <component name="RunManager" selected="Python.drive">
+    <configuration name="drive" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="PYDEVD_LOAD_VALUES_ASYNC" value="True" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ALVNS" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/drive.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="jetson_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -405,25 +419,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="visualize_detection" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/vehicle_object_detection/yolo" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ALVNS" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vehicle_object_detection/yolo/visualize_detection.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="ALVNS" type="Python.Ipnb" factoryName="Jupyter Notebook">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -444,18 +439,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Jupyter Notebook.ALVNS" />
       <item index="1" class="java.lang.String" itemvalue="Python.visualization" />
-      <item index="2" class="java.lang.String" itemvalue="Python.visualize_detection" />
-      <item index="3" class="java.lang.String" itemvalue="Python.steering_visualizer" />
-      <item index="4" class="java.lang.String" itemvalue="Python.visualize_detection (1)" />
-      <item index="5" class="java.lang.String" itemvalue="Python.jetson_test" />
+      <item index="2" class="java.lang.String" itemvalue="Python.steering_visualizer" />
+      <item index="3" class="java.lang.String" itemvalue="Python.visualize_detection (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Python.jetson_test" />
+      <item index="5" class="java.lang.String" itemvalue="Python.drive" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.jetson_test" />
-        <item index="1" class="java.lang.String" itemvalue="Python.visualize_detection (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.visualization" />
-        <item index="3" class="java.lang.String" itemvalue="Python.steering_visualizer" />
-        <item index="4" class="java.lang.String" itemvalue="Python.visualize_detection" />
+        <item index="0" class="java.lang.String" itemvalue="Python.drive" />
+        <item index="1" class="java.lang.String" itemvalue="Python.jetson_test" />
+        <item index="2" class="java.lang.String" itemvalue="Python.visualize_detection (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.visualization" />
+        <item index="4" class="java.lang.String" itemvalue="Python.steering_visualizer" />
       </list>
     </recent_temporary>
   </component>
@@ -486,26 +481,26 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.471867" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" x="0" y="0" width="310" height="677" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32648125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32736573" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286445" sideWeight="0.49713877" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.3196931" sideWeight="0.49713877" order="2" side_tool="false" content_ui="tabs" x="21" y="333" width="1398" height="257" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29391503" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17167382" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17381974" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988167" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39892185" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="0" y="0" width="310" height="677" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -538,20 +533,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="12" />
+      <option name="time" value="13" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vehicle_object_detection/unet/train.py" />
-    <entry file="file://$PROJECT_DIR$/vehicle_object_detection/unet/model.py" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitattributes">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -565,13 +551,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/steering/configs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="3" lean-forward="false" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -650,120 +629,98 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/road-segmentation/visualization.py">
+    <entry file="file://$PROJECT_DIR$/road-segmentation/visualization.py" />
+    <entry file="file://$PROJECT_DIR$/detection/vehicle/yolo/retrain_yolo.py" />
+    <entry file="file://$PROJECT_DIR$/detection/vehicle/yolo/configs/configs.py" />
+    <entry file="file://$PROJECT_DIR$/detection/vehicle/yolo/jetson_test.py" />
+    <entry file="file://$PROJECT_DIR$/detection/vehicle/yolo/model_data/configs.py" />
+    <entry file="file://$PROJECT_DIR$/detection/vehicle/yolo/visualize_detection.py" />
+    <entry file="file://$PROJECT_DIR$/road-segmentation/train.py" />
+    <entry file="file://$PROJECT_DIR$/road-segmentation/utils.py" />
+    <entry file="file://$PROJECT_DIR$/road-segmentation/model.py" />
+    <entry file="file://$PROJECT_DIR$/road-segmentation/image_augmentation.py" />
+    <entry file="file://$PROJECT_DIR$/detection/vehicle/test_yolo.py" />
+    <entry file="file://$PROJECT_DIR$/steering/drive.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="30" column="21" lean-forward="false" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+        <state relative-caret-position="150">
+          <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/detection/vehicle/yolo/retrain_yolo.py" />
-    <entry file="file://$PROJECT_DIR$/detection/vehicle/yolo/configs/configs.py" />
+    <entry file="file://$PROJECT_DIR$/steering/steering_simulation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-715">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#48#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/detection/vehicle/model_data/configs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/steering/configs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/steering/steering_visualizer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="234">
+          <caret line="65" column="11" lean-forward="false" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="11" />
+          <folding>
+            <element signature="e#123#160#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/steering/steering_predictor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/detection/vehicle/yolo/jetson_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1560">
-          <caret line="104" column="41" lean-forward="true" selection-start-line="104" selection-start-column="41" selection-end-line="104" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/detection/vehicle/yolo/model_data/configs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/detection/vehicle/yolo/visualize_detection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="138" column="16" lean-forward="true" selection-start-line="138" selection-start-column="16" selection-end-line="138" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/road-segmentation/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="1680">
+          <caret line="112" column="34" lean-forward="true" selection-start-line="112" selection-start-column="34" selection-end-line="112" selection-end-column="34" />
           <folding>
-            <element signature="e#0#17#0" expanded="false" />
+            <element signature="e#1#19#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/road-segmentation/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1038">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/road-segmentation/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-363">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#30#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/road-segmentation/image_augmentation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drive.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#136#175#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/detection/vehicle/test_yolo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="162" column="23" lean-forward="false" selection-start-line="162" selection-start-column="23" selection-end-line="162" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/detection/vehicle/jetson_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="687">
-          <caret line="148" column="21" lean-forward="true" selection-start-line="82" selection-start-column="11" selection-end-line="148" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/detection/vehicle/vehicle_detector.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="5" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="285">
+          <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/detection/vehicle/jetson_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="39" column="26" lean-forward="false" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+          <folding>
+            <element signature="e#1120#1130#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drive.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="46" lean-forward="true" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+          <folding>
+            <element signature="e#136#193#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

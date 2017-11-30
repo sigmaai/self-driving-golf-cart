@@ -12,10 +12,11 @@ import pygame
 import pandas as pd
 from os import path
 import matplotlib
-matplotlib.use("Agg")
 import matplotlib.backends.backend_agg as agg
 import pylab
 import model
+
+matplotlib.use("Agg")
 
 pygame.init()
 size = (320*2, 160*4)
