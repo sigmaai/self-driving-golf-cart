@@ -104,7 +104,7 @@ def read_cam():
                     K.learning_phase(): 0
                 })
 
-            font = ImageFont.truetype(font='font/FiraMono-Medium.otf',
+            font = ImageFont.truetype(font='./detection/vehicle/font/FiraMono-Medium.otf',
                                       size=np.floor(3e-2 * image.shape[1] + 0.5).astype('int32'))
             thickness = (image.shape[0] + image.shape[1]) // 300
 

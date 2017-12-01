@@ -29,10 +29,10 @@ class VehicleDetector:
 
         # Generate colors for drawing bounding boxes.
         hsv_tuples = [(x / len(class_names), 1., 1.) for x in range(len(class_names))]
-        colors = list(map(lambda x: colorsys.hsv_to_rgb(*x), hsv_tuples))
-        colors = list(map(lambda x: (int(x[0] * 255), int(x[1] * 255), int(x[2] * 255)), colors))
+        self.colors = list(map(lambda x: colorsys.hsv_to_rgb(*x), hsv_tuples))
+        self.colors = list(map(lambda x: (int(x[0] * 255), int(x[1] * 255), int(x[2] * 255)), self.colors))
         random.seed(10101)  # Fixed seed for consistent colors across runs.
-        random.shuffle(colors)  # Shuffle colors to decorrelate adjacent classes.
+        random.shuffle(self.colors)  # Shuffle colors to decorrelate adjacent classes.
         random.seed(None)  # Reset seed to default.
 
         # Generate output tensor targets for filtered bounding boxes.
@@ -40,11 +40,12 @@ class VehicleDetector:
         self.input_image_shape = K.placeholder(shape=(2,))
         self.boxes, self.scores, self.classes = yolo_eval(yolo_outputs, self.input_image_shape, score_threshold=configs.score_threshold,
                                            iou_threshold=configs.iou_threshold)
-        print("hello world")
+        print("vehicle detector ready")
 
     def detect_vechicle(self, image):
 
         resized_image = cv2.resize(image, (416, 416))
+        print(image.shape)
         image_data = np.array(resized_image, dtype='float32')
 
         image_data /= 255.
@@ -59,12 +60,13 @@ class VehicleDetector:
                 K.learning_phase(): 0
             })
 
-        font = ImageFont.truetype(font='font/FiraMono-Medium.otf',
+        font = ImageFont.truetype(font='./detection/vehicle/font/FiraMono-Medium.otf',
                                   size=np.floor(3e-2 * image.shape[1] + 0.5).astype('int32'))
         thickness = (image.shape[0] + image.shape[1]) // 300
 
         array = np.uint8((image))
         image = Image.fromarray(array)
+        print(image.size)
 
         # draw the bounding boxes
         for i, c in reversed(list(enumerate(out_classes))):
@@ -89,11 +91,11 @@ class VehicleDetector:
 
             # My kingdom for a good redistributable image drawing library.
             for i in range(thickness):
-                draw.rectangle([left + i, top + i, right - i, bottom - i], outline=colors[c])
-            draw.rectangle([tuple(text_origin), tuple(text_origin + label_size)], fill=colors[c])
+                draw.rectangle([left + i, top + i, right - i, bottom - i], outline=self.colors[c])
+            draw.rectangle([tuple(text_origin), tuple(text_origin + label_size)], fill=self.colors[c])
             draw.text(text_origin, label, fill=(0, 0, 0), font=font)
             del draw
 
-        return np.array(image)
+        return np.array(image), out_boxes, out_scores, out_classes
 
 

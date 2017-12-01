@@ -9,7 +9,7 @@ weights_path = "./"
 image_width = 640
 image_height = 480
 load_weights = False
-model_path = "./"
+model_path = "./steering/trained-cai-v6.h5"
 
 BLACK = (  0,   0,   0)
 WHITE = (255, 255, 255)
