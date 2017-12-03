@@ -45,7 +45,6 @@ class VehicleDetector:
     def detect_vechicle(self, image):
 
         resized_image = cv2.resize(image, (416, 416))
-        print(image.shape)
         image_data = np.array(resized_image, dtype='float32')
 
         image_data /= 255.
@@ -66,7 +65,6 @@ class VehicleDetector:
 
         array = np.uint8((image))
         image = Image.fromarray(array)
-        print(image.size)
 
         # draw the bounding boxes
         for i, c in reversed(list(enumerate(out_classes))):

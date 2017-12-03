@@ -40,10 +40,11 @@ if __name__ == '__main__':
             # -----------------------------------------------------
             # run detecion network
             # no image preprocessing required for any detector
-            # output_image, out_boxes, out_scores, out_classes = vehicle_detector.detect_vechicle(image)
-            angle, output = steering_predictor.predict_steering(image)
-            print(angle)
-            displayBuf = output
+            detection_img, out_boxes, out_scores, out_classes = vehicle_detector.detect_vechicle(image)
+            angle, steering_img = steering_predictor.predict_steering(image)
+
+            vidBuf = np.concatenate((detection_img, steering_img), axis=1)
+            displayBuf = vidBuf
 
             # show the stuff
             # -----------------------------------------------------
