@@ -2,6 +2,7 @@
 # Drive.py | Created by Neil Nie & Michael Meng
 # Main file of the self driving car
 # (c) Neil Nie 2017, Please refer to the license
+#
 
 from steering.steering_predictor import SteeringPredictor
 from detection.vehicle.vehicle_detector import VehicleDetector
