@@ -7,17 +7,16 @@
 import cv2
 import numpy as np
 import glob
-
-ret, mtx, dist, rvecs, tvecs = cv2.calibrateCamera(objpoints, imgpoints, gray.shape[::-1], None, None)
+from detection.lane import configs
 
 
 def get_test_images():
-    test1 = cv2.imread('test_images/test1.jpg')
-    test2 = cv2.imread('test_images/test2.jpg')
-    test3 = cv2.imread('test_images/test3.jpg')
-    test4 = cv2.imread('test_images/test4.jpg')
-    test5 = cv2.imread('test_images/test5.jpg')
-    test6 = cv2.imread('test_images/test6.jpg')
+    test1 = cv2.imread('./test_images/test1.jpg')
+    test2 = cv2.imread('./test_images/test2.jpg')
+    test3 = cv2.imread('./test_images/test3.jpg')
+    test4 = cv2.imread('./test_images/test4.jpg')
+    test5 = cv2.imread('./test_images/test5.jpg')
+    test6 = cv2.imread('./test_images/test6.jpg')
     test = [test1, test2, test3, test4, test5, test6]
     return test
 
@@ -38,16 +37,16 @@ def sobelx(img, ker=3, xmin=15, xmax=50):
 
 
 def shift(left_fit,right_fit,y,width):
-    left_point = left_fit[0]*(y*ym_per_pix)**2 + left_fit[1]*(y*ym_per_pix) + left_fit[2]
-    right_point = right_fit[0]*(y*ym_per_pix)**2 + right_fit[1]*(y*ym_per_pix) + right_fit[2]
+    left_point = left_fit[0]*(y*configs.ym_per_pix)**2 + left_fit[1]*(y*configs.ym_per_pix) + left_fit[2]
+    right_point = right_fit[0]*(y*configs.ym_per_pix)**2 + right_fit[1]*(y*configs.ym_per_pix) + right_fit[2]
     mid = (left_point + right_point)/2
-    image_mid = width*xm_per_pix
+    image_mid = width*configs.xm_per_pix
     return mid - image_mid/2
 
 
 def curvature(left_fit,right_fit,y):
-    left_curvature = ((1 + (2*left_fit[0]*y*ym_per_pix + left_fit[1])**2)**1.5) / np.absolute(2*left_fit[0])
-    right_curvature = ((1 + (2*right_fit[0]*y*ym_per_pix + right_fit[1])**2)**1.5) / np.absolute(2*right_fit[0])
+    left_curvature = ((1 + (2*left_fit[0]*y*configs.ym_per_pix + left_fit[1])**2)**1.5) / np.absolute(2*left_fit[0])
+    right_curvature = ((1 + (2*right_fit[0]*y*configs.ym_per_pix + right_fit[1])**2)**1.5) / np.absolute(2*right_fit[0])
     avg = (left_curvature + right_curvature)/2
     return int(avg)
 
@@ -59,7 +58,7 @@ def fit_rest(img,prev_fit,swidth=100):
     ind= (white_x_arr > (prev_fit[0]*((white_y_arr)**2) + prev_fit[1]*(white_y_arr) + prev_fit[2] - swidth)) & \
         (white_x_arr < (prev_fit[0]*((white_y_arr)**2) + prev_fit[1]*(white_y_arr) + prev_fit[2] + swidth))
     fit = np.polyfit(white_y_arr[ind], white_x_arr[ind],2)
-    fit_m = np.polyfit(white_y_arr[ind]*ym_per_pix, white_x_arr[ind]*xm_per_pix, 2)
+    fit_m = np.polyfit(white_y_arr[ind]*configs.ym_per_pix, white_x_arr[ind]*configs.xm_per_pix, 2)
     return fit,fit_m
 
 
@@ -68,12 +67,14 @@ def histogram(img):
 
 
 def base(img):
+
     hist = histogram(img)
     left_oct = np.int(hist.shape[0]/8)
     midpoint = np.int(hist.shape[0]/2)
     right_oct = np.int(7*hist.shape[0]/8)
     left_base = np.argmax(hist[left_oct:midpoint])+left_oct
     right_base = np.argmax(hist[midpoint:right_oct]) + midpoint
+
     return left_base,right_base
 
 
@@ -117,7 +118,7 @@ def fit_first(img, base, winwidth=100, minpix=50, step=18):
     white_pos_x = np.concatenate(white_pos_x_arr)
     white_pos_y = np.concatenate(white_pos_y_arr)
     fit = np.polyfit(white_pos_y, white_pos_x, 2)
-    fit_m = np.polyfit(white_pos_y * ym_per_pix, white_pos_x * xm_per_pix, 2)
+    fit_m = np.polyfit(white_pos_y * configs.ym_per_pix, white_pos_x * configs.xm_per_pix, 2)
 
     return fit, fit_m
 
@@ -149,7 +150,9 @@ def edge(img):
     return binary
 
 
-def undistort(img):
+def undistort(img, objpoints, imgpoints):
+
+    ret, mtx, dist, rvecs, tvecs = cv2.calibrateCamera(objpoints, imgpoints, cv2.cvtColor(img, cv2.COLOR_BGR2GRAY).shape[::-1], None, None)
     return cv2.undistort(img, mtx, dist, None, mtx)
 
 
@@ -202,3 +205,5 @@ def calibrate_camera():
             cv2.waitKey(500)
 
     cv2.destroyAllWindows()
+
+    return objpoints, imgpoints

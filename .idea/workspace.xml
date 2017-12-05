@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9d6eb70-00d3-4b11-88c3-998eeea85bdb" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/detection/lane/lane_detector.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/detection/lane/output_images/configs.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/detection/lane/utils.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/detection/lane/visualizer.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/detection/lane/configs.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/detection/lane/LICENSE" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/lane_detector.py" afterPath="$PROJECT_DIR$/detection/lane/lane_detector.py" />
       <change beforePath="$PROJECT_DIR$/detection/lane/main.ipynb" afterPath="$PROJECT_DIR$/detection/lane/main.ipynb" />
-      <change beforePath="$PROJECT_DIR$/detection/lane/project_video.mp4" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/lane/result.mp4" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/traffic-signal/LICENSE" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/traffic-signal/checkpoint" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/traffic-signal/model.data-00000-of-00001" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/traffic-signal/model.index" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/traffic-signal/model.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/drive.py" afterPath="$PROJECT_DIR$/drive.py" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/utils.py" afterPath="$PROJECT_DIR$/detection/lane/utils.py" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/visualizer.py" afterPath="$PROJECT_DIR$/detection/lane/visualizer.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,6 +17,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/ALVNS$visualizer.coverage" NAME="visualizer Coverage Results" MODIFIED="1512478797927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/detection/lane" />
     <SUITE FILE_PATH="coverage/ALVNS$main.coverage" NAME="main Coverage Results" MODIFIED="1510877954821" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/road_segmentation" />
     <SUITE FILE_PATH="coverage/ALVNS$test_yolo.coverage" NAME="test_yolo Coverage Results" MODIFIED="1510439947102" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vehicle_object_detection/yolo" />
     <SUITE FILE_PATH="coverage/ALVNS$visualize_detection__1_.coverage" NAME="visualize_detection (1) Coverage Results" MODIFIED="1511915886458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/detection/vehicle/yolo" />
@@ -40,6 +32,7 @@
     <SUITE FILE_PATH="coverage/ALVNS$train__3_.coverage" NAME="train (3) Coverage Results" MODIFIED="1510948252191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/road-semantic-segmentation" />
     <SUITE FILE_PATH="coverage/ALVNS$utils.coverage" NAME="utils Coverage Results" MODIFIED="1509463345891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/steering" />
     <SUITE FILE_PATH="coverage/ALVNS$train__2_.coverage" NAME="train (2) Coverage Results" MODIFIED="1510871024567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vehicle_object_detection/unet" />
+    <SUITE FILE_PATH="coverage/ALVNS$lane_detector.coverage" NAME="lane_detector Coverage Results" MODIFIED="1512449114228" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/detection/lane" />
     <SUITE FILE_PATH="coverage/ALVNS$train.coverage" NAME="train Coverage Results" MODIFIED="1511296584782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/road_segmentation" />
     <SUITE FILE_PATH="coverage/ALVNS$view_steering_model.coverage" NAME="view_steering_model Coverage Results" MODIFIED="1509061317721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/driving-simulator" />
     <SUITE FILE_PATH="coverage/ALVNS$helper.coverage" NAME="helper Coverage Results" MODIFIED="1510948356687" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/road_segmentation" />
@@ -60,18 +53,18 @@
       <file leaf-file-name="drive.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/drive.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="1" />
+            <state relative-caret-position="422">
+              <caret line="38" column="39" lean-forward="false" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lane_detector.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="lane_detector.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/detection/lane/lane_detector.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1230">
-              <caret line="82" column="55" lean-forward="false" selection-start-line="82" selection-start-column="55" selection-end-line="82" selection-end-column="55" />
+            <state relative-caret-position="570">
+              <caret line="38" column="34" lean-forward="true" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -79,14 +72,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="utils.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="visualizer.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/detection/lane/visualizer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/detection/lane/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="12" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+            <state relative-caret-position="213">
+              <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
               <folding>
                 <element signature="e#244#254#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="configs.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/detection/lane/configs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="20" lean-forward="false" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -102,9 +115,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>load_image</find>
-      <find>augument</find>
-      <find>test_new_img</find>
       <find>parse_annotation</find>
       <find>model_image_size</find>
       <find>yolo</find>
@@ -132,6 +142,9 @@
       <find>test</find>
       <find>process_img</find>
       <find>shift</find>
+      <find>cali</find>
+      <find>calibrate</find>
+      <find>calibrate_camera</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -140,7 +153,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/vehicle_object_detection/detection_testing.py" />
         <option value="$PROJECT_DIR$/vehicle_object_detection/model.py" />
         <option value="$PROJECT_DIR$/vehicle_object_detection/img_util.py" />
         <option value="$PROJECT_DIR$/vehicle_object_detection/detection_visualizer.py" />
@@ -187,10 +199,11 @@
         <option value="$PROJECT_DIR$/steering/steering_predictor.py" />
         <option value="$PROJECT_DIR$/detection/lane/main.ipynb" />
         <option value="$PROJECT_DIR$/drive.py" />
-        <option value="$PROJECT_DIR$/detection/lane/visualizer.py" />
         <option value="$PROJECT_DIR$/detection/lane/output_images/configs.py" />
-        <option value="$PROJECT_DIR$/detection/lane/lane_detector.py" />
+        <option value="$PROJECT_DIR$/detection/lane/configs.py" />
+        <option value="$PROJECT_DIR$/detection/lane/visualizer.py" />
         <option value="$PROJECT_DIR$/detection/lane/utils.py" />
+        <option value="$PROJECT_DIR$/detection/lane/lane_detector.py" />
       </list>
     </option>
   </component>
@@ -242,7 +255,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -265,7 +278,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -291,7 +304,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.drive">
+  <component name="RunManager" selected="Python.visualizer">
     <configuration name="drive" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -331,39 +344,20 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="steering_visualizer" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="lane_detector" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/steering" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/detection/lane" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ALVNS" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/steering/steering_visualizer.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="visualization" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/road_segmentation" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ALVNS" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/road_segmentation/visualization.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/detection/lane/lane_detector.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -388,6 +382,25 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="visualizer" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/detection/lane" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ALVNS" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/detection/lane/visualizer.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="ALVNS" type="Python.Ipnb" factoryName="Jupyter Notebook">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -407,19 +420,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Jupyter Notebook.ALVNS" />
-      <item index="1" class="java.lang.String" itemvalue="Python.visualization" />
-      <item index="2" class="java.lang.String" itemvalue="Python.steering_visualizer" />
-      <item index="3" class="java.lang.String" itemvalue="Python.visualize_detection (1)" />
-      <item index="4" class="java.lang.String" itemvalue="Python.jetson_test" />
-      <item index="5" class="java.lang.String" itemvalue="Python.drive" />
+      <item index="1" class="java.lang.String" itemvalue="Python.visualize_detection (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Python.jetson_test" />
+      <item index="3" class="java.lang.String" itemvalue="Python.drive" />
+      <item index="4" class="java.lang.String" itemvalue="Python.lane_detector" />
+      <item index="5" class="java.lang.String" itemvalue="Python.visualizer" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.drive" />
-        <item index="1" class="java.lang.String" itemvalue="Python.jetson_test" />
-        <item index="2" class="java.lang.String" itemvalue="Python.visualize_detection (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Python.visualization" />
-        <item index="4" class="java.lang.String" itemvalue="Python.steering_visualizer" />
+        <item index="0" class="java.lang.String" itemvalue="Python.visualizer" />
+        <item index="1" class="java.lang.String" itemvalue="Python.lane_detector" />
+        <item index="2" class="java.lang.String" itemvalue="Python.drive" />
+        <item index="3" class="java.lang.String" itemvalue="Python.jetson_test" />
+        <item index="4" class="java.lang.String" itemvalue="Python.visualize_detection (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -450,21 +463,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286445" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.471867" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.3196931" sideWeight="0.49713877" order="2" side_tool="false" content_ui="tabs" x="21" y="333" width="1398" height="257" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32648125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32608697" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32736573" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29391503" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17596567" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.3196931" sideWeight="0.49713877" order="2" side_tool="false" content_ui="tabs" x="21" y="333" width="1398" height="257" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29283887" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18025751" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988167" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49213162" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39892185" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39769822" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -506,13 +520,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/steering/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="190" column="9" lean-forward="false" selection-start-line="190" selection-start-column="4" selection-end-line="190" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/steering/train.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -613,9 +620,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="65" column="11" lean-forward="false" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="11" />
-          <folding>
-            <element signature="e#123#160#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -623,15 +627,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/detection/lane/visualizer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -642,38 +637,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/detection/lane/output_images/configs.py" />
     <entry file="file://$PROJECT_DIR$/drive.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="1" />
+        <state relative-caret-position="422">
+          <caret line="38" column="39" lean-forward="false" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/detection/lane/output_images/configs.py">
+    <entry file="file://$PROJECT_DIR$/detection/lane/configs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="15">
+          <caret line="1" column="20" lean-forward="false" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/detection/lane/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+          <folding>
+            <element signature="e#244#254#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/detection/lane/visualizer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/detection/lane/lane_detector.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1230">
-          <caret line="82" column="55" lean-forward="false" selection-start-line="82" selection-start-column="55" selection-end-line="82" selection-end-column="55" />
+        <state relative-caret-position="570">
+          <caret line="38" column="34" lean-forward="true" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/detection/lane/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="12" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-          <folding>
-            <element signature="e#244#254#0" expanded="true" />
           </folding>
         </state>
       </provider>
