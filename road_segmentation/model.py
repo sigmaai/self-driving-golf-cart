@@ -1,6 +1,15 @@
 from keras import backend as K
 from keras.models import Model
 from keras.layers import Input, merge, Convolution2D, MaxPooling2D, UpSampling2D,Lambda, Flatten
+from keras.models import Sequential
+from keras.layers import Merge, Activation
+from keras.layers.core import Layer
+from keras.layers.normalization import BatchNormalization
+from keras.layers.convolutional import Convolution2D, MaxPooling2D, UpSampling2D, ZeroPadding2D
+from keras.optimizers import Adam
+from keras import backend as K
+from keras.metrics import binary_accuracy
+
 
 smooth = 1.
 img_rows = 480
@@ -28,6 +37,73 @@ def dice_coef(y_true, y_pred):
 
 def dice_coef_loss(y_true, y_pred):
     return -dice_coef(y_true, y_pred)
+
+
+def segnet(nb_classes, optimizer=Adam(lr=0.001, epsilon=1e-08, decay=0.0), input_height=480, input_width=640):
+
+    kernel = 3
+    filter_size = 64
+    pad = 1
+    pool_size = 2
+
+    model = Sequential()
+    model.add(Layer(input_shape=(input_height, input_width, 3)))
+
+    # encoder
+    model.add(ZeroPadding2D(padding=(pad, pad)))
+    model.add(Convolution2D(filter_size, (kernel, kernel), padding='valid'))
+    model.add(BatchNormalization())
+    model.add(Activation('relu'))
+    model.add(MaxPooling2D(pool_size=(pool_size, pool_size)))
+
+    model.add(ZeroPadding2D(padding=(pad, pad)))
+    model.add(Convolution2D(128, (kernel, kernel), padding='valid'))
+    model.add(BatchNormalization())
+    model.add(Activation('relu'))
+    model.add(MaxPooling2D(pool_size=(pool_size, pool_size)))
+
+    model.add(ZeroPadding2D(padding=(pad, pad)))
+    model.add(Convolution2D(256, (kernel, kernel), padding='valid'))
+    model.add(BatchNormalization())
+    model.add(Activation('relu'))
+    model.add(MaxPooling2D(pool_size=(pool_size, pool_size)))
+
+    model.add(ZeroPadding2D(padding=(pad, pad)))
+    model.add(Convolution2D(512, (kernel, kernel), padding='valid'))
+    model.add(BatchNormalization())
+    model.add(Activation('relu'))
+
+    # decoder
+    model.add(ZeroPadding2D(padding=(pad, pad)))
+    model.add(Convolution2D(512, (kernel, kernel), padding='valid'))
+    model.add(BatchNormalization())
+
+    model.add(UpSampling2D(size=(pool_size, pool_size)))
+    model.add(ZeroPadding2D(padding=(pad, pad)))
+    model.add(Convolution2D(256, (kernel, kernel), padding='valid'))
+    model.add(BatchNormalization())
+
+    model.add(UpSampling2D(size=(pool_size, pool_size)))
+    model.add(ZeroPadding2D(padding=(pad, pad)))
+    model.add(Convolution2D(128, (kernel, kernel), padding='valid'))
+    model.add(BatchNormalization())
+
+    model.add(UpSampling2D(size=(pool_size, pool_size)))
+    model.add(ZeroPadding2D(padding=(pad, pad)))
+    model.add(Convolution2D(filter_size, (kernel, kernel), padding='valid'))
+    model.add(BatchNormalization())
+
+    model.add(Convolution2D(nb_classes, (1, 1), activation='sigmoid'))
+    # model.outputHeight = model.output_shape[-2]
+    # model.outputWidth = model.output_shape[-1]
+    # model.add(Reshape((model.output_shape[-3] * model.output_shape[-2], nb_classes),
+    #                   input_shape=(model.output_shape[-3], model.output_shape[-2], nb_classes)))
+    # model.add(Permute((2, 1)))
+    # model.add(Activation('softmax'))
+
+    model.compile(loss="categorical_crossentropy", optimizer=optimizer, metrics=['accuracy'])
+
+    return model
 
 
 def fcn_model():
@@ -73,6 +149,6 @@ def fcn_model():
     conv10 = Convolution2D(2, (1, 1), activation='sigmoid')(conv9)
 
     model = Model(input=inputs, output=conv10)
-    print(model.summary())
+    model.compile(optimizer=Adam(lr=1e-4), loss="binary_crossentropy", metrics=[binary_accuracy])
 
     return model

@@ -68,6 +68,7 @@ def train_generator(inputs, masks, batch_size):
 
             batch_images[i_batch] = img
             batch_masks[i_batch] = np.reshape(img_mask, (np.shape(img_mask)[0], np.shape(img_mask)[1], 1))
+
         yield batch_images, batch_masks
 
 
@@ -98,15 +99,14 @@ def gen_batch_function(data_folder, image_shape, batch_size):
         images = []
         gt_images = []
 
-        for image_file in image_paths[0:batch_size]:
+        for image_file in image_paths[0: batch_size]:
+
             gt_image_file = label_paths[os.path.basename(image_file)]
+
             image = scipy.misc.imread(image_file)
             gt_image = scipy.misc.imread(gt_image_file)
-            # image, gt_image = random_crop(image, gt_image) #Random crop augmentation
+
             image = scipy.misc.imresize(image, image_shape)
-            contr = random.uniform(0.85, 1.15)  # Contrast augmentation
-            bright = random.randint(-45, 30)  # Brightness augmentation
-            image = bc_img(image, contr, bright)
             gt_image = scipy.misc.imresize(gt_image, image_shape)
             gt_bg = np.all(gt_image == background_color, axis=2)
             gt_bg = gt_bg.reshape(*gt_bg.shape, 1)

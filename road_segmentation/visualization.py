@@ -68,9 +68,10 @@ def test_video_stream():
 
 
 def test_images():
+
     # init model
-    model = m.fcn_model()
-    model.load_weights("./segmentation-train-2.h5")
+    model = m.segnet(nb_classes=2, input_height=configs.img_height, input_width=configs.img_width)
+    model.load_weights("./segmentation-train-3.h5")
     model.compile(optimizer=Adam(lr=1e-4), loss="binary_crossentropy", metrics=[binary_accuracy])
 
     # generator
@@ -79,11 +80,10 @@ def test_images():
 
     images, targets = next(train_generator)
 
-    for i in range(4):
+    for i in range(8):
         im = np.array(images[i], dtype=np.uint8)
         im_mask = np.array(targets[i], dtype=np.uint8)
         img = np.array([im], dtype=np.uint8)
-        print(img.shape)
         im_prediction = model.predict(img)[0]
         plt.subplot(1, 3, 1)
         plt.imshow(im)
@@ -92,15 +92,15 @@ def test_images():
         plt.imshow(im_mask[:, :, 0])
         plt.axis('off')
         plt.subplot(1, 3, 3)
-        plt.imshow(im_prediction[:, :, 0])
+        plt.imshow(im_prediction[:, :, 1])
         plt.axis('off')
         plt.show()
 
 if __name__ == '__main__':
 
-    # test_images()
+    test_images()
 
-    test_video_stream()
+    # test_video_stream()
 
 
 
