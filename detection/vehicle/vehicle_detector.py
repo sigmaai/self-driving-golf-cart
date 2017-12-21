@@ -25,7 +25,7 @@ class VehicleDetector:
             anchors = np.array(anchors).reshape(-1, 2)
 
         self.yolo_model = load_model(configs.model_path)
-        self.yolo_model.summary()
+        # self.yolo_model.summary()
 
         # Generate colors for drawing bounding boxes.
         hsv_tuples = [(x / len(class_names), 1., 1.) for x in range(len(class_names))]
@@ -63,7 +63,7 @@ class VehicleDetector:
                                   size=np.floor(3e-2 * image.shape[1] + 0.5).astype('int32'))
         thickness = (image.shape[0] + image.shape[1]) // 300
 
-        array = np.uint8((image))
+        array = np.uint8((resized_image))
         image = Image.fromarray(array)
 
         # draw the bounding boxes
