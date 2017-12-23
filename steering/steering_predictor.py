@@ -13,7 +13,8 @@ class SteeringPredictor:
         background = Image.fromarray(np.uint8(image))
         sw = Image.open("./steering/sw.png")
         sw = sw.rotate(angle*180/np.pi)
-        background.paste(sw, (0, 0), sw)
+        sw = sw.resize((80, 80), Image.ANTIALIAS)
+        background.paste(sw, (10, 10), sw)
         
         return np.array(background)
 
