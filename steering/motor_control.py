@@ -9,7 +9,7 @@ class MC:
 	    print(str(e));
 
     def turn(self,angle):
-    	if self.ser.write(str(angle)) == 1:
+    	if self.ser.write(str(round(angle,4))) == 1:
 	    #print('Successfully send turning angle %d' % angle)
 	    return 1;
         else:
