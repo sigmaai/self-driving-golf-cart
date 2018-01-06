@@ -13,5 +13,13 @@ This project has several different modules.
 5. Lane detection
 6. Engineering
 
-## Autonomous steering
+## Steering
 The technique for steering the vechicle has several submodules. 
+
+## Cruse
+
+## Detection
+
+## Road segmentation
+
+## Path Planning

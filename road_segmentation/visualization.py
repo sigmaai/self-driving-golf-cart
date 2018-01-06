@@ -33,9 +33,8 @@ clock = pygame.time.Clock()
 def test_video_stream():
 
     # init model
-    model = m.fcn_model()
-    model.load_weights("./segmentation-train-2.h5")
-    model.compile(optimizer=Adam(lr=1e-4), loss="binary_crossentropy", metrics=[binary_accuracy])
+    model = m.segnet(nb_classes=2, input_height=configs.img_height, input_width=configs.img_width)
+    model.load_weights("./segmentation-train-4.h5")
 
     # load testing data
     steering_labels = configs.test_dataset + 'interpolated.csv'
@@ -98,9 +97,9 @@ def test_images():
 
 if __name__ == '__main__':
 
-    test_images()
+    # test_images()
 
-    # test_video_stream()
+    test_video_stream()
 
 
 
