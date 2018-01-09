@@ -30,7 +30,6 @@ void setup(){
   //initialize
   count = 0;
   msg = "";
-  next = "";
   len = 7;
   steering_value = 0.0;
   dir = 0;
@@ -43,17 +42,17 @@ float getRadian(int c){
 
 //check if is beginning of message
 boolean isBegin(){
-  return Serial.available && Serial.read() == "b";
+  return (boolean)(Serial.available()) && (Serial.read() == *"b");
 }
 
 //check if is end of message
 boolean isEnd(){
-  return Serial.available && Serial.read() == "e";
+  return (boolean)(Serial.available()) && (Serial.read() == *"e");
 }
 
 void clear(){
   count = 0; 
-  while(Serial.available) Serial.read(); // clear buffer
+  while(Serial.available()) Serial.read(); // clear buffer
 }
 
 void loop(){
