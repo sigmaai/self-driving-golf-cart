@@ -1,4 +1,5 @@
 volatile unsigned int count; 
+String msg;
 float steering_value;
 boolean dir;
 //Motor A
@@ -27,13 +28,14 @@ float getRadian(int c){
 
 void loop(){
   while (Serial.available()){
-    steering_value = Serial.readString().toInt();
-    Serial.println(steering_value);
+    msg = Serial.readString();
+    Serial.println(msg);
+    steering_value = msg.toInt();
     if (steering_value > 0) dir = 0;
     else dir = 1;
-    while(getRadian(count) < abs(steering_value)){
-      move(255,dir);
-    }
+  //  while(getRadian(count) < abs(steering_value)){
+  //    move(255,dir);
+  //  }
   }
   
 }
