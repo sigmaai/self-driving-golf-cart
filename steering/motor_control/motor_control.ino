@@ -79,11 +79,12 @@ void loop(){
             delay(1);
           } else break;
         }
-        clear();
       }
+  } else {
+    move(0,!dir);
+    delay(1);
   }
- }
-  
+  clear(); 
 }
 
 void move(int spd, boolean dir){
