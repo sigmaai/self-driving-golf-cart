@@ -1,5 +1,6 @@
 volatile unsigned int count; 
-unsigned long prev_time;
+float steering_value;
+boolean dir;
 //Motor A
 int PWMA = 7; //Speed control
 int AIN1 = 6; //Direction
@@ -8,9 +9,6 @@ int STBY = 4; //Standby
 
 void onDetect(){
   count++;
-  if (count%10==0){
-  Serial.println(count);
-  }
 }
 
 void setup(){
@@ -21,14 +19,23 @@ void setup(){
   pinMode(AIN2, OUTPUT);
   pinMode(STBY, OUTPUT);
   count = 0;
-  prev_time = 0;
 }
 
-float getDegree(int c){
-  return (float)c * 360 / 420;
+float getRadian(int c){
+  return (float)c * 2 * 3.14159265359 / 420;
 }
 
 void loop(){
+  while (Serial.available()){
+    steering_value = Serial.readString().toInt();
+    Serial.println(steering_value);
+    if (steering_value > 0) dir = 0;
+    else dir = 1;
+    while(getRadian(count) < abs(steering_value)){
+      move(255,dir);
+    }
+  }
+  
 }
 
 void move(int spd, boolean dir){
@@ -43,10 +50,10 @@ void move(int spd, boolean dir){
   if(dir){
       inPin1 = HIGH;
       inPin2 = LOW;
-      Serial.println("reverse");
   }
 
   digitalWrite(AIN1, inPin1);
   digitalWrite(AIN2, inPin2);
   analogWrite(PWMA, spd);
 }
+
