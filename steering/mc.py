@@ -8,12 +8,12 @@ class MC:
 	except Exception as e:
 	    print(str(e));
 
-    def turn(self,angle):
-    	if self.ser.write(str(round(angle,4))) > 0:
+    def turn(self,angle,precision=3):
+    	ret =  self.ser.write('b'+str(round(angle,precision)).zfill(5)+'e')
+	if (ret == precision+2):
 	    #print('Successfully send turning angle %f' % angle)
-	    return 1;
         else:
             print('Failed to send turning angle %f' % angle)
-    	    return 0;
+    	return ret
 
 
