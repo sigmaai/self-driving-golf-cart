@@ -9,10 +9,9 @@
 volatile unsigned int count; //count for encoder
 
 char msg[LEN]; //actual message 
-boolean proceed; //Whether should steer
 
-float state;
-unsigned long prev_t;
+float pos; //steering position
+unsigned long prev_t; //previous time
 
 float steering_value; //steering value
 boolean dir; //steering direction
@@ -31,8 +30,9 @@ void setup(){
   pinMode(AIN1, OUTPUT);
   pinMode(AIN2, OUTPUT);
   pinMode(STBY, OUTPUT);
-  state = 0.0;
+  pos = 0.0;
   prev_t = 0;
+  dir = 0;
   clr();
 }
 
@@ -74,25 +74,16 @@ void loop(){
       if (steering_value > 0) dir = 0;
       else dir = 1;
       prev_t = millis();
-      while(getRadian(count) < abs(steering_value) && state < 2 * M_PI && (millis()-prev_t) < 1000/FPS) {
-        Serial.print("count:");
-        Serial.println(count);
-        Serial.print("state:");
-        Serial.println(state);
-        Serial.print("time");
-        Serial.println(millis()-prev_t);
-        move(255,dir);
-      }
-      if (dir) state += getRadian(count);
-      else state -= getRadian(count);
+      while(getRadian(count) < abs(steering_value) && pos < 2 * M_PI && (millis()-prev_t) < 1000/FPS) mv(255,dir);
+      if (dir) pos += getRadian(count);
+      else pos -= getRadian(count);
     }
-  } else {
-    move(0, !dir);
   }
+  st();
   clr();
 }
 
-void move(int spd, boolean dir){
+void mv(int spd, boolean dir){
   digitalWrite(STBY,HIGH);
 
   boolean inPin1 = LOW;
@@ -108,3 +99,6 @@ void move(int spd, boolean dir){
   analogWrite(PWMA, spd);
 }
 
+void st(){
+  digitalWrite(STBY,LOW); 
+}
