@@ -5,6 +5,7 @@
 #
 
 from steering.steering_predictor import SteeringPredictor
+from steering.mc import MC
 from detection.vehicle.vehicle_detector import VehicleDetector
 # from road_segmentation.road_segmentor import RoadSegmentor
 import cv2
@@ -24,6 +25,7 @@ if __name__ == '__main__':
     # initiate all detectors
     vehicle_detector = VehicleDetector()
     steering_predictor = SteeringPredictor()
+    motor_controller = MC()
     
     # initiate path planner, including GPS and Google Maps API
     gps = GPS()
@@ -59,9 +61,9 @@ if __name__ == '__main__':
             detection_img, out_boxes, out_scores, out_classes = vehicle_detector.detect_vechicle(image)
             
             angle, steering_img = steering_predictor.predict_steering(image)
+            motor_controller.turn(angle)
             
             detection_img = cv2.resize(detection_img, (640, 480))
-            
             vidBuf = np.concatenate((detection_img, steering_img), axis=1)
             displayBuf = vidBuf
 
