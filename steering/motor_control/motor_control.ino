@@ -1,17 +1,21 @@
+#define PWMA 7
+#define AIN1 6
+#define AIN2 5
+#define STBY 4
+
+#define LEN 5 //length of the actual message
+#define FPS 1
+
 volatile unsigned int count; //count for encoder
 
-String msg; //Full serial message
-int len; //Total length of message
+char msg[LEN]; //actual message 
 boolean proceed; //Whether should steer
+
+float state;
+unsigned long prev_t;
 
 float steering_value; //steering value
 boolean dir; //steering direction
-
-
-int PWMA = 7; //Speed control
-int AIN1 = 6; //Direction
-int AIN2 = 5; //Direction
-int STBY = 4; //Standby
 
 //function when receive encoder interrupt
 void onDetect(){
@@ -19,7 +23,7 @@ void onDetect(){
 }
 
 void setup(){
-  Serial.begin(9600);
+  Serial.begin(115200);
   //setup encoder
   attachInterrupt(0, onDetect, RISING);
   //setup motor
@@ -27,63 +31,65 @@ void setup(){
   pinMode(AIN1, OUTPUT);
   pinMode(AIN2, OUTPUT);
   pinMode(STBY, OUTPUT);
-  //initialize
-  count = 0;
-  msg = "";
-  len = 7;
-  steering_value = 0.0;
-  dir = 0;
+  state = 0.0;
+  prev_t = 0;
+  clr();
 }
 
 //turn encoder count to radian value
 float getRadian(int c){
-  return (float)c * 2 * 3.14159265359 / 420;
+  return (float)c * 2.0 * M_PI / 420.0;
 }
 
-//check if is beginning of message
-boolean isBegin(){
-  return (boolean)(Serial.available()) && (Serial.read() == *"b");
-}
-
-//check if is end of message
-boolean isEnd(){
-  return (boolean)(Serial.available()) && (Serial.read() == *"e");
-}
-
-void clear(){
+void clr(){
   count = 0; 
-  while(Serial.available()) Serial.read(); // clear buffer
+  steering_value = 0.0;
+  for (int i = 0; i < LEN; i++){
+    msg[i] = '?'; 
+  }
+}
+
+void debug(){
+  while(Serial.available()){
+    char c = Serial.read();
+    Serial.print("char:");
+    Serial.print(c);
+    Serial.print(" begin:");
+    Serial.print(c=='b');
+    Serial.print(" end:");
+    Serial.println(c=='e');
+  }
 }
 
 void loop(){
-  if (isBegin()){
-      msg = "";
-      //message body
-      for(int i = 0; i < len-2; i++){
-        proceed = true;
-        if(Serial.available()) msg += Serial.read();
-        else {
-          proceed = false;
-          break; 
-        }
+  if(Serial.read() == 'b'){
+    Serial.println("Begin");
+    Serial.readBytes(msg,LEN);  
+    Serial.println(msg);
+    if (Serial.read() == 'e') {
+      Serial.println("End"); 
+      steering_value = atof(msg);
+      Serial.print("Steering Value: ");
+      Serial.println(steering_value);
+      if (steering_value > 0) dir = 0;
+      else dir = 1;
+      prev_t = millis();
+      while(getRadian(count) < abs(steering_value) && state < 2 * M_PI && (millis()-prev_t) < 1000/FPS) {
+        Serial.print("count:");
+        Serial.println(count);
+        Serial.print("state:");
+        Serial.println(state);
+        Serial.print("time");
+        Serial.println(millis()-prev_t);
+        move(255,dir);
       }
-      //steering
-      if(proceed && isEnd()){
-        Serial.println(msg);
-        steering_value = msg.toInt();
-        if (steering_value > 0) dir = 0; else dir = 1;
-        for(int i = 0; i < 40; i++){
-          if(getRadian(count) < abs(steering_value)) {
-            move(255,dir);
-            delay(1);
-          } else break;
-        }
-      }
+      if (dir) state += getRadian(count);
+      else state -= getRadian(count);
+    }
   } else {
-    move(0,!dir);
-    delay(1);
+    move(0, !dir);
   }
-  clear(); 
+  clr();
 }
 
 void move(int spd, boolean dir){
