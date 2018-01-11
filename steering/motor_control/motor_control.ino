@@ -101,4 +101,5 @@ void mv(int spd, boolean dir){
 
 void st(){
   digitalWrite(STBY,LOW); 
+  delay(10);
 }
