@@ -81,7 +81,7 @@ void loop(){
         rad = getRadian(count);
         if (dir) pos -= rad;
         else pos += rad;
-        if (rad > abs(steering_value) || pos > 2 * M_PI) break;
+        if (rad > abs(steering_value) || fabs(pos) > 2 * M_PI) break;
       }
     }
   }
