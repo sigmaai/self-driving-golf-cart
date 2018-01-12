@@ -6,7 +6,8 @@
 #define LEN 5 //length of the actual message
 #define FPS 1
 
-volatile unsigned int count; //count for encoder
+volatile unsigned int count; //count for encode
+volatile float rad;
 
 char msg[LEN]; //actual message 
 
@@ -43,6 +44,7 @@ float getRadian(int c){
 
 void clr(){
   count = 0; 
+  rad = 0;
   steering_value = 0.0;
   for (int i = 0; i < LEN; i++){
     msg[i] = '?'; 
@@ -74,9 +76,13 @@ void loop(){
       if (steering_value > 0) dir = 0;
       else dir = 1;
       prev_t = millis();
-      while(getRadian(count) < abs(steering_value) && pos < 2 * M_PI && (millis()-prev_t) < 1000/FPS) mv(255,dir);
-      if (dir) pos += getRadian(count);
-      else pos -= getRadian(count);
+      while((millis()-prev_t) < 1000/FPS){
+        mv(255,dir);
+        rad = getRadian(count);
+        if (dir) pos -= rad;
+        else pos += rad;
+        if (rad > abs(steering_value) || pos > 2 * M_PI) break;
+      }
     }
   }
   st();
