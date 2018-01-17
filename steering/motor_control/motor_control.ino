@@ -91,16 +91,7 @@ void loop() {
       } else {
         dir = 1;
         if (abs(steering_value - pos) < -4 * M_PI) steering_value = -4 * M_PI;
-        //else steering_value *= -1;
       }
-      //      if (steering_value > 0) {
-      //        dir = 0;
-      //        if (pos + steering_value > 4 * M_PI) steering_value = 4 * M_PI - pos;
-      //      } else {
-      //        dir = 1;
-      //        if (pos - steering_value < -4 * M_PI) steering_value  = pos + 4 * M_PI;
-      //        else steering_value *= -1;
-      //      }
 
       //time limit
       prev_t = millis();
