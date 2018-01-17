@@ -7,8 +7,6 @@ from __future__ import print_function
 from __future__ import absolute_import
 from __future__ import division
 
-import warnings
-
 from keras.models import Model
 from keras.layers.core import Dense, Dropout, Activation, Reshape
 from keras.layers.convolutional import Conv2D, Conv2DTranspose, UpSampling2D
@@ -18,21 +16,10 @@ from keras.layers import Input
 from keras.layers.merge import concatenate
 from keras.layers.normalization import BatchNormalization
 from keras.regularizers import l2
-from keras.utils.layer_utils import convert_all_kernels_in_model, convert_dense_weights_data_format
-from keras.utils.data_utils import get_file
 from keras.engine.topology import get_source_inputs
-from keras.applications.imagenet_utils import _obtain_input_shape
-from keras.applications.imagenet_utils import decode_predictions
 import keras.backend as K
-
 from DenseNet.subpixel import SubPixelUpscaling
 
-DENSENET_121_WEIGHTS_PATH = r'https://github.com/titu1994/DenseNet/releases/download/v3.0/DenseNet-BC-121-32.h5'
-DENSENET_161_WEIGHTS_PATH = r'https://github.com/titu1994/DenseNet/releases/download/v3.0/DenseNet-BC-161-48.h5'
-DENSENET_169_WEIGHTS_PATH = r'https://github.com/titu1994/DenseNet/releases/download/v3.0/DenseNet-BC-169-32.h5'
-DENSENET_121_WEIGHTS_PATH_NO_TOP = r'https://github.com/titu1994/DenseNet/releases/download/v3.0/DenseNet-BC-121-32-no-top.h5'
-DENSENET_161_WEIGHTS_PATH_NO_TOP = r'https://github.com/titu1994/DenseNet/releases/download/v3.0/DenseNet-BC-161-48-no-top.h5'
-DENSENET_169_WEIGHTS_PATH_NO_TOP = r'https://github.com/titu1994/DenseNet/releases/download/v3.0/DenseNet-BC-169-32-no-top.h5'
 
 def preprocess_input(x, data_format=None):
     """Preprocesses a tensor encoding a batch of images.
@@ -78,12 +65,9 @@ def DenseNet(input_shape=None, depth=40, nb_dense_block=3, growth_rate=12, nb_fi
              bottleneck=False, reduction=0.0, dropout_rate=0.0, weight_decay=1e-4, subsample_initial_block=False,
              include_top=True, weights=None, input_tensor=None,
              classes=10, activation='softmax'):
-    '''Instantiate the DenseNet architecture,
-        optionally loading weights pre-trained
-        on CIFAR-10. Note that when using TensorFlow,
-        for best performance you should set
-        `image_data_format='channels_last'` in your Keras config
-        at ~/.keras/keras.json.
+    '''Instantiate the DenseNet architecture, optionally loading weights pre-trained
+        on CIFAR-10. Note that when using TensorFlow, for best performance you should set
+        `image_data_format='channels_last'` in your Keras config at ~/.keras/keras.json.
         The model and the weights are compatible with both
         TensorFlow and Theano. The dimension ordering
         convention used by the model is the one
@@ -145,11 +129,12 @@ def DenseNet(input_shape=None, depth=40, nb_dense_block=3, growth_rate=12, nb_fi
         raise ValueError('sigmoid activation can only be used when classes = 1')
 
     # Determine proper input shape
-    input_shape = _obtain_input_shape(input_shape,
-                                      default_size=32,
-                                      min_size=8,
-                                      data_format=K.image_data_format(),
-                                      require_flatten=include_top)
+    # input_shape = _obtain_input_shape(input_shape,
+    #                                   default_size=32,
+    #                                   min_size=8,
+    #                                   data_format=K.image_data_format(),
+    #                                   require_flatten=include_top)
+    input_shape = input_shape
 
     if input_tensor is None:
         img_input = Input(shape=input_shape)
@@ -172,70 +157,6 @@ def DenseNet(input_shape=None, depth=40, nb_dense_block=3, growth_rate=12, nb_fi
     # Create model.
     model = Model(inputs, x, name='densenet')
 
-    # load weights
-    if weights == 'imagenet':
-        weights_loaded = False
-
-        if (depth == 121) and (nb_dense_block == 4) and (growth_rate == 32) and (nb_filter == 64) and \
-                (bottleneck is True) and (reduction == 0.5) and (dropout_rate == 0.0) and (subsample_initial_block):
-            if include_top:
-                weights_path = get_file('DenseNet-BC-121-32.h5',
-                                        DENSENET_121_WEIGHTS_PATH,
-                                        cache_subdir='models',
-                                        md5_hash='a439dd41aa672aef6daba4ee1fd54abd')
-            else:
-                weights_path = get_file('DenseNet-BC-121-32-no-top.h5',
-                                        DENSENET_121_WEIGHTS_PATH_NO_TOP,
-                                        cache_subdir='models',
-                                        md5_hash='55e62a6358af8a0af0eedf399b5aea99')
-            model.load_weights(weights_path)
-            weights_loaded = True
-
-        if (depth == 161) and (nb_dense_block == 4) and (growth_rate == 48) and (nb_filter == 96) and \
-                (bottleneck is True) and (reduction == 0.5) and (dropout_rate == 0.0) and (subsample_initial_block):
-            if include_top:
-                weights_path = get_file('DenseNet-BC-161-48.h5',
-                                        DENSENET_161_WEIGHTS_PATH,
-                                        cache_subdir='models',
-                                        md5_hash='6c326cf4fbdb57d31eff04333a23fcca')
-            else:
-                weights_path = get_file('DenseNet-BC-161-48-no-top.h5',
-                                        DENSENET_161_WEIGHTS_PATH_NO_TOP,
-                                        cache_subdir='models',
-                                        md5_hash='1a9476b79f6b7673acaa2769e6427b92')
-            model.load_weights(weights_path)
-            weights_loaded = True
-
-        if (depth == 169) and (nb_dense_block == 4) and (growth_rate == 32) and (nb_filter == 64) and \
-                (bottleneck is True) and (reduction == 0.5) and (dropout_rate == 0.0) and (subsample_initial_block):
-            if include_top:
-                weights_path = get_file('DenseNet-BC-169-32.h5',
-                                        DENSENET_169_WEIGHTS_PATH,
-                                        cache_subdir='models',
-                                        md5_hash='914869c361303d2e39dec640b4e606a6')
-            else:
-                weights_path = get_file('DenseNet-BC-169-32-no-top.h5',
-                                        DENSENET_169_WEIGHTS_PATH_NO_TOP,
-                                        cache_subdir='models',
-                                        md5_hash='89c19e8276cfd10585d5fadc1df6859e')
-            model.load_weights(weights_path)
-            weights_loaded = True
-
-        if weights_loaded:
-            if K.backend() == 'theano':
-                convert_all_kernels_in_model(model)
-
-            if K.image_data_format() == 'channels_first' and K.backend() == 'tensorflow':
-                warnings.warn('You are using the TensorFlow backend, yet you '
-                              'are using the Theano '
-                              'image data format convention '
-                              '(`image_data_format="channels_first"`). '
-                              'For best performance, set '
-                              '`image_data_format="channels_last"` in '
-                              'your Keras config '
-                              'at ~/.keras/keras.json.')
-
-            print("Weights for the model were loaded successfully")
 
     return model
 
@@ -359,91 +280,6 @@ def DenseNetFCN(input_shape, nb_dense_block=5, growth_rate=16, nb_layers_per_blo
     model = Model(inputs, x, name='fcn-densenet')
 
     return model
-
-
-def DenseNetImageNet121(input_shape=None,
-                        bottleneck=True,
-                        reduction=0.5,
-                        dropout_rate=0.0,
-                        weight_decay=1e-4,
-                        include_top=True,
-                        weights='imagenet',
-                        input_tensor=None,
-                        classes=1000,
-                        activation='softmax'):
-    return DenseNet(input_shape, depth=121, nb_dense_block=4, growth_rate=32, nb_filter=64,
-                    nb_layers_per_block=[6, 12, 24, 16], bottleneck=bottleneck, reduction=reduction,
-                    dropout_rate=dropout_rate, weight_decay=weight_decay, subsample_initial_block=True,
-                    include_top=include_top, weights=weights, input_tensor=input_tensor,
-                    classes=classes, activation=activation)
-
-
-def DenseNetImageNet169(input_shape=None,
-                        bottleneck=True,
-                        reduction=0.5,
-                        dropout_rate=0.0,
-                        weight_decay=1e-4,
-                        include_top=True,
-                        weights='imagenet',
-                        input_tensor=None,
-                        classes=1000,
-                        activation='softmax'):
-    return DenseNet(input_shape, depth=169, nb_dense_block=4, growth_rate=32, nb_filter=64,
-                    nb_layers_per_block=[6, 12, 32, 32], bottleneck=bottleneck, reduction=reduction,
-                    dropout_rate=dropout_rate, weight_decay=weight_decay, subsample_initial_block=True,
-                    include_top=include_top, weights=weights, input_tensor=input_tensor,
-                    classes=classes, activation=activation)
-
-
-def DenseNetImageNet201(input_shape=None,
-                        bottleneck=True,
-                        reduction=0.5,
-                        dropout_rate=0.0,
-                        weight_decay=1e-4,
-                        include_top=True,
-                        weights=None,
-                        input_tensor=None,
-                        classes=1000,
-                        activation='softmax'):
-    return DenseNet(input_shape, depth=201, nb_dense_block=4, growth_rate=32, nb_filter=64,
-                    nb_layers_per_block=[6, 12, 48, 32], bottleneck=bottleneck, reduction=reduction,
-                    dropout_rate=dropout_rate, weight_decay=weight_decay, subsample_initial_block=True,
-                    include_top=include_top, weights=weights, input_tensor=input_tensor,
-                    classes=classes, activation=activation)
-
-
-def DenseNetImageNet264(input_shape=None,
-                        bottleneck=True,
-                        reduction=0.5,
-                        dropout_rate=0.0,
-                        weight_decay=1e-4,
-                        include_top=True,
-                        weights=None,
-                        input_tensor=None,
-                        classes=1000,
-                        activation='softmax'):
-    return DenseNet(input_shape, depth=201, nb_dense_block=4, growth_rate=32, nb_filter=64,
-                    nb_layers_per_block=[6, 12, 64, 48], bottleneck=bottleneck, reduction=reduction,
-                    dropout_rate=dropout_rate, weight_decay=weight_decay, subsample_initial_block=True,
-                    include_top=include_top, weights=weights, input_tensor=input_tensor,
-                    classes=classes, activation=activation)
-
-
-def DenseNetImageNet161(input_shape=None,
-                        bottleneck=True,
-                        reduction=0.5,
-                        dropout_rate=0.0,
-                        weight_decay=1e-4,
-                        include_top=True,
-                        weights='imagenet',
-                        input_tensor=None,
-                        classes=1000,
-                        activation='softmax'):
-    return DenseNet(input_shape, depth=161, nb_dense_block=4, growth_rate=48, nb_filter=96,
-                    nb_layers_per_block=[6, 12, 36, 24], bottleneck=bottleneck, reduction=reduction,
-                    dropout_rate=dropout_rate, weight_decay=weight_decay, subsample_initial_block=True,
-                    include_top=include_top, weights=weights, input_tensor=input_tensor,
-                    classes=classes, activation=activation)
 
 
 def __conv_block(ip, nb_filter, bottleneck=False, dropout_rate=None, weight_decay=1e-4):
@@ -782,14 +618,3 @@ def __create_fcn_dense_net(nb_classes, img_input, include_top, nb_dense_block=5,
 
     return x
 
-
-
-
-if __name__ == '__main__':
-
-    from keras.utils.vis_utils import plot_model
-    #model = DenseNetFCN((32, 32, 3), growth_rate=16, nb_layers_per_block=[4, 5, 7, 10, 12, 15], upsampling_type='deconv')
-    model = DenseNet((32, 32, 3), weights=None)
-    model.summary()
-
-    plot_model(model, 'test.png', show_shapes=True)
