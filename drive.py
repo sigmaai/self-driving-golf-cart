@@ -28,16 +28,16 @@ if __name__ == '__main__':
     motor_controller = MC()
     
     # initiate path planner, including GPS and Google Maps API
-    gps = GPS()
-    start = gps.query_gps_location()
-    destination = get_destination()
-    gp_planner = GlobalPathPlanner()
-    directions = gp_planner.direction(start, destination)
-    print(directions)
+    #gps = GPS()
+    #start = gps.query_gps_location()
+    #destination = get_destination()
+    #gp_planner = GlobalPathPlanner()
+    #directions = gp_planner.direction(start, destination)
+    #print(directions)
     
 
     # OpenCV main loop
-    cap = cv2.VideoCapture("nvcamerasrc ! video/x-raw(memory:NVMM), width=(int)640, height=(int)480,format=(string)I420, framerate=(fraction)30/1 ! nvvidconv flip-method=0 ! video/x-raw, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! appsink")
+    cap = cv2.VideoCapture("nvcamerasrc ! video/x-raw(memory:NVMM), width=(int)640, height=(int)480,format=(string)I420, framerate=(fraction)1/1 ! nvvidconv flip-method=0 ! video/x-raw, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! appsink")
 
     if cap.isOpened():
 
