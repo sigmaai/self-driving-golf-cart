@@ -2,15 +2,10 @@ import cv2
 import numpy as np
 import configs
 import os
+import pandas as pd
 
 
 # --------------HELPER-METHODS-------------- #
-
-def resize(image):
-    """
-    Resize the image to the input shape used by the network model
-    """
-    return cv2.resize(image, (configs.image_width, configs.image_heighte), cv2.INTER_AREA)
 
 
 def rgb2yuv(image):
@@ -28,6 +23,51 @@ def random_flip(image, steering_angle):
         image = cv2.flip(image, 1)
         steering_angle = -steering_angle
     return image, steering_angle
+
+
+def preprocess_dataset(dir1, dir2):
+
+    data1 = pd.read_csv(dir1 + "interpolated.csv").values
+    data2 = pd.read_csv(dir2 + "interpolated.csv").values
+
+    print("begin processing dataset 1")
+    labels1 = np.array([data1[1]])
+    labels1[0][5] = dir1 + labels1[0][5]
+    for i in range(0, len(data1)):
+        if data1[i][4] == "center_camera":
+            item = np.array([data1[i]])
+            item[0][5] = dir1 + item[0][5]
+            labels1 = np.concatenate((labels1, item), axis=0)
+
+    print("dataset 1 processing completed")
+    print("begin processing dataset 2")
+
+    labels2 = np.array([data2[1]])
+    labels2[0][5] = dir2 + labels2[0][5]
+    for i in range(0, len(data2)):
+        if data2[i][4] == "center_camera":
+            item = np.array([data2[i]])
+            item[0][5] = dir2 + item[0][5]
+            labels2 = np.concatenate((labels2, item), axis=0)
+
+    print("dataset 2 processing completed")
+    return np.concatenate((labels1, labels2), axis=0)
+
+
+def preprocess_visualization(dir):
+
+    data1 = pd.read_csv(dir + "dataset-2/interpolated.csv").values
+
+    print("begin processing dataset 1")
+    labels1 = np.array([data1[1]])
+    labels1[0][5] = dir + labels1[0][5]
+    for i in range(0, len(data1)):
+        if data1[i][4] == "center_camera":
+            item = np.array([data1[i]])
+            item[0][5] = dir + "/dataset-2/" + item[0][5]
+            labels1 = np.concatenate((labels1, item), axis=0)
+
+    return labels1
 
 
 def bgr_rgb(img):
@@ -67,8 +107,8 @@ def random_shadow(image):
     # (x1, y1) and (x2, y2) forms a line
     # xm, ym gives all the locations of the image
     x1, y1 = configs.image_width * np.random.rand(), 0
-    x2, y2 = configs.image_width * np.random.rand(), configs.image_height
-    xm, ym = np.mgrid[0:configs.image_height, 0:configs.image_width]
+    x2, y2 = configs.image_width * np.random.rand(), configs.img_h
+    xm, ym = np.mgrid[0:configs.img_w, 0:configs.image_width]
 
     # mathematically speaking, we want to set 1 below the line and zero otherwise
     # Our coordinate is up side down.  So, the above the line:
@@ -130,26 +170,36 @@ def augument(img_path):
     return image
 
 
-def batch_generator(data, batch_size, augmentation=False):
+def batch_generator(data, batch_size, ds_type, augmentation=False, temporal=False):
     """
     Generate training image give image paths and associated steering angles
     """
-    images = np.empty([batch_size, configs.image_height, configs.image_width, configs.image_channel])
+    images = np.empty([batch_size, configs.img_h, configs.img_w, configs.img_ch])
     throttles = np.empty(batch_size)
 
     while True:
         i = 0
         for index in np.random.permutation(data.shape[0]):
 
-            image_path = str(data[index][2])
-            throttle = data[index][0]
+            if ds_type == "UD":
+                image_path = str(data[index][5])
+                throttle = data[index][8]
 
-            # argumentation
-            if augmentation and np.random.rand() < 0.6:
-                image = augument(configs.data_path + image_path + ".jpeg")
+                if augmentation and np.random.rand() < 0.6:
+                    image = augument(image_path)
+                else:
+                    image = load_image(image_path)
+
             else:
-                image = load_image(configs.data_path + image_path + ".jpeg")
-                # add the image and steering angle to the batch
+                image_path = str(data[index][2])
+                throttle = data[index][0]
+                # argumentation
+                if augmentation and np.random.rand() < 0.6:
+                    image = augument(configs.data_path + image_path + ".jpeg")
+                else:
+                    image = load_image(configs.data_path + image_path + ".jpeg")
+                    # add the image and steering angle to the batch
+
             images[i] = image
             throttles[i] = throttle
             i += 1
