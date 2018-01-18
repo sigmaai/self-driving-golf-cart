@@ -10,7 +10,7 @@ volatile float rad;
 
 char msg[LEN]; //actual message
 
-float pos; //steering position
+float pos = 0.0; //steering position
 unsigned long prev_t; //previous time
 
 float steering_value; //steering value
@@ -83,24 +83,36 @@ void loop() {
       Serial.println("End");
       steering_value = atof(msg);
       Serial.print("Steering Value: "); Serial.println(steering_value);
+
       //actuation
-      if (steering_value > 0) {
+      if ((steering_value - pos) > 0) {
         dir = 0;
-        if (pos + steering_value > 4 * M_PI) steering_value = 4 * M_PI - pos;
+        if (abs(steering_value - pos) > 4 * M_PI) steering_value = 4 * M_PI;
       } else {
         dir = 1;
-        if (pos - steering_value < -4 * M_PI) steering_value  = pos + 4 * M_PI;
-        else steering_value *= -1;
+        if (abs(steering_value - pos) < -4 * M_PI) steering_value = -4 * M_PI;
+        //else steering_value *= -1;
       }
+      //      if (steering_value > 0) {
+      //        dir = 0;
+      //        if (pos + steering_value > 4 * M_PI) steering_value = 4 * M_PI - pos;
+      //      } else {
+      //        dir = 1;
+      //        if (pos - steering_value < -4 * M_PI) steering_value  = pos + 4 * M_PI;
+      //        else steering_value *= -1;
+      //      }
+
       //time limit
       prev_t = millis();
       while ((millis() - prev_t) < 1000 / FPS) {
         mv(255, dir);
         //encoder
-        if (getRadian(count) > steering_value) break;
+        if (getRadian(count) > abs(steering_value - pos)) break;
       }
       if (dir) pos -= getRadian(count);
       else pos += getRadian(count);
+      Serial.print("pos:");
+      Serial.println(pos);
     }
   }
   st();

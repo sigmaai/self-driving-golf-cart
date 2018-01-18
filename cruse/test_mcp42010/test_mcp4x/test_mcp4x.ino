@@ -20,17 +20,17 @@ void setup() {
 }
 
 void loop() {
-
-  for (int i = 128; i <= 256; i++) {
+  
+  for (int i = 70; i <= 130; i++) {
     MSP42010PotWrite(slave_Select_Pin, B00010001, i);
     MSP42010PotWrite(slave_Select_Pin, B00010010, i);
-    delay(50);
+    delay(80);
   }
 
-  for (int i = 256; i >= 128;  i--) {
+  for (int i = 130; i >= 70;  i--) {
     MSP42010PotWrite(slave_Select_Pin, B00010001, i);
     MSP42010PotWrite(slave_Select_Pin, B00010010, i);
-    delay(50);
+    delay(80);
   }
 }
 
