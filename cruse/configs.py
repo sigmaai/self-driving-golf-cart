@@ -7,4 +7,4 @@ img_w = 512
 img_ch = 3
 data_path = "/Volumes/Personal_Drive/Datasets/Project-X/"
 ud_data_path = "/Volumes/Personal_Drive/Datasets/udacity-driving/"
-model_path = "./trained-nv-v3.h5"
+weight_path = "./trained-nv-v3.h5"
