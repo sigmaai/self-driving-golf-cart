@@ -21,4 +21,6 @@ class MC:
         else:
             print('Failed to send turning angle %f' % angle)
 
-        return ret
+     
+    def pos(self):
+        return float(self.ser.readline().strip())

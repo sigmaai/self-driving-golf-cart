@@ -27,7 +27,7 @@ if __name__ == '__main__':
     # initiate all detectors
     vehicle_detector = VehicleDetector()
     steering_predictor = SteeringPredictor()
- #   motor_controller = MC()
+    motor_controller = MC()
     
     # initiate path planner, including GPS and Google Maps API
     #gps = GPS()
@@ -52,7 +52,7 @@ if __name__ == '__main__':
         cv2.setWindowTitle(windowName, "car detection")
 
         while True:
-            time.sleep(0.9666)
+            time.sleep(0.5)
             # -----------------------------------------------------
             # Check to see if the user closed the window
             if cv2.getWindowProperty(windowName, 0) < 0:
@@ -65,8 +65,9 @@ if __name__ == '__main__':
             # detection_img, out_boxes, out_scores, out_classes = vehicle_detector.detect_vechicle(image)
             
             angle, steering_img = steering_predictor.predict_steering(image)
-  #          motor_controller.turn(l * angle)
+            motor_controller.turn(l * angle)
             
+            print(motor_controller.pos()) 
             #detection_img = cv2.resize(detection_img, (640, 480))
             vidBuf = np.concatenate((steering_img, steering_img), axis=1)
             displayBuf = vidBuf

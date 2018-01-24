@@ -1,7 +1,7 @@
 #define RPWM 7
 #define LPWM 6
 #define LEN 6 //length of the actual message
-#define FPS 5
+#define FPS 1
 
 #define M_PI 3.14159265359
 #define THRESHOLD 0.087266463
@@ -11,7 +11,8 @@ volatile unsigned int count; //count for encode
 volatile float rad;
 
 char msg[LEN]; //actual message
-
+char pos_msg[LEN];
+byte *send_msg;
 float pos = 0.0; //steering position
 unsigned long prev_t; //previous time
 
@@ -76,17 +77,18 @@ void debug_motor() {
   delay(1000);
 }
 
-
 void loop() {
-  if (Serial.read() == 'b') {
-
-    Serial.println("Begin");
+  if (Serial.peek() == 'b') {
+    Serial.read();
+ //       Serial.println("Begin");
     Serial.readBytes(msg, LEN);
-    Serial.println(msg);
+ //       Serial.println(msg);
     if (Serial.read() == 'e') {
-      Serial.println("End");
+      if (dir) pos -= getRadian(count);
+      else pos += getRadian(count);
+ //           Serial.println("End");
       steering_value = atof(msg);
-      Serial.print("Steering Value: "); Serial.println(steering_value);
+ //           Serial.print("Steering Value: "); Serial.println(steering_value);
 
       if ( abs(steering_value - pos) > THRESHOLD) {
         //actuation
@@ -100,24 +102,17 @@ void loop() {
 
         //time limit
         prev_t = millis();
-        //(millis() - prev_t) < 1000 / FPS
-        while (1) {
+        while ((millis() - prev_t) < 1000 / FPS) {
           mv(255, dir);
           //encoder
           if (getRadian(count) > abs(steering_value - pos)) break;
         }
-        if (dir) {
-          pos -= getRadian(count);
-          //      Serial.print(getRadian(count));
-        }
-        else {
-          pos += getRadian(count);
-          //      Serial.print(getRadian(count));
-        }
-
-        Serial.print("pos:");
-        Serial.println(pos);
+        
       }
+
+      dtostrf(pos, 4, 2, pos_msg);
+      pos_msg[4] = '\n';
+      Serial.write(pos_msg);
     }
   }
   st();
