@@ -14,12 +14,11 @@ class MC:
 
 
     def turn(self, angle, precision=3):
+        ret =  self.ser.write(('b'+str(round(angle,precision)).zfill(6)+'e').encode())
 
-        ret =  self.ser.write(('b'+str(round(angle,precision)).zfill(5)+'e').encode())
-
-        if (ret == precision+4):
+        if (ret == precision+5):
             pass
         else:
             print('Failed to send turning angle %f' % angle)
-        return ret
 
+        return ret
