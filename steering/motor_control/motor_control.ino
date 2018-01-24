@@ -4,7 +4,7 @@
 #define FPS 1
 
 #define M_PI 3.14159265359
-#define THRESHOLD 0.087266463
+#define THRESHOLD 0.3
 
 
 volatile unsigned int count; //count for encode
@@ -43,7 +43,6 @@ float getRadian(int c) {
 }
 
 void clr() {
-  count = 0;
   rad = 0;
   steering_value = 0.0;
   for (int i = 0; i < LEN; i++) {
@@ -71,7 +70,7 @@ void debug_motor() {
   delay(1000);
   analogWrite(RPWM, 0);
   analogWrite(LPWM, 255);
-  delay(1000);
+  delay(1000);//
   analogWrite(LPWM, 0);
   analogWrite(RPWM, 0);
   delay(1000);
@@ -80,15 +79,13 @@ void debug_motor() {
 void loop() {
   if (Serial.peek() == 'b') {
     Serial.read();
- //       Serial.println("Begin");
+    //        Serial.println("Begin");
     Serial.readBytes(msg, LEN);
- //       Serial.println(msg);
+    //          Serial.println(msg);
     if (Serial.read() == 'e') {
-      if (dir) pos -= getRadian(count);
-      else pos += getRadian(count);
- //           Serial.println("End");
+      //              Serial.println("End");
       steering_value = atof(msg);
- //           Serial.print("Steering Value: "); Serial.println(steering_value);
+      //               Serial.print("Steering Value: "); Serial.println(steering_value);
 
       if ( abs(steering_value - pos) > THRESHOLD) {
         //actuation
@@ -107,16 +104,17 @@ void loop() {
           //encoder
           if (getRadian(count) > abs(steering_value - pos)) break;
         }
-        
-      }
+        if (dir) pos -= getRadian(count);
+        else pos += getRadian(count);
+        count = 0;
 
+      }
       dtostrf(pos, 4, 2, pos_msg);
       pos_msg[4] = '\n';
       Serial.write(pos_msg);
     }
   }
   st();
-  clr();
 }
 
 void mv(int spd, boolean dir) {
