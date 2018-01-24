@@ -1,9 +1,11 @@
 #define RPWM 7
 #define LPWM 6
-#define LEN 5 //length of the actual message
-#define FPS 1
+#define LEN 6 //length of the actual message
+#define FPS 5
 
 #define M_PI 3.14159265359
+#define THRESHOLD 0.087266463
+
 
 volatile unsigned int count; //count for encode
 volatile float rad;
@@ -46,6 +48,7 @@ void clr() {
   for (int i = 0; i < LEN; i++) {
     msg[i] = '?';
   }
+
 }
 
 void debug_comm() {
@@ -76,6 +79,7 @@ void debug_motor() {
 
 void loop() {
   if (Serial.read() == 'b') {
+
     Serial.println("Begin");
     Serial.readBytes(msg, LEN);
     Serial.println(msg);
@@ -84,26 +88,36 @@ void loop() {
       steering_value = atof(msg);
       Serial.print("Steering Value: "); Serial.println(steering_value);
 
-      //actuation
-      if ((steering_value - pos) > 0) {
-        dir = 0;
-        if (abs(steering_value - pos) > 4 * M_PI) steering_value = 4 * M_PI;
-      } else {
-        dir = 1;
-        if (abs(steering_value - pos) < -4 * M_PI) steering_value = -4 * M_PI;
-      }
+      if ( abs(steering_value - pos) > THRESHOLD) {
+        //actuation
+        if ((steering_value - pos) > 0) {
+          dir = 0;
+          if ((steering_value - pos) > 4 * M_PI) steering_value = 4 * M_PI;
+        } else {
+          dir = 1;
+          if ((steering_value - pos) < -4 * M_PI) steering_value = -4 * M_PI;
+        }
 
-      //time limit
-      prev_t = millis();
-      while ((millis() - prev_t) < 1000 / FPS) {
-        mv(255, dir);
-        //encoder
-        if (getRadian(count) > abs(steering_value - pos)) break;
+        //time limit
+        prev_t = millis();
+        //(millis() - prev_t) < 1000 / FPS
+        while (1) {
+          mv(255, dir);
+          //encoder
+          if (getRadian(count) > abs(steering_value - pos)) break;
+        }
+        if (dir) {
+          pos -= getRadian(count);
+          //      Serial.print(getRadian(count));
+        }
+        else {
+          pos += getRadian(count);
+          //      Serial.print(getRadian(count));
+        }
+
+        Serial.print("pos:");
+        Serial.println(pos);
       }
-      if (dir) pos -= getRadian(count);
-      else pos += getRadian(count);
-      Serial.print("pos:");
-      Serial.println(pos);
     }
   }
   st();
