@@ -1,8 +1,9 @@
 # DATASET PATH
 dir = "/Volumes/Personal_Drive/Datasets/udacity-driving/dataset-2/"
+dir3 = "/Volumes/Personal_Drive/Datasets/udacity-driving/dataset-3/"
 dir2 = "/Volumes/Personal_Drive/Datasets/udacity-driving/dataset-1/"
 val_dir = "/Volumes/Personal_Drive/Datasets/udacity-driving/validation/"
-weights_path = "./"
+weights_path = ""
 
 
 # TRAINING

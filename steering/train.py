@@ -3,21 +3,24 @@ import cv2
 import numpy as np
 import utils
 import model
-import configs
+import steering.configs as configs
 
+validation = False
 
-labels = utils.preprocess_dataset(configs.dir, configs.dir2)
-print(labels.shape)
-val_labels = pd.read_csv(configs.val_dir + "interpolated.csv")
+labels = utils.preprocess_dataset(configs.dir, configs.dir2, configs.dir3)
+print("data length {}".format(len(labels)))
 
-cnn = model.commaai_model()
+# create the network or load weights
+cnn = model.nvidia_network()
 if configs.load_weights:
     cnn.load_weights(configs.weights_path)
 cnn.summary()
 
-training_gen = utils.batch_generator(labels, 32, True)
-validation_gen = utils.validation_generator(configs.val_dir, val_labels, 2)
+training_gen = utils.batch_generator(labels, 16, True)
+if validation:
+    val_labels = pd.read_csv(configs.val_dir + "interpolated.csv")
+    validation_gen = utils.validation_generator(configs.val_dir, val_labels, 2)
 
-cnn.fit_generator(training_gen, steps_per_epoch=1000, epochs=15, verbose=1)
+cnn.fit_generator(training_gen, steps_per_epoch=1000, epochs=3, verbose=1)
 
-cnn.save('./trained-cai-v7.h5')
+cnn.save('./trained-nvd-v1.h5')
