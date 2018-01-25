@@ -4,7 +4,7 @@
 #define FPS 1
 
 #define M_PI 3.14159265359
-#define THRESHOLD 0.3
+#define THRESHOLD 0.5
 
 
 volatile unsigned int count; //count for encode
@@ -77,29 +77,31 @@ void debug_motor() {
 }
 
 void loop() {
-  if (Serial.peek() == 'b') {
-    Serial.read();
-    //        Serial.println("Begin");
+  //debug_comm();
+
+  if (Serial.read() == 'b') {
+    Serial.println("Begin");
     Serial.readBytes(msg, LEN);
-    //          Serial.println(msg);
+    Serial.println(msg);
     if (Serial.read() == 'e') {
-      //              Serial.println("End");
+      Serial.println("End");
       steering_value = atof(msg);
-      //               Serial.print("Steering Value: "); Serial.println(steering_value);
+      Serial.print("Steering Value: "); Serial.println(steering_value);
 
-      if ( abs(steering_value - pos) > THRESHOLD) {
-        //actuation
-        if ((steering_value - pos) > 0) {
-          dir = 0;
-          if ((steering_value - pos) > 4 * M_PI) steering_value = 4 * M_PI;
-        } else {
-          dir = 1;
-          if ((steering_value - pos) < -4 * M_PI) steering_value = -4 * M_PI;
-        }
+      //actuation
+      if ((steering_value - pos) > 0) {
+        dir = 0;
+        if (steering_value > 8 * M_PI) steering_value = 8 * M_PI;
+      } else {
+        dir = 1;
+        if (steering_value < -8 * M_PI) steering_value = -8 * M_PI;
+      }
 
+      if (abs(steering_value - pos) > THRESHOLD) {
         //time limit
         prev_t = millis();
-        while ((millis() - prev_t) < 1000 / FPS) {
+        //(millis() - prev_t) < 1000 / FPS
+        while (1) {
           mv(255, dir);
           //encoder
           if (getRadian(count) > abs(steering_value - pos)) break;
@@ -109,12 +111,11 @@ void loop() {
         count = 0;
 
       }
-      dtostrf(pos, 4, 2, pos_msg);
-      pos_msg[4] = '\n';
-      Serial.write(pos_msg);
+      Serial.println(pos);
     }
   }
   st();
+  clr();
 }
 
 void mv(int spd, boolean dir) {
