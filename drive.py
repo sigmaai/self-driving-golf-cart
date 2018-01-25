@@ -7,13 +7,13 @@ import time
 from steering.steering_predictor import SteeringPredictor
 from steering.mc import MC
 from detection.vehicle.vehicle_detector import VehicleDetector
-# from road_segmentation.road_segmentor import RoadSegmentor
+# from road_segmentation.road_segmentationroad_segmentor import RoadSegmentor
 import cv2
 import numpy as np
 from path_planning.gps import GPS 
 from path_planning.global_path import GlobalPathPlanner
 
-l = 50
+l = -20
 
 
 def get_destination():
@@ -27,7 +27,7 @@ if __name__ == '__main__':
     # initiate all detectors
     vehicle_detector = VehicleDetector()
     steering_predictor = SteeringPredictor()
-    motor_controller = MC()
+    motor_controller = MC(1)
     
     # initiate path planner, including GPS and Google Maps API
     #gps = GPS()
@@ -41,7 +41,7 @@ if __name__ == '__main__':
     # OpenCV main loop
     
     
-    cap = cv2.VideoCapture("nvcamerasrc ! video/x-raw(memory:NVMM), width=(int)640, height=(int)480,format=(string)I420, framerate=(fraction)1/1 ! nvvidconv flip-method=2 ! video/x-raw, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! appsink")
+    cap = cv2.VideoCapture("nvcamerasrc ! video/x-raw(memory:NVMM), width=(int)640, height=(int)480,format=(string)I420, framerate=(fraction)1/1 ! nvvidconv flip-method=0 ! video/x-raw, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! appsink")
 
     if cap.isOpened():
 
@@ -52,7 +52,7 @@ if __name__ == '__main__':
         cv2.setWindowTitle(windowName, "car detection")
 
         while True:
-            time.sleep(0.5)
+            # 	time.sleep(0.5)
             # -----------------------------------------------------
             # Check to see if the user closed the window
             if cv2.getWindowProperty(windowName, 0) < 0:
@@ -66,8 +66,9 @@ if __name__ == '__main__':
             
             angle, steering_img = steering_predictor.predict_steering(image)
             motor_controller.turn(l * angle)
-            
-            print(motor_controller.pos()) 
+            print('turning ' + str(l * angle))
+            time.sleep(0.5) 
+            #print(motor_controller.pos()) 
             #detection_img = cv2.resize(detection_img, (640, 480))
             vidBuf = np.concatenate((steering_img, steering_img), axis=1)
             displayBuf = vidBuf
