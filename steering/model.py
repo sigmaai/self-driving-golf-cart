@@ -63,10 +63,9 @@ def small_vgg_network():
     return model
 
 def commaai_model():
-    
-    ch, row, col = 3, 160, 320  # camera format
+
     model = Sequential()
-    model.add(Lambda(lambda x: x/127.5 - 1., input_shape=(configs.image_height, configs.image_width, ch), output_shape=(configs.image_height, configs.image_width, ch)))
+    model.add(Lambda(lambda x: x/127.5 - 1., input_shape=(configs.image_height, configs.image_width, 3), output_shape=(configs.image_height, configs.image_width, 3)))
     model.add(Conv2D(16, (8, 8), strides=4, padding="same"))
     model.add(ELU())
     model.add(Conv2D(32, (5, 5), strides=2, padding="same"))

@@ -34,19 +34,6 @@ def preprocess(image):
     return image
 
 
-# def choose_image(data_dir, center, left, right, steering_angle):
-#     """
-#     Randomly choose an image from the center, left or right, and adjust
-#     the steering angle.
-#     """
-#     choice = np.random.choice(3)
-#     if choice == 0:
-#         return load_image(data_dir, left), steering_angle + 0.2
-#     elif choice == 1:
-#         return load_image(data_dir, right), steering_angle - 0.2
-#     return load_image(data_dir, center), steering_angle
-
-
 def random_flip(image, steering_angle):
     """
     Randomly flipt the image left <-> right, and adjust the steering angle.
@@ -70,7 +57,7 @@ def load_image(image_file):
     img = cv2.imread(image_file)
     # removed the cropping part
     img = img[160:480, 0:640]
-    img = cv2.resize(img, (640, 480))
+    img = cv2.resize(img, (configs.image_width, configs.image_height))
     return bgr_rgb(img)
 
 

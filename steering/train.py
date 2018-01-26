@@ -1,7 +1,7 @@
 import pandas as pd
 import cv2
 import numpy as np
-import utils
+import steering.utils as utils
 import model
 import steering.configs as configs
 
@@ -11,9 +11,9 @@ labels = utils.preprocess_dataset(configs.dir, configs.dir2, configs.dir3)
 print("data length {}".format(len(labels)))
 
 # create the network or load weights
-cnn = model.nvidia_network()
+cnn = model.commaai_model()
 if configs.load_weights:
-    cnn.load_weights(configs.weights_path)
+    cnn.load_weights(configs.model_path)
 cnn.summary()
 
 training_gen = utils.batch_generator(labels, 16, True)
@@ -23,4 +23,4 @@ if validation:
 
 cnn.fit_generator(training_gen, steps_per_epoch=1000, epochs=3, verbose=1)
 
-cnn.save('./trained-nvd-v1.h5')
+cnn.save('./trained-cai-v2.2.h5')
