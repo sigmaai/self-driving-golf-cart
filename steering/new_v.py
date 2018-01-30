@@ -8,24 +8,13 @@ from __future__ import print_function
 import argparse
 import numpy as np
 import cv2
-import pygame
 import pandas as pd
 from os import path
-import matplotlib
-import matplotlib.backends.backend_agg as agg
-import pylab
 import model
 
 matplotlib.use("Agg")
 
-pygame.init()
-size = (320*2, 160*4)
-pygame.display.set_caption("self driving data viewer")
-screen = pygame.display.set_mode(size, pygame.DOUBLEBUF)
-screen.set_alpha(None)
 
-camera_surface = pygame.surface.Surface((640,480),0,24).convert()
-clock = pygame.time.Clock()
 
 # ***** get perspective transform for images *****
 from skimage import transform as tf
@@ -116,6 +105,12 @@ def preprocess_img(img):
 # ***** main loop *****
 if __name__ == "__main__":
 
+    windowName = "car detection"
+    cv2.namedWindow(windowName, cv2.WINDOW_NORMAL)
+    cv2.resizeWindow(windowName, 640, 480)
+    cv2.moveWindow(windowName, 0, 0)
+    cv2.setWindowTitle(windowName, "car detection")
+
     parser = argparse.ArgumentParser(description='Path viewer')
     parser.add_argument('--model', type=str, help='path to the trained model')
     parser.add_argument('--dataset', type=str, help='dataset folder with csv and image folders')
@@ -134,23 +129,6 @@ if __name__ == "__main__":
     # read the steering labels and image path
     df_truth = pd.read_csv(steering_labels, usecols=['frame_id', 'steering_angle'], index_col=None)
 
-    # Create second screen with matplotlib
-    fig = pylab.figure(figsize=[6.4, 1.6], dpi=100)
-    ax = fig.gca()
-    ax.tick_params(axis='x', labelsize=8)
-    ax.tick_params(axis='y', labelsize=8)
-    # ax.legend(loc='upper left',fontsize=8)
-    line1, = ax.plot([], [], 'b.-', label='Human')
-    line2, = ax.plot([], [], 'r.-', label='Model')
-    A = []
-    B = []
-    ax.legend(loc='upper left', fontsize=8)
-
-    red = (255, 0, 0)
-    blue = (0, 0, 255)
-    myFont = pygame.font.SysFont("monospace", 18)
-    randNumLabel = myFont.render('Human Steer Angle:', 1, blue)
-    randNumLabel2 = myFont.render('Model Steer Angle:', 1, red)
     speed_ms = 5  # log['speed'][i]
 
     # Run through all images
@@ -173,32 +151,13 @@ if __name__ == "__main__":
         draw_path_on(img, speed_ms, actual_steers / 5.0)
         draw_path_on(img, speed_ms, predicted_steers / 5.0, (255, 0, 0))
 
-        A.append(df_truth['steering_angle'].loc[i])
-        B.append(predicted_steers)
-        line1.set_ydata(A)
-        line1.set_xdata(range(len(A)))
-        line2.set_ydata(B)
-        line2.set_xdata(range(len(B)))
-        ax.relim()
         ax.autoscale_view()
 
-        canvas = agg.FigureCanvasAgg(fig)
-        canvas.draw()
-        renderer = canvas.get_renderer()
-        raw_data = renderer.tostring_rgb()
-        size = canvas.get_width_height()
-        surf = pygame.image.fromstring(raw_data, size, "RGB")
-        screen.blit(surf, (0, 480))
 
-        # draw on
-        pygame.surfarray.blit_array(camera_surface, img.swapaxes(0, 1))
-        screen.blit(camera_surface, (0, 0))
+        displayBuf = img
 
-        diceDisplay = myFont.render(str(actual_steers * (180 / np.pi)), 1, blue)
-        diceDisplay2 = myFont.render(str(predicted_steers * (180 / np.pi)), 1, red)
-        screen.blit(randNumLabel, (50, 420))
-        screen.blit(randNumLabel2, (400, 420))
-        screen.blit(diceDisplay, (50, 450))
-        screen.blit(diceDisplay2, (400, 450))
-        clock.tick(60)
-        pygame.display.flip()
+            # show the stuff
+            # ----------------------------------------------------
+        cv2.imshow(windowName, displayBuf)
+
+

@@ -13,7 +13,7 @@ import numpy as np
 from path_planning.gps import GPS 
 from path_planning.global_path import GlobalPathPlanner
 
-l = -20
+l = 30
 
 
 def get_destination():
@@ -27,7 +27,7 @@ if __name__ == '__main__':
     # initiate all detectors
     vehicle_detector = VehicleDetector()
     steering_predictor = SteeringPredictor()
-    motor_controller = MC(1)
+    motor_controller = MC()
     
     # initiate path planner, including GPS and Google Maps API
     #gps = GPS()
@@ -67,7 +67,7 @@ if __name__ == '__main__':
             angle, steering_img = steering_predictor.predict_steering(image)
             motor_controller.turn(l * angle)
             print('turning ' + str(l * angle))
-            time.sleep(0.5) 
+            time.sleep(0.2) 
             #print(motor_controller.pos()) 
             #detection_img = cv2.resize(detection_img, (640, 480))
             vidBuf = np.concatenate((steering_img, steering_img), axis=1)
