@@ -8,7 +8,7 @@ from keras.optimizers import Adam
 import keras as K
 import configs as configs
 
-def nvidia_network():
+def nvidia_model():
     
     model = Sequential()
 
@@ -37,7 +37,7 @@ def nvidia_network():
     print('Model is created and compiled..')
     return model
 
-def small_vgg_network():
+def small_vgg_model():
 
     model = Sequential()
     model.add(Conv2D(32, (3, 3), activation='relu', padding='same', input_shape=(configs.image_height, configs.image_width, 3)))

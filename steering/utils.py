@@ -158,9 +158,9 @@ def preprocess_dataset(dir1, dir2, dir3):
     data2 = pd.read_csv(dir2 + "interpolated.csv").values
     data3 = pd.read_csv(dir3 + "center_interpolated.csv").values
 
-    for i in range(0, len(data3)):
-        data3[i][5] = dir3 + data3[i][5]
-    print("dataset 3 processing completed")
+    # for i in range(0, len(data3)):
+    #     data3[i][5] = dir3 + data3[i][5]
+    # print("dataset 3 processing completed")
 
     print("begin processing dataset 1")
     labels1 = np.array([data1[1]])
@@ -183,7 +183,7 @@ def preprocess_dataset(dir1, dir2, dir3):
             labels2 = np.concatenate((labels2, item), axis=0)
 
     print("dataset 2 processing completed")
-    return np.concatenate((labels1, labels2, data3), axis=0)
+    return np.concatenate((labels1, labels2), axis=0)
 
 
 def batch_generator(data, batch_size, is_training):
