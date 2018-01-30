@@ -1,10 +1,10 @@
 import cv2, os
 import numpy as np
 import pandas as pd
+import configs as configs
 
 
-IMAGE_HEIGHT, IMAGE_WIDTH, IMAGE_CHANNELS = 160, 320, 3
-INPUT_SHAPE = (IMAGE_HEIGHT, IMAGE_WIDTH, IMAGE_CHANNELS)
+INPUT_SHAPE = (configs.image_height, configs.image_width, 3)
 
 # --------------HELPER-METHODS-------------- #
 
@@ -13,7 +13,7 @@ def resize(image):
     """
     Resize the image to the input shape used by the network model
     """
-    return cv2.resize(image, (IMAGE_WIDTH, IMAGE_HEIGHT), cv2.INTER_AREA)
+    return cv2.resize(image, (configs.image_width, configs.image_height), cv2.INTER_AREA)
 
 
 def rgb2yuv(image):
@@ -32,19 +32,6 @@ def preprocess(image):
     # image = cv2.resize(image, (256, 256))
     # image = rgb2yuv(image)
     return image
-
-
-# def choose_image(data_dir, center, left, right, steering_angle):
-#     """
-#     Randomly choose an image from the center, left or right, and adjust
-#     the steering angle.
-#     """
-#     choice = np.random.choice(3)
-#     if choice == 0:
-#         return load_image(data_dir, left), steering_angle + 0.2
-#     elif choice == 1:
-#         return load_image(data_dir, right), steering_angle - 0.2
-#     return load_image(data_dir, center), steering_angle
 
 
 def random_flip(image, steering_angle):
@@ -68,12 +55,14 @@ def load_image(image_file):
     Load RGB images from a file
     """
     img = cv2.imread(image_file)
+    # removed the cropping part
     img = img[160:480, 0:640]
-    img = cv2.resize(img, (320, 160))
+    img = cv2.resize(img, (configs.image_width, configs.image_height))
     return bgr_rgb(img)
 
 
 def rotate(img):
+
     row, col, channel = img.shape
     angle = np.random.uniform(-15, 15)
     rotation_point = (row / 2, col / 2)
@@ -94,9 +83,9 @@ def random_shadow(image):
     """
     # (x1, y1) and (x2, y2) forms a line
     # xm, ym gives all the locations of the image
-    x1, y1 = IMAGE_WIDTH * np.random.rand(), 0
-    x2, y2 = IMAGE_WIDTH * np.random.rand(), IMAGE_HEIGHT
-    xm, ym = np.mgrid[0:IMAGE_HEIGHT, 0:IMAGE_WIDTH]
+    x1, y1 = configs.image_width * np.random.rand(), 0
+    x2, y2 = configs.image_width * np.random.rand(), configs.image_height
+    xm, ym = np.mgrid[0:configs.image_height, 0:configs.image_width]
 
     # mathematically speaking, we want to set 1 below the line and zero otherwise
     # Our coordinate is up side down.  So, the above the line:
@@ -149,7 +138,7 @@ def augument(img_path, steering_angle):
 
     a = np.random.randint(0, 3, [1, 5]).astype('bool')[0]
     if a[0] == 1:
-        image = random_shadow(image)
+        image = image ## no random shadow
     if a[1] == 1:
         image = blur(image)
     if a[2] == 1:
@@ -163,10 +152,15 @@ def augument(img_path, steering_angle):
 # --------------MAIN-METHODS-------------- #
 
 
-def preprocess_dataset(dir1, dir2):
+def preprocess_dataset(dir1, dir2, dir3):
 
     data1 = pd.read_csv(dir1 + "interpolated.csv").values
     data2 = pd.read_csv(dir2 + "interpolated.csv").values
+    data3 = pd.read_csv(dir3 + "center_interpolated.csv").values
+
+    # for i in range(0, len(data3)):
+    #     data3[i][5] = dir3 + data3[i][5]
+    # print("dataset 3 processing completed")
 
     print("begin processing dataset 1")
     labels1 = np.array([data1[1]])
@@ -196,7 +190,7 @@ def batch_generator(data, batch_size, is_training):
     """
     Generate training image give image paths and associated steering angles
     """
-    images = np.empty([batch_size, IMAGE_HEIGHT, IMAGE_WIDTH, IMAGE_CHANNELS])
+    images = np.empty([batch_size, configs.image_height, configs.image_width, 3])
     steers = np.empty(batch_size)
 
     while True:
@@ -224,7 +218,7 @@ def validation_generator(dir, data, batch_size):
     """
     Generate training image give image paths and associated steering angles
     """
-    images = np.empty([batch_size, IMAGE_HEIGHT, IMAGE_WIDTH, IMAGE_CHANNELS])
+    images = np.empty([batch_size, configs.image_height, configs.image_width, 3])
     steers = np.empty(batch_size)
 
     while True:

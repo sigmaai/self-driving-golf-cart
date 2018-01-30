@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-import configs
+import cruse.configs as configs
 import os
 import pandas as pd
 
@@ -25,15 +25,33 @@ def random_flip(image, steering_angle):
     return image, steering_angle
 
 
-def preprocess_dataset(dir1, dir2):
+def check_dataset(ds=None):
+
+    # parameter: np array with the training labels
+    # return:    if the dataset has an error
+    for i in range(0, len(ds)):
+        image_path = str(ds[i][5])
+        if os.path.isfile(image_path) == False:
+            print(image_path)
+
+
+def preprocess_dataset(dir1="", dir2="", dir3=""):
+
+    # Parameters: path to three directories
+    # return:     a np array with all the labels
 
     data1 = pd.read_csv(dir1 + "interpolated.csv").values
     data2 = pd.read_csv(dir2 + "interpolated.csv").values
+    data3 = pd.read_csv(dir3 + "center_interpolated.csv").values
+
+    for i in range(0, len(data3)):
+        data3[i][5] = dir3 + data3[i][5]
+    print("dataset 3 processing completed")
 
     print("begin processing dataset 1")
-    labels1 = np.array([data1[1]])
+    labels1 = np.array([data1[2]])
     labels1[0][5] = dir1 + labels1[0][5]
-    for i in range(0, len(data1)):
+    for i in range(2, len(data1)):
         if data1[i][4] == "center_camera":
             item = np.array([data1[i]])
             item[0][5] = dir1 + item[0][5]
@@ -50,8 +68,7 @@ def preprocess_dataset(dir1, dir2):
             item[0][5] = dir2 + item[0][5]
             labels2 = np.concatenate((labels2, item), axis=0)
 
-    print("dataset 2 processing completed")
-    return np.concatenate((labels1, labels2), axis=0)
+    return np.concatenate((labels1, labels2, data3), axis=0)
 
 
 def preprocess_visualization(dir):
@@ -195,9 +212,9 @@ def batch_generator(data, batch_size, ds_type, augmentation=False, temporal=Fals
                 throttle = data[index][0]
                 # argumentation
                 if augmentation and np.random.rand() < 0.6:
-                    image = augument(configs.data_path + image_path + ".jpeg")
+                    image = augument(image_path + ".jpeg")
                 else:
-                    image = load_image(configs.data_path + image_path + ".jpeg")
+                    image = load_image(image_path + ".jpeg")
                     # add the image and steering angle to the batch
 
             images[i] = image

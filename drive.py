@@ -1,47 +1,62 @@
 #
+# ------------- AGC ----------------------------
 # Drive.py | Created by Neil Nie & Michael Meng
 # Main file of the self driving car
 # (c) Neil Nie 2017, Please refer to the license
+# ----------------------------------------------
 #
+
+
 import time
+import os
 from steering.steering_predictor import SteeringPredictor
 from steering.mc import MC
 from detection.vehicle.vehicle_detector import VehicleDetector
 # from road_segmentation.road_segmentationroad_segmentor import RoadSegmentor
 import cv2
 import numpy as np
+import configs.configs as configs
 from path_planning.gps import GPS 
 from path_planning.global_path import GlobalPathPlanner
 
-l = 30
+l = 20
 
 
 def get_destination():
-
     var = input("Please enter your destination:")
     return str(var)
 
 
+def get_serial_port():
+    var = input("Please enter serial port number")
+    return int(var)
+
+
 if __name__ == '__main__':
 
-    # initiate all detectors
+    # initialize steering motor controller ------------------
     vehicle_detector = VehicleDetector()
     steering_predictor = SteeringPredictor()
-    motor_controller = MC()
-    
+    if configs.default_st_port:
+        mc = MC()
+    else:
+        os.system("ls /dev/ttyUSB*")
+        st_port = get_serial_port()
+        mc = MC(st_port)
+
+
     # initiate path planner, including GPS and Google Maps API
-    #gps = GPS()
-    #start = gps.query_gps_location()
-    #destination = get_destination()
-    #gp_planner = GlobalPathPlanner()
-    #directions = gp_planner.direction(start, destination)
-    #print(directions)
-    
+    if configs.navigation:
+        gps = GPS()
+        start = gps.query_gps_location()
+        destination = get_destination()
+        gp_planner = GlobalPathPlanner()
+        directions = gp_planner.direction(start, destination)
+        print(directions)
 
     # OpenCV main loop
-    
-    
-    cap = cv2.VideoCapture("nvcamerasrc ! video/x-raw(memory:NVMM), width=(int)640, height=(int)480,format=(string)I420, framerate=(fraction)1/1 ! nvvidconv flip-method=0 ! video/x-raw, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! appsink")
+
+    cap = cv2.VideoCapture("nvcamerasrc ! video/x-raw(memory:NVMM), width=(int)640, height=(int)480,format=(string)I420, framerate=(fraction)1/1 ! nvvidconv flip-method=2 ! video/x-raw, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! appsink")
 
     if cap.isOpened():
 
@@ -60,17 +75,20 @@ if __name__ == '__main__':
             ret_val, image = cap.read()
 
             # -----------------------------------------------------
-            # run detecion network
+            # run detection network
             # no image preprocessing required for any detector
-            # detection_img, out_boxes, out_scores, out_classes = vehicle_detector.detect_vechicle(image)
+            if configs.detection:
+                detection_img, out_boxes, out_scores, out_classes = vehicle_detector.detect_vechicle(image)
             
             angle, steering_img = steering_predictor.predict_steering(image)
-            motor_controller.turn(l * angle)
-            print('turning ' + str(l * angle))
-            time.sleep(0.2) 
-            #print(motor_controller.pos()) 
-            #detection_img = cv2.resize(detection_img, (640, 480))
-            vidBuf = np.concatenate((steering_img, steering_img), axis=1)
+            mc.turn(configs.st_fac * angle)
+
+            if configs.detection:
+                detection_img = cv2.resize(detection_img, (640, 480))
+                vidBuf = np.concatenate((steering_img, detection_img), axis=1)
+            else:
+                vidBuf = np.concatenate((steering_img, steering_img), axis=1)
+
             displayBuf = vidBuf
 
             # show the stuff
@@ -80,8 +98,8 @@ if __name__ == '__main__':
             key = cv2.waitKey(10)
             if key == 27:  # ESC key
                 cv2.destroyAllWindows()
+                print("Thank you! Program ended.")
                 break
-
 
     else:
         print("Fatal error, camera is not open")

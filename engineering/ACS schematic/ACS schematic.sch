@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.5.2">
+<eagle version="8.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -1395,6 +1395,150 @@ Datasheet</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="pot-vitrohm" urn="urn:adsk.eagle:library:329">
+<description>&lt;b&gt;Vitrohm Potentiometers&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="PC25" urn="urn:adsk.eagle:footprint:22615/1" library_version="1">
+<description>&lt;b&gt;VITROHM POTENTIOMETER&lt;/b&gt;</description>
+<wire x1="-1.9" y1="-1.9" x2="-1.6" y2="-1.9" width="0.2032" layer="51"/>
+<wire x1="-1.1" y1="-1.9" x2="-0.25" y2="-1.9" width="0.2032" layer="51"/>
+<wire x1="0.25" y1="-1.9" x2="1.1" y2="-1.9" width="0.2032" layer="51"/>
+<wire x1="1.6" y1="-1.9" x2="1.9" y2="-1.9" width="0.2032" layer="51"/>
+<wire x1="1.9" y1="-1.9" x2="1.9" y2="1.4" width="0.2032" layer="21"/>
+<wire x1="1.4" y1="1.9" x2="-1.4" y2="1.9" width="0.2032" layer="51"/>
+<wire x1="-1.9" y1="1.4" x2="-1.9" y2="-1.9" width="0.2032" layer="21"/>
+<wire x1="-1.6" y1="-2.4" x2="-1.1" y2="-2.4" width="0.2032" layer="51"/>
+<wire x1="-0.25" y1="-2.4" x2="0.25" y2="-2.4" width="0.2032" layer="51"/>
+<wire x1="1.1" y1="-2.4" x2="1.6" y2="-2.4" width="0.2032" layer="51"/>
+<wire x1="-1.6" y1="-1.9" x2="-1.6" y2="-2.4" width="0.2032" layer="51"/>
+<wire x1="-1.1" y1="-1.9" x2="-1.1" y2="-2.4" width="0.2032" layer="51"/>
+<wire x1="-0.25" y1="-1.9" x2="-0.25" y2="-2.4" width="0.2032" layer="51"/>
+<wire x1="0.25" y1="-1.9" x2="0.25" y2="-2.4" width="0.2032" layer="51"/>
+<wire x1="1.1" y1="-1.9" x2="1.1" y2="-2.4" width="0.2032" layer="51"/>
+<wire x1="1.6" y1="-1.9" x2="1.6" y2="-2.4" width="0.2032" layer="51"/>
+<wire x1="-1.4" y1="1.9" x2="-1.9" y2="1.4" width="0.2032" layer="21"/>
+<wire x1="1.4" y1="1.9" x2="1.9" y2="1.4" width="0.2032" layer="21"/>
+<wire x1="-1.3" y1="-0.6" x2="1.3" y2="0.6" width="0.2032" layer="21"/>
+<wire x1="-1" y1="1.1" x2="1" y2="1.1" width="0.2032" layer="51" curve="-84.547378"/>
+<wire x1="-1" y1="-1.1" x2="1" y2="-1.1" width="0.2032" layer="51" curve="84.547378"/>
+<wire x1="-1" y1="1.1" x2="-1" y2="-1.1" width="0.2032" layer="21" curve="95.452622"/>
+<wire x1="1" y1="-1.1" x2="1" y2="1.1" width="0.2032" layer="21" curve="95.452622"/>
+<smd name="A" x="-1.35" y="-1.9" dx="0.9" dy="1.4" layer="1"/>
+<smd name="S" x="0" y="-1.9" dx="0.9" dy="1.4" layer="1"/>
+<smd name="E" x="1.35" y="-1.9" dx="0.9" dy="1.4" layer="1"/>
+<smd name="4" x="0" y="1.65" dx="2.2" dy="0.8" layer="1"/>
+<text x="-2.54" y="2.54" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.54" y="-4.445" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+</packages>
+<packages3d>
+<package3d name="PC25" urn="urn:adsk.eagle:package:22616/1" type="box" library_version="1">
+<description>VITROHM POTENTIOMETER</description>
+</package3d>
+</packages3d>
+<symbols>
+<symbol name="POT_EU" urn="urn:adsk.eagle:symbol:22614/1" library_version="1">
+<wire x1="-0.762" y1="2.54" x2="-0.762" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0.762" y1="-2.54" x2="0.762" y2="2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="0" x2="1.651" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.651" y1="0" x2="-1.8796" y2="1.7526" width="0.1524" layer="94"/>
+<wire x1="0.762" y1="2.54" x2="-0.762" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-0.762" y1="-2.54" x2="0.762" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-2.1597" y1="1.2939" x2="-3.1989" y2="2.4495" width="0.1524" layer="94"/>
+<wire x1="-3.1989" y1="2.4495" x2="-1.7018" y2="2.2352" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-0.508" x2="-3.048" y2="-1.524" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-0.508" x2="-2.032" y2="-1.524" width="0.1524" layer="94"/>
+<wire x1="-2.1597" y1="1.2939" x2="-1.7018" y2="2.2352" width="0.1524" layer="94"/>
+<text x="-5.969" y="-3.81" size="1.778" layer="95" rot="R90">&gt;NAME</text>
+<text x="-3.81" y="-3.81" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="A" x="0" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+<pin name="E" x="0" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
+<pin name="S" x="5.08" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="PC25" urn="urn:adsk.eagle:component:22617/1" prefix="R" uservalue="yes" library_version="1">
+<description>&lt;b&gt;VITROHM POTENTIOMETER&lt;/b&gt;</description>
+<gates>
+<gate name="G" symbol="POT_EU" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="PC25">
+<connects>
+<connect gate="G" pin="A" pad="A"/>
+<connect gate="G" pin="E" pad="E"/>
+<connect gate="G" pin="S" pad="S"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:22616/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="MF" value="CLAROSTAT" constant="no"/>
+<attribute name="MPN" value="308NPC25KS" constant="no"/>
+<attribute name="OC_FARNELL" value="1440998" constant="no"/>
+<attribute name="OC_NEWARK" value="03F7518" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="supply1" urn="urn:adsk.eagle:library:371">
+<description>&lt;b&gt;Supply Symbols&lt;/b&gt;&lt;p&gt;
+ GND, VCC, 0V, +5V, -5V, etc.&lt;p&gt;
+ Please keep in mind, that these devices are necessary for the
+ automatic wiring of the supply signals.&lt;p&gt;
+ The pin name defined in the symbol is identical to the net which is to be wired automatically.&lt;p&gt;
+ In this library the device names are the same as the pin names of the symbols, therefore the correct signal names appear next to the supply symbols in the schematic.&lt;p&gt;
+ &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+</packages>
+<symbols>
+<symbol name="GND" urn="urn:adsk.eagle:symbol:26925/1" library_version="1">
+<wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
+<text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
+</symbol>
+<symbol name="VCC" urn="urn:adsk.eagle:symbol:26928/1" library_version="1">
+<wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-1.27" y2="-1.905" width="0.254" layer="94"/>
+<text x="-2.54" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="VCC" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="GND" urn="urn:adsk.eagle:component:26954/1" prefix="GND" library_version="1">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="1" symbol="GND" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="VCC" urn="urn:adsk.eagle:component:26957/1" prefix="P+" library_version="1">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="VCC" symbol="VCC" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1413,13 +1557,18 @@ Datasheet</description>
 <part name="GND1" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="S1" library="SparkFun-Switches" library_urn="urn:adsk.eagle:library:535" deviceset="SWITCH-SPDT" device="-PTH-11.6X4.0MM" package3d_urn="urn:adsk.eagle:package:40177/1"/>
 <part name="S2" library="SparkFun-Switches" library_urn="urn:adsk.eagle:library:535" deviceset="SWITCH-SPDT" device="-PTH-11.6X4.0MM" package3d_urn="urn:adsk.eagle:package:40177/1"/>
+<part name="R1" library="pot-vitrohm" library_urn="urn:adsk.eagle:library:329" deviceset="PC25" device="" package3d_urn="urn:adsk.eagle:package:22616/1"/>
+<part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 <text x="68.58" y="15.24" size="1.778" layer="91">MCP41010</text>
 <text x="30.48" y="10.16" size="1.778" layer="91">MC</text>
-<text x="30.48" y="0" size="1.778" layer="91">MC</text>
+<text x="30.48" y="-2.54" size="1.778" layer="91">MC</text>
+<text x="-53.34" y="-15.24" size="1.778" layer="91">Autonomous Cruse Control Schematic</text>
+<text x="-53.34" y="-22.86" size="1.778" layer="91">Neil Nie, Jan 25, 2018</text>
 </plain>
 <instances>
 <instance part="B1" gate="G$1" x="27.94" y="48.26"/>
@@ -1428,8 +1577,11 @@ Datasheet</description>
 </instance>
 <instance part="SUPPLY1" gate="G$1" x="7.62" y="40.64"/>
 <instance part="GND1" gate="1" x="7.62" y="27.94"/>
-<instance part="S1" gate="1" x="50.8" y="2.54" rot="R180"/>
-<instance part="S2" gate="1" x="50.8" y="12.7" rot="R180"/>
+<instance part="S1" gate="1" x="50.8" y="0" rot="R180"/>
+<instance part="S2" gate="1" x="53.34" y="12.7" rot="R180"/>
+<instance part="R1" gate="G" x="20.32" y="5.08"/>
+<instance part="GND2" gate="1" x="20.32" y="-7.62"/>
+<instance part="P+1" gate="VCC" x="20.32" y="15.24" rot="MR0"/>
 </instances>
 <busses>
 </busses>
@@ -1469,6 +1621,11 @@ Datasheet</description>
 <wire x1="10.16" y1="38.1" x2="10.16" y2="71.12" width="0.1524" layer="91"/>
 <label x="27.94" y="71.12" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="R1" gate="G" pin="E"/>
+<pinref part="P+1" gate="VCC" pin="VCC"/>
+<wire x1="20.32" y1="10.16" x2="20.32" y2="12.7" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="GND" class="0">
 <segment>
@@ -1484,49 +1641,41 @@ Datasheet</description>
 <wire x1="55.88" y1="43.18" x2="55.88" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="B1" gate="G$1" pin="GND@0"/>
 <wire x1="15.24" y1="25.4" x2="15.24" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="15.24" y1="20.32" x2="55.88" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="15.24" y1="20.32" x2="43.18" y2="20.32" width="0.1524" layer="91"/>
 <junction x="55.88" y="20.32"/>
 <pinref part="MCP41010" gate="G$1" pin="GND"/>
+<wire x1="43.18" y1="20.32" x2="55.88" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="17.78" x2="60.96" y2="17.78" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="17.78" x2="60.96" y2="20.32" width="0.1524" layer="91"/>
 <junction x="60.96" y="20.32"/>
 <pinref part="MCP41010" gate="G$1" pin="B1"/>
 <wire x1="63.5" y1="43.18" x2="55.88" y2="43.18" width="0.1524" layer="91"/>
 <label x="60.96" y="15.24" size="1.778" layer="95"/>
+<pinref part="S1" gate="1" pin="S"/>
+<wire x1="45.72" y1="2.54" x2="43.18" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="2.54" x2="43.18" y2="20.32" width="0.1524" layer="91"/>
+<junction x="43.18" y="20.32"/>
+</segment>
+<segment>
+<pinref part="R1" gate="G" pin="A"/>
+<pinref part="GND2" gate="1" pin="GND"/>
+<wire x1="20.32" y1="0" x2="20.32" y2="-2.54" width="0.1524" layer="91"/>
+<pinref part="S1" gate="1" pin="O"/>
+<wire x1="20.32" y1="-2.54" x2="20.32" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="-2.54" x2="20.32" y2="-2.54" width="0.1524" layer="91"/>
+<junction x="20.32" y="-2.54"/>
 </segment>
 </net>
 <net name="W0" class="0">
 <segment>
-<pinref part="S2" gate="1" pin="P"/>
-<wire x1="53.34" y1="12.7" x2="58.42" y2="12.7" width="0.1524" layer="91"/>
 <pinref part="MCP41010" gate="G$1" pin="W0"/>
-<wire x1="63.5" y1="55.88" x2="58.42" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="55.88" x2="58.42" y2="12.7" width="0.1524" layer="91"/>
-<label x="55.88" y="12.7" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="W1" class="0">
-<segment>
-<pinref part="S1" gate="1" pin="P"/>
-<pinref part="MCP41010" gate="G$1" pin="W1"/>
-<wire x1="53.34" y1="45.72" x2="53.34" y2="2.54" width="0.1524" layer="91"/>
-<wire x1="63.5" y1="45.72" x2="53.34" y2="45.72" width="0.1524" layer="91"/>
-<label x="53.34" y="5.08" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$7" class="0">
-<segment>
-<pinref part="B1" gate="G$1" pin="D2"/>
-<wire x1="40.64" y1="58.42" x2="45.72" y2="58.42" width="0.1524" layer="91"/>
 <pinref part="S2" gate="1" pin="S"/>
-<wire x1="45.72" y1="58.42" x2="45.72" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="15.24" x2="48.26" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="55.88" x2="63.5" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$9" class="0">
 <segment>
-<pinref part="S1" gate="1" pin="S"/>
-<wire x1="45.72" y1="5.08" x2="43.18" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="5.08" x2="43.18" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="B1" gate="G$1" pin="*D3"/>
 <wire x1="43.18" y1="55.88" x2="40.64" y2="55.88" width="0.1524" layer="91"/>
 </segment>
@@ -1534,13 +1683,10 @@ Datasheet</description>
 <net name="N$10" class="0">
 <segment>
 <pinref part="S2" gate="1" pin="O"/>
-<wire x1="45.72" y1="10.16" x2="35.56" y2="10.16" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$11" class="0">
-<segment>
-<pinref part="S1" gate="1" pin="O"/>
-<wire x1="45.72" y1="0" x2="35.56" y2="0" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="10.16" x2="30.48" y2="10.16" width="0.1524" layer="91"/>
+<pinref part="R1" gate="G" pin="S"/>
+<wire x1="25.4" y1="5.08" x2="30.48" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="5.08" x2="30.48" y2="10.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -1555,6 +1701,32 @@ Datasheet</description>
 <pinref part="MCP41010" gate="G$1" pin="DO"/>
 <pinref part="B1" gate="G$1" pin="D12"/>
 <wire x1="63.5" y1="33.02" x2="40.64" y2="33.02" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<wire x1="177.8" y1="99.06" x2="177.8" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="177.8" y1="93.98" x2="177.8" y2="-27.94" width="0.1524" layer="91"/>
+<wire x1="-55.88" y1="-27.94" x2="-55.88" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="-55.88" y1="-27.94" x2="177.8" y2="-27.94" width="0.1524" layer="91"/>
+<wire x1="-55.88" y1="101.6" x2="177.8" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="177.8" y1="101.6" x2="177.8" y2="99.06" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="MC" class="0">
+<segment>
+<pinref part="S2" gate="1" pin="P"/>
+<wire x1="55.88" y1="12.7" x2="60.96" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="12.7" x2="60.96" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="7.62" x2="66.04" y2="7.62" width="0.1524" layer="91"/>
+<label x="66.04" y="7.62" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="MC_GND" class="0">
+<segment>
+<pinref part="S1" gate="1" pin="P"/>
+<wire x1="53.34" y1="0" x2="60.96" y2="0" width="0.1524" layer="91"/>
+<label x="60.96" y="0" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 </nets>
