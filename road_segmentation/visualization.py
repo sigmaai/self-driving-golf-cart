@@ -55,9 +55,10 @@ def test_video_stream():
         im_mask = model.predict(np.array([image]))[0][:, :, 1]
         im_mask = np.array(255 * im_mask, dtype=np.uint8)
         im_mask = cv2.cvtColor(im_mask, cv2.COLOR_GRAY2RGB)
-        im_mask[:, :, 1:3] = 0 * im_mask[:, :, 1:2]
+        ret, mask = cv2.threshold(im_mask, 100, 255, cv2.THRESH_BINARY)
+        mask[:, :, 1:3] = 0 * mask[:, :, 1:3]
 
-        img_pred = cv2.addWeighted(im_mask, 1.0, image, 1.0, 0)
+        img_pred = cv2.addWeighted(mask, 1.0, image, 1.0, 0)
 
         # show it in pygame
         # -----------------

@@ -12,7 +12,7 @@ import os
 from steering.steering_predictor import SteeringPredictor
 from steering.mc import MC
 from detection.vehicle.vehicle_detector import VehicleDetector
-# from road_segmentation.road_segmentationroad_segmentor import RoadSegmentor
+from road_segmentation.road_segmentor import Segmentor
 import cv2
 import numpy as np
 import configs.configs as configs
@@ -35,6 +35,7 @@ def get_serial_port():
 if __name__ == '__main__':
 
     # initialize steering motor controller ------------------
+    segmentor = Segmentor("SGN")
     vehicle_detector = VehicleDetector()
     steering_predictor = SteeringPredictor()
     if configs.default_st_port:
@@ -62,7 +63,7 @@ if __name__ == '__main__':
 
         windowName = "car detection"
         cv2.namedWindow(windowName, cv2.WINDOW_NORMAL)
-        cv2.resizeWindow(windowName, 1280, 480)
+        cv2.resizeWindow(windowName, 1280, 960)
         cv2.moveWindow(windowName, 0, 0)
         cv2.setWindowTitle(windowName, "car detection")
 
@@ -85,16 +86,22 @@ if __name__ == '__main__':
 
             if configs.detection:
                 detection_img = cv2.resize(detection_img, (640, 480))
-                vidBuf = np.concatenate((steering_img, detection_img), axis=1)
+                buff1 = np.concatenate((steering_img, detection_img), axis=1)
             else:
-                vidBuf = np.concatenate((steering_img, steering_img), axis=1)
+                buff1 = np.concatenate((steering_img, steering_img), axis=1)
 
-            displayBuf = vidBuf
+            if configs.segmentation:
+                segment_result = segmentor.segment_road(image)
+                buff2 = np.concatenate((segment_result, segment_result))
+            else:
+                buff2 = np.concatenate((steering_img, steering_img))
+
+            vidBuf = np.concatenate((buff1, buff2), axis=0)
 
             # show the stuff
             # -----------------------------------------------------
 
-            cv2.imshow(windowName, displayBuf)
+            cv2.imshow(windowName, vidBuf)
             key = cv2.waitKey(10)
             if key == 27:  # ESC key
                 cv2.destroyAllWindows()
