@@ -6,7 +6,7 @@ from keras.layers import Input, Lambda, Dropout, ELU
 from keras.layers.normalization import BatchNormalization
 from keras.optimizers import Adam
 import keras as K
-import steering.configs as configs
+import configs as configs
 
 def nvidia_network():
     

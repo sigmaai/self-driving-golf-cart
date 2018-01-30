@@ -1,5 +1,5 @@
 # ALVNS
-Autonomous Land Vehicle Navigation System. Neil Nie & Michael Meng, 2017 
+Autonomous Land Vehicle Navigation System. Neil Nie & Michael Meng, 2017 ![](./media/IMG-7370.JPG)
 
 ## Introduction
 We wanted to build a self driving car. We didn't build an actual car, but we built a golf cart, and wrote a system that can work on a real car as well. 

@@ -6,10 +6,10 @@ val_dir = "/Volumes/Personal_Drive/Datasets/udacity-driving/validation/"
 
 
 # TRAINING
-image_width = 320
-image_height = 160
+image_width = 640
+image_height = 480
 load_weights = True
-model_path = "/Users/yongyangnie/Developer/ALVNS/steering/trained-cai-v7.h5"
+model_path = "/Users/yongyangnie/Developer/ALVNS/steering/trained-nvd-v2.1.h5"
 
 BLACK = (  0,   0,   0)
 WHITE = (255, 255, 255)

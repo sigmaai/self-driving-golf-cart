@@ -21,12 +21,13 @@ model_path = args.model
 output_path = args.output_path
 
 print("Loading model...")
-model = model.commaai_model()
+model = model.nvidia_network()
 model.load_weights(model_path)
 
 print("loading dataset")
 df_imgs = pd.read_csv(data_path + "/interpolated.csv")
 
+print("predicting")
 predictions = np.empty(len(df_imgs))
 for i in range(len(df_imgs)):
 
@@ -41,5 +42,4 @@ for i in range(len(df_imgs)):
 print("Writing predictions...")
 pd.DataFrame({"frame_id": df_imgs["frame_id"], "steering_angle": predictions}).to_csv(output_path, index=False,
                                                                                       header=True)
-
 print("Done!")

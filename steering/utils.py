@@ -1,7 +1,7 @@
 import cv2, os
 import numpy as np
 import pandas as pd
-import steering.configs as configs
+import configs as configs
 
 
 INPUT_SHAPE = (configs.image_height, configs.image_width, 3)
