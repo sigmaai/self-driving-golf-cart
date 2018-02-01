@@ -94,12 +94,6 @@ def segnet(nb_classes, optimizer=Adam(lr=0.001, epsilon=1e-08, decay=0.0), input
     model.add(BatchNormalization())
 
     model.add(Convolution2D(nb_classes, (1, 1), activation='sigmoid'))
-    # model.outputHeight = model.output_shape[-2]
-    # model.outputWidth = model.output_shape[-1]
-    # model.add(Reshape((model.output_shape[-3] * model.output_shape[-2], nb_classes),
-    #                   input_shape=(model.output_shape[-3], model.output_shape[-2], nb_classes)))
-    # model.add(Permute((2, 1)))
-    # model.add(Activation('softmax'))
 
     model.compile(loss="categorical_crossentropy", optimizer=optimizer, metrics=['accuracy'])
 

@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9d6eb70-00d3-4b11-88c3-998eeea85bdb" name="Default" comment="" />
+    <list default="true" id="f9d6eb70-00d3-4b11-88c3-998eeea85bdb" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/road_segmentation/test.py" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/PWMServo/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/PWMServo/example/Makefile" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/PWMServo/example/servoExample" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/PWMServo/example/servoExample.cpp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/PWMServo/src/JHPWMPCA9685.cpp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/PWMServo/src/JHPWMPCA9685.h" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SAFETY.md" afterPath="$PROJECT_DIR$/SAFETY.md" />
+      <change beforePath="$PROJECT_DIR$/detection/vehicle/vehicle_detector.py" afterPath="$PROJECT_DIR$/detection/vehicle/vehicle_detector.py" />
+      <change beforePath="$PROJECT_DIR$/drive.py" afterPath="$PROJECT_DIR$/drive.py" />
+      <change beforePath="$PROJECT_DIR$/result.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/road_segmentation/configs.py" afterPath="$PROJECT_DIR$/road_segmentation/configs.py" />
+      <change beforePath="$PROJECT_DIR$/road_segmentation/model.py" afterPath="$PROJECT_DIR$/road_segmentation/model.py" />
+      <change beforePath="$PROJECT_DIR$/road_segmentation/train.py" afterPath="$PROJECT_DIR$/road_segmentation/train.py" />
+      <change beforePath="$PROJECT_DIR$/steering/steering_predictor.py" afterPath="$PROJECT_DIR$/steering/steering_predictor.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +37,7 @@
     <SUITE FILE_PATH="coverage/ALVNS$ALVNS.coverage" NAME="ALVNS Coverage Results" MODIFIED="1509419520089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/ALVNS$steering_visualizer.coverage" NAME="steering_visualizer Coverage Results" MODIFIED="1511298810784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/steering" />
     <SUITE FILE_PATH="coverage/ALVNS$detection_visualizer.coverage" NAME="detection_visualizer Coverage Results" MODIFIED="1510440451954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vehicle_object_detection" />
-    <SUITE FILE_PATH="coverage/ALVNS$visualization.coverage" NAME="visualization Coverage Results" MODIFIED="1517341378068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/road_segmentation" />
+    <SUITE FILE_PATH="coverage/ALVNS$visualization.coverage" NAME="visualization Coverage Results" MODIFIED="1517433539440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/road_segmentation" />
     <SUITE FILE_PATH="coverage/ALVNS$train__1_.coverage" NAME="train (1) Coverage Results" MODIFIED="1516761468692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cruse" />
     <SUITE FILE_PATH="coverage/ALVNS$jetson_test.coverage" NAME="jetson_test Coverage Results" MODIFIED="1511915937375" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/detection/vehicle/yolo" />
     <SUITE FILE_PATH="coverage/ALVNS$SegNet_Basic.coverage" NAME="SegNet_Basic Coverage Results" MODIFIED="1513730588551" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Keras-SegNet" />
@@ -29,9 +46,9 @@
     <SUITE FILE_PATH="coverage/ALVNS$train__2_.coverage" NAME="train (2) Coverage Results" MODIFIED="1517285243938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/steering" />
     <SUITE FILE_PATH="coverage/ALVNS$lane_detector.coverage" NAME="lane_detector Coverage Results" MODIFIED="1512449114228" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/detection/lane" />
     <SUITE FILE_PATH="coverage/ALVNS$segnet_basic__1_.coverage" NAME="segnet_basic (1) Coverage Results" MODIFIED="1513786339560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/road_segmentation/SegNet" />
-    <SUITE FILE_PATH="coverage/ALVNS$train.coverage" NAME="train Coverage Results" MODIFIED="1513791072744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/road_segmentation" />
+    <SUITE FILE_PATH="coverage/ALVNS$train.coverage" NAME="train Coverage Results" MODIFIED="1517448960687" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/road_segmentation" />
     <SUITE FILE_PATH="coverage/ALVNS$view_steering_model.coverage" NAME="view_steering_model Coverage Results" MODIFIED="1509061317721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/driving-simulator" />
-    <SUITE FILE_PATH="coverage/ALVNS$test.coverage" NAME="test Coverage Results" MODIFIED="1512683735561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/path_planning" />
+    <SUITE FILE_PATH="coverage/ALVNS$test.coverage" NAME="test Coverage Results" MODIFIED="1517449121154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/road_segmentation" />
     <SUITE FILE_PATH="coverage/ALVNS$helper.coverage" NAME="helper Coverage Results" MODIFIED="1510948356687" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/road_segmentation" />
   </component>
   <component name="DatabaseView">
@@ -47,22 +64,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="drive.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="drive.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/drive.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="45" lean-forward="true" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
-              <folding />
+            <state relative-caret-position="570">
+              <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+              <folding>
+                <element signature="e#237#248#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="configs.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/configs/configs.py">
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/road_segmentation/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="370">
+              <caret line="26" column="51" lean-forward="false" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -70,9 +91,31 @@
       <file leaf-file-name="configs.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/road_segmentation/configs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="10" />
+            <state relative-caret-position="195">
+              <caret line="13" column="65" lean-forward="false" selection-start-line="13" selection-start-column="65" selection-end-line="13" selection-end-column="65" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="model.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/road_segmentation/model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1380">
+              <caret line="102" column="13" lean-forward="false" selection-start-line="102" selection-start-column="4" selection-end-line="102" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="train.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/road_segmentation/train.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="28" column="4" lean-forward="false" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+              <folding>
+                <marker date="1517449776894" expanded="true" signature="1152:1734" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -129,8 +172,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/detection/lane/visualizer.py" />
-        <option value="$PROJECT_DIR$/detection/lane/utils.py" />
         <option value="$PROJECT_DIR$/detection/lane/lane_detector.py" />
         <option value="$PROJECT_DIR$/path_planning/__init__.py" />
         <option value="$PROJECT_DIR$/path_planning/test.py" />
@@ -147,8 +188,6 @@
         <option value="$PROJECT_DIR$/road_segmentation/SegNet/segnet_basic.py" />
         <option value="$PROJECT_DIR$/road_segmentation/SegNet/model.py" />
         <option value="$PROJECT_DIR$/road_segmentation/utils.py" />
-        <option value="$PROJECT_DIR$/road_segmentation/model.py" />
-        <option value="$PROJECT_DIR$/road_segmentation/train.py" />
         <option value="$PROJECT_DIR$/SAFETY.md" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/TIMELINE.md" />
@@ -166,7 +205,6 @@
         <option value="$PROJECT_DIR$/configs.py" />
         <option value="$PROJECT_DIR$/configs/__init__.py" />
         <option value="$PROJECT_DIR$/blackbox/recorder.py" />
-        <option value="$PROJECT_DIR$/steering/steering_predictor.py" />
         <option value="$PROJECT_DIR$/steering/predict.py" />
         <option value="$PROJECT_DIR$/steering/dataset_visualizer.py" />
         <option value="$PROJECT_DIR$/steering/model.py" />
@@ -176,10 +214,15 @@
         <option value="$PROJECT_DIR$/steering/utils.py" />
         <option value="$PROJECT_DIR$/steering/train.py" />
         <option value="$PROJECT_DIR$/road_segmentation/visualization.py" />
-        <option value="$PROJECT_DIR$/road_segmentation/configs.py" />
         <option value="$PROJECT_DIR$/road_segmentation/road_segmentor.py" />
         <option value="$PROJECT_DIR$/configs/configs.py" />
+        <option value="$PROJECT_DIR$/detection/vehicle/vehicle_detector.py" />
+        <option value="$PROJECT_DIR$/steering/steering_predictor.py" />
         <option value="$PROJECT_DIR$/drive.py" />
+        <option value="$PROJECT_DIR$/road_segmentation/model.py" />
+        <option value="$PROJECT_DIR$/road_segmentation/train.py" />
+        <option value="$PROJECT_DIR$/road_segmentation/configs.py" />
+        <option value="$PROJECT_DIR$/road_segmentation/test.py" />
       </list>
     </option>
   </component>
@@ -189,8 +232,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="14" />
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="877" />
@@ -232,6 +274,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -250,11 +293,15 @@
               <item name="ALVNS" type="462c0819:PsiDirectoryNode" />
               <item name="road_segmentation" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ALVNS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ALVNS" type="462c0819:PsiDirectoryNode" />
+              <item name="steering" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -280,21 +327,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.visualization">
-    <configuration name="segnet_basic (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.test">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/road_segmentation/SegNet" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/road_segmentation" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ALVNS" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/road_segmentation/SegNet/segnet_basic.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/road_segmentation/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -397,17 +444,17 @@
       <item index="0" class="java.lang.String" itemvalue="Jupyter Notebook.ALVNS" />
       <item index="1" class="java.lang.String" itemvalue="Python.visualization" />
       <item index="2" class="java.lang.String" itemvalue="Python.train" />
-      <item index="3" class="java.lang.String" itemvalue="Python.segnet_basic (1)" />
-      <item index="4" class="java.lang.String" itemvalue="Python.train (1)" />
-      <item index="5" class="java.lang.String" itemvalue="Python.train (2)" />
+      <item index="3" class="java.lang.String" itemvalue="Python.train (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Python.train (2)" />
+      <item index="5" class="java.lang.String" itemvalue="Python.test" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.visualization" />
-        <item index="1" class="java.lang.String" itemvalue="Python.train (2)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.train (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Python.train" />
-        <item index="4" class="java.lang.String" itemvalue="Python.segnet_basic (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Python.test" />
+        <item index="1" class="java.lang.String" itemvalue="Python.train" />
+        <item index="2" class="java.lang.String" itemvalue="Python.visualization" />
+        <item index="3" class="java.lang.String" itemvalue="Python.train (2)" />
+        <item index="4" class="java.lang.String" itemvalue="Python.train (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -438,20 +485,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="14" y="23" width="1440" height="877" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286445" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47080746" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32608697" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32736573" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31841433" sideWeight="0.49713877" order="2" side_tool="false" content_ui="tabs" x="21" y="333" width="1398" height="257" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29283887" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23891273" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29283887" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2532189" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988167" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4914163" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39769822" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -467,6 +513,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286445" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Log Manager" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -502,9 +549,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Keras-SegNet/SegNet-Basic.py" />
-    <entry file="file://$PROJECT_DIR$/Keras-SegNet/helper.py" />
-    <entry file="file://$PROJECT_DIR$/Keras-SegNet/segNet_basic_model.json" />
     <entry file="file://$PROJECT_DIR$/Keras-SegNet/model_basic.py" />
     <entry file="file://$PROJECT_DIR$/Keras-SegNet/Segnet-Evaluation-Visualization.ipynb" />
     <entry file="file://$PROJECT_DIR$/Keras-SegNet/SegNet.py" />
@@ -517,13 +561,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="597">
           <caret line="116" column="0" lean-forward="true" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/road_segmentation/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="45" column="44" lean-forward="false" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -575,27 +612,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cruse/cruse_control.py" />
-    <entry file="file://$PROJECT_DIR$/cruse/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cruse/cruse_controller.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cruse/cruse_predictor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="25" lean-forward="false" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/cruse/model.py" />
+    <entry file="file://$PROJECT_DIR$/cruse/cruse_controller.py" />
+    <entry file="file://$PROJECT_DIR$/cruse/cruse_predictor.py" />
     <entry file="file://$PROJECT_DIR$/cruse/test_mcp42010/test_mcp4x/test_mcp4x.ino" />
     <entry file="file://$PROJECT_DIR$/steering/motor_control/motor_control.ino">
       <provider selected="true" editor-type-id="text-editor">
@@ -604,13 +623,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cruse/speed_control/speed_control.ino">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="10" column="21" lean-forward="false" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/cruse/speed_control/speed_control.ino" />
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/keras/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -618,20 +631,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cruse/configs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="66" lean-forward="false" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cruse/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="48" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/cruse/configs.py" />
+    <entry file="file://$PROJECT_DIR$/cruse/utils.py" />
     <entry file="file://$PROJECT_DIR$/path_planning/gps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -661,13 +662,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/steering/steering_predictor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/steering/steering_visualizer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -682,13 +676,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cruse/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/cruse/train.py" />
     <entry file="file://$PROJECT_DIR$/steering/predict.py" />
     <entry file="file://$PROJECT_DIR$/steering/model.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -722,9 +710,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="43" lean-forward="true" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -732,33 +717,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="23" lean-forward="false" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/road_segmentation/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="108" column="13" lean-forward="false" selection-start-line="108" selection-start-column="4" selection-end-line="108" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/road_segmentation/configs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/road_segmentation/visualization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="60" column="60" lean-forward="true" selection-start-line="54" selection-start-column="8" selection-end-line="60" selection-end-column="60" />
-          <folding>
-            <element signature="e#195#212#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -766,33 +724,88 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="25" column="20" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2017.3/python_stubs/-1199943127/cv2/cv2.py" />
     <entry file="file://$PROJECT_DIR$/configs/configs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/road_segmentation/visualization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/road_segmentation/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="28" column="4" lean-forward="false" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+          <folding>
+            <marker date="1517449776894" expanded="true" signature="1152:1734" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/road_segmentation/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1380">
+          <caret line="102" column="13" lean-forward="false" selection-start-line="102" selection-start-column="4" selection-end-line="102" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2017.3/python_stubs/-1199943127/cv2/cv2.py">
+    <entry file="file://$PROJECT_DIR$/road_segmentation/configs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="10266" column="4" lean-forward="false" selection-start-line="10266" selection-start-column="4" selection-end-line="10266" selection-end-column="4" />
+        <state relative-caret-position="195">
+          <caret line="13" column="65" lean-forward="false" selection-start-line="13" selection-start-column="65" selection-end-line="13" selection-end-column="65" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/steering/new_v.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/steering/steering_predictor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="32" column="38" lean-forward="false" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/detection/vehicle/vehicle_detector.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drive.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="45" lean-forward="true" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
-          <folding />
+        <state relative-caret-position="570">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding>
+            <element signature="e#237#248#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/road_segmentation/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="26" column="51" lean-forward="false" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -40,6 +40,7 @@ class VehicleDetector:
         self.input_image_shape = K.placeholder(shape=(2,))
         self.boxes, self.scores, self.classes = yolo_eval(yolo_outputs, self.input_image_shape, score_threshold=configs.score_threshold,
                                            iou_threshold=configs.iou_threshold)
+        print("----------------------")
         print("vehicle detector ready")
 
     def detect_vechicle(self, image):

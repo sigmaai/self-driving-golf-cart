@@ -41,10 +41,11 @@ if __name__ == '__main__':
     if configs.default_st_port:
         mc = MC()
     else:
+        print("---------------------")
         os.system("ls /dev/ttyUSB*")
         st_port = get_serial_port()
         mc = MC(st_port)
-
+        print("---------------------")
 
     # initiate path planner, including GPS and Google Maps API
     if configs.navigation:
@@ -94,7 +95,7 @@ if __name__ == '__main__':
                 segment_result = segmentor.segment_road(image)
                 buff2 = np.concatenate((segment_result, segment_result))
             else:
-                buff2 = np.concatenate((steering_img, steering_img))
+                buff2 = np.concatenate((img, img))
 
             vidBuf = np.concatenate((buff1, buff2), axis=0)
 
@@ -105,7 +106,9 @@ if __name__ == '__main__':
             key = cv2.waitKey(10)
             if key == 27:  # ESC key
                 cv2.destroyAllWindows()
+                print("-------------------------")
                 print("Thank you! Program ended.")
+                print("-------------------------")
                 break
 
     else:

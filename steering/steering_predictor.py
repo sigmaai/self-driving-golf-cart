@@ -29,6 +29,7 @@ class SteeringPredictor:
 
         self.cnn = model.commaai_model()
         self.cnn.load_weights(configs.model_path)
+        print("---------------------")
         print("steering model loaded")
 
     def predict_steering(self, image):

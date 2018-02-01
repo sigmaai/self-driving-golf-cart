@@ -1,2 +1,2 @@
 # Safety Protocols
-In this document, the team and the academy outlines a detailed safety protocol about working on the golf cart. 
+The code in this repository is for testing purposes only. Please test responsibily. The creator of the programs, Michael Meng and Neil Nie is not responsible for any property damage and harm caused by testing.
