@@ -2,7 +2,7 @@ import pandas as pd
 import cv2
 import numpy as np
 import utils as utils
-import model
+import models
 import configs as configs
 import matplotlib.pyplot as plt
 
@@ -13,7 +13,7 @@ labels = utils.preprocess_dataset(configs.dir, configs.dir2, configs.dir3)
 print("data length {}".format(len(labels)))
 
 # create the network or load weights
-cnn = model.commaai_model()
+cnn = models.commaai_model()
 if configs.load_weights:
     cnn.load_weights(configs.model_path)
 cnn.summary()

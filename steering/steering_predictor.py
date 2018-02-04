@@ -5,7 +5,7 @@ from PIL import Image
 from PIL import ImageFont
 from PIL import ImageDraw
 import steering.configs as configs
-import steering.model as model
+import steering.models as models
 
 
 class SteeringPredictor:
@@ -27,7 +27,7 @@ class SteeringPredictor:
 
     def __init__(self):
 
-        self.cnn = model.commaai_model()
+        self.cnn = models.commaai_model()
         self.cnn.load_weights(configs.model_path)
         print("---------------------")
         print("steering model loaded")

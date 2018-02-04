@@ -1,25 +1,22 @@
 #
-# ------------- AGC ----------------------------
+# ------------------- AGC ----------------------
 # Drive.py | Created by Neil Nie & Michael Meng
-# Main file of the self driving car
+#      Main file of the self driving car
 # (c) Neil Nie 2017, Please refer to the license
 # ----------------------------------------------
 #
 
 
-import time
 import os
 from steering.steering_predictor import SteeringPredictor
 from steering.mc import MC
 from detection.vehicle.vehicle_detector import VehicleDetector
-from road_segmentation.road_segmentor import Segmentor
+from semantic_segmentation.segmentor import Segmentor
 import cv2
 import numpy as np
 import configs.configs as configs
 from path_planning.gps import GPS 
 from path_planning.global_path import GlobalPathPlanner
-
-l = 20
 
 
 def get_destination():
@@ -34,11 +31,12 @@ def get_serial_port():
 
 if __name__ == '__main__':
 
-    # initialize steering motor controller ------------------
-    segmentor = Segmentor("SGN")
-    vehicle_detector = VehicleDetector()
-    steering_predictor = SteeringPredictor()
-    if configs.default_st_port:
+    # initialize all objects
+    segmentor = Segmentor("SGN")                # init segmentor
+    vehicle_detector = VehicleDetector()        # init vechicle detector
+    steering_predictor = SteeringPredictor()    # init steering predictor
+
+    if configs.default_st_port:                 # check for serial setting
         mc = MC()
     else:
         print("---------------------")
@@ -48,7 +46,7 @@ if __name__ == '__main__':
         print("---------------------")
 
     # initiate path planner, including GPS and Google Maps API
-    if configs.navigation:
+    if configs.navigation:                      # enabling navigation
         gps = GPS()
         start = gps.query_gps_location()
         destination = get_destination()
@@ -89,13 +87,14 @@ if __name__ == '__main__':
                 detection_img = cv2.resize(detection_img, (640, 480))
                 buff1 = np.concatenate((steering_img, detection_img), axis=1)
             else:
-                buff1 = np.concatenate((steering_img, steering_img), axis=1)
+                buff1 = np.concatenate((steering_img, steering_img), axis=1)    # not running detection
+                                                                                # showing steering image buffer
 
-            if configs.segmentation:
+            if configs.segmentation:                                            # running segmentation
                 segment_result = segmentor.segment_road(image)
                 buff2 = np.concatenate((segment_result, segment_result))
-            else:
-                buff2 = np.concatenate((img, img))
+            else:                                                               # not running segmentation
+                buff2 = np.concatenate((image, image))                          # show original images
 
             vidBuf = np.concatenate((buff1, buff2), axis=0)
 
