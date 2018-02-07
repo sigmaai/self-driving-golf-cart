@@ -37,13 +37,8 @@ def valid_shapes(inp):
     return shapes
 
 
-def build(nc, w, h,
-          loss='categorical_crossentropy',
-          optimizer='adadelta',
-          plot=False,
-          **kwargs):
-    # data_shape = input_shape[0] * input_shape[1] if input_shape and None not in input_shape else None
-    data_shape = w * h if None not in (w, h) else -1  # TODO: -1 or None?
+def build(nc, w, h, loss='categorical_crossentropy', optimizer='adadelta', plot=False):
+
     inp = Input(shape=(h, w, 3))
     shapes = valid_shapes(inp)
 
@@ -54,8 +49,8 @@ def build(nc, w, h,
     out = encoder.build(inp, valid_shapes=shapes)
     out = decoder.build(inp=inp, encoder=out, nc=nc, valid_shapes=shapes)
 
-    out = Reshape((data_shape, nc))(out)  # TODO: need to remove data_shape for multi-scale training
-    out = Activation('softmax')(out)
+    # out = Reshape((data_shape, nc))(out)  # TODO: need to remove data_shape for multi-scale training
+    out = Activation('sigmoid')(out)
     model = Model(inputs=inp, outputs=out)
 
     model.compile(optimizer=optimizer, loss=loss, metrics=['accuracy', 'mean_squared_error'])
@@ -64,7 +59,7 @@ def build(nc, w, h,
     if plot:
         plot_model(model, to_file='{}.png'.format(name), show_shapes=True)
 
-    return model, name
+    return model
 
 
 if __name__ == "__main__":

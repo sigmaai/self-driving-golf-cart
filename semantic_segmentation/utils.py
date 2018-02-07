@@ -116,8 +116,28 @@ def prepare_dataset(path):
 def load_image(path):
 
     img = cv2.imread(path)
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     img = cv2.resize(img, (configs.img_width, configs.img_height))
     return img
+
+
+def validation_generator(labels, batch_size):
+
+    batch_images = np.zeros((batch_size, configs.img_height, configs.img_width, 3))
+    batch_masks = np.zeros((batch_size, configs.img_height, configs.img_width, 3))
+
+    while 1:
+
+        for index in np.random.permutation(len(labels)):
+
+            label = labels[index]
+            image = load_image(configs.data_path + "leftImg8bit/val/" + label[1])
+            gt_image = load_image(configs.data_path + "gtFine/val/" + label[2])
+
+            batch_images[index] = image
+            batch_masks[index] = gt_image
+
+        yield batch_images, batch_masks
 
 
 
@@ -127,16 +147,20 @@ def train_generator(labels, batch_size):
     batch_masks = np.zeros((batch_size, configs.img_height, configs.img_width, 3))
 
     while 1:
+        i = 0
+        for index in np.random.permutation(len(labels)):
 
-        random.shuffle(labels)
+            label = labels[index]
+            image = load_image(configs.data_path + "leftImg8bit/train/" + label[1])
+            gt_image = load_image(configs.data_path + "gtFine/train/" + label[2])
 
-        for label, index in labels[0: batch_size]:
+            batch_images[i] = image
+            batch_masks[i] = gt_image
+            i += 1
+            if i == batch_size:
+                break
 
-            image = load_image(label[1])
-            gt_image = load_image(label[2])
-
-            batch_images[index] = image
-            batch_masks[index] = gt_image
+        yield batch_images, batch_masks
 
 
 def gen_batch_function(data_folder, image_shape, batch_size):

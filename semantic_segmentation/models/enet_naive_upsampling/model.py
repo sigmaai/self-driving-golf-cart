@@ -26,6 +26,8 @@ def build(nc, w, h, loss='categorical_crossentropy', optimizer='adam'):
     enet = encoder.build(inp)
     enet = decoder.build(enet, nc=nc)
 
+    # enet = Activation('softmax')(enet)
+    # enet = Convolution2D(3, (1, 1), activation='sigmoid')(enet)
     model = Model(inputs=inp, outputs=enet)
 
     model.compile(optimizer=optimizer, loss=loss, metrics=['accuracy', 'mean_squared_error'])
