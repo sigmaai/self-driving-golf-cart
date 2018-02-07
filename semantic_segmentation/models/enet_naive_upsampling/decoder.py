@@ -45,5 +45,5 @@ def build(encoder, nc):
     enet = bottleneck(enet, 16, upsample=True, reverse_module=True)  # bottleneck 5.0
     enet = bottleneck(enet, 16)  # bottleneck 5.1
 
-    enet = Conv2DTranspose(filters=3, kernel_size=(2, 2), strides=(2, 2), padding='same')(enet)
+    enet = Conv2DTranspose(filters=nc, kernel_size=(2, 2), strides=(2, 2), padding='same')(enet)
     return enet

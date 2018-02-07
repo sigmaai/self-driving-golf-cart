@@ -6,7 +6,7 @@ from keras.engine.topology import Input
 from keras.layers.core import Activation, Reshape
 from keras.models import Model
 from keras.utils import plot_model
-
+from keras.metrics import binary_accuracy
 from . import encoder
 from . import decoder
 
@@ -36,8 +36,7 @@ def valid_shapes(inp):
             break
     return shapes
 
-
-def build(nc, w, h, loss='categorical_crossentropy', optimizer='adadelta', plot=False):
+def build(nc, w, h, optimizer='adadelta', plot=False):
 
     inp = Input(shape=(h, w, 3))
     shapes = valid_shapes(inp)
@@ -53,7 +52,7 @@ def build(nc, w, h, loss='categorical_crossentropy', optimizer='adadelta', plot=
     out = Activation('sigmoid')(out)
     model = Model(inputs=inp, outputs=out)
 
-    model.compile(optimizer=optimizer, loss=loss, metrics=['accuracy', 'mean_squared_error'])
+    model.compile(optimizer=optimizer, loss="binary_crossentropy", metrics=[binary_accuracy])
     name = 'icnet'
 
     if plot:
