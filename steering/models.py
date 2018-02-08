@@ -6,7 +6,7 @@ from keras.layers import Input, Lambda, Dropout, ELU
 from keras.layers.normalization import BatchNormalization
 from keras.optimizers import Adam
 import keras as K
-import configs as configs
+import steering.configs as configs
 
 def nvidia_model():
     
@@ -34,7 +34,7 @@ def nvidia_model():
     adam = Adam(lr=1e-4)
     model.compile(optimizer=adam, loss=root_mean_squared_error)
 
-    print('Model is created and compiled..')
+    # print('steering model is created and compiled...')
     return model
 
 def small_vgg_model():
@@ -59,7 +59,7 @@ def small_vgg_model():
 
     adam = Adam(lr=1e-4)
     model.compile(optimizer=adam, loss=root_mean_squared_error)
-    print('Model is created and compiled..')
+    # print('steering model is created and compiled...')
     return model
 
 def commaai_model():
@@ -81,7 +81,7 @@ def commaai_model():
 
     adam = Adam(lr=1e-4)
     model.compile(optimizer=adam, loss=root_mean_squared_error)
-    print('Model is created and compiled..')
+    # print('steering model is created and compiled...')
     return model
 
 

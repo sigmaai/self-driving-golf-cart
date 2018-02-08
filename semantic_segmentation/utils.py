@@ -7,7 +7,7 @@
 
 import re
 import cv2
-import configs
+import configs as configs
 import numpy as np
 import os
 import random
@@ -15,6 +15,7 @@ import scipy.misc
 from glob import glob
 from collections import namedtuple
 import matplotlib.pyplot as plt
+import time
 
 
 Label = namedtuple('Label', [
@@ -134,7 +135,6 @@ def convert_rgb_to_class(image):
         # objects found in the frame.
         mask = cv2.inRange(image, color, color)
 
-
         # divide each pixel by 255
         mask = np.true_divide(mask, 255)
 
@@ -146,33 +146,35 @@ def convert_rgb_to_class(image):
     return outputs
 
 
-def convert_class_to_rgb(image_labels):
+def convert_class_to_rgb(image_labels, threshold=0.01):
 
-    output = np.zeros((512, 512, 3), dtype=np.uint8)
+    # convert any pixel > threshold to 1
+    # convert any pixel < threshold to 0
+    # then use bitwise_and
+
+    output = np.zeros((configs.img_height, configs.img_width, 3), dtype=np.uint8)
 
     for i in range(len(labels)):
 
         if i != 44: # fuck
             split = image_labels[:, :, i]
-            split[split > 0.005] = 1
-            split[split < 0.005] = 0
+            split[split > threshold] = 1
+            split[split < threshold] = 0
             split[:] *= 255
             split = split.astype(np.uint8)
             color = labels[i][7]
 
-            bg = np.zeros((512, 512, 3), dtype=np.uint8)
+            bg = np.zeros((configs.img_height, configs.img_width, 3), dtype=np.uint8)
             bg[:, :, 0].fill(color[0])
             bg[:, :, 1].fill(color[1])
             bg[:, :, 2].fill(color[2])
 
             res = cv2.bitwise_and(bg, bg, mask=split)
 
-            # #
             # plt.imshow(np.hstack([bg, res]))
             # plt.show()
 
             output = cv2.addWeighted(output, 1.0, res, 1.0, 0)
-
 
     return output
 

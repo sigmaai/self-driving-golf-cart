@@ -6,12 +6,14 @@
 # ----------------------------------------------
 #
 
-
-import os
 from steering.steering_predictor import SteeringPredictor
 from steering.mc import MC
-from detection.vehicle.vehicle_detector import VehicleDetector
+from cruise.cruise_predictor import CrusePredictor
+from cruise.cruise_controller import CC
 from semantic_segmentation.segmentor import Segmentor
+
+from termcolor import colored
+import os
 import cv2
 import numpy as np
 import configs.configs as configs
@@ -20,33 +22,43 @@ from path_planning.global_path import GlobalPathPlanner
 
 
 def get_destination():
-    var = input("Please enter your destination:")
+    var = input(colored("Please enter your destination:", "blue"))
     return str(var)
 
 
 def get_serial_port():
-    var = input("Please enter serial port number")
+    var = input(colored("Please enter serial port number: ", "blue"))
     return int(var)
 
 
 if __name__ == '__main__':
 
+    if configs.verbose:
+        print(colored("configs: ", "blue"))
+        print(colored("steering factor: {}".format(configs.st_fac), "blue"))
+        print(colored("image size: {}".format(configs.default_img_size), "blue"))
+        print(colored("segmentation size: {}".format(configs.segmentation_size), "blue"))
+        print(colored("-----------------------------", "blue"))
+
     # initialize all objects
-    segmentor = Segmentor("SGN")                # init segmentor
-    vehicle_detector = VehicleDetector()        # init vechicle detector
+    segmentor = Segmentor("ENET")               # init segmentor
     steering_predictor = SteeringPredictor()    # init steering predictor
+    c_controller = CC()                         # init cruise controller
+    c_predictor = CrusePredictor()              # init cruise predictor
 
     if configs.default_st_port:                 # check for serial setting
+        print(colored("using system default serial port", "blue"))
         mc = MC()
     else:
-        print("---------------------")
+        print(colored("---------------------", "blue"))
         os.system("ls /dev/ttyUSB*")
         st_port = get_serial_port()
         mc = MC(st_port)
-        print("---------------------")
+        print(colored("---------------------", "blue"))
 
     # initiate path planner, including GPS and Google Maps API
-    if configs.navigation:                      # enabling navigation
+    # enabling navigation
+    if configs.navigation:
         gps = GPS()
         start = gps.query_gps_location()
         destination = get_destination()
@@ -54,9 +66,10 @@ if __name__ == '__main__':
         directions = gp_planner.direction(start, destination)
         print(directions)
 
+
     # OpenCV main loop
 
-    cap = cv2.VideoCapture("nvcamerasrc ! video/x-raw(memory:NVMM), width=(int)640, height=(int)480,format=(string)I420, framerate=(fraction)1/1 ! nvvidconv flip-method=2 ! video/x-raw, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! appsink")
+    cap = cv2.VideoCapture("nvcamerasrc ! video/x-raw(memory:NVMM), width=(int)720, height=(int)576,format=(string)I420, framerate=(fraction)1/1 ! nvvidconv flip-method=2 ! video/x-raw, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! appsink")
 
     if cap.isOpened():
 
@@ -66,8 +79,10 @@ if __name__ == '__main__':
         cv2.moveWindow(windowName, 0, 0)
         cv2.setWindowTitle(windowName, "car detection")
 
+        print(colored("program begins", "blue"))
+
         while True:
-            # 	time.sleep(0.5)
+
             # -----------------------------------------------------
             # Check to see if the user closed the window
             if cv2.getWindowProperty(windowName, 0) < 0:
@@ -77,22 +92,18 @@ if __name__ == '__main__':
             # -----------------------------------------------------
             # run detection network
             # no image preprocessing required for any detector
-            if configs.detection:
-                detection_img, out_boxes, out_scores, out_classes = vehicle_detector.detect_vechicle(image)
-            
             angle, steering_img = steering_predictor.predict_steering(image)
             mc.turn(configs.st_fac * angle)
 
-            if configs.detection:
-                detection_img = cv2.resize(detection_img, (640, 480))
-                buff1 = np.concatenate((steering_img, detection_img), axis=1)
+            if configs.cruise:
+                cruise_visual = c_predictor.predict_speed(image)
+                buff1 = np.concatenate((steering_img, cruise_visual), axis=1)
             else:
                 buff1 = np.concatenate((steering_img, steering_img), axis=1)    # not running detection
                                                                                 # showing steering image buffer
-
             if configs.segmentation:                                            # running segmentation
-                segment_result = segmentor.segment_road(image)
-                buff2 = np.concatenate((segment_result, segment_result))
+                result, visual = segmentor.semantic_segmentation(image)
+                buff2 = np.concatenate((visual, image))
             else:                                                               # not running segmentation
                 buff2 = np.concatenate((image, image))                          # show original images
 
@@ -103,11 +114,12 @@ if __name__ == '__main__':
 
             cv2.imshow(windowName, vidBuf)
             key = cv2.waitKey(10)
+
             if key == 27:  # ESC key
                 cv2.destroyAllWindows()
-                print("-------------------------")
-                print("Thank you! Program ended.")
-                print("-------------------------")
+                print(colored("-------------------------", "blue"))
+                print(colored("Thank you! Program ended.", "blue"))
+                print(colored("-------------------------", "blue"))
                 break
 
     else:

@@ -18,3 +18,4 @@ class CC:
         else:
             print("Failed to send speed %f" % speed)
         return ret
+

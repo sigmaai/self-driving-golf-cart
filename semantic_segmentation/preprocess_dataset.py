@@ -19,6 +19,7 @@ train_gt_dir = data_dir + "/gtCoarse/train_extra/"
 #             "strasbourg/", "monchengladbach/", "krefeld/", "hanover/",
 #             "hamburg/", "erfurt/", "dusseldorf/", "darmstadt/", "cologne/",
 #             "bremen/", "bochum/", "aachen/"]
+
 train_extra = ['augsburg', 'bad-honnef', 'bamberg', 'bayreuth', 'dortmund', 'dresden',
                'duisburg', 'erlangen', 'freiburg', 'heidelberg', 'heilbronn', 'karlsruhe',
                'konigswinter', 'konstanz', 'mannheim', 'muhlheim-ruhr', 'nuremberg', 'oberhausen',

@@ -5,7 +5,7 @@
 # All Rights Reserved.
 # -----------------------------------
 
-import model as m
+import models.enet_naive_upsampling.model as enet
 import utils
 import configs
 import os
@@ -21,20 +21,22 @@ import pygame
 
 # init pygame
 pygame.init()
-size = (640, 480)
+size = (configs.img_height, configs.img_width)
 pygame.display.set_caption("road segmentation")
 screen = pygame.display.set_mode(size, pygame.DOUBLEBUF)
 screen.set_alpha(None)
 
-camera_surface = pygame.surface.Surface((640, 480), 0, 24).convert()
+camera_surface = pygame.surface.Surface((configs.img_height, configs.img_width), 0, 24).convert()
 clock = pygame.time.Clock()
 
 
 def test_video_stream():
 
     # init model
-    model = m.segnet(nb_classes=2, input_height=configs.img_height, input_width=configs.img_width)
-    model.load_weights("./segmentation-train-4.h5")
+    m = enet.build(len(utils.labels), configs.img_height, configs.img_width)
+    # m = icnet.build(3, 512, 512)
+    m.load_weights("./new-enet-coarse-3.h5")
+    m.summary()
 
     # load testing data
     steering_labels = configs.test_dataset + 'interpolated.csv'
@@ -51,14 +53,10 @@ def test_video_stream():
 
         image = Image.open(path)
         image = np.array(image, dtype=np.uint8)
-
-        im_mask = model.predict(np.array([image]))[0][:, :, 1]
-        im_mask = np.array(255 * im_mask, dtype=np.uint8)
-        im_mask = cv2.cvtColor(im_mask, cv2.COLOR_GRAY2RGB)
-        ret, mask = cv2.threshold(im_mask, 100, 255, cv2.THRESH_BINARY)
-        mask[:, :, 1:3] = 0 * mask[:, :, 1:3]
-
-        img_pred = cv2.addWeighted(mask, 1.0, image, 1.0, 0)
+        image = cv2.resize(image, (configs.img_height, configs.img_width))
+        output = m.predict(np.array([image]))[0]
+        im_mask = utils.convert_class_to_rgb(output)
+        img_pred = cv2.addWeighted(im_mask, 0.8, image, 0.8, 0)
 
         # show it in pygame
         # -----------------
