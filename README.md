@@ -1,6 +1,6 @@
 # ALVNS
 Autonomous Land Vehicle Navigation System. Neil Nie & Michael Meng, 2017 
-![](./media/IMG-7448.JPG)
+<img src="./media/IMG-7370.JPG" alt="Drawing" style="width: 480;"/>
 
 ## Introduction
 We wanted to build a self driving car. We didn't build an actual car, but we built a golf cart, and wrote a system that can work on a real car as well. 
@@ -21,6 +21,8 @@ The software behind the steering system is largly inspired by work done by [Nvid
 
 ## Cruise
 
-## Sementic Segmentation
+## Semantic Segmentation
+<img src="./media/seg.png" alt="Drawing" style="width: 480;"/>
+Understanding the work around the vehicle through segmentation. 
 
 ## Path Planning
