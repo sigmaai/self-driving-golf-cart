@@ -3,63 +3,162 @@
   <component name="ChangeListManager">
     <list default="true" id="f9d6eb70-00d3-4b11-88c3-998eeea85bdb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" afterPath="$PROJECT_DIR$/LICENSE" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change beforePath="$PROJECT_DIR$/SAFETY.md" afterPath="$PROJECT_DIR$/SAFETY.md" />
+      <change beforePath="$PROJECT_DIR$/TIMELINE.md" afterPath="$PROJECT_DIR$/TIMELINE.md" />
+      <change beforePath="$PROJECT_DIR$/blackbox/__init__.py" afterPath="$PROJECT_DIR$/blackbox/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/blackbox/recorder.py" afterPath="$PROJECT_DIR$/blackbox/recorder.py" />
+      <change beforePath="$PROJECT_DIR$/configs/__init__.py" afterPath="$PROJECT_DIR$/configs/__init__.py" />
       <change beforePath="$PROJECT_DIR$/configs/configs.py" afterPath="$PROJECT_DIR$/configs/configs.py" />
+      <change beforePath="$PROJECT_DIR$/cruise/DenseNet/__init__.py" afterPath="$PROJECT_DIR$/cruise/DenseNet/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/cruise/configs.py" afterPath="$PROJECT_DIR$/cruise/configs.py" />
       <change beforePath="$PROJECT_DIR$/cruise/cruise_controller.py" afterPath="$PROJECT_DIR$/cruise/cruise_controller.py" />
       <change beforePath="$PROJECT_DIR$/cruise/cruise_predictor.py" afterPath="$PROJECT_DIR$/cruise/cruise_predictor.py" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/.ipynb_checkpoints/object-detection-Unet-train-IoU-checkpoint.ipynb" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/.ipynb_checkpoints/vehicle_detection_yolo-checkpoint.ipynb" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/font/FiraMono-Medium.otf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/font/SIL Open Font License.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/jetson_test.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/model_data/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/model_data/coco_classes.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/model_data/configs.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/model_data/pascal_classes.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/model_data/yolo_anchors.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/output/dog.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/output/eagle.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/output/giraffe.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/output/horses.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/output/person.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/output/scream.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/vehicle_detector.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/visualize_detection.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/voc_conversion_scripts/voc_to_hdf5.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/voc_conversion_scripts/voc_to_tfrecords.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yad2k.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yad2k/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yad2k/bin/activate" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yad2k/bin/conda" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yad2k/bin/deactivate" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yad2k/models/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yad2k/models/keras_darknet19.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yad2k/models/keras_yolo.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yad2k/utils/__init__.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yad2k/utils/draw_boxes.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/detection/vehicle/yad2k/utils/utils.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/cruise/model.py" afterPath="$PROJECT_DIR$/cruise/model.py" />
+      <change beforePath="$PROJECT_DIR$/cruise/speed_control/speed_control.ino" afterPath="$PROJECT_DIR$/cruise/speed_control/speed_control.ino" />
+      <change beforePath="$PROJECT_DIR$/cruise/train.py" afterPath="$PROJECT_DIR$/cruise/train.py" />
+      <change beforePath="$PROJECT_DIR$/cruise/utils.py" afterPath="$PROJECT_DIR$/cruise/utils.py" />
+      <change beforePath="$PROJECT_DIR$/cruise/visualization.py" afterPath="$PROJECT_DIR$/cruise/visualization.py" />
+      <change beforePath="$PROJECT_DIR$/detection/README.md" afterPath="$PROJECT_DIR$/detection/README.md" />
+      <change beforePath="$PROJECT_DIR$/detection/__init__.py" afterPath="$PROJECT_DIR$/detection/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/.gitignore" afterPath="$PROJECT_DIR$/detection/lane/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/__init__.py" afterPath="$PROJECT_DIR$/detection/lane/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/camera_cal/calibration1.jpg" afterPath="$PROJECT_DIR$/detection/lane/camera_cal/calibration1.jpg" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/camera_cal/calibration10.jpg" afterPath="$PROJECT_DIR$/detection/lane/camera_cal/calibration10.jpg" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/camera_cal/calibration11.jpg" afterPath="$PROJECT_DIR$/detection/lane/camera_cal/calibration11.jpg" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/camera_cal/calibration12.jpg" afterPath="$PROJECT_DIR$/detection/lane/camera_cal/calibration12.jpg" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/camera_cal/calibration13.jpg" afterPath="$PROJECT_DIR$/detection/lane/camera_cal/calibration13.jpg" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/camera_cal/calibration14.jpg" afterPath="$PROJECT_DIR$/detection/lane/camera_cal/calibration14.jpg" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/camera_cal/calibration15.jpg" afterPath="$PROJECT_DIR$/detection/lane/camera_cal/calibration15.jpg" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/camera_cal/calibration16.jpg" afterPath="$PROJECT_DIR$/detection/lane/camera_cal/calibration16.jpg" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/camera_cal/calibration17.jpg" afterPath="$PROJECT_DIR$/detection/lane/camera_cal/calibration17.jpg" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/camera_cal/calibration18.jpg" afterPath="$PROJECT_DIR$/detection/lane/camera_cal/calibration18.jpg" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/camera_cal/calibration19.jpg" afterPath="$PROJECT_DIR$/detection/lane/camera_cal/calibration19.jpg" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/camera_cal/calibration2.jpg" afterPath="$PROJECT_DIR$/detection/lane/camera_cal/calibration2.jpg" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/camera_cal/calibration20.jpg" afterPath="$PROJECT_DIR$/detection/lane/camera_cal/calibration20.jpg" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/camera_cal/calibration3.jpg" afterPath="$PROJECT_DIR$/detection/lane/camera_cal/calibration3.jpg" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/camera_cal/calibration4.jpg" afterPath="$PROJECT_DIR$/detection/lane/camera_cal/calibration4.jpg" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/camera_cal/calibration5.jpg" afterPath="$PROJECT_DIR$/detection/lane/camera_cal/calibration5.jpg" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/camera_cal/calibration6.jpg" afterPath="$PROJECT_DIR$/detection/lane/camera_cal/calibration6.jpg" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/camera_cal/calibration7.jpg" afterPath="$PROJECT_DIR$/detection/lane/camera_cal/calibration7.jpg" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/camera_cal/calibration8.jpg" afterPath="$PROJECT_DIR$/detection/lane/camera_cal/calibration8.jpg" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/camera_cal/calibration9.jpg" afterPath="$PROJECT_DIR$/detection/lane/camera_cal/calibration9.jpg" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/configs.py" afterPath="$PROJECT_DIR$/detection/lane/configs.py" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/lane_detector.py" afterPath="$PROJECT_DIR$/detection/lane/lane_detector.py" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/test_images/straight_lines1.jpg" afterPath="$PROJECT_DIR$/detection/lane/test_images/straight_lines1.jpg" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/test_images/straight_lines2.jpg" afterPath="$PROJECT_DIR$/detection/lane/test_images/straight_lines2.jpg" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/test_images/test1.jpg" afterPath="$PROJECT_DIR$/detection/lane/test_images/test1.jpg" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/test_images/test2.jpg" afterPath="$PROJECT_DIR$/detection/lane/test_images/test2.jpg" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/test_images/test3.jpg" afterPath="$PROJECT_DIR$/detection/lane/test_images/test3.jpg" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/test_images/test4.jpg" afterPath="$PROJECT_DIR$/detection/lane/test_images/test4.jpg" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/test_images/test5.jpg" afterPath="$PROJECT_DIR$/detection/lane/test_images/test5.jpg" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/test_images/test6.jpg" afterPath="$PROJECT_DIR$/detection/lane/test_images/test6.jpg" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/utils.py" afterPath="$PROJECT_DIR$/detection/lane/utils.py" />
+      <change beforePath="$PROJECT_DIR$/detection/lane/visualizer.py" afterPath="$PROJECT_DIR$/detection/lane/visualizer.py" />
+      <change beforePath="$PROJECT_DIR$/detection/traffic-signal/.gitattributes" afterPath="$PROJECT_DIR$/detection/traffic-signal/.gitattributes" />
+      <change beforePath="$PROJECT_DIR$/detection/traffic-signal/.gitignore" afterPath="$PROJECT_DIR$/detection/traffic-signal/.gitignore" />
+      <change beforePath="$PROJECT_DIR$/detection/traffic-signal/img/Sign_Percentage.png" afterPath="$PROJECT_DIR$/detection/traffic-signal/img/Sign_Percentage.png" />
+      <change beforePath="$PROJECT_DIR$/detection/traffic-signal/img/predictions.png" afterPath="$PROJECT_DIR$/detection/traffic-signal/img/predictions.png" />
+      <change beforePath="$PROJECT_DIR$/detection/traffic-signal/img/test_images.png" afterPath="$PROJECT_DIR$/detection/traffic-signal/img/test_images.png" />
+      <change beforePath="$PROJECT_DIR$/detection/traffic-signal/img/training_sample_image.png" afterPath="$PROJECT_DIR$/detection/traffic-signal/img/training_sample_image.png" />
       <change beforePath="$PROJECT_DIR$/drive.py" afterPath="$PROJECT_DIR$/drive.py" />
+      <change beforePath="$PROJECT_DIR$/engineering/ .gif" afterPath="$PROJECT_DIR$/engineering/ .gif" />
+      <change beforePath="$PROJECT_DIR$/engineering/ACS schematic/ACS schematic.brd" afterPath="$PROJECT_DIR$/engineering/ACS schematic/ACS schematic.brd" />
+      <change beforePath="$PROJECT_DIR$/engineering/ACS schematic/ACS schematic.s#1" afterPath="$PROJECT_DIR$/engineering/ACS schematic/ACS schematic.s#1" />
+      <change beforePath="$PROJECT_DIR$/engineering/ACS schematic/ACS schematic.s#2" afterPath="$PROJECT_DIR$/engineering/ACS schematic/ACS schematic.s#2" />
+      <change beforePath="$PROJECT_DIR$/engineering/ACS schematic/ACS schematic.s#3" afterPath="$PROJECT_DIR$/engineering/ACS schematic/ACS schematic.s#3" />
+      <change beforePath="$PROJECT_DIR$/engineering/ACS schematic/ACS schematic.s#4" afterPath="$PROJECT_DIR$/engineering/ACS schematic/ACS schematic.s#4" />
+      <change beforePath="$PROJECT_DIR$/engineering/ACS schematic/ACS schematic.s#5" afterPath="$PROJECT_DIR$/engineering/ACS schematic/ACS schematic.s#5" />
+      <change beforePath="$PROJECT_DIR$/engineering/ACS schematic/ACS schematic.s#6" afterPath="$PROJECT_DIR$/engineering/ACS schematic/ACS schematic.s#6" />
+      <change beforePath="$PROJECT_DIR$/engineering/ACS schematic/ACS schematic.s#7" afterPath="$PROJECT_DIR$/engineering/ACS schematic/ACS schematic.s#7" />
+      <change beforePath="$PROJECT_DIR$/engineering/ACS schematic/ACS schematic.sch" afterPath="$PROJECT_DIR$/engineering/ACS schematic/ACS schematic.sch" />
+      <change beforePath="$PROJECT_DIR$/engineering/ALV-CS/microcontroller.brd" afterPath="$PROJECT_DIR$/engineering/ALV-CS/microcontroller.brd" />
+      <change beforePath="$PROJECT_DIR$/engineering/ALV-CS/microcontroller.sch" afterPath="$PROJECT_DIR$/engineering/ALV-CS/microcontroller.sch" />
+      <change beforePath="$PROJECT_DIR$/engineering/Autonomous_Ground_Vehicle.pdf" afterPath="$PROJECT_DIR$/engineering/Autonomous_Ground_Vehicle.pdf" />
+      <change beforePath="$PROJECT_DIR$/engineering/Final_Report.pdf" afterPath="$PROJECT_DIR$/engineering/Final_Report.pdf" />
+      <change beforePath="$PROJECT_DIR$/engineering/SCS_schematics/SCS schematics.s#5" afterPath="$PROJECT_DIR$/engineering/SCS_schematics/SCS schematics.s#5" />
+      <change beforePath="$PROJECT_DIR$/engineering/SCS_schematics/SCS schematics.s#6" afterPath="$PROJECT_DIR$/engineering/SCS_schematics/SCS schematics.s#6" />
+      <change beforePath="$PROJECT_DIR$/engineering/SCS_schematics/SCS schematics.s#7" afterPath="$PROJECT_DIR$/engineering/SCS_schematics/SCS schematics.s#7" />
+      <change beforePath="$PROJECT_DIR$/engineering/SCS_schematics/SCS schematics.s#8" afterPath="$PROJECT_DIR$/engineering/SCS_schematics/SCS schematics.s#8" />
+      <change beforePath="$PROJECT_DIR$/engineering/SCS_schematics/SCS schematics.sch" afterPath="$PROJECT_DIR$/engineering/SCS_schematics/SCS schematics.sch" />
+      <change beforePath="$PROJECT_DIR$/engineering/Yamaha-wiring-diagram-G8E.pdf" afterPath="$PROJECT_DIR$/engineering/Yamaha-wiring-diagram-G8E.pdf" />
+      <change beforePath="$PROJECT_DIR$/media/IMG-7370.JPG" afterPath="$PROJECT_DIR$/media/IMG-7370.JPG" />
+      <change beforePath="$PROJECT_DIR$/media/seg.png" afterPath="$PROJECT_DIR$/media/seg.png" />
+      <change beforePath="$PROJECT_DIR$/others/AGC Checklist.docx" afterPath="$PROJECT_DIR$/others/AGC Checklist.docx" />
+      <change beforePath="$PROJECT_DIR$/others/AGC Procedures.docx" afterPath="$PROJECT_DIR$/others/AGC Procedures.docx" />
+      <change beforePath="$PROJECT_DIR$/others/EPTs List.docx" afterPath="$PROJECT_DIR$/others/EPTs List.docx" />
+      <change beforePath="$PROJECT_DIR$/others/Work Calendar-2018.xlsx" afterPath="$PROJECT_DIR$/others/Work Calendar-2018.xlsx" />
+      <change beforePath="$PROJECT_DIR$/others/self driving car budget.xlsx" afterPath="$PROJECT_DIR$/others/self driving car budget.xlsx" />
+      <change beforePath="$PROJECT_DIR$/others/steering training notes.xlsx" afterPath="$PROJECT_DIR$/others/steering training notes.xlsx" />
+      <change beforePath="$PROJECT_DIR$/others/steering_prediction.xlsx" afterPath="$PROJECT_DIR$/others/steering_prediction.xlsx" />
+      <change beforePath="$PROJECT_DIR$/path_planning/README.md" afterPath="$PROJECT_DIR$/path_planning/README.md" />
+      <change beforePath="$PROJECT_DIR$/path_planning/__init__.py" afterPath="$PROJECT_DIR$/path_planning/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/path_planning/global_path.py" afterPath="$PROJECT_DIR$/path_planning/global_path.py" />
+      <change beforePath="$PROJECT_DIR$/path_planning/gps.py" afterPath="$PROJECT_DIR$/path_planning/gps.py" />
+      <change beforePath="$PROJECT_DIR$/path_planning/test.py" afterPath="$PROJECT_DIR$/path_planning/test.py" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/.ipynb_checkpoints/experiments-checkpoint.ipynb" afterPath="$PROJECT_DIR$/semantic_segmentation/.ipynb_checkpoints/experiments-checkpoint.ipynb" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/README.md" afterPath="$PROJECT_DIR$/semantic_segmentation/README.md" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/__init__.py" afterPath="$PROJECT_DIR$/semantic_segmentation/__init__.py" />
       <change beforePath="$PROJECT_DIR$/semantic_segmentation/configs.py" afterPath="$PROJECT_DIR$/semantic_segmentation/configs.py" />
-      <change beforePath="$PROJECT_DIR$/semantic_segmentation/preprocess_data.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/model.py" afterPath="$PROJECT_DIR$/semantic_segmentation/model.py" />
       <change beforePath="$PROJECT_DIR$/semantic_segmentation/preprocess_dataset.py" afterPath="$PROJECT_DIR$/semantic_segmentation/preprocess_dataset.py" />
-      <change beforePath="$PROJECT_DIR$/semantic_segmentation/result2_0.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/semantic_segmentation/result2_1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/semantic_segmentation/result2_2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/semantic_segmentation/result2_3.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/semantic_segmentation/result2_4.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/semantic_segmentation/result2_5.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/semantic_segmentation/result_0.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/semantic_segmentation/result_1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/semantic_segmentation/result_2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/semantic_segmentation/result_3.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/semantic_segmentation/result_4.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/semantic_segmentation/result_5.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/result3_0.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/result3_1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/result3_2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/result3_3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/result3_4.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/result3_5.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/result3_6.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/result3_7.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/segmentation_analyzer.py" afterPath="$PROJECT_DIR$/semantic_segmentation/segmentation_analyzer.py" />
       <change beforePath="$PROJECT_DIR$/semantic_segmentation/segmentor.py" afterPath="$PROJECT_DIR$/semantic_segmentation/segmentor.py" />
       <change beforePath="$PROJECT_DIR$/semantic_segmentation/test.py" afterPath="$PROJECT_DIR$/semantic_segmentation/test.py" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/test_result/result2_0.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/test_result/result2_1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/test_result/result2_2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/test_result/result2_3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/test_result/result2_4.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/test_result/result2_5.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/test_result/result3_0.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/test_result/result3_1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/test_result/result3_2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/test_result/result3_3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/test_result/result3_4.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/test_result/result3_5.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/test_result/result3_6.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/test_result/result_0.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/test_result/result_1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/test_result/result_2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/test_result/result_3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/test_result/result_4.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/test_result/result_5.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/testing_imgs/test.png" afterPath="$PROJECT_DIR$/semantic_segmentation/testing_imgs/test.png" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/testing_imgs/test_0.jpg" afterPath="$PROJECT_DIR$/semantic_segmentation/testing_imgs/test_0.jpg" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/testing_imgs/test_1.jpg" afterPath="$PROJECT_DIR$/semantic_segmentation/testing_imgs/test_1.jpg" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/testing_imgs/test_2.jpg" afterPath="$PROJECT_DIR$/semantic_segmentation/testing_imgs/test_2.jpg" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/testing_imgs/test_3.jpg" afterPath="$PROJECT_DIR$/semantic_segmentation/testing_imgs/test_3.jpg" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/testing_imgs/test_4.jpg" afterPath="$PROJECT_DIR$/semantic_segmentation/testing_imgs/test_4.jpg" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/testing_imgs/test_5.jpg" afterPath="$PROJECT_DIR$/semantic_segmentation/testing_imgs/test_5.jpg" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/testing_imgs/test_6.jpg" afterPath="$PROJECT_DIR$/semantic_segmentation/testing_imgs/test_6.jpg" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/testing_imgs/test_7.jpg" afterPath="$PROJECT_DIR$/semantic_segmentation/testing_imgs/test_7.jpg" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/testing_imgs/test_8.jpg" afterPath="$PROJECT_DIR$/semantic_segmentation/testing_imgs/test_8.jpg" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/testing_imgs/test_9.jpg" afterPath="$PROJECT_DIR$/semantic_segmentation/testing_imgs/test_9.jpg" />
       <change beforePath="$PROJECT_DIR$/semantic_segmentation/train.py" afterPath="$PROJECT_DIR$/semantic_segmentation/train.py" />
       <change beforePath="$PROJECT_DIR$/semantic_segmentation/utils.py" afterPath="$PROJECT_DIR$/semantic_segmentation/utils.py" />
       <change beforePath="$PROJECT_DIR$/semantic_segmentation/visualization.py" afterPath="$PROJECT_DIR$/semantic_segmentation/visualization.py" />
+      <change beforePath="$PROJECT_DIR$/steering/.ipynb_checkpoints/Vehicle Steering ConvNet-checkpoint.ipynb" afterPath="$PROJECT_DIR$/steering/.ipynb_checkpoints/Vehicle Steering ConvNet-checkpoint.ipynb" />
+      <change beforePath="$PROJECT_DIR$/steering/README.md" afterPath="$PROJECT_DIR$/steering/README.md" />
+      <change beforePath="$PROJECT_DIR$/steering/__init__.py" afterPath="$PROJECT_DIR$/steering/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/steering/configs.py" afterPath="$PROJECT_DIR$/steering/configs.py" />
+      <change beforePath="$PROJECT_DIR$/steering/mc.py" afterPath="$PROJECT_DIR$/steering/mc.py" />
       <change beforePath="$PROJECT_DIR$/steering/models.py" afterPath="$PROJECT_DIR$/steering/models.py" />
+      <change beforePath="$PROJECT_DIR$/steering/motor_control/motor_control.ino" afterPath="$PROJECT_DIR$/steering/motor_control/motor_control.ino" />
+      <change beforePath="$PROJECT_DIR$/steering/pc_test.py" afterPath="$PROJECT_DIR$/steering/pc_test.py" />
+      <change beforePath="$PROJECT_DIR$/steering/resources/FiraMono-Medium.otf" afterPath="$PROJECT_DIR$/steering/resources/FiraMono-Medium.otf" />
+      <change beforePath="$PROJECT_DIR$/steering/resources/sw.png" afterPath="$PROJECT_DIR$/steering/resources/sw.png" />
+      <change beforePath="$PROJECT_DIR$/steering/steering_predictor.py" afterPath="$PROJECT_DIR$/steering/steering_predictor.py" />
+      <change beforePath="$PROJECT_DIR$/steering/steering_visualizer.py" afterPath="$PROJECT_DIR$/steering/steering_visualizer.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -70,7 +169,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/ALVNS$main.coverage" NAME="main Coverage Results" MODIFIED="1510877954821" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/road_segmentation" />
-    <SUITE FILE_PATH="coverage/ALVNS$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1518111389597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/semantic_segmentation" />
+    <SUITE FILE_PATH="coverage/ALVNS$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1518137641892" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/semantic_segmentation" />
     <SUITE FILE_PATH="coverage/ALVNS$test_yolo.coverage" NAME="test_yolo Coverage Results" MODIFIED="1510439947102" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vehicle_object_detection/yolo" />
     <SUITE FILE_PATH="coverage/ALVNS$segnet_basic.coverage" NAME="segnet_basic Coverage Results" MODIFIED="1513742208272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Keras-SegNet" />
     <SUITE FILE_PATH="coverage/ALVNS$game.coverage" NAME="game Coverage Results" MODIFIED="1508095377453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/driving-simulator" />
@@ -78,14 +177,14 @@
     <SUITE FILE_PATH="coverage/ALVNS$steering_visualizer.coverage" NAME="steering_visualizer Coverage Results" MODIFIED="1511298810784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/steering" />
     <SUITE FILE_PATH="coverage/ALVNS$detection_visualizer.coverage" NAME="detection_visualizer Coverage Results" MODIFIED="1510440451954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vehicle_object_detection" />
     <SUITE FILE_PATH="coverage/ALVNS$gen_test.coverage" NAME="gen-test Coverage Results" MODIFIED="1517959148153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/semantic_segmentation" />
-    <SUITE FILE_PATH="coverage/ALVNS$visualization.coverage" NAME="visualization Coverage Results" MODIFIED="1518109666330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/semantic_segmentation" />
-    <SUITE FILE_PATH="coverage/ALVNS$train__1_.coverage" NAME="train (1) Coverage Results" MODIFIED="1518109804476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/semantic_segmentation" />
+    <SUITE FILE_PATH="coverage/ALVNS$visualization.coverage" NAME="visualization Coverage Results" MODIFIED="1518139050135" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/semantic_segmentation" />
+    <SUITE FILE_PATH="coverage/ALVNS$train__1_.coverage" NAME="train (1) Coverage Results" MODIFIED="1518135996438" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/semantic_segmentation" />
     <SUITE FILE_PATH="coverage/ALVNS$train__3_.coverage" NAME="train (3) Coverage Results" MODIFIED="1510948252191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/road-semantic-segmentation" />
     <SUITE FILE_PATH="coverage/ALVNS$utils.coverage" NAME="utils Coverage Results" MODIFIED="1518035848459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/semantic_segmentation" />
     <SUITE FILE_PATH="coverage/ALVNS$drive.coverage" NAME="drive Coverage Results" MODIFIED="1518111909259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ALVNS$lane_detector.coverage" NAME="lane_detector Coverage Results" MODIFIED="1512449114228" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/detection/lane" />
     <SUITE FILE_PATH="coverage/ALVNS$segnet_basic__1_.coverage" NAME="segnet_basic (1) Coverage Results" MODIFIED="1513786339560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/road_segmentation/SegNet" />
-    <SUITE FILE_PATH="coverage/ALVNS$preprocess_dataset.coverage" NAME="preprocess_dataset Coverage Results" MODIFIED="1518053203448" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/semantic_segmentation" />
+    <SUITE FILE_PATH="coverage/ALVNS$preprocess_dataset.coverage" NAME="preprocess_dataset Coverage Results" MODIFIED="1518138344207" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/semantic_segmentation" />
     <SUITE FILE_PATH="coverage/ALVNS$train.coverage" NAME="train Coverage Results" MODIFIED="1517448960687" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/road_segmentation" />
     <SUITE FILE_PATH="coverage/ALVNS$view_steering_model.coverage" NAME="view_steering_model Coverage Results" MODIFIED="1509061317721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/driving-simulator" />
     <SUITE FILE_PATH="coverage/ALVNS$visualizer.coverage" NAME="visualizer Coverage Results" MODIFIED="1512478797927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/detection/lane" />
@@ -112,11 +211,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/semantic_segmentation/test.py">
+      <file leaf-file-name="configs.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/semantic_segmentation/configs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="39" column="38" lean-forward="false" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+            <state relative-caret-position="225">
+              <caret line="15" column="61" lean-forward="false" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/semantic_segmentation/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="282">
+              <caret line="91" column="27" lean-forward="false" selection-start-line="91" selection-start-column="27" selection-end-line="91" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="segmentation_analyzer.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/semantic_segmentation/segmentation_analyzer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -127,96 +246,20 @@
       <file leaf-file-name="drive.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/drive.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="46" column="23" lean-forward="false" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
+            <state relative-caret-position="1500">
+              <caret line="112" column="39" lean-forward="false" selection-start-line="112" selection-start-column="39" selection-end-line="112" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="preprocess_dataset.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/semantic_segmentation/preprocess_dataset.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="642">
+              <caret line="59" column="28" lean-forward="false" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
               <folding>
-                <element signature="e#241#298#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cruise_predictor.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cruise/cruise_predictor.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="16" column="50" lean-forward="true" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cruise_controller.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cruise/cruise_controller.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="36" lean-forward="true" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="steering_predictor.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/steering/steering_predictor.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="32" column="27" lean-forward="false" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/steering/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="83" column="26" lean-forward="true" selection-start-line="83" selection-start-column="26" selection-end-line="83" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#42#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="configs.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/configs/configs.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="train.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/semantic_segmentation/train.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-27">
-              <caret line="13" column="14" lean-forward="false" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="visualization.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/semantic_segmentation/visualization.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-              <folding>
-                <element signature="e#195#244#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/semantic_segmentation/utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="161" column="40" lean-forward="false" selection-start-line="161" selection-start-column="40" selection-end-line="161" selection-end-column="40" />
-              <folding>
-                <element signature="e#189#198#0" expanded="true" />
+                <element signature="e#0#10#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -303,7 +346,6 @@
         <option value="$PROJECT_DIR$/road_segmentation/train.py" />
         <option value="$PROJECT_DIR$/semantic_segmentation/segmentation/train.py" />
         <option value="$PROJECT_DIR$/semantic_segmentation/segmentation/preprocess_data.py" />
-        <option value="$PROJECT_DIR$/semantic_segmentation/segmentation_analyzer.py" />
         <option value="$PROJECT_DIR$/semantic_segmentation/preprocess_data.py" />
         <option value="$PROJECT_DIR$/semantic_segmentation/README.md" />
         <option value="$PROJECT_DIR$/semantic_segmentation/train-2.py" />
@@ -313,18 +355,19 @@
         <option value="$PROJECT_DIR$/semantic_segmentation/experiments.ipynb" />
         <option value="$PROJECT_DIR$/semantic_segmentation/models/enet_naive_upsampling/decoder.py" />
         <option value="$PROJECT_DIR$/semantic_segmentation/models/enet_naive_upsampling/model.py" />
-        <option value="$PROJECT_DIR$/semantic_segmentation/preprocess_dataset.py" />
-        <option value="$PROJECT_DIR$/semantic_segmentation/utils.py" />
-        <option value="$PROJECT_DIR$/semantic_segmentation/visualization.py" />
-        <option value="$PROJECT_DIR$/semantic_segmentation/train.py" />
         <option value="$PROJECT_DIR$/cruise/cruise_controller.py" />
-        <option value="$PROJECT_DIR$/semantic_segmentation/test.py" />
         <option value="$PROJECT_DIR$/semantic_segmentation/segmentor.py" />
-        <option value="$PROJECT_DIR$/semantic_segmentation/configs.py" />
         <option value="$PROJECT_DIR$/configs/configs.py" />
-        <option value="$PROJECT_DIR$/drive.py" />
         <option value="$PROJECT_DIR$/steering/models.py" />
         <option value="$PROJECT_DIR$/cruise/cruise_predictor.py" />
+        <option value="$PROJECT_DIR$/semantic_segmentation/utils.py" />
+        <option value="$PROJECT_DIR$/semantic_segmentation/test.py" />
+        <option value="$PROJECT_DIR$/semantic_segmentation/train.py" />
+        <option value="$PROJECT_DIR$/semantic_segmentation/preprocess_dataset.py" />
+        <option value="$PROJECT_DIR$/semantic_segmentation/configs.py" />
+        <option value="$PROJECT_DIR$/semantic_segmentation/visualization.py" />
+        <option value="$PROJECT_DIR$/drive.py" />
+        <option value="$PROJECT_DIR$/semantic_segmentation/segmentation_analyzer.py" />
       </list>
     </option>
   </component>
@@ -334,7 +377,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="1" />
     <option name="y" value="23" />
     <option name="width" value="1439" />
@@ -389,22 +432,12 @@
               <item name="ALVNS" type="462c0819:PsiDirectoryNode" />
               <item name="configs" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ALVNS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ALVNS" type="462c0819:PsiDirectoryNode" />
-              <item name="cruise" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ALVNS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ALVNS" type="462c0819:PsiDirectoryNode" />
-              <item name="steering" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -430,7 +463,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.drive">
+  <component name="RunManager" selected="Python.visualization">
     <configuration name="drive" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -553,11 +586,11 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.drive" />
-        <item index="1" class="java.lang.String" itemvalue="Python.test (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.train (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Python.visualization" />
-        <item index="4" class="java.lang.String" itemvalue="Python.preprocess_dataset" />
+        <item index="0" class="java.lang.String" itemvalue="Python.visualization" />
+        <item index="1" class="java.lang.String" itemvalue="Python.preprocess_dataset" />
+        <item index="2" class="java.lang.String" itemvalue="Python.test (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.train (1)" />
+        <item index="4" class="java.lang.String" itemvalue="Python.drive" />
       </list>
     </recent_temporary>
   </component>
@@ -588,21 +621,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="23" width="1439" height="877" extended-state="6" />
+    <frame x="1" y="23" width="1439" height="877" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286445" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47080746" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33503836" sideWeight="0.49713877" order="2" side_tool="false" content_ui="tabs" x="21" y="333" width="1398" height="257" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32608697" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32736573" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33503836" sideWeight="0.49713877" order="2" side_tool="false" content_ui="tabs" x="21" y="333" width="1398" height="257" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36061382" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23979957" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25411597" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988167" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51395845" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39769822" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39769822" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="SFDX" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -652,27 +685,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/semantic_segmentation/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/semantic_segmentation/models/enet_naive_upsampling/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="34" column="19" lean-forward="false" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/semantic_segmentation/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2880">
           <caret line="201" column="45" lean-forward="false" selection-start-line="201" selection-start-column="45" selection-end-line="201" selection-end-column="45" />
-          <folding>
-            <element signature="e#189#198#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -695,9 +712,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="23" column="41" lean-forward="false" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -712,9 +726,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3015">
           <caret line="210" column="52" lean-forward="false" selection-start-line="210" selection-start-column="52" selection-end-line="210" selection-end-column="52" />
-          <folding>
-            <element signature="e#189#198#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -729,9 +741,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -746,9 +755,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2355">
           <caret line="157" column="31" lean-forward="false" selection-start-line="157" selection-start-column="31" selection-end-line="157" selection-end-column="31" />
-          <folding>
-            <element signature="e#189#198#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -756,9 +763,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="31" column="55" lean-forward="false" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -773,9 +777,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2910">
           <caret line="203" column="59" lean-forward="true" selection-start-line="203" selection-start-column="59" selection-end-line="203" selection-end-column="59" />
-          <folding>
-            <element signature="e#189#198#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -900,26 +902,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/semantic_segmentation/preprocess_data.py" />
-    <entry file="file://$PROJECT_DIR$/semantic_segmentation/preprocess_dataset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/semantic_segmentation/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-27">
-          <caret line="13" column="14" lean-forward="false" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cruise/visualization.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -927,7 +913,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -935,7 +920,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-12">
           <caret line="2" column="45" lean-forward="false" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -943,7 +927,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
           <caret line="89" column="32" lean-forward="false" selection-start-line="89" selection-start-column="28" selection-end-line="89" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -951,47 +934,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="29" column="45" lean-forward="true" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
-          <folding>
-            <element signature="e#219#290#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/semantic_segmentation/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="39" column="38" lean-forward="false" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/semantic_segmentation/configs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="56" lean-forward="false" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/semantic_segmentation/visualization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding>
-            <element signature="e#195#244#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/semantic_segmentation/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="161" column="40" lean-forward="false" selection-start-line="161" selection-start-column="40" selection-end-line="161" selection-end-column="40" />
-          <folding>
-            <element signature="e#189#198#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -999,51 +941,105 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/steering/models.py">
+    <entry file="file://$PROJECT_DIR$/steering/new_v.py" />
+    <entry file="file://$PROJECT_DIR$/cruise/cruise_predictor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="83" column="26" lean-forward="true" selection-start-line="83" selection-start-column="26" selection-end-line="83" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/steering/steering_predictor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="32" column="27" lean-forward="false" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
-          <folding />
+        <state relative-caret-position="210">
+          <caret line="16" column="50" lean-forward="false" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cruise/cruise_controller.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="36" lean-forward="true" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+          <caret line="9" column="36" lean-forward="false" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/steering/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="83" column="26" lean-forward="false" selection-start-line="83" selection-start-column="26" selection-end-line="83" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/steering/steering_predictor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="32" column="27" lean-forward="false" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/semantic_segmentation/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="23" column="29" lean-forward="false" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drive.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="46" column="23" lean-forward="false" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
+        <state relative-caret-position="1500">
+          <caret line="112" column="39" lean-forward="false" selection-start-line="112" selection-start-column="39" selection-end-line="112" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/semantic_segmentation/preprocess_dataset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="642">
+          <caret line="59" column="28" lean-forward="false" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
           <folding>
-            <element signature="e#241#298#0" expanded="true" />
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cruise/cruise_predictor.py">
+    <entry file="file://$PROJECT_DIR$/semantic_segmentation/visualization.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="50" lean-forward="true" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
+        <state relative-caret-position="273">
+          <caret line="57" column="48" lean-forward="false" selection-start-line="57" selection-start-column="48" selection-end-line="57" selection-end-column="48" />
+          <folding>
+            <element signature="e#195#244#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/semantic_segmentation/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="20" selection-end-column="47" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/semantic_segmentation/configs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="61" lean-forward="false" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/semantic_segmentation/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="91" column="27" lean-forward="false" selection-start-line="91" selection-start-column="27" selection-end-line="91" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/semantic_segmentation/segmentation_analyzer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

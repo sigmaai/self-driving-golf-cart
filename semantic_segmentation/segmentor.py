@@ -14,7 +14,6 @@ import semantic_segmentation.utils as utils
 import semantic_segmentation.configs as configs
 import os
 import cv2
-import pandas as pd
 import numpy as np
 from PIL import Image
 
@@ -34,7 +33,8 @@ class Segmentor:
         print("-----------------")
 
     def semantic_segmentation(self, image):
-
+    
+        image = cv2.resize(image, (512,512))
         output = self.model.predict(np.array([image]))[0]
         im_mask = utils.convert_class_to_rgb(output)
         img_pred = cv2.addWeighted(im_mask, 0.8, image, 0.8, 0)

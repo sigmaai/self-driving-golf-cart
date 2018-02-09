@@ -11,10 +11,10 @@ visualize_gen = False
 
 if __name__ == "__main__":
 
-    epochs = 1
+    epochs = 2
 
     m = enet.build(len(utils.labels), configs.img_height, configs.img_width)
-    m.load_weights("./new-enet-coarse-3.h5")
+    m.load_weights("./enet-c-v1-2.h5")
     print(m.summary())
 
     label_path = configs.data_path + "extra_labels.csv"
@@ -40,7 +40,7 @@ if __name__ == "__main__":
 
     m.fit_generator(train_generator, steps_per_epoch=1000, epochs=epochs, verbose=1)
 
-    m.save('./new-enet-coarse-4.h5')
+    m.save('./enet-c-v1-3.h5')
 
     if test_results:
         m.load_weights("./segmentation-fcn-3.h5")

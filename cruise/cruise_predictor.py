@@ -9,7 +9,7 @@ import cv2
 import cruise.configs as configs
 import cruise.model as model
 
-class CrusePredictor:
+class CruisePredictor:
 
     def __init__(self):
 

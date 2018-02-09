@@ -8,7 +8,7 @@
 
 from steering.steering_predictor import SteeringPredictor
 from steering.mc import MC
-from cruise.cruise_predictor import CrusePredictor
+from cruise.cruise_predictor import CruisePredictor
 from cruise.cruise_controller import CC
 from semantic_segmentation.segmentor import Segmentor
 
@@ -44,7 +44,7 @@ if __name__ == '__main__':
     segmentor = Segmentor("ENET")               # init segmentor
     steering_predictor = SteeringPredictor()    # init steering predictor
     c_controller = CC()                         # init cruise controller
-    c_predictor = CrusePredictor()              # init cruise predictor
+    #c_predictor = CruisePredictor()              # init cruise predictor
 
     if configs.default_st_port:                 # check for serial setting
         print(colored("using system default serial port", "blue"))
@@ -69,13 +69,13 @@ if __name__ == '__main__':
 
     # OpenCV main loop
 
-    cap = cv2.VideoCapture("nvcamerasrc ! video/x-raw(memory:NVMM), width=(int)720, height=(int)576,format=(string)I420, framerate=(fraction)1/1 ! nvvidconv flip-method=2 ! video/x-raw, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! appsink")
+    cap = cv2.VideoCapture("nvcamerasrc ! video/x-raw(memory:NVMM), width=(int)720, height=(int)576,format=(string)I420, framerate=(fraction)1/1 ! nvvidconv flip-method=0 ! video/x-raw, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! appsink")
 
     if cap.isOpened():
 
         windowName = "car detection"
         cv2.namedWindow(windowName, cv2.WINDOW_NORMAL)
-        cv2.resizeWindow(windowName, 1280, 960)
+        cv2.resizeWindow(windowName, 1280, 480)
         cv2.moveWindow(windowName, 0, 0)
         cv2.setWindowTitle(windowName, "car detection")
 
@@ -95,20 +95,24 @@ if __name__ == '__main__':
             angle, steering_img = steering_predictor.predict_steering(image)
             mc.turn(configs.st_fac * angle)
 
-            if configs.cruise:
-                cruise_visual = c_predictor.predict_speed(image)
-                buff1 = np.concatenate((steering_img, cruise_visual), axis=1)
-            else:
-                buff1 = np.concatenate((steering_img, steering_img), axis=1)    # not running detection
+            # if configs.cruise:
+            #    cruise_visual = c_predictor.predict_speed(image)
+            #    buff1 = np.concatenate((steering_img, cruise_visual), axis=1)
+            # else:
+            steering_img = cv2.resize(steering_img, (640, 480))
+
+            # buff1 = np.concatenate((steering_img, steering_img), axis=1)      # not running detection
                                                                                 # showing steering image buffer
             if configs.segmentation:                                            # running segmentation
                 result, visual = segmentor.semantic_segmentation(image)
-                buff2 = np.concatenate((visual, image))
+                visual = cv2.resize(visual, (640, 480))
             else:                                                               # not running segmentation
-                buff2 = np.concatenate((image, image))                          # show original images
+                image = cv2.resize(image, (640, 480))
+                visual = image                                                  # show original images
 
-            vidBuf = np.concatenate((buff1, buff2), axis=0)
-
+            buff1 = np.concatenate((steering_img, visual), axis=1)
+            #vidBuf = np.concatenate((buff1, buff2), axis=0)
+            vidBuf = buff1
             # show the stuff
             # -----------------------------------------------------
 

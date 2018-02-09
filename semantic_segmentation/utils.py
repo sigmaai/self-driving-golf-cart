@@ -7,14 +7,13 @@
 
 import re
 import cv2
-import configs as configs
+import semantic_segmentation.configs as configs
 import numpy as np
 import os
 import random
 import scipy.misc
 from glob import glob
 from collections import namedtuple
-import matplotlib.pyplot as plt
 import time
 
 
@@ -57,32 +56,33 @@ Label = namedtuple('Label', [
 # (NOTE! this is taken from the official Cityscapes scripts:)
 labels = [
     #       name                     id    trainId   category            catId     hasInstances   ignoreInEval   color
-    Label(  'unlabeled'            ,  0 ,      19 , 'void'            , 0       , False        , True         , (0, 0, 0) ),
     Label(  'ego vehicle'          ,  1 ,      19 , 'void'            , 0       , False        , True         , (0, 0, 0) ),
-    Label(  'rectification border' ,  2 ,      19 , 'void'            , 0       , False        , True         , (0,  0,  0) ),
-    Label(  'out of roi'           ,  3 ,      19 , 'void'            , 0       , False        , True         , (0,  0,  0) ),
-    Label(  'static'               ,  4 ,      19 , 'void'            , 0       , False        , True         , (0,  0,  0) ),
-    Label(  'dynamic'              ,  5 ,      19 , 'void'            , 0       , False        , True         , (111, 74,  0) ),
     Label(  'ground'               ,  6 ,      19 , 'void'            , 0       , False        , True         , (81, 0, 81) ),
     Label(  'road'                 ,  7 ,       0 , 'flat'            , 1       , False        , False        , (128, 64, 128) ),
     Label(  'sidewalk'             ,  8 ,       1 , 'flat'            , 1       , False        , False        , (244, 35, 232) ),
-    Label(  'parking'              ,  9 ,      19 , 'flat'            , 1       , False        , True         , (250, 170, 160) ),
     Label(  'building'             , 11 ,       2 , 'construction'    , 2       , False        , False        , (70, 70, 70) ),
-    Label(  'wall'                 , 12 ,       3 , 'construction'    , 2       , False        , False        , (102, 102, 156) ),
-    Label(  'fence'                , 13 ,       4 , 'construction'    , 2       , False        , False        , (190, 153,153) ),
-    Label(  'guard rail'           , 14 ,      19 , 'construction'    , 2       , False        , True         , (180, 165,180) ),
-    Label(  'traffic light'        , 19 ,       6 , 'object'          , 3       , False        , False        , (250, 170, 30) ),
     Label(  'traffic sign'         , 20 ,       7 , 'object'          , 3       , False        , False        , (220, 220,  0) ),
     Label(  'vegetation'           , 21 ,       8 , 'nature'          , 4       , False        , False        , (107, 142, 35) ),
     Label(  'terrain'              , 22 ,       9 , 'nature'          , 4       , False        , False        , (152, 251, 152) ),
     Label(  'sky'                  , 23 ,       10 , 'sky'             , 5       , False        , False        ,(70, 130, 180) ),
     Label(  'person'               , 24 ,       11 , 'human'           , 6       , True         , False        , (220, 20, 60) ),
-    Label(  'rider'                , 25 ,       12 , 'human'           , 6       , True         , False        , (255, 0, 0) ),
     Label(  'car'                  , 26 ,       13 , 'vehicle'         , 7       , True         , False        , (0, 0, 142) ),
     Label(  'truck'                , 27 ,       14 , 'vehicle'         , 7       , True         , False        , (0, 0, 70) ),
-    Label(  'bus'                  , 28 ,       15 , 'vehicle'         , 7       , True         , False        , (0, 60, 100) ),
-    Label(  'motorcycle'           , 32 ,       17 , 'vehicle'         , 7       , True         , False        , (0,  0, 230) ),
     Label(  'bicycle'              , 33 ,       18 , 'vehicle'         , 7       , True         , False        , (119, 11, 32) ),
+
+    # Label(  'dynamic'              ,  5 ,      19 , 'void'            , 0       , False        , True         , (111, 74,  0) ),
+    # Label(  'rider'                , 25 ,       12 , 'human'           , 6       , True         , False        , (255, 0, 0) ),
+    # Label(  'guard rail'           , 14 ,      19 , 'construction'    , 2       , False        , True         , (180, 165,180) ),
+    # Label(  'out of roi'           ,  3 ,      19 , 'void'            , 0       , False        , True         , (0,  0,  0) ),
+    # Label(  'rectification border' ,  2 ,      19 , 'void'            , 0       , False        , True         , (0,  0,  0) ),
+    # Label(  'unlabeled'            ,  0 ,      19 , 'void'            , 0       , False        , True         , (0, 0, 0) ),
+    # Label(  'static'               ,  4 ,      19 , 'void'            , 0       , False        , True         , (0,  0,  0) ),
+    # Label(  'bus'                  , 28 ,       15 , 'vehicle'         , 7       , True         , False        , (0, 60, 100) ),
+    # Label(  'motorcycle'           , 32 ,       17 , 'vehicle'         , 7       , True         , False        , (0,  0, 230) ),
+    # Label(  'traffic light'        , 19 ,       6 , 'object'          , 3       , False        , False        , (250, 170, 30) ),
+    # Label(  'wall'                 , 12 ,       3 , 'construction'    , 2       , False        , False        , (102, 102, 156) ),
+    # Label(  'parking'              ,  9 ,      19 , 'flat'            , 1       , False        , True         , (250, 170, 160) ),
+    # Label(  'fence'                , 13 ,       4 , 'construction'    , 2       , False        , False        , (190, 153,153) ),
     # Label(  'license plate'        , -1 ,       -1 , 'vehicle'         , 7       , False        , True         , (0, 0, 142) ),
     # Label(  'caravan'              , 29 ,      19 , 'vehicle'         , 7       , True         , True         , (  0,  0, 90) ),
     # Label(  'trailer'              , 30 ,      19 , 'vehicle'         , 7       , True         , True         , (  0,  0,110) ),
@@ -146,7 +146,7 @@ def convert_rgb_to_class(image):
     return outputs
 
 
-def convert_class_to_rgb(image_labels, threshold=0.01):
+def convert_class_to_rgb(image_labels, threshold=0.05):
 
     # convert any pixel > threshold to 1
     # convert any pixel < threshold to 0
@@ -221,57 +221,9 @@ def train_generator(ls, batch_size):
         yield batch_images, batch_masks
 
 
-def gen_batch_function(data_folder, image_shape, batch_size):
-    """
-    Generate function to create batches of training data
-    :param data_folder: Path to folder that contains all the datasets
-    :param image_shape: Tuple - Shape of image
-    :return:
-    """
-
-    image_paths = glob(os.path.join(data_folder, 'image_2', '*.png'))
-    label_paths = {
-        re.sub(r'_(lane|road)_', '_', os.path.basename(path)): path
-        for path in glob(
-        os.path.join(data_folder, 'gt_image_2', '*_road_*.png')
-        )
-    }
-
-    background_color = np.array([255, 0, 0])
-    sideroad_color = np.array([0, 0, 0])
-    road_color = np.array([255, 0, 255])
-
-    while 1:
-
-        random.shuffle(image_paths)
-
-        images = []
-        gt_images = []
-
-        for image_file in image_paths[0: batch_size]:
-
-            gt_image_file = label_paths[os.path.basename(image_file)]
-
-            image = scipy.misc.imread(image_file)
-            gt_image = scipy.misc.imread(gt_image_file)
-
-            image = scipy.misc.imresize(image, image_shape)
-            gt_image = scipy.misc.imresize(gt_image, image_shape)
-            gt_bg = np.all(gt_image == background_color, axis=2)
-            gt_bg = gt_bg.reshape(*gt_bg.shape, 1)
-            gt_image = np.concatenate((gt_bg, np.invert(gt_bg)), axis=2)
-
-            images.append(image)
-            gt_images.append(gt_image)
-
-        yield np.array(images), np.array(gt_images)
-
-
 if __name__ == "__main__":
 
     img = load_image("./testing_imgs/test.png")
     print(img.shape)
     array = convert_rgb_to_class(img)
     image = convert_class_to_rgb(array)
-    plt.imshow(image)
-    plt.show()
