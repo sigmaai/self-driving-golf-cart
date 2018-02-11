@@ -108,8 +108,8 @@ if __name__ == '__main__':
                 visual = cv2.resize(visual, (640, 480))
             else:                                                               # not running segmentation
                 image = cv2.resize(image, (640, 480))
-                visual = image                                                  # show original images
-
+                visual = image                                                  # show original image
+                
             buff1 = np.concatenate((steering_img, visual), axis=1)
             #vidBuf = np.concatenate((buff1, buff2), axis=0)
             vidBuf = buff1
@@ -128,4 +128,5 @@ if __name__ == '__main__':
 
     else:
         print("Fatal error, camera is not open")
+        
 

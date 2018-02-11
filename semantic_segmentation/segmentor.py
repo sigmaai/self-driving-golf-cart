@@ -34,9 +34,9 @@ class Segmentor:
 
     def semantic_segmentation(self, image):
     
-        image = cv2.resize(image, (512,512))
+        image = cv2.resize(image, (640,360))
         output = self.model.predict(np.array([image]))[0]
         im_mask = utils.convert_class_to_rgb(output)
         img_pred = cv2.addWeighted(im_mask, 0.8, image, 0.8, 0)
-        img_pred = cv2.cvtColor(img_pred, cv2.COLOR_RGB2BGR)
+        # img_pred = cv2.cvtColor(img_pred, cv2.COLOR_RGB2BGR)
         return output, img_pred

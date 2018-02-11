@@ -158,8 +158,8 @@ def convert_class_to_rgb(image_labels, threshold=0.05):
 
         if i != 44: # fuck
             split = image_labels[:, :, i]
-            split[split > threshold] = 1
-            split[split < threshold] = 0
+            # split[split > threshold] = 1
+            # split[split < threshold] = 0
             split[:] *= 255
             split = split.astype(np.uint8)
             color = labels[i][7]
