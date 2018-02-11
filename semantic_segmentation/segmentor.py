@@ -9,7 +9,6 @@
 
 
 import semantic_segmentation.models.enet_naive_upsampling.model as enet
-import semantic_segmentation.models.icnet.model as icnet
 import semantic_segmentation.utils as utils
 import semantic_segmentation.configs as configs
 import os

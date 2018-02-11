@@ -58,3 +58,4 @@ with open(csvfile, "w") as output:
     writer = csv.writer(output, lineterminator='\n')
     for val in train_paths:
         writer.writerow(val)
+

@@ -1,11 +1,14 @@
-from DenseNet import densenet
-import keras as K
+#
+# cruise control training
+# (c) Neil Nie 2017-2018
+#
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import utils
-import cruse.configs as configs
+import cruise.configs as configs
 import numpy as np
-import cruse.model as m
+import cruise.model as m
 
 
 def train(labels=None, visualize_gen=False, ds_type="UD", model_type="CM", weight_path="", temporal=False):

@@ -10,7 +10,6 @@ import cv2
 import semantic_segmentation.configs as configs
 import numpy as np
 import os
-import random
 import scipy.misc
 from glob import glob
 from collections import namedtuple
