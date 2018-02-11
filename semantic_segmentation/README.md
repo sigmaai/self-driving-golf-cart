@@ -5,6 +5,8 @@ We believe that there are three important components to this project.
 2. End-to-end cruise control with ConvNet
 3. Understanding the surrouding with ConvNet
 
+![](./media/sms.png)
+
 The last component is critical in making decisions under special/unexpected conditions. We need to detect the pedestrian
 vehicles and other objects around us. We can accomplish this using detection/localization networks such as Yolo9000, however,
 running tiny-yolo on the Jetson is painful. 
