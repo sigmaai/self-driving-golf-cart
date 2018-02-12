@@ -5,11 +5,26 @@
       <change beforePath="$PROJECT_DIR$/.idea/ALVNS.iml" afterPath="$PROJECT_DIR$/.idea/ALVNS.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/cruise/configs.py" afterPath="$PROJECT_DIR$/cruise/configs.py" />
+      <change beforePath="$PROJECT_DIR$/cruise/speed_control/speed_control.ino" afterPath="$PROJECT_DIR$/cruise/speed_control/speed_control.ino" />
       <change beforePath="$PROJECT_DIR$/cruise/train.py" afterPath="$PROJECT_DIR$/cruise/train.py" />
       <change beforePath="$PROJECT_DIR$/cruise/utils.py" afterPath="$PROJECT_DIR$/cruise/utils.py" />
-      <change beforePath="$PROJECT_DIR$/semantic_segmentation/preprocess_dataset.py" afterPath="$PROJECT_DIR$/semantic_segmentation/preprocess_dataset.py" />
+      <change beforePath="$PROJECT_DIR$/cruise/visualization.py" afterPath="$PROJECT_DIR$/cruise/visualization.py" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/.ipynb_checkpoints/experiment-checkpoint.ipynb" afterPath="$PROJECT_DIR$/semantic_segmentation/.ipynb_checkpoints/experiment-checkpoint.ipynb" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/experiment.ipynb" afterPath="$PROJECT_DIR$/semantic_segmentation/experiment.ipynb" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/media/testing_imgs/test.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/media/testing_imgs/test_0.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/media/testing_imgs/test_1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/media/testing_imgs/test_2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/media/testing_imgs/test_3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/media/testing_imgs/test_4.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/media/testing_imgs/test_5.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/media/testing_imgs/test_6.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/media/testing_imgs/test_7.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/media/testing_imgs/test_8.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/media/testing_imgs/test_9.jpg" afterPath="" />
       <change beforePath="$PROJECT_DIR$/semantic_segmentation/segmentation_analyzer.py" afterPath="$PROJECT_DIR$/semantic_segmentation/segmentation_analyzer.py" />
-      <change beforePath="$PROJECT_DIR$/semantic_segmentation/segmentor.py" afterPath="$PROJECT_DIR$/semantic_segmentation/segmentor.py" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/test.py" afterPath="$PROJECT_DIR$/semantic_segmentation/test.py" />
       <change beforePath="$PROJECT_DIR$/semantic_segmentation/utils.py" afterPath="$PROJECT_DIR$/semantic_segmentation/utils.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,35 +35,36 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/ALVNS$train__3_.coverage" NAME="train (3) Coverage Results" MODIFIED="1510948252191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/road-semantic-segmentation" />
-    <SUITE FILE_PATH="coverage/ALVNS$segnet_basic.coverage" NAME="segnet_basic Coverage Results" MODIFIED="1513742208272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Keras-SegNet" />
-    <SUITE FILE_PATH="coverage/ALVNS$utils.coverage" NAME="utils Coverage Results" MODIFIED="1518035848459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/semantic_segmentation" />
-    <SUITE FILE_PATH="coverage/ALVNS$view_steering_model.coverage" NAME="view_steering_model Coverage Results" MODIFIED="1509061317721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/driving-simulator" />
-    <SUITE FILE_PATH="coverage/ALVNS$jetson_test.coverage" NAME="jetson_test Coverage Results" MODIFIED="1511915937375" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/detection/vehicle/yolo" />
-    <SUITE FILE_PATH="coverage/ALVNS$helper.coverage" NAME="helper Coverage Results" MODIFIED="1510948356687" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/road_segmentation" />
-    <SUITE FILE_PATH="coverage/ALVNS$test_yolo.coverage" NAME="test_yolo Coverage Results" MODIFIED="1510439947102" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vehicle_object_detection/yolo" />
-    <SUITE FILE_PATH="coverage/ALVNS$visualizer.coverage" NAME="visualizer Coverage Results" MODIFIED="1512478797927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/detection/lane" />
-    <SUITE FILE_PATH="coverage/ALVNS$test.coverage" NAME="test Coverage Results" MODIFIED="1517449121154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/road_segmentation" />
-    <SUITE FILE_PATH="coverage/ALVNS$ALVNS.coverage" NAME="ALVNS Coverage Results" MODIFIED="1509419520089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/ALVNS$train_2.coverage" NAME="train-2 Coverage Results" MODIFIED="1517953519378" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/semantic_segmentation" />
-    <SUITE FILE_PATH="coverage/ALVNS$preprocess_dataset.coverage" NAME="preprocess_dataset Coverage Results" MODIFIED="1518138344207" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/semantic_segmentation" />
-    <SUITE FILE_PATH="coverage/ALVNS$game.coverage" NAME="game Coverage Results" MODIFIED="1508095377453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/driving-simulator" />
-    <SUITE FILE_PATH="coverage/ALVNS$lane_detector.coverage" NAME="lane_detector Coverage Results" MODIFIED="1512449114228" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/detection/lane" />
-    <SUITE FILE_PATH="coverage/ALVNS$train__2_.coverage" NAME="train (2) Coverage Results" MODIFIED="1517285243938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/steering" />
-    <SUITE FILE_PATH="coverage/ALVNS$segnet_basic__1_.coverage" NAME="segnet_basic (1) Coverage Results" MODIFIED="1513786339560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/road_segmentation/SegNet" />
-    <SUITE FILE_PATH="coverage/ALVNS$train.coverage" NAME="train Coverage Results" MODIFIED="1517448960687" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/road_segmentation" />
     <SUITE FILE_PATH="coverage/ALVNS$main.coverage" NAME="main Coverage Results" MODIFIED="1510877954821" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/road_segmentation" />
+    <SUITE FILE_PATH="coverage/ALVNS$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1518450273320" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/semantic_segmentation" />
+    <SUITE FILE_PATH="coverage/ALVNS$test_yolo.coverage" NAME="test_yolo Coverage Results" MODIFIED="1510439947102" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vehicle_object_detection/yolo" />
+    <SUITE FILE_PATH="coverage/ALVNS$segnet_basic.coverage" NAME="segnet_basic Coverage Results" MODIFIED="1513742208272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Keras-SegNet" />
+    <SUITE FILE_PATH="coverage/ALVNS$visualization__1_.coverage" NAME="visualization (1) Coverage Results" MODIFIED="1518402237757" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cruise" />
+    <SUITE FILE_PATH="coverage/ALVNS$game.coverage" NAME="game Coverage Results" MODIFIED="1508095377453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/driving-simulator" />
+    <SUITE FILE_PATH="coverage/ALVNS$visualize_detection.coverage" NAME="visualize_detection Coverage Results" MODIFIED="1511298746888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vehicle_object_detection/yolo" />
+    <SUITE FILE_PATH="coverage/ALVNS$steering_visualizer.coverage" NAME="steering_visualizer Coverage Results" MODIFIED="1511298810784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/steering" />
     <SUITE FILE_PATH="coverage/ALVNS$detection_visualizer.coverage" NAME="detection_visualizer Coverage Results" MODIFIED="1510440451954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vehicle_object_detection" />
     <SUITE FILE_PATH="coverage/ALVNS$visualization.coverage" NAME="visualization Coverage Results" MODIFIED="1518139050135" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/semantic_segmentation" />
-    <SUITE FILE_PATH="coverage/ALVNS$SegNet_Basic.coverage" NAME="SegNet_Basic Coverage Results" MODIFIED="1513730588551" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Keras-SegNet" />
-    <SUITE FILE_PATH="coverage/ALVNS$visualize_detection__1_.coverage" NAME="visualize_detection (1) Coverage Results" MODIFIED="1511915886458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/detection/vehicle/yolo" />
-    <SUITE FILE_PATH="coverage/ALVNS$visualize_detection.coverage" NAME="visualize_detection Coverage Results" MODIFIED="1511298746888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vehicle_object_detection/yolo" />
-    <SUITE FILE_PATH="coverage/ALVNS$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1518137641892" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/semantic_segmentation" />
-    <SUITE FILE_PATH="coverage/ALVNS$steering_visualizer.coverage" NAME="steering_visualizer Coverage Results" MODIFIED="1511298810784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/steering" />
-    <SUITE FILE_PATH="coverage/ALVNS$preprocess_data.coverage" NAME="preprocess_data Coverage Results" MODIFIED="1517712248832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/semantic_segmentation/segmentation" />
     <SUITE FILE_PATH="coverage/ALVNS$gen_test.coverage" NAME="gen-test Coverage Results" MODIFIED="1517959148153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/semantic_segmentation" />
-    <SUITE FILE_PATH="coverage/ALVNS$drive.coverage" NAME="drive Coverage Results" MODIFIED="1518111909259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ALVNS$train__1_.coverage" NAME="train (1) Coverage Results" MODIFIED="1518135996438" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/semantic_segmentation" />
+    <SUITE FILE_PATH="coverage/ALVNS$train__3_.coverage" NAME="train (3) Coverage Results" MODIFIED="1510948252191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/road-semantic-segmentation" />
+    <SUITE FILE_PATH="coverage/ALVNS$utils.coverage" NAME="utils Coverage Results" MODIFIED="1518035848459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/semantic_segmentation" />
+    <SUITE FILE_PATH="coverage/ALVNS$drive.coverage" NAME="drive Coverage Results" MODIFIED="1518111909259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ALVNS$lane_detector.coverage" NAME="lane_detector Coverage Results" MODIFIED="1512449114228" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/detection/lane" />
+    <SUITE FILE_PATH="coverage/ALVNS$preprocess_dataset.coverage" NAME="preprocess_dataset Coverage Results" MODIFIED="1518138344207" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/semantic_segmentation" />
+    <SUITE FILE_PATH="coverage/ALVNS$segnet_basic__1_.coverage" NAME="segnet_basic (1) Coverage Results" MODIFIED="1513786339560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/road_segmentation/SegNet" />
+    <SUITE FILE_PATH="coverage/ALVNS$train.coverage" NAME="train Coverage Results" MODIFIED="1518400068194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cruise" />
+    <SUITE FILE_PATH="coverage/ALVNS$view_steering_model.coverage" NAME="view_steering_model Coverage Results" MODIFIED="1509061317721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/driving-simulator" />
+    <SUITE FILE_PATH="coverage/ALVNS$visualizer.coverage" NAME="visualizer Coverage Results" MODIFIED="1512478797927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/detection/lane" />
+    <SUITE FILE_PATH="coverage/ALVNS$train_2.coverage" NAME="train-2 Coverage Results" MODIFIED="1517953519378" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/semantic_segmentation" />
+    <SUITE FILE_PATH="coverage/ALVNS$visualize_detection__1_.coverage" NAME="visualize_detection (1) Coverage Results" MODIFIED="1511915886458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/detection/vehicle/yolo" />
+    <SUITE FILE_PATH="coverage/ALVNS$ALVNS.coverage" NAME="ALVNS Coverage Results" MODIFIED="1509419520089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/ALVNS$jetson_test.coverage" NAME="jetson_test Coverage Results" MODIFIED="1511915937375" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/detection/vehicle/yolo" />
+    <SUITE FILE_PATH="coverage/ALVNS$SegNet_Basic.coverage" NAME="SegNet_Basic Coverage Results" MODIFIED="1513730588551" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Keras-SegNet" />
+    <SUITE FILE_PATH="coverage/ALVNS$train__2_.coverage" NAME="train (2) Coverage Results" MODIFIED="1517285243938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/steering" />
+    <SUITE FILE_PATH="coverage/ALVNS$preprocess_data.coverage" NAME="preprocess_data Coverage Results" MODIFIED="1517712248832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/semantic_segmentation/segmentation" />
+    <SUITE FILE_PATH="coverage/ALVNS$test.coverage" NAME="test Coverage Results" MODIFIED="1517449121154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/road_segmentation" />
+    <SUITE FILE_PATH="coverage/ALVNS$helper.coverage" NAME="helper Coverage Results" MODIFIED="1510948356687" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/road_segmentation" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -66,8 +82,8 @@
       <file leaf-file-name="segmentation_analyzer.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/semantic_segmentation/segmentation_analyzer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="291">
+              <caret line="28" column="38" lean-forward="true" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -76,20 +92,22 @@
       <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/semantic_segmentation/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-              <folding />
+            <state relative-caret-position="193">
+              <caret line="159" column="24" lean-forward="true" selection-start-line="159" selection-start-column="24" selection-end-line="159" selection-end-column="24" />
+              <folding>
+                <element signature="e#189#198#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="segmentor.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/semantic_segmentation/segmentor.py">
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/semantic_segmentation/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+            <state relative-caret-position="255">
+              <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
               <folding>
-                <element signature="e#219#290#0" expanded="true" />
+                <element signature="e#0#10#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -147,8 +165,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/cruse/configs.py" />
-        <option value="$PROJECT_DIR$/cruse/utils.py" />
         <option value="$PROJECT_DIR$/cruse/train.py" />
         <option value="$PROJECT_DIR$/steering/steering_visualizer.py" />
         <option value="$PROJECT_DIR$/path_planning/gps.py" />
@@ -187,16 +203,18 @@
         <option value="$PROJECT_DIR$/configs/configs.py" />
         <option value="$PROJECT_DIR$/steering/models.py" />
         <option value="$PROJECT_DIR$/cruise/cruise_predictor.py" />
-        <option value="$PROJECT_DIR$/semantic_segmentation/test.py" />
         <option value="$PROJECT_DIR$/semantic_segmentation/train.py" />
         <option value="$PROJECT_DIR$/semantic_segmentation/configs.py" />
         <option value="$PROJECT_DIR$/semantic_segmentation/visualization.py" />
         <option value="$PROJECT_DIR$/drive.py" />
         <option value="$PROJECT_DIR$/semantic_segmentation/preprocess_dataset.py" />
-        <option value="$PROJECT_DIR$/cruise/utils.py" />
-        <option value="$PROJECT_DIR$/cruise/train.py" />
-        <option value="$PROJECT_DIR$/semantic_segmentation/utils.py" />
         <option value="$PROJECT_DIR$/semantic_segmentation/segmentor.py" />
+        <option value="$PROJECT_DIR$/cruise/train.py" />
+        <option value="$PROJECT_DIR$/cruise/configs.py" />
+        <option value="$PROJECT_DIR$/cruise/visualization.py" />
+        <option value="$PROJECT_DIR$/cruise/utils.py" />
+        <option value="$PROJECT_DIR$/semantic_segmentation/test.py" />
+        <option value="$PROJECT_DIR$/semantic_segmentation/utils.py" />
         <option value="$PROJECT_DIR$/semantic_segmentation/segmentation_analyzer.py" />
       </list>
     </option>
@@ -207,11 +225,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="92" />
-    <option name="y" value="111" />
-    <option name="width" value="1730" />
-    <option name="height" value="993" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="23" />
+    <option name="width" value="1370" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -250,7 +267,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -262,17 +278,13 @@
             <path>
               <item name="ALVNS" type="b2602c69:ProjectViewProjectNode" />
               <item name="ALVNS" type="462c0819:PsiDirectoryNode" />
-              <item name="cruise" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ALVNS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ALVNS" type="462c0819:PsiDirectoryNode" />
               <item name="semantic_segmentation" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -298,26 +310,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.visualization">
-    <configuration name="drive" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ALVNS" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/drive.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
+  <component name="RunManager" selected="Python.test (1)">
     <configuration name="preprocess_dataset" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -356,20 +349,39 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="train (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="train" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/semantic_segmentation" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/cruise" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ALVNS" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/semantic_segmentation/train.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cruise/train.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="visualization (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/cruise" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ALVNS" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cruise/visualization.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -413,19 +425,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Jupyter Notebook.ALVNS" />
-      <item index="1" class="java.lang.String" itemvalue="Python.train (1)" />
-      <item index="2" class="java.lang.String" itemvalue="Python.test (1)" />
-      <item index="3" class="java.lang.String" itemvalue="Python.preprocess_dataset" />
-      <item index="4" class="java.lang.String" itemvalue="Python.visualization" />
-      <item index="5" class="java.lang.String" itemvalue="Python.drive" />
+      <item index="1" class="java.lang.String" itemvalue="Python.test (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Python.preprocess_dataset" />
+      <item index="3" class="java.lang.String" itemvalue="Python.visualization" />
+      <item index="4" class="java.lang.String" itemvalue="Python.train" />
+      <item index="5" class="java.lang.String" itemvalue="Python.visualization (1)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.visualization" />
-        <item index="1" class="java.lang.String" itemvalue="Python.preprocess_dataset" />
-        <item index="2" class="java.lang.String" itemvalue="Python.test (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Python.train (1)" />
-        <item index="4" class="java.lang.String" itemvalue="Python.drive" />
+        <item index="0" class="java.lang.String" itemvalue="Python.test (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.visualization (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Python.train" />
+        <item index="3" class="java.lang.String" itemvalue="Python.visualization" />
+        <item index="4" class="java.lang.String" itemvalue="Python.preprocess_dataset" />
       </list>
     </recent_temporary>
   </component>
@@ -456,18 +468,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="92" y="111" width="1730" height="993" extended-state="0" />
+    <frame x="0" y="23" width="1433" height="877" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286445" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47080746" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32608697" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32736573" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33503836" sideWeight="0.49713877" order="2" side_tool="false" content_ui="tabs" x="21" y="333" width="1398" height="257" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33503836" sideWeight="0.49713877" order="2" side_tool="false" content_ui="tabs" x="21" y="333" width="1398" height="257" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36061382" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19135071" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2185478" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988167" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51395845" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5136494" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39769822" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -520,42 +533,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/semantic_segmentation/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="23" column="41" lean-forward="false" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/semantic_segmentation/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/semantic_segmentation/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3015">
-          <caret line="210" column="52" lean-forward="false" selection-start-line="210" selection-start-column="52" selection-end-line="210" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/semantic_segmentation/preprocess_dataset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="60" column="27" lean-forward="false" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/semantic_segmentation/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/semantic_segmentation/train.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -567,7 +544,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2355">
           <caret line="157" column="31" lean-forward="false" selection-start-line="157" selection-start-column="31" selection-end-line="157" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -589,7 +565,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2910">
           <caret line="203" column="59" lean-forward="true" selection-start-line="203" selection-start-column="59" selection-end-line="203" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -696,13 +671,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/semantic_segmentation/preprocess_data.py" />
-    <entry file="file://$PROJECT_DIR$/cruise/visualization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -747,13 +715,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/semantic_segmentation/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="23" column="29" lean-forward="false" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/semantic_segmentation/visualization.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -768,18 +729,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cruise/sc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/cruise/sc.py" />
     <entry file="file://$PROJECT_DIR$/semantic_segmentation/configs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="61" lean-forward="false" selection-start-line="15" selection-start-column="61" selection-end-line="15" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -804,48 +758,104 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/semantic_segmentation/segmentor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/keras/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="1117" column="8" lean-forward="false" selection-start-line="1117" selection-start-column="8" selection-end-line="1117" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pygame/_numpysurfarray.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pygame/surfarray.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cruise/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3405">
-          <caret line="227" column="0" lean-forward="false" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="30">
+          <caret line="2" column="14" lean-forward="false" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cruise/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="2" lean-forward="true" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+        <state relative-caret-position="390">
+          <caret line="31" column="29" lean-forward="false" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cruise/visualization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding>
-            <element signature="e#56#75#0" expanded="false" />
+            <element signature="e#123#141#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cruise/configs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="55" lean-forward="false" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/semantic_segmentation/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/semantic_segmentation/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/semantic_segmentation/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/semantic_segmentation/segmentor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+        <state relative-caret-position="193">
+          <caret line="159" column="24" lean-forward="true" selection-start-line="159" selection-start-column="24" selection-end-line="159" selection-end-column="24" />
           <folding>
-            <element signature="e#219#290#0" expanded="true" />
+            <element signature="e#189#198#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/semantic_segmentation/segmentation_analyzer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="291">
+          <caret line="28" column="38" lean-forward="true" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
           <folding />
         </state>
       </provider>

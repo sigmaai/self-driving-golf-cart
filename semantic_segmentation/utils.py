@@ -7,7 +7,8 @@
 
 import re
 import cv2
-import semantic_segmentation.configs as configs
+# import semantic_segmentation.configs as configs
+import configs
 import numpy as np
 import os
 import scipy.misc
@@ -64,6 +65,7 @@ labels = [
     Label(  'vegetation'           , 21 ,       8 , 'nature'          , 4       , False        , False        , (107, 142, 35) ),
     Label(  'terrain'              , 22 ,       9 , 'nature'          , 4       , False        , False        , (152, 251, 152) ),
     Label(  'sky'                  , 23 ,       10 , 'sky'             , 5       , False        , False        ,(70, 130, 180) ),
+
     Label(  'person'               , 24 ,       11 , 'human'           , 6       , True         , False        , (220, 20, 60) ),
     Label(  'car'                  , 26 ,       13 , 'vehicle'         , 7       , True         , False        , (0, 0, 142) ),
     Label(  'truck'                , 27 ,       14 , 'vehicle'         , 7       , True         , False        , (0, 0, 70) ),
@@ -157,8 +159,8 @@ def convert_class_to_rgb(image_labels, threshold=0.05):
 
         if i != 44: # fuck
             split = image_labels[:, :, i]
-            # split[split > threshold] = 1
-            # split[split < threshold] = 0
+            split[split > threshold] = 1
+            split[split < threshold] = 0
             split[:] *= 255
             split = split.astype(np.uint8)
             color = labels[i][7]

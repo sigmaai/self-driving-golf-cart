@@ -8,16 +8,19 @@ import matplotlib.pyplot as plt
 import time
 
 
-path = [# "./testing_imgs/test_0.jpg",
-        "./testing_imgs/test_1.jpg",
-        "./testing_imgs/test_2.jpg",
-        "./testing_imgs/test_3.jpg",
-        "./testing_imgs/test_4.jpg",
-        # "./testing_imgs/test_6.jpg",
-        "./testing_imgs/test_7.jpg",
-        "./testing_imgs/test_8.jpg",
-        "./testing_imgs/test_9.jpg"
-        ]
+# path = [# "./testing_imgs/test_0.jpg",
+#         "./testing_imgs/test_1.jpg",
+#         "./testing_imgs/test_2.jpg",
+#         "./testing_imgs/test_3.jpg",
+#         "./testing_imgs/test_4.jpg",
+#         # "./testing_imgs/test_6.jpg",
+#         "./testing_imgs/test_7.jpg",
+#         "./testing_imgs/test_8.jpg",
+#         "./testing_imgs/test_9.jpg"
+#         ]
+path = ["./testing_imgs/start-1.jpg",
+        "./testing_imgs/stop-2.jpeg",
+        "./testing_imgs/stop3.jpeg"]
 
 m = enet.build(len(utils.labels), configs.img_height, configs.img_width)
 # m = icnet.build(3, 512, 512)

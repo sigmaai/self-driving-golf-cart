@@ -1,12 +1,11 @@
 import cv2
 import numpy as np
-import cruse.configs as configs
+import configs
 import os
 import pandas as pd
 
 
 # --------------HELPER-METHODS-------------- #
-
 
 def rgb2yuv(image):
     """
@@ -42,7 +41,7 @@ def preprocess_dataset(dir1="", dir2="", dir3=""):
 
     data1 = pd.read_csv(dir1 + "interpolated.csv").values
     data2 = pd.read_csv(dir2 + "interpolated.csv").values
-    data3 = pd.read_csv(dir3 + "center_interpolated.csv").values
+    data3 = pd.read_csv(dir3 + "right.csv").values
 
     for i in range(0, len(data3)):
         data3[i][5] = dir3 + data3[i][5]
@@ -88,8 +87,8 @@ def preprocess_visualization(dir):
 
 
 def bgr_rgb(img):
-    b, g, r = cv2.split(img)  # get b,g,r
-    img = cv2.merge([r, g, b])  # switch it to rgb
+
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     return img
 
 
