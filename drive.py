@@ -11,6 +11,7 @@ from steering.mc import MC
 from cruise.cruise_predictor import CruisePredictor
 from cruise.cruise_controller import CC
 from semantic_segmentation.segmentor import Segmentor
+from semantic_segmentation.segmentation_analyzer import SegAnalyzer
 
 from termcolor import colored
 import os
@@ -42,18 +43,24 @@ if __name__ == '__main__':
 
     # initialize all objects
     segmentor = Segmentor("ENET")               # init segmentor
+    seg_analyzer = SegAnalyzer(0.05)            # init seg analyzer
     steering_predictor = SteeringPredictor()    # init steering predictor
-    c_controller = CC()                         # init cruise controller
-    #c_predictor = CruisePredictor()              # init cruise predictor
+    # c_predictor = CruisePredictor()           # init cruise predictor
 
     if configs.default_st_port:                 # check for serial setting
-        print(colored("using system default serial port", "blue"))
+        print(colored("using system default serial ports", "blue"))
         mc = MC()
+        c_controller = CC()
     else:
-        print(colored("---------------------", "blue"))
+        print(colored("------steering-------", "blue"))
         os.system("ls /dev/ttyUSB*")
         st_port = get_serial_port()
         mc = MC(st_port)
+
+        print(colored("-------cruise-------", "blue"))
+        os.system("ls /dev/ttyUSB*")
+        cc_port = get_serial_port()                     # get serial ports
+        c_controller = CC(st_port)                      # init CC controller
         print(colored("---------------------", "blue"))
 
     # initiate path planner, including GPS and Google Maps API
@@ -65,7 +72,6 @@ if __name__ == '__main__':
         gp_planner = GlobalPathPlanner()
         directions = gp_planner.direction(start, destination)
         print(directions)
-
 
     # OpenCV main loop
 
@@ -106,12 +112,16 @@ if __name__ == '__main__':
             if configs.segmentation:                                            # running segmentation
                 result, visual = segmentor.semantic_segmentation(image)
                 visual = cv2.resize(visual, (640, 480))
+                speed = seg_analyzer.analyze_image(result)
+                if speed == 0:
+                    print(colored("STOP!", "red"))
+                    c_controller.send_speed(-1)
             else:                                                               # not running segmentation
                 image = cv2.resize(image, (640, 480))
                 visual = image                                                  # show original image
                 
             buff1 = np.concatenate((steering_img, visual), axis=1)
-            #vidBuf = np.concatenate((buff1, buff2), axis=0)
+            # vidBuf = np.concatenate((buff1, buff2), axis=0)
             vidBuf = buff1
             # show the stuff
             # -----------------------------------------------------

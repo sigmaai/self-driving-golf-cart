@@ -11,6 +11,7 @@ class CC:
         self.ser = serial.Serial('/dev/ttyUSB%d' % device_id, 115200)
 
     def send_speed(self, speed, precision=3):
+
         ret = self.ser.write(('b'+str(round(speed,precision)).zfill(5)+'e').encode())
 
         if (ret == precision+4):

@@ -157,7 +157,7 @@ def convert_class_to_rgb(image_labels, threshold=0.05):
 
     for i in range(len(labels)):
 
-        if i != 44: # fuck
+        if i != 44:
             split = image_labels[:, :, i]
             split[split > threshold] = 1
             split[split < threshold] = 0

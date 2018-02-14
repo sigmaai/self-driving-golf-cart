@@ -31,11 +31,23 @@ class Segmentor:
         print("segmentor created")
         print("-----------------")
 
-    def semantic_segmentation(self, image):
-    
+    def semantic_segmentation(self, image, visualize=False):
+
+        # parameters
+        # image: input image
+        # visualize: whether to visualize the segmentation results
+        # return
+        # output: output of ConvNet
+        # img_pred: visualization
+
         image = cv2.resize(image, (640,360))
         output = self.model.predict(np.array([image]))[0]
-        im_mask = utils.convert_class_to_rgb(output)
-        img_pred = cv2.addWeighted(im_mask, 0.8, image, 0.8, 0)
-        # img_pred = cv2.cvtColor(img_pred, cv2.COLOR_RGB2BGR)
+        if visualize:
+            im_mask = utils.convert_class_to_rgb(output)
+        else:
+            im_mask = image
+
+        img_pred = cv2.cvtColor(im_mask, cv2.COLOR_RGB2BGR)
+        img_pred = cv2.addWeighted(img_pred, 0.8, image, 0.8, 0)
+
         return output, img_pred

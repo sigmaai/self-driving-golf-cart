@@ -4,6 +4,8 @@
 
 #define M_PI 3.14159265359
 #define LEN 6
+#define SPEED_MAX = 200
+#define SPEED_MIN = 70
 
 char msg[LEN]; //actual message
 

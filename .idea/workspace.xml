@@ -2,29 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9d6eb70-00d3-4b11-88c3-998eeea85bdb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/ALVNS.iml" afterPath="$PROJECT_DIR$/.idea/ALVNS.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/cruise/configs.py" afterPath="$PROJECT_DIR$/cruise/configs.py" />
+      <change beforePath="$PROJECT_DIR$/cruise/cruise_controller.py" afterPath="$PROJECT_DIR$/cruise/cruise_controller.py" />
       <change beforePath="$PROJECT_DIR$/cruise/speed_control/speed_control.ino" afterPath="$PROJECT_DIR$/cruise/speed_control/speed_control.ino" />
-      <change beforePath="$PROJECT_DIR$/cruise/train.py" afterPath="$PROJECT_DIR$/cruise/train.py" />
-      <change beforePath="$PROJECT_DIR$/cruise/utils.py" afterPath="$PROJECT_DIR$/cruise/utils.py" />
-      <change beforePath="$PROJECT_DIR$/cruise/visualization.py" afterPath="$PROJECT_DIR$/cruise/visualization.py" />
-      <change beforePath="$PROJECT_DIR$/semantic_segmentation/.ipynb_checkpoints/experiment-checkpoint.ipynb" afterPath="$PROJECT_DIR$/semantic_segmentation/.ipynb_checkpoints/experiment-checkpoint.ipynb" />
-      <change beforePath="$PROJECT_DIR$/semantic_segmentation/experiment.ipynb" afterPath="$PROJECT_DIR$/semantic_segmentation/experiment.ipynb" />
-      <change beforePath="$PROJECT_DIR$/semantic_segmentation/media/testing_imgs/test.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/semantic_segmentation/media/testing_imgs/test_0.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/semantic_segmentation/media/testing_imgs/test_1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/semantic_segmentation/media/testing_imgs/test_2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/semantic_segmentation/media/testing_imgs/test_3.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/semantic_segmentation/media/testing_imgs/test_4.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/semantic_segmentation/media/testing_imgs/test_5.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/semantic_segmentation/media/testing_imgs/test_6.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/semantic_segmentation/media/testing_imgs/test_7.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/semantic_segmentation/media/testing_imgs/test_8.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/semantic_segmentation/media/testing_imgs/test_9.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/semantic_segmentation/segmentation_analyzer.py" afterPath="$PROJECT_DIR$/semantic_segmentation/segmentation_analyzer.py" />
-      <change beforePath="$PROJECT_DIR$/semantic_segmentation/test.py" afterPath="$PROJECT_DIR$/semantic_segmentation/test.py" />
+      <change beforePath="$PROJECT_DIR$/drive.py" afterPath="$PROJECT_DIR$/drive.py" />
+      <change beforePath="$PROJECT_DIR$/path_planning/gps.py" afterPath="$PROJECT_DIR$/path_planning/gps.py" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/segmentor.py" afterPath="$PROJECT_DIR$/semantic_segmentation/segmentor.py" />
       <change beforePath="$PROJECT_DIR$/semantic_segmentation/utils.py" afterPath="$PROJECT_DIR$/semantic_segmentation/utils.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -79,36 +61,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="segmentation_analyzer.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="segmentation_analyzer.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/semantic_segmentation/segmentation_analyzer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="90">
+              <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/semantic_segmentation/utils.py">
+      <file leaf-file-name="gps.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/path_planning/gps.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="159" column="24" lean-forward="true" selection-start-line="159" selection-start-column="24" selection-end-line="159" selection-end-column="24" />
+            <state relative-caret-position="165">
+              <caret line="11" column="21" lean-forward="false" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
               <folding>
-                <element signature="e#189#198#0" expanded="true" />
+                <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/semantic_segmentation/test.py">
+      <file leaf-file-name="speed_control.ino" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cruise/speed_control/speed_control.ino">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="105">
+              <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -165,9 +145,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/cruse/train.py" />
         <option value="$PROJECT_DIR$/steering/steering_visualizer.py" />
-        <option value="$PROJECT_DIR$/path_planning/gps.py" />
         <option value="$PROJECT_DIR$/configs.py" />
         <option value="$PROJECT_DIR$/configs/__init__.py" />
         <option value="$PROJECT_DIR$/blackbox/recorder.py" />
@@ -199,23 +177,25 @@
         <option value="$PROJECT_DIR$/semantic_segmentation/experiments.ipynb" />
         <option value="$PROJECT_DIR$/semantic_segmentation/models/enet_naive_upsampling/decoder.py" />
         <option value="$PROJECT_DIR$/semantic_segmentation/models/enet_naive_upsampling/model.py" />
-        <option value="$PROJECT_DIR$/cruise/cruise_controller.py" />
         <option value="$PROJECT_DIR$/configs/configs.py" />
         <option value="$PROJECT_DIR$/steering/models.py" />
         <option value="$PROJECT_DIR$/cruise/cruise_predictor.py" />
         <option value="$PROJECT_DIR$/semantic_segmentation/train.py" />
         <option value="$PROJECT_DIR$/semantic_segmentation/configs.py" />
         <option value="$PROJECT_DIR$/semantic_segmentation/visualization.py" />
-        <option value="$PROJECT_DIR$/drive.py" />
         <option value="$PROJECT_DIR$/semantic_segmentation/preprocess_dataset.py" />
-        <option value="$PROJECT_DIR$/semantic_segmentation/segmentor.py" />
         <option value="$PROJECT_DIR$/cruise/train.py" />
         <option value="$PROJECT_DIR$/cruise/configs.py" />
         <option value="$PROJECT_DIR$/cruise/visualization.py" />
         <option value="$PROJECT_DIR$/cruise/utils.py" />
         <option value="$PROJECT_DIR$/semantic_segmentation/test.py" />
-        <option value="$PROJECT_DIR$/semantic_segmentation/utils.py" />
         <option value="$PROJECT_DIR$/semantic_segmentation/segmentation_analyzer.py" />
+        <option value="$PROJECT_DIR$/path_planning/gps.py" />
+        <option value="$PROJECT_DIR$/semantic_segmentation/utils.py" />
+        <option value="$PROJECT_DIR$/semantic_segmentation/segmentor.py" />
+        <option value="$PROJECT_DIR$/cruise/cruise_controller.py" />
+        <option value="$PROJECT_DIR$/drive.py" />
+        <option value="$PROJECT_DIR$/cruise/speed_control/speed_control.ino" />
       </list>
     </option>
   </component>
@@ -225,7 +205,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1370" />
     <option name="height" value="877" />
@@ -267,7 +247,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -278,13 +258,19 @@
             <path>
               <item name="ALVNS" type="b2602c69:ProjectViewProjectNode" />
               <item name="ALVNS" type="462c0819:PsiDirectoryNode" />
-              <item name="semantic_segmentation" type="462c0819:PsiDirectoryNode" />
+              <item name="cruise" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ALVNS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ALVNS" type="462c0819:PsiDirectoryNode" />
+              <item name="cruise" type="462c0819:PsiDirectoryNode" />
+              <item name="speed_control" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -468,7 +454,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1433" height="877" extended-state="6" />
+    <frame x="0" y="23" width="1370" height="877" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286445" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47080746" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
@@ -476,7 +462,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32736573" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33503836" sideWeight="0.49713877" order="2" side_tool="false" content_ui="tabs" x="21" y="333" width="1398" height="257" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36061382" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2185478" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22138554" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988167" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5136494" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -532,20 +518,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/semantic_segmentation/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/semantic_segmentation/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2355">
-          <caret line="157" column="31" lean-forward="false" selection-start-line="157" selection-start-column="31" selection-end-line="157" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/semantic_segmentation/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -693,13 +665,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/steering/new_v.py" />
-    <entry file="file://$PROJECT_DIR$/cruise/cruise_controller.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="36" lean-forward="false" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/steering/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="537">
@@ -743,24 +708,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/drive.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="112" column="39" lean-forward="false" selection-start-line="112" selection-start-column="39" selection-end-line="112" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cruise/cruise_predictor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="16" column="50" lean-forward="false" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/semantic_segmentation/segmentor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -782,7 +733,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
           <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -790,7 +740,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="14" lean-forward="false" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -798,7 +747,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="31" column="29" lean-forward="false" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -806,9 +754,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding>
-            <element signature="e#123#141#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -816,7 +761,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="55" lean-forward="false" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -825,36 +769,79 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/semantic_segmentation/segmentation_analyzer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/semantic_segmentation/segmentor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="33" column="52" lean-forward="false" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/semantic_segmentation/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+        <state relative-caret-position="285">
+          <caret line="19" column="11" lean-forward="true" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/drive.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="62" column="29" lean-forward="false" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
+          <folding>
+            <element signature="e#241#298#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/path_planning/gps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="21" lean-forward="false" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cruise/cruise_controller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/semantic_segmentation/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
-          <caret line="159" column="24" lean-forward="true" selection-start-line="159" selection-start-column="24" selection-end-line="159" selection-end-column="24" />
+          <caret line="159" column="19" lean-forward="false" selection-start-line="159" selection-start-column="19" selection-end-line="159" selection-end-column="19" />
           <folding>
             <element signature="e#189#198#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/semantic_segmentation/segmentation_analyzer.py">
+    <entry file="file://$PROJECT_DIR$/cruise/speed_control/speed_control.ino">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="105">
+          <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
           <folding />
         </state>
       </provider>
