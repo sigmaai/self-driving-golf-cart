@@ -12,14 +12,17 @@ from cruise.cruise_predictor import CruisePredictor
 from cruise.cruise_controller import CC
 from semantic_segmentation.segmentor import Segmentor
 from semantic_segmentation.segmentation_analyzer import SegAnalyzer
-
+from path_planning.global_path import GlobalPathPlanner
+import configs.configs as configs
+from path_planning.gps import GPS
 from termcolor import colored
+import time
 import os
 import cv2
 import numpy as np
-import configs.configs as configs
-from path_planning.gps import GPS 
-from path_planning.global_path import GlobalPathPlanner
+
+
+start_time = 0
 
 
 def get_destination():
@@ -32,7 +35,17 @@ def get_serial_port():
     return int(var)
 
 
+def welcome():
+    print(colored("Welcome to the self-driving golf cart program", "green"))
+    print(colored("By Michael Meng & Neil Nie", "green"))
+    print(colored("Thanks for driving with us", "green"))
+    print(colored("v.0.2.1", "green"))
+    print(colored("---------------------------------------------", "green"))
+
+
 if __name__ == '__main__':
+
+    welcome()
 
     if configs.verbose:
         print(colored("configs: ", "blue"))
@@ -46,6 +59,20 @@ if __name__ == '__main__':
     seg_analyzer = SegAnalyzer(0.05)            # init seg analyzer
     steering_predictor = SteeringPredictor()    # init steering predictor
     # c_predictor = CruisePredictor()           # init cruise predictor
+
+    # initiate path planner, including GPS and Google Maps API
+    # enabling navigation
+    if configs.navigation:
+        print(colored("------ GPS-------", "blue"))
+        os.system("ls /dev/ttyUSB*")
+        gps_port = get_serial_port()
+        gps = GPS(gps_port)
+        start = gps.query_gps_location()
+        print("start: " + str(start))
+        # destination = get_destination()
+        # gp_planner = GlobalPathPlanner()
+        # directions = gp_planner.direction(start, destination)
+        # print(directions)
 
     if configs.default_st_port:                 # check for serial setting
         print(colored("using system default serial ports", "blue"))
@@ -63,19 +90,9 @@ if __name__ == '__main__':
         c_controller = CC(st_port)                      # init CC controller
         print(colored("---------------------", "blue"))
 
-    # initiate path planner, including GPS and Google Maps API
-    # enabling navigation
-    if configs.navigation:
-        gps = GPS()
-        start = gps.query_gps_location()
-        destination = get_destination()
-        gp_planner = GlobalPathPlanner()
-        directions = gp_planner.direction(start, destination)
-        print(directions)
-
     # OpenCV main loop
 
-    cap = cv2.VideoCapture("nvcamerasrc ! video/x-raw(memory:NVMM), width=(int)720, height=(int)576,format=(string)I420, framerate=(fraction)1/1 ! nvvidconv flip-method=0 ! video/x-raw, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! appsink")
+    cap = cv2.VideoCapture(configs.CV_CAP_STR)
 
     if cap.isOpened():
 
@@ -113,9 +130,19 @@ if __name__ == '__main__':
                 result, visual = segmentor.semantic_segmentation(image)
                 visual = cv2.resize(visual, (640, 480))
                 speed = seg_analyzer.analyze_image(result)
-                if speed == 0:
+
+                if speed == 0 and drive_continue is True:
                     print(colored("STOP!", "red"))
                     c_controller.send_speed(-1)
+                    start_time = time.time()                                    # start breaking timer
+                    drive_continue = False                                      # do not continue driving
+                elif speed == 1 and drive_continue is True:
+                    c_controller.send_speed(1)
+
+                if (time.time() - start_time) == 2:                             # when timer reaches 2 secs
+                    drive_continue = True                                       # continue driving
+                    start_time = 0
+
             else:                                                               # not running segmentation
                 image = cv2.resize(image, (640, 480))
                 visual = image                                                  # show original image
@@ -123,9 +150,9 @@ if __name__ == '__main__':
             buff1 = np.concatenate((steering_img, visual), axis=1)
             # vidBuf = np.concatenate((buff1, buff2), axis=0)
             vidBuf = buff1
+
             # show the stuff
             # -----------------------------------------------------
-
             cv2.imshow(windowName, vidBuf)
             key = cv2.waitKey(10)
 

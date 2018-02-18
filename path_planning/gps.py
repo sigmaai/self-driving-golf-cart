@@ -4,11 +4,11 @@ import time
 
 class GPS():
 
-    def __init__(self):
+    def __init__(self, port):
 
         os.system("sudo systemctl stop gpsd.socket")
         os.system("sudo systemctl disable gpsd.socket")
-        os.system("sudo gpsd /dev/ttyUSB0 -F /var/run/gpsd.sock")
+        os.system("sudo gpsd /dev/ttyUSB{} -F /var/run/gpsd.sock".format(port))
         time.sleep(3)
         print("GPS initiated")
 

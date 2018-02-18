@@ -18,7 +18,6 @@ class SegAnalyzer:
         total_obs = 0
         im_mask = im_mask[int(im_mask.shape[0] / 5 * 4): im_mask.shape[0],
                   int(im_mask.shape[1] / 4): int(im_mask.shape[1] / 4 * 3), :]
-        # print(im_mask.shape)
 
         for i in range(9, 13):
             sub_mask = im_mask[:, :, i]
@@ -27,8 +26,6 @@ class SegAnalyzer:
             sub_mask[sub_mask < self.threshold] = 0
             obs_mask = sub_mask[sub_mask == 1]
             total_obs += len(obs_mask)
-        #     print(obs_mask.shape)
-        #     print(sub_mask.shape)
 
         perc_obs = total_obs / (im_mask.shape[0] * im_mask.shape[1])
         print(perc_obs)

@@ -12,3 +12,4 @@ navigation = False
 segmentation = True
 # set to true if want to use default serial port
 default_st_port = False
+CV_CAP_STR = "nvcamerasrc ! video/x-raw(memory:NVMM), width=(int)720, height=(int)576,format=(string)I420, framerate=(fraction)1/1 ! nvvidconv flip-method=0 ! video/x-raw, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! appsink"
