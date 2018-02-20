@@ -2,11 +2,16 @@
 #include <SPI.h>
 #include <Servo.h>
 
+#define RPWM 7
+#define LPWM 6
 #define M_PI 3.14159265359
 #define LEN 6
-#define SPEED_MAX = 200
-#define SPEED_MIN = 70
+#define SPEED_MAX 100
+#define SPEED_MIN 70
+#define BRAKE_AMOUNT 2 * M_PI
 
+unsigned long prev_t; //previous time
+volatile unsigned int count; //count for encode
 char msg[LEN]; //actual message
 
 float cruise_speed; //cruise value
@@ -15,7 +20,7 @@ float cruise_speed; //cruise value
 const int slave_Select_Pin  = 10;
 int spd = 0;
 int pos = 0;
-Servo myservo;  // create servo object to control a servo
+
 
 void setup() {
 
@@ -26,8 +31,6 @@ void setup() {
 
   // initialize SPI:
   SPI.begin();
-  myservo.attach(9);
-  myservo.write(180);
   clr();
 }
 
@@ -36,9 +39,6 @@ void clr() {
   for (int i = 0; i < LEN; i++) {
     msg[i] = '?';
   }
-//  while (Serial.available()){
-//    Serial.read();
-//  }
 }
 
 void debug_comm() {
@@ -55,7 +55,7 @@ void debug_comm() {
 
 void loop() {
 
-//  debug_comm();
+  //  debug_comm();
 
   if (Serial.read() == 'b') {
     Serial.println("Begin");
@@ -65,40 +65,37 @@ void loop() {
       Serial.println("End");
       spd = atof(msg);
       cruise_speed = spd;
-      delay(80); 
+      delay(80);
     }
   }
   Serial.println(cruise_speed);
-  if (cruise_speed == -1){
+  if (cruise_speed == -1) {
     potWrite(slave_Select_Pin, B00010001, 0);
     potWrite(slave_Select_Pin, B00010010, 0);
-    engage_break();
-    Serial.println("break engaged");
+    press_break();
+    delay(1000);
+    release_break();
+    Serial.println("brakes engaged");
     cruise_speed = 0;
-  }else if (cruise_speed == 1){
+  } else if (cruise_speed == 1) {
     potWrite(slave_Select_Pin, B00010001, 60);
     potWrite(slave_Select_Pin, B00010010, 60);
-  }else{
+  } else {
     potWrite(slave_Select_Pin, B00010001, 0);
     potWrite(slave_Select_Pin, B00010010, 0);
-    myservo.write(180);
   }
   clr();
 }
 
-void engage_break(){
-  
-    for (pos = 180; pos >= 20; pos -= 1) { // goes from 180 degrees to 0 degrees
-    myservo.write(pos);              // tell servo to go to position in variable 'pos'
-    delay(5);                       // waits 15ms for the servo to reach the position
-    if (pos == 20){
-      for (int t = 200; t >= 0; t -= 1){
-        myservo.write(20);
-        delay(10);
-      }
-    }
-  }
+void onDetect() {
+  count++;
 }
+
+//turn encoder count to radian value
+float getRadian(int c) {
+  return (float)c * 2.0 * M_PI / 420.0;
+}
+
 
 void potWrite(int slaveSelectPin, byte address, int value) {
   // take the SS pin low to select the chip:
@@ -109,6 +106,47 @@ void potWrite(int slaveSelectPin, byte address, int value) {
   // take the SS pin high to de-select the chip:
   digitalWrite(slaveSelectPin, HIGH);
 }
+
+void press_break() {
+
+  //time limit
+  prev_t = millis();
+  // remember to check for dir
+  while (0) {
+    mv(255, 1);
+    //encoder
+    if (getRadian(count) > BRAKE_AMOUNT) break;
+  }
+}
+
+void release_break(){
+
+  prev_t = millis();
+  // remember to check for dir
+  while (0) {
+    mv(255, 0);
+    //encoder
+    if (getRadian(count) > BRAKE_AMOUNT) break;
+  }
+}
+
+void mv(int spd, boolean dir) {
+  if (dir) {
+    analogWrite(LPWM, 0);
+    analogWrite(RPWM, spd);
+  } else {
+    analogWrite(LPWM, spd);
+    analogWrite(RPWM, 0);
+  }
+}
+
+void st() {
+  analogWrite(LPWM, 0);
+  analogWrite(RPWM, 0);
+  delay(10);
+}
+
+
 
 
 
