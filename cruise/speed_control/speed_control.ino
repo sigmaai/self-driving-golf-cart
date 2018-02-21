@@ -8,25 +8,33 @@
 #define LEN 6
 #define SPEED_MAX 100
 #define SPEED_MIN 70
-#define BRAKE_AMOUNT 2 * M_PI
+#define SCALAR 3.14159265359 / 2
 
-unsigned long prev_t; //previous time
+unsigned long prev_t = 0; //previous time
 volatile unsigned int count; //count for encode
 char msg[LEN]; //actual message
+boolean is_stopped = 0;
 
 float cruise_speed; //cruise value
 
 // set pin 10 as the slave select for the digital pot:
 const int slave_Select_Pin  = 10;
-int spd = 0;
-int pos = 0;
 
+void onDetect() {
+  count++;
+}
+
+//turn encoder count to radian value
+float getRadian(int c) {
+  return (float)c * 2.0 * M_PI / 420.0;
+}
 
 void setup() {
 
   // set the slaveSelectPin as an output:
   pinMode (slave_Select_Pin, OUTPUT);
   digitalWrite(slave_Select_Pin, LOW);
+  attachInterrupt(0, onDetect, RISING);
   Serial.begin(115200);
 
   // initialize SPI:
@@ -35,10 +43,20 @@ void setup() {
 }
 
 void clr() {
-
+  count = 0;
+  cruise_speed = 0;
   for (int i = 0; i < LEN; i++) {
     msg[i] = '?';
   }
+}
+
+void debug_motor() {
+  mv(128,0);
+  delay(1000);
+mv(128,1);
+  delay(1000);//
+mv(0,0);
+  delay(1000);
 }
 
 void debug_comm() {
@@ -54,8 +72,12 @@ void debug_comm() {
 }
 
 void loop() {
+//debug_comm();
+//press_break(1);
+//delay(1000);
+//release_break(0.005);
 
-  //  debug_comm();
+//delay(1000);
 
   if (Serial.read() == 'b') {
     Serial.println("Begin");
@@ -63,37 +85,22 @@ void loop() {
     Serial.println(msg);
     if (Serial.read() == 'a') {
       Serial.println("End");
-      spd = atof(msg);
-      cruise_speed = spd;
-      delay(80);
+      cruise_speed = atof(msg);
+
+      Serial.println(cruise_speed);
+      if (cruise_speed == -1) {
+        potWrite(slave_Select_Pin, B00010001, 0);
+        potWrite(slave_Select_Pin, B00010010, 0);
+        if (!is_stopped) press_break(1);
+        Serial.println("brakes engaged");
+      } else {
+        potWrite(slave_Select_Pin, B00010001, 60);
+        potWrite(slave_Select_Pin, B00010010, 60);
+        if (is_stopped) release_break(1);
+      }
     }
   }
-  Serial.println(cruise_speed);
-  if (cruise_speed == -1) {
-    potWrite(slave_Select_Pin, B00010001, 0);
-    potWrite(slave_Select_Pin, B00010010, 0);
-    press_break();
-    delay(1000);
-    release_break();
-    Serial.println("brakes engaged");
-    cruise_speed = 0;
-  } else if (cruise_speed == 1) {
-    potWrite(slave_Select_Pin, B00010001, 60);
-    potWrite(slave_Select_Pin, B00010010, 60);
-  } else {
-    potWrite(slave_Select_Pin, B00010001, 0);
-    potWrite(slave_Select_Pin, B00010010, 0);
-  }
   clr();
-}
-
-void onDetect() {
-  count++;
-}
-
-//turn encoder count to radian value
-float getRadian(int c) {
-  return (float)c * 2.0 * M_PI / 420.0;
 }
 
 
@@ -107,27 +114,33 @@ void potWrite(int slaveSelectPin, byte address, int value) {
   digitalWrite(slaveSelectPin, HIGH);
 }
 
-void press_break() {
-
-  //time limit
-  prev_t = millis();
+void press_break(float amount) {
   // remember to check for dir
-  while (0) {
-    mv(255, 1);
-    //encoder
-    if (getRadian(count) > BRAKE_AMOUNT) break;
-  }
-}
-
-void release_break(){
-
-  prev_t = millis();
-  // remember to check for dir
-  while (0) {
+  while (1) {
     mv(255, 0);
     //encoder
-    if (getRadian(count) > BRAKE_AMOUNT) break;
+   //     Serial.println(count);
+    if (count > 850 * amount) break;
   }
+  is_stopped = 1;
+  st();
+  count = 0;
+
+}
+
+void release_break(float amount) {
+
+  prev_t = millis();
+  // remember to check for dir
+  while (1) {
+    mv(255, 1);
+    //encoder
+ //       Serial.println(count);
+    if (count > 850 * amount) break;
+  }
+  is_stopped = 0;
+  st();
+  count = 0;
 }
 
 void mv(int spd, boolean dir) {
@@ -141,8 +154,8 @@ void mv(int spd, boolean dir) {
 }
 
 void st() {
-  analogWrite(LPWM, 0);
-  analogWrite(RPWM, 0);
+  analogWrite(LPWM,0);
+  analogWrite(RPWM,0);
   delay(10);
 }
 
