@@ -29,6 +29,10 @@ import time
 #         "./testing_imgs/stop-2.jpeg",
 #         "./testing_imgs/stop3.jpeg"]
 
+path = ["./testing_imgs/dirt-road.JPG",
+        "./testing_imgs/side-walk.JPG"]
+
+
 m = enet.build(len(utils.labels), configs.img_height, configs.img_width)
 m.load_weights("./enet-c-v1-3.h5")
 m.summary()

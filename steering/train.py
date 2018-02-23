@@ -33,4 +33,4 @@ if validation:
 
 cnn.fit_generator(training_gen, steps_per_epoch=1000, epochs=3, verbose=1, validation_data=validation_gen, validation_steps=1000)
 
-cnn.save('./trained-cai-v6-5.h5')
+cnn.save('./trained-cai-v7.h5')

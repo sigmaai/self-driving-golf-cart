@@ -10,7 +10,7 @@ image_width = 320
 image_height = 160
 load_weights = True
 model_path = "./steering/trained-cai-v6.h5"
-train_model_path = "./trained-cai-v6-3.h5"
+train_model_path = "./trained-cai-v6.h5"
 
 BLACK = (  0,   0,   0)
 WHITE = (255, 255, 255)
