@@ -33,3 +33,12 @@ class SegAnalyzer:
             return 0
         else:
             return 1
+
+    def analyze_for_steering(self, im_mask):
+
+        # parameter: image mask (output of segmentation network)
+        # return: steering value
+
+
+
+        return 1.0

@@ -27,3 +27,4 @@ class Recorder:
 
     def save_image(self, image, angle):
         cv2.imwrite(os.path.join(self.path, '{}.png'.format(self.count)), image)
+        count = count + 1

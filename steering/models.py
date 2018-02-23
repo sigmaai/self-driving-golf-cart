@@ -1,15 +1,17 @@
 from keras.models import Model, Sequential
 from keras.layers.core import Dense, Activation, Flatten
+from keras.layers import SpatialDropout2D
 from keras.layers.convolutional import Conv2D
-from keras.layers.pooling import AveragePooling2D, MaxPooling2D
-from keras.layers import Input, Lambda, Dropout, ELU
-from keras.layers.normalization import BatchNormalization
+from keras.layers.pooling import MaxPooling2D
+from keras.layers import PReLU, Lambda, Dropout, ELU
+from keras.optimizers import SGD
+from keras.regularizers import l2
 from keras.optimizers import Adam
 import keras as K
-import steering.configs as configs
+import configs as configs
 
 def nvidia_model():
-    
+
     model = Sequential()
 
     model.add(Conv2D(24, (5, 5), padding="same", strides=2, input_shape=(configs.image_height, configs.image_width, 3)))
@@ -32,7 +34,7 @@ def nvidia_model():
     model.add(ELU())
     model.add(Dense(1))
     adam = Adam(lr=1e-4)
-    model.compile(optimizer=adam, loss=root_mean_squared_error)
+    model.compile(optimizer=adam, loss=rmse)
 
     # print('steering model is created and compiled...')
     return model
@@ -58,14 +60,14 @@ def small_vgg_model():
     model.add(Dense(1))
 
     adam = Adam(lr=1e-4)
-    model.compile(optimizer=adam, loss=root_mean_squared_error)
+    model.compile(optimizer=adam, loss=rmse)
     # print('steering model is created and compiled...')
     return model
 
 def commaai_model():
 
     model = Sequential()
-    model.add(Lambda(lambda x: x/127.5 - 1., input_shape=(160, 320, 3), output_shape=(160, 320, 3)))
+    model.add(Lambda(lambda x: x/127.5 - 1., input_shape=(configs.image_height, configs.image_width, 3), output_shape=(configs.image_height, configs.image_width, 3)))
     model.add(Conv2D(16, (8, 8), strides=4, padding="same"))
     model.add(ELU())
     model.add(Conv2D(32, (5, 5), strides=2, padding="same"))
@@ -80,11 +82,63 @@ def commaai_model():
     model.add(Dense(1))
 
     adam = Adam(lr=1e-4)
-    model.compile(optimizer=adam, loss=root_mean_squared_error)
+    model.compile(optimizer=adam, loss=rmse)
     # print('steering model is created and compiled...')
     return model
 
 
-def root_mean_squared_error(y_true, y_pred):
+def create_comma_model_prelu():
+
+    model = Sequential()
+
+    model.add(Conv2D(16, (8, 8), strides=(4, 4), padding="same", input_shape=(configs.image_height, configs.image_width, 3)))
+    model.add(PReLU())
+    model.add(Conv2D(32, (5, 5), strides=(2, 2), padding="same"))
+    model.add(PReLU())
+    model.add(Conv2D(64, (5, 5), strides=(2, 2), padding="same"))
+    model.add(Flatten())
+    model.add(PReLU())
+    model.add(Dense(512))
+    model.add(PReLU())
+    model.add(Dense(1))
+
+    model.compile(optimizer="adam", loss=rmse)
+
+    print('Model is created and compiled..')
+    return model
+
+
+def regression_model(input_shape=(configs.image_height, configs.image_width, 3), use_adadelta=True, learning_rate=0.01, W_l2=0.0001,):
+        """
+        """
+        model = Sequential()
+        model.add(Conv2D(16, (5, 5), input_shape=input_shape, kernel_initializer="he_normal", activation='relu', padding='same'))
+        model.add(SpatialDropout2D(0.1))
+        model.add(MaxPooling2D(pool_size=(2, 2)))
+        model.add(Conv2D(20, (5, 5), kernel_initializer="he_normal", activation='relu', padding='same'))
+        model.add(SpatialDropout2D(0.1))
+        model.add(MaxPooling2D(pool_size=(2, 2)))
+        model.add(Conv2D(40, (3, 3), kernel_initializer="he_normal", activation='relu', padding='same'))
+        model.add(SpatialDropout2D(0.1))
+        model.add(MaxPooling2D(pool_size=(2, 2)))
+        model.add(Conv2D(60, (3, 3), kernel_initializer="he_normal", activation='relu', padding='same'))
+        model.add(SpatialDropout2D(0.1))
+        model.add(MaxPooling2D(pool_size=(2, 2)))
+        model.add(Conv2D(80, (2, 2), kernel_initializer="he_normal", activation='relu', padding='same'))
+        model.add(SpatialDropout2D(0.1))
+        model.add(MaxPooling2D(pool_size=(2, 2)))
+        model.add(Conv2D(128, (2, 2), kernel_initializer="he_normal", activation='relu', padding='same'))
+        model.add(Flatten())
+        model.add(Dropout(0.5))
+        model.add(Dense(output_dim=1, kernel_initializer='he_normal', W_regularizer=l2(W_l2)))
+
+        optimizer = SGD(lr=learning_rate, momentum=0.9)
+
+        model.compile(loss=rmse, optimizer=optimizer)
+
+        return model
+
+
+def rmse(y_true, y_pred):
         return K.backend.sqrt(K.backend.mean(K.backend.square(y_pred - y_true), axis=-1)) 
 

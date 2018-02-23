@@ -29,7 +29,7 @@ def preprocess(image):
     """
     # image = crop(image)
     # image = image[53: 160, 0:320]
-    # image = cv2.resize(image, (256, 256))
+    image = cv2.resize(image, (configs.image_width, configs.image_height))
     # image = rgb2yuv(image)
     return image
 
@@ -141,6 +141,7 @@ def augument(img_path, steering_angle):
         image = image ## no random shadow
     if a[1] == 1:
         image = blur(image)
+        image = image
     if a[2] == 1:
         image = random_brightness(image)
     if a[3] == 1:
@@ -158,9 +159,9 @@ def preprocess_dataset(dir1, dir2, dir3):
     data2 = pd.read_csv(dir2 + "interpolated.csv").values
     data3 = pd.read_csv(dir3 + "center_interpolated.csv").values
 
-    # for i in range(0, len(data3)):
-    #     data3[i][5] = dir3 + data3[i][5]
-    # print("dataset 3 processing completed")
+    for i in range(0, len(data3)):
+        data3[i][5] = dir3 + data3[i][5]
+    print("dataset 3 processing completed")
 
     print("begin processing dataset 1")
     labels1 = np.array([data1[1]])
@@ -183,7 +184,7 @@ def preprocess_dataset(dir1, dir2, dir3):
             labels2 = np.concatenate((labels2, item), axis=0)
 
     print("dataset 2 processing completed")
-    return np.concatenate((labels1, labels2), axis=0)
+    return np.concatenate((labels1, labels2, data3), axis=0)
 
 
 def batch_generator(data, batch_size, is_training):
