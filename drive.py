@@ -5,11 +5,11 @@
 # (c) Neil Nie 2017, Please refer to the license
 # ----------------------------------------------
 #
-
+#from steering.rambo import Rambo
 from steering.steering_predictor import SteeringPredictor
 from steering.mc import MC
 from cruise.cruise_predictor import CruisePredictor
-from cruise.cruise_controller import CC
+from cruise.sc import SC
 from semantic_segmentation.segmentor import Segmentor
 from semantic_segmentation.segmentation_analyzer import SegAnalyzer
 from path_planning.global_path import GlobalPathPlanner
@@ -21,7 +21,7 @@ import os
 import cv2
 import numpy as np
 
-
+drive_continue = True
 start_time = 0
 
 
@@ -57,6 +57,7 @@ if __name__ == '__main__':
     # initialize all objects
     segmentor = Segmentor("ENET")               # init segmentor
     seg_analyzer = SegAnalyzer(0.05)            # init seg analyzer
+ #   steering_predictor = Rambo("steering/final_model.hdf5", "steering/X_train_mean.npy")
     steering_predictor = SteeringPredictor()    # init steering predictor
     # c_predictor = CruisePredictor()           # init cruise predictor
 
@@ -77,7 +78,7 @@ if __name__ == '__main__':
     if configs.default_st_port:                 # check for serial setting
         print(colored("using system default serial ports", "blue"))
         mc = MC()
-        c_controller = CC()
+        c_controller = SC()
     else:
         print(colored("------steering-------", "blue"))
         os.system("ls /dev/ttyUSB*")
@@ -87,7 +88,7 @@ if __name__ == '__main__':
         print(colored("-------cruise-------", "blue"))
         os.system("ls /dev/ttyUSB*")
         cc_port = get_serial_port()                     # get serial ports
-        c_controller = CC(st_port)                      # init CC controller
+        c_controller = SC(cc_port)                      # init CC controller
         print(colored("---------------------", "blue"))
 
     # OpenCV main loop
@@ -115,6 +116,8 @@ if __name__ == '__main__':
             # -----------------------------------------------------
             # run detection network
             # no image preprocessing required for any detector
+           # angle = -steering_predictor.predict(cv2.cvtColor(cv2.resize(image,(256, 192)),cv2.COLOR_BGR2GRAY))
+           # steering_img = steering_predictor.post_process_image(cv2.resize(image,(320, 160)),angle)
             angle, steering_img = steering_predictor.predict_steering(image)
             mc.turn(configs.st_fac * angle)
 
@@ -127,21 +130,17 @@ if __name__ == '__main__':
             # buff1 = np.concatenate((steering_img, steering_img), axis=1)      # not running detection
                                                                                 # showing steering image buffer
             if configs.segmentation:                                            # running segmentation
-                result, visual = segmentor.semantic_segmentation(image)
+          #      result, visual = segmentor.semantic_segmentation(image)
+                result, visual = steering_img, steering_img
                 visual = cv2.resize(visual, (640, 480))
-                speed = seg_analyzer.analyze_image(result)
-
-                if speed == 0 and drive_continue is True:
+                # speed = seg_analyzer.analyze_image(result)
+                speed = 1
+                if speed == 0:
                     print(colored("STOP!", "red"))
-                    c_controller.send_speed(-1)
-                    start_time = time.time()                                    # start breaking timer
-                    drive_continue = False                                      # do not continue driving
-                elif speed == 1 and drive_continue is True:
-                    c_controller.send_speed(1)
-
-                if (time.time() - start_time) == 2:                             # when timer reaches 2 secs
-                    drive_continue = True                                       # continue driving
-                    start_time = 0
+            #        c_controller.drive(-1)
+                    #time.sleep(2)
+            #    else:
+            #        c_controller.drive(1)
 
             else:                                                               # not running segmentation
                 image = cv2.resize(image, (640, 480))
