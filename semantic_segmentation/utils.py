@@ -7,8 +7,8 @@
 
 import re
 import cv2
-# import semantic_segmentation.configs as configs
-import configs
+import semantic_segmentation.configs as configs
+#import configs
 import numpy as np
 import os
 import scipy.misc

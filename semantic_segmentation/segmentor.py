@@ -31,7 +31,7 @@ class Segmentor:
         print("segmentor created")
         print("-----------------")
 
-    def semantic_segmentation(self, image, visualize=False):
+    def semantic_segmentation(self, image, visualize=True):
 
         # parameters
         # image: input image
@@ -48,6 +48,6 @@ class Segmentor:
             im_mask = image
 
         img_pred = cv2.cvtColor(im_mask, cv2.COLOR_RGB2BGR)
-        img_pred = cv2.addWeighted(img_pred, 0.8, image, 0.8, 0)
+        img_pred = cv2.addWeighted(im_mask, 0.8, image, 0.8, 0)
 
         return output, img_pred
