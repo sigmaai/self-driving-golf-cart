@@ -1,19 +1,19 @@
-import argparse # parsing command line arguments
-import base64 # decoding camera images
+import argparse         # parsing command line arguments
+import base64           # decoding camera images
 from datetime import datetime
-import os #high level file operations #reading and writing files
+import os               #high level file operations #reading and writing files
 import shutil
 import numpy as np
-import socketio #real-time server
-import eventlet #concurrent networking
+import socketio         #real-time server
+import eventlet         #concurrent networking
 import eventlet.wsgi
-from PIL import Image #image manipulation
+from PIL import Image   #image manipulation
 from flask import Flask #web framework
-from io import BytesIO #input output
+from io import BytesIO  #input output
 import cv2
 import scipy.misc
 import utils
-import model
+import models
 
 
 #initialize our server
@@ -23,8 +23,8 @@ app = Flask(__name__)
 prev_image_array = None
 
 #set min/max speed for our autonomous car
-MAX_SPEED = 20
-MIN_SPEED = 5
+MAX_SPEED = 15
+MIN_SPEED = 10
 
 #and a speed limit
 speed_limit = MAX_SPEED
@@ -45,6 +45,7 @@ def telemetry(sid, data):
         try:
             image = np.asarray(image)       # from PIL image to numpy array
             image = utils.preprocess(image) # apply the preprocessing
+            # image = cv2.resize(image, (480, 640))
             image = np.array([image])       # the model expects 4D array
             # predict the steering angle for the image
             steering_angle =  -1.0 * float(cnn.predict(image, batch_size=1))
@@ -103,7 +104,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     #load model
-    cnn = model.commaai_model()
+    cnn = models.commaai_model()
     cnn.summary()
     cnn.load_weights(args.model)
     

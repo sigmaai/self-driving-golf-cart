@@ -5,7 +5,7 @@ import glob
 import argparse
 import cv2
 import utils
-import model
+import models
 
 parser = argparse.ArgumentParser(description='Remote Driving')
 parser.add_argument('--model', type=str,
@@ -21,7 +21,7 @@ model_path = args.model
 output_path = args.output_path
 
 print("Loading model...")
-model = model.commaai_model()
+model = models.commaai_model()
 model.load_weights(model_path)
 
 print("loading dataset")

@@ -91,12 +91,19 @@ void loop() {
       if (cruise_speed == -1) {
         potWrite(slave_Select_Pin, B00010001, 0);
         potWrite(slave_Select_Pin, B00010010, 0);
-        if (!is_stopped) press_break(1);
+    //   if (!is_stopped){
+          press_break(1);
+          delay(1000);
+          release_break(1);
+    //    }
         Serial.println("brakes engaged");
       } else {
-        potWrite(slave_Select_Pin, B00010001, 60);
-        potWrite(slave_Select_Pin, B00010010, 60);
-        if (is_stopped) release_break(1);
+    //    if (is_stopped){
+    //      release_break(1);
+    //    }
+        potWrite(slave_Select_Pin, B00010001, 45);
+        potWrite(slave_Select_Pin, B00010010, 45);
+        
       }
     }
   }
@@ -120,7 +127,7 @@ void press_break(float amount) {
     mv(255, 0);
     //encoder
    //     Serial.println(count);
-    if (count > 850 * amount) break;
+    if (count > 830 * amount) break;
   }
   is_stopped = 1;
   st();
@@ -134,9 +141,10 @@ void release_break(float amount) {
   // remember to check for dir
   while (1) {
     mv(255, 1);
+    
     //encoder
  //       Serial.println(count);
-    if (count > 850 * amount) break;
+    if (count > 830 * amount) break;
   }
   is_stopped = 0;
   st();
@@ -158,7 +166,6 @@ void st() {
   analogWrite(RPWM,0);
   delay(10);
 }
-
 
 
 
