@@ -43,21 +43,25 @@ def welcome():
     print(colored("---------------------------------------------", "green"))
 
 
+def print_configs():
+
+    print(colored("configs: ", "blue"))
+    print(colored("steering factor: {}".format(configs.st_fac), "blue"))
+    print(colored("image size: {}".format(configs.default_img_size), "blue"))
+    print(colored("segmentation size: {}".format(configs.segmentation_size), "blue"))
+    print(colored("-----------------------------", "blue"))
+
 if __name__ == '__main__':
 
     welcome()
 
     if configs.verbose:
-        print(colored("configs: ", "blue"))
-        print(colored("steering factor: {}".format(configs.st_fac), "blue"))
-        print(colored("image size: {}".format(configs.default_img_size), "blue"))
-        print(colored("segmentation size: {}".format(configs.segmentation_size), "blue"))
-        print(colored("-----------------------------", "blue"))
+        print_configs()
 
-    # initialize all objects
+                                                # initialize all objects
     segmentor = Segmentor("ENET")               # init segmentor
     seg_analyzer = SegAnalyzer(0.05)            # init seg analyzer
- #   steering_predictor = Rambo("steering/final_model.hdf5", "steering/X_train_mean.npy")
+    # steering_predictor = Rambo("steering/final_model.hdf5", "steering/X_train_mean.npy")
     steering_predictor = SteeringPredictor()    # init steering predictor
     # c_predictor = CruisePredictor()           # init cruise predictor
 
@@ -116,8 +120,8 @@ if __name__ == '__main__':
             # -----------------------------------------------------
             # run detection network
             # no image preprocessing required for any detector
-           # angle = -steering_predictor.predict(cv2.cvtColor(cv2.resize(image,(256, 192)),cv2.COLOR_BGR2GRAY))
-           # steering_img = steering_predictor.post_process_image(cv2.resize(image,(320, 160)),angle)
+            # angle = -steering_predictor.predict(cv2.cvtColor(cv2.resize(image,(256, 192)),cv2.COLOR_BGR2GRAY))
+            # steering_img = steering_predictor.post_process_image(cv2.resize(image,(320, 160)),angle)
             angle, steering_img = steering_predictor.predict_steering(image)
             mc.turn(configs.st_fac * angle)
 
@@ -130,17 +134,17 @@ if __name__ == '__main__':
             # buff1 = np.concatenate((steering_img, steering_img), axis=1)      # not running detection
                                                                                 # showing steering image buffer
             if configs.segmentation:                                            # running segmentation
-          #      result, visual = segmentor.semantic_segmentation(image)
+                # result, visual = segmentor.semantic_segmentation(image)
                 result, visual = steering_img, steering_img
                 visual = cv2.resize(visual, (640, 480))
                 # speed = seg_analyzer.analyze_image(result)
                 speed = 1
                 if speed == 0:
                     print(colored("STOP!", "red"))
-            #        c_controller.drive(-1)
-                    #time.sleep(2)
-            #    else:
-            #        c_controller.drive(1)
+                    c_controller.drive(-1)
+                #     time.sleep(2)
+                # else:
+                #     c_controller.drive(1)
 
             else:                                                               # not running segmentation
                 image = cv2.resize(image, (640, 480))

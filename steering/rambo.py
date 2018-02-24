@@ -37,10 +37,7 @@ class Rambo(object):
 
 
     def predict(self, img):
-#        img_path = 'test.jpg'
-#        misc.imsave(img_path, img)
-#        img1 = load_img(img_path, grayscale=True, target_size=(192, 256))
-#        img1 = img_to_array(img1)
+
         img1 = img_to_array(img)
 
         if self.img0 is None:
