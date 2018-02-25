@@ -7,9 +7,11 @@ import argparse
 import cv2
 import utils
 import models
+from scipy import misc
 
 
 def test_rambo():
+
     parser = argparse.ArgumentParser(description='Remote Driving')
     parser.add_argument('--model', type=str,
                         help='Path to model h5 file. Model should be on the same path.')
@@ -34,8 +36,8 @@ def test_rambo():
         if i % 500 == 0:
             print('.', end=" ")
         path = data_path + "/center/" + str(df_imgs["frame_id"][i]) + ".jpg"
-        img = utils.load_image(path)
-        angle = steering_predictor.predict(cv2.cvtColor(cv2.resize(img,(256, 192)),cv2.COLOR_BGR2GRAY))
+        img = misc.imread(path)
+        angle = steering_predictor.predict(img)
         predictions[i] = -1 * angle
 
     print("Writing predictions...")
@@ -85,5 +87,4 @@ def test_homemade():
 
 
 if __name__ == "__main__":
-
-    test_homemade()
+    test_rambo()

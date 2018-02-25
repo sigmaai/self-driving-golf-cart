@@ -180,9 +180,6 @@ class SamplingRNNCell(tf.nn.rnn_cell.RNNCell):
 
 def get_model():
 
-    (train_seq, valid_seq), (mean, std) = process_csv(filename="output/interpolated_concat.csv",
-                                                      val=5)  # concatenated interpolated.csv from rosbags
-    test_seq = read_csv("challenge_2/exampleSubmissionInterpolatedFinal.csv")  # interpolated.csv for testset filled with dummy values
 
     graph = tf.Graph()
 
@@ -275,6 +272,9 @@ def get_model():
 
 
 def train_model():
+
+    (train_seq, valid_seq), (mean, std) = process_csv(filename="output/interpolated_concat.csv", val=5)  # concatenated interpolated.csv from rosbags
+    test_seq = read_csv("challenge_2/exampleSubmissionInterpolatedFinal.csv")  # interpolated.csv for testset filled with dummy values
 
     gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=1.0)
 

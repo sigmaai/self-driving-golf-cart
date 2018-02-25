@@ -56,7 +56,7 @@ def load_image(image_file):
     """
     img = cv2.imread(image_file)
     # removed the cropping part
-    img = img[160:480, 0:640]
+    #img = img[0:480, 0:640]
     img = cv2.resize(img, (configs.image_width, configs.image_height))
     return bgr_rgb(img)
 
