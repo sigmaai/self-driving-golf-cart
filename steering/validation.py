@@ -26,7 +26,7 @@ def test_rambo():
 
     print("Loading model...")
     steering_predictor = Rambo("./final_model.hdf5", "./X_train_mean.npy")
-
+    print(steering_predictor.model.summary())
     print("loading dataset")
     df_imgs = pd.read_csv(data_path + "/interpolated.csv")
 
@@ -36,8 +36,7 @@ def test_rambo():
         if i % 500 == 0:
             print('.', end=" ")
         path = data_path + "/center/" + str(df_imgs["frame_id"][i]) + ".jpg"
-        img = misc.imread(path)
-        angle = steering_predictor.predict(img)
+        angle = steering_predictor.predict_path(path)
         predictions[i] = -1 * angle
 
     print("Writing predictions...")

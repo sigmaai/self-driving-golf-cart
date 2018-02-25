@@ -13,6 +13,7 @@ import scipy.misc
 import utils
 import cv2
 from rambo import Rambo
+import time
 
 
 #initialize our server
@@ -28,6 +29,8 @@ MIN_SPEED = 10
 #and a speed limit
 speed_limit = MAX_SPEED
 
+
+
 #registering event handler for the server
 @sio.on('telemetry')
 def telemetry(sid, data):
@@ -39,6 +42,7 @@ def telemetry(sid, data):
         image = Image.open(BytesIO(base64.b64decode(data["image"])))
         
         try:
+
             steering_angle = -1 * steering_predictor.predict(image)
             # print(steering_angle)
             # lower the throttle as the speed increases
@@ -77,6 +81,8 @@ def send_control(steering_angle, throttle):
 
 
 if __name__ == '__main__':
+
+    start = time.time()
 
     steering_predictor = Rambo("./final_model.hdf5", "./X_train_mean.npy")
 
