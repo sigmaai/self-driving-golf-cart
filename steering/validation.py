@@ -25,10 +25,10 @@ def test_autumn():
     data_path = args.image_folder
     output_path = args.output_path
 
-    cnn_graph = "./aweights/autumn-cnn-model-tf.meta"
-    lstm_json = "./aweights/autumn-lstm-model-keras.json"
-    cnn_weights = "./aweights/autumn-cnn-weights.ckpt"
-    lstm_weights = "./aweights/autumn-lstm-weights.hdf5"
+    cnn_graph = "./weights/autumn/autumn-cnn-model-tf.meta"
+    lstm_json = "./weights/autumn/autumn-lstm-model-keras.json"
+    cnn_weights = "./weights/autumn/autumn-cnn-weights.ckpt"
+    lstm_weights = "./weights/autumn/autumn-lstm-weights.hdf5"
 
     steering_predictor = AutumnModel(cnn_graph, lstm_json, cnn_weights, lstm_weights)
 
@@ -46,7 +46,7 @@ def test_autumn():
         img = cv2.imread(path)
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         angle = steering_predictor.predict(img)
-        predictions[i] =  angle
+        predictions[i] = angle
 
     print("Writing predictions...")
     pd.DataFrame({"frame_id": df_imgs["frame_id"], "steering_angle": predictions}).to_csv(output_path, index=False,

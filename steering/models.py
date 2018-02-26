@@ -8,7 +8,9 @@ from keras.optimizers import SGD
 from keras.regularizers import l2
 from keras.optimizers import Adam
 import keras as K
-import steering.configs as configs
+# import steering.configs as configs
+import configs as configs
+
 
 def nvidia_model():
 
@@ -39,6 +41,7 @@ def nvidia_model():
     # print('steering model is created and compiled...')
     return model
 
+
 def small_vgg_model():
 
     model = Sequential()
@@ -63,6 +66,7 @@ def small_vgg_model():
     model.compile(optimizer=adam, loss=rmse)
     # print('steering model is created and compiled...')
     return model
+
 
 def commaai_model():
 

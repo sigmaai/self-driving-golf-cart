@@ -42,7 +42,7 @@ def telemetry(sid, data):
 
         try:
             image = np.asarray(image)
-            steering_angle = steering_predictor.predict(image)
+            steering_angle = -1 * steering_predictor.predict(image)
             print("steering: " + str(steering_angle))
             # print(steering_angle)
             # lower the throttle as the speed increases
@@ -82,11 +82,10 @@ def send_control(steering_angle, throttle):
 
 if __name__ == '__main__':
 
-
-    cnn_graph = "./aweights/autumn-cnn-model-tf.meta"
-    lstm_json = "./aweights/autumn-lstm-model-keras.json"
-    cnn_weights = "./aweights/autumn-cnn-weights.ckpt"
-    lstm_weights = "./aweights/autumn-lstm-weights.hdf5"
+    cnn_graph = "./weights/autumn/autumn-cnn-model-tf.meta"
+    lstm_json = "./weights/autumn/autumn-lstm-model-keras.json"
+    cnn_weights = "./weights/autumn/autumn-cnn-weights.ckpt"
+    lstm_weights = "./weights/autumn/autumn-lstm-weights.hdf5"
 
     steering_predictor = AutumnModel(cnn_graph, lstm_json, cnn_weights, lstm_weights)
 
