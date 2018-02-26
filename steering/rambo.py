@@ -26,16 +26,12 @@ class Rambo(object):
 
     def predict_image(self, img):
 
-        # img_path = 'test.jpg'
-        # misc.imsave(img_path, img)
-        # img1 = load_img(img_path, grayscale=True, target_size=(192, 256))
-        # img1 = img_to_array(img1)
         img1 = cv2.resize(img_to_array(img),(256,192))
+        if (self.num < 20):
+           misc.imsave("a"+str(self.num)+".jpg", img1)
         img1 = cv2.cvtColor(img1,cv2.COLOR_RGB2GRAY)
         img1 = np.expand_dims(img1, axis = -1)
-#        if (self.num < 20):
-            #misc.imsave("a"+str(self.num)+".jpg", img1[:,:,0])
-#            misc.imsave("a"+str(self.num)+".jpg", img1)
+
 
         self.num += 1
 

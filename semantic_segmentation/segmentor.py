@@ -11,6 +11,7 @@
 import semantic_segmentation.models.enet_naive_upsampling.model as enet
 import semantic_segmentation.utils as utils
 import semantic_segmentation.configs as configs
+from keras.models import load_model
 import os
 import cv2
 import numpy as np
@@ -26,10 +27,6 @@ class Segmentor:
             self.model = enet.build(len(utils.labels), configs.img_height, configs.img_width)
 
         self.model.load_weights(configs.model_path)
-
-        print("-----------------")
-        print("segmentor created")
-        print("-----------------")
 
     def semantic_segmentation(self, image, visualize=True):
 
@@ -47,7 +44,7 @@ class Segmentor:
         else:
             im_mask = image
 
-        img_pred = cv2.cvtColor(im_mask, cv2.COLOR_RGB2BGR)
+        # img_pred = cv2.cvtColor(im_mask, cv2.COLOR_RGB2BGR)
         img_pred = cv2.addWeighted(im_mask, 0.8, image, 0.8, 0)
-
+        img_pred = cv2.resize(img_pred, (640, 480))
         return output, img_pred

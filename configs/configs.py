@@ -7,6 +7,11 @@ st_fac = 20
 verbose = True
 default_img_size = (480, 640)
 segmentation_size = (512, 512)
+cnn_graph = "steering/weights/autumn/autumn-cnn-model-tf.meta"
+lstm_json = "steering/weights/autumn/autumn-lstm-model-keras.json"
+cnn_weights = "steering/weights/autumn/autumn-cnn-weights.ckpt"
+lstm_weights = "steering/weights/autumn/autumn-lstm-weights.hdf5"
+
 cruise = False
 navigation = False
 segmentation = True

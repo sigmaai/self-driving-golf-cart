@@ -5,7 +5,8 @@
 # (c) Neil Nie 2017, Please refer to the license
 # ----------------------------------------------
 #
-#from steering.rambo import Rambo
+# from steering.rambo import Rambo
+from steering.autumn import AutumnModel
 from steering.steering_predictor import SteeringPredictor
 from steering.mc import MC
 from cruise.cruise_predictor import CruisePredictor
@@ -15,87 +16,77 @@ from semantic_segmentation.segmentation_analyzer import SegAnalyzer
 from path_planning.global_path import GlobalPathPlanner
 import configs.configs as configs
 from path_planning.gps import GPS
-from termcolor import colored
-import time
+import helper
 import os
 import cv2
 import numpy as np
+from termcolor import colored
+import time
 
 drive_continue = True
 start_time = 0
 
 
-def get_destination():
-    var = input(colored("Please enter your destination:", "blue"))
-    return str(var)
+def init_ml():
+
+    # steering_predictor = SteeringPredictor()      # init steering predictor
+    # steering_predictor = Rambo("steering/final_model.hdf5", "steering/X_train_mean.npy")
+    steering_predictor = AutumnModel(configs.cnn_graph, configs.lstm_json, configs.cnn_weights, configs.lstm_weights)
+    helper.steering_init_response(steering_predictor.model)
+    c_predictor = None # CruisePredictor()               # init cruise predictor
+    segmentor = Segmentor("ENET")                   # init segmentor
+    helper.seg_init_response()
+    seg_analyzer = SegAnalyzer(0.05)                # init seg analyzer
+
+    return steering_predictor, c_predictor, segmentor, seg_analyzer
 
 
-def get_serial_port():
-    var = input(colored("Please enter serial port number: ", "blue"))
-    return int(var)
+def init_nav():
 
+    print(colored("------ GPS-------", "blue"))
+    os.system("ls /dev/ttyUSB*")
+    gps_port = helper.get_serial_port()
+    gps = GPS(gps_port)
+    start = gps.query_gps_location()
+    print("start: " + str(start))
+    destination = helper.get_destination()
+    gp_planner = GlobalPathPlanner()
+    directions = gp_planner.direction(start, destination)
+    print(directions)
 
-def welcome():
-    print(colored("Welcome to the self-driving golf cart program", "green"))
-    print(colored("By Michael Meng & Neil Nie", "green"))
-    print(colored("Thanks for driving with us", "green"))
-    print(colored("v.0.2.1", "green"))
-    print(colored("---------------------------------------------", "green"))
-
-
-def print_configs():
-
-    print(colored("configs: ", "blue"))
-    print(colored("steering factor: {}".format(configs.st_fac), "blue"))
-    print(colored("image size: {}".format(configs.default_img_size), "blue"))
-    print(colored("segmentation size: {}".format(configs.segmentation_size), "blue"))
-    print(colored("-----------------------------", "blue"))
 
 if __name__ == '__main__':
 
-    welcome()
+    helper.welcome()
 
     if configs.verbose:
-        print_configs()
+        helper.print_configs()
 
-                                                # initialize all objects
-    segmentor = Segmentor("ENET")               # init segmentor
-    seg_analyzer = SegAnalyzer(0.05)            # init seg analyzer
-    # steering_predictor = Rambo("steering/final_model.hdf5", "steering/X_train_mean.npy")
-    steering_predictor = SteeringPredictor()    # init steering predictor
-    # c_predictor = CruisePredictor()           # init cruise predictor
+    steering_predictor, c_predictor, segmentor, seg_analyzer = init_ml()
 
-    # initiate path planner, including GPS and Google Maps API
-    # enabling navigation
     if configs.navigation:
-        print(colored("------ GPS-------", "blue"))
-        os.system("ls /dev/ttyUSB*")
-        gps_port = get_serial_port()
-        gps = GPS(gps_port)
-        start = gps.query_gps_location()
-        print("start: " + str(start))
-        # destination = get_destination()
-        # gp_planner = GlobalPathPlanner()
-        # directions = gp_planner.direction(start, destination)
-        # print(directions)
+        init_nav()
 
     if configs.default_st_port:                 # check for serial setting
         print(colored("using system default serial ports", "blue"))
         mc = MC()
         c_controller = SC()
     else:
-        print(colored("------steering-------", "blue"))
+        print(colored("------ serial ports -------", "blue"))
+        print(colored("-------- steering ---------", "blue"))
         os.system("ls /dev/ttyUSB*")
-        st_port = get_serial_port()
+        st_port = helper.get_serial_port()
         mc = MC(st_port)
 
-        print(colored("-------cruise-------", "blue"))
+        print(colored("--------- cruise ---------", "blue"))
         os.system("ls /dev/ttyUSB*")
-        cc_port = get_serial_port()                     # get serial ports
+        cc_port = helper.get_serial_port()                     # get serial ports
         c_controller = SC(cc_port)                      # init CC controller
-        print(colored("---------------------", "blue"))
+        print(colored("--------------------------", "blue"))
 
-    # OpenCV main loop
+
+    # ----------------------- OpenCV main loop ------------------------
+    # -----------------------------------------------------------------
 
     cap = cv2.VideoCapture(configs.CV_CAP_STR)
 
@@ -117,44 +108,45 @@ if __name__ == '__main__':
                 break
             ret_val, image = cap.read()
 
-            # -----------------------------------------------------
-            # run detection network
-            # no image preprocessing required for any detector
+            # --------------------------- steering ---------------------------
+            #
+            # -------------------rambo-----------------------------
             # angle = -steering_predictor.predict(cv2.cvtColor(cv2.resize(image,(256, 192)),cv2.COLOR_BGR2GRAY))
             # steering_img = steering_predictor.post_process_image(cv2.resize(image,(320, 160)),angle)
-            angle, steering_img = steering_predictor.predict_steering(image)
+            # -------------------own-------------------------------
+            # angle, steering_img = steering_predictor.predict_steering(image)
+            # --------------------autumn---------------------------
+            angle = steering_predictor.predict(image)
+            steering_img = steering_predictor.post_process_image(image=cv2.resize(image, (320, 160)), angle=angle)
+            # -----------------------------------------------------
+            steering_img = cv2.resize(steering_img, (640, 480))
             mc.turn(configs.st_fac * angle)
 
-            # if configs.cruise:
-            #    cruise_visual = c_predictor.predict_speed(image)
-            #    buff1 = np.concatenate((steering_img, cruise_visual), axis=1)
-            # else:
-            steering_img = cv2.resize(steering_img, (640, 480))
+            # ------------------------- segmentation -------------------------
+            #
 
-            # buff1 = np.concatenate((steering_img, steering_img), axis=1)      # not running detection
-                                                                                # showing steering image buffer
-            if configs.segmentation:                                            # running segmentation
-                # result, visual = segmentor.semantic_segmentation(image)
-                result, visual = steering_img, steering_img
-                visual = cv2.resize(visual, (640, 480))
-                # speed = seg_analyzer.analyze_image(result)
-                speed = 1
+            if cv2.waitKey(33) == ord('a'):
+                c_controller.drive(1)
+                visual = image
+            else:
+                result, visual = segmentor.semantic_segmentation(image, visualize=False)
+                speed = seg_analyzer.analyze_image(result)
                 if speed == 0:
                     print(colored("STOP!", "red"))
                     c_controller.drive(-1)
-                #     time.sleep(2)
-                # else:
-                #     c_controller.drive(1)
+                    time.sleep(2)
+                else:
+                    c_controller.drive(1)
 
-            else:                                                               # not running segmentation
-                image = cv2.resize(image, (640, 480))
-                visual = image                                                  # show original image
-                
+            # ------------------------- ------------ -------------------------
+
+            image = cv2.resize(image, (640, 480))
+
             buff1 = np.concatenate((steering_img, visual), axis=1)
             # vidBuf = np.concatenate((buff1, buff2), axis=0)
             vidBuf = buff1
 
-            # show the stuff
+            # ------------------ show the stuff -------------------
             # -----------------------------------------------------
             cv2.imshow(windowName, vidBuf)
             key = cv2.waitKey(10)

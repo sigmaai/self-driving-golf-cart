@@ -8,7 +8,7 @@ from keras.optimizers import SGD
 from keras.regularizers import l2
 from keras.optimizers import Adam
 import keras as K
-import configs as configs
+import steering.configs as configs
 
 def nvidia_model():
 

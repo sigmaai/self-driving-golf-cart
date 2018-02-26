@@ -9,7 +9,7 @@ val_dir = "/Volumes/Personal_Drive/Datasets/udacity-driving/steering_validation/
 image_width = 320
 image_height = 160
 load_weights = True
-model_path = "./steering/trained-cai-v6.h5"
+model_path = "./steering/weights/own/trained-cai-v6.h5"
 train_model_path = "./trained-cai-v6.h5"
 
 BLACK = (  0,   0,   0)

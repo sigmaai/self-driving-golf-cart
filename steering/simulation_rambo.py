@@ -9,7 +9,7 @@ import eventlet.wsgi
 from PIL import Image   #image manipulation
 from flask import Flask #web framework
 from io import BytesIO  #input output
-import scipy.misc
+import scipy.misc as misc
 import utils
 import cv2
 from rambo import Rambo
@@ -18,6 +18,7 @@ import time
 
 #initialize our server
 sio = socketio.Server()
+buffer = None
 #our flask (web) app
 app = Flask(__name__)
 prev_image_array = None
@@ -30,7 +31,6 @@ MIN_SPEED = 10
 speed_limit = MAX_SPEED
 
 
-
 #registering event handler for the server
 @sio.on('telemetry')
 def telemetry(sid, data):
@@ -40,10 +40,10 @@ def telemetry(sid, data):
         speed = float(data["speed"])
         # The current image from the center camera of the car
         image = Image.open(BytesIO(base64.b64decode(data["image"])))
-        
+
         try:
 
-            steering_angle = -1 * steering_predictor.predict(image)
+            steering_angle = -1 * steering_predictor.predict_image(image)
             # print(steering_angle)
             # lower the throttle as the speed increases
             # if the speed is above the current speed limit, we are on a downhill.

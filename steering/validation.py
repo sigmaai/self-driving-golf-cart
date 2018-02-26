@@ -8,6 +8,50 @@ import cv2
 import utils
 import models
 from scipy import misc
+from autumn import AutumnModel
+
+
+def test_autumn():
+
+    parser = argparse.ArgumentParser(description='Remote Driving')
+    parser.add_argument('--model', type=str,
+                        help='Path to model h5 file. Model should be on the same path.')
+    parser.add_argument('--image_folder', type=str, default='',
+                        help='Path to image folder. This is where the images from the run will be saved.')
+    parser.add_argument('--output_path', type=str, default='',
+                        help='Path to image folder. This is where the images from the run will be saved.')
+    args = parser.parse_args()
+
+    data_path = args.image_folder
+    output_path = args.output_path
+
+    cnn_graph = "./aweights/autumn-cnn-model-tf.meta"
+    lstm_json = "./aweights/autumn-lstm-model-keras.json"
+    cnn_weights = "./aweights/autumn-cnn-weights.ckpt"
+    lstm_weights = "./aweights/autumn-lstm-weights.hdf5"
+
+    steering_predictor = AutumnModel(cnn_graph, lstm_json, cnn_weights, lstm_weights)
+
+    print(steering_predictor.model.summary())
+
+    print("loading dataset")
+    df_imgs = pd.read_csv(data_path + "/interpolated.csv")
+
+    print("predicting")
+    predictions = np.empty(len(df_imgs))
+    for i in range(len(df_imgs)):
+        if i % 500 == 0:
+            print('.', end=" ")
+        path = data_path + "/center/" + str(df_imgs["frame_id"][i]) + ".jpg"
+        img = cv2.imread(path)
+        img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        angle = steering_predictor.predict(img)
+        predictions[i] =  angle
+
+    print("Writing predictions...")
+    pd.DataFrame({"frame_id": df_imgs["frame_id"], "steering_angle": predictions}).to_csv(output_path, index=False,
+                                                                                          header=True)
+    print("Done!")
 
 
 def test_rambo():
@@ -86,4 +130,4 @@ def test_homemade():
 
 
 if __name__ == "__main__":
-    test_rambo()
+    test_autumn()
