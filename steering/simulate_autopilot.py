@@ -39,7 +39,7 @@ def telemetry(sid, data):
 
         try:
             image = np.asarray(image)
-            steering_angle = -1 * steering_predictor.predict(image)
+            steering_angle = steering_predictor.predict(image)
             print("steering: " + str(steering_angle))
             # print(steering_angle)
             # lower the throttle as the speed increases
