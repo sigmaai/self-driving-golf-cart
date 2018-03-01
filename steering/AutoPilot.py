@@ -1,6 +1,6 @@
 import tensorflow as tf
 import scipy.misc
-import ap_model as model
+import steering.ap_model as model
 import cv2
 from subprocess import call
 
@@ -10,7 +10,7 @@ class AutoPilot:
     def __init__(self):
         sess = tf.InteractiveSession()
         saver = tf.train.Saver()
-        saver.restore(sess, "./weights/AutoPilot/model.ckpt")
+        saver.restore(sess, "steering/weights/AutoPilot/model.ckpt")
 
     def predict(self, frame):
 

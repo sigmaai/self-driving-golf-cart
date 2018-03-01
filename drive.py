@@ -21,6 +21,7 @@ import helper
 import os
 import cv2
 import numpy as np
+from steering.AutoPilot import AutoPilot as AP
 from termcolor import colored
 import time
 
@@ -30,10 +31,10 @@ start_time = 0
 
 def init_ml():
 
-    # steering_predictor = SteeringPredictor()      # init steering predictor
+    steering_predictor = SteeringPredictor()      # init steering predictor
     # steering_predictor = Rambo("steering/final_model.hdf5", "steering/X_train_mean.npy")
-    steering_predictor = AutumnModel(configs.cnn_graph, configs.lstm_json, configs.cnn_weights, configs.lstm_weights)
-    helper.steering_init_response(steering_predictor.model)
+    #steering_predictor = AutumnModel(configs.cnn_graph, configs.lstm_json, configs.cnn_weights, configs.lstm_weights)
+    # helper.steering_init_response(steering_predictor.model)
     c_predictor = None # CruisePredictor()               # init cruise predictor
     segmentor = Segmentor("ENET")                   # init segmentor
     helper.seg_init_response()
@@ -115,23 +116,27 @@ if __name__ == '__main__':
             # angle = -steering_predictor.predict(cv2.cvtColor(cv2.resize(image,(256, 192)),cv2.COLOR_BGR2GRAY))
             # steering_img = steering_predictor.post_process_image(cv2.resize(image,(320, 160)),angle)
             # -------------------own-------------------------------
-            # angle, steering_img = steering_predictor.predict_steering(image)
-            # --------------------autumn---------------------------
-            angle = steering_predictor.predict(image)
-            steering_img = steering_predictor.post_process_image(image=cv2.resize(image, (320, 160)), angle=angle)
-            # -----------------------------------------------------
+            angle, steering_img = steering_predictor.predict_steering(image)
             steering_img = cv2.resize(steering_img, (640, 480))
+            #angle = -1 * steering_predictor.predict(image)
+            #print(angle)
+            # --------------------autumn---------------------------
+            #angle = steering_predictor.predict(image)
+            #steering_img = steering_predictor.post_process_image(image=cv2.resize(image, (320, 160)), angle=angle)
+            # -----------------------------------------------------
+
             mc.turn(configs.st_fac * angle)
 
             # ------------------------- segmentation -------------------------
             #
 
             if cv2.waitKey(33) == ord('a'):
-                c_controller.drive(1)
-                visual = image
+                speed = 1
+                visual = cv2.resize(image, (640, 480))
             else:
-                result, visual = segmentor.semantic_segmentation(image, visualize=False)
+                result, visual = segmentor.semantic_segmentation(image, visualize=True)
                 speed = seg_analyzer.analyze_image(result)
+
                 if speed == 0:
                     print(colored("STOP!", "red"))
                     c_controller.drive(-1)
