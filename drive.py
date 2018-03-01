@@ -17,6 +17,8 @@ from semantic_segmentation.segmentation_analyzer import SegAnalyzer
 from path_planning.global_path import GlobalPathPlanner
 import configs.configs as configs
 from path_planning.gps import GPS
+
+from imutils.video import VideoStream
 import helper
 import os
 import cv2
@@ -34,9 +36,8 @@ def init_ml():
     # steering_predictor = Rambo("steering/final_model.hdf5", "steering/X_train_mean.npy")
     steering_predictor = AutumnModel(configs.cnn_graph, configs.lstm_json, configs.cnn_weights, configs.lstm_weights)
     helper.steering_init_response(steering_predictor.model)
-    c_predictor = None # CruisePredictor()               # init cruise predictor
+    c_predictor = None # CruisePredictor()          # init cruise predictor
     segmentor = Segmentor("ENET")                   # init segmentor
-    helper.seg_init_response()
     seg_analyzer = SegAnalyzer(0.05)                # init seg analyzer
 
     return steering_predictor, c_predictor, segmentor, seg_analyzer
@@ -91,6 +92,10 @@ if __name__ == '__main__':
 
     cap = cv2.VideoCapture(configs.CV_CAP_STR)
 
+    vid_left = VideoStream(src=configs.left_vid_src).start()
+    vid_center = VideoStream(src=configs.cent_vid_src).start()
+    vid_right = VideoStream(src=configs.right_vid_src).start()
+
     if cap.isOpened():
 
         windowName = "car detection"
@@ -107,6 +112,11 @@ if __name__ == '__main__':
             # Check to see if the user closed the window
             if cv2.getWindowProperty(windowName, 0) < 0:
                 break
+
+            left_frame = vid_left.read()
+            center_frame = vid_center.read()
+            right_frame = vid_right.read()
+
             ret_val, image = cap.read()
 
             # --------------------------- steering ---------------------------
@@ -115,16 +125,15 @@ if __name__ == '__main__':
             # angle = -steering_predictor.predict(cv2.cvtColor(cv2.resize(image,(256, 192)),cv2.COLOR_BGR2GRAY))
             # steering_img = steering_predictor.post_process_image(cv2.resize(image,(320, 160)),angle)
             # -------------------own-------------------------------
-            # angle, steering_img = steering_predictor.predict_steering(image)
+            angle, steering_img = steering_predictor.predict_steering(image)
             # --------------------autumn---------------------------
-            angle = steering_predictor.predict(image)
-            steering_img = steering_predictor.post_process_image(image=cv2.resize(image, (320, 160)), angle=angle)
+            # angle = steering_predictor.predict(image)
+            # steering_img = steering_predictor.post_process_image(image=cv2.resize(image, (320, 160)), angle=angle)
             # -----------------------------------------------------
             steering_img = cv2.resize(steering_img, (640, 480))
             mc.turn(configs.st_fac * angle)
 
             # ------------------------- segmentation -------------------------
-            #
 
             if cv2.waitKey(33) == ord('a'):
                 c_controller.drive(1)

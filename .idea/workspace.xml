@@ -3,14 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="f9d6eb70-00d3-4b11-88c3-998eeea85bdb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/others/AGC Checklist.docx" afterPath="$PROJECT_DIR$/others/AGC Checklist.docx" />
-      <change beforePath="$PROJECT_DIR$/others/EPTs List.docx" afterPath="$PROJECT_DIR$/others/EPTs List.docx" />
-      <change beforePath="$PROJECT_DIR$/others/steering_prediction.xlsx" afterPath="$PROJECT_DIR$/others/steering_prediction.xlsx" />
-      <change beforePath="$PROJECT_DIR$/others/~$steering_prediction.xlsx" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/steering/komanda.py" afterPath="$PROJECT_DIR$/steering/komanda.py" />
-      <change beforePath="$PROJECT_DIR$/steering/simulate_autopilot.py" afterPath="$PROJECT_DIR$/steering/simulate_autopilot.py" />
+      <change beforePath="$PROJECT_DIR$/configs/configs.py" afterPath="$PROJECT_DIR$/configs/configs.py" />
+      <change beforePath="$PROJECT_DIR$/drive.py" afterPath="$PROJECT_DIR$/drive.py" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/result3_0.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/result3_1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/semantic_segmentation/segmentation_analyzer.py" afterPath="$PROJECT_DIR$/semantic_segmentation/segmentation_analyzer.py" />
       <change beforePath="$PROJECT_DIR$/steering/simulation.py" afterPath="$PROJECT_DIR$/steering/simulation.py" />
-      <change beforePath="$PROJECT_DIR$/steering/validation.py" afterPath="$PROJECT_DIR$/steering/validation.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -69,33 +67,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AutoPilot.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/steering/AutoPilot.py">
+      <file leaf-file-name="drive.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drive.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state relative-caret-position="147">
+              <caret line="115" column="31" lean-forward="false" selection-start-line="115" selection-start-column="31" selection-end-line="115" selection-end-column="31" />
               <folding>
-                <element signature="e#0#23#0" expanded="true" />
+                <element signature="e#276#315#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="validation.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/steering/validation.py">
+      <file leaf-file-name="segmentation_analyzer.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/semantic_segmentation/segmentation_analyzer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+            <state relative-caret-position="870">
+              <caret line="58" column="24" lean-forward="true" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/semantic_segmentation/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="623">
+              <caret line="55" column="13" lean-forward="true" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="simulation.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/steering/simulation.py">
+      <file leaf-file-name="configs.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/configs/configs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+            <state relative-caret-position="285">
+              <caret line="19" column="17" lean-forward="false" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -104,22 +114,10 @@
       <file leaf-file-name="komanda.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/steering/komanda.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
+            <state relative-caret-position="660">
               <caret line="54" column="112" lean-forward="false" selection-start-line="54" selection-start-column="112" selection-end-line="54" selection-end-column="112" />
               <folding>
                 <element signature="e#144#159#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="simulation_komanda.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/steering/simulation_komanda.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="960">
-              <caret line="64" column="9" lean-forward="true" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#56#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -206,7 +204,6 @@
         <option value="$PROJECT_DIR$/path_planning/gps.py" />
         <option value="$PROJECT_DIR$/cruise/cruise_controller.py" />
         <option value="$PROJECT_DIR$/cruise/speed_control/speed_control.ino" />
-        <option value="$PROJECT_DIR$/semantic_segmentation/segmentation_analyzer.py" />
         <option value="$PROJECT_DIR$/semantic_segmentation/test.py" />
         <option value="$PROJECT_DIR$/steering/train.py" />
         <option value="$PROJECT_DIR$/steering/configs.py" />
@@ -215,12 +212,10 @@
         <option value="$PROJECT_DIR$/steering/simulation_rambo.py" />
         <option value="$PROJECT_DIR$/steering/rambo.py" />
         <option value="$PROJECT_DIR$/steering/autumn.py" />
-        <option value="$PROJECT_DIR$/configs/configs.py" />
         <option value="$PROJECT_DIR$/helper.py" />
         <option value="$PROJECT_DIR$/semantic_segmentation/segmentor.py" />
         <option value="$PROJECT_DIR$/steering/simulation_autumn.py" />
         <option value="$PROJECT_DIR$/steering/models.py" />
-        <option value="$PROJECT_DIR$/drive.py" />
         <option value="$PROJECT_DIR$/steering/ap_model.py" />
         <option value="$PROJECT_DIR$/steering/AutoPilot.py" />
         <option value="$PROJECT_DIR$/steering/simulate_autopilot.py" />
@@ -228,6 +223,9 @@
         <option value="$PROJECT_DIR$/steering/simulation_komanda.py" />
         <option value="$PROJECT_DIR$/steering/validation.py" />
         <option value="$PROJECT_DIR$/steering/simulation.py" />
+        <option value="$PROJECT_DIR$/configs/configs.py" />
+        <option value="$PROJECT_DIR$/drive.py" />
+        <option value="$PROJECT_DIR$/semantic_segmentation/segmentation_analyzer.py" />
       </list>
     </option>
   </component>
@@ -279,7 +277,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -296,12 +293,13 @@
             <path>
               <item name="ALVNS" type="b2602c69:ProjectViewProjectNode" />
               <item name="ALVNS" type="462c0819:PsiDirectoryNode" />
-              <item name="steering" type="462c0819:PsiDirectoryNode" />
+              <item name="semantic_segmentation" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -490,6 +488,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1418" height="877" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286445" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47080746" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
@@ -497,7 +496,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32736573" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28644502" sideWeight="0.49713877" order="2" side_tool="false" content_ui="tabs" x="21" y="333" width="1398" height="257" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36061382" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29723838" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30159885" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988167" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5136494" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -582,20 +581,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/semantic_segmentation/preprocess_dataset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="61" column="8" lean-forward="false" selection-start-line="61" selection-start-column="8" selection-end-line="61" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cruise/cruise_predictor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="50" lean-forward="false" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/keras/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="251">
@@ -685,13 +670,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/semantic_segmentation/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2465">
-          <caret line="226" column="20" lean-forward="false" selection-start-line="226" selection-start-column="10" selection-end-line="226" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/semantic_segmentation/configs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -775,24 +753,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/semantic_segmentation/segmentation_analyzer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/helper.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="19" column="32" lean-forward="false" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/configs/configs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -821,13 +785,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="870">
           <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drive.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -871,44 +828,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="419">
           <caret line="3206" column="0" lean-forward="false" selection-start-line="3206" selection-start-column="0" selection-end-line="3206" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2017.3/python_stubs/-1199943127/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="3691" column="8" lean-forward="false" selection-start-line="3691" selection-start-column="8" selection-end-line="3691" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2017.3/python_stubs/-1199943127/builtins.py" />
     <entry file="file://$PROJECT_DIR$/steering/simulation_komanda.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="64" column="9" lean-forward="true" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
+        <state relative-caret-position="735">
+          <caret line="64" column="9" lean-forward="false" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
           <folding>
-            <element signature="e#0#56#0" expanded="true" />
+            <element signature="e#0#56#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/steering/komanda.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
+        <state relative-caret-position="660">
           <caret line="54" column="112" lean-forward="false" selection-start-line="54" selection-start-column="112" selection-end-line="54" selection-end-column="112" />
           <folding>
             <element signature="e#144#159#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/steering/AutoPilot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -921,11 +860,67 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/steering/AutoPilot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#23#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/steering/simulation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drive.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="115" column="31" lean-forward="false" selection-start-line="115" selection-start-column="31" selection-end-line="115" selection-end-column="31" />
+          <folding>
+            <element signature="e#276#315#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configs/configs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="17" lean-forward="false" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/semantic_segmentation/result3_0.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/semantic_segmentation/result3_1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/semantic_segmentation/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="623">
+          <caret line="55" column="13" lean-forward="true" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/semantic_segmentation/segmentation_analyzer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="58" column="24" lean-forward="true" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

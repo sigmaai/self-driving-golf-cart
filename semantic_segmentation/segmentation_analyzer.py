@@ -1,6 +1,7 @@
 import cv2
+import math
 # import semantic_segmentation.configs as configs
-# import
+
 
 class SegAnalyzer:
 
@@ -34,11 +35,27 @@ class SegAnalyzer:
         else:
             return 1
 
-    def analyze_for_steering(self, im_mask):
+    def analyze_side_cam(self, left, right):
 
         # parameter: image mask (output of segmentation network)
         # return: steering value
 
+        left_mask = left[:, :, 2]
+        right_mask = right[:, :, 2]
 
+        left_mask[left_mask > self.threshold] = 1
+        left_mask[left_mask < self.threshold] = 0
+        left_len = len(left_mask)
 
-        return 1.0
+        right_mask[right_mask > self.threshold] = 1
+        right_mask[right_mask < self.threshold] = 0
+        right_len = len(right_mask)
+
+        if left_len > right_len:
+            angle = right_len / left_len * math.pi / 4
+            return angle
+        elif left_len < right_len:
+            angle = left_len / right_len * math.pi / 4 * -1
+            return angle
+        else:
+            return 0.0
