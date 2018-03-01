@@ -8,7 +8,6 @@ class SegAnalyzer:
     def __init__(self, threshold):
         self.threshold = threshold
 
-
     def analyze_image(self, im_mask):
 
         # parameter:
