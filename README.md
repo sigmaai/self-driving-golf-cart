@@ -17,20 +17,18 @@ This project has several different modules.
 The software behind the steering system is largly inspired by work done by [Nvidia](https://arxiv.org/pdf/1604.07316.pdf). The hardware system is custom designed in house. Here is a video demo.
 
 
-<center>[![IMAGE ALT TEXT HERE](https://i.ytimg.com/vi/4bZ40W4BGoE/hqdefault.jpg)](https://www.youtube.com/watch?v=CcUXtViFQeU&t=5s)</center>
+[![IMAGE ALT TEXT HERE](https://i.ytimg.com/vi/4bZ40W4BGoE/hqdefault.jpg)](https://www.youtube.com/watch?v=CcUXtViFQeU&t=5s)
 
 
 ## Autonomous Cruise Control System (ACCS)
 ### Semantic Segmentation
 
-<center><img src="./media/seg.png" alt="Drawing" style="width: 480px "/>
-</center>
+<img src="./media/seg.png" alt="Drawing" style="width: 480px;"/>
 
 
 Understanding the work around the vehicle through segmentation, and making decisions based on the segmentic segmentation results
 
-<center>[![IMAGE ALT TEXT HERE](https://i.ytimg.com/vi/_y2RCakRrc4/hqdefault.jpg)](https://www.youtube.com/watch?v=_y2RCakRrc4)</center>
-
+[![IMAGE ALT TEXT HERE](https://i.ytimg.com/vi/_y2RCakRrc4/hqdefault.jpg)](https://www.youtube.com/watch?v=_y2RCakRrc4)
 
 
 ## Path Planning
@@ -38,8 +36,15 @@ Understanding the work around the vehicle through segmentation, and making decis
 Coming soon...
 
 ## Contact / Info
-Developers:
+If you are interested in the detailed development process of this project, you can visit Neil's blog at [neilnie.com](neilnie.com) to find out more about it. Neil will make sure to keep you posted about all of the latest development on the club. 
 
-- Michael Meng | [email](mailto:xmeng18@deerfield.edu) | [Github](https://github.com/xmeng17)
-- Neil (Yongyang) Nie | [Email](mailto:yongyang.nie@gmail.com) | [Github](github.com/NeilNie) | [Website](neilnie.com) | [Linkedin](https://www.linkedin.com/in/yongyang-neil-nie-896204118/)
+**Developers:**
+
+<img src="./media/michael_profile.jpg" alt="Drawing" style="width:100px;"/>
+
+**Michael Meng** | [Email](mailto:xmeng18@deerfield.edu) | [Github](https://github.com/xmeng17)
+
+<img src="./media/neil_profile.jpg" alt="Drawing" style="width:100px;"/>
+
+**Neil (Yongyang) Nie** | [Email](mailto:yongyang.nie@gmail.com) | [Github](https://www.github.com/NeilNie) | [Website](neilnie.com) | [Linkedin](https://www.linkedin.com/in/yongyang-neil-nie-896204118/)
 
