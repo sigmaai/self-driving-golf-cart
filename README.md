@@ -23,7 +23,7 @@ The software behind the steering system is largly inspired by work done by [Nvid
 ## Autonomous Cruise Control System (ACCS)
 ### Semantic Segmentation
 
-<img src="./media/seg.png" alt="Drawing" style="width: 480px;"/>
+<img src="./media/seg.png" alt="Drawing" width="480"/>
 
 
 Understanding the work around the vehicle through segmentation, and making decisions based on the segmentic segmentation results
@@ -40,11 +40,11 @@ If you are interested in the detailed development process of this project, you c
 
 **Developers:**
 
-<img src="./media/michael_profile.jpg" alt="Drawing" style="width:100px;"/>
+<img src="./media/michael_profile.jpg" alt="Drawing" width="100"/>
 
 **Michael Meng** | [Email](mailto:xmeng18@deerfield.edu) | [Github](https://github.com/xmeng17)
 
-<img src="./media/neil_profile.jpg" alt="Drawing" style="width:100px;"/>
+<img src="./media/neil_profile.jpg" alt="Drawing" width="100"/>
 
 **Neil (Yongyang) Nie** | [Email](mailto:yongyang.nie@gmail.com) | [Github](https://www.github.com/NeilNie) | [Website](neilnie.com) | [Linkedin](https://www.linkedin.com/in/yongyang-neil-nie-896204118/)
 
