@@ -28,7 +28,7 @@ class Segmentor:
 
         self.model.load_weights(configs.model_path)
 
-    def semantic_segmentation(self, image, visualize=True):
+    def semantic_segmentation(self, image, visualize=False):
 
         # parameters
         # image: input image
