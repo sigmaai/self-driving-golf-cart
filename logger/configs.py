@@ -7,6 +7,7 @@ st_fac = 20
 verbose = True
 default_img_size = (480, 640)
 segmentation_size = (512, 512)
+dataset_path = ""
 
 cruise = False
 navigation = False
