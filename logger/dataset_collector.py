@@ -17,11 +17,11 @@ from termcolor import colored
 import time
 import logger.configs as configs
 import smbus
+import csv
 
-bus = smbus.SMBus(0)
-address = 0x70
 
 data_points = []
+
 
 def video_loop():
 
@@ -49,6 +49,7 @@ def video_loop():
                "/center/" + str(count) + ".png",
                "/right/" + str(count) + ".png",
                str(steering_angle)]
+
         data_points.append(row)
 
         vid_buffer = np.concatenate((left_frame, center_frame, right_frame), axis=1)
@@ -57,6 +58,12 @@ def video_loop():
         key = cv2.waitKey(10)
 
         if key == 27:  # ESC key
+
+            with open(configs.dataset_path + "/lables.csv", 'w') as myfile:
+                wr = csv.writer(myfile, lineterminator='\n')
+                for row in data_points:
+                    wr.writerow(row)
+
             cv2.destroyAllWindows()
             print(colored("saving recorded data..."))
             print(colored("-------------------------", "green"))
@@ -66,8 +73,16 @@ def video_loop():
 
 
 def read_steering_angle():
-    light = bus.read_byte_data(address, 1)
-    return light
+
+    bytes = bus.bus.read_i2c_block_data(address, 0, 8)
+    val = ""
+    for byte in bytes:
+        if byte is not 255:
+            val = val + chr(byte)
+        else:
+            break
+    val = float(val) * 0.00261799 / 4
+    return val
 
 
 def setup_dirs():
@@ -83,7 +98,8 @@ def setup_dirs():
 if __name__ == '__main__':
 
     setup_dirs()
-
+    bus = smbus.SMBus(0)
+    address = 0x50
     count = 0
 
     vid_left = VideoStream(src=configs.left_vid_src).start()
