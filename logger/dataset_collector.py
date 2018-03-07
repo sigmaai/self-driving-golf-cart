@@ -16,12 +16,16 @@ import numpy as np
 from termcolor import colored
 import time
 import logger.configs as configs
+import smbus
 
+bus = smbus.SMBus(0)
+address = 0x70
 
 data_points = []
 
-
 def video_loop():
+
+    count = 0
 
     while True:
 
@@ -38,7 +42,7 @@ def video_loop():
         cv2.imwrite(configs.dataset_path + "/center/" + str(count) + ".png", center_frame)
         cv2.imwrite(configs.dataset_path + "/right/" + str(count) + ".png", right_frame)
 
-        steering_angle = read_serial()
+        steering_angle = read_steering_angle()
         count = count + 1
         row = [str(count),
                "/left/" + str(count) + ".png",
@@ -61,24 +65,10 @@ def video_loop():
             break
 
 
-def read_serial(port):
+def read_steering_angle():
+    light = bus.read_byte_data(address, 1)
+    return light
 
-    s1.flushInput()
-
-    while True:
-
-        if s1.inWaiting() > 0:
-        	value = ""
-        	while ord(s1.read(1)) is not "b":
-        		s1.read(1)
-        	while ord(s1.read(1)) is not "e":
-        		value = value + ord(s1.read(1))
-            else:
-            	print("invalid serial input")
-
-            return value
-        else:
-        	return 0
 
 def setup_dirs():
 
@@ -93,7 +83,7 @@ def setup_dirs():
 if __name__ == '__main__':
 
     setup_dirs()
-	s1 = serial.Serial(0, 9600)
+
     count = 0
 
     vid_left = VideoStream(src=configs.left_vid_src).start()

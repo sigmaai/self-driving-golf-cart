@@ -5,23 +5,33 @@ const int encoder_b = 3; // White - pin 3 - Digital
 long encoder = 0;
 
 void setup() {
-  Serial.begin(9600);
+  
+  pinMode(13, OUTPUT);
+  Serial.begin(9600); // start serial for output
+  // initialize i2c as slave
+  Wire.begin(SLAVE_ADDRESS);
+
+  // define callbacks for i2c communication
+  Wire.onReceive(receiveData);
+  Wire.onRequest(sendData);
+  
   pinMode(encoder_a, INPUT_PULLUP);
   pinMode(encoder_b, INPUT_PULLUP);
 
   attachInterrupt(0, encoderPinChangeA, CHANGE);
   attachInterrupt(1, encoderPinChangeB, CHANGE);
+
+  Serial.println(“Ready!”);
 }
 
 void loop() {
-  send_serial();
+  
+  double angle = 0.00261799*encoder / 4;
+  send_serial(angle);
 }
 
-void send_serial() {
-
-  String count = String(encoder);
-  count = "b" + count + "e";
-  Serial.write(encoder);
+void sendData(angle) {
+  Wire.write(angle);
 }
 
 void encoderPinChangeA() {
