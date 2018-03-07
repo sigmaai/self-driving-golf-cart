@@ -1,20 +1,22 @@
 import argparse         # parsing command line arguments
 import base64           # decoding camera images
 from datetime import datetime
-import os               #high level file operations #reading and writing files
-import shutil
+import os
+import cv2
 import numpy as np
 import socketio         #real-time server
-import eventlet         #concurrent networking
 import eventlet.wsgi
 from PIL import Image   #image manipulation
 from flask import Flask #web framework
 from io import BytesIO  #input output
-import cv2
-import scipy.misc
-import utils
-import models
+from scipy import misc
 
+import steering.utils as utils
+import steering.models as models
+from steering.autumn import AutumnModel
+from steering.rambo import Rambo
+from steering.komanda import KomandaModel
+from steering.auto_pilot import AutoPilot
 
 #initialize our server
 sio = socketio.Server()
@@ -23,7 +25,7 @@ app = Flask(__name__)
 prev_image_array = None
 
 #set min/max speed for our autonomous car
-MAX_SPEED = 30
+MAX_SPEED = 20
 MIN_SPEED = 5
 
 #and a speed limit
@@ -43,12 +45,28 @@ def telemetry(sid, data):
         image = Image.open(BytesIO(base64.b64decode(data["image"])))
         
         try:
-            image = np.asarray(image)       # from PIL image to numpy array
-            image = utils.preprocess(image) # apply the preprocessing
-            # image = cv2.resize(image, (480, 640))
-            image = np.array([image])       # the model expects 4D array
-            # predict the steering angle for the image
-            steering_angle =  -1.0 * float(cnn.predict(image, batch_size=1))
+
+            if mode == "OWN":
+                image = np.asarray(image)  # from PIL image to numpy array
+                image = utils.preprocess(image)  # apply the preprocessing
+                image = np.array([image])  # the model expects 4D array
+                steering_angle = -1.0 * float(cnn.predict(image, batch_size=1))
+            elif mode == "AUT":
+                image = np.asarray(image)
+                steering_angle = -1 * steering_predictor.predict(image)
+            elif mode == "KOM":
+                image = np.asarray(image)
+                image = misc.imresize(image, (480, 640))
+                steering_angle = steering_predictor.predict(image)
+            elif mode == "RAM":
+                steering_angle = -1 * steering_predictor.predict_image(image)
+            elif mode == "AUP":
+                image = np.asarray(image)
+                steering_angle = steering_predictor.predict(image)
+
+
+            print("steering: " + str(steering_angle))
+
             # lower the throttle as the speed increases
             # if the speed is above the current speed limit, we are on a downhill.
             # make sure we slow down first and then go back to the original max speed.
@@ -68,7 +86,7 @@ def telemetry(sid, data):
         if args.image_folder != '':
             timestamp = datetime.utcnow().strftime('%Y_%m_%d_%H_%M_%S_%f')[:-3]
             image_filename = os.path.join(args.image_folder, timestamp)
-            scipy.misc.imsave(image_filename, image)
+            misc.imsave(image_filename, image)
     else:
         sio.emit('manual', data={}, skip_sid=True)
 
@@ -91,34 +109,33 @@ def send_control(steering_angle, throttle):
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description='Remote Driving')
-    parser.add_argument(
-        'model',
-        type=str,
-        help='Path to model h5 file. Model should be on the same path.')
-    parser.add_argument(
-        'image_folder',
-        type=str,
-        nargs='?',
-        default='',
-        help='Path to image folder. This is where the images from the run will be saved.')
+    parser.add_argument('model', type=str, help='Path to model h5 file. Model should be on the same path.')
+    parser.add_argument('type', type=str, nargs='?', default='OWN', help='Type of model')
     args = parser.parse_args()
 
-    #load model
-    cnn = models.commaai_model()
-    cnn.summary()
-    cnn.load_weights(args.model)
-    
+    mode = args.type
 
-    if args.image_folder != '':
-        print("Creating image folder at {}".format(args.image_folder))
-        if not os.path.exists(args.image_folder):
-            os.makedirs(args.image_folder)
-        else:
-            shutil.rmtree(args.image_folder)
-            os.makedirs(args.image_folder)
-        print("RECORDING THIS RUN ...")
-    else:
-        print("NOT RECORDING THIS RUN ...")
+    if mode == "OWN":
+        # load model
+        cnn = models.commaai_model()
+        cnn.summary()
+        cnn.load_weights(args.model)
+    elif mode == "AUT":
+        cnn_graph = "./weights/autumn/autumn-cnn-model-tf.meta"
+        lstm_json = "./weights/autumn/autumn-lstm-model-keras.json"
+        cnn_weights = "./weights/autumn/autumn-cnn-weights.ckpt"
+        lstm_weights = "./weights/autumn/autumn-lstm-weights.hdf5"
+        steering_predictor = AutumnModel(cnn_graph, lstm_json, cnn_weights, lstm_weights)
+        print(steering_predictor.model.summary())
+    elif mode == "KOM":
+        checkpoint_dir = "./weights/komanda"
+        metagraph_file = "./weights/komanda/komanda.test-subgraph.meta"
+        steering_predictor = KomandaModel(checkpoint_dir=checkpoint_dir, metagraph_file=metagraph_file)
+    elif mode == "RAM":
+        steering_predictor = Rambo("./final_model.hdf5", "./X_train_mean.npy")
+        print(steering_predictor.model.summary())
+    elif mode == "AUP":
+        steering_predictor = AutoPilot()
 
     # wrap Flask application with engineio's middleware
     app = socketio.Middleware(sio, app)
