@@ -47,4 +47,3 @@ If you are interested in the detailed development process of this project, you c
 <img src="./media/neil_profile.jpg" alt="Drawing" width="100"/>
 
 **Neil (Yongyang) Nie** | [Email](mailto:yongyang.nie@gmail.com) | [Github](https://www.github.com/NeilNie) | [Website](neilnie.com) | [Linkedin](https://www.linkedin.com/in/yongyang-neil-nie-896204118/)
-
