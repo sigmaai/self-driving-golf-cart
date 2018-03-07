@@ -23,7 +23,7 @@ The software behind the steering system is largly inspired by work done by [Nvid
 ## Autonomous Cruise Control System (ACCS)
 ### Semantic Segmentation
 
-<img src="./media/seg.png" alt="Drawing" style="width: 480px;"/>
+<img src="./media/seg.png" alt="Drawing" width="480"/>
 
 
 Understanding the work around the vehicle through segmentation, and making decisions based on the segmentic segmentation results
@@ -36,8 +36,14 @@ Understanding the work around the vehicle through segmentation, and making decis
 Coming soon...
 
 ## Contact / Info
-Developers:
+If you are interested in the detailed development process of this project, you can visit Neil's blog at [neilnie.com](neilnie.com) to find out more about it. Neil will make sure to keep you posted about all of the latest development on the club. 
 
-- Michael Meng | [email](mailto:xmeng18@deerfield.edu) | [Github](https://github.com/xmeng17)
-- Neil (Yongyang) Nie | [Email](mailto:yongyang.nie@gmail.com) | [Github](github.com/NeilNie) | [Website](neilnie.com) | [Linkedin](https://www.linkedin.com/in/yongyang-neil-nie-896204118/)
+**Developers:**
 
+<img src="./media/michael_profile.jpg" alt="Drawing" width="100"/>
+
+**Michael Meng** | [Email](mailto:xmeng18@deerfield.edu) | [Github](https://github.com/xmeng17)
+
+<img src="./media/neil_profile.jpg" alt="Drawing" width="100"/>
+
+**Neil (Yongyang) Nie** | [Email](mailto:yongyang.nie@gmail.com) | [Github](https://www.github.com/NeilNie) | [Website](neilnie.com) | [Linkedin](https://www.linkedin.com/in/yongyang-neil-nie-896204118/)
