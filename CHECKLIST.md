@@ -1,17 +1,16 @@
-# Phase 2.1
+# Phase 2
 
 ## Todos:
 
 ### Steering
 1. Collect our own data set on golf cart
-	- Purchase rotary encoder
-	- Install rotary encoder
-	- Implement data collection software
+	- ~~Purchase rotary encoder~~
+	- ~~Install rotary encoder~~
+	- ~~Implement data collection software~~
 	- Collect data
 2. Multi-camera system improvement
 	- Purchase at least 2 more webcams
-	- Consider to purchase the ZED stereo camera system
-	- Implement multi-cam system
+	- ~~read input from all cameras~~
 
 ### Autonomous Cruise Control
 

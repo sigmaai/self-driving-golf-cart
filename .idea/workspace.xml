@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9d6eb70-00d3-4b11-88c3-998eeea85bdb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/logger/arduino_encoder/arduino_encoder.ino" afterPath="$PROJECT_DIR$/logger/arduino_encoder/arduino_encoder.ino" />
-      <change beforePath="$PROJECT_DIR$/logger/dataset_collector.py" afterPath="$PROJECT_DIR$/logger/dataset_collector.py" />
+      <change beforePath="$PROJECT_DIR$/TIMELINE.md" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -69,7 +67,7 @@
         <entry file="file://$PROJECT_DIR$/logger/dataset_collector.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="337">
-              <caret line="42" column="27" lean-forward="true" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
+              <caret line="42" column="27" lean-forward="false" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
               <folding>
                 <element signature="e#247#260#0" expanded="true" />
               </folding>
@@ -80,7 +78,7 @@
       <file leaf-file-name="preprocess_dataset.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/semantic_segmentation/preprocess_dataset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
+            <state relative-caret-position="735">
               <caret line="56" column="21" lean-forward="false" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="21" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -253,8 +251,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -262,26 +258,12 @@
               <item name="ALVNS" type="b2602c69:ProjectViewProjectNode" />
               <item name="ALVNS" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ALVNS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ALVNS" type="462c0819:PsiDirectoryNode" />
-              <item name="logger" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ALVNS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ALVNS" type="462c0819:PsiDirectoryNode" />
-              <item name="logger" type="462c0819:PsiDirectoryNode" />
-              <item name="arduino_encoder" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ALVNS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ALVNS" type="462c0819:PsiDirectoryNode" />
-              <item name="semantic_segmentation" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -477,7 +459,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32736573" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28644502" sideWeight="0.49713877" order="2" side_tool="false" content_ui="tabs" x="21" y="333" width="1398" height="257" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36061382" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1874106" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18955651" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988167" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36918604" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -831,7 +813,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/semantic_segmentation/preprocess_dataset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
+        <state relative-caret-position="735">
           <caret line="56" column="21" lean-forward="false" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="21" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
@@ -842,7 +824,7 @@
     <entry file="file://$PROJECT_DIR$/logger/dataset_collector.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="337">
-          <caret line="42" column="27" lean-forward="true" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
+          <caret line="42" column="27" lean-forward="false" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
           <folding>
             <element signature="e#247#260#0" expanded="true" />
           </folding>
