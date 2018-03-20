@@ -53,6 +53,47 @@ Label = namedtuple('Label', [
     'color'       , # The color of this label
     ])
 
+# dynamic	1	void	0	111, 74,  0
+# ego vehicle	2	void	0	 0,  0,  0
+# ground	3	void	0	81,  0, 81
+# static	4	void	0	 0,  0,  0
+# parking	5	flat	1	250, 170, 160
+# rail track	6	flat	1	230, 150, 140
+# road	7	flat	1	128, 64,128
+# sidewalk	8	flat	1	244, 35,232
+# bridge	9	construction	2	150, 100, 100
+# building	10	construction	2	70, 70, 70
+# fence	11	construction	2	190, 153, 153
+# garage	12	construction	2	180, 100, 180
+# guard rail	13	construction	2	180, 165, 180
+# tunnel	14	construction	2	150, 120, 90
+# wall 	15	construction	2	102, 102, 156
+# banner	16	object	3	250, 170, 100
+# billboard	17	object	3	220, 220, 250
+# lane divider	18	object	3	255, 165, 0
+# parking sign	19	object	3	220, 20, 60
+# pole	20	object	3	153, 153, 153
+# polegroup	21	object	3	153, 153, 153
+# street light	22	object	3	220, 220,100
+# traffic cone	23	object	3	255, 70, 0
+# traffic device	24	object	3	220, 220, 220
+# traffic light	25	object	3	250, 170, 30
+# traffic sign	26	object	3	220, 220, 0
+# traffic sign frame	27	object	3	250, 170, 250
+# terrain	28	nature	4	152, 251, 152
+# vegetation	29	nature	4	107, 142, 35
+# sky	30	sky	5	70, 130, 180
+# person	31	human	6	220, 20, 60
+# rider	32	human	6	255, 0, 0
+# bicycle	33	vehicle	7	119, 11, 32
+# bus	34	vehicle	7	0, 60,100
+# car	35	vehicle	7	0, 0,142
+# caravan	36	vehicle	7	0, 0, 90
+# motorcycle	37	vehicle	7	0, 0, 230
+# trailer	38	vehicle	7	0, 0, 110
+# train	39	vehicle	7	0, 80, 100
+# truck	40	vehicle	7	0, 0, 70
+
 # (NOTE! this is taken from the official Cityscapes scripts:)
 labels = [
     #       name                     id    trainId   category            catId     hasInstances   ignoreInEval   color
@@ -65,7 +106,6 @@ labels = [
     Label(  'vegetation'           , 21 ,       8 , 'nature'          , 4       , False        , False        , (107, 142, 35) ),
     Label(  'terrain'              , 22 ,       9 , 'nature'          , 4       , False        , False        , (152, 251, 152) ),
     Label(  'sky'                  , 23 ,       10 , 'sky'             , 5       , False        , False        ,(70, 130, 180) ),
-
     Label(  'person'               , 24 ,       11 , 'human'           , 6       , True         , False        , (220, 20, 60) ),
     Label(  'car'                  , 26 ,       13 , 'vehicle'         , 7       , True         , False        , (0, 0, 142) ),
     Label(  'truck'                , 27 ,       14 , 'vehicle'         , 7       , True         , False        , (0, 0, 70) ),

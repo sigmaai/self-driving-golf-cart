@@ -11,12 +11,12 @@ from flask import Flask #web framework
 from io import BytesIO  #input output
 from scipy import misc
 
-import steering.utils as utils
-import steering.models as models
-from steering.autumn import AutumnModel
-from steering.rambo import Rambo
-from steering.komanda import KomandaModel
-from steering.auto_pilot import AutoPilot
+import utils as utils
+import models as models
+from autumn import AutumnModel
+from rambo import Rambo
+from komanda import KomandaModel
+from auto_pilot import AutoPilot
 
 #initialize our server
 sio = socketio.Server()
@@ -82,11 +82,6 @@ def telemetry(sid, data):
         except Exception as e:
             print(e)
 
-        # save frame
-        if args.image_folder != '':
-            timestamp = datetime.utcnow().strftime('%Y_%m_%d_%H_%M_%S_%f')[:-3]
-            image_filename = os.path.join(args.image_folder, timestamp)
-            misc.imsave(image_filename, image)
     else:
         sio.emit('manual', data={}, skip_sid=True)
 
