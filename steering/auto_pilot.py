@@ -1,6 +1,7 @@
 import tensorflow as tf
 import scipy.misc
-import steering.ap_model as model
+# import steering.ap_model as model
+import ap_model as model
 import cv2
 from subprocess import call
 
