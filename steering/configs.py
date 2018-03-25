@@ -11,6 +11,7 @@ image_height = 160
 load_weights = True
 model_path = "./steering/weights/own/trained-cai-v6.h5"
 train_model_path = "./trained-cai-v6.h5"
+own_dataset_dirs = [""]
 
 BLACK = (  0,   0,   0)
 WHITE = (255, 255, 255)

@@ -25,8 +25,8 @@ app = Flask(__name__)
 prev_image_array = None
 
 #set min/max speed for our autonomous car
-MAX_SPEED = 20
-MIN_SPEED = 5
+MAX_SPEED = 10
+MIN_SPEED = 10
 
 #and a speed limit
 speed_limit = MAX_SPEED
@@ -34,7 +34,9 @@ speed_limit = MAX_SPEED
 #registering event handler for the server
 @sio.on('telemetry')
 def telemetry(sid, data):
+
     if data:
+
         # The current steering angle of the car
         steering_angle = float(data["steering_angle"])
         # The current throttle of the car, how hard to push peddle
@@ -64,7 +66,6 @@ def telemetry(sid, data):
                 image = np.asarray(image)
                 steering_angle = steering_predictor.predict(image)
 
-
             print("steering: " + str(steering_angle))
 
             # lower the throttle as the speed increases
@@ -75,9 +76,9 @@ def telemetry(sid, data):
                 speed_limit = MIN_SPEED  # slow sdown
             else:
                 speed_limit = MAX_SPEED
-            throttle = 1.0 - steering_angle**2 - (speed/speed_limit)**2
 
-            print('{} {} {}'.format(steering_angle, throttle, speed))
+            throttle = 1.0 - (speed/speed_limit)**2
+
             send_control(steering_angle, throttle)
         except Exception as e:
             print(e)
@@ -104,8 +105,8 @@ def send_control(steering_angle, throttle):
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description='Remote Driving')
-    parser.add_argument('model', type=str, help='Path to model h5 file. Model should be on the same path.')
-    parser.add_argument('type', type=str, nargs='?', default='OWN', help='Type of model')
+    parser.add_argument('--model', type=str, help='Path to model h5 file. Model should be on the same path.')
+    parser.add_argument('--type', type=str, help='Type of model')
     args = parser.parse_args()
 
     mode = args.type

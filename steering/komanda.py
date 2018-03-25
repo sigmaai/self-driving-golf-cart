@@ -28,10 +28,11 @@ class KomandaModel(object):
         with self.graph.as_default():
             saver = tf.train.import_meta_graph(metagraph_file)
             ckpt = tf.train.latest_checkpoint(checkpoint_dir)
+
         self.session = tf.Session(graph=self.graph)
         saver.restore(self.session, ckpt)
-        self.input_images = deque() # will be of size self.LEFT_CONTEXT + 1
-        self.internal_state = [] # will hold controller_{final -> initial}_state_{0,1,2}
+        self.input_images = deque()     # will be of size self.LEFT_CONTEXT + 1
+        self.internal_state = []        # will hold controller_{final -> initial}_state_{0,1,2}
 
         # TODO controller state names should be stored in the graph
         self.input_tensors = map(self.graph.get_tensor_by_name, ["input_images:0", "controller_initial_state_0:0", "controller_initial_state_1:0", "controller_initial_state_2:0"])
@@ -73,10 +74,12 @@ if __name__ == '__main__':
 
     steering_predictor = KomandaModel(checkpoint_dir=checkpoint_dir, metagraph_file=metagraph_file)
 
-    img = misc.imread("/Users/yongyangnie/Desktop/steering_test/IMG_4966.JPG")
-    img1 = misc.imread("/Users/yongyangnie/Desktop/steering_test/IMG_9804.JPG")
-    img = misc.imresize(img, (480, 640))
-    img1 = misc.imresize(img, (480, 640))
-    print(steering_predictor.predict(img))
+    img = misc.imread("/Users/yongyangnie/Desktop/img0.png")
+    img1 = misc.imread("/Users/yongyangnie/Desktop/img1.png")
+    img0 = misc.imresize(img, (480, 640))
+    img1 = misc.imresize(img1, (480, 640))
+    img2 = misc.imresize(img, (480, 640))
+    print(steering_predictor.predict(img0))
     print(steering_predictor.predict(img1))
+    print(steering_predictor.predict(img2))
 
