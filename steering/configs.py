@@ -6,8 +6,8 @@ val_dir = "/Volumes/Personal_Drive/Datasets/udacity-driving/steering_validation/
 
 
 # TRAINING
-image_width = 320
-image_height = 160
+image_width = 640
+image_height = 480
 load_weights = True
 model_path = "./steering/weights/own/trained-cai-v6.h5"
 train_model_path = "./trained-cai-v6.h5"

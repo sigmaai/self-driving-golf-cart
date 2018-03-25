@@ -44,12 +44,6 @@ def random_flip(image, steering_angle):
     return image, steering_angle
 
 
-def bgr_rgb(img):
-    b, g, r = cv2.split(img)  # get b,g,r
-    img = cv2.merge([r, g, b])  # switch it to rgb
-    return img
-
-
 def load_image(image_file):
     """
     Load RGB images from a file
@@ -58,7 +52,8 @@ def load_image(image_file):
     # removed the cropping part
     #img = img[0:480, 0:640]
     img = cv2.resize(img, (configs.image_width, configs.image_height))
-    return bgr_rgb(img)
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    return img
 
 
 def rotate(img):

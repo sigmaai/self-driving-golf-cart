@@ -15,6 +15,7 @@ import matplotlib
 import matplotlib.backends.backend_agg as agg
 import pylab
 import model
+from skimage import transform as tf
 
 matplotlib.use("Agg")
 
@@ -28,7 +29,7 @@ camera_surface = pygame.surface.Surface((640,480),0,24).convert()
 clock = pygame.time.Clock()
 
 # ***** get perspective transform for images *****
-from skimage import transform as tf
+
 
 rsrc = \
     [[43.45456230828867, 118.00743250075844],

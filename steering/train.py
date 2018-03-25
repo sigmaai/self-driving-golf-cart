@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 validation = True
 visualize = False
 
+
 def train(data_type="UDA", model_type="COM", load_weights=False, steps=100, epochs=5):
 
     if data_type == "UDA":
@@ -34,8 +35,9 @@ def train(data_type="UDA", model_type="COM", load_weights=False, steps=100, epoc
     # create the network or load weights
 
     if configs.load_weights:
-        cnn.load_weights(configs.train_model_path)
-    cnn.summary()
+        model.load_weights(configs.train_model_path)
+
+    model.summary()
 
     training_gen = utils.batch_generator(labels, 8, True)
 
@@ -50,10 +52,11 @@ def train(data_type="UDA", model_type="COM", load_weights=False, steps=100, epoc
         val_labels = pd.read_csv(configs.val_dir + "interpolated.csv")
         validation_gen = utils.validation_generator(configs.val_dir, val_labels, 2)
 
-    cnn.fit_generator(training_gen, steps_per_epoch=1000, epochs=3, verbose=1, validation_data=validation_gen,
+    model.fit_generator(training_gen, steps_per_epoch=1000, epochs=3, verbose=1, validation_data=validation_gen,
                       validation_steps=2000)
 
-    cnn.save('./trained-cai-v7.h5')
+    model.save('./trained-cai-v7.h5')
+
 
 if __name__ == "__main__":
     train(data_type="SEF", model_type="COM", epochs=3, load_weights=True)
