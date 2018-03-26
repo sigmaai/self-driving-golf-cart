@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import pandas as pd
 import configs as configs
-
+import os.path
 
 INPUT_SHAPE = (configs.image_height, configs.image_width, 3)
 
@@ -150,10 +150,24 @@ def augument(img_path, steering_angle):
 
 def gather_self_dataset(dirs):
 
-    for path in dirs:
-        print(path)
+    return_labels = None
 
-    return None
+    for path in dirs:
+
+        labels = pd.read_csv(path + "/labels.csv").values
+        for i in range(len(labels)):
+            # add the dataset dir to the image path
+            labels[i][2] = path + labels[i][2]
+
+        if return_labels is None:
+            return_labels = labels
+        else:
+            return_labels = np.concatenate((labels, return_labels), axis=0)
+
+        print("one iteration finished")
+
+    print(return_labels.shape)
+    return return_labels
 
 
 def preprocess_dataset(dir1, dir2):
@@ -210,6 +224,44 @@ def batch_generator(data, batch_size, is_training):
             i += 1
             if i == batch_size:
                 break
+
+        yield images, steers
+
+
+def self_batch_generator(data, batch_size, is_training):
+    """
+    Generate training image give image paths and associated steering angles
+    """
+    images = np.empty([batch_size, configs.image_height, configs.image_width, 3])
+    steers = np.empty(batch_size)
+
+    while True:
+        i = 0
+        for index in np.random.permutation(data.shape[0]):
+            center_path = str(data[index][2])
+            steering_angle = data[index][4]
+
+            if os.path.isfile(center_path):
+                # argumentation
+                if is_training and np.random.rand() < 0.6:
+                    image, steering_angle = augument(center_path, steering_angle)
+                else:
+                    image = load_image(center_path)
+                    # add the image and steering angle to the batch
+
+                images[i] = image
+                steers[i] = steering_angle
+                i += 1
+                if i == batch_size:
+                    break
+            else:
+                print(center_path)
+                center_path = str(data[0][2])
+                steering_angle = data[0][4]
+                image = load_image(center_path)
+                # add the image and steering angle to the batch
+                images[i] = image
+                steers[i] = steering_angle
 
         yield images, steers
 

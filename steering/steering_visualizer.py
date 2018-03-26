@@ -14,7 +14,8 @@ from os import path
 import matplotlib
 import matplotlib.backends.backend_agg as agg
 import pylab
-import model
+import models
+import utils
 from skimage import transform as tf
 
 matplotlib.use("Agg")
@@ -106,36 +107,26 @@ def draw_path_on(img, speed_ms, angle_steers, color=(0, 0, 255)):
     draw_path(img, path_x, path_y, color)
 
 
-def preprocess_img(img):
-    
-    b, g, r = cv2.split(img)  # get b,g,r
-    img = cv2.merge([r, g, b])  # switch it to rgb
-    img = img[160: 480, 0:640]
-    img = cv2.resize(img, (320, 160))
-    return img
-
 # ***** main loop *****
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description='Path viewer')
     parser.add_argument('--model', type=str, help='path to the trained model')
     parser.add_argument('--dataset', type=str, help='dataset folder with csv and image folders')
-    parser.add_argument('--camera', type=str, default='center', help='camera to use, default is center')
     args = parser.parse_args()
 
     dataset_path = args.dataset
-    camera = args.camera
-    cnn = model.small_vgg_network()
+    cnn = models.commaai_model()
     cnn.load_weights(args.model)
     cnn.summary()
 
     # steerings and images
-    steering_labels = path.join(dataset_path, 'interpolated.csv')
+    steering_labels = path.join(dataset_path, 'labels.csv')
 
     # read the steering labels and image path
-    df_truth = pd.read_csv(steering_labels, usecols=['frame_id', 'steering_angle'], index_col=None)
+    df_truth = pd.read_csv(steering_labels).values
 
-    # Create second screen with matplotlib
+    # Create second screen with matplotlibs
     fig = pylab.figure(figsize=[6.4, 1.6], dpi=100)
     ax = fig.gca()
     ax.tick_params(axis='x', labelsize=8)
@@ -164,17 +155,17 @@ if __name__ == "__main__":
         if i%100 == 0:
             print('%.2f seconds elapsed' % (i/20))
 
-        path = dataset_path + "center/" + str(df_truth["frame_id"][i]) + ".jpg"
-        img = cv2.imread(path)
-        image = np.array([preprocess_img(img)])  # the model expects 4D array
+        path = dataset_path + df_truth[i][2]
+        img = cv2.cvtColor(cv2.imread(path), cv2.COLOR_BGR2RGB)
+        image = np.array([utils.load_image(path)])  # the model expects 4D array
 
         predicted_steers = cnn.predict(image)[0][0]
-        actual_steers = df_truth['steering_angle'].loc[i]
+        actual_steers = df_truth[i][4]
 
         draw_path_on(img, speed_ms, actual_steers / 5.0)
         draw_path_on(img, speed_ms, predicted_steers / 5.0, (255, 0, 0))
 
-        A.append(df_truth['steering_angle'].loc[i])
+        A.append(actual_steers)
         B.append(predicted_steers)
         line1.set_ydata(A)
         line1.set_xdata(range(len(A)))
