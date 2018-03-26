@@ -103,7 +103,7 @@ def preprocess_dataset(path, offset=0.0, write=False):
 
     labels = pd.read_csv(path + "/labels.csv").values
 
-    for i in range(len(labels)):
+    for i in range(len(labels)-1):
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -139,6 +139,6 @@ if __name__ == "__main__":
     args = parser.parse_args()
     path = args.path
 
-    preprocess_dataset(path, offset=-0.3726, write=True)
+    preprocess_dataset(path, offset=0.0, write=True)
 
     # dataset 3 offset 0.3726
