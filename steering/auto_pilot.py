@@ -1,9 +1,10 @@
+#
+# AutoPilot
+#
+
 import tensorflow as tf
 import scipy.misc
-# import steering.ap_model as model
-import ap_model as model
-import cv2
-from subprocess import call
+import steering.ap_model as model
 
 
 class AutoPilot:
@@ -19,4 +20,3 @@ class AutoPilot:
         rad = model.y.eval(feed_dict={model.x: [image], model.keep_prob: 1.0})[0][0]
 
         return rad
-
