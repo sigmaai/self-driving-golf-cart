@@ -26,7 +26,11 @@
 3. improve visualization for segmentation
 
 ### Localization
+<<<<<<< HEAD
 - implement GPS
 
 ### Hardware
 - Build & setup computer
+=======
+- implement GPS
+>>>>>>> 900c9ad2812a7e6a75508d9191daf92bfc438ce6
