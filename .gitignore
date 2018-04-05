@@ -2,3 +2,4 @@
 road-semantic-segmentation/data
 road-semantic-segmentation/model
 steering/weights
+detection/traffic-light/scripts/ckpt
