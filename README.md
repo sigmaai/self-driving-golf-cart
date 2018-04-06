@@ -7,26 +7,33 @@ We wanted to build a self driving car. We didn't build an actual car, but we bui
 
 This project has several different modules. 
 
-1. Autonomous steering 
-2. Autonomous cruise contol system
-3. System management
-3. Path planning
-4. Engineering
+1. Deep learning steering prediction
+2. Semantic segmentation
+3. Driver by wire system (DBW)
+4. Object detection
+5. Traffic light detection
+6. Lane detection
+7. System management
+8. Path planning
+9. Engineering
 
 Localization and other features coming soon...
 
 ## Running the code
+
+To run the autonomous software:
+
 1. Please download/clone the repository.
 2. Make sure that you have all the [dependencies](./requirements.txt) installed. 
+3. open terminal
+4. `cd <YOUR_PROJECT_DIRECTORY>` (make sure to change your directory)
+5. `$ drive`
 
-To run the autonomous software, do 
-
-`python3 drive.py`. 
 
 (Please use python3 instead of python2, because the ML models are saved in the python3 formate)
 
 ## Steering
-The software behind the steering system is largly inspired by work done by [Nvidia](https://arxiv.org/pdf/1604.07316.pdf). The hardware system is custom designed in house. Here is a video demo.
+The software behind the steering system is inspired by work proposed by [NVIDIA](https://arxiv.org/pdf/1604.07316.pdf). This deep learning algorithm is known as behavioral cloning. The hardware system is custom designed in house. Here is a video demo.
 
 
 [![IMAGE ALT TEXT HERE](https://i.ytimg.com/vi/4bZ40W4BGoE/hqdefault.jpg)](https://www.youtube.com/watch?v=CcUXtViFQeU&t=5s)
