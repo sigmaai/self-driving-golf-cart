@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import messagebox
 from driver import Driver
 
 
@@ -8,8 +9,12 @@ class DriverApp(tk.Frame):
 
         tk.Frame.__init__(self, parent, *args, **kwargs)
         self.parent = parent
-        self.winfo_toplevel().title("ALVNS")
 
+        # some basic setup
+        self.winfo_toplevel().title("self driving golf cart")
+        self.parent.resizable(width=False, height=False)
+        self.parent.geometry('{}x{}'.format(300, 350))
+        # self.parent.iconbitmap(r'/home/neil/Workspace/self-driving-golf-cart/media/icon.ico')
         self.create_label("Welcome to the autnomous vehicle program")
 
         # ---- drop down menu ------
@@ -56,13 +61,6 @@ class DriverApp(tk.Frame):
 
         if self.steering_model != None:
 
-            # print(self.steering_model +
-            #       str(self.cc_bool.get()) +
-            #       str(self.seg_vis.get()) +
-            #       str(self.detc_bool.get()) +
-            #       str(self.detc_vis.get()) +
-            #       str(self.gps_bool.get()))
-
             self.driver = Driver(steering_model=self.steering_model,
                                  cc=self.cc_bool.get(),
                                  seg_vis=self.seg_vis.get(),
@@ -73,7 +71,7 @@ class DriverApp(tk.Frame):
 
             self.driver.drive()
         else:
-            raise Exception("Steering model has not been initialized. Please enter a valid model type")
+            messagebox.showerror("Error", "Please select a steering model and click OK")
 
     def set_steering_model(self):
         self.steering_model = self.var.get()

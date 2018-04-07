@@ -104,21 +104,19 @@ class Driver:
 
     def drive(self):
 
-        cap = cv2.VideoCapture(configs.CV_CAP_STR)
-
         vid_left = VideoStream(src=configs.left_vid_src).start()
         vid_center = VideoStream(src=configs.cent_vid_src).start()
         vid_right = VideoStream(src=configs.right_vid_src).start()
 
-        if cap.isOpened():
+        while True:
 
-            windowName = "car detection"
+            windowName = "self driving car...running"
             cv2.namedWindow(windowName, cv2.WINDOW_NORMAL)
-            cv2.resizeWindow(windowName, 1280, 480)
+            cv2.resizeWindow(windowName, 1280, 960)
             cv2.moveWindow(windowName, 0, 0)
-            cv2.setWindowTitle(windowName, "car detection")
+            cv2.setWindowTitle(windowName, "self driving car")
 
-            print(colored("program begins", "blue"))
+            print(colored("[INFO]: program begins", "blue"))
 
             while True:
 
@@ -128,10 +126,8 @@ class Driver:
                     break
 
                 left_frame = vid_left.read()
-                center_frame = vid_center.read()
+                image = vid_center.read()
                 right_frame = vid_right.read()
-
-                ret_val, image = cap.read()
 
                 # --------------------------- steering --------------------
                 #
@@ -187,8 +183,4 @@ class Driver:
                     print(colored("Thank you! Program ended.", "blue"))
                     print(colored("-------------------------", "blue"))
                     break
-
-        else:
-            print("Fatal error, camera is not open")
-
 
