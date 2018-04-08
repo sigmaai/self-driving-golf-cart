@@ -10,24 +10,25 @@ This project has several different modules.
 1. Deep learning steering prediction
 2. Semantic segmentation
 3. Driver by wire system (DBW)
-4. System management
-5. Path planning
-6. Engineering
+4. Object detection
+5. Traffic light detection
+6. Lane Detection
+7. System management
+8. Path planning
+9. Engineering
 
-Localization and other features coming soon...
+Localization and some other features coming soon...
 
 ## Running the code
 1. Please download/clone the repository.
 2. Make sure that you have all the [dependencies](./requirements.txt) installed. 
-
-To run the autonomous software, do 
-
-`python3 drive.py`. 
+3. To run the autonomous software, change your directory to the project directory 
+4. `./drive`. 
 
 (Please use python3 instead of python2, because the ML models are saved in the python3 formate)
 
 ## Steering
-The software behind the steering system is largly inspired by work done by [Nvidia](https://arxiv.org/pdf/1604.07316.pdf). The hardware system is custom designed in house. Here is a video demo.
+The algorithm behind the steering system is inspired by work done by [Nvidia](https://arxiv.org/pdf/1604.07316.pdf). We developed our own convolutional neural network to predict the steering angle based on images captured by the front camera. The hardware system is custom designed in-house. Here is a video demo.
 
 
 [![IMAGE ALT TEXT HERE](https://i.ytimg.com/vi/4bZ40W4BGoE/hqdefault.jpg)](https://www.youtube.com/watch?v=CcUXtViFQeU&t=5s)
@@ -39,7 +40,7 @@ The software behind the steering system is largly inspired by work done by [Nvid
 <img src="./media/seg.png" alt="Drawing" width="480"/>
 
 
-Understanding the work around the vehicle through segmentation, and making decisions based on the segmentic segmentation results
+The cart understands the world around through segmentation. It also makes decisions based on the segmentic segmentation results. The vehicle can change its speed based on the proximity to nearby obstacles. 
 
 [![IMAGE ALT TEXT HERE](https://i.ytimg.com/vi/_y2RCakRrc4/hqdefault.jpg)](https://www.youtube.com/watch?v=_y2RCakRrc4)
 
@@ -57,7 +58,7 @@ We have completed phase 1 of the development process, which mainly includes:
 
 - Implementing control-by-wire system. (hardware)
 - Implement the autonomous steering system.
-- Implement the obstacle avoidence system. 
+- Implement the obstacle avoidance system. 
 
 For the second phase of the development process, we will focus on making the system safer and more reliable. For details, please refer to the [CHECKLIST](./CHECKLIST.md)
 
