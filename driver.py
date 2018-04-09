@@ -14,6 +14,7 @@ from cruise.cruise_predictor import CruisePredictor
 from cruise.sc import SC
 from semantic_segmentation.segmentor import Segmentor
 from semantic_segmentation.segmentation_analyzer import SegAnalyzer
+from detection.object.object_detector import ObjectDetector
 from path_planning.global_path import GlobalPathPlanner
 import configs.configs as configs
 from localization.gps import GPS
@@ -31,16 +32,20 @@ import time
 
 class Driver:
 
-    def __init__(self, steering_model, cc=False, seg_vis=False, obj_det=False, det_vis=False, gps=False):
+    def __init__(self, steering_model, cruise_control=False, seg_vis=False, obj_det=False, det_vis=False, gps=False):
 
         self.steering_model = steering_model
-        self.cc = cc
+        self.cruise_control = cruise_control
         self.seg_vis = seg_vis
-        self.obj_det = seg_vis
+        self.obj_det = obj_det
         self.det_vis = det_vis
         self.gps = gps
 
-        self.steering_predictor, self.c_predictor, self.segmentor, self.seg_analyzer = self.init_ml_models()
+        self.steering_predictor, \
+        self.c_predictor, \
+        self.segmentor, \
+        self.seg_analyzer, \
+        self.object_detector = self.init_ml_models()
 
         if self.gps:
             self.init_nav()
@@ -64,6 +69,7 @@ class Driver:
 
     def init_ml_models(self):
 
+        # steering models
         if self.steering_model == "Own":
             steering_predictor = SteeringPredictor()  # init steering predictor
         elif self.steering_model == "Komanda":
@@ -77,15 +83,20 @@ class Driver:
         else:
             raise Exception("Unknown model type: " + self.steering_model + ". Please enter a valid model type")
 
-        if self.cc:
+        # cruise control
+        if self.cruise_control:
             c_predictor = CruisePredictor()          # init cruise predictor
         else:
             c_predictor = None
 
+        # segmentation
         segmentor = Segmentor("ENET")  # init segmentor
         seg_analyzer = SegAnalyzer(0.05)  # init seg analyzer
 
-        return steering_predictor, c_predictor, segmentor, seg_analyzer
+        # detection -- initialize yolo object detection
+        object_detector = ObjectDetector()
+
+        return steering_predictor, c_predictor, segmentor, seg_analyzer, object_detector
 
     def init_nav(self):
 
@@ -134,43 +145,46 @@ class Driver:
                 if self.steering_model == "Rambo":
                     resize = cv2.resize(image,(256, 192))
                     angle = -1 * self.steering_predictor.predict(cv2.cvtColor(resize), cv2.COLOR_BGR2GRAY)
-                    steering_img = self.steering_predictor.post_process_image(cv2.resize(image,(320, 160)), angle)
+                    steering_img = self.steering_predictor.post_process_image(image, angle)
 
                 elif self.steering_model == "Own":
                     angle, steering_img = self.steering_predictor.predict_steering(image)
 
                 elif self.steering_model == "Autumn":
                     angle = self.steering_predictor.predict(image)
-                    steering_img = self.steering_predictor.post_process_image(image=cv2.resize(image, (320, 160)), angle=angle)
+                    steering_img = self.steering_predictor.post_process_image(image=image, angle=angle)
                 else:
                     raise Exception("Not implemented: " + self.steering_model + ". Please enter a valid model type")
 
                 # -------------- execute steering commands ----------------
-                steering_img = cv2.resize(steering_img, (640, 480))
                 self.mc.turn(configs.st_fac * angle)
 
 
                 # ------------------ segmentation -------------------------
 
+                # press down on "a" key to stop segmentation
                 if cv2.waitKey(33) == ord('a'):
                     speed = 1
-                    visual = cv2.resize(image, (640, 480))
+                    seg_visual = cv2.resize(image, (640, 480))
                 else:
-                    result, visual = self.segmentor.semantic_segmentation(image, visualize=self.seg_vis)
+                    result, seg_visual = self.segmentor.semantic_segmentation(image, visualize=self.seg_vis)
                     speed = self.seg_analyzer.analyze_image(result)
 
                 if speed == 0:
-                    print(colored("STOP!", "red"))
+                    print(colored("[INFO]: STOP!", "red"))
                     self.c_controller.drive(-1)
                     time.sleep(2)
                 else:
                     self.c_controller.drive(1)
 
-                # ------------------------- ------------ -------------------
+                # ------------------ detection ------------------
 
-                buff1 = np.concatenate((steering_img, visual), axis=1)
-                # vidBuf = np.concatenate((buff1, buff2), axis=0)
-                vidBuf = buff1
+                detection = self.object_detector.detect_objects(image, details=False)
+                det_result = cv2.resize(detection, (640, 480))
+
+                buff1 = np.concatenate((steering_img, seg_visual), axis=1)
+                buff2 = np.concatenate((det_result, image), axis=1)
+                vidBuf = np.concatenate((buff1, buff2), axis=0)
 
                 # ------------------ show the stuff -------------------
                 # -----------------------------------------------------
@@ -179,8 +193,8 @@ class Driver:
 
                 if key == 27:  # ESC key
                     cv2.destroyAllWindows()
-                    print(colored("-------------------------", "blue"))
-                    print(colored("Thank you! Program ended.", "blue"))
-                    print(colored("-------------------------", "blue"))
+                    print(colored("[INFO]: -------------------------", "blue"))
+                    print(colored("[INFO]: Thank you! Program ended.", "blue"))
+                    print(colored("[INFO]: -------------------------", "blue"))
                     break
 

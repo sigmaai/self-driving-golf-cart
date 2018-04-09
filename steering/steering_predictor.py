@@ -21,8 +21,8 @@ class SteeringPredictor:
         draw = ImageDraw.Draw(background)
         font = ImageFont.truetype("./steering/resources/FiraMono-Medium.otf", 16)
         draw.text((80, 200), str(round(angle, 3)), (255, 255, 255), font=font)
-        
-        return np.array(background)
+        steering_img = cv2.resize(np.array(background), (640, 480))
+        return steering_img
 
 
     def __init__(self):
