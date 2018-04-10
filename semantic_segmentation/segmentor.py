@@ -26,7 +26,7 @@ class Segmentor:
         elif type == "ICNET":
             self.model = enet.build(len(utils.labels), configs.img_height, configs.img_width)
 
-        self.model.load_weights(configs.model_path)
+        self.model.load_weights(configs.infer_model_path)
 
     def semantic_segmentation(self, image, visualize=False):
 
