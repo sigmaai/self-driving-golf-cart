@@ -33,6 +33,10 @@ class ObjectDetector:
         self.yolo_model = load_model(configs.model_path)
         self.yolo_model.summary()
 
+        model_image_size = self.yolo_model.layers[0].input_shape
+        is_fixed_size = model_image_size != (None, None)
+        print(model_image_size)
+
         # Generate colors for drawing bounding boxes.
         hsv_tuples = [(x / len(class_names), 1., 1.) for x in range(len(class_names))]
         self.colors = list(map(lambda x: colorsys.hsv_to_rgb(*x), hsv_tuples))
@@ -41,7 +45,7 @@ class ObjectDetector:
         random.shuffle(self.colors)  # Shuffle colors to decorrelate adjacent classes.
         random.seed(None)  # Reset seed to default.
 
-        self.font = ImageFont.truetype(font='font/FiraMono-Medium.otf',
+        self.font = ImageFont.truetype(font='detection/object/font/FiraMono-Medium.otf',
                                   size=np.floor(3e-2 * configs.height + 0.5).astype('int32'))
         self.thickness = (configs.width + configs.height) // 300
 
@@ -60,13 +64,13 @@ class ObjectDetector:
         image_data = np.array(resized_image, dtype='float32')
 
         image_data /= 255.
-        image_data = np.expand_dims(image_data, 0)  # Add batch dimension.
-
+        # image_data = np.expand_dims(, 0)  # Add batch dimension.
+        print(image_data.shape)
         # making predictions
         out_boxes, out_scores, out_classes = self.sess.run(
             [self.boxes, self.scores, self.classes],
             feed_dict={
-                self.yolo_model.input: image_data,
+                self.yolo_model.input: np.array([image_data]),
                 self.input_image_shape: [image.shape[1], image.shape[0]],
                 K.learning_phase(): 0
             })

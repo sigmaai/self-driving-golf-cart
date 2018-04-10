@@ -10,11 +10,17 @@
 from steering.autumn import AutumnModel
 from steering.steering_predictor import SteeringPredictor
 from steering.mc import MC
-import steering.visualization.steering_visualizer as str_vis
+import steering.visualization.visualization as str_vis
+from steering.auto_pilot import AutoPilot as AP
+from time import process_time
+from steering.rambo import Rambo
+
 from cruise.cruise_predictor import CruisePredictor
 from cruise.sc import SC
+
 from semantic_segmentation.segmentor import Segmentor
 from semantic_segmentation.segmentation_analyzer import SegAnalyzer
+
 from detection.object.object_detector import ObjectDetector
 from path_planning.global_path import GlobalPathPlanner
 import configs.configs as configs
@@ -25,8 +31,7 @@ import helper
 import os
 import cv2
 import numpy as np
-from steering.auto_pilot import AutoPilot as AP
-from steering.rambo import Rambo
+
 from termcolor import colored
 import time
 
@@ -58,12 +63,12 @@ class Driver:
         else:
             print(colored("------ serial ports -------", "blue"))
             print(colored("-------- steering ---------", "blue"))
-            os.system("ls /dev/ttyUSB*")
+            os.system("ls /dev/ttyAMC*")
             st_port = helper.get_serial_port()
             self.mc = MC(st_port)
 
             print(colored("--------- cruise ---------", "blue"))
-            os.system("ls /dev/ttyUSB*")
+            os.system("ls /dev/ttyAMC*")
             cc_port = helper.get_serial_port()  # get serial ports
             self.c_controller = SC(cc_port)     # init CC controller
             print(colored("--------------------------", "blue"))
@@ -95,12 +100,12 @@ class Driver:
         seg_analyzer = SegAnalyzer(0.05)  # init seg analyzer
 
         # detection -- initialize yolo object detection
-        if self.object_detector:
-            object_detector = ObjectDetector()
+        if self.obj_det:
+            detector = ObjectDetector()
         else:
-            object_detector = None
+            detector = None
 
-        return steering_predictor, c_predictor, segmentor, seg_analyzer, object_detector
+        return steering_predictor, c_predictor, segmentor, seg_analyzer, detector
 
     def init_nav(self):
 
@@ -119,15 +124,17 @@ class Driver:
 
     def drive(self):
 
-        vid_left = VideoStream(src=configs.left_vid_src).start()
-        vid_center = VideoStream(src=configs.cent_vid_src).start()
-        vid_right = VideoStream(src=configs.right_vid_src).start()
+        # vid_left = VideoStream(src=configs.left_vid_src).start()
+        # vid_center = VideoStream(src=configs.cent_vid_src).start()
+        # vid_right = VideoStream(src=configs.right_vid_src).start()
 
-        while True:
+        cap = cv2.VideoCapture(0)
+
+        if cap.isOpened():
 
             windowName = "self driving car...running"
             cv2.namedWindow(windowName, cv2.WINDOW_NORMAL)
-            cv2.resizeWindow(windowName, 1280, 960)
+            cv2.resizeWindow(windowName, 1200, 480)
             cv2.moveWindow(windowName, 0, 0)
             cv2.setWindowTitle(windowName, "self driving car")
 
@@ -135,34 +142,33 @@ class Driver:
 
             while True:
 
+                t = process_time()
+                # do some stuff
+
                 # -----------------------------------------------------
                 # Check to see if the user closed the window
                 if cv2.getWindowProperty(windowName, 0) < 0:
                     break
-
-                left_frame = vid_left.read()
-                image = vid_center.read()
-                right_frame = vid_right.read()
+                ret_val, image = cap.read()
 
                 # --------------------------- steering --------------------
                 #
                 if self.steering_model == "Rambo":
                     resize = cv2.resize(image,(256, 192))
                     angle = -1 * self.steering_predictor.predict(cv2.cvtColor(resize), cv2.COLOR_BGR2GRAY)
-                    steering_img = str_vis.post_process_image(image, angle)
+                    steering_img = str_vis.visualize_steering_wheel(image, angle)
 
                 elif self.steering_model == "Own":
                     angle, steering_img = self.steering_predictor.predict_steering(image)
 
                 elif self.steering_model == "Autumn":
                     angle = self.steering_predictor.predict(image)
-                    steering_img = self.steering_predictor.post_process_image(image=image, angle=angle)
+                    steering_img = str_vis.visualize_steering_wheel(image=image, angle=angle)
                 else:
                     raise Exception("Not implemented: " + self.steering_model + ". Please enter a valid model type")
 
                 # -------------- execute steering commands ----------------
                 self.mc.turn(configs.st_fac * angle)
-
 
                 # ------------------ segmentation -------------------------
 
@@ -177,22 +183,28 @@ class Driver:
                 if speed == 0:
                     print(colored("[INFO]: STOP!", "red"))
                     self.c_controller.drive(-1)
-                    time.sleep(2)
+                    # time.sleep(2)
                 else:
                     self.c_controller.drive(1)
 
                 # ------------------ detection ------------------
 
-                detection = self.object_detector.detect_objects(image, details=False)
-                det_result = cv2.resize(detection, (640, 480))
+                if self.obj_det:
+                    detection = self.object_detector.detect_objects(image, details=False)
+                    det_result = cv2.resize(detection, (640, 480))
+                else:
+                    det_result = image
 
-                buff1 = np.concatenate((steering_img, seg_visual), axis=1)
-                buff2 = np.concatenate((det_result, image), axis=1)
-                vidBuf = np.concatenate((buff1, buff2), axis=0)
+                buff1 = np.concatenate((det_result, seg_visual), axis=1)
+                # buff2 = np.concatenate((det_result, image), axis=1)
+                vidBuf = buff1
 
                 # ------------------ show the stuff -------------------
                 # -----------------------------------------------------
                 cv2.imshow(windowName, vidBuf)
+
+                elapsed_time = process_time() - t
+                print("time: " + str(elapsed_time))
                 key = cv2.waitKey(10)
 
                 if key == 27:  # ESC key
