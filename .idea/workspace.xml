@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9d6eb70-00d3-4b11-88c3-998eeea85bdb" name="Default" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/ALVNS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ALVNS.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -12,6 +13,16 @@
       <change beforePath="$PROJECT_DIR$/semantic_segmentation/configs.py" beforeDir="false" afterPath="$PROJECT_DIR$/semantic_segmentation/configs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/semantic_segmentation/segmentor.py" beforeDir="false" afterPath="$PROJECT_DIR$/semantic_segmentation/segmentor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/steering/visualization/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/steering/visualization/model.py" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/steering/visualization/visualization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/others/1_VZMUdPFniGA3X7urHi6f4w.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/others/1_vPDzoQJsVUnSHIdjeWoLmA.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/others/Work Calendar-2018.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/others/Work Calendar-2018.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/steering/steering_predictor.py" beforeDir="false" afterPath="$PROJECT_DIR$/steering/steering_predictor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/steering/visualization/steering_visualizer.py" beforeDir="false" />
+>>>>>>> 2157e9b97ac5820be6043527ce1cad1e2ad1720c
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -75,6 +86,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -118,6 +130,9 @@
         </leaf>
       </split-second>
     </splitter>
+=======
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+>>>>>>> 2157e9b97ac5820be6043527ce1cad1e2ad1720c
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -170,6 +185,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
+=======
+        <option value="$PROJECT_DIR$/cruise/cruise_controller.py" />
+        <option value="$PROJECT_DIR$/cruise/speed_control/speed_control.ino" />
+>>>>>>> 2157e9b97ac5820be6043527ce1cad1e2ad1720c
         <option value="$PROJECT_DIR$/semantic_segmentation/test.py" />
         <option value="$PROJECT_DIR$/steering/rambo_v2.py" />
         <option value="$PROJECT_DIR$/steering/rambo.py" />
@@ -213,6 +233,7 @@
         <option value="$PROJECT_DIR$/detection/vehicle/device_test.py" />
         <option value="$PROJECT_DIR$/detection/vehicle/vehicle_detector.py" />
         <option value="$PROJECT_DIR$/detection/object/object_detector.py" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/steering/steering_predictor.py" />
         <option value="$PROJECT_DIR$/gui/DriveApp.py" />
         <option value="$PROJECT_DIR$/semantic_segmentation/configs.py" />
@@ -221,6 +242,11 @@
         <option value="$PROJECT_DIR$/detection/object/device_test.py" />
         <option value="$PROJECT_DIR$/driver.py" />
         <option value="$PROJECT_DIR$/steering/visualization/model.py" />
+=======
+        <option value="$PROJECT_DIR$/driver.py" />
+        <option value="$PROJECT_DIR$/steering/steering_predictor.py" />
+        <option value="$PROJECT_DIR$/steering/visualization/visualization.py" />
+>>>>>>> 2157e9b97ac5820be6043527ce1cad1e2ad1720c
       </list>
     </option>
   </component>
@@ -230,10 +256,14 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+<<<<<<< HEAD
   <component name="ProjectFrameBounds" extendedState="4">
     <option name="x" value="85" />
+=======
+  <component name="ProjectFrameBounds">
+>>>>>>> 2157e9b97ac5820be6043527ce1cad1e2ad1720c
     <option name="y" value="24" />
-    <option name="width" value="1505" />
+    <option name="width" value="1440" />
     <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -255,7 +285,7 @@
             <path>
               <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
               <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
-              <item name="detection" type="462c0819:PsiDirectoryNode" />
+              <item name="semantic_segmentation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
@@ -458,23 +488,33 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="85" y="24" width="1505" height="876" extended-state="4" />
     <editor active="true" />
+=======
+    <frame x="0" y="24" width="1440" height="876" extended-state="6" />
+>>>>>>> 2157e9b97ac5820be6043527ce1cad1e2ad1720c
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286445" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5028612" side_tool="true" weight="0.4705128" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" x="21" y="333" width="1398" height="257" id="Run" order="2" sideWeight="0.49713877" weight="0.2836485" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32608697" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32736573" />
+<<<<<<< HEAD
       <window_info anchor="bottom" x="21" y="333" width="1398" height="257" id="Run" order="2" sideWeight="0.49713877" weight="0.28292048" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.36061382" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22887558" />
+=======
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.36061382" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22603719" />
+>>>>>>> 2157e9b97ac5820be6043527ce1cad1e2ad1720c
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32988167" />
       <window_info anchor="right" id="SciView" order="3" weight="0.36918604" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39769822" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="SFDX" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -552,6 +592,23 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/detection/lane/lane_detector.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/semantic_segmentation/segmentor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="42" column="56" selection-start-line="42" selection-start-column="56" selection-end-line="42" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> 2157e9b97ac5820be6043527ce1cad1e2ad1720c
     <entry file="file://$PROJECT_DIR$/steering/simulation_autumn.py" />
     <entry file="file://$PROJECT_DIR$/semantic_segmentation/segmentation_analyzer.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -722,6 +779,7 @@
     <entry file="file://$PROJECT_DIR$/detection/vehicle/device_test.py" />
     <entry file="file://$PROJECT_DIR$/cruise/sc.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="330">
           <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
@@ -776,11 +834,49 @@
           <folding>
             <element signature="e#1162#1172#0" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="525">
+          <caret line="71" column="21" selection-start-line="71" selection-start-column="21" selection-end-line="71" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/detection/vehicle/utils.py" />
+    <entry file="file://$PROJECT_DIR$/detection/vehicle/configs.py" />
+    <entry file="file://$PROJECT_DIR$/detection/vehicle/model_data/configs.py" />
+    <entry file="file://$PROJECT_DIR$/detection/vehicle/device_test.py" />
+    <entry file="file://$PROJECT_DIR$/cruise/sc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/detection/vehicle/visualize_detection.py" />
+    <entry file="file://$PROJECT_DIR$/detection/vehicle/vehicle_detector.py" />
+    <entry file="file://$PROJECT_DIR$/detection/object/object_detector.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="56" column="33" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
+          <folding>
+            <element signature="e#91#101#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/steering/visualization/steering_visualizer.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/steering/visualization/testing_visualizer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="818">
+          <caret line="160" lean-forward="true" selection-start-line="160" selection-end-line="160" />
+>>>>>>> 2157e9b97ac5820be6043527ce1cad1e2ad1720c
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/driver.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="2265">
           <caret line="151" column="42" selection-start-line="151" selection-start-column="42" selection-end-line="151" selection-end-column="42" />
           <folding>
@@ -796,15 +892,40 @@
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="285">
+          <caret line="141" selection-start-line="141" selection-end-line="141" />
+>>>>>>> 2157e9b97ac5820be6043527ce1cad1e2ad1720c
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/steering/visualization/steering_visualizer.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="-2077">
           <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
         </state>
       </provider>
     </entry>
+=======
+        <state relative-caret-position="30">
+          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/semantic_segmentation/steering_simulation.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/steering/visualization/visualization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#123#160#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+>>>>>>> 2157e9b97ac5820be6043527ce1cad1e2ad1720c
   </component>
 </project>
