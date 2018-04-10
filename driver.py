@@ -10,6 +10,7 @@
 from steering.autumn import AutumnModel
 from steering.steering_predictor import SteeringPredictor
 from steering.mc import MC
+import steering.visualization.steering_visualizer as str_vis
 from cruise.cruise_predictor import CruisePredictor
 from cruise.sc import SC
 from semantic_segmentation.segmentor import Segmentor
@@ -94,7 +95,10 @@ class Driver:
         seg_analyzer = SegAnalyzer(0.05)  # init seg analyzer
 
         # detection -- initialize yolo object detection
-        object_detector = ObjectDetector()
+        if self.object_detector:
+            object_detector = ObjectDetector()
+        else:
+            object_detector = None
 
         return steering_predictor, c_predictor, segmentor, seg_analyzer, object_detector
 
@@ -145,7 +149,7 @@ class Driver:
                 if self.steering_model == "Rambo":
                     resize = cv2.resize(image,(256, 192))
                     angle = -1 * self.steering_predictor.predict(cv2.cvtColor(resize), cv2.COLOR_BGR2GRAY)
-                    steering_img = self.steering_predictor.post_process_image(image, angle)
+                    steering_img = str_vis.post_process_image(image, angle)
 
                 elif self.steering_model == "Own":
                     angle, steering_img = self.steering_predictor.predict_steering(image)

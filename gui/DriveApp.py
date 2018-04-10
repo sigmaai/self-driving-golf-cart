@@ -62,7 +62,7 @@ class DriverApp(tk.Frame):
         if self.steering_model != None:
 
             self.driver = Driver(steering_model=self.steering_model,
-                                 cc=self.cc_bool.get(),
+                                 cruise_control=self.cc_bool.get(),
                                  seg_vis=self.seg_vis.get(),
                                  obj_det=self.detc_bool.get(),
                                  det_vis=self.detc_vis.get(),

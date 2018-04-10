@@ -32,27 +32,27 @@ import model_data.configs as configs
 from keras.models import load_model
 from yad2k.models.keras_yolo import yolo_eval, yolo_head
 import random
+from imutils.video import VideoStream
 
 
 def read_cam():
 
     sess = K.get_session()  
 
-    with open(configs.classes_path) as f:
+    with open(configs.t_classes_path) as f:
         class_names = f.readlines()
     class_names = [c.strip() for c in class_names]
 
-    with open(configs.anchors_path) as f:
+    with open(configs.t_anchors_path) as f:
         anchors = f.readline()
         anchors = [float(x) for x in anchors.split(',')]
         anchors = np.array(anchors).reshape(-1, 2)
 
-    yolo_model = load_model(configs.model_path)
+    print("being loading model")
+    yolo_model = load_model(configs.t_model_path)
     yolo_model.summary()
-
+    print("finished loading model")
     # Check if model is fully convolutional, assuming channel last order.
-    model_image_size = yolo_model.layers[0].input_shape[1:3]
-    is_fixed_size = model_image_size != (None, None)
 
     # Generate colors for drawing bounding boxes.
     hsv_tuples = [(x / len(class_names), 1., 1.)
@@ -69,9 +69,9 @@ def read_cam():
     boxes, scores, classes = yolo_eval(yolo_outputs, input_image_shape, score_threshold=configs.score_threshold, iou_threshold=configs.iou_threshold)
 
     # OpenCV main loop
-    cap = cv2.VideoCapture("nvcamerasrc ! video/x-raw(memory:NVMM), width=(int)416, height=(int)416,format=(string)I420, framerate=(fraction)30/1 ! nvvidconv flip-method=0 ! video/x-raw, format=(string)BGRx ! videoconvert ! video/x-raw, format=(string)BGR ! appsink")
+    vid_center = VideoStream(src=1).start()
 
-    if cap.isOpened():
+    while True:
 
         windowName = "car detection"
         cv2.namedWindow(windowName, cv2.WINDOW_NORMAL)
@@ -86,12 +86,13 @@ def read_cam():
             if cv2.getWindowProperty(windowName, 0) < 0:
                 # This will fail if the user closed the window; get printed to the console
                 break
-            ret_val, image = cap.read()
+            image = vid_center.read()
 
             # -----------------------------------------------------
             # run the network and detection
 
             resized_image = cv2.resize(image, (416, 416))
+
             image_data = np.array(resized_image, dtype='float32')
 
             image_data /= 255.
