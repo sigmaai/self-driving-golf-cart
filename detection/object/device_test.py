@@ -69,7 +69,7 @@ def read_cam():
     boxes, scores, classes = yolo_eval(yolo_outputs, input_image_shape, score_threshold=configs.score_threshold, iou_threshold=configs.iou_threshold)
 
     # OpenCV main loop
-    vid_center = VideoStream(src=1).start()
+    vid_center = VideoStream(src=0).start()
 
     while True:
 

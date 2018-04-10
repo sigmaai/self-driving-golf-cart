@@ -3,7 +3,7 @@ import numpy as np
 import cv2
 import steering.configs as configs
 import steering.models as models
-
+import steering.visualization.visualization as vis
 
 class SteeringPredictor:
 
@@ -18,7 +18,7 @@ class SteeringPredictor:
 
         input = cv2.resize(image, (320, 160))
         predicted_angle = self.cnn.predict(np.array([input]))[0][0]
-        overlay_img = self.post_process_image(image, predicted_angle)
+        overlay_img = vis.visualize_steering_wheel(image, predicted_angle)
 
         return predicted_angle, overlay_img
 

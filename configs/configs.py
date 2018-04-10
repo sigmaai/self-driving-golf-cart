@@ -16,7 +16,7 @@ cruise = False
 navigation = False
 segmentation = True
 left_vid_src = 2
-cent_vid_src = 1
+cent_vid_src = 0
 right_vid_src = 3
 # set to true if want to use default serial port
 default_st_port = False
