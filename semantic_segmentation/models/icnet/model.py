@@ -48,7 +48,6 @@ def build(nc, w, h, optimizer='adadelta', plot=False):
     out = encoder.build(inp, valid_shapes=shapes)
     out = decoder.build(inp=inp, encoder=out, nc=nc, valid_shapes=shapes)
 
-    # out = Reshape((data_shape, nc))(out)  # TODO: need to remove data_shape for multi-scale training
     out = Activation('sigmoid')(out)
     model = Model(inputs=inp, outputs=out)
 

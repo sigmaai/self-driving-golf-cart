@@ -10,9 +10,8 @@
 from steering.autumn import AutumnModel
 from steering.steering_predictor import SteeringPredictor
 from steering.mc import MC
-import steering.visualization.visualization as str_vis
+import steering.visualization.visualization as steering_visualization
 from steering.auto_pilot import AutoPilot as AP
-from time import process_time
 from steering.rambo import Rambo
 
 from cruise.cruise_predictor import CruisePredictor
@@ -26,12 +25,12 @@ from path_planning.global_path import GlobalPathPlanner
 import configs.configs as configs
 from localization.gps import GPS
 from gui import info_screen
-from imutils.video import VideoStream
+
+from time import process_time
 import helper
 import os
 import cv2
 import numpy as np
-
 from termcolor import colored
 import time
 
@@ -47,6 +46,11 @@ class Driver:
         self.det_vis = det_vis
         self.gps = gps
 
+        # initialize some private variable
+        self.__steering_heatmap = False
+        self.__disable_stopping = False
+        self.__fps = 0.0
+
         self.steering_predictor, \
         self.c_predictor, \
         self.segmentor, \
@@ -54,7 +58,7 @@ class Driver:
         self.object_detector = self.init_ml_models()
 
         if self.gps:
-            self.init_nav()
+            self.init_navigation()
 
         if configs.default_st_port:  # check for serial setting
             print(colored("using system default serial ports", "blue"))
@@ -96,8 +100,8 @@ class Driver:
             c_predictor = None
 
         # segmentation
-        segmentor = Segmentor("ENET")  # init segmentor
-        seg_analyzer = SegAnalyzer(0.05)  # init seg analyzer
+        segmentor = Segmentor("ENET")       # init segmentor
+        seg_analyzer = SegAnalyzer(0.05)    # init seg analyzer
 
         # detection -- initialize yolo object detection
         if self.obj_det:
@@ -107,7 +111,7 @@ class Driver:
 
         return steering_predictor, c_predictor, segmentor, seg_analyzer, detector
 
-    def init_nav(self):
+    def init_navigation(self):
 
         print(colored("------ GPS-------", "blue"))
         os.system("ls /dev/ttyUSB*")
@@ -124,17 +128,13 @@ class Driver:
 
     def drive(self):
 
-        # vid_left = VideoStream(src=configs.left_vid_src).start()
-        # vid_center = VideoStream(src=configs.cent_vid_src).start()
-        # vid_right = VideoStream(src=configs.right_vid_src).start()
-
         cap = cv2.VideoCapture(0)
 
         if cap.isOpened():
 
             windowName = "self driving car...running"
             cv2.namedWindow(windowName, cv2.WINDOW_NORMAL)
-            cv2.resizeWindow(windowName, 1100, 510)
+            cv2.resizeWindow(windowName, 1100, 520)
             cv2.moveWindow(windowName, 0, 0)
             cv2.setWindowTitle(windowName, "self driving car")
 
@@ -149,68 +149,87 @@ class Driver:
                 if cv2.getWindowProperty(windowName, 0) < 0:
                     break
                 ret_val, image = cap.read()
-
+                print(image.shape)
+                image = cv2.resize(image, (640, 480))
 
                 # ------------------ segmentation -------------------------
+                # press down on "a" key to disable stopping
 
-                # press down on "a" key to stop segmentation
+                # TODO: Test this new implementation of stopping
                 if cv2.waitKey(33) == ord('a'):
-                    speed = 1
-                    seg_visual = cv2.resize(image, (640, 480))
-                    cruise_screen = info_screen.draw_cruise_info_screen(speed=0, obj_size=0)
-                else:
-                    result, seg_visual = self.segmentor.semantic_segmentation(image, visualize=self.seg_vis)
-                    speed, size = self.seg_analyzer.analyze_image(result)
-                    cruise_screen = info_screen.draw_cruise_info_screen(speed=speed, obj_size=size)
+                    self.__disable_stopping = not self.__disable_stopping
 
-                if speed == 0:
+                result, seg_visual = self.segmentor.semantic_segmentation(image, visualize=self.seg_vis)
+                speed, size = self.seg_analyzer.analyze_image(result)
+                cruise_screen = info_screen.draw_cruise_info_screen(speed=speed, obj_size=size)
+
+                if self.__disable_stopping or speed is not 0:
+                    self.c_controller.drive(1)
+                else:
                     print(colored("[INFO]: STOP!", "red"))
                     self.c_controller.drive(-1)
                     # time.sleep(2)
-                else:
-                    self.c_controller.drive(1)
-
-                # ------------------ detection ------------------
-
-                if self.obj_det:
-                    detection = self.object_detector.detect_object(image, details=False)
-                    det_result = cv2.resize(detection, (640, 480))
-                else:
-                    det_result = image
 
                 # --------------------------- steering --------------------
-                #
+
                 if self.steering_model == "Rambo":
-                    resize = cv2.resize(image, (256, 192))
-                    angle = -1 * self.steering_predictor.predict(cv2.cvtColor(resize), cv2.COLOR_BGR2GRAY)
-                    steering_img = str_vis.visualize_steering_wheel(image, angle)
-
+                    resize = cv2.cvtColor(cv2.resize(image, (256, 192))), cv2.COLOR_BGR2GRAY
+                    angle = -1 * self.steering_predictor.predict(resize)
                 elif self.steering_model == "Own":
-                    angle, steering_img = self.steering_predictor.predict_steering(image)
-
+                    angle = self.steering_predictor.predict(image)
                 elif self.steering_model == "Autumn":
                     angle = self.steering_predictor.predict(image)
-                    steering_img = str_vis.visualize_steering_wheel(image=image, angle=angle)
                 else:
                     raise Exception("Not implemented: " + self.steering_model + ". Please enter a valid model type")
 
-                # -------------- execute steering commands ----------------
+                # draw steering information screen
+                # TODO: Test the steering info screen
+                str_screen = info_screen.draw_steering_info_screen(angle=angle, fps=self.__fps)
+
+                # visualizing steering class activation
+                # checks for the key if the user pressed "h"
+
+                # TODO: Make sure this code is bug free
+                if cv2.waitKey(104) == ord('h'):
+                    self.__steering_heatmap = not self.__steering_heatmap
+                if self.__steering_heatmap:
+                    str_act_vis = steering_visualization.visualize_class_activation_map(self.steering_predictor.cnn, image)
+                else:
+                    str_act_vis = image
+
+                steering_img = steering_visualization.visualize_line(str_act_vis, speed_ms=0, angle_steers=angle, color=(0, 0, 255))
+
+                # ------------ execute steering commands -------------
                 self.mc.turn(configs.st_fac * angle)
 
 
-                # ------------------ show the stuff -------------------
-                # -----------------------------------------------------
-                print("shape1" + str(det_result.shape))
-                print("shape2" + str(cruise_screen.shape))
+                # ------------------ detection ------------------
+                # for detection visualization, I draw bounding boxes on top of
+                # the steering visualizations. I want to condense several visualization
+                # results into just one frame.
 
-                det_result = np.vstack((det_result, cruise_screen))
+                # TODO: make sure the visualization is accurate. Throw no exceptions...
+                if self.obj_det:
+                    out_boxes, out_scores, out_classes = self.object_detector.detect_object(image, visualize=False)
+                    det_visualization = self.object_detector.draw_bboxes(image=steering_img, b_boxes=out_boxes, scores=out_scores, classes=out_classes)
+                else:
+                    det_visualization = image
+
+                # ------------------ show the stuff -----------------
+                # ---------------------------------------------------
+
+                steering_img = np.vstack((det_visualization, str_screen))
                 seg_visual = np.vstack((seg_visual, cruise_screen))
-                buff1 = np.concatenate((det_result, seg_visual), axis=1)
-                vidBuf = buff1
+                vidBuf = np.concatenate((steering_img, seg_visual), axis=1)
 
                 cv2.imshow(windowName, vidBuf)
 
+                # TODO: does frame rate actually work?
+                # TODO: How to minimize time spent?
+
                 elapsed_time = process_time() - t
+                self.__fps = 1 / elapsed_time
+
                 print("time: " + str(elapsed_time))
                 key = cv2.waitKey(10)
 

@@ -51,7 +51,6 @@ def yolo_body(inputs, num_anchors, num_classes):
 
     conv13 = darknet.layers[43].output
     conv21 = DarknetConv2D_BN_Leaky(64, (1, 1))(conv13)
-    # TODO: Allow Keras Lambda to use func arguments for output_shape?
     conv21_reshaped = Lambda(
         space_to_depth_x2,
         output_shape=space_to_depth_x2_output_shape,
@@ -90,11 +89,6 @@ def yolo_head(feats, anchors, num_classes):
     # Reshape to batch, height, width, num_anchors, box_params.
     anchors_tensor = K.reshape(K.variable(anchors), [1, 1, 1, num_anchors, 2])
 
-    # Static implementation for fixed models.
-    # TODO: Remove or add option for static implementation.
-    # _, conv_height, conv_width, _ = K.int_shape(feats)
-    # conv_dims = K.variable([conv_width, conv_height])
-
     # Dynamic implementation of conv dims for fully convolutional model.
     conv_dims = K.shape(feats)[1:3]  # assuming channels last
     # In YOLO the height index is the inner most iteration.
@@ -102,7 +96,6 @@ def yolo_head(feats, anchors, num_classes):
     conv_width_index = K.arange(0, stop=conv_dims[1])
     conv_height_index = K.tile(conv_height_index, [conv_dims[1]])
 
-    # TODO: Repeat_elements and tf.split doesn't support dynamic splits.
     # conv_width_index = K.repeat_elements(conv_width_index, conv_dims[1], axis=0)
     conv_width_index = K.tile(
         K.expand_dims(conv_width_index, 0), [conv_dims[0], 1])
@@ -200,7 +193,7 @@ def yolo_loss(args,
         yolo_output, anchors, num_classes)
 
     # Unadjusted box predictions for loss.
-    # TODO: Remove extra computation shared with yolo_head.
+
     yolo_output_shape = K.shape(yolo_output)
     feats = K.reshape(yolo_output, [
         -1, yolo_output_shape[1], yolo_output_shape[2], num_anchors,
@@ -209,7 +202,6 @@ def yolo_loss(args,
     pred_boxes = K.concatenate(
         (K.sigmoid(feats[..., 0:2]), feats[..., 2:4]), axis=-1)
 
-    # TODO: Adjust predictions by image width/height for non-square images?
     # IOUs may be off due to different aspect ratio.
 
     # Expand pred x,y,w,h to allow comparison with ground truth.
@@ -253,7 +245,6 @@ def yolo_loss(args,
     # A detector has found an object if IOU > thresh for some true box.
     object_detections = K.cast(best_ious > 0.6, K.dtype(best_ious))
 
-    # TODO: Darknet region training includes extra coordinate loss for early
     # training steps to encourage predictions to match anchor priors.
 
     # Determine confidence weights from object and no_object weights.
@@ -313,7 +304,6 @@ def yolo_filter_boxes(boxes, box_confidence, box_class_probs, threshold=.6):
     box_class_scores = K.max(box_scores, axis=-1)
     prediction_mask = box_class_scores >= threshold
 
-    # TODO: Expose tf.boolean_mask to Keras backend?
     boxes = tf.boolean_mask(boxes, prediction_mask)
     scores = tf.boolean_mask(box_class_scores, prediction_mask)
     classes = tf.boolean_mask(box_classes, prediction_mask)
@@ -338,7 +328,6 @@ def yolo_eval(yolo_outputs,
     image_dims = K.reshape(image_dims, [1, 4])
     boxes = boxes * image_dims
 
-    # TODO: Something must be done about this ugly hack!
     max_boxes_tensor = K.variable(max_boxes, dtype='int32')
     K.get_session().run(tf.variables_initializer([max_boxes_tensor]))
     nms_index = tf.image.non_max_suppression(
@@ -377,7 +366,7 @@ def preprocess_true_boxes(true_boxes, anchors, image_size):
     height, width = image_size
     num_anchors = len(anchors)
     # Downsampling factor of 5x 2-stride max_pools == 32.
-    # TODO: Remove hardcoding of downscaling calculations.
+
     assert height % 32 == 0, 'Image sizes in YOLO_v2 must be multiples of 32.'
     assert width % 32 == 0, 'Image sizes in YOLO_v2 must be multiples of 32.'
     conv_height = height // 32

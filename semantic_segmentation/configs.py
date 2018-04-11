@@ -4,7 +4,6 @@
 # All Rights Reserved.
 #
 
-
 batch_size = 8
 img_height = 360
 img_width = 640

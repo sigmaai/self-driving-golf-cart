@@ -86,7 +86,7 @@ class ObjectDetector:
                                        size=np.floor(3e-2 * configs.height + 0.5).astype('int32'))
         self.thickness = (configs.width + configs.height) // 300
 
-    def detect_object(self, image, details=False):
+    def detect_object(self, image, visualize=False):
 
         image = Image.fromarray(cv2.resize(image, (configs.width, configs.height)))
 
@@ -110,8 +110,8 @@ class ObjectDetector:
         image = Image.fromarray(array)
         image = self.draw_bboxes(image, b_boxes=out_boxes, scores=out_scores, classes=out_classes)
 
-        if details:
-            return np.array(image), out_boxes, out_scores, out_classes
+        if visualize:
+            return out_boxes, out_scores, out_classes
         else:
             return np.array(image)
 
