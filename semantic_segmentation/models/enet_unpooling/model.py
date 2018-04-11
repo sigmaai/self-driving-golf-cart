@@ -86,23 +86,15 @@ def transfer_weights(model, weights=None, keep_top=False):
     return model
 
 
-def build(nc, w, h,
-          loss='categorical_crossentropy',
-          # optimizer='adadelta'):
-          optimizer='adam',
-          metrics=None,
-          **kwargs):
-    data_shape = w * h if None not in (w, h) else -1  # TODO: -1 or None?
+def build(nc, w, h, loss='categorical_crossentropy', optimizer='adam', metrics=None, **kwargs):
+
     inp = Input(shape=(h, w, 3), name='image')
     enet = encoder.build(inp)
     enet = decoder.build(enet, nc=nc)
     name = 'enet_unpooling'
 
     output_conv = Convolution2D(nc, (1, 1), activation='sigmoid')(enet)
-    # TODO: need to remove data_shape for multi-scale training
-    # enet = Reshape((data_shape, nc))(enet)
 
-    # enet = Activation('softmax', name='output')(enet)
     model = Model(inputs=inp, outputs=output_conv)
 
     metrics = ['accuracy']

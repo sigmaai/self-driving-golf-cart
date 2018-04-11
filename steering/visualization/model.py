@@ -50,19 +50,21 @@ def VGG16_convolutions():
     return model
 
 def get_model():
+
     model = VGG16_convolutions()
 
     model = load_model_weights(model, "vgg16_weights.h5")
     
-    model.add(Lambda(global_average_pooling, 
-              output_shape=global_average_pooling_shape))
-    model.add(Dense(2, activation = 'softmax', init='uniform'))
+    model.add(Lambda(global_average_pooling, output_shape=global_average_pooling_shape))
+    model.add(Dense(2, activation='softmax', init='uniform'))
     sgd = SGD(lr=0.01, decay=1e-6, momentum=0.5, nesterov=True)
-    model.compile(loss = 'categorical_crossentropy', optimizer = sgd, metrics=['accuracy'])
+    model.compile(loss='categorical_crossentropy', optimizer = sgd, metrics=['accuracy'])
     return model
 
+
 def load_model_weights(model, weights_path):
-    print ('Loading model.')
+
+    print('Loading model...')
     f = h5py.File(weights_path)
     for k in range(f.attrs['nb_layers']):
         if k >= len(model.layers):
@@ -73,8 +75,9 @@ def load_model_weights(model, weights_path):
         model.layers[k].set_weights(weights)
         model.layers[k].trainable = False
     f.close()
-    print( 'Model loaded.')
+    print('Model loaded.')
     return model
+
 
 def get_output_layer(model, layer_name):
     # get the symbolic outputs of each "key" layer (we gave them unique names).

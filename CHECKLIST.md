@@ -14,23 +14,24 @@
 
 ### Others
 1. ~~system computing power issue~~ (New computer purchased)
-2. computer system power consumption issue
+2. ~~computer system power consumption issue~~
 	- ~~get UPS (uninterrupted power supply)~~ (Purchased UPS)
 	- Maybe install solar? (Planning to install solar)
 
 # Todo: (2.2)
 
 ### Autonomous Cruise Control
-1. implement YOLOv3 for detection
+1. ~~implement YOLO for detection~~
 2. train better & larger segmentation models
-3. improve visualization for segmentation
+3. ~~improve visualization for segmentation~~
 
 ### Localization
-<<<<<<< HEAD
 - implement GPS
 
 ### Hardware
-- Build & setup computer
-=======
-- implement GPS
->>>>>>> 900c9ad2812a7e6a75508d9191daf92bfc438ce6
+- ~~Build & setup computer~~
+- Build the cargo space
+
+### Testing
+1. Test newly trained steering models
+2. Test the cruise control system at a slightly higher speed.

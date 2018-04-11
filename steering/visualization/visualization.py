@@ -5,7 +5,6 @@ Revised and used by Neil Nie
 '''
 
 from __future__ import print_function
-import argparse
 import numpy as np
 import cv2
 from PIL import Image
@@ -13,6 +12,15 @@ from PIL import ImageFont
 from PIL import ImageDraw
 import matplotlib
 from skimage import transform as tf
+
+from keras.models import *
+from keras.callbacks import *
+import keras.backend as K
+from steering.visualization.model import *
+from steering.visualization.data import *
+import cv2
+import argparse
+
 
 matplotlib.use("Agg")
 
@@ -89,6 +97,7 @@ def calc_lookahead_offset(v_ego, angle_steers, d_lookahead, angle_offset=0):
 
 # main methods --
 
+# TODO: Test this method!
 def visualize_line(img, speed_ms, angle_steers, color=(0, 0, 255)):
 
     path_x = np.arange(0, 50.1, 0.5)
@@ -109,3 +118,33 @@ def visualize_steering_wheel(image, angle):
     draw.text((80, 200), str(round(angle, 3)), (255, 255, 255), font=font)
     steering_img = cv2.resize(np.array(background), (640, 480))
     return steering_img
+
+
+# TODO: Actually test this method
+def visualize_class_activation_map(model, image):
+
+    original_img = image
+    width, height, _ = original_img.shape
+
+    # Reshape to the network input shape (3, w, h).
+    img = np.array([np.transpose(np.float32(original_img), (2, 0, 1))])
+
+    # Get the 512 input weights to the softmax.
+    class_weights = model.layers[-1].get_weights()[0]
+    final_conv_layer = get_output_layer(model, "conv5_3")
+    get_output = K.function([model.layers[0].input], [final_conv_layer.output, model.layers[-1].output])
+    [conv_outputs, predictions] = get_output([img])
+    conv_outputs = conv_outputs[0, :, :, :]
+
+    # Create the class activation map.
+    cam = np.zeros(dtype = np.float32, shape = conv_outputs.shape[1:3])
+    for i, w in enumerate(class_weights[:, 1]):
+        cam += w * conv_outputs[i, :, :]
+    print("predictions", predictions)
+    cam /= np.max(cam)
+    cam = cv2.resize(cam, (height, width))
+    heatmap = cv2.applyColorMap(np.uint8(255 * cam), cv2.COLORMAP_JET)
+    heatmap[np.where(cam < 0.2)] = 0
+    img = heatmap * 0.5 + original_img
+
+    return img
