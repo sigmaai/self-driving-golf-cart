@@ -25,7 +25,7 @@ from detection.object.object_detector import ObjectDetector
 from path_planning.global_path import GlobalPathPlanner
 import configs.configs as configs
 from localization.gps import GPS
-
+from gui import info_screen
 from imutils.video import VideoStream
 import helper
 import os
@@ -134,7 +134,7 @@ class Driver:
 
             windowName = "self driving car...running"
             cv2.namedWindow(windowName, cv2.WINDOW_NORMAL)
-            cv2.resizeWindow(windowName, 1200, 480)
+            cv2.resizeWindow(windowName, 1100, 510)
             cv2.moveWindow(windowName, 0, 0)
             cv2.setWindowTitle(windowName, "self driving car")
 
@@ -143,7 +143,6 @@ class Driver:
             while True:
 
                 t = process_time()
-                # do some stuff
 
                 # -----------------------------------------------------
                 # Check to see if the user closed the window
@@ -151,10 +150,38 @@ class Driver:
                     break
                 ret_val, image = cap.read()
 
+
+                # ------------------ segmentation -------------------------
+
+                # press down on "a" key to stop segmentation
+                if cv2.waitKey(33) == ord('a'):
+                    speed = 1
+                    seg_visual = cv2.resize(image, (640, 480))
+                    cruise_screen = info_screen.draw_cruise_info_screen(speed=0, obj_size=0)
+                else:
+                    result, seg_visual = self.segmentor.semantic_segmentation(image, visualize=self.seg_vis)
+                    speed, size = self.seg_analyzer.analyze_image(result)
+                    cruise_screen = info_screen.draw_cruise_info_screen(speed=speed, obj_size=size)
+
+                if speed == 0:
+                    print(colored("[INFO]: STOP!", "red"))
+                    self.c_controller.drive(-1)
+                    # time.sleep(2)
+                else:
+                    self.c_controller.drive(1)
+
+                # ------------------ detection ------------------
+
+                if self.obj_det:
+                    detection = self.object_detector.detect_object(image, details=False)
+                    det_result = cv2.resize(detection, (640, 480))
+                else:
+                    det_result = image
+
                 # --------------------------- steering --------------------
                 #
                 if self.steering_model == "Rambo":
-                    resize = cv2.resize(image,(256, 192))
+                    resize = cv2.resize(image, (256, 192))
                     angle = -1 * self.steering_predictor.predict(cv2.cvtColor(resize), cv2.COLOR_BGR2GRAY)
                     steering_img = str_vis.visualize_steering_wheel(image, angle)
 
@@ -170,37 +197,17 @@ class Driver:
                 # -------------- execute steering commands ----------------
                 self.mc.turn(configs.st_fac * angle)
 
-                # ------------------ segmentation -------------------------
-
-                # press down on "a" key to stop segmentation
-                if cv2.waitKey(33) == ord('a'):
-                    speed = 1
-                    seg_visual = cv2.resize(image, (640, 480))
-                else:
-                    result, seg_visual = self.segmentor.semantic_segmentation(image, visualize=self.seg_vis)
-                    speed = self.seg_analyzer.analyze_image(result)
-
-                if speed == 0:
-                    print(colored("[INFO]: STOP!", "red"))
-                    self.c_controller.drive(-1)
-                    # time.sleep(2)
-                else:
-                    self.c_controller.drive(1)
-
-                # ------------------ detection ------------------
-
-                if self.obj_det:
-                    detection = self.object_detector.detect_objects(image, details=False)
-                    det_result = cv2.resize(detection, (640, 480))
-                else:
-                    det_result = image
-
-                buff1 = np.concatenate((det_result, seg_visual), axis=1)
-                # buff2 = np.concatenate((det_result, image), axis=1)
-                vidBuf = buff1
 
                 # ------------------ show the stuff -------------------
                 # -----------------------------------------------------
+                print("shape1" + str(det_result.shape))
+                print("shape2" + str(cruise_screen.shape))
+
+                det_result = np.vstack((det_result, cruise_screen))
+                seg_visual = np.vstack((seg_visual, cruise_screen))
+                buff1 = np.concatenate((det_result, seg_visual), axis=1)
+                vidBuf = buff1
+
                 cv2.imshow(windowName, vidBuf)
 
                 elapsed_time = process_time() - t

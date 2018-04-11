@@ -30,11 +30,10 @@ class SegAnalyzer:
             total_obs += len(obs_mask)
 
         perc_obs = total_obs / (im_mask.shape[0] * im_mask.shape[1])
-        print(perc_obs)
         if perc_obs >= 0.20:
-            return 0
+            return 0, perc_obs
         else:
-            return 1
+            return 1, perc_obs
 
     def analyze_side_cam(self, left, right):
 
