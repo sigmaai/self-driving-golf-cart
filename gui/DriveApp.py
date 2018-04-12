@@ -33,6 +33,7 @@ class DriverApp(tk.Frame):
         self.cb1.pack()
 
         self.seg_vis = tk.IntVar()
+        self.seg_vis.set(1)
         self.cb2 = tk.Checkbutton(self, text="Segmentation Visualization", variable=self.seg_vis)
         self.cb2.pack()
 
@@ -42,6 +43,7 @@ class DriverApp(tk.Frame):
         self.cb3.pack()
 
         self.detc_vis = tk.IntVar()
+        self.detc_vis.set(1)
         self.cb4 = tk.Checkbutton(self, text="Detection Visualization", variable=self.detc_vis)
         self.cb4.pack()
 

@@ -24,7 +24,7 @@ from detection.object.object_detector import ObjectDetector
 from path_planning.global_path import GlobalPathPlanner
 import configs.configs as configs
 from localization.gps import GPS
-from gui import info_screen
+from gui.info_screen import InfoScreen
 
 from time import process_time
 import helper
@@ -50,6 +50,7 @@ class Driver:
         self.__steering_heatmap = False
         self.__disable_stopping = False
         self.__fps = 0.0
+        self.__info_screen = InfoScreen()
 
         self.steering_predictor, \
         self.c_predictor, \
@@ -134,7 +135,7 @@ class Driver:
 
             windowName = "self driving car...running"
             cv2.namedWindow(windowName, cv2.WINDOW_NORMAL)
-            cv2.resizeWindow(windowName, 1100, 520)
+            cv2.resizeWindow(windowName, 1100, 470)
             cv2.moveWindow(windowName, 0, 0)
             cv2.setWindowTitle(windowName, "self driving car")
 
@@ -149,7 +150,6 @@ class Driver:
                 if cv2.getWindowProperty(windowName, 0) < 0:
                     break
                 ret_val, image = cap.read()
-                print(image.shape)
                 image = cv2.resize(image, (640, 480))
 
                 # ------------------ segmentation -------------------------
@@ -161,17 +161,27 @@ class Driver:
 
                 result, seg_visual = self.segmentor.semantic_segmentation(image, visualize=self.seg_vis)
                 speed, size = self.seg_analyzer.analyze_image(result)
-                cruise_screen = info_screen.draw_cruise_info_screen(speed=speed, obj_size=size)
 
                 if self.__disable_stopping or speed is not 0:
                     self.c_controller.drive(1)
                 else:
-                    print(colored("[INFO]: STOP!", "red"))
                     self.c_controller.drive(-1)
                     # time.sleep(2)
 
-                # --------------------------- steering --------------------
+                # ------------------ detection ---------------------------
+                # for detection visualization, I draw bounding boxes on top of
+                # the steering visualizations. I want to condense several visualization
+                # results into just one frame.
 
+                # TODO: make sure the visualization is accurate. Throw no exceptions...
+                if self.obj_det:
+                    # out_boxes, out_scores, out_classes = self.object_detector.detect_object(image, visualize=False)
+                    # det_visualization = self.object_detector.draw_bboxes(image=steering_img, b_boxes=out_boxes, scores=out_scores, classes=out_classes)
+                    det_visualization = self.object_detector.detect_object(image, visualize=True)
+                else:
+                    det_visualization = image
+
+                # --------------------------- steering --------------------
                 if self.steering_model == "Rambo":
                     resize = cv2.cvtColor(cv2.resize(image, (256, 192))), cv2.COLOR_BGR2GRAY
                     angle = -1 * self.steering_predictor.predict(resize)
@@ -182,10 +192,6 @@ class Driver:
                 else:
                     raise Exception("Not implemented: " + self.steering_model + ". Please enter a valid model type")
 
-                # draw steering information screen
-                # TODO: Test the steering info screen
-                str_screen = info_screen.draw_steering_info_screen(angle=angle, fps=self.__fps)
-
                 # visualizing steering class activation
                 # checks for the key if the user pressed "h"
 
@@ -195,44 +201,29 @@ class Driver:
                 if self.__steering_heatmap:
                     str_act_vis = steering_visualization.visualize_class_activation_map(self.steering_predictor.cnn, image)
                 else:
-                    str_act_vis = image
+                    str_act_vis = det_visualization
 
                 steering_img = steering_visualization.visualize_line(str_act_vis, speed_ms=0, angle_steers=angle, color=(0, 0, 255))
 
                 # ------------ execute steering commands -------------
                 self.mc.turn(configs.st_fac * angle)
 
-
-                # ------------------ detection ------------------
-                # for detection visualization, I draw bounding boxes on top of
-                # the steering visualizations. I want to condense several visualization
-                # results into just one frame.
-
-                # TODO: make sure the visualization is accurate. Throw no exceptions...
-                if self.obj_det:
-                    out_boxes, out_scores, out_classes = self.object_detector.detect_object(image, visualize=False)
-                    det_visualization = self.object_detector.draw_bboxes(image=steering_img, b_boxes=out_boxes, scores=out_scores, classes=out_classes)
-                else:
-                    det_visualization = image
-
                 # ------------------ show the stuff -----------------
                 # ---------------------------------------------------
 
-                steering_img = np.vstack((det_visualization, str_screen))
+                str_screen = self.__info_screen.draw_steering_info_screen(angle=angle / 10, fps=self.__fps)
+                cruise_screen = self.__info_screen.draw_cruise_info_screen(speed=speed, stopping_disabled=self.__disable_stopping, obj_size=size)
+
+                steering_img = np.vstack((steering_img, str_screen))
                 seg_visual = np.vstack((seg_visual, cruise_screen))
                 vidBuf = np.concatenate((steering_img, seg_visual), axis=1)
-
-                cv2.imshow(windowName, vidBuf)
-
-                # TODO: does frame rate actually work?
-                # TODO: How to minimize time spent?
 
                 elapsed_time = process_time() - t
                 self.__fps = 1 / elapsed_time
 
-                print("time: " + str(elapsed_time))
-                key = cv2.waitKey(10)
+                cv2.imshow(windowName, vidBuf)
 
+                key = cv2.waitKey(10)
                 if key == 27:  # ESC key
                     cv2.destroyAllWindows()
                     print(colored("[INFO]: -------------------------", "blue"))

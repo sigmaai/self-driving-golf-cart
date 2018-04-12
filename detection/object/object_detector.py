@@ -96,7 +96,6 @@ class ObjectDetector:
 
         image_data /= 255.
         image_data = np.expand_dims(image_data, 0)  # Add batch dimension.
-        print(image_data.shape)
 
         out_boxes, out_scores, out_classes = self.sess.run(
             [self.boxes, self.scores, self.classes],
@@ -106,16 +105,17 @@ class ObjectDetector:
                 K.learning_phase(): 0
             })
 
-        array = np.uint8((image))
-        image = Image.fromarray(array)
-        image = self.draw_bboxes(image, b_boxes=out_boxes, scores=out_scores, classes=out_classes)
-
         if visualize:
-            return out_boxes, out_scores, out_classes
+            image = self.draw_bboxes(image, b_boxes=out_boxes, scores=out_scores, classes=out_classes)
+            image = cv2.resize(np.array(image), (640, 480))
+            return image
         else:
-            return np.array(image)
+            return out_boxes, out_scores, out_classes
 
     def draw_bboxes(self, image, b_boxes, scores, classes):
+
+        array = np.uint8((image))
+        image = Image.fromarray(array)
 
         # draw the bounding boxes
         for i, c in reversed(list(enumerate(classes))):

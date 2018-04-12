@@ -104,6 +104,8 @@ def visualize_line(img, speed_ms, angle_steers, color=(0, 0, 255)):
     path_y, _ = calc_lookahead_offset(speed_ms, angle_steers, path_x)
     draw_path(img, path_x, path_y, color)
 
+    return img
+
 
 def visualize_steering_wheel(image, angle):
 
