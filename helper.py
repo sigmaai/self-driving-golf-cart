@@ -4,12 +4,12 @@ import os
 import time
 
 def get_destination():
-    var = input(colored("Please enter your destination:", "blue"))
+    var = input(colored("Please enter your destination:", "yellow"))
     return str(var)
 
 
 def get_serial_port():
-    var = input(colored("Please enter serial port number: ", "blue"))
+    var = input(colored("Please enter serial port number: ", "yellow"))
     return int(var)
 
 
@@ -25,11 +25,11 @@ def welcome():
 
 def print_configs():
 
-    print(colored("configs: ", "blue"))
-    print(colored("steering factor: {}".format(configs.st_fac), "blue"))
-    print(colored("image size: {}".format(configs.default_img_size), "blue"))
-    print(colored("segmentation size: {}".format(configs.segmentation_size), "blue"))
-    print(colored("-----------------------------", "blue"))
+    print(colored("configs: ", "yellow"))
+    print(colored("steering factor: {}".format(configs.st_fac), "yellow"))
+    print(colored("image size: {}".format(configs.default_img_size), "yellow"))
+    print(colored("segmentation size: {}".format(configs.segmentation_size), "yellow"))
+    print(colored("-----------------------------", "yellow"))
 
 
 def seg_init_response():

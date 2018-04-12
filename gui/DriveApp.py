@@ -23,7 +23,7 @@ class DriverApp(tk.Frame):
         self.var.set("Own")
         self.option = tk.OptionMenu(self, self.var, "Own", "Komanda", "Autumn", "AutoPilot")
         self.option.pack()
-        self.button = tk.Button(self, text="OK", command=self.set_steering_model, bg="blue")
+        self.button = tk.Button(self, text="OK", command=self.set_steering_model, bg="yellow")
         self.button.pack()
 
         # -----------
