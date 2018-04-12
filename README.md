@@ -25,6 +25,8 @@ Localization and some other features coming soon...
 3. To run the autonomous software, change your directory to the project directory 
 4. `./drive`. 
 
+<img src="./media/running-2.png" alt="Drawing" style="width: 500px;"/>
+
 (Please use python3 instead of python2, because the ML models are saved in the python3 formate)
 
 ## Steering
@@ -67,10 +69,10 @@ If you are interested in the detailed development process of this project, you c
 
 **Developers:**
 
-<img src="./media/michael_profile.jpg" alt="Drawing" width="100"/>
-
-**Michael Meng** | [Email](mailto:xmeng18@deerfield.edu) | [Github](https://github.com/xmeng17)
-
 <img src="./media/neil_profile.jpg" alt="Drawing" width="100"/>
 
 **Neil (Yongyang) Nie** | [Email](mailto:yongyang.nie@gmail.com) | [Github](https://www.github.com/NeilNie) | [Website](neilnie.com) | [Linkedin](https://www.linkedin.com/in/yongyang-neil-nie-896204118/)
+
+<img src="./media/michael_profile.jpg" alt="Drawing" width="100"/>
+
+**Michael Meng** | [Email](mailto:xmeng18@deerfield.edu) | [Github](https://github.com/xmeng17)

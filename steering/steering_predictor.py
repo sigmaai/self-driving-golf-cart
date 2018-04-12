@@ -3,7 +3,6 @@ import numpy as np
 import cv2
 import steering.configs as configs
 import steering.models as models
-import steering.visualization.visualization as vis
 
 
 class SteeringPredictor:

@@ -62,21 +62,21 @@ class Driver:
             self.init_navigation()
 
         if configs.default_st_port:  # check for serial setting
-            print(colored("using system default serial ports", "blue"))
+            print(colored("using system default serial ports", "yellow"))
             self.mc = MC(0)
             self.c_controller = SC(1)
         else:
-            print(colored("------ serial ports -------", "blue"))
-            print(colored("-------- steering ---------", "blue"))
+            print(colored("------ serial ports -------", "yellow"))
+            print(colored("-------- steering ---------", "yellow"))
             os.system("ls /dev/ttyAMC*")
             st_port = helper.get_serial_port()
             self.mc = MC(st_port)
 
-            print(colored("--------- cruise ---------", "blue"))
+            print(colored("--------- cruise ---------", "yellow"))
             os.system("ls /dev/ttyAMC*")
             cc_port = helper.get_serial_port()  # get serial ports
             self.c_controller = SC(cc_port)     # init CC controller
-            print(colored("--------------------------", "blue"))
+            print(colored("--------------------------", "yellow"))
 
     def init_ml_models(self):
 
@@ -114,7 +114,7 @@ class Driver:
 
     def init_navigation(self):
 
-        print(colored("------ GPS-------", "blue"))
+        print(colored("------ GPS-------", "yellow"))
         os.system("ls /dev/ttyUSB*")
         gps_port = helper.get_serial_port()
         self.gps = GPS(gps_port)
@@ -139,7 +139,7 @@ class Driver:
             cv2.moveWindow(windowName, 0, 0)
             cv2.setWindowTitle(windowName, "self driving car")
 
-            print(colored("[INFO]: program begins", "blue"))
+            print(colored("[INFO]: program begins", "yellow"))
 
             while True:
 
@@ -172,11 +172,7 @@ class Driver:
                 # for detection visualization, I draw bounding boxes on top of
                 # the steering visualizations. I want to condense several visualization
                 # results into just one frame.
-
-                # TODO: make sure the visualization is accurate. Throw no exceptions...
                 if self.obj_det:
-                    # out_boxes, out_scores, out_classes = self.object_detector.detect_object(image, visualize=False)
-                    # det_visualization = self.object_detector.draw_bboxes(image=steering_img, b_boxes=out_boxes, scores=out_scores, classes=out_classes)
                     det_visualization = self.object_detector.detect_object(image, visualize=True)
                 else:
                     det_visualization = image
@@ -194,7 +190,6 @@ class Driver:
 
                 # visualizing steering class activation
                 # checks for the key if the user pressed "h"
-
                 # TODO: Make sure this code is bug free
                 if cv2.waitKey(104) == ord('h'):
                     self.__steering_heatmap = not self.__steering_heatmap
@@ -208,26 +203,25 @@ class Driver:
                 # ------------ execute steering commands -------------
                 self.mc.turn(configs.st_fac * angle)
 
-                # ------------------ show the stuff -----------------
-                # ---------------------------------------------------
+                # ------------------ show the stuff ------------------
 
                 str_screen = self.__info_screen.draw_steering_info_screen(angle=angle / 10, fps=self.__fps)
                 cruise_screen = self.__info_screen.draw_cruise_info_screen(speed=speed, stopping_disabled=self.__disable_stopping, obj_size=size)
 
                 steering_img = np.vstack((steering_img, str_screen))
                 seg_visual = np.vstack((seg_visual, cruise_screen))
-                vidBuf = np.concatenate((steering_img, seg_visual), axis=1)
+                vid_buffer = np.concatenate((steering_img, seg_visual), axis=1)
 
                 elapsed_time = process_time() - t
                 self.__fps = 1 / elapsed_time
 
-                cv2.imshow(windowName, vidBuf)
+                cv2.imshow(windowName, vid_buffer)
 
                 key = cv2.waitKey(10)
-                if key == 27:  # ESC key
+                if key == 27:           # ESC key
                     cv2.destroyAllWindows()
-                    print(colored("[INFO]: -------------------------", "blue"))
-                    print(colored("[INFO]: Thank you! Program ended.", "blue"))
-                    print(colored("[INFO]: -------------------------", "blue"))
+                    print(colored("[INFO]: -------------------------", "yellow"))
+                    print(colored("[INFO]: Thank you! Program ended.", "yellow"))
+                    print(colored("[INFO]: -------------------------", "yellow"))
                     break
 
