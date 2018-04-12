@@ -33,7 +33,7 @@ class Segmentor:
 
         backgrounds = []
 
-        for i in utils.labels:
+        for i in range(len(utils.labels)):
             color = utils.labels[i][7]
 
             bg = np.zeros((configs.img_height, configs.img_width, 3), dtype=np.uint8)

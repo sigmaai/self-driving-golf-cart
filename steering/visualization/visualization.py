@@ -16,11 +16,8 @@ from vis.visualization import visualize_cam
 from steering.steering_predictor import SteeringPredictor
 import cv2
 
-matplotlib.use("Agg")
 
 # ***** get perspective transform for images *****
-
-
 rsrc = \
     [[43.45456230828867, 118.00743250075844],
      [104.5055617352614, 69.46865203761757],
@@ -119,9 +116,10 @@ def visualize_steering_wheel(image, angle):
 # TODO: Actually test this method
 def visualize_class_activation_map(model, image):
 
+    image = cv2.resize(image, (320, 160))
     heatmap = visualize_cam(model, layer_idx=-1, filter_indices=0, seed_input=image, grad_modifier=None)
     heatmap = cv2.addWeighted(image, 1.0, heatmap, 0.5, 0)
-
+    heatmap = cv2.resize(heatmap, (640, 480))
     return heatmap
 
 if __name__ == "__main__":
