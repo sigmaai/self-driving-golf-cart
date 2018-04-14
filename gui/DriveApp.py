@@ -14,7 +14,6 @@ class DriverApp(tk.Frame):
         self.winfo_toplevel().title("self driving golf cart")
         self.parent.resizable(width=False, height=False)
         self.parent.geometry('{}x{}'.format(300, 350))
-        # self.parent.iconbitmap(r'/home/neil/Workspace/self-driving-golf-cart/media/icon.ico')
         self.create_label("Welcome to the autnomous vehicle program")
 
         # ---- drop down menu ------
@@ -23,8 +22,8 @@ class DriverApp(tk.Frame):
         self.var.set("Own")
         self.option = tk.OptionMenu(self, self.var, "Own", "Komanda", "Autumn", "AutoPilot")
         self.option.pack()
-        self.button = tk.Button(self, text="OK", command=self.set_steering_model, bg="yellow")
-        self.button.pack()
+        # self.button = tk.Button(self, text="OK", command=self.set_steering_model)
+        # self.button.pack()
 
         # -----------
         self.create_label("Please specify run configeration")
@@ -42,11 +41,6 @@ class DriverApp(tk.Frame):
         self.cb3 = tk.Checkbutton(self, text="Object Detection", variable=self.detc_bool)
         self.cb3.pack()
 
-        self.detc_vis = tk.IntVar()
-        self.detc_vis.set(1)
-        self.cb4 = tk.Checkbutton(self, text="Detection Visualization", variable=self.detc_vis)
-        self.cb4.pack()
-
         self.gps_bool = tk.IntVar()
         self.cb5 = tk.Checkbutton(self, text="GPS", variable=self.gps_bool)
         self.cb5.pack()
@@ -55,19 +49,18 @@ class DriverApp(tk.Frame):
         self.beginButton = tk.Button(self, text="Begin", command=self.begin)
         self.beginButton.pack()
 
-        # -- init driver -----
-        self.steering_model = None
-
+        self.create_label("Once the program has started: ")
+        self.create_label("- Press the 'a' key to disable braking")
+        self.create_label("- Press the 'h' key to visualize steering with activation map.")
 
     def begin(self):
 
         if self.steering_model != None:
 
-            self.driver = Driver(steering_model=self.steering_model,
+            self.driver = Driver(steering_model=self.var.get(),
                                  cruise_control=self.cc_bool.get(),
                                  seg_vis=self.seg_vis.get(),
                                  obj_det=self.detc_bool.get(),
-                                 det_vis=self.detc_vis.get(),
                                  gps=self.gps_bool.get())
 
 
@@ -75,9 +68,6 @@ class DriverApp(tk.Frame):
         else:
             messagebox.showerror("Error", "Please select a steering model and click OK")
 
-    def set_steering_model(self):
-        self.steering_model = self.var.get()
-        print(self.steering_model)
 
     def create_label(self, str):
         string = tk.StringVar()

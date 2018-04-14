@@ -37,13 +37,12 @@ import time
 
 class Driver:
 
-    def __init__(self, steering_model, cruise_control=False, seg_vis=False, obj_det=False, det_vis=False, gps=False):
+    def __init__(self, steering_model, cruise_control=False, seg_vis=False, obj_det=False, gps=False):
 
         self.steering_model = steering_model
         self.cruise_control = cruise_control
         self.seg_vis = seg_vis
         self.obj_det = obj_det
-        self.det_vis = det_vis
         self.gps = gps
 
         # initialize some private variable
@@ -133,7 +132,7 @@ class Driver:
 
         if cap.isOpened():
 
-            windowName = "self driving car...running"
+            windowName = "self driving car... running"
             cv2.namedWindow(windowName, cv2.WINDOW_NORMAL)
             cv2.resizeWindow(windowName, 1100, 470)
             cv2.moveWindow(windowName, 0, 0)
@@ -154,8 +153,6 @@ class Driver:
 
                 # ------------------ segmentation -------------------------
                 # press down on "a" key to disable stopping
-
-                # TODO: Test this new implementation of stopping
                 if cv2.waitKey(33) == ord('a'):
                     self.__disable_stopping = not self.__disable_stopping
 
@@ -190,7 +187,6 @@ class Driver:
 
                 # visualizing steering class activation
                 # checks for the key if the user pressed "h"
-                # TODO: Make sure this code is bug free
                 if cv2.waitKey(104) == ord('h'):
                     self.__steering_heatmap = not self.__steering_heatmap
                 if self.__steering_heatmap:

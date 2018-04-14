@@ -55,8 +55,7 @@ def draw_pt(img, x, y, color, sz=2):
     row, col = perspective_tform(x, y)
     row = row * 2
     col = col * 2
-    if row >= 0 and row < img.shape[0] * 2 / 2 and \
-                    col >= 0 and col < img.shape[1] * 2 / 2:
+    if row >= 0 and row < img.shape[0] * 2 / 2 and col >= 0 and col < img.shape[1] * 2 / 2:
         img[int(row - sz):int(row + sz), int(col - sz):int(col + sz)] = color
 
 
