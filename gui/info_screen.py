@@ -37,20 +37,18 @@ class InfoScreen:
         else:
             display_text = "[Status]: Go! All Clear"
         size_text = "[Object Size]: " + str(round((obj_size * 57.2958), 3))
-        draw.text((50, 15), display_text, (0, 0, 0), font=self.__font)
-        draw.text((260, 15), "[Object type]: " + obj_type, (0, 0, 0), font=self.__font)
-        draw.text((50, 40), size_text, (0, 0, 0), font=self.__font)
-        # draw.text((260, 40), "[Option]: Press the 'a' key to disable stopping", (0, 0, 0), font=self.__font)
-        draw.text((260, 40), "[Stopping]: " + "Disabled" if stopping_disabled else "[Stopping]: Enabled", (0, 0, 0), font=self.__font)
+        draw.text((50, 13), display_text, (0, 0, 0), font=self.__font)
+        draw.text((260, 13), "[Object type]: " + obj_type, (0, 0, 0), font=self.__font)
+        draw.text((50, 37), size_text, (0, 0, 0), font=self.__font)
+        draw.text((260, 37), "[Stopping]: " + "Disabled" if stopping_disabled else "[Stopping]: Enabled", (0, 0, 0), font=self.__font)
         return np.array(img)
 
     def draw_steering_info_screen(self, angle, fps):
 
         img = self.__background.copy()
         draw = ImageDraw.Draw(img)
-        draw.text((50, 15), "[Steering Angle]: " + str(round(angle, 4)), (0, 0, 0), font=self.__font)
-        draw.text((50, 40), "[Frame Rate]: " + str(round(fps, 3)) + "fps", (0, 0, 0), font=self.__font)
-        # draw.text((50, 65), "[Options]: Turn on heatmap with the 'h' key", (0, 0, 0), font=self.__font)
+        draw.text((50, 13), "[Steering Angle]: " + str(round(angle, 4)), (0, 0, 0), font=self.__font)
+        draw.text((50, 37), "[Frame Rate]: " + str(round(fps, 3)) + "fps", (0, 0, 0), font=self.__font)
         return np.array(img)
 
 
