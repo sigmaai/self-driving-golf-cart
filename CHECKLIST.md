@@ -30,7 +30,7 @@
 
 ### Hardware
 - ~~Build & setup computer~~
-- Build the cargo space
+- ~~Build the cargo space~~
 
 ### Testing
 1. Test newly trained steering models

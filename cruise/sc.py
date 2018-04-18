@@ -10,7 +10,7 @@ class SC:
 
     def __init__(self, device_id=0):
 
-        self.ser = serial.Serial('/dev/ttyACM%d' % device_id, 115200)
+        self.ser = serial.Serial('/dev/ttyUSB%d' % device_id, 115200)
 
 
     def drive(self, angle, precision=3):
