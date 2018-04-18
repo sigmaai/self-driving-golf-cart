@@ -1,38 +1,49 @@
 //
+// motor controller code by Neil Nie & Michael Meng
+// Steering Controller Module | self driving golf cart
+// (c) Yongyang Nie, All rights reserved
 //
-//
-//
+#include <SoftwareSerial.h>
 
 #define RPWM 7
 #define LPWM 6
 #define LEN 6 //length of the actual message
-#define FPS 1
-
+// #define FPS 1
 #define M_PI 3.14159265359
 #define THRESHOLD 0.5
 
+SoftwareSerial mySerial(10, 11); // RX, TX
 
-volatile unsigned int count; //count for encode
-volatile float rad;
+unsigned long count; //count for encode
 
 char msg[LEN]; //actual message
 char pos_msg[LEN];
 byte *send_msg;
-float pos = 0.0; //steering position
+double pos = 0.0; //steering position
 unsigned long prev_t; //previous time
 
 float steering_value; //steering value
 boolean dir; //steering direction
 
 //function when receive encoder interrupt
-void onDetect() {
-  count++;
+const int encoder_a = 2; // Green - pin 2 - Digital
+const int encoder_b = 3; // White - pin 3 - Digital
+
+void encoderPinChangeA() {
+  count += digitalRead(encoder_a) == digitalRead(encoder_b) ? -1 : 1;
+}
+
+void encoderPinChangeB() {
+  count += digitalRead(encoder_a) != digitalRead(encoder_b) ? -1 : 1;
 }
 
 void setup() {
+
   Serial.begin(115200);
+  mySerial.begin(115200);
   //setup encoder
-  attachInterrupt(0, onDetect, RISING);
+  attachInterrupt(0, encoderPinChangeA, CHANGE);
+  attachInterrupt(1, encoderPinChangeB, CHANGE);
   //setup motor
   pinMode(RPWM, OUTPUT);
   pinMode(LPWM, OUTPUT);
@@ -43,12 +54,12 @@ void setup() {
 }
 
 //turn encoder count to radian value
-float getRadian(int c) {
-  return (float)c * 2.0 * M_PI / 420.0;
+double getRadian(int c) {
+  return (double)c * 0.6428571429 * (M_PI / 180.0);
 }
 
 void clr() {
-  rad = 0;
+
   steering_value = 0.0;
   for (int i = 0; i < LEN; i++) {
     msg[i] = '?';
@@ -82,19 +93,20 @@ void debug_motor() {
 }
 
 void loop() {
+
   //debug_comm();
 
-  if (Serial.read() == 'b') {
+  if (mySerial.read() == 'b') {
     Serial.println("Begin");
-    Serial.readBytes(msg, LEN);
+    mySerial.readBytes(msg, LEN);
     Serial.println(msg);
-    if (Serial.read() == 'e') {
+    if (mySerial.read() == 'e') {
       Serial.println("End");
       steering_value = atof(msg);
       Serial.print("Steering Value: "); Serial.println(steering_value);
 
       //actuation
-      if ((steering_value - pos) > 0) {
+      if (int(steering_value) > 0) {
         dir = 0;
         if (steering_value > 8 * M_PI) steering_value = 8 * M_PI;
       } else {
@@ -103,20 +115,32 @@ void loop() {
       }
 
       if (abs(steering_value - pos) > THRESHOLD) {
-        //time limit
-        prev_t = millis();
-        //(millis() - prev_t) < 1000 / FPS
+        Serial.println("turning...");
         while (1) {
-          mv(255, dir);
-          //encoder
-          if (getRadian(count) > abs(steering_value - pos)) break;
-        }
-        if (dir) pos -= getRadian(count);
-        else pos += getRadian(count);
-        count = 0;
+          
+          if (dir == 0) {
+            if (getRadian(count) > steering_value) {
+              Serial.print("current: "); Serial.println(getRadian(count));
+              break;
+            } else {
+              mv(255, dir);
+            }
+          } else {
+            if (getRadian(count) < steering_value) {
+              Serial.print("current: "); Serial.println(getRadian(count));
+              break;
+            } else {
+              mv(255, dir);
+            }
+          }
 
+        }
+        pos = getRadian(count);
       }
+      Serial.print("position: ");
       Serial.println(pos);
+      Serial.print("count: ");
+      Serial.println(count);
     }
   }
   st();

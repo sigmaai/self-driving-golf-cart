@@ -53,8 +53,8 @@ class DriverApp(tk.Frame):
         self.beginButton = tk.Button(self, text="Begin", command=self.begin).grid(row=9, column=0, padx=10, pady=10)
         #
         tk.Label(self, text="Once the program has started: ").grid(row=10, column=0, sticky=tk.W)
-        tk.Label(self, text="- Press 'a' to disable braking").grid(row=11, column=0, sticky=tk.W)
-        tk.Label(self, text="- Press 'h' to visualize steering heat map.").grid(row=12, column=0, sticky=tk.W)
+        tk.Label(self, text="Press 'a' to disable braking").grid(row=11, column=0, sticky=tk.W)
+        tk.Label(self, text="Press 'h' to visualize steering heat map.").grid(row=12, column=0, sticky=tk.W)
 
     def begin(self):
 
@@ -67,8 +67,7 @@ class DriverApp(tk.Frame):
                              gps=self.gps_bool.get())
         self.driver.drive()
 
-    @staticmethod
-    def inspect_ports():
+    def inspect_ports(self):
         os.system("ls /dev/ttyUSB*")
 
     def create_label(self, str):

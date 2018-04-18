@@ -12,7 +12,6 @@ class MC:
 
         self.ser = serial.Serial('/dev/ttyUSB%d' % device_id, 115200)
 
-
     def turn(self, angle, precision=2):
         ret =  self.ser.write(('b'+str(round(angle,precision)).zfill(6)+'e').encode())
 
@@ -21,6 +20,5 @@ class MC:
         else:
             print('Failed to send turning angle %f' % angle)
 
-     
     def pos(self):
         return float(self.ser.readline().strip())

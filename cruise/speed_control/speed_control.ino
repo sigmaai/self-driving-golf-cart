@@ -1,4 +1,7 @@
-// include the SPI library:
+//
+//
+
+#include <SoftwareSerial.h>
 #include <SPI.h>
 #include <Servo.h>
 
@@ -25,8 +28,12 @@ void onDetect() {
 }
 
 //turn encoder count to radian value
-float getRadian(int c) {
-  return (float)c * 2.0 * M_PI / 420.0;
+void encoderPinChangeA() {
+  count += digitalRead(encoder_a) == digitalRead(encoder_b) ? -1 : 1;
+}
+
+void encoderPinChangeB() {
+  count += digitalRead(encoder_a) != digitalRead(encoder_b) ? -1 : 1;
 }
 
 void setup() {
@@ -36,6 +43,11 @@ void setup() {
   digitalWrite(slave_Select_Pin, LOW);
   attachInterrupt(0, onDetect, RISING);
   Serial.begin(115200);
+
+  mySerial.begin(115200);
+  //setup encoder
+  attachInterrupt(0, encoderPinChangeA, CHANGE);
+  attachInterrupt(1, encoderPinChangeB, CHANGE);
 
   // initialize SPI:
   SPI.begin();
@@ -51,11 +63,11 @@ void clr() {
 }
 
 void debug_motor() {
-  mv(128,0);
+  mv(128, 0);
   delay(1000);
-mv(128,1);
+  mv(128, 1);
   delay(1000);//
-mv(0,0);
+  mv(0, 0);
   delay(1000);
 }
 
@@ -72,18 +84,18 @@ void debug_comm() {
 }
 
 void loop() {
-//debug_comm();
-//press_break(1);
-//delay(1000);
-//release_break(0.005);
+  //debug_comm();
+  //press_break(1);
+  //delay(1000);
+  //release_break(0.005);
 
-//delay(1000);
+  //delay(1000);
 
-  if (Serial.read() == 'b') {
+  if (mySerial.read() == 'b') {
     Serial.println("Begin");
-    Serial.readBytes(msg, LEN);
+    mySerial.readBytes(msg, LEN);
     Serial.println(msg);
-    if (Serial.read() == 'a') {
+    if (mySerial.read() == 'a') {
       Serial.println("End");
       cruise_speed = atof(msg);
 
@@ -91,19 +103,16 @@ void loop() {
       if (cruise_speed == -1) {
         potWrite(slave_Select_Pin, B00010001, 0);
         potWrite(slave_Select_Pin, B00010010, 0);
-    //   if (!is_stopped){
-          press_break(1);
-          delay(1000);
-          release_break(1);
-    //    }
+
+        press_break(1);
+        delay(1000);
+        release_break(1);
+        
         Serial.println("brakes engaged");
       } else {
-    //    if (is_stopped){
-    //      release_break(1);
-    //    }
-        potWrite(slave_Select_Pin, B00010001, 45);
-        potWrite(slave_Select_Pin, B00010010, 45);
-        
+        potWrite(slave_Select_Pin, B00010001, 55);
+        potWrite(slave_Select_Pin, B00010010, 55);
+
       }
     }
   }
@@ -126,7 +135,6 @@ void press_break(float amount) {
   while (1) {
     mv(255, 0);
     //encoder
-   //     Serial.println(count);
     if (count > 830 * amount) break;
   }
   is_stopped = 1;
@@ -141,9 +149,7 @@ void release_break(float amount) {
   // remember to check for dir
   while (1) {
     mv(255, 1);
-    
-    //encoder
- //       Serial.println(count);
+
     if (count > 830 * amount) break;
   }
   is_stopped = 0;
@@ -162,12 +168,9 @@ void mv(int spd, boolean dir) {
 }
 
 void st() {
-  analogWrite(LPWM,0);
-  analogWrite(RPWM,0);
+  analogWrite(LPWM, 0);
+  analogWrite(RPWM, 0);
   delay(10);
 }
-
-
-
 
 
