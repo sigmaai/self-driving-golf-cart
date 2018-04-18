@@ -37,7 +37,7 @@ import time
 
 class Driver:
 
-    def __init__(self, steering_model, cruise_control=False, seg_vis=False, obj_det=False, gps=False):
+    def __init__(self, steering_model, steering_port, cruise_port, cruise_control=False, seg_vis=False, obj_det=False, gps=False, ):
 
         self.steering_model = steering_model
         self.cruise_control = cruise_control
@@ -60,22 +60,8 @@ class Driver:
         if self.gps:
             self.init_navigation()
 
-        if configs.default_st_port:  # check for serial setting
-            print(colored("using system default serial ports", "yellow"))
-            self.mc = MC(0)
-            self.c_controller = SC(1)
-        else:
-            print(colored("------ serial ports -------", "yellow"))
-            print(colored("-------- steering ---------", "yellow"))
-            os.system("ls /dev/ttyAMC*")
-            st_port = helper.get_serial_port()
-            self.mc = MC(st_port)
-
-            print(colored("--------- cruise ---------", "yellow"))
-            os.system("ls /dev/ttyAMC*")
-            cc_port = helper.get_serial_port()  # get serial ports
-            self.c_controller = SC(cc_port)     # init CC controller
-            print(colored("--------------------------", "yellow"))
+        self.mc = MC(steering_port)
+        self.c_controller = SC(cruise_port)  # init CC controller
 
     def init_ml_models(self):
 
