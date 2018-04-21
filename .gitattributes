@@ -1,0 +1,2 @@
+detection/traffic-light/scripts/ckpt/tiny-yolo-udacity-8987.data-00000-of-00001 filter=lfs diff=lfs merge=lfs -text
+steering/weights/own/trained-nvd-v7-c8.h5 filter=lfs diff=lfs merge=lfs -text
