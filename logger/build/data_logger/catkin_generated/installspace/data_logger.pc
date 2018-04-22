@@ -1,0 +1,8 @@
+prefix=/home/yongyang/Developer/self-driving-golf-cart/logger/install
+
+Name: data_logger
+Description: Description of data_logger
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/yongyang/Developer/self-driving-golf-cart/logger/install/lib 
+Requires: 
