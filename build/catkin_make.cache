@@ -1,2 +1,0 @@
-cruise_controller:detection/traffic-light:steering_controller:steering_logger
--DCATKIN_DEVEL_PREFIX=/home/yongyang/Developer/self-driving-golf-cart/devel -DCMAKE_INSTALL_PREFIX=/home/yongyang/Developer/self-driving-golf-cart/install -G Unix Makefiles
