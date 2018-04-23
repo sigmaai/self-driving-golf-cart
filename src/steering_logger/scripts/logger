@@ -1,0 +1,35 @@
+#!/usr/bin/env python
+
+import rospy
+from std_msgs.msg import Image
+from std_msgs.msg import Float64
+
+
+def save_data():
+    print("saving")
+
+
+def encoder_callback(data):
+    print(data.data)
+
+
+def logger_callback(data):
+    image = data.data
+    # save image!
+    rospy.loginfo(rospy.get_caller_id() + "I heard %s", data.data)
+
+
+def begin_logging():
+
+    rospy.init_node('logger')
+    rospy.Subscribe('/cv_camera/image_raw', Image, callback=logger_callback, queue_size=5)
+    rospy.Subscribe('/sensor/steering_encoder/value', Float64, callback=encoder_callback, queue_size=5)
+    rospy.on_shutdown(save_data)
+    rospy.spin()
+
+
+if __name__ == '__main__':
+    try:
+        begin_logging()
+    except rospy.ROSInterruptException:
+        pass

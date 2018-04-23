@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "steering_controller"
-PROJECT_SPACE_DIR = "/home/yongyang/Developer/self-driving-golf-cart/install"
+PROJECT_SPACE_DIR = "/home/neil/Workspace/self-driving-golf-cart/install"
 PROJECT_VERSION = "0.0.0"

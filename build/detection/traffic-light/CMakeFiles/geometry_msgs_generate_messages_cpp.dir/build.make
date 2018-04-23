@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yongyang/Developer/self-driving-golf-cart/src
+CMAKE_SOURCE_DIR = /home/neil/Workspace/self-driving-golf-cart/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yongyang/Developer/self-driving-golf-cart/build
+CMAKE_BINARY_DIR = /home/neil/Workspace/self-driving-golf-cart/build
 
 # Utility rule file for geometry_msgs_generate_messages_cpp.
 
@@ -63,10 +63,10 @@ detection/traffic-light/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
 .PHONY : detection/traffic-light/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
 
 detection/traffic-light/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean:
-	cd /home/yongyang/Developer/self-driving-golf-cart/build/detection/traffic-light && $(CMAKE_COMMAND) -P CMakeFiles/geometry_msgs_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/neil/Workspace/self-driving-golf-cart/build/detection/traffic-light && $(CMAKE_COMMAND) -P CMakeFiles/geometry_msgs_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : detection/traffic-light/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
 
 detection/traffic-light/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/depend:
-	cd /home/yongyang/Developer/self-driving-golf-cart/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yongyang/Developer/self-driving-golf-cart/src /home/yongyang/Developer/self-driving-golf-cart/src/detection/traffic-light /home/yongyang/Developer/self-driving-golf-cart/build /home/yongyang/Developer/self-driving-golf-cart/build/detection/traffic-light /home/yongyang/Developer/self-driving-golf-cart/build/detection/traffic-light/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/neil/Workspace/self-driving-golf-cart/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/neil/Workspace/self-driving-golf-cart/src /home/neil/Workspace/self-driving-golf-cart/src/detection/traffic-light /home/neil/Workspace/self-driving-golf-cart/build /home/neil/Workspace/self-driving-golf-cart/build/detection/traffic-light /home/neil/Workspace/self-driving-golf-cart/build/detection/traffic-light/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : detection/traffic-light/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/depend
 

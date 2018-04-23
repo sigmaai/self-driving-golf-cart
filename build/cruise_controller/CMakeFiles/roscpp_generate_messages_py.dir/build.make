@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yongyang/Developer/self-driving-golf-cart/src
+CMAKE_SOURCE_DIR = /home/neil/Workspace/self-driving-golf-cart/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yongyang/Developer/self-driving-golf-cart/build
+CMAKE_BINARY_DIR = /home/neil/Workspace/self-driving-golf-cart/build
 
 # Utility rule file for roscpp_generate_messages_py.
 
@@ -63,10 +63,10 @@ cruise_controller/CMakeFiles/roscpp_generate_messages_py.dir/build: roscpp_gener
 .PHONY : cruise_controller/CMakeFiles/roscpp_generate_messages_py.dir/build
 
 cruise_controller/CMakeFiles/roscpp_generate_messages_py.dir/clean:
-	cd /home/yongyang/Developer/self-driving-golf-cart/build/cruise_controller && $(CMAKE_COMMAND) -P CMakeFiles/roscpp_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/neil/Workspace/self-driving-golf-cart/build/cruise_controller && $(CMAKE_COMMAND) -P CMakeFiles/roscpp_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : cruise_controller/CMakeFiles/roscpp_generate_messages_py.dir/clean
 
 cruise_controller/CMakeFiles/roscpp_generate_messages_py.dir/depend:
-	cd /home/yongyang/Developer/self-driving-golf-cart/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yongyang/Developer/self-driving-golf-cart/src /home/yongyang/Developer/self-driving-golf-cart/src/cruise_controller /home/yongyang/Developer/self-driving-golf-cart/build /home/yongyang/Developer/self-driving-golf-cart/build/cruise_controller /home/yongyang/Developer/self-driving-golf-cart/build/cruise_controller/CMakeFiles/roscpp_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/neil/Workspace/self-driving-golf-cart/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/neil/Workspace/self-driving-golf-cart/src /home/neil/Workspace/self-driving-golf-cart/src/cruise_controller /home/neil/Workspace/self-driving-golf-cart/build /home/neil/Workspace/self-driving-golf-cart/build/cruise_controller /home/neil/Workspace/self-driving-golf-cart/build/cruise_controller/CMakeFiles/roscpp_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : cruise_controller/CMakeFiles/roscpp_generate_messages_py.dir/depend
 
