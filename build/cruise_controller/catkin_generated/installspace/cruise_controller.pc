@@ -1,0 +1,8 @@
+prefix=/home/yongyang/Developer/self-driving-golf-cart/install
+
+Name: cruise_controller
+Description: Description of cruise_controller
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/yongyang/Developer/self-driving-golf-cart/install/lib 
+Requires: 
