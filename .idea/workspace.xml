@@ -5,208 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76f9b933-0bfc-4cf1-b884-ca824d20e8ef" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/self-driving-golf-cart.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/self-driving-golf-cart.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/configs.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cv_camera/.rosinstall" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/gps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/imu.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/.DS_Store~5a9a97e... change details see below 👇" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/.catkin_workspace" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/setup.bash" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/COPYING" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/Doxyfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/Makefile.const" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/cmake/CPUFeatures" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/include/NeuralNetwork/ActivationFunction/ActivationFunction.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/include/NeuralNetwork/ActivationFunction/Heaviside.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/include/NeuralNetwork/ActivationFunction/HyperbolicTangent.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/include/NeuralNetwork/ActivationFunction/LeakyRectifiedLinear.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/include/NeuralNetwork/ActivationFunction/Linear.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/include/NeuralNetwork/ActivationFunction/RectifiedLinear.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/include/NeuralNetwork/ActivationFunction/Sigmoid.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/include/NeuralNetwork/BasisFunction/BasisFunction.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/include/NeuralNetwork/BasisFunction/Linear.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/include/NeuralNetwork/BasisFunction/Product.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/include/NeuralNetwork/BasisFunction/Radial.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/include/NeuralNetwork/BasisFunction/StreamingBasisFunction.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/include/NeuralNetwork/Cascade/Network.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/include/NeuralNetwork/ConstructiveAlgorithms/Cascade2.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/include/NeuralNetwork/ConstructiveAlgorithms/CascadeCorrelation.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/include/NeuralNetwork/FeedForward/Layer.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/include/NeuralNetwork/FeedForward/Network.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/include/NeuralNetwork/FeedForward/Perceptron.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/include/NeuralNetwork/Learning/BackPropagation.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/include/NeuralNetwork/Learning/BatchPropagation.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/include/NeuralNetwork/Learning/CorrectionFunction/ArcTangent.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/include/NeuralNetwork/Learning/CorrectionFunction/CorrectionFunction.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/include/NeuralNetwork/Learning/CorrectionFunction/Linear.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/include/NeuralNetwork/Learning/CorrectionFunction/Optical.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/include/NeuralNetwork/Learning/PerceptronLearning.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/include/NeuralNetwork/Learning/QuickPropagation.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/include/NeuralNetwork/Learning/RProp.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/include/NeuralNetwork/Learning/iRPropPlus.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/include/NeuralNetwork/Network.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/include/NeuralNetwork/Neuron.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/include/NeuralNetwork/ProblemSets/Chess.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/include/NeuralNetwork/ProblemSets/Logical.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/include/NeuralNetwork/ProblemSets/Parity.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/include/NeuralNetwork/ProblemSets/TwoSpirals.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/include/NeuralNetwork/Recurrent/Network.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/lib/SimpleJSON/.gitmodules" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/lib/SimpleJSON/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/lib/SimpleJSON/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/lib/SimpleJSON/COPYING" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/lib/SimpleJSON/include/SimpleJSON.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/lib/SimpleJSON/include/SimpleJSON/Factory.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/lib/SimpleJSON/include/SimpleJSON/SerializableObject.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/lib/SimpleJSON/include/SimpleJSON/Type/Array.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/lib/SimpleJSON/include/SimpleJSON/Type/Boolean.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/lib/SimpleJSON/include/SimpleJSON/Type/Integer.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/lib/SimpleJSON/include/SimpleJSON/Type/Null.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/lib/SimpleJSON/include/SimpleJSON/Type/Number.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/lib/SimpleJSON/include/SimpleJSON/Type/Object.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/lib/SimpleJSON/include/SimpleJSON/Type/String.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/lib/SimpleJSON/include/SimpleJSON/Type/Type.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/lib/SimpleJSON/include/SimpleJSON/Value.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/lib/SimpleJSON/tests/factory.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/lib/SimpleJSON/tests/parser.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/lib/SimpleJSON/tests/perf.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/lib/SimpleJSON/tests/serializable.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/lib/SimpleJSON/tests/test.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/lib/SimpleJSON/tests/types.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/lib/SimpleJSON/tests/value.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/mainpage.dox" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/package.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/src/NeuralNetwork/BasisFunction/Linear.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/src/NeuralNetwork/ConstructiveAlgorithms/Cascade2.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/src/NeuralNetwork/ConstructiveAlgorithms/CascadeCorrelation.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/src/NeuralNetwork/FeedForward/Layer.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/src/NeuralNetwork/FeedForward/Network.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/src/NeuralNetwork/IMPL.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/src/NeuralNetwork/Learning/BackPropagation.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/src/NeuralNetwork/Learning/BatchPropagation.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/src/NeuralNetwork/Learning/PerceptronLearning.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/src/NeuralNetwork/Learning/QuickPropagation.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/src/NeuralNetwork/Learning/RProp.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/src/NeuralNetwork/Learning/iRPropPlus.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/src/NeuralNetwork/Neuron.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/NeuralNetworkLib/src/NeuralNetwork/Recurrent/Network.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/cmake_config/RoboAutoGlobal.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/cmake_config/cmake_modules/FindEigen3.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/cmake_config/cmake_modules/FindSQLite3.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/image_descriptor/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/image_descriptor/include/ImageDescriptor/Horizont.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/image_descriptor/include/ImageDescriptor/ImageDescriptor.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/image_descriptor/package.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/image_descriptor/src/Horizont.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/motion/100_25.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/motion/200_100.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/motion/25.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/motion/500.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/motion/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/motion/include/Config.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/motion/include/Motion.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/motion/include/MotionLearner.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/motion/include/MotionTest.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/motion/include/Sample.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/motion/net.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/motion/package.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/motion/src/Motion.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/motion/src/MotionLearner.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/motion/src/MotionTest.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/motion/src/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/motion/test.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/motion/test100.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/motion/test100_10k.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/motion/test100_20k.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/slam/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/slam/config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/slam/package.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/slam/src/BridgeDetector.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/slam/src/Filter.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/slam/src/Slam.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/slam/src/Slam.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/slam/src/SlamImpl.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/slam/src/SlamImpl.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/slam/src/TestSlam.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/slam/src/TrafficLightDetector.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/slam/src/WeightFunction.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/slam/src/WeightFunction.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/slam/src/dataSetCreator.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/slam/src/gpxExporter.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/slam/src/horizonValidator.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/slam/src/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/slam/src/paramSolver.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/slam/src/validator.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/udacity_launch/3cameras in rviz.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/udacity_launch/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/udacity_launch/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/udacity_launch/all_commands_to_visualize.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/udacity_launch/launch/bag_play.launch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/udacity_launch/launch/logging.launch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/udacity_launch/launch/record_video.launch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/udacity_launch/launch/rviz.launch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/udacity_launch/package.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/udacity_launch/rviz/disp.rviz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/utils/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/utils/include/utils/CVSerializationHelper.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/utils/include/utils/Camera.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/utils/include/utils/Clusterization.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/utils/include/utils/ColorFiltration.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/utils/include/utils/DetectedObjects.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/utils/include/utils/EvolutionStrategy.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/utils/include/utils/General.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/utils/include/utils/GpsCoords.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/utils/include/utils/Map.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/utils/include/utils/OpticalFlow.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/utils/include/utils/ParticleFilter.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/utils/include/utils/PoleDetector.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/utils/include/utils/Random.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/utils/include/utils/SerializationHelper.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/utils/include/utils/SignDetection.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/utils/include/utils/Topics.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/utils/include/utils/Visualization.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/utils/package.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/utils/src/Camera.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/utils/src/GpsCoords.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/utils/src/PoleDetector.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/utils/src/SignDetection.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/utils/src/Visualization.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/validator/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/validator/include/MotionValidator.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/validator/include/Validator.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/validator/package.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/validator/src/MotionValidator.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/validator/src/Validator.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/validator/src/main_MotionValidator.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/ros/src/validator/src/main_Validator.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/scripts/MotionLearn.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/scripts/bagmerge.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/scripts/bagtrim.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/scripts/concatenateBags.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/scripts/splitBag.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/roboauto/scripts/validation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/localization/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/icon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/program-running.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/path_planning/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/path_planning/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/path_planning/global_path.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/steering_controller/arduino_motor_control/arduino_motor_control.ino" beforeDir="false" afterPath="$PROJECT_DIR$/src/steering_controller/arduino_motor_control/arduino_motor_control.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/steering_controller/scripts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/steering_controller/scripts/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/steering_controller/scripts/steer" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/steering_controller/scripts/steering_predictor.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/steering_controller/scripts/steering_predictor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/steering_controller/scripts/utils.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/steering_logger/scripts/logger" beforeDir="false" afterPath="$PROJECT_DIR$/src/steering_logger/scripts/logger" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -226,8 +24,8 @@
       <file leaf-file-name="logger" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/steering_logger/scripts/logger">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="85">
+              <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
               <folding>
                 <element signature="e#23#33#0" expanded="true" />
               </folding>
@@ -687,8 +485,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/steering_logger/scripts/logger">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="85">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
           <folding>
             <element signature="e#23#33#0" expanded="true" />
           </folding>
