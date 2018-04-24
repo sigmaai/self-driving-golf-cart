@@ -1,35 +1,46 @@
 #!/usr/bin/env python
 
+import cv2
+import csv
 import rospy
 from std_msgs.msg import Image
 from std_msgs.msg import Float64
+from cv_bridge import CvBridge, CvBridgeError
 
 
-def save_data():
-    print("saving")
+class SteeringLogger(object):
+
+    def __init__(self):
+        self.steering_angle = 0.0
+        self.angles = []
+        self.image_files = []
+
+        rospy.init_node('steering_logger')
+        rospy.Subscribe('/cv_camera/image_raw', Image, callback=self.logger_callback, queue_size=5)
+        rospy.Subscribe('/sensor/steering_encoder/value', Float64, callback=self.encoder_callback, queue_size=5)
+        rospy.on_shutdown(self.save_data)
+        rospy.spin()
+
+    def save_data(self):
+        print("saving")
+
+    def encoder_callback(self, data):
+        self.angles = data.data
+
+    def logger_callback(self, data):
+
+        try:
+            cv_image = self.bridge.imgmsg_to_cv2(data, "bgr8")
+        except CvBridgeError as e:
+            print(e)
 
 
-def encoder_callback(data):
-    print(data.data)
 
-
-def logger_callback(data):
-    image = data.data
-    # save image!
-    rospy.loginfo(rospy.get_caller_id() + "I heard %s", data.data)
-
-
-def begin_logging():
-
-    rospy.init_node('logger')
-    rospy.Subscribe('/cv_camera/image_raw', Image, callback=logger_callback, queue_size=5)
-    rospy.Subscribe('/sensor/steering_encoder/value', Float64, callback=encoder_callback, queue_size=5)
-    rospy.on_shutdown(save_data)
-    rospy.spin()
 
 
 if __name__ == '__main__':
+
     try:
-        begin_logging()
+        SteeringLogger()
     except rospy.ROSInterruptException:
         pass

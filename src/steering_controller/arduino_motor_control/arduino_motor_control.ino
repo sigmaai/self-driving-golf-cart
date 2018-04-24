@@ -3,6 +3,43 @@
 // Steering Controller Module | self driving golf cart
 // (c) Yongyang Nie, All rights reserved
 //
+
+
+#if defined(ARDUINO) && ARDUINO >= 100
+#include "Arduino.h"
+#else
+#include <WProgram.h>
+#endif
+
+#include <Servo.h>
+#include <ros.h>
+#include <std_msgs/UInt16.h>
+
+ros::NodeHandle  nh;
+
+
+void servo_cb( const std_msgs::UInt16& cmd_msg) {
+  servo.write(cmd_msg.data); //set servo angle, should be from 0-180
+  digitalWrite(13, HIGH - digitalRead(13)); //toggle led
+}
+
+
+ros::Subscriber<std_msgs::UInt16> sub("servo", servo_cb);
+
+void setup() {
+  pinMode(13, OUTPUT);
+
+  nh.initNode();
+  nh.subscribe(sub);
+
+  servo.attach(9); //attach it to pin 9
+}
+
+void loop() {
+  nh.spinOnce();
+  delay(1);
+}
+
 #include <SoftwareSerial.h>
 
 #define RPWM 7
@@ -117,7 +154,7 @@ void loop() {
       if (abs(steering_value - pos) > THRESHOLD) {
         Serial.println("turning...");
         while (1) {
-          
+
           if (dir == 0) {
             if (getRadian(count) > steering_value) {
               Serial.print("current: "); Serial.println(getRadian(count));

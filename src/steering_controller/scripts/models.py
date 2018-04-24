@@ -9,8 +9,7 @@ from keras.regularizers import l2
 from keras.optimizers import Adam
 import keras as K
 import tensorflow as tf
-import steering.configs as configs
-# import configs as configs
+import configs as configs
 
 
 def nvidia_model():
