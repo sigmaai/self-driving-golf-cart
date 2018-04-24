@@ -2,9 +2,10 @@
 
 import cv2
 import csv
+import os
 import rospy
-from std_msgs.msg import Image
-from std_msgs.msg import Float64
+from sensor_msgs.msg import Image
+from std_msgs.msg import Float32
 from cv_bridge import CvBridge, CvBridgeError
 
 
@@ -15,22 +16,29 @@ class SteeringLogger(object):
         self.labels = []
         self.image_files = []
         self.count = 0
+        self.bridge = CvBridge()
+        self.path = rospy.get_param("/logger/logger_path")
+        print(self.path)
+
+        if not os.path.exists(self.path + "/center/"):
+            os.makedirs(self.path + "/center/")
 
         rospy.init_node('steering_logger')
-        rospy.Subscribe('/cv_camera/image_raw', Image, callback=self.logger_callback, queue_size=5)
-        rospy.Subscribe('/sensor/steering_encoder/value', Float64, callback=self.encoder_callback, queue_size=5)
+        rospy.Subscriber('/cv_camera_node/image_raw', Image, callback=self.logger_callback, queue_size=5)
+        rospy.Subscriber('/sensor/steering_encoder/value', Float32, callback=self.encoder_callback, queue_size=5)
         rospy.on_shutdown(self.save_data)
         rospy.spin()
 
     def save_data(self):
 
-        with open("" + "/lables.csv", 'w') as myfile:
+        with open(self.path + "/lables.csv", 'w') as myfile:
             wr = csv.writer(myfile, lineterminator='\n')
             for row in self.labels:
                 wr.writerow(row)
+        rospy.loginfo('data saved')
 
     def encoder_callback(self, data):
-        self.current_angle = data
+        self.current_angle = data.data
 
     def logger_callback(self, data):
 
@@ -40,7 +48,7 @@ class SteeringLogger(object):
             print(e)
 
         self.count += 1
-        cv2.imwrite("my path" + "/center/" + str(self.count) + ".png", cv_image)
+        cv2.imwrite(self.path + "/center/" + str(self.count) + ".png", cv_image)
         row = ["/center/" + str(self.count) + ".png", self.current_angle]
         self.labels.append(row)
 

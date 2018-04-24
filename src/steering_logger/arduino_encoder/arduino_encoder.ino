@@ -7,12 +7,12 @@
 
 const int encoder_a = 2; // Green - pin 2 - Digital
 const int encoder_b = 3; // White - pin 3 - Digital
-int encoder = 0;
+double encoder = 0;
 
-ros::NodeHandle  nh;
+ros::NodeHandle nh;
 
 std_msgs::Float32 steering_msg;
-ros::Publisher pub_steering("/steering_logger/steering_angle", &steering_msg);
+ros::Publisher pub_steering("/sensor/steering_encoder/value", &steering_msg);
 
 void setup() {
   
@@ -35,6 +35,7 @@ void loop() {
    steering_msg.data = encoder;
    pub_steering.publish(&steering_msg);
    nh.spinOnce();
+   Serial.println(encoder);
    delay(10);
 }
 
