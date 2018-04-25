@@ -1,0 +1,2 @@
+cruise_control:cv_camera:data_logger:detection:driver:steering_control
+-DCATKIN_DEVEL_PREFIX=/home/neil/Workspace/self-driving-golf-cart/devel -DCMAKE_INSTALL_PREFIX=/home/neil/Workspace/self-driving-golf-cart/install -G Unix Makefiles

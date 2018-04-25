@@ -1,0 +1,63 @@
+#!/usr/bin/python
+
+# Cruse controller -- predictor class for speed control
+# By Neil Nie & Michael Meng
+# Jan, 2018
+# Copyright (c), All rights reserved
+#
+# subscribe to: /dbw/accelerator/
+
+import cv2
+import configs as configs
+import model as model
+
+import rospy
+from std_msgs.msg import Image
+from std_msgs.msg import Float32
+from cv_bridge import CvBridge, CvBridgeError
+
+class CruisePredictor:
+
+    def __init__(self):
+
+        self.current_frame = None
+        self.bridge = CvBridge()
+
+        self.cnn = model.nvidia_network(input_shape=(configs.img_w, configs.img_h, 3))
+        self.cnn.load_weights(configs.weight_path)
+        rospy.loginfo('cruise control deep learning model loaded')
+
+        rospy.init_node('steering_controller')
+        rospy.Subscribe('/cv_camera_node/image_raw', Image, callback=self.image_update_callback, queue_size=5)
+
+        steering_pub = rospy.Publisher('/dbw/accelerator/', Float32, queue_size=5)
+        rate = rospy.Rate(15)
+
+        while not rospy.is_shutdown():
+            angle = self.predict_acc(self.current_frame)
+            steering_pub.publish(angle)
+            rate.sleep()
+
+    def image_update_callback(self, data):
+
+        try:
+            cv_image = self.bridge.imgmsg_to_cv2(data, "bgr8")
+        except CvBridgeError as e:
+            print(e)
+
+        self.current_frame = cv_image
+
+    def predict_acc(self, image):
+
+        input = cv2.resize(image, (configs.img_w, configs.img_h))
+        prediction = self.cnn.predict(input)
+
+        return prediction
+
+
+if __name__ == "__main__":
+
+    try:
+        CruisePredictor()
+    except rospy.ROSInterruptException:
+        pass

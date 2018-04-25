@@ -1,2 +1,0 @@
-steering_logger
--DCATKIN_DEVEL_PREFIX=/home/yongyang/Developer/self-driving-golf-cart/logger/devel -DCMAKE_INSTALL_PREFIX=/home/yongyang/Developer/self-driving-golf-cart/logger/install -G Unix Makefiles

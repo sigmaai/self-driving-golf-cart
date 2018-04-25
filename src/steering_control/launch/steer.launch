@@ -1,0 +1,8 @@
+<launch>
+    <node name="steering_controller" type="steering_controller" pkg="steering_control">
+    	<param name="/model_path" value="/home/neil/Workspace/self-driving-golf-cart/src/steering_control/scripts/weights/own/trained-cai-v6.h5" />
+    	<param name="image_height" value="480" />
+    	<param name="image_width" value="640" />
+  	</node>
+
+</launch>
