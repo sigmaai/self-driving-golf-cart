@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(steering_controller)
+project(cruise_control)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -109,7 +109,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES steering_controller
+#  LIBRARIES cruise_controller
 #  CATKIN_DEPENDS message_generation message_runtime roscpp rospy rosserial_client rosserial_msgs rosserial_python std_msgs
 #  DEPENDS system_lib
 )
@@ -127,7 +127,7 @@ include_directories(
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/steering_controller.cpp
+#   src/${PROJECT_NAME}/cruise_controller.cpp
 # )
 
 ## Add cmake target dependencies of the library
@@ -138,7 +138,7 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/steering_controller_node.cpp)
+# add_executable(${PROJECT_NAME}_node src/cruise_controller_node.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -195,7 +195,7 @@ include_directories(
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_steering_controller.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_cruise_controller.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()

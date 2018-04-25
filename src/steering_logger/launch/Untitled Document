@@ -1,3 +1,0 @@
-<node name="logger" type="logger" pkg="steering_logger">
-    	<param name="path" value="this is a path" />
-  	</node>

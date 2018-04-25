@@ -8,24 +8,31 @@
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/self-driving-golf-cart.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/self-driving-golf-cart.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/catkin_generated/generate_cached_setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/catkin_generated/generate_cached_setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/catkin_generated/installspace/_setup_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/catkin_generated/installspace/_setup_util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/catkin_generated/order_packages.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/catkin_generated/order_packages.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/catkin_generated/setup_cached.sh" beforeDir="false" afterPath="$PROJECT_DIR$/build/catkin_generated/setup_cached.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/catkin_generated/stamps/Project/_setup_util.py.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/build/catkin_generated/stamps/Project/_setup_util.py.stamp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/catkin_generated/installspace/cruise_controllerConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/cruise_controller/catkin_generated/installspace/cruise_controllerConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cv_camera/catkin_generated/installspace/cv_cameraConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/cv_camera/catkin_generated/installspace/cv_cameraConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/catkin_generated/installspace/yolo_lightConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/detection/traffic-light/catkin_generated/installspace/yolo_lightConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/steering_controller/catkin_generated/installspace/steering_controllerConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/steering_controller/catkin_generated/installspace/steering_controllerConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/steering_logger/catkin_generated/installspace/steering_loggerConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/steering_logger/catkin_generated/installspace/steering_loggerConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devel/_setup_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/devel/_setup_util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devel/share/cruise_controller/cmake/cruise_controllerConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/devel/share/cruise_controller/cmake/cruise_controllerConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devel/share/cv_camera/cmake/cv_cameraConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/devel/share/cv_camera/cmake/cv_cameraConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devel/share/steering_controller/cmake/steering_controllerConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/devel/share/steering_controller/cmake/steering_controllerConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devel/share/steering_logger/cmake/steering_loggerConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/devel/share/steering_logger/cmake/steering_loggerConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/devel/share/yolo_light/cmake/yolo_lightConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/devel/share/yolo_light/cmake/yolo_lightConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/steering_logger/arduino_encoder/arduino_encoder.ino" beforeDir="false" afterPath="$PROJECT_DIR$/src/steering_logger/arduino_encoder/arduino_encoder.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/steering_logger/scripts/logger" beforeDir="false" afterPath="$PROJECT_DIR$/src/steering_logger/scripts/logger" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drive" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/driver.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cruise_controller/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cruise_controller/ml/sc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cruise_controller/ml/train.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cruise_controller/ml/visualization.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cruise_controller/package.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cruise_controller/scripts/configs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cruise_controller/scripts/cruise" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cruise_controller/scripts/cruise_predictor.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cruise_controller/scripts/model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cruise_controller/scripts/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cruise_controller/scripts/weights/trained-nv-4.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cruise_controller/speed_control/speed_control.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/steering_controller/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/steering_controller/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/steering_controller/arduino_motor_control/arduino_motor_control.ino" beforeDir="false" afterPath="$PROJECT_DIR$/src/steering_controller/arduino_motor_control/arduino_motor_control.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/steering_controller/package.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/steering_controller/package.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/steering_controller/scripts/steering_predictor.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/steering_logger/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/steering_logger/arduino_encoder/arduino_encoder.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/steering_logger/launch/Untitled Document" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/steering_logger/launch/steering_logger.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/steering_logger/package.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/steering_logger/scripts/logger" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,37 +42,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/self_driving_golf_cart$test_detection.coverage" NAME="test_detection Coverage Results" MODIFIED="1523407579643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/self_driving_golf_cart$drive.coverage" NAME="drive Coverage Results" MODIFIED="1524093465441" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/self_driving_golf_cart$visualization.coverage" NAME="visualization Coverage Results" MODIFIED="1523565981900" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/steering/visualization" />
+    <SUITE FILE_PATH="coverage/self_driving_golf_cart$drive.coverage" NAME="drive Coverage Results" MODIFIED="1524093465441" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/self_driving_golf_cart$test_detection.coverage" NAME="test_detection Coverage Results" MODIFIED="1523407579643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="logger" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/steering_logger/scripts/logger">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="750">
-              <caret line="50" column="30" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
-              <folding>
-                <element signature="e#23#33#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="steering_predictor.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/steering_controller/scripts/steering_predictor.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="28" column="60" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="60" />
-              <folding>
-                <element signature="e#186#204#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -125,6 +107,8 @@
         <option value="$PROJECT_DIR$/src/steering-controller/scripts/models.py" />
         <option value="$PROJECT_DIR$/src/steering-controller/scripts/steering_predictor.py" />
         <option value="$PROJECT_DIR$/src/steering_logger/scripts/logger" />
+        <option value="$PROJECT_DIR$/src/steering_controller/scripts/steering_predictor.py" />
+        <option value="$PROJECT_DIR$/src/cruise_controller/scripts/cruise_predictor.py" />
       </list>
     </option>
   </component>
@@ -134,7 +118,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="75" />
     <option name="y" value="24" />
     <option name="width" value="1508" />
@@ -169,19 +153,6 @@
               <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="steering_controller" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="steering_logger" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="steering_logger" type="462c0819:PsiDirectoryNode" />
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -300,8 +271,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="75" y="24" width="1508" height="877" extended-state="0" />
-    <editor active="true" />
+    <frame x="1" y="23" width="1440" height="877" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32948717" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -310,9 +280,10 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32948717" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21912351" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22174536" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32948717" />
       <window_info anchor="right" id="SciView" order="3" weight="0.43919885" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -323,31 +294,30 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32948717" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="8" weight="0.32948717" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19507453" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32948717" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.25897437" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32948717" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.3297568" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32948717" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,15 +332,7 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/steering-controller/scripts/models.py" />
-    <entry file="file://$PROJECT_DIR$/detection/object/object_detector.py" />
-    <entry file="file://$PROJECT_DIR$/driver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="44" column="30" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/driver.py" />
     <entry file="file://$PROJECT_DIR$/detection/object/device_test.py" />
     <entry file="file://$PROJECT_DIR$/detection/object/model_data/configs.py" />
     <entry file="file://$PROJECT_DIR$/detection/object/device_test.py" />
@@ -420,22 +382,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/steering/steering_predictor.py" />
-    <entry file="file://$PROJECT_DIR$/drive">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/drive" />
     <entry file="file://$PROJECT_DIR$/steering/configs.py" />
     <entry file="file://$PROJECT_DIR$/steering/mc.py" />
-    <entry file="file://$PROJECT_DIR$/driver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="62" column="35" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/driver.py" />
     <entry file="file://$PROJECT_DIR$/gui/DriveApp.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -469,22 +419,36 @@
     <entry file="file://$PROJECT_DIR$/src/steering-controller/scripts/utils.py" />
     <entry file="file://$PROJECT_DIR$/src/steering-controller/scripts/models.py" />
     <entry file="file://$PROJECT_DIR$/src/steering-controller/scripts/steering_predictor.py" />
-    <entry file="file://$PROJECT_DIR$/src/steering_controller/scripts/steering_predictor.py">
+    <entry file="file://$PROJECT_DIR$/src/steering_logger/scripts/logger">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="28" column="60" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="60" />
+        <state relative-caret-position="405">
+          <caret line="27" column="56" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cruise_controller/scripts/cruise">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cruise_controller/scripts/cruise_predictor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" column="20" lean-forward="true" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
           <folding>
-            <element signature="e#186#204#0" expanded="true" />
+            <element signature="e#190#200#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/steering_logger/scripts/logger">
+    <entry file="file://$PROJECT_DIR$/src/steering_controller/scripts/steering_predictor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="50" column="30" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="30" />
+        <state relative-caret-position="360">
+          <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
           <folding>
-            <element signature="e#23#33#0" expanded="true" />
+            <element signature="e#186#204#0" expanded="true" />
           </folding>
         </state>
       </provider>
