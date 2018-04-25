@@ -117,11 +117,12 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/neil/Workspace/self-driving-golf-cart/build/gtest/cmake_install.cmake")
+  include("/home/neil/Workspace/self-driving-golf-cart/build/detection/cmake_install.cmake")
   include("/home/neil/Workspace/self-driving-golf-cart/build/cv_camera/cmake_install.cmake")
-  include("/home/neil/Workspace/self-driving-golf-cart/build/cruise_controller/cmake_install.cmake")
-  include("/home/neil/Workspace/self-driving-golf-cart/build/steering_controller/cmake_install.cmake")
-  include("/home/neil/Workspace/self-driving-golf-cart/build/steering_logger/cmake_install.cmake")
-  include("/home/neil/Workspace/self-driving-golf-cart/build/detection/traffic-light/cmake_install.cmake")
+  include("/home/neil/Workspace/self-driving-golf-cart/build/cruise_control/cmake_install.cmake")
+  include("/home/neil/Workspace/self-driving-golf-cart/build/data_logger/cmake_install.cmake")
+  include("/home/neil/Workspace/self-driving-golf-cart/build/driver/cmake_install.cmake")
+  include("/home/neil/Workspace/self-driving-golf-cart/build/steering_control/cmake_install.cmake")
 
 endif()
 

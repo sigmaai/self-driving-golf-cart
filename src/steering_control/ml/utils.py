@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 import pandas as pd
-import configs as configs
+from src.steering_control.scripts.weights.training import configs as configs
 import os.path
 
 INPUT_SHAPE = (configs.image_height, configs.image_width, 3)

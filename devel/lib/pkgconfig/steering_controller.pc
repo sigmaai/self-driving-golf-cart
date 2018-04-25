@@ -1,8 +1,0 @@
-prefix=/home/neil/Workspace/self-driving-golf-cart/devel
-
-Name: steering_controller
-Description: Description of steering_controller
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/neil/Workspace/self-driving-golf-cart/devel/lib 
-Requires: 

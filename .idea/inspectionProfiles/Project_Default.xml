@@ -15,7 +15,7 @@
     <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="ignoredPackages">
         <value>
-          <list size="11">
+          <list size="19">
             <item index="0" class="java.lang.String" itemvalue="pandas" />
             <item index="1" class="java.lang.String" itemvalue="scipy" />
             <item index="2" class="java.lang.String" itemvalue="eventlet" />
@@ -27,6 +27,14 @@
             <item index="8" class="java.lang.String" itemvalue="opencv_python" />
             <item index="9" class="java.lang.String" itemvalue="tensorflow" />
             <item index="10" class="java.lang.String" itemvalue="Cython" />
+            <item index="11" class="java.lang.String" itemvalue="keras_vis" />
+            <item index="12" class="java.lang.String" itemvalue="python_socketio" />
+            <item index="13" class="java.lang.String" itemvalue="scikit_image" />
+            <item index="14" class="java.lang.String" itemvalue="Keras" />
+            <item index="15" class="java.lang.String" itemvalue="googlemaps" />
+            <item index="16" class="java.lang.String" itemvalue="pyserial" />
+            <item index="17" class="java.lang.String" itemvalue="gpsd_py3" />
+            <item index="18" class="java.lang.String" itemvalue="Flask" />
           </list>
         </value>
       </option>

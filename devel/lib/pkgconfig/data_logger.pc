@@ -1,0 +1,8 @@
+prefix=/home/neil/Workspace/self-driving-golf-cart/devel
+
+Name: data_logger
+Description: Description of data_logger
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/neil/Workspace/self-driving-golf-cart/devel/lib 
+Requires: 

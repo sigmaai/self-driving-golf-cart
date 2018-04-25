@@ -10,8 +10,7 @@ import pygame
 import pandas as pd
 import model as m
 import time
-import configs
-from keras.optimizers import Adam
+from src.steering_control.scripts.weights.training import configs
 import keras as K
 import utils
 

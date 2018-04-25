@@ -1,4 +1,4 @@
-from keras.models import Model, Sequential
+from keras.models import Sequential
 from keras.layers.core import Dense, Activation, Flatten
 from keras.layers import SpatialDropout2D
 from keras.layers.convolutional import Conv2D
@@ -9,14 +9,15 @@ from keras.regularizers import l2
 from keras.optimizers import Adam
 import keras as K
 import tensorflow as tf
-import configs as configs
 
+image_height = 160
+image_width = 320
 
 def nvidia_model():
 
     model = Sequential()
 
-    model.add(Conv2D(24, (5, 5), padding="same", strides=2, input_shape=(configs.image_height, configs.image_width, 3)))
+    model.add(Conv2D(24, (5, 5), padding="same", strides=2, input_shape=(image_height, image_width, 3)))
     model.add(ELU())
     model.add(Conv2D(36, (5, 5), padding="same", strides=2))
     model.add(ELU())
@@ -45,7 +46,8 @@ def nvidia_model():
 def small_vgg_model():
 
     model = Sequential()
-    model.add(Conv2D(32, (3, 3), activation='relu', padding='same', input_shape=(configs.image_height, configs.image_width, 3)))
+    model.add(Conv2D(32, (3, 3), activation='relu', padding='same', input_shape=(
+    image_height, image_width, 3)))
     model.add(MaxPooling2D((2, 2), strides=2))
     model.add(Dropout(0.25))
     model.add(Conv2D(64, (3, 3), activation='relu', padding='same'))
@@ -71,7 +73,8 @@ def small_vgg_model():
 def commaai_model():
 
     model = Sequential()
-    model.add(Lambda(lambda x: x/127.5 - 1., input_shape=(configs.image_height, configs.image_width, 3), output_shape=(configs.image_height, configs.image_width, 3)))
+    model.add(Lambda(lambda x: x/127.5 - 1., input_shape=(image_height, image_width, 3), output_shape=(
+    image_height, image_width, 3)))
     model.add(Conv2D(16, (8, 8), strides=4, padding="same"))
     model.add(ELU())
     model.add(Conv2D(32, (5, 5), strides=2, padding="same"))
@@ -95,7 +98,8 @@ def create_comma_model_prelu():
 
     model = Sequential()
 
-    model.add(Conv2D(16, (8, 8), strides=(4, 4), padding="same", input_shape=(configs.image_height, configs.image_width, 3)))
+    model.add(Conv2D(16, (8, 8), strides=(4, 4), padding="same", input_shape=(
+    image_height, image_width, 3)))
     model.add(PReLU())
     model.add(Conv2D(32, (5, 5), strides=(2, 2), padding="same"))
     model.add(PReLU())
@@ -112,7 +116,7 @@ def create_comma_model_prelu():
     return model
 
 
-def regression_model(input_shape=(configs.image_height, configs.image_width, 3), use_adadelta=True, learning_rate=0.01, W_l2=0.0001,):
+def regression_model(input_shape=(image_height, image_width, 3), use_adadelta=True, learning_rate=0.01, W_l2=0.0001, ):
         """
         """
         model = Sequential()

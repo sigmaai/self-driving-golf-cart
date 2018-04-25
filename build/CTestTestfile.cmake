@@ -5,8 +5,9 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs(gtest)
+subdirs(detection)
 subdirs(cv_camera)
-subdirs(cruise_controller)
-subdirs(steering_controller)
-subdirs(steering_logger)
-subdirs(detection/traffic-light)
+subdirs(cruise_control)
+subdirs(data_logger)
+subdirs(driver)
+subdirs(steering_control)

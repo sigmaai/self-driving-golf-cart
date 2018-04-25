@@ -32,6 +32,11 @@ const int encoder_b = 3; // White - pin 3 - Digital
 
 ros::NodeHandle nh;
 
+void steering_callback( const std_msgs::Float32& cmd_msg) {
+  float angle = cmd_msg.data;
+  steering(angle);
+}
+
 ros::Subscriber<std_msgs::Float32> sub("/dbw/steering_angle/", steering_callback);
 
 void setup() {
@@ -52,11 +57,6 @@ void setup() {
 void loop() {
   nh.spinOnce();
   delay(1);
-}
-
-void steering_callback( const std_msgs::Float32& cmd_msg) {
-  float angle = cmd_msg.data)
-  steering(angle);
 }
 
 void steering(double angle) {

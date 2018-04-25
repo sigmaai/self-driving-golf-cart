@@ -11,7 +11,6 @@ from steering.autumn import AutumnModel
 from steering.steering_predictor import SteeringPredictor
 from steering.mc import MC
 import steering.visualization.visualization as steering_visualization
-from steering.auto_pilot import AutoPilot as AP
 from steering.rambo import Rambo
 
 from cruise.cruise_predictor import CruisePredictor
@@ -22,7 +21,7 @@ from semantic_segmentation.segmentation_analyzer import SegAnalyzer
 
 from detection.object.object_detector import ObjectDetector
 from path_planning.global_path import GlobalPathPlanner
-import configs.configs as configs
+from src.steering_control.scripts.weights.training import configs as configs
 from localization.gps import GPS
 from gui.info_screen import InfoScreen
 
@@ -32,7 +31,6 @@ import os
 import cv2
 import numpy as np
 from termcolor import colored
-import time
 
 
 class Driver:

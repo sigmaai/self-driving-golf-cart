@@ -1,8 +1,0 @@
-prefix=/home/neil/Workspace/self-driving-golf-cart/devel
-
-Name: yolo_light
-Description: Description of yolo_light
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/neil/Workspace/self-driving-golf-cart/devel/lib 
-Requires: 
