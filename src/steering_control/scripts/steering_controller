@@ -35,7 +35,7 @@ class SteeringPredictor:
 
 
 
-        steering_pub = rospy.Publisher('/dbw/steering_angle/', Float32, queue_size=5)
+        steering_pub = rospy.Publisher('/vehicle/dbw/steering_cmds/', Float32, queue_size=5)
         rate = rospy.Rate(15)
 
         while not rospy.is_shutdown() and self.current_frame is not None:

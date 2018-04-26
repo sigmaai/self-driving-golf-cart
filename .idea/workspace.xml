@@ -5,637 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76f9b933-0bfc-4cf1-b884-ca824d20e8ef" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/steering_control/scripts/weights/training/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/self-driving-golf-cart.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/self-driving-golf-cart.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/3.5.1/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/3.5.1/CMakeSystem.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/CMakeError.log" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/CMakeError.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CTestTestfile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CTestTestfile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/build/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/catkin_generated/order_packages.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/catkin_generated/order_packages.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/catkin_generated/setup_cached.sh" beforeDir="false" afterPath="$PROJECT_DIR$/build/catkin_generated/setup_cached.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/catkin_make.cache" beforeDir="false" afterPath="$PROJECT_DIR$/build/catkin_make.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/_catkin_empty_exported_target.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/_catkin_empty_exported_target.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/roscpp_generate_messages_cpp.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/roscpp_generate_messages_cpp.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/roscpp_generate_messages_cpp.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/roscpp_generate_messages_eus.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/roscpp_generate_messages_eus.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/roscpp_generate_messages_eus.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/roscpp_generate_messages_eus.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/roscpp_generate_messages_lisp.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/roscpp_generate_messages_lisp.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/roscpp_generate_messages_lisp.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/roscpp_generate_messages_nodejs.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/roscpp_generate_messages_nodejs.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/roscpp_generate_messages_nodejs.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/roscpp_generate_messages_py.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/roscpp_generate_messages_py.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/roscpp_generate_messages_py.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/roscpp_generate_messages_py.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosserial_msgs_generate_messages_py.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosserial_msgs_generate_messages_py.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosserial_msgs_generate_messages_py.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/rosserial_msgs_generate_messages_py.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/std_msgs_generate_messages_cpp.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/std_msgs_generate_messages_cpp.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/std_msgs_generate_messages_cpp.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/std_msgs_generate_messages_eus.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/std_msgs_generate_messages_eus.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/std_msgs_generate_messages_eus.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/std_msgs_generate_messages_lisp.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/std_msgs_generate_messages_lisp.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/std_msgs_generate_messages_lisp.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/std_msgs_generate_messages_nodejs.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/std_msgs_generate_messages_nodejs.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/std_msgs_generate_messages_nodejs.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/std_msgs_generate_messages_py.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/std_msgs_generate_messages_py.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/std_msgs_generate_messages_py.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CMakeFiles/std_msgs_generate_messages_py.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/CTestTestfile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/catkin_generated/installspace/cruise_controller.pc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/catkin_generated/installspace/cruise_controllerConfig-version.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/catkin_generated/installspace/cruise_controllerConfig.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/catkin_generated/ordered_paths.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/catkin_generated/package.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/catkin_generated/pkg.develspace.context.pc.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/catkin_generated/pkg.installspace.context.pc.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/catkin_generated/stamps/cruise_controller/package.xml.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/catkin_generated/stamps/cruise_controller/pkg.pc.em.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cruise_controller/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cv_camera/CMakeFiles/std_msgs_generate_messages_cpp.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cv_camera/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cv_camera/CMakeFiles/std_msgs_generate_messages_cpp.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cv_camera/CMakeFiles/std_msgs_generate_messages_cpp.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cv_camera/CMakeFiles/std_msgs_generate_messages_eus.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cv_camera/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cv_camera/CMakeFiles/std_msgs_generate_messages_eus.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cv_camera/CMakeFiles/std_msgs_generate_messages_eus.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cv_camera/CMakeFiles/std_msgs_generate_messages_lisp.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cv_camera/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cv_camera/CMakeFiles/std_msgs_generate_messages_lisp.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cv_camera/CMakeFiles/std_msgs_generate_messages_lisp.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cv_camera/CMakeFiles/std_msgs_generate_messages_nodejs.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cv_camera/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cv_camera/CMakeFiles/std_msgs_generate_messages_nodejs.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cv_camera/CMakeFiles/std_msgs_generate_messages_nodejs.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cv_camera/CMakeFiles/std_msgs_generate_messages_py.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cv_camera/CMakeFiles/std_msgs_generate_messages_py.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cv_camera/CMakeFiles/std_msgs_generate_messages_py.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cv_camera/CMakeFiles/std_msgs_generate_messages_py.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/cv_camera/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/build/cv_camera/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/geometry_msgs_generate_messages_eus.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/geometry_msgs_generate_messages_eus.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/geometry_msgs_generate_messages_eus.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/geometry_msgs_generate_messages_py.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/geometry_msgs_generate_messages_py.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/geometry_msgs_generate_messages_py.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/sensor_msgs_generate_messages_eus.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/sensor_msgs_generate_messages_eus.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/sensor_msgs_generate_messages_eus.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/sensor_msgs_generate_messages_py.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/sensor_msgs_generate_messages_py.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CMakeFiles/sensor_msgs_generate_messages_py.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/CTestTestfile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/catkin_generated/installspace/yolo_light.pc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/catkin_generated/installspace/yolo_lightConfig-version.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/catkin_generated/installspace/yolo_lightConfig.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/catkin_generated/ordered_paths.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/catkin_generated/package.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/catkin_generated/pkg.develspace.context.pc.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/catkin_generated/pkg.installspace.context.pc.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/catkin_generated/stamps/yolo_light/package.xml.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/catkin_generated/stamps/yolo_light/pkg.pc.em.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/detection/traffic-light/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/steering_controller/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/steering_controller/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/steering_controller/CTestTestfile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/steering_controller/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/steering_controller/catkin_generated/installspace/steering_controller.pc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/steering_controller/catkin_generated/installspace/steering_controllerConfig-version.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/steering_controller/catkin_generated/installspace/steering_controllerConfig.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/steering_controller/catkin_generated/ordered_paths.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/steering_controller/catkin_generated/package.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/steering_controller/catkin_generated/pkg.develspace.context.pc.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/steering_controller/catkin_generated/pkg.installspace.context.pc.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/steering_controller/catkin_generated/stamps/steering_controller/package.xml.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/steering_controller/catkin_generated/stamps/steering_controller/pkg.pc.em.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/steering_controller/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/steering_logger/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/steering_logger/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/steering_logger/CTestTestfile.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/steering_logger/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/steering_logger/catkin_generated/installspace/steering_logger.pc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/steering_logger/catkin_generated/installspace/steering_loggerConfig-version.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/steering_logger/catkin_generated/installspace/steering_loggerConfig.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/steering_logger/catkin_generated/ordered_paths.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/steering_logger/catkin_generated/package.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/steering_logger/catkin_generated/pkg.develspace.context.pc.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/steering_logger/catkin_generated/pkg.installspace.context.pc.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/steering_logger/catkin_generated/stamps/steering_logger/package.xml.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/steering_logger/catkin_generated/stamps/steering_logger/pkg.pc.em.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/steering_logger/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devel/lib/pkgconfig/cruise_controller.pc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devel/lib/pkgconfig/steering_controller.pc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devel/lib/pkgconfig/steering_logger.pc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devel/lib/pkgconfig/yolo_light.pc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devel/share/cruise_controller/cmake/cruise_controllerConfig-version.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devel/share/cruise_controller/cmake/cruise_controllerConfig.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devel/share/steering_controller/cmake/steering_controllerConfig-version.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devel/share/steering_controller/cmake/steering_controllerConfig.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devel/share/steering_logger/cmake/steering_loggerConfig-version.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devel/share/steering_logger/cmake/steering_loggerConfig.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devel/share/yolo_light/cmake/yolo_lightConfig-version.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/devel/share/yolo_light/cmake/yolo_lightConfig.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/driver.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/driver.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cruise_control/ml/visualization.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/cruise_control/ml/visualization.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/lane/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/lane/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/lane/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/lane/camera_cal/calibration1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/lane/camera_cal/calibration10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/lane/camera_cal/calibration11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/lane/camera_cal/calibration12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/lane/camera_cal/calibration13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/lane/camera_cal/calibration14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/lane/camera_cal/calibration15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/lane/camera_cal/calibration16.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/lane/camera_cal/calibration17.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/lane/camera_cal/calibration18.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/lane/camera_cal/calibration19.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/lane/camera_cal/calibration2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/lane/camera_cal/calibration20.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/lane/camera_cal/calibration3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/lane/camera_cal/calibration4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/lane/camera_cal/calibration5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/lane/camera_cal/calibration6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/lane/camera_cal/calibration7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/lane/camera_cal/calibration8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/lane/camera_cal/calibration9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/lane/configs.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/lane/lane_detector.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/lane/main.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/lane/test_images/straight_lines1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/lane/test_images/straight_lines2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/lane/test_images/test1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/lane/test_images/test2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/lane/test_images/test3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/lane/test_images/test4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/lane/test_images/test5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/lane/test_images/test6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/lane/utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/lane/visualizer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/object/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/object/device_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/object/font/FiraMono-Medium.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/object/model_data/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/object/model_data/coco_classes.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/object/model_data/configs.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/object/model_data/pascal_classes.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/object/model_data/yolo.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/object/model_data/yolo_anchors.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/object/object_detector.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/object/yad2k/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/object/yad2k/models/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/object/yad2k/models/keras_darknet19.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/object/yad2k/models/keras_yolo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/object/yad2k/utils/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/object/yad2k/utils/draw_boxes.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/object/yad2k/utils/utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/package.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cfg/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cfg/coco.names" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cfg/extraction.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cfg/extraction.conv.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cfg/process.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cfg/tiny-yolo-4c.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cfg/tiny-yolo-5c.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cfg/tiny-yolo-udacity.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cfg/tiny-yolo-voc.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cfg/tiny-yolo.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cfg/v1.1/person-bottle.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cfg/v1.1/tiny-coco.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cfg/v1.1/tiny-yolo-4c.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cfg/v1.1/tiny-yolov1-5c.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cfg/v1.1/tiny-yolov1.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cfg/v1.1/yolo-coco.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cfg/v1.1/yolov1.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cfg/v1/tiny-old.profile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cfg/v1/tiny.profile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cfg/v1/yolo-2c.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cfg/v1/yolo-4c.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cfg/v1/yolo-full.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cfg/v1/yolo-small.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cfg/v1/yolo-tiny-extract.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cfg/v1/yolo-tiny-extract_.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cfg/v1/yolo-tiny.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cfg/v1/yolo-tiny4c.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cfg/yolo-voc.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cfg/yolo.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/ckpt/tiny-yolo-udacity-8987.data-00000-of-00001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/ckpt/tiny-yolo-udacity-8987.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/ckpt/tiny-yolo-udacity-8987.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/ckpt/tiny-yolo-udacity-8987.profile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cython_utils/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cython_utils/build/temp.linux-x86_64-2.7/cy_yolo2_findboxes.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cython_utils/build/temp.linux-x86_64-2.7/cy_yolo_findboxes.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cython_utils/build/temp.linux-x86_64-2.7/nms.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cython_utils/build/temp.linux-x86_64-3.5/cy_yolo2_findboxes.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cython_utils/build/temp.linux-x86_64-3.5/cy_yolo_findboxes.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cython_utils/build/temp.linux-x86_64-3.5/nms.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cython_utils/cy_yolo2_findboxes.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cython_utils/cy_yolo2_findboxes.cpython-35m-x86_64-linux-gnu.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cython_utils/cy_yolo2_findboxes.pyx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cython_utils/cy_yolo2_findboxes.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cython_utils/cy_yolo_findboxes.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cython_utils/cy_yolo_findboxes.cpython-35m-x86_64-linux-gnu.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cython_utils/cy_yolo_findboxes.pyx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cython_utils/cy_yolo_findboxes.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cython_utils/nms.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cython_utils/nms.cpython-35m-x86_64-linux-gnu.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cython_utils/nms.pxd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cython_utils/nms.pyx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cython_utils/nms.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cython_utils/setup.backup.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/cython_utils/setup.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/dark/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/dark/connected.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/dark/convolution.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/dark/darknet.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/dark/darkop.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/dark/layer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/darkflow.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/flow" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/labels.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/net/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/net/build.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/net/flow.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/net/framework.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/net/help.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/net/ops/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/net/ops/baseop.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/net/ops/convolution.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/net/ops/simple.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/net/vanilla/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/net/vanilla/train.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/net/yolo/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/net/yolo/data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/net/yolo/misc.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/net/yolo/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/net/yolo/train.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/net/yolov2/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/net/yolov2/data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/net/yolov2/test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/net/yolov2/train.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/run.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000342686352077.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000342736343559.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000342786342863.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000342836348212.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000342886367537.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000342936362725.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000342986375285.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000343036366952.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000343086397336.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000343136379051.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000343186409079.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000343236417523.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000343286411062.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000343336419038.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000343386440367.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000343436448061.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000343486451869.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000343536436354.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000343586462009.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000343636471081.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000343686466800.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000343736412750.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000343786412759.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000343836363566.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000343886361362.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000343936378876.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000343986426459.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000344036387619.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000344086442148.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000344136396736.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000344186519877.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000344236422552.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000344286406462.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000344336442797.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000344386438392.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000344436450701.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000344486508100.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000344536505847.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000344586471518.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000344636486601.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000344686477784.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000344736486692.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000344786490663.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000344836507476.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000344886555939.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000344936512356.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000344986531619.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000345036528385.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000345086530084.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000345136536191.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000345186594178.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000345236552723.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000345286606058.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000345336707647.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000345386715513.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000345436714063.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000345486707721.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000345536793641.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000345586723935.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000345636742923.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000345686744517.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000345736754946.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000345786813667.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000345836770646.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000345886777631.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000345936784443.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000345986788997.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000346036802511.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000346086803271.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000346136836828.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000346186813038.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000346236841757.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000346286828247.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000346336838555.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000346386858213.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000346436866885.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000346486862877.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000346536889484.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000346586881721.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000346636893907.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000346686894441.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000346736896480.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000346786827400.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000346837023870.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000346886788521.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000346936813249.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000346986873986.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000347036857908.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000347086829691.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000347136825817.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000347186893548.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000347236847478.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000347286942662.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000347336911361.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000347386918030.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000347436889944.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000347486918291.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000347536872786.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000347586883935.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000347636889591.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000347686897454.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000347736918005.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000347786918388.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000347836920775.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000347886938842.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000347936993479.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000347986951405.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000348036945466.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000348087016956.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000348136960164.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000348186981821.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000348236979553.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000348287029683.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000348337127766.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000348387131447.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000348437133178.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000348487142762.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000348537157718.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000348587176841.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000348637174039.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000348687168835.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000348737191719.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000348787196277.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000348837190841.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000348887208736.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000348937210715.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000348987233915.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000349037226473.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000349087225165.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000349137240874.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000349187238933.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000349237257558.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000349287254699.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000349337263180.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000349387278129.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000349437282540.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000349487286056.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000349537286799.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000349587301042.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000349637306140.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000349687314586.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000349737312583.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000349787251384.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000349837214516.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000349887299394.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000349937212958.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000349987239833.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000350037246797.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000350087237460.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000350137236080.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000350187250339.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000350237313922.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000350287208148.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000350337281798.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000350387283086.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000350437281762.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000350487294842.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000350537353159.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000350587321801.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000350637312074.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000350687319432.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000350737331686.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000350787391723.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000350837529280.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000350887348479.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000350937443628.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000350987374514.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000351037303234.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000351087371504.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000351137427589.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000351187391069.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000351237404500.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000351287567198.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000351337548948.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000351387544223.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000351437564321.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000351487617196.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000351537570040.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000351587594865.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000351637593594.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000351687592496.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000351737608384.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000351787832768.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000351837615289.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000351887623619.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000351937634964.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000351987628714.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000352037702011.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000352087726062.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000352137575854.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000352187665952.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000352237670139.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000352287681219.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000352337688263.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000352387681549.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000352437711674.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000352487700569.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000352537705610.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000352587712608.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000352637719804.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000352687736636.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000352737659112.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000352787664748.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000352837808309.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000352887809037.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000352937641025.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000352987635323.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000353037840689.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000353087845529.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000353137853705.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000353187861735.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000353237680819.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000353288524656.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000353337698788.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000353387704464.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000353437909372.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000353487903849.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000353537900604.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000353587908702.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000353637727423.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000353687925081.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000353737860928.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000353787939746.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000353837822056.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000353887775247.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000353937830407.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000353987967361.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000354037800633.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000354087850572.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000354137811540.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000354187867776.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000354238000053.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000354287864935.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000354337953737.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000354387969153.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000354437889271.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000354487979708.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000354537988980.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000354587993200.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1477000354637998482.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/test/1478732456295866959.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/times.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/tlight_node.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/utils/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/utils/box.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/utils/im_transform.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/utils/images_to_mp4.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/utils/loader.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/utils/pascal_voc_clean_xml.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/traffic-light/scripts/utils/udacity_voc_csv.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/steering_control/launch/steering_control.launch" beforeDir="false" afterPath="$PROJECT_DIR$/src/steering_control/launch/steering_control.launch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/steering_control/ml/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/steering_control/ml/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/steering_control/ml/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/configs.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/steering_control/scripts/weights/training/configs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/steering_control/scripts/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/steering_predictor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/others/steering_prediction.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/others/steering_prediction.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/driver/launch/driver.launch" beforeDir="false" afterPath="$PROJECT_DIR$/src/driver/launch/driver.launch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/steering_control/arduino_motor_control/arduino_motor_control.ino" beforeDir="false" afterPath="$PROJECT_DIR$/src/steering_control/arduino_motor_control/arduino_motor_control.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/steering_controller" beforeDir="false" afterPath="$PROJECT_DIR$/src/steering_control/scripts/steering_controller" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -645,17 +18,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/self_driving_golf_cart$test_detection.coverage" NAME="test_detection Coverage Results" MODIFIED="1523407579643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/self_driving_golf_cart$drive.coverage" NAME="drive Coverage Results" MODIFIED="1524093465441" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/self_driving_golf_cart$visualization.coverage" NAME="visualization Coverage Results" MODIFIED="1523565981900" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/steering/visualization" />
+    <SUITE FILE_PATH="coverage/self_driving_golf_cart$drive.coverage" NAME="drive Coverage Results" MODIFIED="1524093465441" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/self_driving_golf_cart$test_detection.coverage" NAME="test_detection Coverage Results" MODIFIED="1523407579643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="steering_controller" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="steering_controller" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/steering_controller">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="57" column="67" selection-start-line="57" selection-start-column="67" selection-end-line="57" selection-end-column="67" />
+            <state relative-caret-position="228">
+              <caret line="37" column="67" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="67" />
               <folding>
                 <element signature="e#186#204#0" expanded="true" />
               </folding>
@@ -663,10 +36,19 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="arduino_motor_control.ino" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/steering_control/arduino_motor_control/arduino_motor_control.ino">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="466">
+              <caret line="39" column="49" lean-forward="true" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2319">
+            <state relative-caret-position="1620">
               <caret line="118" column="64" selection-start-line="118" selection-start-column="64" selection-end-line="118" selection-end-column="64" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
@@ -679,7 +61,7 @@
         <entry file="file://$PROJECT_DIR$/src/data_logger/scripts/steering_logger">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
-              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
         </entry>
@@ -750,6 +132,7 @@
         <option value="$PROJECT_DIR$/src/steering_control/scripts/steering_predictor" />
         <option value="$PROJECT_DIR$/src/steering_control/scripts/models.py" />
         <option value="$PROJECT_DIR$/src/steering_control/scripts/steering_controller" />
+        <option value="$PROJECT_DIR$/src/steering_control/arduino_motor_control/arduino_motor_control.ino" />
       </list>
     </option>
   </component>
@@ -759,11 +142,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="56" />
-    <option name="y" value="896" />
-    <option name="width" value="1545" />
-    <option name="height" value="905" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -786,13 +168,14 @@
               <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
               <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="data_logger" type="462c0819:PsiDirectoryNode" />
+              <item name="steering_control" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
               <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="steering_control" type="462c0819:PsiDirectoryNode" />
+              <item name="arduino_motor_control" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
@@ -931,23 +314,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="56" y="-4" width="1545" height="905" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32948717" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.25897437" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32948717" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.25897437" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22164614" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22460657" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" weight="0.43919885" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -961,24 +344,24 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19507453" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32948717" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.25897437" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32948717" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.3297568" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32948717" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -993,7 +376,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/steering/ap_model.py" />
     <entry file="file://$PROJECT_DIR$/steering/models.py" />
     <entry file="file://$PROJECT_DIR$/steering/rambo.py" />
     <entry file="file://$PROJECT_DIR$/steering/README.md" />
@@ -1075,34 +457,10 @@
     <entry file="file://$PROJECT_DIR$/src/steering-controller/scripts/utils.py" />
     <entry file="file://$PROJECT_DIR$/src/steering-controller/scripts/models.py" />
     <entry file="file://$PROJECT_DIR$/src/steering-controller/scripts/steering_predictor.py" />
-    <entry file="file://$PROJECT_DIR$/src/steering_logger/scripts/logger">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="56" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cruise_controller/scripts/cruise">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cruise_controller/scripts/cruise_predictor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="20" lean-forward="true" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/steering_controller/scripts/steering_predictor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="33" lean-forward="true" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/steering_logger/scripts/logger" />
+    <entry file="file://$PROJECT_DIR$/src/cruise_controller/scripts/cruise" />
+    <entry file="file://$PROJECT_DIR$/src/cruise_controller/scripts/cruise_predictor.py" />
+    <entry file="file://$PROJECT_DIR$/src/steering_controller/scripts/steering_predictor.py" />
     <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/weights/training/configs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1110,19 +468,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/steering_predictor">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
-          <folding>
-            <element signature="e#186#204#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/steering_predictor" />
     <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2319">
+        <state relative-caret-position="1620">
           <caret line="118" column="64" selection-start-line="118" selection-start-column="64" selection-end-line="118" selection-end-column="64" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
@@ -1133,17 +482,24 @@
     <entry file="file://$PROJECT_DIR$/src/data_logger/scripts/steering_logger">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/steering_controller">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="57" column="67" selection-start-line="57" selection-start-column="67" selection-end-line="57" selection-end-column="67" />
+        <state relative-caret-position="228">
+          <caret line="37" column="67" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="67" />
           <folding>
             <element signature="e#186#204#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/steering_control/arduino_motor_control/arduino_motor_control.ino">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="39" column="49" lean-forward="true" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
         </state>
       </provider>
     </entry>

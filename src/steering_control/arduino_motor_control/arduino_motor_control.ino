@@ -37,7 +37,7 @@ void steering_callback( const std_msgs::Float32& cmd_msg) {
   steering(angle);
 }
 
-ros::Subscriber<std_msgs::Float32> sub("/dbw/steering_angle/", steering_callback);
+ros::Subscriber<std_msgs::Float32> sub("/vehicle/dbw/steering_cmds/", steering_callback);
 
 void setup() {
 
