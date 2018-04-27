@@ -1,0 +1,11 @@
+<robot name="Alan-v2">
+  <link name="base_link">
+    <visual>
+      <origin rpy="1.57079632679 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://driver/meshes/subassem-chassis.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+
+</robot>
