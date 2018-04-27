@@ -1,12 +1,14 @@
 <launch>
 
-  <!-- upload urdf -->
-  <param name="robot_description" textfile="$(find driver)/urdf/robot.urdf" />
-  <arg name="gui" default="true" />
-  <arg name="rvizconfig" default="$(find driver)/rviz/default.rviz" />
+	<!-- upload urdf -->
+  	<param name="robot_description" textfile="$(find driver)/urdf/robot.urdf" />
+  	<arg name="gui" default="true" />
 
-  <param name="use_gui" value="$(arg gui)"/>
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+  	<!-- load rviz configs -->
+  	<arg name="rvizconfig" default="$(find driver)/rviz/default.rviz" />
+
+  	<param name="use_gui" value="$(arg gui)"/>
+  	<node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
 
 </launch>
 

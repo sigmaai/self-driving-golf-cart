@@ -33,8 +33,6 @@ class SteeringPredictor:
         self.cnn.load_weights(self.model_path)
         print('steering deep learning model loaded')
 
-
-
         steering_pub = rospy.Publisher('/vehicle/dbw/steering_cmds/', Float32, queue_size=5)
         rate = rospy.Rate(15)
 
