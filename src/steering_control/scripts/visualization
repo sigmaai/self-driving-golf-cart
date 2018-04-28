@@ -111,7 +111,7 @@ class Visualization():
         return steering_img
 
     # TODO: Actually test this method
-    def visualize_class_activation_map(model, image):
+    def visualize_class_activation_map(self, model, image):
 
         image = cv2.resize(image, (320, 160))
         heatmap = visualize_cam(model, layer_idx=-1, filter_indices=0, seed_input=image, grad_modifier=None)
@@ -135,10 +135,6 @@ class Visualization():
 
     def __init__(self):
 
-        self.current_frame = None
-        self.bridge = CvBridge()
-        self.steering_angle = 0.0
-
         rospy.init_node('steering_visualization')
         rospy.Subscriber('/cv_camera_node/image_raw', Image, callback=self.image_update_callback, queue_size=5)
         rospy.Subscriber('/vehicle/dbw/steering_cmds/', Float32, callback=self.steering_cmd_callback)
@@ -146,11 +142,19 @@ class Visualization():
         visual_pub = rospy.Publisher('/visual/steering/angle_img', Image, queue_size=5)
         rate = rospy.Rate(15)
 
-        while not rospy.is_shutdown() and self.current_frame is not None:
-            image = self.visualize_line(self.current_frame, self.steering_angle)
-            img_msg = self.bridge.cv2_to_imgmsg(image, "bgr8")
-            visual_pub.publish(img_msg)
-            rate.sleep()
+        self.current_frame = None
+        self.bridge = CvBridge()
+        self.steering_angle = 0.0
+
+        while not rospy.is_shutdown():
+
+            if self.current_frame is not None:
+                image = self.visualize_line(img=self.current_frame, angle_steers=self.steering_angle, speed_ms=5)
+                img_msg = self.bridge.cv2_to_imgmsg(image, "bgr8")
+                visual_pub.publish(img_msg)
+                rate.sleep()
+            else:
+                rate.sleep()
 
 
 if __name__ == "__main__":

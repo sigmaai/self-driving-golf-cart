@@ -20,7 +20,7 @@
     	<visual>
       		<origin rpy="1.57079632679 0 0" xyz="0 0 0"/>
       		<geometry>
-        		<mesh filename="package://driver/meshes/steering_subassem.stl.stl" scale="0.001 0.001 0.001"/>
+        		<mesh filename="package://driver/meshes/steering_subassem.stl" scale="0.001 0.001 0.001"/>
       		</geometry>
     	</visual>
   	</link>
@@ -29,34 +29,34 @@
     	<visual>
       		<origin rpy="1.57079632679 0 0" xyz="0 0 0"/>
       		<geometry>
-        		<mesh filename="package://driver/meshes/wheel_subassem.stl.stl" scale="0.001 0.001 0.001"/>
+        		<mesh filename="package://driver/meshes/fr_wheel.stl" scale="0.001 0.001 0.001"/>
       		</geometry>
     	</visual>
   	</link>
 
   	<link name="steering_wheel_fl">
     	<visual>
-      		<origin rpy="1.57079632679 0 0" xyz="0 10 0"/>
+      		<origin rpy="1.57079632679 0 0" xyz="0 0 0"/>
       		<geometry>
-        		<mesh filename="package://driver/meshes/wheel_subassem.stl.stl" scale="0.001 0.001 0.001"/>
+        		<mesh filename="package://driver/meshes/fl_wheel.stl" scale="0.001 0.001 0.001"/>
       		</geometry>
     	</visual>
   	</link>
 
   	<link name="steering_wheel_rr">
     	<visual>
-      		<origin rpy="1.57079632679 0 0" xyz="0 20 0"/>
+      		<origin rpy="1.57079632679 0 0" xyz="0 0 0"/>
       		<geometry>
-        		<mesh filename="package://driver/meshes/wheel_subassem.stl.stl" scale="0.001 0.001 0.001"/>
+        		<mesh filename="package://driver/meshes/rr_wheel.stl" scale="0.001 0.001 0.001"/>
       		</geometry>
     	</visual>
   	</link>
 
   	<link name="steering_wheel_rl">
     	<visual>
-      		<origin rpy="1.57079632679 0 0" xyz="0 30 0"/>
+      		<origin rpy="1.57079632679 0 0" xyz="0 0 0"/>
       		<geometry>
-        		<mesh filename="package://driver/meshes/wheel_subassem.stl.stl" scale="0.001 0.001 0.001"/>
+        		<mesh filename="package://driver/meshes/rl_wheel.stl" scale="0.001 0.001 0.001"/>
       		</geometry>
     	</visual>
   	</link>
@@ -70,46 +70,46 @@
   	
 
 
-  	<joint name="body_to_steering" type="floating">
+  	<joint name="body_to_steering" type="fixed">
       	<parent link="base_link"/>
        	<child link="steering_subassem"/>
-       	<origin xyz="0 -0.22 0.25"/>
+       	<origin xyz="0 0 0"/>
     </joint>
 
-    <joint name="body_to_frw" type="floating">
+    <joint name="body_to_frw" type="continuous">
       	<parent link="base_link"/>
        	<child link="steering_wheel_fr"/>
-       	<origin xyz="0 -0.22 0.25"/>
+       	<origin xyz="0 0 0"/>
     </joint>
 
-    <joint name="body_to_flw" type="floating">
+    <joint name="body_to_flw" type="continuous">
       	<parent link="base_link"/>
        	<child link="steering_wheel_fl"/>
-       	<origin xyz="0 -0.22 0.25"/>
+       	<origin xyz="0 0 0"/>
     </joint>
 
-    <joint name="body_to_rrw" type="floating">
+    <joint name="body_to_rrw" type="continuous">
       	<parent link="base_link"/>
        	<child link="steering_wheel_rr"/>
-       	<origin xyz="0 -0.22 0.25"/>
+       	<origin xyz="0 0 0"/>
     </joint>
 
-    <joint name="body_to_rlw" type="floating">
+    <joint name="body_to_rlw" type="continuous">
       	<parent link="base_link"/>
        	<child link="steering_wheel_rl"/>
-       	<origin xyz="0 -0.22 0.25"/>
+       	<origin xyz="0 0 0"/>
     </joint>
 
-    <joint name="frw_to_steering" type="floating">
+    <joint name="frw_to_steering" type="continuous">
       	<parent link="steering_subassem"/>
        	<child link="steering_wheel_fr"/>
-       	<origin xyz="0 -0.22 0.25"/>
+       	<origin xyz="0 0 0"/>
     </joint>
 
-    <joint name="flw_to_steering" type="floating">
+    <joint name="flw_to_steering" type="continuous">
       	<parent link="steering_subassem"/>
        	<child link="steering_wheel_fl"/>
-       	<origin xyz="0 -0.22 0.25"/>
+       	<origin xyz="0 0 0"/>
     </joint>
 
 </robot>

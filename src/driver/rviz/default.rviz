@@ -6,7 +6,10 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
+        - /RobotModel1
         - /Image1
+        - /steering_vis1
+        - /steering_vis1/Status1
       Splitter Ratio: 0.430555552
     Tree Height: 316
   - Class: rviz/Selection
@@ -64,6 +67,31 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        steering_subassem:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        steering_wheel_fl:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        steering_wheel_fr:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        steering_wheel_rl:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        steering_wheel_rr:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
       Name: RobotModel
       Robot Description: robot_description
       TF Prefix: ""
@@ -105,7 +133,7 @@ Visualization Manager:
       Value: true
     - Class: rviz/Image
       Enabled: true
-      Image Topic: ""
+      Image Topic: /visual/steering/angle_img
       Max Value: 1
       Median window: 5
       Min Value: 0
