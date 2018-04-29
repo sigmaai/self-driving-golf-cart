@@ -1,5 +1,5 @@
 # ROS Info
-Below you will find all the important information about ROS in this repository.
+Below you will find all the important information about ROS in this repository. 
 
 ## Packages & Nodes
 Here is a list of packages. Underneath each package are nodes in that package.  

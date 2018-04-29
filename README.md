@@ -5,29 +5,29 @@
 
 We wanted to build a self driving car. We didn't build an actual car, but we built a golf cart, and wrote a system that can work on a real car as well. 
 
-This project has several different modules. 
+Here are the modules in this project.
 
-1. Deep learning steering prediction
+1. Behavioral cloning
 2. Semantic segmentation
-3. Driver by wire system (DBW)
-4. Object detection
-5. Traffic light detection
-6. Lane Detection
-7. System management
-8. Path planning
-9. Engineering
+3. Driver by wire system (DBW) 
+4. Object detection 🚙
+5. Traffic light detection 🚦
+6. Lane Detection 🛣
+7. Path planning
 
 Localization and some other features coming soon...
 
 ## Running the code
 1. Please download/clone the repository.
-2. Make sure that you have all the [dependencies](./requirements.txt) installed. 
-3. To run the autonomous software, change your directory to the project directory 
-4. `./drive`. 
+2. Make sure you have all the [dependencies](./requirements.txt) installed. 
+3. Make sure that you have the [ROS](http://wiki.ros.org/ROS/Installation) installed on your computer.
+4. `cd YOUR_PROJECT_DIRECTORY`
+5. `catkin_make`
+6. `source devel/setup.bash`
+7. `roscore`
+8. `roslaunch driver drive.launch`
 
-<img src="./media/running-2.png" alt="Drawing" style="width: 500px;"/>
-
-(Please use python3 instead of python2, because the ML models are saved in the python3 formate)
+Bon Voyage 😀
 
 ## Steering
 The algorithm behind the steering system is inspired by work done by [Nvidia](https://arxiv.org/pdf/1604.07316.pdf). We developed our own convolutional neural network to predict the steering angle based on images captured by the front camera. The hardware system is custom designed in-house. Here is a video demo.
