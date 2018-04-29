@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/neil/Workspace/self-driving-golf-cart/src
+CMAKE_SOURCE_DIR = /home/yongyang/Workspace/self-driving-golf-cart/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/neil/Workspace/self-driving-golf-cart/build
+CMAKE_BINARY_DIR = /home/yongyang/Workspace/self-driving-golf-cart/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -70,8 +70,8 @@ install/fast: preinstall/fast
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -135,9 +135,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/build/CMakeFiles /home/neil/Workspace/self-driving-golf-cart/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yongyang/Workspace/self-driving-golf-cart/build/CMakeFiles /home/yongyang/Workspace/self-driving-golf-cart/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yongyang/Workspace/self-driving-golf-cart/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -292,7 +292,7 @@ std_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f detection/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make detection/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f detection/lane/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make detection/lane/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
 .PHONY : std_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -305,7 +305,7 @@ std_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_py/fast:
-	$(MAKE) -f detection/CMakeFiles/std_msgs_generate_messages_py.dir/build.make detection/CMakeFiles/std_msgs_generate_messages_py.dir/build
+	$(MAKE) -f detection/lane/CMakeFiles/std_msgs_generate_messages_py.dir/build.make detection/lane/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
 
 #=============================================================================
@@ -318,7 +318,7 @@ std_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f detection/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make detection/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f detection/lane/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make detection/lane/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -331,7 +331,7 @@ std_msgs_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_eus/fast:
-	$(MAKE) -f detection/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make detection/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+	$(MAKE) -f detection/lane/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make detection/lane/CMakeFiles/std_msgs_generate_messages_eus.dir/build
 .PHONY : std_msgs_generate_messages_eus/fast
 
 #=============================================================================
@@ -344,7 +344,7 @@ std_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f detection/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make detection/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f detection/lane/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make detection/lane/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
 .PHONY : std_msgs_generate_messages_cpp/fast
 
 #=============================================================================

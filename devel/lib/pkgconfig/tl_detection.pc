@@ -1,0 +1,8 @@
+prefix=/home/yongyang/Workspace/self-driving-golf-cart/devel
+
+Name: tl_detection
+Description: Description of tl_detection
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/yongyang/Workspace/self-driving-golf-cart/devel/lib 
+Requires: 

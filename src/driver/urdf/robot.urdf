@@ -76,22 +76,25 @@
        	<origin xyz="0 0 0"/>
     </joint>
 
-    <joint name="body_to_frw" type="continuous">
+<!--
+    <joint name="body_to_frw" type="floating">
       	<parent link="base_link"/>
        	<child link="steering_wheel_fr"/>
        	<origin xyz="0 0 0"/>
     </joint>
 
-    <joint name="body_to_flw" type="continuous">
+    <joint name="body_to_flw" type="floating">
       	<parent link="base_link"/>
        	<child link="steering_wheel_fl"/>
        	<origin xyz="0 0 0"/>
     </joint>
 
+-->
+
     <joint name="body_to_rrw" type="continuous">
       	<parent link="base_link"/>
        	<child link="steering_wheel_rr"/>
-       	<origin xyz="0 0 0"/>
+       	<origin xyz="0.0 0 0"/>
     </joint>
 
     <joint name="body_to_rlw" type="continuous">
