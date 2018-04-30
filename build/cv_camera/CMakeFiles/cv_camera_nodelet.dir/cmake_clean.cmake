@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/cv_camera_nodelet.dir/src/cv_camera_nodelet.cpp.o"
-  "/home/yongyang/Workspace/self-driving-golf-cart/devel/lib/libcv_camera_nodelet.pdb"
-  "/home/yongyang/Workspace/self-driving-golf-cart/devel/lib/libcv_camera_nodelet.so"
+  "/home/neil/Workspace/self-driving-golf-cart/devel/lib/libcv_camera_nodelet.pdb"
+  "/home/neil/Workspace/self-driving-golf-cart/devel/lib/libcv_camera_nodelet.so"
 )
 
 # Per-language clean rules from dependency scanning.

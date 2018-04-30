@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yongyang/Workspace/self-driving-golf-cart/src
+CMAKE_SOURCE_DIR = /home/neil/Workspace/self-driving-golf-cart/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yongyang/Workspace/self-driving-golf-cart/build
+CMAKE_BINARY_DIR = /home/neil/Workspace/self-driving-golf-cart/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -70,8 +70,8 @@ install/fast: preinstall/fast
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -135,9 +135,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yongyang/Workspace/self-driving-golf-cart/build/CMakeFiles /home/yongyang/Workspace/self-driving-golf-cart/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/build/CMakeFiles /home/neil/Workspace/self-driving-golf-cart/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yongyang/Workspace/self-driving-golf-cart/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -292,7 +292,7 @@ std_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f detection/lane/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make detection/lane/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f detection/lane_detection/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make detection/lane_detection/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
 .PHONY : std_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -305,7 +305,7 @@ std_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_py/fast:
-	$(MAKE) -f detection/lane/CMakeFiles/std_msgs_generate_messages_py.dir/build.make detection/lane/CMakeFiles/std_msgs_generate_messages_py.dir/build
+	$(MAKE) -f detection/lane_detection/CMakeFiles/std_msgs_generate_messages_py.dir/build.make detection/lane_detection/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
 
 #=============================================================================
@@ -318,7 +318,7 @@ std_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f detection/lane/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make detection/lane/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f detection/lane_detection/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make detection/lane_detection/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -331,7 +331,7 @@ std_msgs_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_eus/fast:
-	$(MAKE) -f detection/lane/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make detection/lane/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+	$(MAKE) -f detection/lane_detection/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make detection/lane_detection/CMakeFiles/std_msgs_generate_messages_eus.dir/build
 .PHONY : std_msgs_generate_messages_eus/fast
 
 #=============================================================================
@@ -344,8 +344,177 @@ std_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f detection/lane/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make detection/lane/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f detection/lane_detection/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make detection/lane_detection/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
 .PHONY : std_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named object_detection_genpy
+
+# Build rule for target.
+object_detection_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 object_detection_genpy
+.PHONY : object_detection_genpy
+
+# fast build rule for target.
+object_detection_genpy/fast:
+	$(MAKE) -f detection/object_detection/CMakeFiles/object_detection_genpy.dir/build.make detection/object_detection/CMakeFiles/object_detection_genpy.dir/build
+.PHONY : object_detection_genpy/fast
+
+#=============================================================================
+# Target rules for targets named object_detection_generate_messages_py
+
+# Build rule for target.
+object_detection_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 object_detection_generate_messages_py
+.PHONY : object_detection_generate_messages_py
+
+# fast build rule for target.
+object_detection_generate_messages_py/fast:
+	$(MAKE) -f detection/object_detection/CMakeFiles/object_detection_generate_messages_py.dir/build.make detection/object_detection/CMakeFiles/object_detection_generate_messages_py.dir/build
+.PHONY : object_detection_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named object_detection_gennodejs
+
+# Build rule for target.
+object_detection_gennodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 object_detection_gennodejs
+.PHONY : object_detection_gennodejs
+
+# fast build rule for target.
+object_detection_gennodejs/fast:
+	$(MAKE) -f detection/object_detection/CMakeFiles/object_detection_gennodejs.dir/build.make detection/object_detection/CMakeFiles/object_detection_gennodejs.dir/build
+.PHONY : object_detection_gennodejs/fast
+
+#=============================================================================
+# Target rules for targets named object_detection_generate_messages_cpp
+
+# Build rule for target.
+object_detection_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 object_detection_generate_messages_cpp
+.PHONY : object_detection_generate_messages_cpp
+
+# fast build rule for target.
+object_detection_generate_messages_cpp/fast:
+	$(MAKE) -f detection/object_detection/CMakeFiles/object_detection_generate_messages_cpp.dir/build.make detection/object_detection/CMakeFiles/object_detection_generate_messages_cpp.dir/build
+.PHONY : object_detection_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named _object_detection_generate_messages_check_deps_DetectionResult
+
+# Build rule for target.
+_object_detection_generate_messages_check_deps_DetectionResult: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _object_detection_generate_messages_check_deps_DetectionResult
+.PHONY : _object_detection_generate_messages_check_deps_DetectionResult
+
+# fast build rule for target.
+_object_detection_generate_messages_check_deps_DetectionResult/fast:
+	$(MAKE) -f detection/object_detection/CMakeFiles/_object_detection_generate_messages_check_deps_DetectionResult.dir/build.make detection/object_detection/CMakeFiles/_object_detection_generate_messages_check_deps_DetectionResult.dir/build
+.PHONY : _object_detection_generate_messages_check_deps_DetectionResult/fast
+
+#=============================================================================
+# Target rules for targets named _object_detection_generate_messages_check_deps_DetectionResults
+
+# Build rule for target.
+_object_detection_generate_messages_check_deps_DetectionResults: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _object_detection_generate_messages_check_deps_DetectionResults
+.PHONY : _object_detection_generate_messages_check_deps_DetectionResults
+
+# fast build rule for target.
+_object_detection_generate_messages_check_deps_DetectionResults/fast:
+	$(MAKE) -f detection/object_detection/CMakeFiles/_object_detection_generate_messages_check_deps_DetectionResults.dir/build.make detection/object_detection/CMakeFiles/_object_detection_generate_messages_check_deps_DetectionResults.dir/build
+.PHONY : _object_detection_generate_messages_check_deps_DetectionResults/fast
+
+#=============================================================================
+# Target rules for targets named object_detection_generate_messages_eus
+
+# Build rule for target.
+object_detection_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 object_detection_generate_messages_eus
+.PHONY : object_detection_generate_messages_eus
+
+# fast build rule for target.
+object_detection_generate_messages_eus/fast:
+	$(MAKE) -f detection/object_detection/CMakeFiles/object_detection_generate_messages_eus.dir/build.make detection/object_detection/CMakeFiles/object_detection_generate_messages_eus.dir/build
+.PHONY : object_detection_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named object_detection_generate_messages
+
+# Build rule for target.
+object_detection_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 object_detection_generate_messages
+.PHONY : object_detection_generate_messages
+
+# fast build rule for target.
+object_detection_generate_messages/fast:
+	$(MAKE) -f detection/object_detection/CMakeFiles/object_detection_generate_messages.dir/build.make detection/object_detection/CMakeFiles/object_detection_generate_messages.dir/build
+.PHONY : object_detection_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named object_detection_generate_messages_lisp
+
+# Build rule for target.
+object_detection_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 object_detection_generate_messages_lisp
+.PHONY : object_detection_generate_messages_lisp
+
+# fast build rule for target.
+object_detection_generate_messages_lisp/fast:
+	$(MAKE) -f detection/object_detection/CMakeFiles/object_detection_generate_messages_lisp.dir/build.make detection/object_detection/CMakeFiles/object_detection_generate_messages_lisp.dir/build
+.PHONY : object_detection_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named object_detection_gencpp
+
+# Build rule for target.
+object_detection_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 object_detection_gencpp
+.PHONY : object_detection_gencpp
+
+# fast build rule for target.
+object_detection_gencpp/fast:
+	$(MAKE) -f detection/object_detection/CMakeFiles/object_detection_gencpp.dir/build.make detection/object_detection/CMakeFiles/object_detection_gencpp.dir/build
+.PHONY : object_detection_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named object_detection_generate_messages_nodejs
+
+# Build rule for target.
+object_detection_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 object_detection_generate_messages_nodejs
+.PHONY : object_detection_generate_messages_nodejs
+
+# fast build rule for target.
+object_detection_generate_messages_nodejs/fast:
+	$(MAKE) -f detection/object_detection/CMakeFiles/object_detection_generate_messages_nodejs.dir/build.make detection/object_detection/CMakeFiles/object_detection_generate_messages_nodejs.dir/build
+.PHONY : object_detection_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named object_detection_geneus
+
+# Build rule for target.
+object_detection_geneus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 object_detection_geneus
+.PHONY : object_detection_geneus
+
+# fast build rule for target.
+object_detection_geneus/fast:
+	$(MAKE) -f detection/object_detection/CMakeFiles/object_detection_geneus.dir/build.make detection/object_detection/CMakeFiles/object_detection_geneus.dir/build
+.PHONY : object_detection_geneus/fast
+
+#=============================================================================
+# Target rules for targets named object_detection_genlisp
+
+# Build rule for target.
+object_detection_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 object_detection_genlisp
+.PHONY : object_detection_genlisp
+
+# fast build rule for target.
+object_detection_genlisp/fast:
+	$(MAKE) -f detection/object_detection/CMakeFiles/object_detection_genlisp.dir/build.make detection/object_detection/CMakeFiles/object_detection_genlisp.dir/build
+.PHONY : object_detection_genlisp/fast
 
 #=============================================================================
 # Target rules for targets named nodelet_generate_messages_cpp
@@ -1050,6 +1219,19 @@ help:
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... object_detection_genpy"
+	@echo "... object_detection_generate_messages_py"
+	@echo "... object_detection_gennodejs"
+	@echo "... object_detection_generate_messages_cpp"
+	@echo "... _object_detection_generate_messages_check_deps_DetectionResult"
+	@echo "... _object_detection_generate_messages_check_deps_DetectionResults"
+	@echo "... object_detection_generate_messages_eus"
+	@echo "... object_detection_generate_messages"
+	@echo "... object_detection_generate_messages_lisp"
+	@echo "... object_detection_gencpp"
+	@echo "... object_detection_generate_messages_nodejs"
+	@echo "... object_detection_geneus"
+	@echo "... object_detection_genlisp"
 	@echo "... nodelet_generate_messages_cpp"
 	@echo "... clean_test_results_cv_camera"
 	@echo "... geometry_msgs_generate_messages_py"

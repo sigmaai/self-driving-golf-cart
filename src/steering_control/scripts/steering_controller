@@ -29,6 +29,9 @@ class SteeringPredictor:
         self.model_path = rospy.get_param("/steering_controller/model_path")
         rospy.loginfo('loading model from path: %s', self.model_path)
 
+        self.scale_factor = rospy.get_param("/steering_controller/scale_factor")
+        rospy.loginfo('loaded scaling factor: %s', self.scale_factor)
+
         self.cnn = models.commaai_model()
         self.cnn.load_weights(self.model_path)
         print('steering deep learning model loaded')
@@ -38,6 +41,7 @@ class SteeringPredictor:
 
         while not rospy.is_shutdown() and self.current_frame is not None:
             angle = self.predict_steering(self.current_frame)
+            angle = angle * int(self.scale_factor)
             steering_pub.publish(angle)
             rate.sleep()
 

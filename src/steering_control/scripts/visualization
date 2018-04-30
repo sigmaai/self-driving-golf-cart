@@ -150,7 +150,7 @@ class Visualization():
         while not rospy.is_shutdown():
 
             if self.current_frame is not None:
-                image = self.visualize_line(img=self.current_frame, angle_steers=self.steering_angle, speed_ms=5)
+                image = self.visualize_line(img=self.current_frame, angle_steers=self.steering_angle * 0.1, speed_ms=5)
                 img_msg = self.bridge.cv2_to_imgmsg(image, "bgr8")
                 visual_pub.publish(img_msg)
                 rate.sleep()

@@ -81,11 +81,6 @@ void steering(double angle) {
   }
 
   pos = getRadian(count);
-
-  Serial.print("position: ");
-  Serial.println(pos);
-  Serial.print("count: ");
-  Serial.println(count);
 }
 
 void encoderPinChangeA() {
