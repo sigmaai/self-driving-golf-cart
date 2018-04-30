@@ -27,6 +27,8 @@ Localization and some other features coming soon...
 7. `roscore`
 8. `roslaunch driver drive.launch`
 
+![](./media/screen-shot.png)
+
 Bon Voyage 😀
 
 ## Steering

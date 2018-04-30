@@ -15,6 +15,7 @@ import matplotlib.pyplot as plt
 from vis.visualization import visualize_cam
 import cv2
 
+# ros
 import rospy
 from sensor_msgs.msg import Image
 from std_msgs.msg import Float32
