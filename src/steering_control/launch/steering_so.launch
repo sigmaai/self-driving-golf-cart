@@ -15,6 +15,6 @@
     	<param name="scale_factor" value='30' />
   	</node>
 
-  	<node name="steering_visualization" type="visualization" pkg="steering_control" />
+  	<node name="steering_visualization" type="visualization.py" pkg="steering_control" />
     
 </launch>

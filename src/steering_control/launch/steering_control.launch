@@ -6,7 +6,7 @@
     	<param name="image_width" value="640" />
   	</node>
 
-  	<node name="steering_visualization" type="visualization" pkg="steering_control" />
+  	<node name="steering_visualization" type="visualization.py" pkg="steering_control" />
     
 </launch>
 

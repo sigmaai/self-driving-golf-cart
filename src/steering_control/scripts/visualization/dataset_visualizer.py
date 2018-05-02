@@ -1,5 +1,5 @@
 '''
-Results video generator Udacity Challenge 2
+Dataset visualization tool
 Original By: Comma.ai and Chris Gundling
 Revised and used by Neil Nie
 '''
@@ -11,10 +11,6 @@ import cv2
 import pygame
 import pandas as pd
 from os import path
-import matplotlib
-import matplotlib.backends.backend_agg as agg
-import pylab
-import model
 
 pygame.init()
 size = (320*2, 160*3)
@@ -105,10 +101,7 @@ def draw_path_on(img, speed_ms, angle_steers, color=(0, 0, 255)):
 
 def preprocess_img(img):
     
-    b, g, r = cv2.split(img)  # get b,g,r
-    img = cv2.merge([r, g, b])  # switch it to rgb
-    img = img[160: 480, 0:640]
-    img = cv2.resize(img, (320, 160))
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     return img
 
 # ***** main loop *****
@@ -121,29 +114,18 @@ if __name__ == "__main__":
     dataset_path = args.dataset
 
     # steerings and images
-    steering_labels = path.join(dataset_path, 'center_interpolated.csv')
+    steering_labels = path.join(dataset_path, 'labels.csv')
 
     # read the steering labels and image path
-    df_truth = pd.read_csv(steering_labels, usecols=['filename', 'angle'], index_col=None)
+    df_truth = pd.read_csv(steering_labels, usecols=['file_name', 'radian'], index_col=None)
 
-    # Create second screen with matplotlib
-    fig = pylab.figure(figsize=[6.4, 1.6], dpi=100)
-    ax = fig.gca()
-    ax.tick_params(axis='x', labelsize=8)
-    ax.tick_params(axis='y', labelsize=8)
-    # ax.legend(loc='upper left',fontsize=8)
-    line1, = ax.plot([], [], 'b.-', label='model')
-    A = []
-    ax.legend(loc='upper left', fontsize=8)
-
-    red = (255, 0, 0)
     blue = (0, 0, 255)
-    myFont = pygame.font.SysFont("monospace", 18)
+    myFont = pygame.font.SysFont("monospace", 20)
     randNumLabel = myFont.render('model steer Angle:', 1, blue)
     speed_ms = 5  # log['speed'][i]
 
     # Run through all images
-    for i in range(len(df_truth)):
+    for i in range(0, len(df_truth)):
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -152,35 +134,26 @@ if __name__ == "__main__":
         if i%100 == 0:
             print('%.2f seconds elapsed' % (i/20))
 
-        path = dataset_path + str(df_truth["filename"][i])
-        print(path)
-        img = cv2.imread(path)
-        image = np.array([preprocess_img(img)])  # the model expects 4D array
+        p = dataset_path + str(df_truth["file_name"][i])
 
-        actual_steers = df_truth['angle'].loc[i]
+        if path.isfile(p) :
+            img = cv2.imread(p)
+            img = preprocess_img(img)
 
-        draw_path_on(img, speed_ms, actual_steers / 5.0)
 
-        A.append(df_truth['angle'].loc[i])
-        line1.set_ydata(A)
-        line1.set_xdata(range(len(A)))
-        ax.relim()
-        ax.autoscale_view()
+            actual_steers = df_truth['radian'].loc[i] * 0.1 - 8 * 0.0174533  # 1 degree right correction
 
-        canvas = agg.FigureCanvasAgg(fig)
-        canvas.draw()
-        renderer = canvas.get_renderer()
-        raw_data = renderer.tostring_rgb()
-        size = canvas.get_width_height()
-        surf = pygame.image.fromstring(raw_data, size, "RGB")
-        screen.blit(surf, (0, 480))
+            draw_path_on(img, speed_ms, actual_steers)
 
-        # draw on
-        pygame.surfarray.blit_array(camera_surface, img.swapaxes(0, 1))
-        screen.blit(camera_surface, (0, 0))
+            # draw on
+            pygame.surfarray.blit_array(camera_surface, img.swapaxes(0, 1))
+            screen.blit(camera_surface, (0, 0))
 
-        diceDisplay = myFont.render(str(actual_steers * (180 / np.pi)), 1, blue)
-        screen.blit(randNumLabel, (50, 420))
-        screen.blit(diceDisplay, (50, 450))
-        clock.tick(60)
-        pygame.display.flip()
+            diceDisplay = myFont.render(str(actual_steers), 1, blue)
+            screen.blit(randNumLabel, (50, 420))
+            screen.blit(diceDisplay, (50, 450))
+            clock.tick(60)
+            pygame.display.flip()
+        else:
+            pass
+
