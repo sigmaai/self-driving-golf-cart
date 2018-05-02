@@ -17,7 +17,7 @@ class SteeringLogger(object):
         self.image_files = []
         self.count = 0
         self.bridge = CvBridge()
-        self.path = rospy.get_param("/logger/logger_path")
+        self.path = rospy.get_param("/steering_logger/logger_path")
         print(self.path)
 
         if not os.path.exists(self.path + "/center/"):

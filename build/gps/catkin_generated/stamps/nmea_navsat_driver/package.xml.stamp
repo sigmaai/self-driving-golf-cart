@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package>
+  <name>nmea_navsat_driver</name>
+  <version>0.5.0</version>
+  <description>
+	Package to parse NMEA strings and publish a very simple GPS message. Does not require the GPSD deamon.
+  </description>
+
+  <maintainer email="evenator@gmail.com">Ed Venator</maintainer>
+  <license>BSD</license>
+  <url type="website">http://ros.org/wiki/nmea_navsat_driver</url>
+  <author email="eric@ericperko.com">Eric Perko</author>
+  <author>Steven Martin</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roslint</build_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>python-serial</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>nmea_msgs</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+
+  <export>
+    <!-- This is a pure Python package, so mark it architecture independent -->
+    <architecture_independent/>
+  </export>
+</package>

@@ -12,7 +12,7 @@
     	<param name="/model_path" value="/home/neil/Workspace/self-driving-golf-cart/src/steering_control/scripts/weights/own/trained-cai-v6.h5" />
     	<param name="image_height" value="480" />
     	<param name="image_width" value="640" />
-    	<param name="scale_factor" value='15' />
+    	<param name="scale_factor" value='30' />
   	</node>
 
   	<node name="steering_visualization" type="visualization" pkg="steering_control" />

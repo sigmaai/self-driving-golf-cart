@@ -112,6 +112,16 @@ test/fast: test
 
 .PHONY : test/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
@@ -122,16 +132,6 @@ install/strip: preinstall
 install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -511,21 +511,6 @@ run_tests_cv_camera/fast:
 .PHONY : run_tests_cv_camera/fast
 
 # Convenience name for target.
-cv_camera/CMakeFiles/run_tests_cv_camera_rostest_test_no_yaml.test.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f CMakeFiles/Makefile2 cv_camera/CMakeFiles/run_tests_cv_camera_rostest_test_no_yaml.test.dir/rule
-.PHONY : cv_camera/CMakeFiles/run_tests_cv_camera_rostest_test_no_yaml.test.dir/rule
-
-# Convenience name for target.
-run_tests_cv_camera_rostest_test_no_yaml.test: cv_camera/CMakeFiles/run_tests_cv_camera_rostest_test_no_yaml.test.dir/rule
-
-.PHONY : run_tests_cv_camera_rostest_test_no_yaml.test
-
-# fast build rule for target.
-run_tests_cv_camera_rostest_test_no_yaml.test/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f cv_camera/CMakeFiles/run_tests_cv_camera_rostest_test_no_yaml.test.dir/build.make cv_camera/CMakeFiles/run_tests_cv_camera_rostest_test_no_yaml.test.dir/build
-.PHONY : run_tests_cv_camera_rostest_test_no_yaml.test/fast
-
-# Convenience name for target.
 cv_camera/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule:
 	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f CMakeFiles/Makefile2 cv_camera/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
 .PHONY : cv_camera/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
@@ -646,36 +631,6 @@ bond_generate_messages_nodejs/fast:
 .PHONY : bond_generate_messages_nodejs/fast
 
 # Convenience name for target.
-cv_camera/CMakeFiles/roslint.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f CMakeFiles/Makefile2 cv_camera/CMakeFiles/roslint.dir/rule
-.PHONY : cv_camera/CMakeFiles/roslint.dir/rule
-
-# Convenience name for target.
-roslint: cv_camera/CMakeFiles/roslint.dir/rule
-
-.PHONY : roslint
-
-# fast build rule for target.
-roslint/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f cv_camera/CMakeFiles/roslint.dir/build.make cv_camera/CMakeFiles/roslint.dir/build
-.PHONY : roslint/fast
-
-# Convenience name for target.
-cv_camera/CMakeFiles/test_cv_camera_no_yaml.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f CMakeFiles/Makefile2 cv_camera/CMakeFiles/test_cv_camera_no_yaml.dir/rule
-.PHONY : cv_camera/CMakeFiles/test_cv_camera_no_yaml.dir/rule
-
-# Convenience name for target.
-test_cv_camera_no_yaml: cv_camera/CMakeFiles/test_cv_camera_no_yaml.dir/rule
-
-.PHONY : test_cv_camera_no_yaml
-
-# fast build rule for target.
-test_cv_camera_no_yaml/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f cv_camera/CMakeFiles/test_cv_camera_no_yaml.dir/build.make cv_camera/CMakeFiles/test_cv_camera_no_yaml.dir/build
-.PHONY : test_cv_camera_no_yaml/fast
-
-# Convenience name for target.
 cv_camera/CMakeFiles/roslint_cv_camera.dir/rule:
 	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f CMakeFiles/Makefile2 cv_camera/CMakeFiles/roslint_cv_camera.dir/rule
 .PHONY : cv_camera/CMakeFiles/roslint_cv_camera.dir/rule
@@ -704,6 +659,21 @@ cv_camera: cv_camera/CMakeFiles/cv_camera.dir/rule
 cv_camera/fast:
 	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f cv_camera/CMakeFiles/cv_camera.dir/build.make cv_camera/CMakeFiles/cv_camera.dir/build
 .PHONY : cv_camera/fast
+
+# Convenience name for target.
+cv_camera/CMakeFiles/run_tests_cv_camera_rostest_test_no_yaml.test.dir/rule:
+	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f CMakeFiles/Makefile2 cv_camera/CMakeFiles/run_tests_cv_camera_rostest_test_no_yaml.test.dir/rule
+.PHONY : cv_camera/CMakeFiles/run_tests_cv_camera_rostest_test_no_yaml.test.dir/rule
+
+# Convenience name for target.
+run_tests_cv_camera_rostest_test_no_yaml.test: cv_camera/CMakeFiles/run_tests_cv_camera_rostest_test_no_yaml.test.dir/rule
+
+.PHONY : run_tests_cv_camera_rostest_test_no_yaml.test
+
+# fast build rule for target.
+run_tests_cv_camera_rostest_test_no_yaml.test/fast:
+	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f cv_camera/CMakeFiles/run_tests_cv_camera_rostest_test_no_yaml.test.dir/build.make cv_camera/CMakeFiles/run_tests_cv_camera_rostest_test_no_yaml.test.dir/build
+.PHONY : run_tests_cv_camera_rostest_test_no_yaml.test/fast
 
 # Convenience name for target.
 cv_camera/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule:
@@ -854,6 +824,21 @@ _run_tests_cv_camera_rostest_test_cv_camera.test: cv_camera/CMakeFiles/_run_test
 _run_tests_cv_camera_rostest_test_cv_camera.test/fast:
 	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f cv_camera/CMakeFiles/_run_tests_cv_camera_rostest_test_cv_camera.test.dir/build.make cv_camera/CMakeFiles/_run_tests_cv_camera_rostest_test_cv_camera.test.dir/build
 .PHONY : _run_tests_cv_camera_rostest_test_cv_camera.test/fast
+
+# Convenience name for target.
+cv_camera/CMakeFiles/test_cv_camera_no_yaml.dir/rule:
+	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f CMakeFiles/Makefile2 cv_camera/CMakeFiles/test_cv_camera_no_yaml.dir/rule
+.PHONY : cv_camera/CMakeFiles/test_cv_camera_no_yaml.dir/rule
+
+# Convenience name for target.
+test_cv_camera_no_yaml: cv_camera/CMakeFiles/test_cv_camera_no_yaml.dir/rule
+
+.PHONY : test_cv_camera_no_yaml
+
+# fast build rule for target.
+test_cv_camera_no_yaml/fast:
+	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f cv_camera/CMakeFiles/test_cv_camera_no_yaml.dir/build.make cv_camera/CMakeFiles/test_cv_camera_no_yaml.dir/build
+.PHONY : test_cv_camera_no_yaml/fast
 
 src/capture.o: src/capture.cpp.o
 
@@ -1051,8 +1036,6 @@ help:
 	@echo "... roscpp_generate_messages_py"
 	@echo "... sensor_msgs_generate_messages_py"
 	@echo "... run_tests_cv_camera"
-	@echo "... install/strip"
-	@echo "... run_tests_cv_camera_rostest_test_no_yaml.test"
 	@echo "... nodelet_generate_messages_nodejs"
 	@echo "... bond_generate_messages_cpp"
 	@echo "... list_install_components"
@@ -1062,10 +1045,10 @@ help:
 	@echo "... bond_generate_messages_lisp"
 	@echo "... nodelet_generate_messages_eus"
 	@echo "... bond_generate_messages_nodejs"
-	@echo "... roslint"
-	@echo "... test_cv_camera_no_yaml"
 	@echo "... roslint_cv_camera"
 	@echo "... cv_camera"
+	@echo "... run_tests_cv_camera_rostest_test_no_yaml.test"
+	@echo "... install/strip"
 	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... cv_camera_nodelet"
 	@echo "... test_cv_camera"
@@ -1076,6 +1059,7 @@ help:
 	@echo "... sensor_msgs_generate_messages_nodejs"
 	@echo "... _run_tests_cv_camera_rostest"
 	@echo "... _run_tests_cv_camera_rostest_test_cv_camera.test"
+	@echo "... test_cv_camera_no_yaml"
 	@echo "... src/capture.o"
 	@echo "... src/capture.i"
 	@echo "... src/capture.s"
