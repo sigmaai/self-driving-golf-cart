@@ -267,6 +267,9 @@ NOSETESTS:FILEPATH=/usr/bin/nosetests-2.7
 //The directory containing a CMake configuration file for OpenCV.
 OpenCV_DIR:PATH=/opt/ros/kinetic/share/OpenCV-3.3.1-dev
 
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
+
 //Path to a program.
 PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python
 
@@ -278,6 +281,21 @@ Project_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/build
 
 //Value Computed by CMake
 Project_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/src
+
+//The directory containing a CMake configuration file for Qt5Concurrent.
+Qt5Concurrent_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Concurrent
+
+//The directory containing a CMake configuration file for Qt5Core.
+Qt5Core_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Core
+
+//The directory containing a CMake configuration file for Qt5Gui.
+Qt5Gui_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui
+
+//The directory containing a CMake configuration file for Qt5Network.
+Qt5Network_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Network
+
+//The directory containing a CMake configuration file for Qt5.
+Qt5_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5
 
 //Path to a library.
 RT_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/librt.so
@@ -291,8 +309,11 @@ UBUNTU:BOOL=TRUE
 //LSB Distrib - codename tag
 UBUNTU_XENIAL:BOOL=TRUE
 
+//Build w/ QT version 5
+UseQt5:BOOL=ON
+
 //Path to a file.
-_file_name:FILEPATH=/home/neil/Workspace/self-driving-golf-cart/src/cv_camera/test/no_yaml.test
+_file_name:FILEPATH=/home/neil/Workspace/self-driving-golf-cart/src/open_street_map/route_network/tests/planner.test
 
 //Path to a file.
 _gmock_INCLUDES:FILEPATH=/usr/include/gmock/gmock.h
@@ -305,6 +326,15 @@ _gtest_INCLUDES:FILEPATH=/usr/include/gtest/gtest.h
 
 //Path to a file.
 _gtest_SOURCES:FILEPATH=/usr/src/gtest/src/gtest.cc
+
+//Path to a file.
+_path_name:FILEPATH=/home/neil/Workspace/self-driving-golf-cart/src/open_street_map/osm_cartography/tests/test_xml_map.py
+
+//The directory containing a CMake configuration file for actionlib.
+actionlib_DIR:PATH=/opt/ros/kinetic/share/actionlib/cmake
+
+//The directory containing a CMake configuration file for actionlib_msgs.
+actionlib_msgs_DIR:PATH=/opt/ros/kinetic/share/actionlib_msgs/cmake
 
 //The directory containing a CMake configuration file for bond.
 bond_DIR:PATH=/opt/ros/kinetic/share/bond/cmake
@@ -360,6 +390,9 @@ driver_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/build/drive
 //Value Computed by CMake
 driver_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/src/driver
 
+//The directory containing a CMake configuration file for dynamic_reconfigure.
+dynamic_reconfigure_DIR:PATH=/opt/ros/kinetic/share/dynamic_reconfigure/cmake
+
 //The directory containing a CMake configuration file for gencpp.
 gencpp_DIR:PATH=/opt/ros/kinetic/share/gencpp/cmake
 
@@ -378,6 +411,12 @@ gennodejs_DIR:PATH=/opt/ros/kinetic/share/gennodejs/cmake
 //The directory containing a CMake configuration file for genpy.
 genpy_DIR:PATH=/opt/ros/kinetic/share/genpy/cmake
 
+//The directory containing a CMake configuration file for geodesy.
+geodesy_DIR:PATH=/opt/ros/kinetic/share/geodesy/cmake
+
+//The directory containing a CMake configuration file for geographic_msgs.
+geographic_msgs_DIR:PATH=/opt/ros/kinetic/share/geographic_msgs/cmake
+
 //The directory containing a CMake configuration file for geometry_msgs.
 geometry_msgs_DIR:PATH=/opt/ros/kinetic/share/geometry_msgs/cmake
 
@@ -395,6 +434,12 @@ gmock_build_tests:BOOL=OFF
 
 //Dependencies for the target
 gmock_main_LIB_DEPENDS:STATIC=general;-lpthread;
+
+//Value Computed by CMake
+gps_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/build/gps
+
+//Value Computed by CMake
+gps_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/src/gps
 
 //Value Computed by CMake
 gtest_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/build/gtest/gtest
@@ -424,14 +469,23 @@ gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 //The directory containing a CMake configuration file for image_transport.
 image_transport_DIR:PATH=/opt/ros/kinetic/share/image_transport/cmake
 
+//The directory containing a CMake configuration file for interactive_markers.
+interactive_markers_DIR:PATH=/opt/ros/kinetic/share/interactive_markers/cmake
+
 //Value Computed by CMake
 lane_detection_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/build/detection/lane_detection
 
 //Value Computed by CMake
 lane_detection_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/src/detection/lane_detection
 
+//The directory containing a CMake configuration file for laser_geometry.
+laser_geometry_DIR:PATH=/opt/ros/kinetic/share/laser_geometry/cmake
+
 //Path to a library.
-lib:FILEPATH=/opt/ros/kinetic/lib/libxmlrpcpp.so
+lib:FILEPATH=/opt/ros/kinetic/lib/libtf2.so
+
+//The directory containing a CMake configuration file for map_msgs.
+map_msgs_DIR:PATH=/opt/ros/kinetic/share/map_msgs/cmake
 
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/kinetic/share/message_filters/cmake
@@ -441,6 +495,9 @@ message_generation_DIR:PATH=/opt/ros/kinetic/share/message_generation/cmake
 
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/kinetic/share/message_runtime/cmake
+
+//The directory containing a CMake configuration file for nav_msgs.
+nav_msgs_DIR:PATH=/opt/ros/kinetic/share/nav_msgs/cmake
 
 //Value Computed by CMake
 nmea_navsat_driver_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/build/gps
@@ -457,11 +514,26 @@ object_detection_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/b
 //Value Computed by CMake
 object_detection_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection
 
+//Value Computed by CMake
+osm_cartography_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/build/open_street_map/osm_cartography
+
+//The directory containing a CMake configuration file for osm_cartography.
+osm_cartography_DIR:PATH=/home/neil/Workspace/self-driving-golf-cart/devel/share/osm_cartography/cmake
+
+//Value Computed by CMake
+osm_cartography_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/src/open_street_map/osm_cartography
+
 //The directory containing a CMake configuration file for pluginlib.
 pluginlib_DIR:PATH=/opt/ros/kinetic/share/pluginlib/cmake
 
+//The directory containing a CMake configuration file for resource_retriever.
+resource_retriever_DIR:PATH=/opt/ros/kinetic/share/resource_retriever/cmake
+
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/kinetic/share/rosconsole/cmake
+
+//The directory containing a CMake configuration file for rosconsole_bridge.
+rosconsole_bridge_DIR:PATH=/opt/ros/kinetic/share/rosconsole_bridge/cmake
 
 //The directory containing a CMake configuration file for roscpp.
 roscpp_DIR:PATH=/opt/ros/kinetic/share/roscpp/cmake
@@ -472,8 +544,14 @@ roscpp_serialization_DIR:PATH=/opt/ros/kinetic/share/roscpp_serialization/cmake
 //The directory containing a CMake configuration file for roscpp_traits.
 roscpp_traits_DIR:PATH=/opt/ros/kinetic/share/roscpp_traits/cmake
 
+//The directory containing a CMake configuration file for rosgraph.
+rosgraph_DIR:PATH=/opt/ros/kinetic/share/rosgraph/cmake
+
 //The directory containing a CMake configuration file for rosgraph_msgs.
 rosgraph_msgs_DIR:PATH=/opt/ros/kinetic/share/rosgraph_msgs/cmake
+
+//The directory containing a CMake configuration file for roslaunch.
+roslaunch_DIR:PATH=/opt/ros/kinetic/share/roslaunch/cmake
 
 //The directory containing a CMake configuration file for roslib.
 roslib_DIR:PATH=/opt/ros/kinetic/share/roslib/cmake
@@ -502,6 +580,27 @@ rostest_DIR:PATH=/opt/ros/kinetic/share/rostest/cmake
 //The directory containing a CMake configuration file for rostime.
 rostime_DIR:PATH=/opt/ros/kinetic/share/rostime/cmake
 
+//Value Computed by CMake
+route_network_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/build/open_street_map/route_network
+
+//The directory containing a CMake configuration file for route_network.
+route_network_DIR:PATH=/home/neil/Workspace/self-driving-golf-cart/devel/share/route_network/cmake
+
+//Value Computed by CMake
+route_network_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/src/open_street_map/route_network
+
+//The directory containing a CMake configuration file for rviz.
+rviz_DIR:PATH=/opt/ros/kinetic/share/rviz/cmake
+
+//Value Computed by CMake
+rviz_satellite_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/build/gps_viz
+
+//Dependencies for the target
+rviz_satellite_LIB_DEPENDS:STATIC=general;Qt5::Core;general;Qt5::Gui;general;Qt5::Network;general;Qt5::Concurrent;general;opencv_calib3d;general;opencv_core;general;opencv_dnn;general;opencv_features2d;general;opencv_flann;general;opencv_highgui;general;opencv_imgcodecs;general;opencv_imgproc;general;opencv_ml;general;opencv_objdetect;general;opencv_photo;general;opencv_shape;general;opencv_stitching;general;opencv_superres;general;opencv_video;general;opencv_videoio;general;opencv_videostab;general;opencv_viz;general;opencv_aruco;general;opencv_bgsegm;general;opencv_bioinspired;general;opencv_ccalib;general;opencv_cvv;general;opencv_datasets;general;opencv_dpm;general;opencv_face;general;opencv_fuzzy;general;opencv_hdf;general;opencv_img_hash;general;opencv_line_descriptor;general;opencv_optflow;general;opencv_phase_unwrapping;general;opencv_plot;general;opencv_reg;general;opencv_rgbd;general;opencv_saliency;general;opencv_stereo;general;opencv_structured_light;general;opencv_surface_matching;general;opencv_text;general;opencv_tracking;general;opencv_xfeatures2d;general;opencv_ximgproc;general;opencv_xobjdetect;general;opencv_xphoto;general;/opt/ros/kinetic/lib/librviz.so;general;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;general;/usr/lib/x86_64-linux-gnu/libOgreMain.so;general;/usr/lib/x86_64-linux-gnu/libGLU.so;general;/usr/lib/x86_64-linux-gnu/libGL.so;general;/opt/ros/kinetic/lib/libimage_transport.so;general;/opt/ros/kinetic/lib/libinteractive_markers.so;general;/opt/ros/kinetic/lib/liblaser_geometry.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/kinetic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/kinetic/lib/libresource_retriever.so;general;/opt/ros/kinetic/lib/libroslib.so;general;/opt/ros/kinetic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/opt/ros/kinetic/lib/libtf.so;general;/opt/ros/kinetic/lib/libtf2_ros.so;general;/opt/ros/kinetic/lib/libactionlib.so;general;/opt/ros/kinetic/lib/libmessage_filters.so;general;/opt/ros/kinetic/lib/libtf2.so;general;/opt/ros/kinetic/lib/liburdf.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_sensor.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model_state.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_world.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/kinetic/lib/librosconsole_bridge.so;general;/opt/ros/kinetic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/opt/ros/kinetic/lib/librosconsole.so;general;/opt/ros/kinetic/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/kinetic/lib/libxmlrpcpp.so;general;/opt/ros/kinetic/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/lib/librostime.so;general;/opt/ros/kinetic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
+
+//Value Computed by CMake
+rviz_satellite_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/src/gps_viz
+
 //The directory containing a CMake configuration file for sensor_msgs.
 sensor_msgs_DIR:PATH=/opt/ros/kinetic/share/sensor_msgs/cmake
 
@@ -518,10 +617,43 @@ steering_control_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/b
 steering_control_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/src/steering_control
 
 //Value Computed by CMake
+test_osm_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/build/open_street_map/test_osm
+
+//Value Computed by CMake
+test_osm_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/src/open_street_map/test_osm
+
+//The directory containing a CMake configuration file for tf2.
+tf2_DIR:PATH=/opt/ros/kinetic/share/tf2/cmake
+
+//The directory containing a CMake configuration file for tf2_msgs.
+tf2_msgs_DIR:PATH=/opt/ros/kinetic/share/tf2_msgs/cmake
+
+//The directory containing a CMake configuration file for tf2_py.
+tf2_py_DIR:PATH=/opt/ros/kinetic/share/tf2_py/cmake
+
+//The directory containing a CMake configuration file for tf2_ros.
+tf2_ros_DIR:PATH=/opt/ros/kinetic/share/tf2_ros/cmake
+
+//The directory containing a CMake configuration file for tf.
+tf_DIR:PATH=/opt/ros/kinetic/share/tf/cmake
+
+//Value Computed by CMake
 tl_detection_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/build/detection/tl_detection
 
 //Value Computed by CMake
 tl_detection_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/src/detection/tl_detection
+
+//The directory containing a CMake configuration file for unique_id.
+unique_id_DIR:PATH=/opt/ros/kinetic/share/unique_id/cmake
+
+//The directory containing a CMake configuration file for urdf.
+urdf_DIR:PATH=/opt/ros/kinetic/share/urdf/cmake
+
+//The directory containing a CMake configuration file for uuid_msgs.
+uuid_msgs_DIR:PATH=/opt/ros/kinetic/share/uuid_msgs/cmake
+
+//The directory containing a CMake configuration file for visualization_msgs.
+visualization_msgs_DIR:PATH=/opt/ros/kinetic/share/visualization_msgs/cmake
 
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/kinetic/share/xmlrpcpp/cmake
@@ -658,7 +790,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=12
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=16
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -699,6 +831,8 @@ CMAKE_UNAME:INTERNAL=/bin/uname
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding OpenCV
 FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/opt/ros/kinetic][v3.3.1()]
+//Details about finding PkgConfig
+FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.29.1()]
 //Details about finding PythonInterp
 FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python][v2.7.12()]
 //Details about finding Threads
@@ -723,6 +857,46 @@ GTEST_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 GTEST_MAIN_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GTEST_MAIN_LIBRARY_DEBUG
 GTEST_MAIN_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+OGRE_OV_CFLAGS:INTERNAL=-pthread;-I/usr/include/OGRE/Overlay;-I/usr/include/OGRE
+OGRE_OV_CFLAGS_I:INTERNAL=
+OGRE_OV_CFLAGS_OTHER:INTERNAL=-pthread
+OGRE_OV_FOUND:INTERNAL=1
+OGRE_OV_INCLUDEDIR:INTERNAL=
+OGRE_OV_INCLUDE_DIRS:INTERNAL=/usr/include/OGRE/Overlay;/usr/include/OGRE
+OGRE_OV_LDFLAGS:INTERNAL=-lOgreOverlay;-lOgreMain;-lpthread
+OGRE_OV_LDFLAGS_OTHER:INTERNAL=
+OGRE_OV_LIBDIR:INTERNAL=
+OGRE_OV_LIBRARIES:INTERNAL=OgreOverlay;OgreMain;pthread
+OGRE_OV_LIBRARY_DIRS:INTERNAL=
+OGRE_OV_LIBS:INTERNAL=
+OGRE_OV_LIBS_L:INTERNAL=
+OGRE_OV_LIBS_OTHER:INTERNAL=
+OGRE_OV_LIBS_PATHS:INTERNAL=
+OGRE_OV_OGRE-Overlay_INCLUDEDIR:INTERNAL=/usr/include
+OGRE_OV_OGRE-Overlay_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+OGRE_OV_OGRE-Overlay_PREFIX:INTERNAL=/usr
+OGRE_OV_OGRE-Overlay_VERSION:INTERNAL=1.9.0
+OGRE_OV_OGRE_INCLUDEDIR:INTERNAL=/usr/include
+OGRE_OV_OGRE_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+OGRE_OV_OGRE_PREFIX:INTERNAL=/usr
+OGRE_OV_OGRE_VERSION:INTERNAL=1.9.0
+OGRE_OV_PREFIX:INTERNAL=
+OGRE_OV_STATIC_CFLAGS:INTERNAL=-pthread;-I/usr/include/OGRE/Overlay;-I/usr/include/OGRE
+OGRE_OV_STATIC_CFLAGS_I:INTERNAL=
+OGRE_OV_STATIC_CFLAGS_OTHER:INTERNAL=-pthread
+OGRE_OV_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/OGRE/Overlay;/usr/include/OGRE
+OGRE_OV_STATIC_LDFLAGS:INTERNAL=-lOgreOverlay;-lOgreMain;-lpthread
+OGRE_OV_STATIC_LDFLAGS_OTHER:INTERNAL=
+OGRE_OV_STATIC_LIBDIR:INTERNAL=
+OGRE_OV_STATIC_LIBRARIES:INTERNAL=OgreOverlay;OgreMain;pthread
+OGRE_OV_STATIC_LIBRARY_DIRS:INTERNAL=
+OGRE_OV_STATIC_LIBS:INTERNAL=
+OGRE_OV_STATIC_LIBS_L:INTERNAL=
+OGRE_OV_STATIC_LIBS_OTHER:INTERNAL=
+OGRE_OV_STATIC_LIBS_PATHS:INTERNAL=
+OGRE_OV_VERSION:INTERNAL=
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_EXECUTABLE
 PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 //This needs to be in PYTHONPATH when 'setup.py install' is called.
@@ -741,4 +915,6 @@ _Boost_LIBRARY_DIR_RELEASE_LAST:INTERNAL=/usr/lib/x86_64-linux-gnu
 _Boost_NAMESPACE_LAST:INTERNAL=boost
 //Last used Boost_USE_MULTITHREADED value.
 _Boost_USE_MULTITHREADED_LAST:INTERNAL=TRUE
+__pkg_config_checked_OGRE_OV:INTERNAL=1
+prefix_result:INTERNAL=/usr/lib/x86_64-linux-gnu
 

@@ -1,0 +1,32 @@
+<!-- Test launch file for visualizing OSM data
+
+     This is NOT for general use. It defines a static transform from
+     the /map frame to /local_map, which is specific to the Pickle
+     Research Campus of the University of Texas at Austin.
+
+     To visualize your own maps, define a nearby /local_map
+     frame for the relevant area.
+
+     arg: url = URL for map data
+
+     $Id$
+  -->
+
+<launch>
+
+  <arg name="url" default="package://osm_cartography/tests/prc.osm" />
+
+  <!-- Transform /map into /local_map frame. Rviz cannot handle large
+       UTM coordinates, they require double precision, so we visualize
+       using the /local_map.  Start the transform early to minimize TF
+       errors in rviz.
+  -->
+  <node pkg="tf" type="static_transform_publisher" name="local_map_tf"
+        args="622150 3362350 0 0 0 0 1 map local_map 100" />
+
+  <!-- launch the map visualization nodes -->
+  <include file="$(find osm_cartography)/launch/viz_osm.launch" >
+    <arg name="url" value="$(arg url)" />
+  </include>
+
+</launch>

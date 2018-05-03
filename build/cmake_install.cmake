@@ -126,6 +126,10 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/neil/Workspace/self-driving-golf-cart/build/data_logger/cmake_install.cmake")
   include("/home/neil/Workspace/self-driving-golf-cart/build/driver/cmake_install.cmake")
   include("/home/neil/Workspace/self-driving-golf-cart/build/steering_control/cmake_install.cmake")
+  include("/home/neil/Workspace/self-driving-golf-cart/build/open_street_map/osm_cartography/cmake_install.cmake")
+  include("/home/neil/Workspace/self-driving-golf-cart/build/open_street_map/route_network/cmake_install.cmake")
+  include("/home/neil/Workspace/self-driving-golf-cart/build/gps_viz/cmake_install.cmake")
+  include("/home/neil/Workspace/self-driving-golf-cart/build/open_street_map/test_osm/cmake_install.cmake")
 
 endif()
 

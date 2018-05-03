@@ -1,0 +1,6 @@
+set(route_network_SETUP_PY_VERSION "0.2.4")
+set(route_network_SETUP_PY_SCRIPTS "")
+set(route_network_SETUP_PY_PACKAGES "route_network")
+set(route_network_SETUP_PY_PACKAGE_DIRS "src/route_network")
+set(route_network_SETUP_PY_MODULES "")
+set(route_network_SETUP_PY_MODULE_DIRS "")

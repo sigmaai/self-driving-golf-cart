@@ -1,0 +1,41 @@
+<!-- Launch file for visualizing an OSM-derived map, and planning on top of it. -->
+
+<launch>
+  <!-- The URL to the OSM file -->
+  <arg name="map_url" default="package://osm_cartography/maps/ixtapa.osm" />
+
+  <!-- Start map server -->
+  <node pkg="osm_cartography" type="osm_server" name="osm_server" output="screen" />
+
+  <!-- Start map visualization -->
+  <node pkg="osm_cartography" type="viz_osm" name="viz_osm" >
+    <param name="map_url" value="$(arg map_url)" />
+  </node>
+  
+  <!-- Build a graph out of the OSM information -->
+  <node pkg="route_network" type="route_network" name="route_network" >
+      <param name="map_url" value="$(arg map_url)" />
+  </node>
+  
+  <!-- Provide the planning service -->
+  <node pkg="route_network" type="plan_route" name="plan_route" />
+
+  <node pkg="tf" type="static_transform_publisher" name="tf_world_map" args="0 0 0 0 0 0 1 /world /map 100" >
+    <param name="capability_group" value="0 tf"/>
+  </node>
+
+  <!-- Use this tf to properly locate the visualization on RVIZ. The arguments must contain the correct UTM coordinates for the map used -->
+  <node pkg="tf" type="static_transform_publisher" name="tf_map_local_map" args="224401.3 1954996.9 0 0 0 0 1 /map /local_map 100" >
+    <param name="capability_group" value="0 tf"/>
+  </node>
+  
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find osm_cartography)/rviz/geo_planner.rviz"/>
+  <!-- Handle start and goal positions via RVIZ -->
+  <!--
+   In RVIZ: 
+     Start Position: 2D Pose Estimate (topic: /initialpose)
+     Goal Position: 2D Nav Goal (topic: /goal)
+  -->
+  <node pkg="route_network" type="rviz_goal" name="rviz_goal" />
+
+</launch>

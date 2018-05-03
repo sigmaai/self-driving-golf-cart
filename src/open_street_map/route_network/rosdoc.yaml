@@ -1,0 +1,3 @@
+- builder: sphinx
+  name: Python API
+  output_dir: python

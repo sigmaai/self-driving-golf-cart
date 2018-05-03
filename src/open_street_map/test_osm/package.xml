@@ -1,0 +1,27 @@
+<package format="2">
+
+  <name>test_osm</name>
+  <version>0.2.4</version>
+  <description>
+     These are regression tests for the osm_cartography and
+     route_network packages. They are packaged separately to avoid
+     unnecessary implementation dependencies.
+  </description>
+  <maintainer email="jack.oquin@gmail.com">Jack O'Quin</maintainer>
+  <author>Jack O'Quin</author>
+  <license>BSD</license>
+
+  <url type="website">http://ros.org/wiki/test_osm</url>
+  <url type="repository">https://github.com/ros-geographic-info/open_street_map.git</url>
+  <url type="bugtracker">https://github.com/ros-geographic-info/open_street_map/issues</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>osm_cartography</depend>
+  <depend>route_network</depend>
+  <depend>geodesy</depend>
+  <depend>geographic_msgs</depend>
+
+</package>
+
+

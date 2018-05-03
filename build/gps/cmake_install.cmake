@@ -37,22 +37,22 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/build/gps/catkin_generated/installspace/nmea_navsat_driver.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/build/gps/catkin_generated/installspace/gps.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/nmea_navsat_driver/cmake" TYPE FILE FILES
-    "/home/neil/Workspace/self-driving-golf-cart/build/gps/catkin_generated/installspace/nmea_navsat_driverConfig.cmake"
-    "/home/neil/Workspace/self-driving-golf-cart/build/gps/catkin_generated/installspace/nmea_navsat_driverConfig-version.cmake"
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gps/cmake" TYPE FILE FILES
+    "/home/neil/Workspace/self-driving-golf-cart/build/gps/catkin_generated/installspace/gpsConfig.cmake"
+    "/home/neil/Workspace/self-driving-golf-cart/build/gps/catkin_generated/installspace/gpsConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/nmea_navsat_driver" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/src/gps/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gps" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/src/gps/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/nmea_navsat_driver" TYPE PROGRAM FILES
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/gps" TYPE PROGRAM FILES
     "/home/neil/Workspace/self-driving-golf-cart/src/gps/scripts/nmea_serial_driver"
     "/home/neil/Workspace/self-driving-golf-cart/src/gps/scripts/nmea_topic_driver"
     "/home/neil/Workspace/self-driving-golf-cart/src/gps/scripts/nmea_topic_serial_reader"

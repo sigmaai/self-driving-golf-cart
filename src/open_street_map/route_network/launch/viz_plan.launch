@@ -1,0 +1,14 @@
+<!-- Launch file for visualizing OSM route networks
+
+     $Id$
+  -->
+
+<launch>
+
+  <!-- route planning node -->
+  <node pkg="route_network" type="plan_route" name="plan_route" />
+
+  <!-- route plan visualization -->
+  <node pkg="route_network" type="viz_plan" name="viz_plan" />
+
+</launch>

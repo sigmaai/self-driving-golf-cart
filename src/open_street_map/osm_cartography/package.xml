@@ -1,0 +1,36 @@
+<package format="2">
+
+  <name>osm_cartography</name>
+  <version>0.2.4</version>
+  <description>
+     Geographic mapping using Open Street Map data.
+  </description>
+  <maintainer email="jack.oquin@gmail.com">Jack O'Quin</maintainer>
+  <author>Jack O'Quin</author>
+  <license>BSD</license>
+
+  <url type="website">http://ros.org/wiki/osm_cartography</url>
+  <url type="repository">https://github.com/ros-geographic-info/open_street_map.git</url>
+  <url type="bugtracker">https://github.com/ros-geographic-info/open_street_map/issues</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>dynamic_reconfigure</depend>
+  <depend>geodesy</depend>
+  <depend>geographic_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>rospy</depend>
+  <depend>tf</depend>
+  <depend>std_msgs</depend>
+  <depend>visualization_msgs</depend>
+
+  <exec_depend>route_network</exec_depend>
+  <exec_depend>rviz</exec_depend>
+
+  <test_depend>roslaunch</test_depend>
+
+  <export>
+    <rosdoc config="rosdoc.yaml" />
+  </export>
+
+</package>

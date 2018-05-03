@@ -1,0 +1,27 @@
+<!-- Launch file for visualizing OSM route networks
+
+     arg: url = URL for map data
+  -->
+
+<launch>
+
+  <arg name="url" default="package://test_osm/tests/prc.osm" />
+
+  <!-- start map server, with visualization -->
+  <include file="$(find osm_cartography)/launch/viz_osm.launch" >
+    <arg name="url" value="$(arg url)" />
+  </include>
+
+  <!-- start network graph, with visualization -->
+  <include file="$(find route_network)/launch/viz_routes.launch" >
+    <arg name="url" value="$(arg url)" />
+  </include>
+
+  <!-- route planning node -->
+  <node pkg="route_network" type="plan_route" name="plan_route" />
+
+  <!-- start route planning, with visualization
+  <include file="$(find route_network)/launch/viz_plan.launch" />
+  -->
+
+</launch>

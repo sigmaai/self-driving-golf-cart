@@ -1,0 +1,60 @@
+Background\ ColorB=0
+Background\ ColorG=0
+Background\ ColorR=0
+Camera\ Config=0.950398 4.71358 2418 0 0 0
+Camera\ Type=rviz::OrbitViewController
+Fixed\ Frame=/local_map
+Grid.Alpha=0.5
+Grid.Cell\ Size=100
+Grid.ColorB=0.5
+Grid.ColorG=0.5
+Grid.ColorR=0.5
+Grid.Enabled=1
+Grid.Line\ Style=0
+Grid.Line\ Width=0.03
+Grid.Normal\ Cell\ Count=0
+Grid.OffsetX=0
+Grid.OffsetY=0
+Grid.OffsetZ=0
+Grid.Plane=0
+Grid.Plane\ Cell\ Count=10
+Grid.Reference\ Frame=/local_map
+Marker.Enabled=1
+Marker.Marker\ Topic=visualization_marker
+Marker.Queue\ Size=100
+Marker.bounds_osm=1
+Marker.buildings_osm=1
+Marker.other_osm=1
+Marker.railroad_osm=1
+Marker.roads_osm=0
+Marker.route_segments=1
+Marker.route_waypoints=1
+Marker.waypoints_osm=1
+Property\ Grid\ Splitter=778,78
+Property\ Grid\ State=expanded=.Global Options,Grid.Enabled,Marker.Enabled,Marker.Namespaces;splitterratio=0.5
+QMainWindow=000000ff00000000fd00000003000000000000011d000003aafc0200000001fb000000100044006900730070006c006100790073010000001d000003aa000000ee00ffffff0000000100000130000003a2fc0200000003fb0000001e0054006f006f006c002000500072006f0070006500720074006900650073000000001d000000db0000006700fffffffb0000000a00560069006500770073000000001d000003a2000000bb00fffffffb0000001200530065006c0065006300740069006f006e00000002430000012b0000006700ffffff00000003000005320000003efc0100000001fb0000000800540069006d0065010000000000000532000002bf00ffffff0000040f000003aa00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+TF.All\ Enabled=1
+TF.Enabled=0
+TF.Frame\ Timeout=15
+TF.Marker\ Scale=1
+TF.Show\ Arrows=0
+TF.Show\ Axes=1
+TF.Show\ Names=1
+TF.Update\ Interval=0
+Target\ Frame=/local_map
+Tool\ 2D\ Nav\ GoalTopic=/move_base_simple/goal
+Tool\ 2D\ Pose\ EstimateTopic=initialpose
+[Display0]
+ClassName=rviz::GridDisplay
+Name=Grid
+[Display1]
+ClassName=rviz::MarkerDisplay
+Name=Marker
+[Display2]
+ClassName=rviz::TFDisplay
+Name=TF
+[Window]
+Height=1072
+Width=1346
+X=438
+Y=83

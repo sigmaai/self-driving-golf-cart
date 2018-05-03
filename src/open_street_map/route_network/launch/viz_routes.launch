@@ -1,0 +1,22 @@
+<!-- Launch file for visualizing OSM route networks
+
+     arg: url = Uniform Resource Locator for map data
+
+     $Id$
+  -->
+
+<launch>
+
+  <arg name="url" default="" />
+
+  <!-- network graph node -->
+  <node pkg="route_network" type="route_network" name="route_network" >
+    <param name="map_url" value="$(arg url)" />
+  </node>
+
+  <!-- network graph visualization -->
+  <node pkg="route_network" type="viz_routes" name="viz_routes" >
+    <param name="map_url" value="$(arg url)" />
+  </node>
+
+</launch>

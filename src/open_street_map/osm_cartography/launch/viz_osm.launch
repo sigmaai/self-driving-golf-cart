@@ -1,0 +1,20 @@
+<!-- Launch file for visualizing OSM data
+
+     arg: url = URL for map data
+
+     $Id$
+  -->
+
+<launch>
+
+  <arg name="url" default="package://osm_cartography/tests/prc.osm" />
+
+  <!-- start map server -->
+  <node pkg="osm_cartography" type="osm_server" name="osm_server" />
+
+  <!-- start map visualization -->
+  <node pkg="osm_cartography" type="viz_osm" name="viz_osm" >
+    <param name="map_url" value="$(arg url)" />
+  </node>
+
+</launch>

@@ -1,0 +1,6 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~map_url" : \b [str] URL for locating XML map data (existing map, if empty). min: , default: , max: 
+

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="CGImap 0.0.2">
+ <bounds minlat="30.3787400" minlon="-97.7344500" maxlat="30.3947700" maxlon="-97.7230800"/>
+ <node id="945326148" lat="30.3840168" lon="-97.7282100" visible="true" version="1" ele="208.0"/>
+ <node id="945326149" lat="30.3857290" lon="-97.7316754" version="1"/>
+ <node id="945326150" lat="30.3866750" lon="-97.7270967" version="1">
+  <tag k="amenity" v="school"/>
+  <tag k="ele" v="234"/>
+ </node>
+ <way id="81116283" version="3">
+  <nd ref="945326148"/>
+  <nd ref="945326149"/>
+  <tag k="highway" v="residential"/>
+  <tag k="name" v="Harry Ransom Trail"/>
+ </way>
+ <relation id="1232138" version="1">
+  <member type="way" ref="81116283" role=""/>
+  <member type="node" ref="945326150" role=""/>
+  <tag k="type" v="route"/>
+ </relation>
+</osm>

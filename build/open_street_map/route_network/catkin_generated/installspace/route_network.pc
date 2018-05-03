@@ -1,0 +1,8 @@
+prefix=/home/neil/Workspace/self-driving-golf-cart/install
+
+Name: route_network
+Description: Description of route_network
+Version: 0.2.4
+Cflags: -I/home/neil/Workspace/self-driving-golf-cart/install/include
+Libs: -L/home/neil/Workspace/self-driving-golf-cart/install/lib 
+Requires: dynamic_reconfigure geodesy geographic_msgs geometry_msgs nav_msgs rospy visualization_msgs

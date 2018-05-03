@@ -1,0 +1,188 @@
+#!/usr/bin/env python
+# Software License Agreement (BSD License)
+#
+# Copyright (C) 2012, Jack O'Quin
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+#
+#  * Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+#  * Redistributions in binary form must reproduce the above
+#    copyright notice, this list of conditions and the following
+#    disclaimer in the documentation and/or other materials provided
+#    with the distribution.
+#  * Neither the name of the author nor of other contributors may be
+#    used to endorse or promote products derived from this software
+#    without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+# FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+# COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+# INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+# BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+# LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+# CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+# ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+
+"""
+Create route network messages for geographic information maps.
+"""
+
+PKG_NAME = 'route_network'
+import roslib; roslib.load_manifest(PKG_NAME)
+import rospy
+
+import sys
+import itertools
+import unique_id
+import geodesy.props
+import geodesy.wu_point
+from geodesy import bounding_box
+
+from geographic_msgs.msg import KeyValue
+from geographic_msgs.msg import RouteNetwork
+from geographic_msgs.msg import RouteSegment
+from geographic_msgs.srv import GetGeographicMap
+
+try:
+    from geographic_msgs.msg import UniqueID
+except ImportError:
+    from uuid_msgs.msg import UniqueID
+
+
+# dynamic parameter reconfiguration
+from dynamic_reconfigure.server import Server as ReconfigureServer
+import route_network.cfg.RouteNetworkConfig as Config
+
+def is_oneway(feature):
+    """ One-way route predicate.
+    :returns: True if feature is one way.
+    """
+    return geodesy.props.match(feature, set(['oneway']))
+
+def is_route(feature):
+    """ Drivable feature predicate.
+    :returns: True if feature is drivable.
+    """
+    return geodesy.props.match(feature,
+                               set(['bridge', 'highway', 'tunnel']))
+
+# URL, unique to this package
+PKG_URL = 'http://ros.org/wiki/' + PKG_NAME
+
+def makeGraph(msg):
+    """ Make RouteNetwork message.
+
+    :param msg: GeographicMap message.
+    :returns: RouteNetwork message.
+    """
+    uu = unique_id.toMsg(unique_id.fromURL(PKG_URL + '/map/' +
+                                           str(msg.id.uuid) + '/routes'))
+    return RouteNetwork(header = msg.header, id = uu, bounds = msg.bounds)
+
+def makeSeg(start, end, oneway=False):
+    """ Make RouteSegment message.
+
+    :param start:  Initial UUID.
+    :param end:    Final UUID.
+    :param oneway: True if segment is one-way.
+    :returns: RouteSegment message.
+    """
+    uu = unique_id.toMsg(unique_id.fromURL(PKG_URL + '/' +
+                                           str(start) + '/' + str(end)))
+
+    seg = RouteSegment(id = uu, start = start, end = end)
+    if oneway:
+        seg.props.append(KeyValue(key = 'oneway', value = 'yes'))
+    return seg
+
+class RouteNetNode():
+
+    def __init__(self):
+        """ROS node to publish the route network graph for a GeographicMap.
+        """
+        rospy.init_node('route_network')
+        self.config = None
+
+        # advertise visualization marker topic
+        self.pub = rospy.Publisher('route_network', RouteNetwork,
+                                   latch=True, queue_size=10)
+        self.graph = None
+        rospy.wait_for_service('get_geographic_map')
+        self.get_map = rospy.ServiceProxy('get_geographic_map',
+                                          GetGeographicMap)
+
+        # register dynamic reconfigure callback, which runs immediately
+        self.reconf_server = ReconfigureServer(Config, self.reconfigure)
+
+    def build_graph(self, msg):
+        """Build RouteNetwork graph for a GeographicMap message.
+
+        :post: self.graph = RouteNetwork message
+        """
+        self.map = msg
+        self.map_points = geodesy.wu_point.WuPointSet(msg.points)
+        self.graph = makeGraph(msg)
+
+        # process each feature marked as a route
+        for feature in itertools.ifilter(is_route, self.map.features):
+            oneway = is_oneway(feature)
+            start = None
+            for mbr in feature.components:
+                pt = self.map_points.get(mbr.uuid)
+                if pt is not None:      # known way point?
+                    self.graph.points.append(pt.toWayPoint())
+                    end = UniqueID(uuid = mbr.uuid)
+                    if start is not None:
+                        self.graph.segments.append(makeSeg(start, end, oneway))
+                        if not oneway:
+                            self.graph.segments.append(makeSeg(end, start))
+                    start = end
+
+    def reconfigure(self, config, level):
+        """Dynamic reconfigure callback.
+
+        :param config: New configuration.
+        :param level:  0x00000001 bit set if URL changed (ignored).
+
+        :returns: New config if valid, old one otherwise. That updates
+                  the dynamic reconfigure GUI window.
+        """
+        if self.config is None:
+            self.config = config
+        rospy.loginfo('Map URL: ' + str(config['map_url']))
+
+        try:
+            resp = self.get_map(config['map_url'], bounding_box.makeGlobal())
+        except rospy.ServiceException as e:
+            rospy.logerr("Service call failed: " + str(e))
+            # ignore new config, it failed
+        else:                           # get_map returned
+            if resp.success:
+                self.build_graph(resp.map)
+                self.config = config    # save new URL
+                # publish visualization markers (on a latched topic)
+                self.pub.publish(self.graph)
+            else:
+                rospy.logerr('get_geographic_map failed, status: '
+                             + str(resp.status))
+
+        return self.config
+
+
+def main():
+    node_class = RouteNetNode()
+    try:
+        rospy.spin()
+    except rospy.ROSInterruptException: pass
+
+if __name__ == '__main__':
+    # run main function and exit
+    sys.exit(main())

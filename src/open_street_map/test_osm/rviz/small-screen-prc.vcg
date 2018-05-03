@@ -1,0 +1,71 @@
+Background\ ColorB=0
+Background\ ColorG=0
+Background\ ColorR=0
+Camera\ Config=0.729044 1.92625 622791 3.3604e+06 1505.18
+Camera\ Type=rviz::FPSViewController
+Fixed\ Frame=/map
+Grid.Alpha=0.5
+Grid.Cell\ Size=100
+Grid.ColorB=0.5
+Grid.ColorG=0.5
+Grid.ColorR=0.5
+Grid.Enabled=1
+Grid.Line\ Style=0
+Grid.Line\ Width=0.03
+Grid.Normal\ Cell\ Count=0
+Grid.OffsetX=622100
+Grid.OffsetY=3.362e+06
+Grid.OffsetZ=0
+Grid.Plane=0
+Grid.Plane\ Cell\ Count=10
+Grid.Reference\ Frame=<Fixed Frame>
+Marker.Enabled=1
+Marker.Marker\ Topic=visualization_marker
+Marker.Queue\ Size=100
+Marker.bounds_osm=1
+Marker.buildings_osm=1
+Marker.other_osm=1
+Marker.plan_segments=1
+Marker.railroad_osm=1
+Marker.roads_osm=0
+Marker.route_segments=1
+Marker.route_waypoints=1
+Marker.waypoints_osm=1
+Property\ Grid\ Splitter=600,78
+Property\ Grid\ State=expanded=.Global Options,Marker.Enabled,Marker.Namespaces,Grid.Enabled,Grid.Offset;splitterratio=0.5
+QMainWindow=000000ff00000000fd00000003000000000000011d000003bffc0200000001fb000000100044006900730070006c006100790073020000024600000000000001250000030000000001000001300000031afc0200000003fb0000001e0054006f006f006c002000500072006f0070006500720074006900650073000000001d000001250000006700fffffffb0000000a00560069006500770073020000041e0000001d0000013800000282fb0000001200530065006c0065006300740069006f006e000000001d0000031a0000006700ffffff00000003000005560000003efc0100000001fb0000000800540069006d0065010000000000000556000002bf00ffffff000005560000028700000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+Target\ Frame=/map
+Tool\ 2D\ Nav\ GoalTopic=goal
+Tool\ 2D\ Pose\ EstimateTopic=initialpose
+[Display0]
+ClassName=rviz::MarkerDisplay
+Name=Marker
+[Display1]
+ClassName=rviz::GridDisplay
+Name=Grid
+[Views]
+0Name=PRC
+1Name=topdown
+2Name=fps
+3Name=orbit
+[Views/0]
+Config=0.785398 0.785398 10 622191 3362024 0
+Target=/map
+Type=rviz::OrbitViewController
+[Views/1]
+Config=0.739298 622115 3.36206e+06 0
+Target=/map
+Type=rviz::FixedOrientationOrthoViewController
+[Views/2]
+Config=0.919119 3.14159 622693 3.36202e+06 639.06
+Target=/map
+Type=rviz::FPSViewController
+[Views/3]
+Config=0.919119 -2.53157e-06 3.4192e+06 -1.45112e+06 3.36203e+06 -2.71786e+06
+Target=/map
+Type=rviz::OrbitViewController
+[Window]
+Height=780
+Width=1382
+X=80
+Y=38

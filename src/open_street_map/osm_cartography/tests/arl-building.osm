@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="CGImap 0.0.2">
+ <bounds minlat="30.3787400" minlon="-97.7344500" maxlat="30.3947700" maxlon="-97.7230800"/>
+ <node id="957597445" lat="30.3846037" lon="-97.7255014" user="Kmeson" uid="308243" visible="true" version="2" changeset="6103791" timestamp="2010-10-19T22:24:41Z"/>
+ <node id="957597450" lat="30.3844205" lon="-97.7245089" user="Kmeson" uid="308243" visible="true" version="1" changeset="6103728" timestamp="2010-10-19T22:08:55Z"/>
+ <node id="957597453" lat="30.3841371" lon="-97.7245693" user="Kmeson" uid="308243" visible="true" version="1" changeset="6103728" timestamp="2010-10-19T22:08:55Z"/>
+ <node id="957597456" lat="30.3841440" lon="-97.7246189" user="Kmeson" uid="308243" visible="true" version="1" changeset="6103728" timestamp="2010-10-19T22:08:56Z"/>
+ <node id="957597458" lat="30.3839381" lon="-97.7246565" user="Kmeson" uid="308243" visible="true" version="1" changeset="6103728" timestamp="2010-10-19T22:08:56Z"/>
+ <node id="957597460" lat="30.3839335" lon="-97.7246283" user="Kmeson" uid="308243" visible="true" version="1" changeset="6103728" timestamp="2010-10-19T22:08:56Z"/>
+ <node id="957597467" lat="30.3838513" lon="-97.7246430" user="Kmeson" uid="308243" visible="true" version="1" changeset="6103728" timestamp="2010-10-19T22:08:56Z"/>
+ <node id="957597472" lat="30.3838571" lon="-97.7246739" user="Kmeson" uid="308243" visible="true" version="1" changeset="6103728" timestamp="2010-10-19T22:08:56Z"/>
+ <node id="957597492" lat="30.3836546" lon="-97.7247168" user="Kmeson" uid="308243" visible="true" version="1" changeset="6103728" timestamp="2010-10-19T22:08:56Z"/>
+ <node id="957597496" lat="30.3836477" lon="-97.7246752" user="Kmeson" uid="308243" visible="true" version="1" changeset="6103728" timestamp="2010-10-19T22:08:56Z"/>
+ <node id="957597501" lat="30.3833573" lon="-97.7247369" user="Kmeson" uid="308243" visible="true" version="1" changeset="6103728" timestamp="2010-10-19T22:08:56Z"/>
+ <node id="957597505" lat="30.3835228" lon="-97.7257454" user="Kmeson" uid="308243" visible="true" version="1" changeset="6103728" timestamp="2010-10-19T22:08:56Z"/>
+ <node id="957635838" lat="30.3842331" lon="-97.7252007" user="Kmeson" uid="308243" visible="true" version="1" changeset="6103816" timestamp="2010-10-19T22:29:56Z"/>
+ <node id="957635841" lat="30.3841729" lon="-97.7248359" user="Kmeson" uid="308243" visible="true" version="1" changeset="6103816" timestamp="2010-10-19T22:29:56Z"/>
+ <node id="957635845" lat="30.3840364" lon="-97.7248627" user="Kmeson" uid="308243" visible="true" version="1" changeset="6103816" timestamp="2010-10-19T22:29:56Z"/>
+ <node id="957635848" lat="30.3840919" lon="-97.7252302" user="Kmeson" uid="308243" visible="true" version="1" changeset="6103816" timestamp="2010-10-19T22:29:57Z"/>
+ <node id="957635852" lat="30.3838930" lon="-97.7252785" user="Kmeson" uid="308243" visible="true" version="1" changeset="6103816" timestamp="2010-10-19T22:29:57Z"/>
+ <node id="957635855" lat="30.3837541" lon="-97.7253106" user="Kmeson" uid="308243" visible="true" version="1" changeset="6103816" timestamp="2010-10-19T22:29:57Z"/>
+ <node id="957635858" lat="30.3836893" lon="-97.7249432" user="Kmeson" uid="308243" visible="true" version="1" changeset="6103816" timestamp="2010-10-19T22:29:57Z"/>
+ <node id="957635861" lat="30.3838305" lon="-97.7249110" user="Kmeson" uid="308243" visible="true" version="1" changeset="6103816" timestamp="2010-10-19T22:29:57Z"/>
+ <way id="82240459" user="Kmeson" uid="308243" visible="true" version="2" changeset="6103791" timestamp="2010-10-19T22:24:41Z">
+  <nd ref="957597445"/>
+  <nd ref="957597450"/>
+  <nd ref="957597453"/>
+  <nd ref="957597456"/>
+  <nd ref="957597458"/>
+  <nd ref="957597460"/>
+  <nd ref="957597467"/>
+  <nd ref="957597472"/>
+  <nd ref="957597492"/>
+  <nd ref="957597496"/>
+  <nd ref="957597501"/>
+  <nd ref="957597505"/>
+  <nd ref="957597445"/>
+  <tag k="building" v="yes"/>
+  <tag k="name" v="Applied Research Laboratories - ARL"/>
+ </way>
+ <way id="82242556" user="Kmeson" uid="308243" visible="true" version="1" changeset="6103816" timestamp="2010-10-19T22:29:57Z">
+  <nd ref="957635838"/>
+  <nd ref="957635841"/>
+  <nd ref="957635845"/>
+  <nd ref="957635848"/>
+  <nd ref="957635838"/>
+ </way>
+ <way id="82242557" user="Kmeson" uid="308243" visible="true" version="1" changeset="6103816" timestamp="2010-10-19T22:29:57Z">
+  <nd ref="957635852"/>
+  <nd ref="957635855"/>
+  <nd ref="957635858"/>
+  <nd ref="957635861"/>
+  <nd ref="957635852"/>
+ </way>
+ <relation id="1232138" user="Kmeson" uid="308243" visible="true" version="1" changeset="6103816" timestamp="2010-10-19T22:29:58Z">
+  <member type="way" ref="82240459" role=""/>
+  <member type="way" ref="82242556" role="inner"/>
+  <member type="way" ref="82242557" role="inner"/>
+  <tag k="type" v="multipolygon"/>
+ </relation>
+</osm>

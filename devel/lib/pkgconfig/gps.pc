@@ -1,0 +1,8 @@
+prefix=/home/neil/Workspace/self-driving-golf-cart/devel
+
+Name: gps
+Description: Description of gps
+Version: 0.5.0
+Cflags: 
+Libs: -L/home/neil/Workspace/self-driving-golf-cart/devel/lib 
+Requires: 

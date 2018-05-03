@@ -79,17 +79,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -100,6 +89,17 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # Special rule for the target test
 test:
@@ -166,109 +166,34 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-gps/CMakeFiles/run_tests_nmea_navsat_driver.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f CMakeFiles/Makefile2 gps/CMakeFiles/run_tests_nmea_navsat_driver.dir/rule
-.PHONY : gps/CMakeFiles/run_tests_nmea_navsat_driver.dir/rule
+gps/CMakeFiles/run_tests_gps.dir/rule:
+	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f CMakeFiles/Makefile2 gps/CMakeFiles/run_tests_gps.dir/rule
+.PHONY : gps/CMakeFiles/run_tests_gps.dir/rule
 
 # Convenience name for target.
-run_tests_nmea_navsat_driver: gps/CMakeFiles/run_tests_nmea_navsat_driver.dir/rule
+run_tests_gps: gps/CMakeFiles/run_tests_gps.dir/rule
 
-.PHONY : run_tests_nmea_navsat_driver
+.PHONY : run_tests_gps
 
 # fast build rule for target.
-run_tests_nmea_navsat_driver/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f gps/CMakeFiles/run_tests_nmea_navsat_driver.dir/build.make gps/CMakeFiles/run_tests_nmea_navsat_driver.dir/build
-.PHONY : run_tests_nmea_navsat_driver/fast
+run_tests_gps/fast:
+	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f gps/CMakeFiles/run_tests_gps.dir/build.make gps/CMakeFiles/run_tests_gps.dir/build
+.PHONY : run_tests_gps/fast
 
 # Convenience name for target.
-gps/CMakeFiles/_run_tests_nmea_navsat_driver.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f CMakeFiles/Makefile2 gps/CMakeFiles/_run_tests_nmea_navsat_driver.dir/rule
-.PHONY : gps/CMakeFiles/_run_tests_nmea_navsat_driver.dir/rule
+gps/CMakeFiles/roslint_gps.dir/rule:
+	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f CMakeFiles/Makefile2 gps/CMakeFiles/roslint_gps.dir/rule
+.PHONY : gps/CMakeFiles/roslint_gps.dir/rule
 
 # Convenience name for target.
-_run_tests_nmea_navsat_driver: gps/CMakeFiles/_run_tests_nmea_navsat_driver.dir/rule
+roslint_gps: gps/CMakeFiles/roslint_gps.dir/rule
 
-.PHONY : _run_tests_nmea_navsat_driver
+.PHONY : roslint_gps
 
 # fast build rule for target.
-_run_tests_nmea_navsat_driver/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f gps/CMakeFiles/_run_tests_nmea_navsat_driver.dir/build.make gps/CMakeFiles/_run_tests_nmea_navsat_driver.dir/build
-.PHONY : _run_tests_nmea_navsat_driver/fast
-
-# Convenience name for target.
-gps/CMakeFiles/_run_tests_nmea_navsat_driver_roslint.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f CMakeFiles/Makefile2 gps/CMakeFiles/_run_tests_nmea_navsat_driver_roslint.dir/rule
-.PHONY : gps/CMakeFiles/_run_tests_nmea_navsat_driver_roslint.dir/rule
-
-# Convenience name for target.
-_run_tests_nmea_navsat_driver_roslint: gps/CMakeFiles/_run_tests_nmea_navsat_driver_roslint.dir/rule
-
-.PHONY : _run_tests_nmea_navsat_driver_roslint
-
-# fast build rule for target.
-_run_tests_nmea_navsat_driver_roslint/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f gps/CMakeFiles/_run_tests_nmea_navsat_driver_roslint.dir/build.make gps/CMakeFiles/_run_tests_nmea_navsat_driver_roslint.dir/build
-.PHONY : _run_tests_nmea_navsat_driver_roslint/fast
-
-# Convenience name for target.
-gps/CMakeFiles/clean_test_results_nmea_navsat_driver.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f CMakeFiles/Makefile2 gps/CMakeFiles/clean_test_results_nmea_navsat_driver.dir/rule
-.PHONY : gps/CMakeFiles/clean_test_results_nmea_navsat_driver.dir/rule
-
-# Convenience name for target.
-clean_test_results_nmea_navsat_driver: gps/CMakeFiles/clean_test_results_nmea_navsat_driver.dir/rule
-
-.PHONY : clean_test_results_nmea_navsat_driver
-
-# fast build rule for target.
-clean_test_results_nmea_navsat_driver/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f gps/CMakeFiles/clean_test_results_nmea_navsat_driver.dir/build.make gps/CMakeFiles/clean_test_results_nmea_navsat_driver.dir/build
-.PHONY : clean_test_results_nmea_navsat_driver/fast
-
-# Convenience name for target.
-gps/CMakeFiles/roslint_nmea_navsat_driver.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f CMakeFiles/Makefile2 gps/CMakeFiles/roslint_nmea_navsat_driver.dir/rule
-.PHONY : gps/CMakeFiles/roslint_nmea_navsat_driver.dir/rule
-
-# Convenience name for target.
-roslint_nmea_navsat_driver: gps/CMakeFiles/roslint_nmea_navsat_driver.dir/rule
-
-.PHONY : roslint_nmea_navsat_driver
-
-# fast build rule for target.
-roslint_nmea_navsat_driver/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f gps/CMakeFiles/roslint_nmea_navsat_driver.dir/build.make gps/CMakeFiles/roslint_nmea_navsat_driver.dir/build
-.PHONY : roslint_nmea_navsat_driver/fast
-
-# Convenience name for target.
-gps/CMakeFiles/_run_tests_nmea_navsat_driver_roslint_package.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f CMakeFiles/Makefile2 gps/CMakeFiles/_run_tests_nmea_navsat_driver_roslint_package.dir/rule
-.PHONY : gps/CMakeFiles/_run_tests_nmea_navsat_driver_roslint_package.dir/rule
-
-# Convenience name for target.
-_run_tests_nmea_navsat_driver_roslint_package: gps/CMakeFiles/_run_tests_nmea_navsat_driver_roslint_package.dir/rule
-
-.PHONY : _run_tests_nmea_navsat_driver_roslint_package
-
-# fast build rule for target.
-_run_tests_nmea_navsat_driver_roslint_package/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f gps/CMakeFiles/_run_tests_nmea_navsat_driver_roslint_package.dir/build.make gps/CMakeFiles/_run_tests_nmea_navsat_driver_roslint_package.dir/build
-.PHONY : _run_tests_nmea_navsat_driver_roslint_package/fast
-
-# Convenience name for target.
-gps/CMakeFiles/_catkin_empty_exported_target.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f CMakeFiles/Makefile2 gps/CMakeFiles/_catkin_empty_exported_target.dir/rule
-.PHONY : gps/CMakeFiles/_catkin_empty_exported_target.dir/rule
-
-# Convenience name for target.
-_catkin_empty_exported_target: gps/CMakeFiles/_catkin_empty_exported_target.dir/rule
-
-.PHONY : _catkin_empty_exported_target
-
-# fast build rule for target.
-_catkin_empty_exported_target/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f gps/CMakeFiles/_catkin_empty_exported_target.dir/build.make gps/CMakeFiles/_catkin_empty_exported_target.dir/build
-.PHONY : _catkin_empty_exported_target/fast
+roslint_gps/fast:
+	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f gps/CMakeFiles/roslint_gps.dir/build.make gps/CMakeFiles/roslint_gps.dir/build
+.PHONY : roslint_gps/fast
 
 # Convenience name for target.
 gps/CMakeFiles/roslint.dir/rule:
@@ -286,34 +211,109 @@ roslint/fast:
 .PHONY : roslint/fast
 
 # Convenience name for target.
-gps/CMakeFiles/run_tests_nmea_navsat_driver_roslint.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f CMakeFiles/Makefile2 gps/CMakeFiles/run_tests_nmea_navsat_driver_roslint.dir/rule
-.PHONY : gps/CMakeFiles/run_tests_nmea_navsat_driver_roslint.dir/rule
+gps/CMakeFiles/_run_tests_gps_roslint_package.dir/rule:
+	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f CMakeFiles/Makefile2 gps/CMakeFiles/_run_tests_gps_roslint_package.dir/rule
+.PHONY : gps/CMakeFiles/_run_tests_gps_roslint_package.dir/rule
 
 # Convenience name for target.
-run_tests_nmea_navsat_driver_roslint: gps/CMakeFiles/run_tests_nmea_navsat_driver_roslint.dir/rule
+_run_tests_gps_roslint_package: gps/CMakeFiles/_run_tests_gps_roslint_package.dir/rule
 
-.PHONY : run_tests_nmea_navsat_driver_roslint
+.PHONY : _run_tests_gps_roslint_package
 
 # fast build rule for target.
-run_tests_nmea_navsat_driver_roslint/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f gps/CMakeFiles/run_tests_nmea_navsat_driver_roslint.dir/build.make gps/CMakeFiles/run_tests_nmea_navsat_driver_roslint.dir/build
-.PHONY : run_tests_nmea_navsat_driver_roslint/fast
+_run_tests_gps_roslint_package/fast:
+	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f gps/CMakeFiles/_run_tests_gps_roslint_package.dir/build.make gps/CMakeFiles/_run_tests_gps_roslint_package.dir/build
+.PHONY : _run_tests_gps_roslint_package/fast
 
 # Convenience name for target.
-gps/CMakeFiles/run_tests_nmea_navsat_driver_roslint_package.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f CMakeFiles/Makefile2 gps/CMakeFiles/run_tests_nmea_navsat_driver_roslint_package.dir/rule
-.PHONY : gps/CMakeFiles/run_tests_nmea_navsat_driver_roslint_package.dir/rule
+gps/CMakeFiles/_catkin_empty_exported_target.dir/rule:
+	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f CMakeFiles/Makefile2 gps/CMakeFiles/_catkin_empty_exported_target.dir/rule
+.PHONY : gps/CMakeFiles/_catkin_empty_exported_target.dir/rule
 
 # Convenience name for target.
-run_tests_nmea_navsat_driver_roslint_package: gps/CMakeFiles/run_tests_nmea_navsat_driver_roslint_package.dir/rule
+_catkin_empty_exported_target: gps/CMakeFiles/_catkin_empty_exported_target.dir/rule
 
-.PHONY : run_tests_nmea_navsat_driver_roslint_package
+.PHONY : _catkin_empty_exported_target
 
 # fast build rule for target.
-run_tests_nmea_navsat_driver_roslint_package/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f gps/CMakeFiles/run_tests_nmea_navsat_driver_roslint_package.dir/build.make gps/CMakeFiles/run_tests_nmea_navsat_driver_roslint_package.dir/build
-.PHONY : run_tests_nmea_navsat_driver_roslint_package/fast
+_catkin_empty_exported_target/fast:
+	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f gps/CMakeFiles/_catkin_empty_exported_target.dir/build.make gps/CMakeFiles/_catkin_empty_exported_target.dir/build
+.PHONY : _catkin_empty_exported_target/fast
+
+# Convenience name for target.
+gps/CMakeFiles/_run_tests_gps.dir/rule:
+	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f CMakeFiles/Makefile2 gps/CMakeFiles/_run_tests_gps.dir/rule
+.PHONY : gps/CMakeFiles/_run_tests_gps.dir/rule
+
+# Convenience name for target.
+_run_tests_gps: gps/CMakeFiles/_run_tests_gps.dir/rule
+
+.PHONY : _run_tests_gps
+
+# fast build rule for target.
+_run_tests_gps/fast:
+	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f gps/CMakeFiles/_run_tests_gps.dir/build.make gps/CMakeFiles/_run_tests_gps.dir/build
+.PHONY : _run_tests_gps/fast
+
+# Convenience name for target.
+gps/CMakeFiles/run_tests_gps_roslint.dir/rule:
+	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f CMakeFiles/Makefile2 gps/CMakeFiles/run_tests_gps_roslint.dir/rule
+.PHONY : gps/CMakeFiles/run_tests_gps_roslint.dir/rule
+
+# Convenience name for target.
+run_tests_gps_roslint: gps/CMakeFiles/run_tests_gps_roslint.dir/rule
+
+.PHONY : run_tests_gps_roslint
+
+# fast build rule for target.
+run_tests_gps_roslint/fast:
+	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f gps/CMakeFiles/run_tests_gps_roslint.dir/build.make gps/CMakeFiles/run_tests_gps_roslint.dir/build
+.PHONY : run_tests_gps_roslint/fast
+
+# Convenience name for target.
+gps/CMakeFiles/_run_tests_gps_roslint.dir/rule:
+	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f CMakeFiles/Makefile2 gps/CMakeFiles/_run_tests_gps_roslint.dir/rule
+.PHONY : gps/CMakeFiles/_run_tests_gps_roslint.dir/rule
+
+# Convenience name for target.
+_run_tests_gps_roslint: gps/CMakeFiles/_run_tests_gps_roslint.dir/rule
+
+.PHONY : _run_tests_gps_roslint
+
+# fast build rule for target.
+_run_tests_gps_roslint/fast:
+	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f gps/CMakeFiles/_run_tests_gps_roslint.dir/build.make gps/CMakeFiles/_run_tests_gps_roslint.dir/build
+.PHONY : _run_tests_gps_roslint/fast
+
+# Convenience name for target.
+gps/CMakeFiles/run_tests_gps_roslint_package.dir/rule:
+	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f CMakeFiles/Makefile2 gps/CMakeFiles/run_tests_gps_roslint_package.dir/rule
+.PHONY : gps/CMakeFiles/run_tests_gps_roslint_package.dir/rule
+
+# Convenience name for target.
+run_tests_gps_roslint_package: gps/CMakeFiles/run_tests_gps_roslint_package.dir/rule
+
+.PHONY : run_tests_gps_roslint_package
+
+# fast build rule for target.
+run_tests_gps_roslint_package/fast:
+	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f gps/CMakeFiles/run_tests_gps_roslint_package.dir/build.make gps/CMakeFiles/run_tests_gps_roslint_package.dir/build
+.PHONY : run_tests_gps_roslint_package/fast
+
+# Convenience name for target.
+gps/CMakeFiles/clean_test_results_gps.dir/rule:
+	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f CMakeFiles/Makefile2 gps/CMakeFiles/clean_test_results_gps.dir/rule
+.PHONY : gps/CMakeFiles/clean_test_results_gps.dir/rule
+
+# Convenience name for target.
+clean_test_results_gps: gps/CMakeFiles/clean_test_results_gps.dir/rule
+
+.PHONY : clean_test_results_gps
+
+# fast build rule for target.
+clean_test_results_gps/fast:
+	cd /home/neil/Workspace/self-driving-golf-cart/build && $(MAKE) -f gps/CMakeFiles/clean_test_results_gps.dir/build.make gps/CMakeFiles/clean_test_results_gps.dir/build
+.PHONY : clean_test_results_gps/fast
 
 # Help Target
 help:
@@ -323,21 +323,21 @@ help:
 	@echo "... depend"
 	@echo "... install"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... install/local"
-	@echo "... run_tests_nmea_navsat_driver"
-	@echo "... _run_tests_nmea_navsat_driver"
-	@echo "... _run_tests_nmea_navsat_driver_roslint"
-	@echo "... clean_test_results_nmea_navsat_driver"
-	@echo "... roslint_nmea_navsat_driver"
-	@echo "... _run_tests_nmea_navsat_driver_roslint_package"
-	@echo "... _catkin_empty_exported_target"
+	@echo "... run_tests_gps"
+	@echo "... edit_cache"
+	@echo "... roslint_gps"
 	@echo "... test"
 	@echo "... roslint"
-	@echo "... run_tests_nmea_navsat_driver_roslint"
+	@echo "... _run_tests_gps_roslint_package"
+	@echo "... _catkin_empty_exported_target"
+	@echo "... _run_tests_gps"
+	@echo "... run_tests_gps_roslint"
 	@echo "... list_install_components"
 	@echo "... install/strip"
-	@echo "... run_tests_nmea_navsat_driver_roslint_package"
+	@echo "... _run_tests_gps_roslint"
+	@echo "... run_tests_gps_roslint_package"
+	@echo "... clean_test_results_gps"
 .PHONY : help
 
 
