@@ -1,8 +1,8 @@
-# Install script for directory: /home/neil/Workspace/self-driving-golf-cart/src/open_street_map/test_osm
+# Install script for directory: /home/yongyang/Workspace/self-driving-golf-cart/src/open_street_map/test_osm
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/neil/Workspace/self-driving-golf-cart/install")
+  set(CMAKE_INSTALL_PREFIX "/home/yongyang/Workspace/self-driving-golf-cart/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,25 +33,25 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/build/open_street_map/test_osm/catkin_generated/installspace/test_osm.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yongyang/Workspace/self-driving-golf-cart/build/open_street_map/test_osm/catkin_generated/installspace/test_osm.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/test_osm/cmake" TYPE FILE FILES
-    "/home/neil/Workspace/self-driving-golf-cart/build/open_street_map/test_osm/catkin_generated/installspace/test_osmConfig.cmake"
-    "/home/neil/Workspace/self-driving-golf-cart/build/open_street_map/test_osm/catkin_generated/installspace/test_osmConfig-version.cmake"
+    "/home/yongyang/Workspace/self-driving-golf-cart/build/open_street_map/test_osm/catkin_generated/installspace/test_osmConfig.cmake"
+    "/home/yongyang/Workspace/self-driving-golf-cart/build/open_street_map/test_osm/catkin_generated/installspace/test_osmConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/test_osm" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/src/open_street_map/test_osm/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/test_osm" TYPE FILE FILES "/home/yongyang/Workspace/self-driving-golf-cart/src/open_street_map/test_osm/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/test_osm/tests" TYPE DIRECTORY FILES "/home/neil/Workspace/self-driving-golf-cart/src/open_street_map/test_osm/tests/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/test_osm/tests" TYPE DIRECTORY FILES "/home/yongyang/Workspace/self-driving-golf-cart/src/open_street_map/test_osm/tests/")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/test_osm/rviz" TYPE DIRECTORY FILES "/home/neil/Workspace/self-driving-golf-cart/src/open_street_map/test_osm/rviz/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/test_osm/rviz" TYPE DIRECTORY FILES "/home/yongyang/Workspace/self-driving-golf-cart/src/open_street_map/test_osm/rviz/")
 endif()
 

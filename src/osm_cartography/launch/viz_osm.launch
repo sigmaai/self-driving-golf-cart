@@ -1,0 +1,25 @@
+<!-- Launch file for visualizing OSM data
+
+     arg: url = URL for map data
+
+     $Id$
+  -->
+
+<launch>
+
+  <arg name="url" default="package://osm_cartography/maps/deerfield.osm" />
+
+  <!-- start map server -->
+  <node pkg="osm_cartography" type="osm_server" name="osm_server" />
+
+  <!-- start map visualization -->
+  <node pkg="osm_cartography" type="viz_osm" name="viz_osm" >
+    <param name="map_url" value="$(arg url)" />
+  </node>
+
+  <arg name="rvizconfig" default="$(find osm_cartography)/rviz/geo_planner.rviz" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+
+
+</launch>
+

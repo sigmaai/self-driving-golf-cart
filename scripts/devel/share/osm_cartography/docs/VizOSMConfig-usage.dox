@@ -1,0 +1,7 @@
+\subsubsection usage Usage
+\verbatim
+<node name="viz_osm.py" pkg="osm_cartography" type="viz_osm.py">
+  <param name="map_url" type="str" value="" />
+</node>
+\endverbatim
+

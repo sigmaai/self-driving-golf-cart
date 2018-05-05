@@ -1,3 +1,0 @@
-<launch>
-  <test test-name="route_planner_test" pkg="route_network" type="test_planner.py"/>
-</launch>

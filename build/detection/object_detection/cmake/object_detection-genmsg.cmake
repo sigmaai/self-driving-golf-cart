@@ -2,7 +2,7 @@
 
 message(STATUS "object_detection: 2 messages, 0 services")
 
-set(MSG_I_FLAGS "-Iobject_detection:/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/msg;-Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Iobject_detection:/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/msg;-Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -17,14 +17,14 @@ add_custom_target(object_detection_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResults.msg" NAME_WE)
+get_filename_component(_filename "/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResults.msg" NAME_WE)
 add_custom_target(_object_detection_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "object_detection" "/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResults.msg" "object_detection/DetectionResult"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "object_detection" "/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResults.msg" "object_detection/DetectionResult"
 )
 
-get_filename_component(_filename "/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg" NAME_WE)
+get_filename_component(_filename "/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg" NAME_WE)
 add_custom_target(_object_detection_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "object_detection" "/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "object_detection" "/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg" ""
 )
 
 #
@@ -34,13 +34,13 @@ add_custom_target(_object_detection_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(object_detection
-  "/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResults.msg"
+  "/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResults.msg"
   "${MSG_I_FLAGS}"
-  "/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg"
+  "/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/object_detection
 )
 _generate_msg_cpp(object_detection
-  "/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg"
+  "/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/object_detection
@@ -60,9 +60,9 @@ add_custom_target(object_detection_generate_messages_cpp
 add_dependencies(object_detection_generate_messages object_detection_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResults.msg" NAME_WE)
+get_filename_component(_filename "/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResults.msg" NAME_WE)
 add_dependencies(object_detection_generate_messages_cpp _object_detection_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg" NAME_WE)
+get_filename_component(_filename "/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg" NAME_WE)
 add_dependencies(object_detection_generate_messages_cpp _object_detection_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -75,13 +75,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS object_detection_generate_messages_
 ### Section generating for lang: geneus
 ### Generating Messages
 _generate_msg_eus(object_detection
-  "/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResults.msg"
+  "/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResults.msg"
   "${MSG_I_FLAGS}"
-  "/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg"
+  "/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/object_detection
 )
 _generate_msg_eus(object_detection
-  "/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg"
+  "/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/object_detection
@@ -101,9 +101,9 @@ add_custom_target(object_detection_generate_messages_eus
 add_dependencies(object_detection_generate_messages object_detection_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResults.msg" NAME_WE)
+get_filename_component(_filename "/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResults.msg" NAME_WE)
 add_dependencies(object_detection_generate_messages_eus _object_detection_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg" NAME_WE)
+get_filename_component(_filename "/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg" NAME_WE)
 add_dependencies(object_detection_generate_messages_eus _object_detection_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -116,13 +116,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS object_detection_generate_messages_
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(object_detection
-  "/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResults.msg"
+  "/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResults.msg"
   "${MSG_I_FLAGS}"
-  "/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg"
+  "/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/object_detection
 )
 _generate_msg_lisp(object_detection
-  "/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg"
+  "/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/object_detection
@@ -142,9 +142,9 @@ add_custom_target(object_detection_generate_messages_lisp
 add_dependencies(object_detection_generate_messages object_detection_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResults.msg" NAME_WE)
+get_filename_component(_filename "/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResults.msg" NAME_WE)
 add_dependencies(object_detection_generate_messages_lisp _object_detection_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg" NAME_WE)
+get_filename_component(_filename "/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg" NAME_WE)
 add_dependencies(object_detection_generate_messages_lisp _object_detection_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -157,13 +157,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS object_detection_generate_messages_
 ### Section generating for lang: gennodejs
 ### Generating Messages
 _generate_msg_nodejs(object_detection
-  "/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResults.msg"
+  "/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResults.msg"
   "${MSG_I_FLAGS}"
-  "/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg"
+  "/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/object_detection
 )
 _generate_msg_nodejs(object_detection
-  "/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg"
+  "/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/object_detection
@@ -183,9 +183,9 @@ add_custom_target(object_detection_generate_messages_nodejs
 add_dependencies(object_detection_generate_messages object_detection_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResults.msg" NAME_WE)
+get_filename_component(_filename "/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResults.msg" NAME_WE)
 add_dependencies(object_detection_generate_messages_nodejs _object_detection_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg" NAME_WE)
+get_filename_component(_filename "/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg" NAME_WE)
 add_dependencies(object_detection_generate_messages_nodejs _object_detection_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -198,13 +198,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS object_detection_generate_messages_
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(object_detection
-  "/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResults.msg"
+  "/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResults.msg"
   "${MSG_I_FLAGS}"
-  "/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg"
+  "/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/object_detection
 )
 _generate_msg_py(object_detection
-  "/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg"
+  "/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/object_detection
@@ -224,9 +224,9 @@ add_custom_target(object_detection_generate_messages_py
 add_dependencies(object_detection_generate_messages object_detection_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResults.msg" NAME_WE)
+get_filename_component(_filename "/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResults.msg" NAME_WE)
 add_dependencies(object_detection_generate_messages_py _object_detection_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg" NAME_WE)
+get_filename_component(_filename "/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg" NAME_WE)
 add_dependencies(object_detection_generate_messages_py _object_detection_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

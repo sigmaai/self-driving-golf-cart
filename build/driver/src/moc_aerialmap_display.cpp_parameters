@@ -1,6 +1,0 @@
--DROS_BUILD_SHARED_LIBS=1
--DROS_PACKAGE_NAME="driver"
--DROSCONSOLE_BACKEND_LOG4CXX
--o
-/home/neil/Workspace/self-driving-golf-cart/build/driver/src/moc_aerialmap_display.cpp
-/home/neil/Workspace/self-driving-golf-cart/src/driver/src/aerialmap_display.h

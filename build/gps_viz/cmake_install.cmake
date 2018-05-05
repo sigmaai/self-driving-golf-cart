@@ -1,8 +1,8 @@
-# Install script for directory: /home/neil/Workspace/self-driving-golf-cart/src/gps_viz
+# Install script for directory: /home/yongyang/Workspace/self-driving-golf-cart/src/gps_viz
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/neil/Workspace/self-driving-golf-cart/install")
+  set(CMAKE_INSTALL_PREFIX "/home/yongyang/Workspace/self-driving-golf-cart/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,18 +33,18 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/build/gps_viz/catkin_generated/installspace/rviz_satellite.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yongyang/Workspace/self-driving-golf-cart/build/gps_viz/catkin_generated/installspace/rviz_satellite.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rviz_satellite/cmake" TYPE FILE FILES
-    "/home/neil/Workspace/self-driving-golf-cart/build/gps_viz/catkin_generated/installspace/rviz_satelliteConfig.cmake"
-    "/home/neil/Workspace/self-driving-golf-cart/build/gps_viz/catkin_generated/installspace/rviz_satelliteConfig-version.cmake"
+    "/home/yongyang/Workspace/self-driving-golf-cart/build/gps_viz/catkin_generated/installspace/rviz_satelliteConfig.cmake"
+    "/home/yongyang/Workspace/self-driving-golf-cart/build/gps_viz/catkin_generated/installspace/rviz_satelliteConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rviz_satellite" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/src/gps_viz/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rviz_satellite" TYPE FILE FILES "/home/yongyang/Workspace/self-driving-golf-cart/src/gps_viz/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
@@ -54,7 +54,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/librviz_satellite.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/neil/Workspace/self-driving-golf-cart/devel/lib/librviz_satellite.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/yongyang/Workspace/self-driving-golf-cart/devel/lib/librviz_satellite.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/librviz_satellite.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/librviz_satellite.so")
     file(RPATH_CHANGE
@@ -68,6 +68,6 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rviz_satellite" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/src/gps_viz/plugin_description.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rviz_satellite" TYPE FILE FILES "/home/yongyang/Workspace/self-driving-golf-cart/src/gps_viz/plugin_description.xml")
 endif()
 
