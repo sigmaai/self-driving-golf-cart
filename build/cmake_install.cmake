@@ -128,8 +128,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/yongyang/Workspace/self-driving-golf-cart/build/localization/cmake_install.cmake")
   include("/home/yongyang/Workspace/self-driving-golf-cart/build/path_planning/cmake_install.cmake")
   include("/home/yongyang/Workspace/self-driving-golf-cart/build/steering_control/cmake_install.cmake")
-  include("/home/yongyang/Workspace/self-driving-golf-cart/build/osm_cartography/cmake_install.cmake")
-  include("/home/yongyang/Workspace/self-driving-golf-cart/build/gps_viz/cmake_install.cmake")
+  include("/home/yongyang/Workspace/self-driving-golf-cart/build/osm/cmake_install.cmake")
 
 endif()
 

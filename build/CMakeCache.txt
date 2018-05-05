@@ -328,7 +328,7 @@ _gtest_INCLUDES:FILEPATH=/usr/include/gtest/gtest.h
 _gtest_SOURCES:FILEPATH=/usr/src/gtest/src/gtest.cc
 
 //Path to a file.
-_path_name:FILEPATH=/home/yongyang/Workspace/self-driving-golf-cart/src/osm_cartography/tests/test_xml_map.py
+_path_name:FILEPATH=_path_name-NOTFOUND
 
 //The directory containing a CMake configuration file for actionlib.
 actionlib_DIR:PATH=/opt/ros/kinetic/share/actionlib/cmake
@@ -482,7 +482,7 @@ lane_detection_SOURCE_DIR:STATIC=/home/yongyang/Workspace/self-driving-golf-cart
 laser_geometry_DIR:PATH=/opt/ros/kinetic/share/laser_geometry/cmake
 
 //Path to a library.
-lib:FILEPATH=/opt/ros/kinetic/lib/librosconsole_bridge.so
+lib:FILEPATH=/opt/ros/kinetic/lib/libtf2.so
 
 //Value Computed by CMake
 localization_BINARY_DIR:STATIC=/home/yongyang/Workspace/self-driving-golf-cart/build/localization
@@ -515,12 +515,12 @@ object_detection_BINARY_DIR:STATIC=/home/yongyang/Workspace/self-driving-golf-ca
 object_detection_SOURCE_DIR:STATIC=/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection
 
 //Value Computed by CMake
-osm_cartography_BINARY_DIR:STATIC=/home/yongyang/Workspace/self-driving-golf-cart/build/osm_cartography
+osm_cartography_BINARY_DIR:STATIC=/home/yongyang/Workspace/self-driving-golf-cart/build/osm
 
 osm_cartography_DIR:PATH=
 
 //Value Computed by CMake
-osm_cartography_SOURCE_DIR:STATIC=/home/yongyang/Workspace/self-driving-golf-cart/src/osm_cartography
+osm_cartography_SOURCE_DIR:STATIC=/home/yongyang/Workspace/self-driving-golf-cart/src/osm
 
 //Value Computed by CMake
 path_planning_BINARY_DIR:STATIC=/home/yongyang/Workspace/self-driving-golf-cart/build/path_planning
@@ -793,7 +793,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=16
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=15
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

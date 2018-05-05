@@ -31,6 +31,9 @@ Localization and some other features coming soon...
 
 Bon Voyage 😀
 
+## ROS
+This project is developed using ROS. For more information on that, please refer to the [README](./src/README.md) in the `./src` directory.
+
 ## Steering
 The algorithm behind the steering system is inspired by work done by [Nvidia](https://arxiv.org/pdf/1604.07316.pdf). We developed our own convolutional neural network to predict the steering angle based on images captured by the front camera. The hardware system is custom designed in-house. Here is a video demo.
 
@@ -67,7 +70,7 @@ We have completed phase 1 of the development process, which mainly includes:
 For the second phase of the development process, we will focus on making the system safer and more reliable. For details, please refer to the [CHECKLIST](./CHECKLIST.md)
 
 ## Contact / Info
-If you are interested in the detailed development process of this project, you can visit Neil's blog at [neilnie.com](neilnie.com) to find out more about it. Neil will make sure to keep you posted about all of the latest development on the club. 
+If you are interested in the detailed development process of this project, you can visit Neil's blog at [neilnie.com](neilnie.com) to find out more about it. Neil will make sure to keep you posted about all of the latest development on the club.
 
 **Developers:**
 
