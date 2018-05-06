@@ -1,26 +1,18 @@
-# Phase 2.2 (ROS Integration)
+# Phase 3
 
-## Todos (2.2.1):
-
-### Steering
-1. Transfer current system to ROS
-	- ~~Write a ROS steering node (publisher)~~
-	- ~~Update the Arduino program to ROS~~
-	- Test out the new steering system
-	- Test on the road 
-2. Visualization with rviz
-	- implement visualization with rvis --> MVP: camera feed & steering angle
-3. Multi-camera system improvement
-	
-### Data Collection
-1. ~~Write the data collector node~~
-2. ~~Write the ROS Arduino program~~
-3. ~~Test the functionalities~~
-4. Collection some data
+## Todos (3.0.0):
 
 ### Sensors
 1. Integrate GPS to ROS
 2. Maybe add rotary encoder to the rear wheel of the vehicle.
+
+### Localization
+1. implement localization with GPS
+2. localization with lidar (sensor fusion)
+3. Implement kalman filter & particle filter
+
+### Path Planning
+1. use localization & motion model for path planning
 
 ### Others
 1. Write a driver node that acts like a master launcher

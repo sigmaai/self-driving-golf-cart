@@ -1,8 +1,0 @@
-prefix=/home/yongyang/Workspace/self-driving-golf-cart/devel
-
-Name: test_osm
-Description: Description of test_osm
-Version: 0.2.4
-Cflags: 
-Libs: -L/home/yongyang/Workspace/self-driving-golf-cart/devel/lib 
-Requires: osm_cartography geodesy geographic_msgs route_network

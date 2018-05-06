@@ -45,11 +45,12 @@ def nmea_sentence_callback(nmea_sentence, driver):
         rospy.logwarn("Value error, likely due to missing fields in the NMEA message. Error was: %s. Please report this issue at github.com/ros-drivers/nmea_navsat_driver, including a bag file with the NMEA sentences that caused it." % e)
 
 if __name__ == '__main__':
+	
     rospy.init_node('nmea_topic_driver')
 
     driver = libnmea_navsat_driver.driver.RosNMEADriver()
 
-    rospy.Subscriber("nmea_sentence", Sentence, nmea_sentence_callback,
+    rospy.Subscriber("/sensor/gps/nmea_sentence", Sentence, nmea_sentence_callback,
             driver)
 
     rospy.spin()
