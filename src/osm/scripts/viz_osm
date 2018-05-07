@@ -160,8 +160,7 @@ class VizNode():
                bridge, tunnel, amenity, etc.
         """
         index = 0
-        for feature in itertools.ifilter(predicate,
-                                         self.map.features):
+        for feature in itertools.ifilter(predicate, self.map.features):
             marker = Marker(header = self.map.header,
                             ns = namespace,
                             id = index,
@@ -245,6 +244,7 @@ def main():
     try:
         rospy.spin()
     except rospy.ROSInterruptException: pass
+
 
 if __name__ == '__main__':
     # run main function and exit

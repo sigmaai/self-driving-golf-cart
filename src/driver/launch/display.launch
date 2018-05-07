@@ -14,10 +14,10 @@
 
     <!-- transformation node --> 
   <node pkg="tf" type="static_transform_publisher" name="local_map_tf"
-      args="696424.7 4713196.4 0 0 0 0 1 map local_map 100" />
+      args="696400.1 4713254.8 0 0 0 0 1 map local_map 30" />
 
-  <node pkg="tf" type="static_transform_publisher" name="map_robot_tf"
-    args="0 0 0 0 0 0 1 local_map base_link 100" />
+<!--   <node pkg="tf" type="static_transform_publisher" name="map_robot_tf"
+    args="0 0 0 0 0 0 1 local_map base_link 100" /> -->
         
   <arg name="url" default="package://osm_cartography/maps/deerfield.osm" />
 
@@ -27,6 +27,10 @@
   <node pkg="osm_cartography" type="viz_osm" name="viz_osm" >
     <param name="map_url" value="$(arg url)" />
   </node>
+
+  <!-- <node pkg="driver" type="move.py"
+          name="broadcaster_dynamic" /> -->
+          
 
   <!-- ==================== launch rviz ======================    -->
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
