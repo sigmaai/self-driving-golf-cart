@@ -1,8 +1,8 @@
-# Install script for directory: /home/neil/Workspace/self-driving-golf-cart/src/detection/tl_detection
+# Install script for directory: /home/yongyang/Workspace/self-driving-golf-cart/src/detection/tl_detection
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/neil/Workspace/self-driving-golf-cart/install")
+  set(CMAKE_INSTALL_PREFIX "/home/yongyang/Workspace/self-driving-golf-cart/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,17 +33,17 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/build/detection/tl_detection/catkin_generated/installspace/tl_detection.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yongyang/Workspace/self-driving-golf-cart/build/detection/tl_detection/catkin_generated/installspace/tl_detection.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tl_detection/cmake" TYPE FILE FILES
-    "/home/neil/Workspace/self-driving-golf-cart/build/detection/tl_detection/catkin_generated/installspace/tl_detectionConfig.cmake"
-    "/home/neil/Workspace/self-driving-golf-cart/build/detection/tl_detection/catkin_generated/installspace/tl_detectionConfig-version.cmake"
+    "/home/yongyang/Workspace/self-driving-golf-cart/build/detection/tl_detection/catkin_generated/installspace/tl_detectionConfig.cmake"
+    "/home/yongyang/Workspace/self-driving-golf-cart/build/detection/tl_detection/catkin_generated/installspace/tl_detectionConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tl_detection" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/src/detection/tl_detection/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tl_detection" TYPE FILE FILES "/home/yongyang/Workspace/self-driving-golf-cart/src/detection/tl_detection/package.xml")
 endif()
 

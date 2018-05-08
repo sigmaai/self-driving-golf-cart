@@ -3,19 +3,23 @@
 
 ## Introduction
 
-We wanted to build a self driving car. We didn't build an actual car, but we built a golf cart, and wrote a system that can work on a real car as well. 
+We wanted to build a self driving car. We didn't build an actual car, but we are building a self-driving golf cart and wrote a system that can work on a real car as well. For the full documentation of the development process, please visit:  [neilnie.com](neilnie.com)
 
-Here are the modules in this project.
+## Goals:
+1. Research and develop a deep learning driven self-driving car.
+2. The vehicle should be able to navigate from point A to point B autonomously within a geofenced area.
 
-1. Behavioral cloning
+#### Here are the modules in this project.
+
+1. Autonmous steering (Behavioral cloning)
 2. Semantic segmentation
-3. Driver by wire system (DBW) 
+3. Driver by wire system (DBW)
 4. Object detection 🚙
 5. Traffic light detection 🚦
 6. Lane Detection 🛣
-7. Path planning
+7. Localization 🛰️ (currently with GPS)
 
-Localization and some other features coming soon...
+Path planning is coming soon...
 
 ## Running the code
 1. Please download/clone the repository.
@@ -32,7 +36,7 @@ Localization and some other features coming soon...
 Bon Voyage 😀
 
 ## ROS
-This project is developed using ROS. For more information on that, please refer to the [README](./src/README.md) in the `./src` directory.
+This project is being developed using ROS. The launch files will launch the neccesary nodes as well as rviz for visualization. For more information on ROS, nodes, topics and others please refer to the [README](./src/README.md) in the `./src` directory.
 
 ## Steering
 The algorithm behind the steering system is inspired by work done by [Nvidia](https://arxiv.org/pdf/1604.07316.pdf). We developed our own convolutional neural network to predict the steering angle based on images captured by the front camera. The hardware system is custom designed in-house. Here is a video demo.
@@ -42,42 +46,62 @@ The algorithm behind the steering system is inspired by work done by [Nvidia](ht
 
 
 ## Autonomous Cruise Control System (ACCS)
-### Semantic Segmentation
+
+#### Semantic Segmentation
 
 <img src="./media/seg.png" alt="Drawing" width="480"/>
 
+The cart understands the surrounding  through semantic segmentation, which is a technique in computer that classifies each pixel in an image. The vehicle can also make decisions based on the segmentic segmentation results. The cart can change its speed based on the proximity to nearby obstacles.
 
-The cart understands the world around through segmentation. It also makes decisions based on the segmentic segmentation results. The vehicle can change its speed based on the proximity to nearby obstacles. 
+We deployed the ENet architecture for segmentation. ENet is design to work well in realtime applications. For more information, please visit the [paper](http://arxiv.org/pdf/1606.02147.pdf). We used the CityScape dataset for training and the python code for training and inferencing are located in the `./src/segmentation/scripts` directory. 
 
 [![IMAGE ALT TEXT HERE](https://i.ytimg.com/vi/_y2RCakRrc4/hqdefault.jpg)](https://www.youtube.com/watch?v=_y2RCakRrc4)
 
+## Localization
+
+Currently, the localization module uses GPS (Global Positioning System) to find the precise location of the vehicle. However, GPS is far from enough. Localization using lidar and radar (sensor fusion and particle filters) are currently under development.
+
+![](./media/gps-loc.png)
+
+Furthermore, we are relying on OSM (Open Street Map) data for navigation. OSM maps provide detailed information about the paths, buildings and other landmarks in the surrounding. Currently, navigation is only limited to a geofenced area.
 
 ## Path Planning
 
 Coming soon...
 
-## Localization
+## What's next?
 
-Coming soon...
+#### Phase 1
 
-## Development process
 We have completed phase 1 of the development process, which mainly includes:
 
-- Implementing control-by-wire system. (hardware)
-- Implement the autonomous steering system.
-- Implement the obstacle avoidance system. 
+- Drive-by-wire system.
+- Autonomous steering system with deep learning
+- Basic obstacle avoidance system using segmentation & detection
 
-For the second phase of the development process, we will focus on making the system safer and more reliable. For details, please refer to the [CHECKLIST](./CHECKLIST.md)
+As you might have realized, all of these above is focused on computer vision and deep learning. Currently, the vehicle can navigate autonmously in a controlled outdoor environment for about 1000 feets, swiftly avoiding obstacles and stopping for pedistrians.
+
+#### Phase 2
+
+For the second phase of the development process, we will focus on making the system safer and more reliable. Basic plans include:
+
+- Implement a localization system.
+- Write a path planner.
+- Collect more data in our geofenced enviroment. ☑️
+- Improve the computing system. ☑️
+- Improve the sensor system.
+
+We are keeping track of all our progress here [CHECKLIST](./CHECKLIST.md). 
 
 ## Contact / Info
 If you are interested in the detailed development process of this project, you can visit Neil's blog at [neilnie.com](neilnie.com) to find out more about it. Neil will make sure to keep you posted about all of the latest development on the club.
 
 **Developers:**
 
-<img src="./media/neil_profile.jpg" alt="Drawing" width="100"/>
+<img src="./media/neil.png" alt="Drawing" width="100"/>
 
 **Neil (Yongyang) Nie** | [Email](mailto:yongyang.nie@gmail.com) | [Github](https://www.github.com/NeilNie) | [Website](neilnie.com) | [Linkedin](https://www.linkedin.com/in/yongyang-neil-nie-896204118/)
 
-<img src="./media/michael_profile.jpg" alt="Drawing" width="100"/>
+<img src="./media/michael.png" alt="Drawing" width="100"/>
 
 **Michael Meng** | [Email](mailto:xmeng18@deerfield.edu) | [Github](https://github.com/xmeng17)
