@@ -1,8 +1,8 @@
-# Install script for directory: /home/yongyang/Workspace/self-driving-golf-cart/src/osm
+# Install script for directory: /home/neil/Workspace/self-driving-golf-cart/src/osm
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/yongyang/Workspace/self-driving-golf-cart/install")
+  set(CMAKE_INSTALL_PREFIX "/home/neil/Workspace/self-driving-golf-cart/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,41 +33,41 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  include("/home/yongyang/Workspace/self-driving-golf-cart/build/osm/catkin_generated/safe_execute_install.cmake")
+  include("/home/neil/Workspace/self-driving-golf-cart/build/osm/catkin_generated/safe_execute_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/osm_cartography" TYPE FILE FILES "/home/yongyang/Workspace/self-driving-golf-cart/devel/include/osm_cartography/VizOSMConfig.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/osm_cartography" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/devel/include/osm_cartography/VizOSMConfig.h")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  execute_process(COMMAND "/usr/bin/python" -m compileall "/home/yongyang/Workspace/self-driving-golf-cart/devel/lib/python2.7/dist-packages/osm_cartography/cfg")
+  execute_process(COMMAND "/usr/bin/python" -m compileall "/home/neil/Workspace/self-driving-golf-cart/devel/lib/python2.7/dist-packages/osm_cartography/cfg")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages/osm_cartography" TYPE DIRECTORY FILES "/home/yongyang/Workspace/self-driving-golf-cart/devel/lib/python2.7/dist-packages/osm_cartography/cfg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages/osm_cartography" TYPE DIRECTORY FILES "/home/neil/Workspace/self-driving-golf-cart/devel/lib/python2.7/dist-packages/osm_cartography/cfg")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yongyang/Workspace/self-driving-golf-cart/build/osm/catkin_generated/installspace/osm_cartography.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/build/osm/catkin_generated/installspace/osm_cartography.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/osm_cartography/cmake" TYPE FILE FILES
-    "/home/yongyang/Workspace/self-driving-golf-cart/build/osm/catkin_generated/installspace/osm_cartographyConfig.cmake"
-    "/home/yongyang/Workspace/self-driving-golf-cart/build/osm/catkin_generated/installspace/osm_cartographyConfig-version.cmake"
+    "/home/neil/Workspace/self-driving-golf-cart/build/osm/catkin_generated/installspace/osm_cartographyConfig.cmake"
+    "/home/neil/Workspace/self-driving-golf-cart/build/osm/catkin_generated/installspace/osm_cartographyConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/osm_cartography" TYPE FILE FILES "/home/yongyang/Workspace/self-driving-golf-cart/src/osm/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/osm_cartography" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/src/osm/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/osm_cartography" TYPE DIRECTORY FILES "/home/yongyang/Workspace/self-driving-golf-cart/src/osm/scripts/" USE_SOURCE_PERMISSIONS)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/osm_cartography" TYPE DIRECTORY FILES "/home/neil/Workspace/self-driving-golf-cart/src/osm/scripts/" USE_SOURCE_PERMISSIONS)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/osm_cartography/launch" TYPE DIRECTORY FILES "/home/yongyang/Workspace/self-driving-golf-cart/src/osm/launch/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/osm_cartography/launch" TYPE DIRECTORY FILES "/home/neil/Workspace/self-driving-golf-cart/src/osm/launch/")
 endif()
 

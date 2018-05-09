@@ -1,8 +1,8 @@
-prefix=/home/yongyang/Workspace/self-driving-golf-cart/install
+prefix=/home/neil/Workspace/self-driving-golf-cart/install
 
 Name: lane_detection
 Description: Description of lane_detection
 Version: 0.0.0
 Cflags: 
-Libs: -L/home/yongyang/Workspace/self-driving-golf-cart/install/lib 
+Libs: -L/home/neil/Workspace/self-driving-golf-cart/install/lib 
 Requires: 

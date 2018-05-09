@@ -7,4 +7,8 @@
 # new environment variables
 
 # modified environment variables
-export PWD="/home/yongyang/Workspace/self-driving-golf-cart/build"
+export CMAKE_PREFIX_PATH="/home/neil/Workspace/self-driving-golf-cart/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/opt/ros/kinetic/lib:/opt/ros/kinetic/lib/x86_64-linux-gnu:/usr/local/cuda-9.0/lib64"
+export PWD="/home/neil/Workspace/self-driving-golf-cart/build"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/neil/Workspace/self-driving-golf-cart/devel/share/common-lisp"
+export ROS_PACKAGE_PATH="/home/neil/Workspace/self-driving-golf-cart/src:$ROS_PACKAGE_PATH"

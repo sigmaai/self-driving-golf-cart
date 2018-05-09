@@ -1,8 +1,0 @@
-prefix=/home/yongyang/Workspace/self-driving-golf-cart/devel
-
-Name: rviz_satellite
-Description: Description of rviz_satellite
-Version: 0.0.2
-Cflags: 
-Libs: -L/home/yongyang/Workspace/self-driving-golf-cart/devel/lib 
-Requires: nav_msgs sensor_msgs

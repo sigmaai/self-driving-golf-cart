@@ -1,8 +1,8 @@
-# Install script for directory: /home/yongyang/Workspace/self-driving-golf-cart/src/data_logger
+# Install script for directory: /home/neil/Workspace/self-driving-golf-cart/src/data_logger
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/yongyang/Workspace/self-driving-golf-cart/install")
+  set(CMAKE_INSTALL_PREFIX "/home/neil/Workspace/self-driving-golf-cart/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,17 +33,17 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yongyang/Workspace/self-driving-golf-cart/build/data_logger/catkin_generated/installspace/data_logger.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/build/data_logger/catkin_generated/installspace/data_logger.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/data_logger/cmake" TYPE FILE FILES
-    "/home/yongyang/Workspace/self-driving-golf-cart/build/data_logger/catkin_generated/installspace/data_loggerConfig.cmake"
-    "/home/yongyang/Workspace/self-driving-golf-cart/build/data_logger/catkin_generated/installspace/data_loggerConfig-version.cmake"
+    "/home/neil/Workspace/self-driving-golf-cart/build/data_logger/catkin_generated/installspace/data_loggerConfig.cmake"
+    "/home/neil/Workspace/self-driving-golf-cart/build/data_logger/catkin_generated/installspace/data_loggerConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/data_logger" TYPE FILE FILES "/home/yongyang/Workspace/self-driving-golf-cart/src/data_logger/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/data_logger" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/src/data_logger/package.xml")
 endif()
 

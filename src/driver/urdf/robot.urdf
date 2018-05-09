@@ -1,5 +1,18 @@
 <robot name="Alan-v2">
 
+  <material name="Black">
+    <color rgba="0.0 0.0 0.0 1.0"/>
+  </material>
+  <material name="Red">
+    <color rgba="0.8 0.0 0.0 1.0"/>
+  </material>
+  <material name="White">
+    <color rgba="1.0 1.0 1.0 1.0"/>
+  </material>
+  <material name="Blue">
+    <color rgba="0.0 0.0 0.8 1.0"/>
+  </material>
+
   <!--.................................................................
     ...........................links.................................
     .................................................................
@@ -13,6 +26,7 @@
           <geometry>
             <mesh filename="package://driver/meshes/chassis-subassem.stl" scale="0.001 0.001 0.001"/>
           </geometry>
+          <material name="White"/>
       </visual>
     </link>
 
@@ -22,6 +36,7 @@
           <geometry>
             <mesh filename="package://driver/meshes/steering_subassem.stl" scale="0.001 0.001 0.001"/>
           </geometry>
+          <material name="White"/>
       </visual>
     </link>
 
@@ -31,6 +46,7 @@
           <geometry>
             <mesh filename="package://driver/meshes/fr_wheel.stl" scale="0.001 0.001 0.001"/>
           </geometry>
+          <material name="Black"/>
       </visual>
     </link>
 
@@ -40,6 +56,7 @@
           <geometry>
             <mesh filename="package://driver/meshes/fl_wheel.stl" scale="0.001 0.001 0.001"/>
           </geometry>
+          <material name="Black"/>
       </visual>
     </link>
 
@@ -49,6 +66,7 @@
           <geometry>
             <mesh filename="package://driver/meshes/rr_wheel.stl" scale="0.001 0.001 0.001"/>
           </geometry>
+          <material name="Black"/>
       </visual>
     </link>
 
@@ -58,6 +76,7 @@
           <geometry>
             <mesh filename="package://driver/meshes/rl_wheel.stl" scale="0.001 0.001 0.001"/>
           </geometry>
+          <material name="Black"/>
       </visual>
     </link>
 
@@ -69,47 +88,31 @@
     -->
     
 
-
     <joint name="body_to_steering" type="fixed">
         <parent link="base_link"/>
         <child link="steering_subassem"/>
         <origin xyz="0 0 0"/>
     </joint>
 
-<!--
-    <joint name="body_to_frw" type="floating">
-        <parent link="base_link"/>
-        <child link="steering_wheel_fr"/>
-        <origin xyz="0 0 0"/>
-    </joint>
-
-    <joint name="body_to_flw" type="floating">
-        <parent link="base_link"/>
-        <child link="steering_wheel_fl"/>
-        <origin xyz="0 0 0"/>
-    </joint>
-
--->
-
-    <joint name="body_to_rrw" type="continuous">
+    <joint name="body_to_rrw" type="fixed">
         <parent link="base_link"/>
         <child link="steering_wheel_rr"/>
         <origin xyz="0.0 0 0"/>
     </joint>
 
-    <joint name="body_to_rlw" type="continuous">
+    <joint name="body_to_rlw" type="fixed">
         <parent link="base_link"/>
         <child link="steering_wheel_rl"/>
         <origin xyz="0 0 0"/>
     </joint>
 
-    <joint name="frw_to_steering" type="continuous">
+    <joint name="frw_to_steering" type="fixed">
         <parent link="steering_subassem"/>
         <child link="steering_wheel_fr"/>
         <origin xyz="0 0 0"/>
     </joint>
 
-    <joint name="flw_to_steering" type="continuous">
+    <joint name="flw_to_steering" type="fixed">
         <parent link="steering_subassem"/>
         <child link="steering_wheel_fl"/>
         <origin xyz="0 0 0"/>

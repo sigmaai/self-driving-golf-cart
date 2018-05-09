@@ -1,38 +1,23 @@
+#
+# training utils
+# helper methods for training deep learning models
+# By Neil Nie
+# (c) Yongyang Nie, 2018. All Rights Reserved
+# Contact: contact@neilnie.com
+#
+#
+
 import cv2
 import numpy as np
 import pandas as pd
-from src.steering_control.scripts.weights.training import configs as configs
+import configs as configs
 import os.path
+
 
 INPUT_SHAPE = (configs.image_height, configs.image_width, 3)
 
+
 # --------------HELPER-METHODS-------------- #
-
-
-def resize(image):
-    """
-    Resize the image to the input shape used by the network model
-    """
-    return cv2.resize(image, (configs.image_width, configs.image_height), cv2.INTER_AREA)
-
-
-def rgb2yuv(image):
-    """
-    Convert the image from RGB to YUV (This is what the NVIDIA model does)
-    """
-    return cv2.cvtColor(image, cv2.COLOR_RGB2YUV)
-
-
-def preprocess(image):
-    """
-    Combine all preprocess functions into one
-    """
-    # image = crop(image)
-    # image = image[53: 160, 0:320]
-    image = cv2.resize(image, (configs.image_width, configs.image_height))
-    # image = rgb2yuv(image)
-    return image
-
 
 def random_flip(image, steering_angle):
     """
@@ -45,12 +30,8 @@ def random_flip(image, steering_angle):
 
 
 def load_image(image_file):
-    """
-    Load RGB images from a file
-    """
+
     img = cv2.imread(image_file)
-    # removed the cropping part
-    #img = img[0:480, 0:640]
     img = cv2.resize(img, (configs.image_width, configs.image_height))
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     return img
@@ -146,9 +127,12 @@ def augument(img_path, steering_angle):
     return image, steering_angle
 
 
-# --------------MAIN-METHODS-------------- #
 
-def gather_self_dataset(dirs):
+# ----------------------------------------------------
+# gather the self-collected dataset
+# return a numpy array with all the datat and its path
+# ----------------------------------------------------
+def process_self_dataset(dirs):
 
     return_labels = None
 
@@ -164,13 +148,17 @@ def gather_self_dataset(dirs):
         else:
             return_labels = np.concatenate((labels, return_labels), axis=0)
 
-        print("one iteration finished")
+        print("%s finished loading", path)
 
     print(return_labels.shape)
     return return_labels
 
 
-def preprocess_dataset(dir1, dir2):
+# ----------------------------------------------------
+# gather the udacity dataset
+# return a numpy array with all the datat and its path
+# ----------------------------------------------------
+def preprocess_udacity_dataset(dir1, dir2):
 
     data1 = pd.read_csv(dir1 + "interpolated.csv").values
     data2 = pd.read_csv(dir2 + "interpolated.csv").values
@@ -266,25 +254,58 @@ def self_batch_generator(data, batch_size, is_training):
         yield images, steers
 
 
-def validation_generator(dir, data, batch_size):
+def validation_generator(dir, data, batch_size, ds_type):
     """
     Generate training image give image paths and associated steering angles
     """
     images = np.empty([batch_size, configs.image_height, configs.image_width, 3])
     steers = np.empty(batch_size)
 
-    while True:
+    if ds_type == 'SELF':
+
         i = 0
         for index in np.random.permutation(data.shape[0]):
+            center_path = str(data[index][2])
+            steering_angle = data[index][4]
 
-            path = dir + "center/" + str(data["frame_id"][i]) + ".jpg"
-            steering_angle = data["steering_angle"][1]
+            if os.path.isfile(center_path):
 
-            image = load_image(path)
-            images[i] = image
-            steers[i] = steering_angle
-            i += 1
-            if i == batch_size:
-                break
+                image = load_image(center_path)
+                images[i] = image
+                steers[i] = steering_angle
+                i += 1
+                if i == batch_size:
+                    break
+            else:
+                print("image missing at path: " + center_path)
+                center_path = str(data[0][2])
+                steering_angle = data[0][4]
+                image = load_image(center_path)
+                # add the image and steering angle to the batch
+                images[i] = image
+                steers[i] = steering_angle
 
         yield images, steers
+
+    elif ds_type == 'UDAT':
+
+        while True:
+            i = 0
+            for index in np.random.permutation(data.shape[0]):
+
+                path = dir + "center/" + str(data["frame_id"][i]) + ".jpg"
+                steering_angle = data["steering_angle"][1]
+
+                image = load_image(path)
+                images[i] = image
+                steers[i] = steering_angle
+                i += 1
+                if i == batch_size:
+                    break
+
+            yield images, steers
+    else:
+        raise Exception("Unknown dataset type")
+
+
+

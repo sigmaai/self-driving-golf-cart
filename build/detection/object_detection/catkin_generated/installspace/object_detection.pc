@@ -1,8 +1,8 @@
-prefix=/home/yongyang/Workspace/self-driving-golf-cart/install
+prefix=/home/neil/Workspace/self-driving-golf-cart/install
 
 Name: object_detection
 Description: Description of object_detection
 Version: 0.0.0
-Cflags: -I/home/yongyang/Workspace/self-driving-golf-cart/install/include
-Libs: -L/home/yongyang/Workspace/self-driving-golf-cart/install/lib 
+Cflags: -I/home/neil/Workspace/self-driving-golf-cart/install/include
+Libs: -L/home/neil/Workspace/self-driving-golf-cart/install/lib 
 Requires: 

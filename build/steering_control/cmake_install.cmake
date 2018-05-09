@@ -1,8 +1,8 @@
-# Install script for directory: /home/yongyang/Workspace/self-driving-golf-cart/src/steering_control
+# Install script for directory: /home/neil/Workspace/self-driving-golf-cart/src/steering_control
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/yongyang/Workspace/self-driving-golf-cart/install")
+  set(CMAKE_INSTALL_PREFIX "/home/neil/Workspace/self-driving-golf-cart/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,17 +33,17 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yongyang/Workspace/self-driving-golf-cart/build/steering_control/catkin_generated/installspace/steering_control.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/build/steering_control/catkin_generated/installspace/steering_control.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/steering_control/cmake" TYPE FILE FILES
-    "/home/yongyang/Workspace/self-driving-golf-cart/build/steering_control/catkin_generated/installspace/steering_controlConfig.cmake"
-    "/home/yongyang/Workspace/self-driving-golf-cart/build/steering_control/catkin_generated/installspace/steering_controlConfig-version.cmake"
+    "/home/neil/Workspace/self-driving-golf-cart/build/steering_control/catkin_generated/installspace/steering_controlConfig.cmake"
+    "/home/neil/Workspace/self-driving-golf-cart/build/steering_control/catkin_generated/installspace/steering_controlConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/steering_control" TYPE FILE FILES "/home/yongyang/Workspace/self-driving-golf-cart/src/steering_control/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/steering_control" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/src/steering_control/package.xml")
 endif()
 
