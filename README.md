@@ -35,6 +35,9 @@ Path planning is coming soon...
 
 Bon Voyage 😀
 
+## Simulation
+If you want to run the code inside the Carla self-driving simulator, please refer to this [documentation](./src/simulation/README.md).
+
 ## ROS
 This project is being developed using ROS. The launch files will launch the neccesary nodes as well as rviz for visualization. For more information on ROS, nodes, topics and others please refer to the [README](./src/README.md) in the `./src` directory.
 
@@ -61,7 +64,7 @@ We deployed the ENet architecture for segmentation. ENet is design to work well 
 
 Currently, the localization module uses GPS (Global Positioning System) to find the precise location of the vehicle. However, GPS is far from enough. Localization using lidar and radar (sensor fusion and particle filters) are currently under development.
 
-![](./media/gps-loc.png)
+<img src="./media/gps-loc.png" alt="Drawing" width="480"/>
 
 Furthermore, we are relying on OSM (Open Street Map) data for navigation. OSM maps provide detailed information about the paths, buildings and other landmarks in the surrounding. Currently, navigation is only limited to a geofenced area.
 
@@ -87,8 +90,8 @@ For the second phase of the development process, we will focus on making the sys
 
 - Implement a localization system.
 - Write a path planner.
-- Collect more data in our geofenced enviroment. ☑️
-- Improve the computing system. ☑️
+- Collect more data in our geofenced enviroment. ✅
+- Improve the computing system. ✅
 - Improve the sensor system.
 
 We are keeping track of all our progress here [CHECKLIST](./CHECKLIST.md). 
