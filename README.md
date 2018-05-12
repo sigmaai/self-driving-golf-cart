@@ -1,11 +1,11 @@
-<center><img src="./media/front_cover.png" alt="Drawing" style="width: 700;"/>
+<center><img src="./media/cover.png" alt="Drawing" style="width: 700;"/>
 </center>
 
 ## Introduction
 
-We wanted to build a self driving car. We didn't build an actual car, but we are building a self-driving golf cart and wrote a system that can work on a real car as well. For the full documentation of the development process, please visit:  [neilnie.com](neilnie.com)
+Welcome! This is an open source self-driving development platform aimed for rapid prototyping, deep learning and robotics research. The system currently runs on a modified electric golf cart, but the code could work on a real car as well. Here are our goals:
 
-## Goals:
+### Goals:
 1. Research and develop a deep learning driven self-driving car.
 2. The vehicle should be able to navigate from point A to point B autonomously within a geofenced area.
 
@@ -20,6 +20,8 @@ We wanted to build a self driving car. We didn't build an actual car, but we are
 7. Localization 🛰️ (currently with GPS)
 
 Path planning is coming soon...
+
+For the full documentation of the development process, please visit: [neilnie.com](neilnie.com)
 
 ## Running the code
 1. Please download/clone the repository.
@@ -101,10 +103,10 @@ If you are interested in the detailed development process of this project, you c
 
 **Developers:**
 
-<img src="./media/neil.png" alt="Drawing" width="100"/>
+<img src="./media/neil.png" alt="Drawing" width="80"/>
 
 **Neil (Yongyang) Nie** | [Email](mailto:yongyang.nie@gmail.com) | [Github](https://www.github.com/NeilNie) | [Website](neilnie.com) | [Linkedin](https://www.linkedin.com/in/yongyang-neil-nie-896204118/)
 
-<img src="./media/michael.png" alt="Drawing" width="100"/>
+<img src="./media/michael.png" alt="Drawing" width="80"/>
 
 **Michael Meng** | [Email](mailto:xmeng18@deerfield.edu) | [Github](https://github.com/xmeng17)
