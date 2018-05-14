@@ -22,13 +22,14 @@ def train(data_type="UDAT", model_type="Comma", load_weights=False, steps=1000, 
 
     # --------- check for dataset type ------------
     if data_type == "UDAT":
-        labels = utils.preprocess_udacity_dataset(configs.dir, configs.dir2) # , configs.dir3
+        labels = utils.preprocess_udacity_dataset(configs.dir, configs.dir2)
+        training_gen = utils.udacity_batch_generator(labels, 8, True)
     elif data_type == "SELF":
         labels = utils.process_self_dataset(configs.dataset_dirs)
+        training_gen = utils.self_batch_generator(labels, 8, True)
     else:
         raise Exception('Please enter a valid dataset type')
 
-    training_gen = utils.self_batch_generator(labels, 8, True)
 
     # --------- check for model type  -------------
     if model_type == "comma":
@@ -49,7 +50,7 @@ def train(data_type="UDAT", model_type="Comma", load_weights=False, steps=1000, 
         model.load_weights(configs.train_model_path)
     model.summary()
 
-    if visualize == True:
+    if visualize:
         images, steerings = next(training_gen)
         for i in range(len(images)):
             img = images[i]

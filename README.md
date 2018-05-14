@@ -6,12 +6,12 @@
 Welcome! This is an open source self-driving development platform aimed for rapid prototyping, deep learning and robotics research. The system currently runs on a modified electric golf cart, but the code could work on a real car as well. Here are our goals:
 
 ### Goals:
-1. Research and develop a deep learning driven self-driving car.
+1. Research and develop a deep learning-driven self-driving car.
 2. The vehicle should be able to navigate from point A to point B autonomously within a geofenced area.
 
 #### Here are the modules in this project.
 
-1. Autonmous steering (Behavioral cloning)
+1. Autonomous steering (Behavioral cloning)
 2. Semantic segmentation
 3. Driver by wire system (DBW)
 4. Object detection 🚙
@@ -84,7 +84,7 @@ We have completed phase 1 of the development process, which mainly includes:
 - Autonomous steering system with deep learning
 - Basic obstacle avoidance system using segmentation & detection
 
-As you might have realized, all of these above is focused on computer vision and deep learning. Currently, the vehicle can navigate autonmously in a controlled outdoor environment for about 1000 feets, swiftly avoiding obstacles and stopping for pedistrians.
+As you might have realized, all of these above are focused on computer vision and deep learning. Currently, the vehicle can navigate autonomously in a controlled outdoor environment for about 1000 feet, swiftly avoiding obstacles and stopping for pedistrians.
 
 #### Phase 2
 

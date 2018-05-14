@@ -139,9 +139,9 @@ def process_self_dataset(dirs):
     for path in dirs:
 
         labels = pd.read_csv(path + "/labels.csv").values
-        for i in range(len(labels)):
+        for i in range(1, len(labels)):
             # add the dataset dir to the image path
-            labels[i][2] = path + labels[i][2]
+            labels[i][0] = path + labels[i][0]
 
         if return_labels is None:
             return_labels = labels
@@ -188,7 +188,7 @@ def preprocess_udacity_dataset(dir1, dir2):
     return np.concatenate((labels1, labels2), axis=0)
 
 
-def batch_generator(data, batch_size, is_training):
+def udacity_batch_generator(data, batch_size, is_training):
     """
     Generate training image give image paths and associated steering angles
     """
@@ -226,8 +226,8 @@ def self_batch_generator(data, batch_size, is_training):
     while True:
         i = 0
         for index in np.random.permutation(data.shape[0]):
-            center_path = str(data[index][2])
-            steering_angle = data[index][4]
+            center_path = str(data[index][0])
+            steering_angle = data[index][2]
 
             if os.path.isfile(center_path):
                 # argumentation
@@ -244,8 +244,8 @@ def self_batch_generator(data, batch_size, is_training):
                     break
             else:
                 print(center_path)
-                center_path = str(data[0][2])
-                steering_angle = data[0][4]
+                center_path = str(data[0][0])
+                steering_angle = data[0][2]
                 image = load_image(center_path)
                 # add the image and steering angle to the batch
                 images[i] = image
@@ -278,8 +278,8 @@ def validation_generator(dir, data, batch_size, ds_type):
                     break
             else:
                 print("image missing at path: " + center_path)
-                center_path = str(data[0][2])
-                steering_angle = data[0][4]
+                center_path = str(data[0][0])
+                steering_angle = data[0][2]
                 image = load_image(center_path)
                 # add the image and steering angle to the batch
                 images[i] = image

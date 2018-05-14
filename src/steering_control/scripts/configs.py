@@ -7,7 +7,10 @@ dir2 = "/Volumes/Personal_Drive/Datasets/udacity-driving/dataset-1/"
 
 dataset_dirs = ["/home/neil/dataset/steering/train/part-1",
                 "/home/neil/dataset/steering/train/part-2",
-                "/home/neil/dataset/steering/train/part-3"]
+                "/home/neil/dataset/steering/train/part-3",
+                "/home/neil/dataset/steering/train/part-4",
+                "/home/neil/dataset/steering/train/part-5"
+                ]
 val_dir = "/home/neil/dataset/steering/val"
 # ---------------------------------------------------------------------------------
 
