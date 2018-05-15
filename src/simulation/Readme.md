@@ -1,7 +1,12 @@
 
-# ROS for Carla simulator
+# Ros bridge for Carla simulator
 
 This ros package aims at providing a simple ros bridge for carla simulator.
+
+![rviz setup](./assets/rviz_carla_default.png "rviz")
+![depthcloud](./assets/depth_cloud_and_lidar.png "depthcloud")
+
+![short video](https://youtu.be/S_NoN2GBtdY)
 
 
 # Features/Roadmap/TODO
@@ -15,6 +20,9 @@ This ros package aims at providing a simple ros bridge for carla simulator.
 - [x] Rosbag in the bridge (in order to avoid rosbag recoard -a small time errors)
 - [x] Handle ros dependencies
 - [x] Marker/bounding box messages for cars/pedestrian
+- [ ] Better looking color map for segmentation
+- [ ] Support dynamic change (restarting simulation using a topic/rosparam)
+
 
 # Setup
 
@@ -25,17 +33,22 @@ This ros package aims at providing a simple ros bridge for carla simulator.
 ## Install carla python client in your workspace
 
     cd carla/PythonClient
-    sudo pip install .   
+    pip install -e .  --user --upgrade   
 
-now in a python2.7 terminal you should be able to do
+    now in a python2.7 terminal you should be able to do
 
     import carla
 
-## Create a catkin workspace and install carla\_ros\_bridge package
+## Create a catkin workspace and install carla_ros_bridge package
 
+    source /opt/ros/kinetic/setup.bash
+    mkdir -p ~/catkin_ws/src 
+    ln -s ~/carla/carla_ros_bridge/ ~/catkin_ws/src/
+    cd ~/catkin_ws
     catkin_make 
     rosdep install --from-paths ~/catkin_ws/ 
     catkin_make 
+    
     
 # Start the ros bridge
 
@@ -45,7 +58,7 @@ First run the simulator (see carla documentation)
 
 Then start the ros bridge:
 
-    source devel/setup.bash
+    source ~/catkin_ws/devel/setup.bash
     roslaunch carla_ros_bridge client.launch
     
 To start the ros bridge with rviz use:

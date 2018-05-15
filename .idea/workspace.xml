@@ -2,12 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76f9b933-0bfc-4cf1-b884-ca824d20e8ef" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/self-driving-golf-cart.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/self-driving-golf-cart.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/configs.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/steering_control/scripts/configs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/steering_control/scripts/train.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/steering_control/scripts/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cv_camera/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cv_camera/CHANGELOG.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cv_camera/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cv_camera/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cv_camera/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cv_camera/cv_camera_nodelets.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cv_camera/include/cv_camera/capture.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cv_camera/include/cv_camera/driver.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cv_camera/include/cv_camera/exception.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cv_camera/package.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cv_camera/src/capture.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cv_camera/src/cv_camera_node.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cv_camera/src/cv_camera_nodelet.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cv_camera/src/driver.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cv_camera/test/capture.avi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cv_camera/test/cv_camera.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cv_camera/test/no_yaml.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cv_camera/test/sample.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cv_camera/test/test_cv_camera.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cv_camera/test/test_cv_camera_no_yaml.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gps/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gps/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gps/launch/gps.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gps/package.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gps/scripts/gps_receiver" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gps/scripts/nmea_topic_driver" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gps/scripts/nmea_topic_serial_reader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gps/setup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gps/src/libnmea_navsat_driver/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gps/src/libnmea_navsat_driver/checksum_utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gps/src/libnmea_navsat_driver/driver.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gps/src/libnmea_navsat_driver/parser.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/simulation/config/settings.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/simulation/config/settings.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,11 +49,11 @@
     <SUITE FILE_PATH="coverage/self_driving_golf_cart$test_detection.coverage" NAME="test_detection Coverage Results" MODIFIED="1523407579643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="train.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
+            <state relative-caret-position="705">
               <caret line="52" column="17" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
             </state>
           </provider>
@@ -152,10 +179,10 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="2048" />
-    <option name="height" value="1129" />
+    <option name="width" value="1440" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -314,7 +341,7 @@
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32948717" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.25897437" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32914573" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18669528" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18884121" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" weight="0.43919885" />
@@ -334,24 +361,24 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19507453" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32948717" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.25897437" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32948717" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.3297568" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32948717" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -508,7 +535,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
+        <state relative-caret-position="705">
           <caret line="52" column="17" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
         </state>
       </provider>
