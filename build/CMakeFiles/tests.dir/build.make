@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yongyang/Workspace/self-driving-golf-cart/src
+CMAKE_SOURCE_DIR = /home/neil/Workspace/self-driving-golf-cart/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yongyang/Workspace/self-driving-golf-cart/build
+CMAKE_BINARY_DIR = /home/neil/Workspace/self-driving-golf-cart/build
 
 # Utility rule file for tests.
 
@@ -67,6 +67,6 @@ CMakeFiles/tests.dir/clean:
 .PHONY : CMakeFiles/tests.dir/clean
 
 CMakeFiles/tests.dir/depend:
-	cd /home/yongyang/Workspace/self-driving-golf-cart/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yongyang/Workspace/self-driving-golf-cart/src /home/yongyang/Workspace/self-driving-golf-cart/src /home/yongyang/Workspace/self-driving-golf-cart/build /home/yongyang/Workspace/self-driving-golf-cart/build /home/yongyang/Workspace/self-driving-golf-cart/build/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/neil/Workspace/self-driving-golf-cart/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/neil/Workspace/self-driving-golf-cart/src /home/neil/Workspace/self-driving-golf-cart/src /home/neil/Workspace/self-driving-golf-cart/build /home/neil/Workspace/self-driving-golf-cart/build /home/neil/Workspace/self-driving-golf-cart/build/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/tests.dir/depend
 

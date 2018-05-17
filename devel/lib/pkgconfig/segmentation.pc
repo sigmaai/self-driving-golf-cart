@@ -1,8 +1,8 @@
-prefix=/home/yongyang/Workspace/self-driving-golf-cart/devel
+prefix=/home/neil/Workspace/self-driving-golf-cart/devel
 
 Name: segmentation
 Description: Description of segmentation
 Version: 0.0.0
 Cflags: 
-Libs: -L/home/yongyang/Workspace/self-driving-golf-cart/devel/lib 
+Libs: -L/home/neil/Workspace/self-driving-golf-cart/devel/lib 
 Requires: 

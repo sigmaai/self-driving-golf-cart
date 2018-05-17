@@ -530,7 +530,6 @@ class CarlaRosBridgeWithBag(CarlaRosBridge):
         super(CarlaRosBridgeWithBag, self).__exit__(exc_type, exc_value, traceback)
 
 
-
 def main():
     rospy.init_node("carla_client", anonymous=True)
 
