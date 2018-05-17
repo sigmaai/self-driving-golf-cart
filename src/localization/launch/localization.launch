@@ -1,0 +1,7 @@
+<launch>
+
+    <node pkg="gps" type="gps_receiver" name="gps_receiver" />
+
+    <node pkg="localization" type="gps_localization.py" name="gps_localization" />
+
+</launch>

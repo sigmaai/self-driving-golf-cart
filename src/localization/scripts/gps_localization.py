@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-#
+
 # basic localization script for locating
 # the robot in rviz based on GPS data
 #
@@ -13,7 +13,6 @@ import geodesy.utm
 import geodesy.wu_point
 import geodesy
 from sensor_msgs.msg import NavSatFix
-import math
 
 
 class GPSLocalization():

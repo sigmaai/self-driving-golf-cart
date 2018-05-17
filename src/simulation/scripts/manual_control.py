@@ -33,27 +33,20 @@ import logging
 import random
 import time
 
-try:
-    import pygame
-    from pygame.locals import K_DOWN
-    from pygame.locals import K_LEFT
-    from pygame.locals import K_RIGHT
-    from pygame.locals import K_SPACE
-    from pygame.locals import K_UP
-    from pygame.locals import K_a
-    from pygame.locals import K_d
-    from pygame.locals import K_p
-    from pygame.locals import K_q
-    from pygame.locals import K_r
-    from pygame.locals import K_s
-    from pygame.locals import K_w
-except ImportError:
-    raise RuntimeError('cannot import pygame, make sure pygame package is installed')
-
-try:
-    import numpy as np
-except ImportError:
-    raise RuntimeError('cannot import numpy, make sure numpy package is installed')
+import pygame
+from pygame.locals import K_DOWN
+from pygame.locals import K_LEFT
+from pygame.locals import K_RIGHT
+from pygame.locals import K_SPACE
+from pygame.locals import K_UP
+from pygame.locals import K_a
+from pygame.locals import K_d
+from pygame.locals import K_p
+from pygame.locals import K_q
+from pygame.locals import K_r
+from pygame.locals import K_s
+from pygame.locals import K_w
+import numpy as np
 
 from carla import image_converter
 from carla import sensor

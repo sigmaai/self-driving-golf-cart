@@ -2,16 +2,16 @@
 carla:
   host: localhost
   port: 2000
-  QualityLevel: Epic  # Low or Epic
-  SynchronousMode: True
+  QualityLevel: Low  # Low or Epic
+  SynchronousMode: False
 
   sensors:
     CameraRGB:
       SensorType: CAMERA
       carla_settings:
         PostProcessing: SceneFinal
-        ImageSizeX: 320
-        ImageSizeY: 240
+        ImageSizeX: 640
+        ImageSizeY: 480
         FOV: 90
         PositionX: 1.80
         PositionY: 0
@@ -34,15 +34,13 @@ carla:
         RotationRoll: 0
         RotationYaw: 0
 
-
-
-    lidar_0:
+    Lidar32:
       SensorType: LIDAR_RAY_CAST
       carla_settings:
-        Channels: 4
-        Range: 120
-        PointsPerSecond: 200000
-        RotationFrequency: 25
+        Channels: 32
+        Range: 50
+        PointsPerSecond: 100000
+        RotationFrequency: 10
         UpperFovLimit: 1.6
         LowerFovLimit: -1.6
         PositionX: 0.0
