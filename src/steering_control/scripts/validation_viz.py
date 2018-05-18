@@ -11,15 +11,26 @@ import cv2
 import pygame
 import pandas as pd
 from os import path
+import matplotlib
+import matplotlib.backends.backend_agg as agg
+import pylab
+from models import models
+import utils
+
+matplotlib.use("Agg")
 
 pygame.init()
-size = (320*2, 160*3)
+size = (320*2, 160*4)
 pygame.display.set_caption("self driving data viewer")
 screen = pygame.display.set_mode(size, pygame.DOUBLEBUF)
 screen.set_alpha(None)
 
 camera_surface = pygame.surface.Surface((640,480),0,24).convert()
 clock = pygame.time.Clock()
+
+PI_RAD = (180 / np.pi)
+red = (255, 0, 0)
+blue = (0, 0, 255)
 
 # ***** get perspective transform for images *****
 from skimage import transform as tf
@@ -61,8 +72,7 @@ def draw_pt(img, x, y, color, sz=2):
     row, col = perspective_tform(x, y)
     row = row * 2
     col = col * 2
-    if row >= 0 and row < img.shape[0] * 2 / 2 and \
-                    col >= 0 and col < img.shape[1] * 2 / 2:
+    if row >= 0 and row < img.shape[0] * 2 / 2 and col >= 0 and col < img.shape[1] * 2 / 2:
         img[int(row - sz):int(row + sz), int(col - sz):int(col + sz)] = color
 
 
@@ -94,24 +104,29 @@ def calc_lookahead_offset(v_ego, angle_steers, d_lookahead, angle_offset=0):
 
 
 def draw_path_on(img, speed_ms, angle_steers, color=(0, 0, 255)):
-    path_x = np.arange(0, 50.1, 0.5) #50.1
+    path_x = np.arange(0, 50.1, 0.5)  # 50.1
     path_y, _ = calc_lookahead_offset(speed_ms, angle_steers, path_x)
     draw_path(img, path_x, path_y, color)
 
 
 def preprocess_img(img):
-    
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     return img
+
+
 
 # ***** main loop *****
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description='Path viewer')
-    parser.add_argument('--dataset', type=str, help='path to the trained model')
+    parser.add_argument('--model', type=str, help='path to the trained model')
+    parser.add_argument('--dataset', type=str, help='dataset folder with csv and image folders')
     args = parser.parse_args()
 
     dataset_path = args.dataset
+    cnn = models.commaai_model()
+    cnn.load_weights(args.model)
+    cnn.summary()
 
     # steerings and images
     steering_labels = path.join(dataset_path, 'labels.csv')
@@ -119,13 +134,25 @@ if __name__ == "__main__":
     # read the steering labels and image path
     df_truth = pd.read_csv(steering_labels, usecols=['file_name', 'radian'], index_col=None)
 
-    blue = (0, 0, 255)
-    myFont = pygame.font.SysFont("monospace", 20)
-    randNumLabel = myFont.render('model steer Angle:', 1, blue)
+    # Create second screen with matplotlibs
+    fig = pylab.figure(figsize=[6.4, 1.6], dpi=100)
+    ax = fig.gca()
+    ax.tick_params(axis='x', labelsize=8)
+    ax.tick_params(axis='y', labelsize=8)
+    # ax.legend(loc='upper left',fontsize=8)
+    line1, = ax.plot([], [], 'b.-', label='Human')
+    line2, = ax.plot([], [], 'r.-', label='Model')
+    A = []
+    B = []
+    ax.legend(loc='upper left', fontsize=8)
+
+    myFont = pygame.font.SysFont("monospace", 18)
+    randNumLabel = myFont.render('Human Steer Angle:', 1, blue)
+    randNumLabel2 = myFont.render('Model Steer Angle:', 1, red)
     speed_ms = 5  # log['speed'][i]
 
     # Run through all images
-    for i in range(0, len(df_truth)):
+    for i in range(len(df_truth)):
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -134,26 +161,46 @@ if __name__ == "__main__":
         if i%100 == 0:
             print('%.2f seconds elapsed' % (i/20))
 
-        p = dataset_path + str(df_truth["file_name"][i])
+        p = dataset_path + df_truth['file_name'].loc[i]
 
-        if path.isfile(p) :
-            img = cv2.imread(p)
-            img = preprocess_img(img)
+        if path.isfile(p):
 
+            actual_steers = df_truth['radian'].loc[i] # * 0.1 - 8 * 0.0174533  # 1 degree right correction
 
-            actual_steers = df_truth['radian'].loc[i] * 0.1 - 8 * 0.0174533  # 1 degree right correction
+            img = cv2.cvtColor(cv2.imread(p), cv2.COLOR_BGR2RGB)
+            image = np.array([utils.load_image(p)])  # the model expects 4D array
+            prediction = cnn.predict(image)[0]
 
-            draw_path_on(img, speed_ms, actual_steers)
+            draw_path_on(img, speed_ms, actual_steers * 0.05)            # human is blue
+            draw_path_on(img, speed_ms, prediction * 0.05, (255, 0, 0))  # prediction is red
+
+            A.append(actual_steers)
+            B.append(prediction)
+            line1.set_ydata(A)
+            line1.set_xdata(range(len(A)))
+            line2.set_ydata(B)
+            line2.set_xdata(range(len(B)))
+            ax.relim()
+            ax.autoscale_view()
+
+            canvas = agg.FigureCanvasAgg(fig)
+            canvas.draw()
+            renderer = canvas.get_renderer()
+            raw_data = renderer.tostring_rgb()
+            size = canvas.get_width_height()
+            surf = pygame.image.fromstring(raw_data, size, "RGB")
+            screen.blit(surf, (0, 480))
 
             # draw on
             pygame.surfarray.blit_array(camera_surface, img.swapaxes(0, 1))
             screen.blit(camera_surface, (0, 0))
 
-            diceDisplay = myFont.render(str(actual_steers), 1, blue)
+            diceDisplay = myFont.render(str(round(actual_steers * PI_RAD, 4)), 1, blue)
+            diceDisplay2 = myFont.render(str(round(prediction[0] * PI_RAD, 4)), 1, red)
             screen.blit(randNumLabel, (50, 420))
+            screen.blit(randNumLabel2, (400, 420))
             screen.blit(diceDisplay, (50, 450))
+            screen.blit(diceDisplay2, (400, 450))
             clock.tick(60)
             pygame.display.flip()
-        else:
-            pass
 

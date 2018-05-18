@@ -9,13 +9,11 @@ import numpy as np
 from PIL import Image
 from PIL import ImageFont
 from PIL import ImageDraw
-import matplotlib
 from skimage import transform as tf
-import matplotlib.pyplot as plt
 from vis.visualization import visualize_cam
 import cv2
 
-# ros
+# ROS
 import rospy
 from sensor_msgs.msg import Image
 from std_msgs.msg import Float32
