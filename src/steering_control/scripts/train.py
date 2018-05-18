@@ -18,7 +18,7 @@ validation = True
 visualize = False
 
 
-def train(data_type="UDAT", model_type="Comma", load_weights=False, steps=1000, epochs=5, validation=False):
+def train(data_type="UDAT", model_type="Comma", load_weights=False, steps=3000, epochs=5, validation=False):
 
     # --------- check for dataset type ------------
     if data_type == "UDAT":
@@ -47,7 +47,7 @@ def train(data_type="UDAT", model_type="Comma", load_weights=False, steps=1000, 
 
     # -------- create the network or load weights -----
     if load_weights:
-        model.load_weights(configs.train_model_path)
+        model.load_weights(configs.model_path)
     model.summary()
 
     if visualize:
@@ -58,11 +58,12 @@ def train(data_type="UDAT", model_type="Comma", load_weights=False, steps=1000, 
             plt.show()
 
     if validation:
-        val_labels = pd.read_csv(configs.val_dir + "labels.csv")
-        validation_gen = utils.validation_generator(dir=configs.val_dir, data=val_labels, batch_size=8)
-        model.fit_generator(training_gen, steps_per_epoch=steps, epochs=epochs, verbose=1, validation_data=validation_gen, validation_steps=2000)
+        val_labels = utils.process_self_dataset([configs.val_dir])
+        validation_gen = utils.self_batch_generator(val_labels, 8, False)
+
+        model.fit_generator(training_gen, steps_per_epoch=steps, epochs=epochs, verbose=1, validation_data=validation_gen, validation_steps=600)
     else:
-        model.fit_generator(training_gen, steps_per_epoch=steps, epochs=epochs, verbose=1, validation_data=validation_gen, validation_steps=2000)
+        model.fit_generator(training_gen, steps_per_epoch=steps, epochs=epochs, verbose=1)
 
 
     # standard model naming scheme
@@ -70,9 +71,9 @@ def train(data_type="UDAT", model_type="Comma", load_weights=False, steps=1000, 
     # example:
     #         "str-cai-self-v1.h5"
 
-    model.save('str-cai-self-v1.h5')
+    model.save('str-cai-self-v3.h5')
 
 
 if __name__ == "__main__":
 
-    train(data_type="SELF", model_type="comma", epochs=3, load_weights=True, validation=True)
+    train(data_type="SELF", model_type="comma", epochs=5, load_weights=True, validation=True)

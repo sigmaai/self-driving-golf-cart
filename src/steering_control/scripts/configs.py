@@ -11,7 +11,7 @@ dataset_dirs = ["/home/neil/dataset/steering/train/part-1",
                 "/home/neil/dataset/steering/train/part-4",
                 "/home/neil/dataset/steering/train/part-5"
                 ]
-val_dir = "/home/neil/dataset/steering/val"
+val_dir = "/home/neil/dataset/steering/val/"
 # ---------------------------------------------------------------------------------
 
 # TRAINING
@@ -19,7 +19,8 @@ image_width = 320
 image_height = 160
 load_weights = True
 
-model_path = "./steering/weights/own/trained-cai-v6.h5"
+model_path = './str-cai-self-v2.h5'
+# model_path = "./weights/own/trained-cai-v6.h5"
 # model_path = "/Users/yongyangnie/Developer/self-driving-golf-cart/steering/weights/own/trained-cai-v6.h5"
 # model_path = "./steering/weights/training/str-cai-self-v2.h5"
 

@@ -40,6 +40,16 @@
       </visual>
     </link>
 
+    <link name="steering_col_subassem">
+      <visual>
+          <origin rpy="1.57079632679 0 0" xyz="0 0 0"/>
+          <geometry>
+            <mesh filename="package://driver/meshes/steering_col_subassem.stl" scale="0.001 0.001 0.001"/>
+          </geometry>
+          <material name="White"/>
+      </visual>
+    </link>
+
     <link name="steering_wheel_fr">
       <visual>
           <origin rpy="1.57079632679 0 0" xyz="0 0 0"/>
@@ -91,6 +101,12 @@
     <joint name="body_to_steering" type="fixed">
         <parent link="base_link"/>
         <child link="steering_subassem"/>
+        <origin xyz="0 0 0"/>
+    </joint>
+
+    <joint name="body_to_steering_col" type="fixed">
+        <parent link="base_link"/>
+        <child link="steering_col_subassem"/>
         <origin xyz="0 0 0"/>
     </joint>
 

@@ -9,7 +9,7 @@
 
 import numpy as np
 import cv2
-import models as models
+from models import models
 
 import rospy
 from sensor_msgs.msg import Image

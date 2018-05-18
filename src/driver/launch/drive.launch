@@ -10,5 +10,7 @@
 
     <!-- open rviz launch -->
     <include file="$(find driver)/launch/display.launch"/>
+
+    <include file="$(find steering_control)/launch/steering_control.launch"/>
     
 </launch>

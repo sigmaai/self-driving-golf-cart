@@ -33,7 +33,7 @@ For the full documentation of the development process, please visit: [neilnie.co
 7. `roscore`
 8. `roslaunch driver drive.launch`
 
-![](./media/screen-shot.png)
+![](./media/running.png)
 
 Bon Voyage 😀
 

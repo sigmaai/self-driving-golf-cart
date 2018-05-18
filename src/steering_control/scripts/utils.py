@@ -239,73 +239,50 @@ def self_batch_generator(data, batch_size, is_training):
 
                 images[i] = image
                 steers[i] = steering_angle
-                i += 1
-                if i == batch_size:
-                    break
             else:
-                print(center_path)
-                center_path = str(data[0][0])
-                steering_angle = data[0][2]
+                center_path = str(data[2][0])
+                steering_angle = data[2][2]
                 image = load_image(center_path)
                 # add the image and steering angle to the batch
                 images[i] = image
                 steers[i] = steering_angle
+            i += 1
+            if i == batch_size:
+                break
 
         yield images, steers
 
 
-def validation_generator(dir, data, batch_size, ds_type):
+
+def validation_generator(data, batch_size):
     """
     Generate training image give image paths and associated steering angles
     """
     images = np.empty([batch_size, configs.image_height, configs.image_width, 3])
     steers = np.empty(batch_size)
 
-    if ds_type == 'SELF':
-
+    while True:
         i = 0
         for index in np.random.permutation(data.shape[0]):
-            center_path = str(data[index][2])
-            steering_angle = data[index][4]
+            center_path = str(data[index][0])
+            steering_angle = data[index][2]
 
             if os.path.isfile(center_path):
-
                 image = load_image(center_path)
                 images[i] = image
                 steers[i] = steering_angle
-                i += 1
-                if i == batch_size:
-                    break
             else:
-                print("image missing at path: " + center_path)
-                center_path = str(data[0][0])
-                steering_angle = data[0][2]
+                center_path = str(data[2][0])
+                steering_angle = data[2][2]
                 image = load_image(center_path)
                 # add the image and steering angle to the batch
                 images[i] = image
                 steers[i] = steering_angle
+            i += 1
+            if i == batch_size:
+                break
 
         yield images, steers
-
-    elif ds_type == 'UDAT':
-
-        while True:
-            i = 0
-            for index in np.random.permutation(data.shape[0]):
-
-                path = dir + "center/" + str(data["frame_id"][i]) + ".jpg"
-                steering_angle = data["steering_angle"][1]
-
-                image = load_image(path)
-                images[i] = image
-                steers[i] = steering_angle
-                i += 1
-                if i == batch_size:
-                    break
-
-            yield images, steers
-    else:
-        raise Exception("Unknown dataset type")
 
 
 

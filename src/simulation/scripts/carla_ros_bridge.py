@@ -15,14 +15,13 @@ import rosbag
 import rospy
 import tf
 
-from carla.client import make_carla_client
 from carla.sensor import Camera, Lidar, LidarMeasurement, Image
 from carla.sensor import Transform as carla_Transform
 from carla.settings import CarlaSettings
 
 from ackermann_msgs.msg import AckermannDrive
 from cv_bridge import CvBridge
-from geometry_msgs.msg import TransformStamped, Transform, Pose
+from geometry_msgs.msg import TransformStamped
 from rosgraph_msgs.msg import Clock
 from sensor_msgs.msg import Image as RosImage
 from sensor_msgs.msg import PointCloud2, CameraInfo
@@ -131,6 +130,7 @@ class CarlaROSBridge(object):
         self.message_to_publish.append(('clock', Clock(self.cur_time)))
 
     def compute_sensor_msg(self, name, sensor_data):
+
         if isinstance(sensor_data, Image):
             self.compute_camera_transform(name, sensor_data)
             self.compute_camera_sensor_msg(name, sensor_data)
@@ -160,6 +160,7 @@ class CarlaROSBridge(object):
         img_msg = self.cv_bridge.cv2_to_imgmsg(data, encoding=encoding)
         img_msg.header.frame_id = name
         img_msg.header.stamp = self.cur_time
+        rospy.loginfo("adding to message")
         self.message_to_publish.append((name + '/image_raw', img_msg))
 
         cam_info = self._camera_infos[name]
@@ -248,6 +249,7 @@ class CarlaROSBridge(object):
         # start
         self.client.start_episode(player_start)
         while not rospy.is_shutdown():
+
             measurements, sensor_data = self.client.read_data()
             self.carla_game_stamp = measurements.game_timestamp
             self.carla_platform_stamp = measurements.platform_timestamp
