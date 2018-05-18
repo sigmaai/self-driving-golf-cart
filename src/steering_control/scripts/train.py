@@ -18,7 +18,7 @@ validation = True
 visualize = False
 
 
-def train(data_type="UDAT", model_type="Comma", load_weights=False, steps=3000, epochs=5, validation=False):
+def train(data_type="UDAT", model_type="Comma", load_weights=False, steps=5000, epochs=5, validation=False):
 
     # --------- check for dataset type ------------
     if data_type == "UDAT":
@@ -61,7 +61,7 @@ def train(data_type="UDAT", model_type="Comma", load_weights=False, steps=3000, 
         val_labels = utils.process_self_dataset([configs.val_dir])
         validation_gen = utils.self_batch_generator(val_labels, 8, False)
 
-        model.fit_generator(training_gen, steps_per_epoch=steps, epochs=epochs, verbose=1, validation_data=validation_gen, validation_steps=600)
+        model.fit_generator(training_gen, steps_per_epoch=steps, epochs=epochs, verbose=1, validation_data=validation_gen, validation_steps=800)
     else:
         model.fit_generator(training_gen, steps_per_epoch=steps, epochs=epochs, verbose=1)
 
@@ -71,7 +71,7 @@ def train(data_type="UDAT", model_type="Comma", load_weights=False, steps=3000, 
     # example:
     #         "str-cai-self-v1.h5"
 
-    model.save('str-cai-self-v3.h5')
+    model.save('str-cai-self-v4.h5')
 
 
 if __name__ == "__main__":

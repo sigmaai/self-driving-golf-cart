@@ -19,6 +19,7 @@ import numpy as np
 import random
 import time
 import copy
+import cv2
 
 import rosbag
 import rospy
@@ -28,7 +29,7 @@ from carla.client import make_carla_client
 from carla.sensor import Camera, Lidar, LidarMeasurement, Image
 from carla.sensor import Transform as carla_Transform
 from carla.settings import CarlaSettings
-
+from carla import image_converter
 from ackermann_msgs.msg import AckermannDrive
 from cv_bridge import CvBridge
 from geometry_msgs.msg import TransformStamped, Transform, Pose
@@ -39,6 +40,12 @@ from sensor_msgs.point_cloud2 import create_cloud_xyz32
 from std_msgs.msg import Header
 from tf2_msgs.msg import TFMessage
 from visualization_msgs.msg import MarkerArray, Marker
+
+
+WINDOW_WIDTH = 640
+WINDOW_HEIGHT = 480
+MINI_WINDOW_WIDTH = 640
+MINI_WINDOW_HEIGHT = 480
 
 
 def carla_transform_to_ros_transform(carla_transform):
@@ -100,6 +107,7 @@ def _ros_transform_to_pose(ros_transform):
 
 
 def update_marker_pose(object, base_marker):
+
     ros_transform = carla_transform_to_ros_transform(carla_Transform(object.transform))
     base_marker.pose = _ros_transform_to_pose(ros_transform)
 
@@ -108,6 +116,7 @@ def update_marker_pose(object, base_marker):
     base_marker.scale.z = object.box_extent.z * 2.0
 
     base_marker.type = Marker.CUBE
+
 
 lookup_table_marker_id = {}  # <-- TODO: migrate this in a class
 def get_vehicle_marker(object, header, agent_id=88, player=False):
@@ -193,6 +202,82 @@ class CarlaRosBridge(object):
         self.sensors = {}
         self.tf_to_publish = []
 
+        # ----------------------------------------------------------------
+
+        camera0 = Camera('CameraRGB')
+        camera0.set_image_size(WINDOW_WIDTH, WINDOW_HEIGHT)
+        camera0.set_position(2.0, 0.0, 1.4)
+        camera0.set_rotation(0.0, 0.0, 0.0)
+        self.carla_settings.add_sensor(camera0)
+        self.sensors['CameraRGB'] = camera0  # we also add the sensor to our lookup
+        topic_image = 'CameraRGB' + '/image_raw'
+        topic_camera = 'CameraRGB' + '/camera_info'
+        self.publishers[topic_image] = rospy.Publisher(topic_image, RosImage, queue_size=10)
+        self.publishers[topic_camera] = rospy.Publisher(topic_camera, CameraInfo, queue_size=10)
+        # computing camera info, when publishing update the stamp
+        camera_info = CameraInfo()
+        camera_info.header.frame_id = 'CameraRGB'
+        camera_info.width = camera0.ImageSizeX
+        camera_info.height = camera0.ImageSizeY
+        self._camera_infos['CameraRGB'] = camera_info
+
+        # ------------------------------------------------------------------
+
+        camera1 = Camera('CameraDepth', PostProcessing='Depth')
+        camera1.set_image_size(MINI_WINDOW_WIDTH, MINI_WINDOW_HEIGHT)
+        camera1.set_position(2.0, 0.0, 1.4)
+        camera1.set_rotation(0.0, 0.0, 0.0)
+        self.carla_settings.add_sensor(camera1)
+        self.sensors['CameraDepth'] = camera0  # we also add the sensor to our lookup
+        topic_image = 'CameraDepth' + '/image_raw'
+        topic_camera = 'CameraDepth' + '/camera_info'
+        self.publishers[topic_image] = rospy.Publisher(topic_image, RosImage, queue_size=10)
+        self.publishers[topic_camera] = rospy.Publisher(topic_camera, CameraInfo, queue_size=10)
+        # computing camera info, when publishing update the stamp
+        camera_info = CameraInfo()
+        camera_info.header.frame_id = 'CameraDepth'
+        camera_info.width = camera0.ImageSizeX
+        camera_info.height = camera0.ImageSizeY
+        self._camera_infos['CameraDepth'] = camera_info
+
+        # -----------------------------------------------------------------
+
+        camera2 = Camera('CameraSemSeg', PostProcessing='SemanticSegmentation')
+        camera2.set_image_size(MINI_WINDOW_WIDTH, MINI_WINDOW_HEIGHT)
+        camera2.set_position(2.0, 0.0, 1.4)
+        camera2.set_rotation(0.0, 0.0, 0.0)
+        self.carla_settings.add_sensor(camera2)
+        self.sensors['CameraSemSeg'] = camera0  # we also add the sensor to our lookup
+        topic_image = 'CameraSemSeg' + '/image_raw'
+        topic_camera = 'CameraSemSeg' + '/camera_info'
+        self.publishers[topic_image] = rospy.Publisher(topic_image, RosImage, queue_size=10)
+        self.publishers[topic_camera] = rospy.Publisher(topic_camera, CameraInfo, queue_size=10)
+        # computing camera info, when publishing update the stamp
+        camera_info = CameraInfo()
+        camera_info.header.frame_id = 'CameraSemSeg'
+        camera_info.width = camera0.ImageSizeX
+        camera_info.height = camera0.ImageSizeY
+        self._camera_infos['CameraSemSeg'] = camera_info
+
+        # -----------------------------------------------------------------
+
+        lidar = Lidar('Lidar32')
+        lidar.set_position(0, 0, 2.5)
+        lidar.set_rotation(0, 0, 0)
+        lidar.set(
+            Channels=32,
+            Range=50,
+            PointsPerSecond=100000,
+            RotationFrequency=10,
+            UpperFovLimit=10,
+            LowerFovLimit=-30)
+        self.carla_settings.add_sensor(lidar)
+
+        self.sensors['Lidar32'] = lidar  # we also add the sensor to our lookup
+        self.publishers['Lidar32'] = rospy.Publisher('Lidar32', PointCloud2, queue_size=10)
+        rospy.loginfo("lidar sensor added")
+        # -------------------------------------------------------
+
     def set_new_control_callback(self, data):
         """
         Convert a Ackerman drive msg into carla control msg
@@ -230,24 +315,22 @@ class CarlaRosBridge(object):
     def send_msgs(self):
         """
         Publish all message store then clean the list of message to publish
-
         :return:
         """
         for name, message in self.message_to_publish:
             self.publishers[name].publish(message)
         self.message_to_publish = []
 
-    def add_publishers(self):
+    # def add_publishers(self):
 
-        self.publishers['clock'] = rospy.Publisher("clock", Clock, queue_size=10)
-        for name, _ in self.param_sensors.items():
-            self.add_sensor(name)
+        # for name, _ in self.param_sensors.items():
+        #     self.add_sensor(name)
 
     def compute_cur_time_msg(self):
         self.message_to_publish.append(('clock', Clock(self.cur_time)))
 
     def compute_sensor_msg(self, name, sensor_data):
-        rospy.loginfo("got sensor data")
+
         if isinstance(sensor_data, Image):
             self.compute_camera_transform(name, sensor_data)
             self.compute_camera_sensor_msg(name, sensor_data)
@@ -257,8 +340,8 @@ class CarlaRosBridge(object):
         else:
             rospy.logerr("{}, {} is not handled yet".format(name, sensor_data))
 
-
     def compute_camera_sensor_msg(self, name, sensor):
+
         if sensor.type == 'Depth':
             # ROS PEP 0118 : Depth images are published as sensor_msgs/Image encoded as 32-bit float. Each pixel is a depth (along the camera Z axis) in meters.
             data = np.float32(sensor.data * 1000.0)  # in carla 1.0 = 1km
@@ -272,15 +355,30 @@ class CarlaRosBridge(object):
         img_msg = self.cv_bridge.cv2_to_imgmsg(data, encoding=encoding)
         img_msg.header.frame_id = name
         img_msg.header.stamp = self.cur_time
-        rospy.loginfo("image added")
         self.message_to_publish.append((name + '/image_raw', img_msg))
 
         cam_info = self._camera_infos[name]
         cam_info.header = img_msg.header
         self.message_to_publish.append((name + '/camera_info', cam_info))
 
+    def publish_rgb_camera_sensor_msg(self, image):
+
+        # if sensor.type == 'Depth':
+        #     # ROS PEP 0118 : Depth images are published as sensor_msgs/Image encoded as 32-bit float. Each pixel is a depth (along the camera Z axis) in meters.
+        #     data = np.float32(sensor.data * 1000.0)  # in carla 1.0 = 1km
+        #     encoding = 'passthrough'
+        # elif sensor.type == 'SemanticSegmentation':
+        #     encoding = 'mono16'  # for semantic segmentation we use mono16 in order to be able to limit range in rviz
+        #     data = np.uint16(sensor.data)
+        # else:
+        data = image_converter.to_rgb_array(image)
+        img_msg = self.cv_bridge.cv2_to_imgmsg(cv2.cvtColor(data, cv2.COLOR_BGR2RGB))
+        img_msg.header.stamp = self.cur_time
+        self.publishers['CameraRGB' + '/image_raw'].publish(img_msg)
+
 
     def compute_lidar_sensor_msg(self, name, sensor):
+
         header = Header()
         header.frame_id = name
         header.stamp = self.cur_time
@@ -293,8 +391,8 @@ class CarlaRosBridge(object):
         point_cloud_msg = create_cloud_xyz32(header, new_sensor_data)
         self.message_to_publish.append((name, point_cloud_msg))
 
-
     def compute_player_pose_msg(self, player_measurement):
+
         #print("Player measurement is {}".format(player_measurement))
         t = TransformStamped()
         t.header.stamp = self.cur_time
@@ -329,7 +427,6 @@ class CarlaRosBridge(object):
         #self.compute_pedestrian_msgs(pedestrians)
         #self.compute_traffic_light_msgs(traffic_lights)
 
-
     def compute_vehicle_msgs(self, vehicles, header, agent_id=8):
         """
         Add MarkerArray msg for vehicle to the list of message to be publish
@@ -351,11 +448,12 @@ class CarlaRosBridge(object):
         marker_array = MarkerArray(markers_text)
         self.message_to_publish.append(('vehicles_text', marker_array))
 
-
     def run(self):
 
         # creating ros publishers, and adding sensors to carla settings
-        self.add_publishers()
+        # self.add_publishers()
+
+        self.publishers['clock'] = rospy.Publisher("clock", Clock, queue_size=10)
 
         # load settings into the server
         print(self.carla_settings)
@@ -367,23 +465,25 @@ class CarlaRosBridge(object):
 
         # start
         self.client.start_episode(player_start)
-        rospy.loginfo(self.client)
 
         while not rospy.is_shutdown():
 
             measurements, sensor_data = self.client.read_data()
-            rospy.loginfo(sensor_data)
+
             self.carla_game_stamp = measurements.game_timestamp
             self.carla_platform_stamp = measurements.platform_timestamp
             self.cur_time = rospy.Time.from_sec(self.carla_game_stamp * 1000.0)
             self.compute_cur_time_msg()
-            self.compute_player_pose_msg(measurements.player_measurements)
-            self.compute_non_player_agent_msg(measurements.non_player_agents)
 
+            # TODO: fix this bug
+            # self.compute_player_pose_msg(measurements.player_measurements)
+            # self.compute_non_player_agent_msg(measurements.non_player_agents)
             self.send_msgs()
-
+            # data = sensor_data.get('CameraRGB', None)
+            # if data is not None:
+            #     self.publish_rgb_camera_sensor_msg(data)
+            # #
             for name, sensor in sensor_data.items():
-                rospy.loginfo("get sensor")
                 self.compute_sensor_msg(name, sensor)
 
             tf_msg = TFMessage(self.tf_to_publish)
@@ -401,22 +501,16 @@ class CarlaRosBridge(object):
             #self.rate.sleep() # <-- no need of sleep the read call should already be blocking
 
 
-    def add_sensor(self, name):
-        """
-        Add sensor base on sensor name in settings
-        :param name:
-        :return:
-        """
-        sensor_type = self.param_sensors[name]['SensorType']
-        params = self.param_sensors[name]['carla_settings']
-        rospy.loginfo("Adding publisher for sensor {}".format(name))
+    # def add_sensor(self, name):
+    #     """
+    #     Add sensor base on sensor name in settings
+    #     :param name:
+    #     :return:
+    #     """
+    #     sensor_type = self.param_sensors[name]['SensorType']
+    #     params = self.param_sensors[name]['carla_settings']
+    #     rospy.loginfo("Adding publisher for sensor {}".format(name))
 
-        if sensor_type == 'LIDAR_RAY_CAST':
-            self.add_lidar_sensor(name, params)
-        elif sensor_type == 'CAMERA':
-            self.add_camera_sensor(name, params)
-        else:
-            rospy.logerr("{sensor_type} not implemented".format(sensor_type=sensor_type))
 
     def compute_camera_transform(self, name, sensor_data):
         parent_frame_id = "base_link"
@@ -460,62 +554,51 @@ class CarlaRosBridge(object):
         self.tf_to_publish.append(t)
 
 
-    def add_camera_sensor(self, name, params):
-        """
+    # def add_camera_sensor(self, name, params):
+    #     """
+    #
+    #     :param name:
+    #     :param params:
+    #     :return:
+    #     """
+    #     # The default camera captures RGB images of the scene.
+    #     cam = Camera(name, **params)
+    #
+    #     self.carla_settings.add_sensor(cam)
+    #     self.sensors[name] = cam  # we also add the sensor to our lookup
+    #     topic_image = name + '/image_raw'
+    #     topic_camera = name + '/camera_info'
+    #     self.publishers[topic_image] = rospy.Publisher(topic_image, RosImage, queue_size=10)
+    #     self.publishers[topic_camera] = rospy.Publisher(topic_camera, CameraInfo, queue_size=10)
+    #
+    #     # computing camera info, when publishing update the stamp
+    #     camera_info = CameraInfo()
+    #     camera_info.header.frame_id = name
+    #     camera_info.width = cam.ImageSizeX
+    #     camera_info.height = cam.ImageSizeY
+    #     camera_info.distortion_model = 'plumb_bob'
+    #     cx = cam.ImageSizeX / 2.0
+    #     cy = cam.ImageSizeY / 2.0
+    #     fx = cam.ImageSizeX / (2.0 * math.tan(cam.FOV * math.pi / 360.0))
+    #     fy = fx
+    #
+    #     camera_info.K = [fx, 0, cx,
+    #                      0,  fy, cy,
+    #                      0, 0, 1]
+    #
+    #     camera_info.D = [0, 0, 0, 0, 0]
+    #
+    #     camera_info.R = [1.0, 0, 0,
+    #                      0, 1.0, 0,
+    #                      0, 0, 1.0]
+    #
+    #     camera_info.P = [fx, 0, cx, 0,
+    #                      0, fy, cy, 0,
+    #                      0, 0, 1.0, 0]
+    #
+    #     self._camera_infos[name] = camera_info
 
-        :param name:
-        :param params:
-        :return:
-        """
-        # The default camera captures RGB images of the scene.
-        cam = Camera(name, **params)
 
-        self.carla_settings.add_sensor(cam)
-        self.sensors[name] = cam  # we also add the sensor to our lookup
-        topic_image = name + '/image_raw'
-        topic_camera = name + '/camera_info'
-        self.publishers[topic_image] = rospy.Publisher(topic_image, RosImage, queue_size=10)
-        self.publishers[topic_camera] = rospy.Publisher(topic_camera, CameraInfo, queue_size=10)
-
-        # computing camera info, when publishing update the stamp
-        camera_info = CameraInfo()
-        camera_info.header.frame_id = name
-        camera_info.width = cam.ImageSizeX
-        camera_info.height = cam.ImageSizeY
-        camera_info.distortion_model = 'plumb_bob'
-        cx = cam.ImageSizeX / 2.0
-        cy = cam.ImageSizeY / 2.0
-        fx = cam.ImageSizeX / (2.0 * math.tan(cam.FOV * math.pi / 360.0))
-        fy = fx
-
-        camera_info.K = [fx, 0, cx,
-                         0,  fy, cy,
-                         0, 0, 1]
-
-        camera_info.D = [0, 0, 0, 0, 0]
-
-        camera_info.R = [1.0, 0, 0,
-                         0, 1.0, 0,
-                         0, 0, 1.0]
-
-        camera_info.P = [fx, 0, cx, 0,
-                         0, fy, cy, 0,
-                         0, 0, 1.0, 0]
-
-        self._camera_infos[name] = camera_info
-
-
-    def add_lidar_sensor(self, name, params):
-        """
-
-        :param name:
-        :param params:
-        """
-        lidar = Lidar(name, **params)
-        self.carla_settings.add_sensor(lidar)
-        self.sensors[name] = lidar  # we also add the sensor to our lookup
-        self.publishers[name] = rospy.Publisher(name, PointCloud2, queue_size=10)
-        rospy.loginfo("lidar sensor added")
 
     def __enter__(self):
         return self

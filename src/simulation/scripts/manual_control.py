@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 # Copyright (c) 2017 Computer Vision Center (CVC) at the Universitat Autonoma de
 # Barcelona (UAB).
@@ -32,6 +32,7 @@ import argparse
 import logging
 import random
 import time
+import sys
 
 import pygame
 from pygame.locals import K_DOWN
@@ -195,6 +196,8 @@ class CarlaGame(object):
         self._timer.tick()
 
         measurements, sensor_data = self.client.read_data()
+        print(sensor_data)
+
 
         self._main_image = sensor_data.get('CameraRGB', None)
         self._mini_view_image1 = sensor_data.get('CameraDepth', None)
