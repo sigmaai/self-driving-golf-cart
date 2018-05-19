@@ -33,22 +33,22 @@ For the full documentation of the development process, please visit: [neilnie.co
 7. `roscore`
 8. `roslaunch driver drive.launch`
 
-![](./media/running.png)
+<img src="./media/running.png" alt="image" width="480"/>
 
 Bon Voyage 😀
 
 ## Simulation
 If you want to run the code inside the Carla self-driving simulator, please refer to this [documentation](./src/simulation/README.md).
 
+<img src="./media/simulator.png" alt="Drawing" width="480"/>
+
 ## ROS
 This project is being developed using ROS. The launch files will launch the neccesary nodes as well as rviz for visualization. For more information on ROS, nodes, topics and others please refer to the [README](./src/README.md) in the `./src` directory.
 
 ## Steering
-The algorithm behind the steering system is inspired by work done by [Nvidia](https://arxiv.org/pdf/1604.07316.pdf). We developed our own convolutional neural network to predict the steering angle based on images captured by the front camera. The hardware system is custom designed in-house. Here is a video demo.
-
+We deploy deep learning, specifically behavorial cloning for the steering steering system. This work was inspired by [Nvidia](https://arxiv.org/pdf/1604.07316.pdf). We developed our own convolutional neural network to predict the steering angle based on images captured by the front-facing camera. The hardware system steer-by-wire system is custom designed in-house. Here is a video demo.
 
 [![IMAGE ALT TEXT HERE](https://i.ytimg.com/vi/4bZ40W4BGoE/hqdefault.jpg)](https://www.youtube.com/watch?v=CcUXtViFQeU&t=5s)
-
 
 ## Autonomous Cruise Control System (ACCS)
 
@@ -58,7 +58,7 @@ The algorithm behind the steering system is inspired by work done by [Nvidia](ht
 
 The cart understands the surrounding  through semantic segmentation, which is a technique in computer that classifies each pixel in an image. The vehicle can also make decisions based on the segmentic segmentation results. The cart can change its speed based on the proximity to nearby obstacles.
 
-We deployed the ENet architecture for segmentation. ENet is design to work well in realtime applications. For more information, please visit the [paper](http://arxiv.org/pdf/1606.02147.pdf). We used the CityScape dataset for training and the python code for training and inferencing are located in the `./src/segmentation/scripts` directory. 
+We deployed the ENet architecture for segmentation. ENet is design to work well in realtime applications. For more information, please visit the [paper](http://arxiv.org/pdf/1606.02147.pdf). We used the CityScape dataset for training and the python code for training and inferencing are located in the `./src/segmentation/scripts` directory.
 
 [![IMAGE ALT TEXT HERE](https://i.ytimg.com/vi/_y2RCakRrc4/hqdefault.jpg)](https://www.youtube.com/watch?v=_y2RCakRrc4)
 
