@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: object_detection
+Description: Description of object_detection
+Version: 0.0.0
+Cflags: -I/usr/local/include
+Libs: -L/usr/local/lib 
+Requires: 

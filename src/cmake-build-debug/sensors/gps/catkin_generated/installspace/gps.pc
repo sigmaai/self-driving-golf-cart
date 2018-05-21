@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: gps
+Description: Description of gps
+Version: 0.5.0
+Cflags: 
+Libs: -L/usr/local/lib 
+Requires: 

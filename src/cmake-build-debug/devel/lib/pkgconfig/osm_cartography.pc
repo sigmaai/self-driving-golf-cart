@@ -1,0 +1,8 @@
+prefix=/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/devel
+
+Name: osm_cartography
+Description: Description of osm_cartography
+Version: 0.2.4
+Cflags: -I/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/devel/include
+Libs: -L/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/devel/lib 
+Requires: dynamic_reconfigure geodesy geographic_msgs geometry_msgs rospy tf std_msgs visualization_msgs

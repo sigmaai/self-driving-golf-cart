@@ -443,6 +443,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "cruise_control/CMakeFiles/rosserial_msgs_generate_messages_py.dir/DependInfo.cmake"
   "cruise_control/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/DependInfo.cmake"
   "cruise_control/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/DependInfo.cmake"
+  "localization/CMakeFiles/particle_filter.dir/DependInfo.cmake"
   "simulation/CMakeFiles/actionlib_generate_messages_py.dir/DependInfo.cmake"
   "simulation/CMakeFiles/actionlib_generate_messages_nodejs.dir/DependInfo.cmake"
   "simulation/CMakeFiles/tf_generate_messages_py.dir/DependInfo.cmake"

@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: osm_cartography
+Description: Description of osm_cartography
+Version: 0.2.4
+Cflags: -I/usr/local/include
+Libs: -L/usr/local/lib 
+Requires: dynamic_reconfigure geodesy geographic_msgs geometry_msgs rospy tf std_msgs visualization_msgs

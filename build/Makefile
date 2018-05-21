@@ -1297,6 +1297,19 @@ rosserial_msgs_generate_messages_cpp/fast:
 .PHONY : rosserial_msgs_generate_messages_cpp/fast
 
 #=============================================================================
+# Target rules for targets named particle_filter
+
+# Build rule for target.
+particle_filter: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 particle_filter
+.PHONY : particle_filter
+
+# fast build rule for target.
+particle_filter/fast:
+	$(MAKE) -f localization/CMakeFiles/particle_filter.dir/build.make localization/CMakeFiles/particle_filter.dir/build
+.PHONY : particle_filter/fast
+
+#=============================================================================
 # Target rules for targets named actionlib_generate_messages_py
 
 # Build rule for target.
@@ -2033,6 +2046,7 @@ help:
 	@echo "... rosserial_msgs_generate_messages_py"
 	@echo "... rosserial_msgs_generate_messages_lisp"
 	@echo "... rosserial_msgs_generate_messages_cpp"
+	@echo "... particle_filter"
 	@echo "... actionlib_generate_messages_py"
 	@echo "... actionlib_generate_messages_nodejs"
 	@echo "... tf_generate_messages_py"

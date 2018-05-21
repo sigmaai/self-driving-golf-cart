@@ -24,8 +24,10 @@ class GPSLocalization():
 
         self.x = 0
         self.y = 0
+        self.gps_msg = None
 
         rospy.Subscriber('/sensor/gps/fix', NavSatFix, callback=self.navsatfix_callback, queue_size=5)
+        self.loc_coord_pub = rospy.Publisher('/localization/local_coordinate/fix/', NavSatFix, queue_size=5)
 
         self.rate = rospy.Rate(30.0)
 
@@ -35,6 +37,10 @@ class GPSLocalization():
                              rospy.Time.now(),
                              "base_link",
                              "local_map")
+            msg = self.gps_msg
+
+            self.loc_coord_pub.publish()
+
             self.rate.sleep()
 
         # 1. use geodesy to convert LatLong to point
@@ -51,10 +57,8 @@ class GPSLocalization():
             point = geodesy.utm.fromLatLong(msg.latitude, msg.longitude).toPoint()
             self.x = float(point.x) - 696400.1
             self.y = float(point.y) - 4713254.8
-            print(self.x)
-            print(self.y)
+            self.gps_msg = msg
             
-
 
 if __name__ == '__main__':
 
