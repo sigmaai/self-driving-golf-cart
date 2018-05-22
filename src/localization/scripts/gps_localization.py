@@ -13,6 +13,7 @@ import geodesy.utm
 import geodesy.wu_point
 import geodesy
 from sensor_msgs.msg import NavSatFix
+from geometry_msgs.msg import Pose2D
 
 
 class GPSLocalization():
@@ -20,26 +21,30 @@ class GPSLocalization():
     def __init__(self):
 
         rospy.init_node('gps_localization')
-        self.br = tf.TransformBroadcaster()
+        self.trans = tf.TransformBroadcaster()
 
-        self.x = 0
-        self.y = 0
+        self._x = 0
+        self._y = 0
         self.gps_msg = None
 
         rospy.Subscriber('/sensor/gps/fix', NavSatFix, callback=self.navsatfix_callback, queue_size=5)
-        self.loc_coord_pub = rospy.Publisher('/localization/local_coordinate/fix/', NavSatFix, queue_size=5)
 
+        # publishes the vehicle position after UTM transformation
+        # as well as scaling. The Pose2D being published is the
+        # same as the map/vehicle transformation that's being sent.
+
+        self.map_pose_pub = rospy.Publisher('/localization/pose/map', Pose2D, queue_size=5)
+        # self.vehicle_pose_pub = rospy.Publisher('/localization/pose/vehicle', Pose2D, queue_size=5)
         self.rate = rospy.Rate(30.0)
 
         while not rospy.is_shutdown():
-            self.br.sendTransform((self.x, self.y, 0),
-                             (0, 0, 0, 1),
-                             rospy.Time.now(),
-                             "base_link",
-                             "local_map")
-            msg = self.gps_msg
 
-            self.loc_coord_pub.publish()
+            self.trans.sendTransform((self._x, self._y, 0), (0, 0, 0, 1), rospy.Time.now(), "base_link", "local_map")
+
+            map_pose = Pose2D()
+            map_pose.x = self._x
+            map_pose.y = self._y
+            self.map_pose_pub.publish(map_pose)
 
             self.rate.sleep()
 
@@ -53,10 +58,9 @@ class GPSLocalization():
             print("no data received")
             
         else:
-            # point = geodesy.utm.fromLatLong(42.546895, -72.609342).toPoint()
             point = geodesy.utm.fromLatLong(msg.latitude, msg.longitude).toPoint()
-            self.x = float(point.x) - 696400.1
-            self.y = float(point.y) - 4713254.8
+            self._x = float(point.x) - 696400.1
+            self._y = float(point.y) - 4713254.8
             self.gps_msg = msg
             
 

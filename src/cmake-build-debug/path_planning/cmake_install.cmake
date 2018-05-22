@@ -1,4 +1,4 @@
-# Install script for directory: /home/neil/Workspace/self-driving-golf-cart/src/path_planning
+# Install script for directory: /home/yongyang/Workspace/self-driving-golf-cart/src/path_planning
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/path_planning/catkin_generated/installspace/path_planning.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/path_planning/catkin_generated/installspace/path_planning.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/path_planning/cmake" TYPE FILE FILES
-    "/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/path_planning/catkin_generated/installspace/path_planningConfig.cmake"
-    "/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/path_planning/catkin_generated/installspace/path_planningConfig-version.cmake"
+    "/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/path_planning/catkin_generated/installspace/path_planningConfig.cmake"
+    "/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/path_planning/catkin_generated/installspace/path_planningConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/path_planning" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/src/path_planning/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/path_planning" TYPE FILE FILES "/home/yongyang/Workspace/self-driving-golf-cart/src/path_planning/package.xml")
 endif()
 

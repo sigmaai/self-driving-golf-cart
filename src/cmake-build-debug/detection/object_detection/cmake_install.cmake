@@ -1,4 +1,4 @@
-# Install script for directory: /home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection
+# Install script for directory: /home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,55 +39,55 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/object_detection/msg" TYPE FILE FILES
-    "/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResults.msg"
-    "/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg"
+    "/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResults.msg"
+    "/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/object_detection/cmake" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/detection/object_detection/catkin_generated/installspace/object_detection-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/object_detection/cmake" TYPE FILE FILES "/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/detection/object_detection/catkin_generated/installspace/object_detection-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/devel/include/object_detection")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/devel/include/object_detection")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/devel/share/roseus/ros/object_detection")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/devel/share/roseus/ros/object_detection")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/devel/share/common-lisp/ros/object_detection")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/devel/share/common-lisp/ros/object_detection")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/devel/share/gennodejs/ros/object_detection")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/devel/share/gennodejs/ros/object_detection")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python" -m compileall "/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/devel/lib/python2.7/dist-packages/object_detection")
+  execute_process(COMMAND "/usr/bin/python" -m compileall "/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/devel/lib/python2.7/dist-packages/object_detection")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/devel/lib/python2.7/dist-packages/object_detection")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/devel/lib/python2.7/dist-packages/object_detection")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/detection/object_detection/catkin_generated/installspace/object_detection.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/detection/object_detection/catkin_generated/installspace/object_detection.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/object_detection/cmake" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/detection/object_detection/catkin_generated/installspace/object_detection-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/object_detection/cmake" TYPE FILE FILES "/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/detection/object_detection/catkin_generated/installspace/object_detection-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/object_detection/cmake" TYPE FILE FILES
-    "/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/detection/object_detection/catkin_generated/installspace/object_detectionConfig.cmake"
-    "/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/detection/object_detection/catkin_generated/installspace/object_detectionConfig-version.cmake"
+    "/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/detection/object_detection/catkin_generated/installspace/object_detectionConfig.cmake"
+    "/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/detection/object_detection/catkin_generated/installspace/object_detectionConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/object_detection" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/object_detection" TYPE FILE FILES "/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/package.xml")
 endif()
 

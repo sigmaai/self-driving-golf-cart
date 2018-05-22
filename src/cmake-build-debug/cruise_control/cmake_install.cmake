@@ -1,4 +1,4 @@
-# Install script for directory: /home/neil/Workspace/self-driving-golf-cart/src/cruise_control
+# Install script for directory: /home/yongyang/Workspace/self-driving-golf-cart/src/cruise_control
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/cruise_control/catkin_generated/installspace/cruise_control.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/cruise_control/catkin_generated/installspace/cruise_control.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cruise_control/cmake" TYPE FILE FILES
-    "/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/cruise_control/catkin_generated/installspace/cruise_controlConfig.cmake"
-    "/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/cruise_control/catkin_generated/installspace/cruise_controlConfig-version.cmake"
+    "/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/cruise_control/catkin_generated/installspace/cruise_controlConfig.cmake"
+    "/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/cruise_control/catkin_generated/installspace/cruise_controlConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cruise_control" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/src/cruise_control/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cruise_control" TYPE FILE FILES "/home/yongyang/Workspace/self-driving-golf-cart/src/cruise_control/package.xml")
 endif()
 

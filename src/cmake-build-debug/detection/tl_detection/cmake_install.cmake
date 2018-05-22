@@ -1,4 +1,4 @@
-# Install script for directory: /home/neil/Workspace/self-driving-golf-cart/src/detection/tl_detection
+# Install script for directory: /home/yongyang/Workspace/self-driving-golf-cart/src/detection/tl_detection
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/detection/tl_detection/catkin_generated/installspace/tl_detection.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/detection/tl_detection/catkin_generated/installspace/tl_detection.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tl_detection/cmake" TYPE FILE FILES
-    "/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/detection/tl_detection/catkin_generated/installspace/tl_detectionConfig.cmake"
-    "/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/detection/tl_detection/catkin_generated/installspace/tl_detectionConfig-version.cmake"
+    "/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/detection/tl_detection/catkin_generated/installspace/tl_detectionConfig.cmake"
+    "/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/detection/tl_detection/catkin_generated/installspace/tl_detectionConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tl_detection" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/src/detection/tl_detection/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tl_detection" TYPE FILE FILES "/home/yongyang/Workspace/self-driving-golf-cart/src/detection/tl_detection/package.xml")
 endif()
 

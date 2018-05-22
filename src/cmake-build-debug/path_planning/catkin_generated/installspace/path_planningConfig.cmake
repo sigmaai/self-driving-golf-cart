@@ -67,8 +67,8 @@ set(path_planning_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(path_planning_SOURCE_PREFIX /home/neil/Workspace/self-driving-golf-cart/src/path_planning)
-  set(path_planning_DEVEL_PREFIX /home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/devel)
+  set(path_planning_SOURCE_PREFIX /home/yongyang/Workspace/self-driving-golf-cart/src/path_planning)
+  set(path_planning_DEVEL_PREFIX /home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/devel)
   set(path_planning_INSTALL_PREFIX "")
   set(path_planning_PREFIX ${path_planning_DEVEL_PREFIX})
 else()
@@ -129,7 +129,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /usr/local/lib;/home/neil/Workspace/self-driving-golf-cart/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /usr/local/lib;/home/yongyang/Workspace/self-driving-golf-cart/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

@@ -14,7 +14,7 @@ fi
 
 echo_and_run() { echo "+ $@" ; "$@" ; }
 
-echo_and_run cd "/home/neil/Workspace/self-driving-golf-cart/src/sensors/gps"
+echo_and_run cd "/home/yongyang/Workspace/self-driving-golf-cart/src/sensors/gps"
 
 # ensure that Python install destination exists
 echo_and_run mkdir -p "$DESTDIR/usr/local/lib/python2.7/dist-packages"
@@ -23,11 +23,11 @@ echo_and_run mkdir -p "$DESTDIR/usr/local/lib/python2.7/dist-packages"
 # into one location when some dependencies were installed in another
 # location, #123.
 echo_and_run /usr/bin/env \
-    PYTHONPATH="/usr/local/lib/python2.7/dist-packages:/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/lib/python2.7/dist-packages:$PYTHONPATH" \
-    CATKIN_BINARY_DIR="/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug" \
+    PYTHONPATH="/usr/local/lib/python2.7/dist-packages:/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/lib/python2.7/dist-packages:$PYTHONPATH" \
+    CATKIN_BINARY_DIR="/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug" \
     "/usr/bin/python" \
-    "/home/neil/Workspace/self-driving-golf-cart/src/sensors/gps/setup.py" \
-    build --build-base "/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/sensors/gps" \
+    "/home/yongyang/Workspace/self-driving-golf-cart/src/sensors/gps/setup.py" \
+    build --build-base "/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/sensors/gps" \
     install \
     $DESTDIR_ARG \
     --install-layout=deb --prefix="/usr/local" --install-scripts="/usr/local/bin"

@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/neil/Applications/clion-2018.1/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/yongyang/Applications/clion-2018.1/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/neil/Applications/clion-2018.1/bin/cmake/bin/cmake -E remove -f
+RM = /home/yongyang/Applications/clion-2018.1/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/neil/Workspace/self-driving-golf-cart/src
+CMAKE_SOURCE_DIR = /home/yongyang/Workspace/self-driving-golf-cart/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug
+CMAKE_BINARY_DIR = /home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug
 
 # Utility rule file for object_detection_genlisp.
 
@@ -63,10 +63,10 @@ detection/object_detection/CMakeFiles/object_detection_genlisp.dir/build: object
 .PHONY : detection/object_detection/CMakeFiles/object_detection_genlisp.dir/build
 
 detection/object_detection/CMakeFiles/object_detection_genlisp.dir/clean:
-	cd /home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/detection/object_detection && $(CMAKE_COMMAND) -P CMakeFiles/object_detection_genlisp.dir/cmake_clean.cmake
+	cd /home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/detection/object_detection && $(CMAKE_COMMAND) -P CMakeFiles/object_detection_genlisp.dir/cmake_clean.cmake
 .PHONY : detection/object_detection/CMakeFiles/object_detection_genlisp.dir/clean
 
 detection/object_detection/CMakeFiles/object_detection_genlisp.dir/depend:
-	cd /home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/neil/Workspace/self-driving-golf-cart/src /home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection /home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug /home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/detection/object_detection /home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/detection/object_detection/CMakeFiles/object_detection_genlisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yongyang/Workspace/self-driving-golf-cart/src /home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection /home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug /home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/detection/object_detection /home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/detection/object_detection/CMakeFiles/object_detection_genlisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : detection/object_detection/CMakeFiles/object_detection_genlisp.dir/depend
 

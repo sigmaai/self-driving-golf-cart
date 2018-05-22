@@ -67,14 +67,14 @@ set(object_detection_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(object_detection_SOURCE_PREFIX /home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection)
-  set(object_detection_DEVEL_PREFIX /home/neil/Workspace/self-driving-golf-cart/devel)
+  set(object_detection_SOURCE_PREFIX /home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection)
+  set(object_detection_DEVEL_PREFIX /home/yongyang/Workspace/self-driving-golf-cart/devel)
   set(object_detection_INSTALL_PREFIX "")
   set(object_detection_PREFIX ${object_detection_DEVEL_PREFIX})
 else()
   set(object_detection_SOURCE_PREFIX "")
   set(object_detection_DEVEL_PREFIX "")
-  set(object_detection_INSTALL_PREFIX /home/neil/Workspace/self-driving-golf-cart/install)
+  set(object_detection_INSTALL_PREFIX /home/yongyang/Workspace/self-driving-golf-cart/install)
   set(object_detection_PREFIX ${object_detection_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(object_detection_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/neil/Workspace/self-driving-golf-cart/devel/include " STREQUAL " ")
+if(NOT "/home/yongyang/Workspace/self-driving-golf-cart/devel/include " STREQUAL " ")
   set(object_detection_INCLUDE_DIRS "")
-  set(_include_dirs "/home/neil/Workspace/self-driving-golf-cart/devel/include")
+  set(_include_dirs "/home/yongyang/Workspace/self-driving-golf-cart/devel/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/neil/Workspace/self-driving-golf-cart/devel/include " STREQUAL " "
         message(FATAL_ERROR "Project 'object_detection' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'object_detection' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'object_detection' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/${idir}'.  ${_report}")
     endif()
     _list_append_unique(object_detection_INCLUDE_DIRS ${include})
   endforeach()
@@ -129,7 +129,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/neil/Workspace/self-driving-golf-cart/devel/lib;/home/neil/Workspace/self-driving-golf-cart/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/yongyang/Workspace/self-driving-golf-cart/devel/lib;/home/yongyang/Workspace/self-driving-golf-cart/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

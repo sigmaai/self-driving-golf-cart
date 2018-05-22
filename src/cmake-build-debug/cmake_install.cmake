@@ -1,4 +1,4 @@
-# Install script for directory: /home/neil/Workspace/self-driving-golf-cart/src
+# Install script for directory: /home/yongyang/Workspace/self-driving-golf-cart/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -56,7 +56,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local" TYPE PROGRAM FILES "/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/catkin_generated/installspace/_setup_util.py")
+file(INSTALL DESTINATION "/usr/local" TYPE PROGRAM FILES "/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/catkin_generated/installspace/_setup_util.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -68,7 +68,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local" TYPE PROGRAM FILES "/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/catkin_generated/installspace/env.sh")
+file(INSTALL DESTINATION "/usr/local" TYPE PROGRAM FILES "/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/catkin_generated/installspace/env.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -80,7 +80,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/catkin_generated/installspace/setup.bash")
+file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES "/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/catkin_generated/installspace/setup.bash")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -92,7 +92,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/catkin_generated/installspace/setup.sh")
+file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES "/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/catkin_generated/installspace/setup.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -104,7 +104,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/catkin_generated/installspace/setup.zsh")
+file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES "/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/catkin_generated/installspace/setup.zsh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -116,26 +116,26 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/catkin_generated/installspace/.rosinstall")
+file(INSTALL DESTINATION "/usr/local" TYPE FILE FILES "/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/catkin_generated/installspace/.rosinstall")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/gtest/cmake_install.cmake")
-  include("/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/sensors/gps/cmake_install.cmake")
-  include("/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/segmentation/cmake_install.cmake")
-  include("/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/detection/lane_detection/cmake_install.cmake")
-  include("/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/detection/object_detection/cmake_install.cmake")
-  include("/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/sensors/cv_camera/cmake_install.cmake")
-  include("/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/detection/tl_detection/cmake_install.cmake")
-  include("/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/cruise_control/cmake_install.cmake")
-  include("/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/data_logger/cmake_install.cmake")
-  include("/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/driver/cmake_install.cmake")
-  include("/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/localization/cmake_install.cmake")
-  include("/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/path_planning/cmake_install.cmake")
-  include("/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/simulation/cmake_install.cmake")
-  include("/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/steering_control/cmake_install.cmake")
-  include("/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/osm/cmake_install.cmake")
+  include("/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/gtest/cmake_install.cmake")
+  include("/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/sensors/gps/cmake_install.cmake")
+  include("/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/segmentation/cmake_install.cmake")
+  include("/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/detection/lane_detection/cmake_install.cmake")
+  include("/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/detection/object_detection/cmake_install.cmake")
+  include("/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/sensors/cv_camera/cmake_install.cmake")
+  include("/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/detection/tl_detection/cmake_install.cmake")
+  include("/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/cruise_control/cmake_install.cmake")
+  include("/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/data_logger/cmake_install.cmake")
+  include("/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/driver/cmake_install.cmake")
+  include("/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/localization/cmake_install.cmake")
+  include("/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/path_planning/cmake_install.cmake")
+  include("/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/simulation/cmake_install.cmake")
+  include("/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/steering_control/cmake_install.cmake")
+  include("/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/osm/cmake_install.cmake")
 
 endif()
 
@@ -147,5 +147,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

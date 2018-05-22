@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/neil/Applications/clion-2018.1/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/yongyang/Applications/clion-2018.1/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/neil/Applications/clion-2018.1/bin/cmake/bin/cmake -E remove -f
+RM = /home/yongyang/Applications/clion-2018.1/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/neil/Workspace/self-driving-golf-cart/src
+CMAKE_SOURCE_DIR = /home/yongyang/Workspace/self-driving-golf-cart/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug
+CMAKE_BINARY_DIR = /home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug
 
 # Utility rule file for object_detection_generate_messages_cpp.
 
@@ -61,14 +61,14 @@ devel/include/object_detection/DetectionResults.h: /opt/ros/kinetic/lib/gencpp/g
 devel/include/object_detection/DetectionResults.h: ../detection/object_detection/msg/DetectionResults.msg
 devel/include/object_detection/DetectionResults.h: ../detection/object_detection/msg/DetectionResult.msg
 devel/include/object_detection/DetectionResults.h: /opt/ros/kinetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from object_detection/DetectionResults.msg"
-	cd /home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection && /home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResults.msg -Iobject_detection:/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p object_detection -o /home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/devel/include/object_detection -e /opt/ros/kinetic/share/gencpp/cmake/..
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from object_detection/DetectionResults.msg"
+	cd /home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection && /home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResults.msg -Iobject_detection:/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p object_detection -o /home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/devel/include/object_detection -e /opt/ros/kinetic/share/gencpp/cmake/..
 
 devel/include/object_detection/DetectionResult.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
 devel/include/object_detection/DetectionResult.h: ../detection/object_detection/msg/DetectionResult.msg
 devel/include/object_detection/DetectionResult.h: /opt/ros/kinetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from object_detection/DetectionResult.msg"
-	cd /home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection && /home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg -Iobject_detection:/home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p object_detection -o /home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/devel/include/object_detection -e /opt/ros/kinetic/share/gencpp/cmake/..
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from object_detection/DetectionResult.msg"
+	cd /home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection && /home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/msg/DetectionResult.msg -Iobject_detection:/home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p object_detection -o /home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/devel/include/object_detection -e /opt/ros/kinetic/share/gencpp/cmake/..
 
 object_detection_generate_messages_cpp: detection/object_detection/CMakeFiles/object_detection_generate_messages_cpp
 object_detection_generate_messages_cpp: devel/include/object_detection/DetectionResults.h
@@ -83,10 +83,10 @@ detection/object_detection/CMakeFiles/object_detection_generate_messages_cpp.dir
 .PHONY : detection/object_detection/CMakeFiles/object_detection_generate_messages_cpp.dir/build
 
 detection/object_detection/CMakeFiles/object_detection_generate_messages_cpp.dir/clean:
-	cd /home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/detection/object_detection && $(CMAKE_COMMAND) -P CMakeFiles/object_detection_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/detection/object_detection && $(CMAKE_COMMAND) -P CMakeFiles/object_detection_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : detection/object_detection/CMakeFiles/object_detection_generate_messages_cpp.dir/clean
 
 detection/object_detection/CMakeFiles/object_detection_generate_messages_cpp.dir/depend:
-	cd /home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/neil/Workspace/self-driving-golf-cart/src /home/neil/Workspace/self-driving-golf-cart/src/detection/object_detection /home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug /home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/detection/object_detection /home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/detection/object_detection/CMakeFiles/object_detection_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yongyang/Workspace/self-driving-golf-cart/src /home/yongyang/Workspace/self-driving-golf-cart/src/detection/object_detection /home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug /home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/detection/object_detection /home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/detection/object_detection/CMakeFiles/object_detection_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : detection/object_detection/CMakeFiles/object_detection_generate_messages_cpp.dir/depend
 

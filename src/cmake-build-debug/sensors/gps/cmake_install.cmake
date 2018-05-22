@@ -1,4 +1,4 @@
-# Install script for directory: /home/neil/Workspace/self-driving-golf-cart/src/sensors/gps
+# Install script for directory: /home/yongyang/Workspace/self-driving-golf-cart/src/sensors/gps
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,29 +38,29 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/sensors/gps/catkin_generated/safe_execute_install.cmake")
+  include("/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/sensors/gps/catkin_generated/safe_execute_install.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/sensors/gps/catkin_generated/installspace/gps.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/sensors/gps/catkin_generated/installspace/gps.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gps/cmake" TYPE FILE FILES
-    "/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/sensors/gps/catkin_generated/installspace/gpsConfig.cmake"
-    "/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/sensors/gps/catkin_generated/installspace/gpsConfig-version.cmake"
+    "/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/sensors/gps/catkin_generated/installspace/gpsConfig.cmake"
+    "/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/sensors/gps/catkin_generated/installspace/gpsConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gps" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/src/sensors/gps/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gps" TYPE FILE FILES "/home/yongyang/Workspace/self-driving-golf-cart/src/sensors/gps/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/gps" TYPE PROGRAM FILES
-    "/home/neil/Workspace/self-driving-golf-cart/src/sensors/gps/scripts/nmea_serial_driver"
-    "/home/neil/Workspace/self-driving-golf-cart/src/sensors/gps/scripts/nmea_topic_driver"
-    "/home/neil/Workspace/self-driving-golf-cart/src/sensors/gps/scripts/nmea_topic_serial_reader"
+    "/home/yongyang/Workspace/self-driving-golf-cart/src/sensors/gps/scripts/nmea_serial_driver"
+    "/home/yongyang/Workspace/self-driving-golf-cart/src/sensors/gps/scripts/nmea_topic_driver"
+    "/home/yongyang/Workspace/self-driving-golf-cart/src/sensors/gps/scripts/nmea_topic_serial_reader"
     )
 endif()
 

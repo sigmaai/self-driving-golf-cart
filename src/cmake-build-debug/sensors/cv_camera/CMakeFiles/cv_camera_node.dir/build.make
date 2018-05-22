@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/neil/Applications/clion-2018.1/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/yongyang/Applications/clion-2018.1/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/neil/Applications/clion-2018.1/bin/cmake/bin/cmake -E remove -f
+RM = /home/yongyang/Applications/clion-2018.1/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/neil/Workspace/self-driving-golf-cart/src
+CMAKE_SOURCE_DIR = /home/yongyang/Workspace/self-driving-golf-cart/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug
+CMAKE_BINARY_DIR = /home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include sensors/cv_camera/CMakeFiles/cv_camera_node.dir/depend.make
@@ -59,16 +59,16 @@ include sensors/cv_camera/CMakeFiles/cv_camera_node.dir/flags.make
 
 sensors/cv_camera/CMakeFiles/cv_camera_node.dir/src/cv_camera_node.cpp.o: sensors/cv_camera/CMakeFiles/cv_camera_node.dir/flags.make
 sensors/cv_camera/CMakeFiles/cv_camera_node.dir/src/cv_camera_node.cpp.o: ../sensors/cv_camera/src/cv_camera_node.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object sensors/cv_camera/CMakeFiles/cv_camera_node.dir/src/cv_camera_node.cpp.o"
-	cd /home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/sensors/cv_camera && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cv_camera_node.dir/src/cv_camera_node.cpp.o -c /home/neil/Workspace/self-driving-golf-cart/src/sensors/cv_camera/src/cv_camera_node.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object sensors/cv_camera/CMakeFiles/cv_camera_node.dir/src/cv_camera_node.cpp.o"
+	cd /home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/sensors/cv_camera && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cv_camera_node.dir/src/cv_camera_node.cpp.o -c /home/yongyang/Workspace/self-driving-golf-cart/src/sensors/cv_camera/src/cv_camera_node.cpp
 
 sensors/cv_camera/CMakeFiles/cv_camera_node.dir/src/cv_camera_node.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cv_camera_node.dir/src/cv_camera_node.cpp.i"
-	cd /home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/sensors/cv_camera && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/neil/Workspace/self-driving-golf-cart/src/sensors/cv_camera/src/cv_camera_node.cpp > CMakeFiles/cv_camera_node.dir/src/cv_camera_node.cpp.i
+	cd /home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/sensors/cv_camera && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yongyang/Workspace/self-driving-golf-cart/src/sensors/cv_camera/src/cv_camera_node.cpp > CMakeFiles/cv_camera_node.dir/src/cv_camera_node.cpp.i
 
 sensors/cv_camera/CMakeFiles/cv_camera_node.dir/src/cv_camera_node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cv_camera_node.dir/src/cv_camera_node.cpp.s"
-	cd /home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/sensors/cv_camera && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/neil/Workspace/self-driving-golf-cart/src/sensors/cv_camera/src/cv_camera_node.cpp -o CMakeFiles/cv_camera_node.dir/src/cv_camera_node.cpp.s
+	cd /home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/sensors/cv_camera && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yongyang/Workspace/self-driving-golf-cart/src/sensors/cv_camera/src/cv_camera_node.cpp -o CMakeFiles/cv_camera_node.dir/src/cv_camera_node.cpp.s
 
 sensors/cv_camera/CMakeFiles/cv_camera_node.dir/src/cv_camera_node.cpp.o.requires:
 
@@ -215,8 +215,8 @@ devel/lib/cv_camera/cv_camera_node: /opt/ros/kinetic/lib/x86_64-linux-gnu/libope
 devel/lib/cv_camera/cv_camera_node: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_imgproc3.so.3.3.1
 devel/lib/cv_camera/cv_camera_node: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_core3.so.3.3.1
 devel/lib/cv_camera/cv_camera_node: sensors/cv_camera/CMakeFiles/cv_camera_node.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../devel/lib/cv_camera/cv_camera_node"
-	cd /home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/sensors/cv_camera && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cv_camera_node.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../devel/lib/cv_camera/cv_camera_node"
+	cd /home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/sensors/cv_camera && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cv_camera_node.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 sensors/cv_camera/CMakeFiles/cv_camera_node.dir/build: devel/lib/cv_camera/cv_camera_node
@@ -228,10 +228,10 @@ sensors/cv_camera/CMakeFiles/cv_camera_node.dir/requires: sensors/cv_camera/CMak
 .PHONY : sensors/cv_camera/CMakeFiles/cv_camera_node.dir/requires
 
 sensors/cv_camera/CMakeFiles/cv_camera_node.dir/clean:
-	cd /home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/sensors/cv_camera && $(CMAKE_COMMAND) -P CMakeFiles/cv_camera_node.dir/cmake_clean.cmake
+	cd /home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/sensors/cv_camera && $(CMAKE_COMMAND) -P CMakeFiles/cv_camera_node.dir/cmake_clean.cmake
 .PHONY : sensors/cv_camera/CMakeFiles/cv_camera_node.dir/clean
 
 sensors/cv_camera/CMakeFiles/cv_camera_node.dir/depend:
-	cd /home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/neil/Workspace/self-driving-golf-cart/src /home/neil/Workspace/self-driving-golf-cart/src/sensors/cv_camera /home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug /home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/sensors/cv_camera /home/neil/Workspace/self-driving-golf-cart/src/cmake-build-debug/sensors/cv_camera/CMakeFiles/cv_camera_node.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yongyang/Workspace/self-driving-golf-cart/src /home/yongyang/Workspace/self-driving-golf-cart/src/sensors/cv_camera /home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug /home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/sensors/cv_camera /home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/sensors/cv_camera/CMakeFiles/cv_camera_node.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : sensors/cv_camera/CMakeFiles/cv_camera_node.dir/depend
 
