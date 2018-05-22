@@ -14,16 +14,11 @@
 #include <vector>
 #include "map.h"
 
-// for portability of M_PI (Vis Studio, MinGW, etc.)
-#ifndef M_PI
-const double M_PI = 3.14159265358979323846;
-#endif
-
 /*
  * Struct representing one position/control measurement.
  */
 struct control_s {
-
+	
 	double velocity;	// Velocity [m/s]
 	double yawrate;		// Yaw rate [rad/s]
 };
@@ -32,7 +27,7 @@ struct control_s {
  * Struct representing one ground truth position.
  */
 struct ground_truth {
-
+	
 	double x;		// Global vehicle x position [m]
 	double y;		// Global vehicle y position
 	double theta;	// Global vehicle yaw [rad]
@@ -42,7 +37,7 @@ struct ground_truth {
  * Struct representing one landmark observation measurement.
  */
 struct LandmarkObs {
-
+	
 	int id;				// Id of matching landmark in the map.
 	double x;			// Local (vehicle coordinates) x position of landmark observation [m]
 	double y;			// Local (vehicle coordinates) y position of landmark observation [m]
@@ -82,7 +77,7 @@ inline bool read_map_data(std::string filename, Map& map) {
 	if (!in_file_map) {
 		return false;
 	}
-
+	
 	// Declare single line of map file:
 	std::string line_map;
 
@@ -146,7 +141,7 @@ inline bool read_control_data(std::string filename, std::vector<control_s>& posi
 		iss_pos >> velocity;
 		iss_pos >> yawrate;
 
-
+		
 		// Set values
 		meas.velocity = velocity;
 		meas.yawrate = yawrate;
@@ -182,7 +177,7 @@ inline bool read_gt_data(std::string filename, std::vector<ground_truth>& gt) {
 		double x, y, azimuth;
 
 		// Declare single ground truth:
-		ground_truth single_gt;
+		ground_truth single_gt; 
 
 		//read data from line to values:
 		iss_pos >> x;
