@@ -1,13 +1,15 @@
 <center><img src="./media/cover.png" alt="Drawing" style="width: 700;"/>
 </center>
 
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
 [![Documentation Status](https://readthedocs.org/projects/self-driving-golf-cart/badge/?version=latest)](https://self-driving-golf-cart.readthedocs.io/en/latest/?badge=latest)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](paypal.me/YongyangNie)
  <!-- Place this tag where you want the button to render. -->
 <a class="github-button" href="https://github.com/sigmaai/self-driving-golf-cart" data-icon="octicon-star" aria-label="Star sigmaai/self-driving-golf-cart on GitHub">Star</a>
-<!-- Place this tag in your head or just before your close body tag. --><script async defer src="https://buttons.github.io/buttons.js"></script>
 
-## Introduction
+# Introduction
 
 Welcome! This is an open source self-driving development platform aimed for rapid prototyping, deep learning and robotics research. The system currently runs on a modified electric golf cart, but the code could work on a real car as well. Here are our goals:
 
@@ -29,7 +31,7 @@ Path planning is coming soon...
 
 For the full documentation of the development process, please visit: [neilnie.com](neilnie.com)
 
-## Running the code
+# Running the code
 1. Please download/clone the repository.
 2. Make sure you have all the [dependencies](./requirements.txt) installed. 
 3. Make sure that you have the [ROS](http://wiki.ros.org/ROS/Installation) installed on your computer.
@@ -43,12 +45,12 @@ For the full documentation of the development process, please visit: [neilnie.co
 
 Bon Voyage 😀
 
-## Simulation
+# Simulation
 If you want to run the code inside the Carla self-driving simulator, please refer to this [documentation](./src/simulation/README.md).
 
 <img src="./media/simulator.png" alt="Drawing" width="480"/>
 
-## ROS
+# ROS
 This project is being developed using ROS. The launch files will launch the neccesary nodes as well as rviz for visualization. For more information on ROS, nodes, topics and others please refer to the [README](./src/README.md) in the `./src` directory.
 
 ## Steering
@@ -56,7 +58,7 @@ We deploy deep learning, specifically behavorial cloning for the steering steeri
 
 [![IMAGE ALT TEXT HERE](https://i.ytimg.com/vi/4bZ40W4BGoE/hqdefault.jpg)](https://www.youtube.com/watch?v=CcUXtViFQeU&t=5s)
 
-## Autonomous Cruise Control System (ACCS)
+# Autonomous Cruise Control System (ACCS)
 
 #### Semantic Segmentation
 
@@ -68,7 +70,7 @@ We deployed the ENet architecture for segmentation. ENet is design to work well 
 
 [![IMAGE ALT TEXT HERE](https://i.ytimg.com/vi/_y2RCakRrc4/hqdefault.jpg)](https://www.youtube.com/watch?v=_y2RCakRrc4)
 
-## Localization
+# Localization
 
 Currently, the localization module uses GPS (Global Positioning System) to find the precise location of the vehicle. However, GPS is far from enough. Localization using lidar and radar (sensor fusion and particle filters) are currently under development.
 
@@ -76,11 +78,11 @@ Currently, the localization module uses GPS (Global Positioning System) to find 
 
 Furthermore, we are relying on OSM (Open Street Map) data for navigation. OSM maps provide detailed information about the paths, buildings and other landmarks in the surrounding. Currently, navigation is only limited to a geofenced area.
 
-## Path Planning
+# Path Planning
 
 Coming soon...
 
-## What's next?
+# What's next?
 
 #### Phase 1
 
@@ -104,7 +106,7 @@ For the second phase of the development process, we will focus on making the sys
 
 We are keeping track of all our progress here [CHECKLIST](./CHECKLIST.md). 
 
-## Contact / Info
+# Contact / Info
 If you are interested in the detailed development process of this project, you can visit Neil's blog at [neilnie.com](neilnie.com) to find out more about it. Neil will make sure to keep you posted about all of the latest development on the club.
 
 **Developers:**
