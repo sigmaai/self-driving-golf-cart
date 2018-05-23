@@ -1,6 +1,12 @@
 <center><img src="./media/cover.png" alt="Drawing" style="width: 700;"/>
 </center>
 
+[![Documentation Status](https://readthedocs.org/projects/self-driving-golf-cart/badge/?version=latest)](https://self-driving-golf-cart.readthedocs.io/en/latest/?badge=latest)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](paypal.me/YongyangNie)
+ <!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/sigmaai/self-driving-golf-cart" data-icon="octicon-star" aria-label="Star sigmaai/self-driving-golf-cart on GitHub">Star</a>
+<!-- Place this tag in your head or just before your close body tag. --><script async defer src="https://buttons.github.io/buttons.js"></script>
+
 ## Introduction
 
 Welcome! This is an open source self-driving development platform aimed for rapid prototyping, deep learning and robotics research. The system currently runs on a modified electric golf cart, but the code could work on a real car as well. Here are our goals:
