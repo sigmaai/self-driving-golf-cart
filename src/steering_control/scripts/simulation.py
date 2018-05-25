@@ -1,3 +1,8 @@
+#
+#
+#
+#
+
 import argparse         # parsing command line arguments
 import base64           # decoding camera images
 from datetime import datetime

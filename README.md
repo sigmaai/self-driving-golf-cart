@@ -1,13 +1,11 @@
 <center><img src="./media/cover.png" alt="Drawing" style="width: 700;"/>
 </center>
 
-<script async defer src="https://buttons.github.io/buttons.js"></script>
 
 
 [![Documentation Status](https://readthedocs.org/projects/self-driving-golf-cart/badge/?version=latest)](https://self-driving-golf-cart.readthedocs.io/en/latest/?badge=latest)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](paypal.me/YongyangNie)
- <!-- Place this tag where you want the button to render. -->
-<a class="github-button" href="https://github.com/sigmaai/self-driving-golf-cart" data-icon="octicon-star" aria-label="Star sigmaai/self-driving-golf-cart on GitHub">Star</a>
+[![Build Status](https://travis-ci.org/sigmaai/self-driving-golf-cart.svg?branch=master)](https://travis-ci.org/sigmaai/self-driving-golf-cart)
 
 # Introduction
 
