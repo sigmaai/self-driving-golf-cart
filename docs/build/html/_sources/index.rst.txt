@@ -1,10 +1,5 @@
-
-
 Welcome to Self-Driving Golf Cart's documentation!
 ==================================================
-
-Introduction
-============
 
 .. image:: https://github.com/sigmaai/self-driving-golf-cart/raw/master/media/cover.png
 
@@ -16,42 +11,41 @@ Goals:
 
 - The vehicle should be able to navigate from point A to point B autonomously within a geofenced area.
 
-Here are the modules in this project.
+Tutorials
+=========
 
-- Autonomous steering (Behavioral cloning)
+.. toctree::
+   :maxdepth: 3
 
-- Semantic segmentation
+   Getting Started
+   Running the Simulation
+   Building Your Own Hardware
 
-- Driver by wire system (DBW)
+Modules
+=======
 
-- Object detection 🚙
+.. toctree::
+   :maxdepth: 5
 
-- Traffic light detection 🚦
-
-- Lane Detection 🛣
-
-- Localization 🛰️ (currently with GPS)
-
-- Path planning is coming soon...
-
-For the full documentation of the development process, please visit my blog at: neilnie.com
-
+   End-to-End Steering
+   Semantic Segmentation
+   Drive by Wire
+   Object Detection
+   Localization
+   Simulation
 
 Information
 ============
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
    license
    help
-
-
 
 Indices and tables
 ==================
 
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`

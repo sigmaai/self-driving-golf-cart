@@ -1,26 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="76f9b933-0bfc-4cf1-b884-ca824d20e8ef" name="Default" comment="">
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/simulation/config/carla_default_rviz.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/src/simulation/config/carla_default_rviz.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/simulation/scripts/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/simulation/scripts/client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/simulation/scripts/manual_control.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/simulation/scripts/manual_control.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/configs.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/steering_control/scripts/configs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/str-cai-self-v2.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/str-cai-self-v3.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/steering_control/scripts/train.py" afterDir="false" />
-=======
-      <change afterPath="$PROJECT_DIR$/src/driver/scripts/run_bag.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/self-driving-golf-cart.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/self-driving-golf-cart.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/others/phase-2-shopping-list.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/others/phase-2-shopping-list.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/driver/launch/drive.launch" beforeDir="false" afterPath="$PROJECT_DIR$/src/driver/launch/drive.launch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/visualization.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/visualization/dataset_visualizer.py" beforeDir="false" />
->>>>>>> 8158e9b9438374f4a7940a43b10b270a78f91118
+    <list default="true" id="8075d57d-0c29-4084-b018-ee8c503d1889" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/steering_control/scripts/steering_hardware_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,175 +12,21 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/self_driving_golf_cart$visualization.coverage" NAME="visualization Coverage Results" MODIFIED="1523565981900" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/steering/visualization" />
-    <SUITE FILE_PATH="coverage/self_driving_golf_cart$drive.coverage" NAME="drive Coverage Results" MODIFIED="1524093465441" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/self_driving_golf_cart$test_detection.coverage" NAME="test_detection Coverage Results" MODIFIED="1523407579643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-  </component>
   <component name="FileEditorManager">
-<<<<<<< HEAD
-    <splitter split-orientation="horizontal" split-proportion="0.5498392">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="train.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/train.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="660">
-                  <caret line="49" column="23" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
-                  <folding>
-                    <element signature="e#152#171#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="client.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/simulation/scripts/client.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="150">
-                  <caret line="467" lean-forward="true" selection-start-line="467" selection-end-line="467" />
-                  <folding>
-                    <element signature="e#294#305#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="client.py" pinned="false" current-in-tab="false">
-            <entry file="file:///usr/local/lib/python2.7/dist-packages/carla/client.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1545">
-                  <caret line="113" column="8" selection-start-line="113" selection-start-column="8" selection-end-line="113" selection-end-column="8" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/utils.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3780">
-                  <caret line="256" column="41" selection-start-line="256" selection-start-column="41" selection-end-line="256" selection-end-column="41" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="steering_controller" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/steering_controller">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
-                  <folding>
-                    <element signature="e#186#204#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="steering_controller" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/steering_controller">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="322">
-                  <caret line="44" column="27" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
-                  <folding>
-                    <element signature="e#186#204#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
-=======
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="client.launch" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/simulation/launch/client.launch">
+    <leaf>
+      <file leaf-file-name="steering_hardware_test.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/steering_hardware_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="visualization.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/visualization/visualization.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="validation_viz.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/validation_viz.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="176" column="32" selection-start-line="176" selection-start-column="32" selection-end-line="176" selection-end-column="32" />
+            <state relative-caret-position="555">
+              <caret line="37" column="24" lean-forward="true" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
               <folding>
-                <element signature="e#106#143#0" expanded="true" />
+                <element signature="e#2#21#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
->>>>>>> 8158e9b9438374f4a7940a43b10b270a78f91118
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>configs</find>
-      <find>input_image_shape</find>
-      <find>size</find>
-      <find>&quot;blue&quot;</find>
-      <find>shape</find>
-      <find>configs.</find>
-      <find>publish</find>
-      <find>local_map</find>
-      <find>Publisher</find>
-      <find>GetGeographicMap</find>
-      <find>L</find>
-      <find>cv2.resize</find>
-      <find>CarlaRosBridgeWithBag</find>
-      <find>print</find>
-      <find>printrospy.loginfo</find>
-      <find>compute_camera_sensor_msg</find>
-      <find>compute_sensor_msg</find>
-      <find>sensor</find>
-      <find>self.sensors</find>
-      <find>self.carla_settings</find>
-      <find>_camera_infos</find>
-      <find>add_sensor</find>
-<<<<<<< HEAD
-      <find>_on_new_episode</find>
-      <find>_on_loop</find>
-      <find>update_marker_pose</find>
-      <find>send_msg</find>
-      <find>self.publisher</find>
-      <find>get sensor</find>
-      <find>get_vehicle_marker</find>
-      <find>compute_player_pose_msg</find>
-=======
-      <find>path</find>
->>>>>>> 8158e9b9438374f4a7940a43b10b270a78f91118
-    </findStrings>
-    <replaceStrings>
-      <replace>&quot;yellow&quot;</replace>
-    </replaceStrings>
-    <dirStrings>
-      <dir>$PROJECT_DIR$/src/gps</dir>
-      <dir>$PROJECT_DIR$/src/osm</dir>
-    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -205,60 +34,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/steering/visualization/visualization.py" />
-        <option value="$PROJECT_DIR$/cruise/sc.py" />
-        <option value="$PROJECT_DIR$/CHECKLIST.md" />
-        <option value="$PROJECT_DIR$/driver.py" />
-        <option value="$PROJECT_DIR$/gui/DriveApp.py" />
-        <option value="$PROJECT_DIR$/steering/configs.py" />
-        <option value="$PROJECT_DIR$/steering/mc.py" />
-        <option value="$PROJECT_DIR$/src/steering_controller/scripts/steer" />
-        <option value="$PROJECT_DIR$/src/steering-logger/scripts/logger" />
-        <option value="$PROJECT_DIR$/src/steering-controller/scripts/models.py" />
-        <option value="$PROJECT_DIR$/src/steering-controller/scripts/steering_predictor.py" />
-        <option value="$PROJECT_DIR$/src/steering_logger/scripts/logger" />
-        <option value="$PROJECT_DIR$/src/steering_controller/scripts/steering_predictor.py" />
-        <option value="$PROJECT_DIR$/src/cruise_controller/scripts/cruise_predictor.py" />
-        <option value="$PROJECT_DIR$/src/steering_control/scripts/steering_predictor" />
-        <option value="$PROJECT_DIR$/src/steering_control/scripts/models.py" />
-        <option value="$PROJECT_DIR$/src/steering_control/arduino_motor_control/arduino_motor_control.ino" />
-        <option value="$PROJECT_DIR$/src/steering_control/scripts/visualization.py" />
-        <option value="$PROJECT_DIR$/src/detection/object_detection/scripts/visualization" />
-        <option value="$PROJECT_DIR$/src/steering_control/scripts/visualization" />
-        <option value="$PROJECT_DIR$/src/detection/object_detection/scripts/object_detection" />
-        <option value="$PROJECT_DIR$/src/data_logger/scripts/steering_logger" />
-        <option value="$PROJECT_DIR$/src/gps/src/libnmea_navsat_driver/parser.py" />
-        <option value="$PROJECT_DIR$/src/gps/scripts/gps_receiver" />
-        <option value="$PROJECT_DIR$/src/gps/scripts/nmea_topic_serial_reader" />
-        <option value="$PROJECT_DIR$/src/osm/scripts/viz_osm" />
-        <option value="$PROJECT_DIR$/src/driver/scripts/move.py" />
-        <option value="$PROJECT_DIR$/src/localization/scripts/move.py" />
-        <option value="$PROJECT_DIR$/src/steering_control/arduino_motor_control/configs.py" />
-        <option value="$PROJECT_DIR$/src/simulation/launch/client.launch" />
-        <option value="$PROJECT_DIR$/src/simulation/scripts/run_carla.sh" />
-        <option value="$PROJECT_DIR$/src/simulation/launch/client_with_rviz.launch" />
-        <option value="$PROJECT_DIR$/src/simulation/config/settings.yaml" />
-        <option value="$PROJECT_DIR$/src/localization/scripts/gps_localization.py" />
-        <option value="$PROJECT_DIR$/src/localization/launch/localization.launch" />
-        <option value="$PROJECT_DIR$/src/driver/launch/display.launch" />
-        <option value="$PROJECT_DIR$/src/steering_control/launch/steering_control.launch" />
-        <option value="$PROJECT_DIR$/src/steering_control/scripts/steering_controller" />
-        <option value="$PROJECT_DIR$/src/sensors/gps/launch/gps.launch" />
-        <option value="$PROJECT_DIR$/src/simulation/scripts/carla_ros_bridge.py" />
-        <option value="$PROJECT_DIR$/src/steering_control/scripts/utils.py" />
-        <option value="$PROJECT_DIR$/src/steering_control/scripts/configs.py" />
-        <option value="$PROJECT_DIR$/src/steering_control/scripts/visualization/dataset_visualizer.py" />
-        <option value="$PROJECT_DIR$/src/driver/scripts/run_bag.sh" />
-        <option value="$PROJECT_DIR$/src/steering_control/scripts/visualization/visualization.py" />
-        <option value="$PROJECT_DIR$/src/steering_control/scripts/train.py" />
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/src/simulation/scripts/manual_control.py" />
-        <option value="$PROJECT_DIR$/src/simulation/scripts/client.py" />
-=======
-        <option value="$PROJECT_DIR$/src/driver/launch/drive.launch" />
-        <option value="$PROJECT_DIR$/src/steering_control/scripts/visualization/validation_viz.py" />
-        <option value="$PROJECT_DIR$/src/steering_control/scripts/validation_viz.py" />
->>>>>>> 8158e9b9438374f4a7940a43b10b270a78f91118
+        <option value="$PROJECT_DIR$/src/steering_control/scripts/steering_hardware_test.py" />
       </list>
     </option>
   </component>
@@ -275,9 +51,6 @@
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="877" />
-  </component>
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -301,36 +74,14 @@
               <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
               <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-<<<<<<< HEAD
-              <item name="localization" type="462c0819:PsiDirectoryNode" />
+              <item name="steering_control" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
               <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sensors" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="simulation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="simulation" type="462c0819:PsiDirectoryNode" />
+              <item name="steering_control" type="462c0819:PsiDirectoryNode" />
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
-=======
-              <item name="steering_control" type="462c0819:PsiDirectoryNode" />
->>>>>>> 8158e9b9438374f4a7940a43b10b270a78f91118
-            </path>
-            <path>
-              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="steering_control" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -339,36 +90,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="run_carla.sh&#9;FILE&#9;file:///Users/yongyangnie/Developer/self-driving-golf-cart/src/simulation/scripts/run_carla.sh&#10;.sh&#9;FILE&#9;file:///Users/yongyangnie/Developer/self-driving-golf-cart/src/simulation/scripts/run_carla.sh" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="/opt/ros/kinetic/lib/python2.7/dist-packages" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-  </component>
-  <component name="PyConsoleOptionsProvider">
-    <option name="myPythonConsoleState">
-      <console-settings module-name="self-driving-golf-cart" is-module-sdk="true">
-        <envs>
-          <env key="PYTHONPATH" value="/opt/ros/$ros_release/lib/python2.7/dist-packages" />
-        </envs>
-        <option name="myUseModuleSdk" value="true" />
-        <option name="myModuleName" value="self-driving-golf-cart" />
-        <option name="myEnvs">
-          <map>
-            <entry key="PYTHONPATH" value="/opt/ros/$ros_release/lib/python2.7/dist-packages" />
-          </map>
-        </option>
-      </console-settings>
-    </option>
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/steering_control/scripts" />
-      <recent name="$PROJECT_DIR$/src/steering_control/scripts/weights/training" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/path_planning/src" />
-      <recent name="$PROJECT_DIR$/src/localization/src" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -382,153 +104,45 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.drive">
-    <configuration name="drive" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="self-driving-golf-cart" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/drive" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="test_detection" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="self-driving-golf-cart" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_detection.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="visualization" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="self-driving-golf-cart" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/steering/visualization" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/steering/visualization/visualization.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <list>
-      <item itemvalue="Python.test_detection" />
-      <item itemvalue="Python.visualization" />
-      <item itemvalue="Python.drive" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.drive" />
-        <item itemvalue="Python.visualization" />
-        <item itemvalue="Python.test_detection" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="76f9b933-0bfc-4cf1-b884-ca824d20e8ef" name="Default" comment="" />
-      <created>1523390139374</created>
+      <changelist id="8075d57d-0c29-4084-b018-ee8c503d1889" name="Default" comment="" />
+      <created>1527267805264</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1523390139374</updated>
+      <updated>1527267805264</updated>
     </task>
     <servers />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32862645" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Python Console" order="7" weight="0.32948717" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.25897437" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32914573" />
-<<<<<<< HEAD
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19377835" />
-=======
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20457797" />
->>>>>>> 8158e9b9438374f4a7940a43b10b270a78f91118
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.43919885" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18669528" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="SciView" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Favorites" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32914573" />
-      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="8" weight="0.32948717" />
     </layout>
-    <layout-to-restore>
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19507453" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32948717" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.25897437" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32948717" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.3297568" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -536,305 +150,14 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="2" />
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/simulation/scripts/client.py">
+    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/steering_hardware_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5040">
-          <caret line="360" column="34" selection-start-line="360" selection-start-column="34" selection-end-line="360" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/steering-logger/scripts/logger" />
-    <entry file="file://$PROJECT_DIR$/src/steering-controller/scripts/utils.py" />
-    <entry file="file://$PROJECT_DIR$/src/steering-controller/scripts/models.py" />
-    <entry file="file://$PROJECT_DIR$/src/steering-controller/scripts/steering_predictor.py" />
-    <entry file="file://$PROJECT_DIR$/src/steering_logger/scripts/logger" />
-    <entry file="file://$PROJECT_DIR$/src/cruise_controller/scripts/cruise" />
-=======
->>>>>>> 8158e9b9438374f4a7940a43b10b270a78f91118
-    <entry file="file://$PROJECT_DIR$/src/cruise_controller/scripts/cruise_predictor.py" />
-    <entry file="file://$PROJECT_DIR$/src/steering_controller/scripts/steering_predictor.py" />
-    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/weights/training/configs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/steering_predictor" />
-    <entry file="file://$PROJECT_DIR$/src/steering_control/arduino_motor_control/arduino_motor_control.ino">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="49" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/models.py" />
-    <entry file="file://$PROJECT_DIR$/src/steering_control/ml/visualization/visualization.py" />
-    <entry file="file://$PROJECT_DIR$/src/detection/object_detection/scripts/visualization" />
-    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/visualization">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1905">
-          <caret line="141" selection-start-line="141" selection-end-line="141" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/detection/object_detection/scripts/object_detection" />
-    <entry file="file://$PROJECT_DIR$/src/gps/scripts/nmea_topic_driver" />
-    <entry file="file://$PROJECT_DIR$/src/gps/scripts/nmea_topic_serial_reader" />
-    <entry file="file://$PROJECT_DIR$/src/gps/scripts/gps_receiver" />
-    <entry file="file://$PROJECT_DIR$/src/gps/src/libnmea_navsat_driver/parser.py" />
-    <entry file="file://$PROJECT_DIR$/src/gps/src/libnmea_navsat_driver/checksum_utils.py" />
-    <entry file="file://$PROJECT_DIR$/src/path_planning/src/coords_transform.h" />
-    <entry file="file://$PROJECT_DIR$/src/path_planning/src/main.cpp" />
-    <entry file="file://$PROJECT_DIR$/src/path_planning/src/waypoints.h" />
-    <entry file="file://$PROJECT_DIR$/src/osm/scripts/viz_osm" />
-    <entry file="file://$PROJECT_DIR$/src/driver/scripts/move.py" />
-    <entry file="file://$PROJECT_DIR$/src/localization/scripts/move.py" />
-    <entry file="file://$PROJECT_DIR$/src/data_logger/scripts/steering_logger">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="29" column="20" lean-forward="true" selection-start-line="26" selection-start-column="8" selection-end-line="29" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/simulation/launch/client_with_rviz.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="71" selection-start-line="6" selection-start-column="71" selection-end-line="6" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/simulation/config/settings.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/localization/scripts/gps_localization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/driver/launch/display.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="52" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/localization/launch/localization.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/steering_control/launch/steering_so.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sensors/gps/launch/gps.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/simulation/scripts/carla_ros_bridge.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/carla/sensor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sensors/gps/scripts/gps_receiver">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/configs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-=======
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/carla/client.py" />
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/carla/sensor.py" />
-    <entry file="file://$PROJECT_DIR$/src/simulation/scripts/manual_control.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="90" column="23" selection-start-line="90" selection-start-column="13" selection-end-line="90" selection-end-column="23" />
->>>>>>> 8158e9b9438374f4a7940a43b10b270a78f91118
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="3780">
-          <caret line="256" column="41" selection-start-line="256" selection-start-column="41" selection-end-line="256" selection-end-column="41" />
-=======
-        <state relative-caret-position="1452">
-          <caret line="360" column="34" selection-start-line="360" selection-start-column="34" selection-end-line="360" selection-end-column="34" />
->>>>>>> 8158e9b9438374f4a7940a43b10b270a78f91118
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/simulation/scripts/manual_control.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="199" selection-start-line="199" selection-end-line="199" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/visualization.py" />
-    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/visualization/dataset_visualizer.py" />
-    <entry file="file://$PROJECT_DIR$/src/driver/scripts/run_bag.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/steering_controller">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="240">
-          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+        <state relative-caret-position="555">
+          <caret line="37" column="24" lean-forward="true" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
           <folding>
-            <element signature="e#186#204#0" expanded="true" />
+            <element signature="e#2#21#0" expanded="true" />
           </folding>
-=======
-        <state relative-caret-position="285">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
->>>>>>> 8158e9b9438374f4a7940a43b10b270a78f91118
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="660">
-          <caret line="49" column="23" selection-start-line="49" selection-start-column="23" selection-end-line="49" selection-end-column="23" />
-          <folding>
-            <element signature="e#152#171#0" expanded="true" />
-          </folding>
-=======
-        <state relative-caret-position="330">
-          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
->>>>>>> 8158e9b9438374f4a7940a43b10b270a78f91118
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/carla/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="1545">
-          <caret line="113" column="8" selection-start-line="113" selection-start-column="8" selection-end-line="113" selection-end-column="8" />
-=======
-        <state relative-caret-position="288">
-          <caret line="34" column="70" lean-forward="true" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/steering_control/launch/steering_control.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/validation.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/simulation/scripts/run_carla.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="94" lean-forward="true" selection-start-line="3" selection-start-column="94" selection-end-line="3" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/visualization/validation_viz.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="44" lean-forward="true" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
-          <folding>
-            <element signature="e#106#143#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/validation_viz.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="176" column="32" selection-start-line="176" selection-start-column="32" selection-end-line="176" selection-end-column="32" />
-          <folding>
-            <element signature="e#106#143#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/visualization/dataset_viz.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="116" lean-forward="true" selection-start-line="116" selection-end-line="116" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/visualization/visualization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/driver/launch/drive.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
->>>>>>> 8158e9b9438374f4a7940a43b10b270a78f91118
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/simulation/scripts/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="150">
-          <caret line="467" lean-forward="true" selection-start-line="467" selection-end-line="467" />
-=======
-        <state relative-caret-position="700">
-          <caret line="52" column="17" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
->>>>>>> 8158e9b9438374f4a7940a43b10b270a78f91118
-          <folding>
-            <element signature="e#294#305#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/simulation/launch/client.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>

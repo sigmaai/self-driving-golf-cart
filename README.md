@@ -1,7 +1,6 @@
-<center><img src="./media/cover.png" alt="Drawing" style="width: 700;"/>
+<center>
+<img src="./media/cover.png" alt="Drawing" style="width: 700;"/>
 </center>
-
-
 
 [![Documentation Status](https://readthedocs.org/projects/self-driving-golf-cart/badge/?version=latest)](https://self-driving-golf-cart.readthedocs.io/en/latest/?badge=latest)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](paypal.me/YongyangNie)
@@ -17,11 +16,11 @@ Welcome! This is an open source self-driving development platform aimed for rapi
 
 #### Here are the modules in this project.
 
-1. Autonomous steering (Behavioral cloning)
-2. Semantic segmentation
-3. Driver by wire system (DBW)
-4. Object detection 🚙
-5. Traffic light detection 🚦
+1. End-to-End steering (Behavioral cloning)
+2. Semantic Segmentation
+3. Drive by Wire (DBW)
+4. Object Detection 🚙
+5. Traffic Light Detection 🚦
 6. Lane Detection 🛣
 7. Localization 🛰️ (currently with GPS)
 

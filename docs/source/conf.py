@@ -72,6 +72,8 @@ exclude_patterns = []
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
 
+html_theme_path = ["_themes", ]
+
 
 # -- Options for HTML output -------------------------------------------------
 
