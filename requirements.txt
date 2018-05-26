@@ -46,7 +46,7 @@ Pillow == 5.1.0
 # src/simulation/scripts/carla_ros_bridge.py: 18,19,20
 # src/simulation/scripts/client.py: 29,30,31,32
 # src/simulation/scripts/manual_control.py: 54,55,56,57,58
-carla_client == 0.8.0
+# carla_client == 0.8.0
 
 # src/segmentation/scripts/steering_simulation.py: 5
 # src/steering_control/scripts/simulation.py: 13
