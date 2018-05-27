@@ -1,8 +1,8 @@
-# Install script for directory: /home/neil/Workspace/self-driving-golf-cart/src/simulation
+# Install script for directory: /home/yongyang/Workspace/self-driving-golf-cart/src/simulation
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/neil/Workspace/self-driving-golf-cart/install")
+  set(CMAKE_INSTALL_PREFIX "/home/yongyang/Workspace/self-driving-golf-cart/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,17 +33,17 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/build/simulation/catkin_generated/installspace/simulation.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yongyang/Workspace/self-driving-golf-cart/build/simulation/catkin_generated/installspace/simulation.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simulation/cmake" TYPE FILE FILES
-    "/home/neil/Workspace/self-driving-golf-cart/build/simulation/catkin_generated/installspace/simulationConfig.cmake"
-    "/home/neil/Workspace/self-driving-golf-cart/build/simulation/catkin_generated/installspace/simulationConfig-version.cmake"
+    "/home/yongyang/Workspace/self-driving-golf-cart/build/simulation/catkin_generated/installspace/simulationConfig.cmake"
+    "/home/yongyang/Workspace/self-driving-golf-cart/build/simulation/catkin_generated/installspace/simulationConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simulation" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/src/simulation/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simulation" TYPE FILE FILES "/home/yongyang/Workspace/self-driving-golf-cart/src/simulation/package.xml")
 endif()
 

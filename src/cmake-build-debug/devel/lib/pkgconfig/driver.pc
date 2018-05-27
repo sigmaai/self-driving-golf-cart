@@ -1,0 +1,8 @@
+prefix=/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/devel
+
+Name: driver
+Description: Description of driver
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/devel/lib 
+Requires: 

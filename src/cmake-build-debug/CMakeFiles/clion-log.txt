@@ -1,0 +1,80 @@
+/home/yongyang/Applications/clion-2018.1/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/yongyang/Workspace/self-driving-golf-cart/src
+-- Using CATKIN_DEVEL_PREFIX: /home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/devel
+-- Using CMAKE_PREFIX_PATH: /home/yongyang/Workspace/self-driving-golf-cart/devel;/opt/ros/kinetic
+-- This workspace overlays: /home/yongyang/Workspace/self-driving-golf-cart/devel;/opt/ros/kinetic
+-- Using PYTHON_EXECUTABLE: /usr/bin/python
+-- Using Debian Python package layout
+-- Using empy: /usr/bin/empy
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Call enable_testing()
+-- Using CATKIN_TEST_RESULTS_DIR: /home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/test_results
+-- Found gmock sources under '/usr/src/gmock': gmock will be built
+-- Found gtest sources under '/usr/src/gmock': gtests will be built
+-- Using Python nosetests: /usr/bin/nosetests-2.7
+-- catkin 0.7.11
+-- BUILD_SHARED_LIBS is on
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- ~~  traversing 14 packages in topological order:
+-- ~~  - gps
+-- ~~  - segmentation
+-- ~~  - lane_detection
+-- ~~  - object_detection
+-- ~~  - cv_camera
+-- ~~  - tl_detection
+-- ~~  - cruise_control
+-- ~~  - data_logger
+-- ~~  - driver
+-- ~~  - localization
+-- ~~  - path_planning
+-- ~~  - simulation
+-- ~~  - steering_control
+-- ~~  - osm_cartography
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- +++ processing catkin package: 'gps'
+-- ==> add_subdirectory(sensors/gps)
+-- +++ processing catkin package: 'segmentation'
+-- ==> add_subdirectory(segmentation)
+-- +++ processing catkin package: 'lane_detection'
+-- ==> add_subdirectory(detection/lane_detection)
+-- +++ processing catkin package: 'object_detection'
+-- ==> add_subdirectory(detection/object_detection)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- object_detection: 2 messages, 0 services
+-- +++ processing catkin package: 'cv_camera'
+-- ==> add_subdirectory(sensors/cv_camera)
+-- Boost version: 1.58.0
+-- Found the following Boost libraries:
+--   system
+--   thread
+--   chrono
+--   date_time
+--   atomic
+-- +++ processing catkin package: 'tl_detection'
+-- ==> add_subdirectory(detection/tl_detection)
+-- +++ processing catkin package: 'cruise_control'
+-- ==> add_subdirectory(cruise_control)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'data_logger'
+-- ==> add_subdirectory(data_logger)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'driver'
+-- ==> add_subdirectory(driver)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'localization'
+-- ==> add_subdirectory(localization)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'path_planning'
+-- ==> add_subdirectory(path_planning)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'simulation'
+-- ==> add_subdirectory(simulation)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'steering_control'
+-- ==> add_subdirectory(steering_control)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'osm_cartography'
+-- ==> add_subdirectory(osm)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug

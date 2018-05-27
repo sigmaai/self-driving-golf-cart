@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/devel/setup.sh

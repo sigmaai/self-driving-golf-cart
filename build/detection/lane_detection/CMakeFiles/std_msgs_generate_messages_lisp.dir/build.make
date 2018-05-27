@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/neil/Workspace/self-driving-golf-cart/src
+CMAKE_SOURCE_DIR = /home/yongyang/Workspace/self-driving-golf-cart/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/neil/Workspace/self-driving-golf-cart/build
+CMAKE_BINARY_DIR = /home/yongyang/Workspace/self-driving-golf-cart/build
 
 # Utility rule file for std_msgs_generate_messages_lisp.
 
@@ -63,10 +63,10 @@ detection/lane_detection/CMakeFiles/std_msgs_generate_messages_lisp.dir/build: s
 .PHONY : detection/lane_detection/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 
 detection/lane_detection/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean:
-	cd /home/neil/Workspace/self-driving-golf-cart/build/detection/lane_detection && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_lisp.dir/cmake_clean.cmake
+	cd /home/yongyang/Workspace/self-driving-golf-cart/build/detection/lane_detection && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_lisp.dir/cmake_clean.cmake
 .PHONY : detection/lane_detection/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
 
 detection/lane_detection/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend:
-	cd /home/neil/Workspace/self-driving-golf-cart/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/neil/Workspace/self-driving-golf-cart/src /home/neil/Workspace/self-driving-golf-cart/src/detection/lane_detection /home/neil/Workspace/self-driving-golf-cart/build /home/neil/Workspace/self-driving-golf-cart/build/detection/lane_detection /home/neil/Workspace/self-driving-golf-cart/build/detection/lane_detection/CMakeFiles/std_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/yongyang/Workspace/self-driving-golf-cart/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yongyang/Workspace/self-driving-golf-cart/src /home/yongyang/Workspace/self-driving-golf-cart/src/detection/lane_detection /home/yongyang/Workspace/self-driving-golf-cart/build /home/yongyang/Workspace/self-driving-golf-cart/build/detection/lane_detection /home/yongyang/Workspace/self-driving-golf-cart/build/detection/lane_detection/CMakeFiles/std_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : detection/lane_detection/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend
 

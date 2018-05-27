@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: cruise_control
+Description: Description of cruise_control
+Version: 0.0.0
+Cflags: 
+Libs: -L/usr/local/lib 
+Requires: 

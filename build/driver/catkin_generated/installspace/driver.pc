@@ -1,8 +1,8 @@
-prefix=/home/neil/Workspace/self-driving-golf-cart/install
+prefix=/home/yongyang/Workspace/self-driving-golf-cart/install
 
 Name: driver
 Description: Description of driver
 Version: 0.0.0
 Cflags: 
-Libs: -L/home/neil/Workspace/self-driving-golf-cart/install/lib 
+Libs: -L/home/yongyang/Workspace/self-driving-golf-cart/install/lib 
 Requires: 

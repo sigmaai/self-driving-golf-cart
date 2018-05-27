@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/neil/Workspace/self-driving-golf-cart/src
+CMAKE_SOURCE_DIR = /home/yongyang/Workspace/self-driving-golf-cart/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/neil/Workspace/self-driving-golf-cart/build
+CMAKE_BINARY_DIR = /home/yongyang/Workspace/self-driving-golf-cart/build
 
 # Utility rule file for clean_test_results_cv_camera.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/neil/Workspace/self-driving-golf-cart/build
 include sensors/cv_camera/CMakeFiles/clean_test_results_cv_camera.dir/progress.make
 
 sensors/cv_camera/CMakeFiles/clean_test_results_cv_camera:
-	cd /home/neil/Workspace/self-driving-golf-cart/build/sensors/cv_camera && /usr/bin/python /opt/ros/kinetic/share/catkin/cmake/test/remove_test_results.py /home/neil/Workspace/self-driving-golf-cart/build/test_results/cv_camera
+	cd /home/yongyang/Workspace/self-driving-golf-cart/build/sensors/cv_camera && /usr/bin/python /opt/ros/kinetic/share/catkin/cmake/test/remove_test_results.py /home/yongyang/Workspace/self-driving-golf-cart/build/test_results/cv_camera
 
 clean_test_results_cv_camera: sensors/cv_camera/CMakeFiles/clean_test_results_cv_camera
 clean_test_results_cv_camera: sensors/cv_camera/CMakeFiles/clean_test_results_cv_camera.dir/build.make
@@ -67,10 +67,10 @@ sensors/cv_camera/CMakeFiles/clean_test_results_cv_camera.dir/build: clean_test_
 .PHONY : sensors/cv_camera/CMakeFiles/clean_test_results_cv_camera.dir/build
 
 sensors/cv_camera/CMakeFiles/clean_test_results_cv_camera.dir/clean:
-	cd /home/neil/Workspace/self-driving-golf-cart/build/sensors/cv_camera && $(CMAKE_COMMAND) -P CMakeFiles/clean_test_results_cv_camera.dir/cmake_clean.cmake
+	cd /home/yongyang/Workspace/self-driving-golf-cart/build/sensors/cv_camera && $(CMAKE_COMMAND) -P CMakeFiles/clean_test_results_cv_camera.dir/cmake_clean.cmake
 .PHONY : sensors/cv_camera/CMakeFiles/clean_test_results_cv_camera.dir/clean
 
 sensors/cv_camera/CMakeFiles/clean_test_results_cv_camera.dir/depend:
-	cd /home/neil/Workspace/self-driving-golf-cart/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/neil/Workspace/self-driving-golf-cart/src /home/neil/Workspace/self-driving-golf-cart/src/sensors/cv_camera /home/neil/Workspace/self-driving-golf-cart/build /home/neil/Workspace/self-driving-golf-cart/build/sensors/cv_camera /home/neil/Workspace/self-driving-golf-cart/build/sensors/cv_camera/CMakeFiles/clean_test_results_cv_camera.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/yongyang/Workspace/self-driving-golf-cart/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yongyang/Workspace/self-driving-golf-cart/src /home/yongyang/Workspace/self-driving-golf-cart/src/sensors/cv_camera /home/yongyang/Workspace/self-driving-golf-cart/build /home/yongyang/Workspace/self-driving-golf-cart/build/sensors/cv_camera /home/yongyang/Workspace/self-driving-golf-cart/build/sensors/cv_camera/CMakeFiles/clean_test_results_cv_camera.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : sensors/cv_camera/CMakeFiles/clean_test_results_cv_camera.dir/depend
 
