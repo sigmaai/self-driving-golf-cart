@@ -1,15 +1,12 @@
 
-# Ros bridge for Carla simulator
+# ROS bridge for Carla simulator
 
 This ros package aims at providing a simple ros bridge for carla simulator.
 
 ![rviz setup](./assets/rviz_carla_default.png "rviz")
 ![depthcloud](./assets/depth_cloud_and_lidar.png "depthcloud")
 
-![short video](https://youtu.be/S_NoN2GBtdY)
-
-
-# Features/Roadmap/TODO
+# Features/Roadmap
 
 - [x] Cameras (depth, segmentation, rgb) support
 - [x] Add camera matrix
@@ -33,9 +30,8 @@ This ros package aims at providing a simple ros bridge for carla simulator.
 ## Install carla python client in your workspace
 
     cd carla/PythonClient
-    pip install -e .  --user --upgrade   
-
-    now in a python2.7 terminal you should be able to do
+    pip install .
+now in a python2.7 terminal you should be able to do
 
     import carla
 

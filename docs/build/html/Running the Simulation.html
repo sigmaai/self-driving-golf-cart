@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="End-to-End Steering" href="End-to-End Steering.html" />
+    <link rel="next" title="Building Your Own Hardware" href="Building Your Own Hardware.html" />
     <link rel="prev" title="Getting Started" href="Getting Started.html" /> 
 
   
@@ -81,7 +81,13 @@
             
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Getting Started.html">Getting Started</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Running the Simulation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Running the Simulation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#dependencies-pre-installation">Dependencies &amp; Pre-installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#build-unreal-engine">Build Unreal Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-carla">Installing Carla</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Building Your Own Hardware.html">Building Your Own Hardware</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="End-to-End Steering.html">End-to-End Steering</a></li>
@@ -160,6 +166,33 @@
             
   <div class="section" id="running-the-simulation">
 <h1>Running the Simulation<a class="headerlink" href="#running-the-simulation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="dependencies-pre-installation">
+<h2>Dependencies &amp; Pre-installation<a class="headerlink" href="#dependencies-pre-installation" title="Permalink to this headline">¶</a></h2>
+<p>First of all, you need to install the Carla simulator. Carla runs on Unreal Engine, a cross-platform high quality game engine.</p>
+<p>Install the build tools and dependencies:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get install build-essential clang-3.9 git cmake ninja-build python3-requests python-dev tzdata sed curl wget unzip autoconf libtool
+</pre></div>
+</div>
+<p>To avoid compatibility issues between Unreal Engine and the CARLA dependencies, the best configuration is to compile everything with the same compiler version and C++ runtime library. We use clang 3.9 and LLVM’s libc++. You may need to change your default clang version to compile Unreal:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo update-alternatives --install /usr/bin/clang++ clang++ /usr/lib/llvm-3.9/bin/clang++ 100
+$ sudo update-alternatives --install /usr/bin/clang clang /usr/lib/llvm-3.9/bin/clang 100
+</pre></div>
+</div>
+</div>
+<div class="section" id="build-unreal-engine">
+<h2>Build Unreal Engine<a class="headerlink" href="#build-unreal-engine" title="Permalink to this headline">¶</a></h2>
+<p>Please note that Unreal Engine repositories are private. In order to gain access you need to <strong>add your GitHub username when you sign up at www.unrealengine.com.</strong></p>
+<p>Download and compile Unreal Engine 4.18. Here we will assume you install it at “~/UnrealEngine_4.18”, but you can install it anywhere, just replace the path where necessary:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git clone --depth=1 -b 4.18 https://github.com/EpicGames/UnrealEngine.git ~/UnrealEngine_4.18
+$ cd ~/UnrealEngine_4.18
+$ ./Setup.sh &amp;&amp; ./GenerateProjectFiles.sh &amp;&amp; make
+</pre></div>
+</div>
+<p>Check Unreal’s documentation “Building On Linux” if any of the steps above fail.</p>
+</div>
+<div class="section" id="installing-carla">
+<h2>Installing Carla<a class="headerlink" href="#installing-carla" title="Permalink to this headline">¶</a></h2>
+</div>
 </div>
 
 
@@ -170,7 +203,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="End-to-End Steering.html" class="btn btn-neutral float-right" title="End-to-End Steering" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Building Your Own Hardware.html" class="btn btn-neutral float-right" title="Building Your Own Hardware" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="Getting Started.html" class="btn btn-neutral" title="Getting Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
