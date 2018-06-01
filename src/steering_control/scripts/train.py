@@ -6,11 +6,9 @@
 # Contact: contact@neilnie.com
 #
 
-import pandas as pd
 import numpy as np
-import utils as utils
+from models import utils as utils, configs as configs
 import models.models as models
-import configs as configs
 import matplotlib.pyplot as plt
 from models.ConvLSTM import ConvLSTM
 

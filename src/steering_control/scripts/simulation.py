@@ -5,9 +5,6 @@
 
 import argparse         # parsing command line arguments
 import base64           # decoding camera images
-from datetime import datetime
-import os
-import cv2
 import numpy as np
 import socketio         #real-time server
 import eventlet.wsgi
@@ -16,7 +13,7 @@ from flask import Flask #web framework
 from io import BytesIO  #input output
 from scipy import misc
 
-import utils as utils
+from src.steering_control.scripts.models import utils as utils
 import models as models
 from autumn import AutumnModel
 from rambo import Rambo

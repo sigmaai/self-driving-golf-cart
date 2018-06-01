@@ -15,7 +15,7 @@ import matplotlib
 import matplotlib.backends.backend_agg as agg
 import pylab
 from models import models
-import utils
+from src.steering_control.scripts.models import utils
 
 matplotlib.use("Agg")
 

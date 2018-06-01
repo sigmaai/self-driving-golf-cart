@@ -9,8 +9,8 @@
 import cv2
 import numpy as np
 import pandas as pd
-import configs as configs
-import os.path
+import os
+import configs
 
 
 # -----------------------------------------------------------------------------------
@@ -28,15 +28,14 @@ class BatchGenerator(object):
         while True:
             output = []
 
-            print("self.batch_size: " + str(self.batch_size))
-
             for i in range(self.batch_size):
 
                 idx = int(self.indices[i])
                 left_pad = self.sequence[idx - configs.LEFT_CONTEXT:idx]
 
                 if len(left_pad) < configs.LEFT_CONTEXT:
-                    left_pad = [self.sequence[0]] * (configs.LEFT_CONTEXT - len(left_pad)) + left_pad
+                    left_pad = [self.sequence[0]] * (
+                                configs.LEFT_CONTEXT - len(left_pad)) + left_pad
                 assert len(left_pad) == configs.LEFT_CONTEXT
 
                 leftover = len(self.sequence) - idx
@@ -121,7 +120,8 @@ def random_flip(image, steering_angle):
 def load_image(image_file):
 
     img = cv2.imread(image_file)
-    img = cv2.resize(img, (configs.image_width, configs.image_height))
+    img = cv2.resize(img, (
+    configs.image_width, configs.image_height))
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     return img
 

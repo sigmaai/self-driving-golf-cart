@@ -1,13 +1,10 @@
 import numpy as np
 from rambo import Rambo
-from keras.models import load_model
 import pandas as pd
-import glob
 import argparse
 import cv2
-import utils
+from src.steering_control.scripts.models import utils
 import models
-from scipy import misc
 from autumn import AutumnModel
 
 

@@ -3,13 +3,12 @@
 #   (c) Yongyang Nie, 2018 | AGC, ALVNS
 #   yongyang.nie@gmail.com
 
-import cv2
 import pandas as pd
 import argparse
 import pygame
 import numpy as np
 from skimage import transform as tf
-import utils
+from src.steering_control.scripts.models import utils
 import csv
 
 # setup pygame

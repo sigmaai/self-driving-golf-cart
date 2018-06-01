@@ -8,11 +8,11 @@
 import numpy as np
 import tensorflow as tf
 import os
-from model.SamplingRNNCell import SamplingRNNCell
+from SamplingRNNCell import SamplingRNNCell
 from utils import BatchGenerator
 import configs
 import utils
-import model.helper as helper
+import helper as helper
 
 slim = tf.contrib.slim
 global_train_step = 0
@@ -80,18 +80,14 @@ class ConvLSTM(object):
 
             if mode == "train":
                 feed_dict.update({self.keep_prob: configs.KEEP_PROB_TRAIN})
-                summary, _, loss, controller_final_state_gt_cur, controller_final_state_autoregressive_cur = \
-                    session.run([self.summaries, self.optimizer, self.mse_autoregressive_steering, self.controller_final_state_gt,
-                                 self.controller_final_state_autoregressive],
-                                feed_dict=feed_dict)
+                summary, _, loss, controller_final_state_gt_cur, controller_final_state_autoregressive_cur = session.run([self.summaries, self.optimizer, self.mse_autoregressive_steering, self.controller_final_state_gt, self.controller_final_state_autoregressive],
+                                                                                                                         feed_dict=feed_dict)
                 self.train_writer.add_summary(summary, global_train_step)
                 global_train_step += 1
 
             elif mode == "valid":
-                model_predictions, summary, loss, controller_final_state_autoregressive_cur = \
-                    session.run([self.steering_predictions, self.summaries, self.mse_autoregressive_steering,
-                                 self.controller_final_state_autoregressive],
-                                feed_dict=feed_dict)
+                model_predictions, summary, loss, controller_final_state_autoregressive_cur = session.run([self.steering_predictions, self.summaries, self.mse_autoregressive_steering, self.controller_final_state_autoregressive],
+                                                                                                          feed_dict=feed_dict)
                 self.valid_writer.add_summary(summary, global_valid_step)
                 global_valid_step += 1
                 feed_inputs = feed_inputs[:, configs.LEFT_CONTEXT:].flatten()
@@ -110,7 +106,7 @@ class ConvLSTM(object):
 
             if mode != "test":
                 acc_loss += loss
-                print('\r', step + 1, "/", total_num_steps, np.sqrt(acc_loss / (step + 1)))
+                print(str(step + 1) + "/" + str(total_num_steps) + "loss: " + str(np.sqrt(acc_loss / (step + 1))))
 
         if mode != "test":
             return np.sqrt(acc_loss / total_num_steps), valid_predictions
@@ -138,6 +134,7 @@ class ConvLSTM(object):
 
             # training for a number of epochs
             for epoch in range(configs.NUM_EPOCHS):
+
                 print("Starting epoch %d" % epoch)
                 print("Validation:")
                 valid_score, valid_predictions = self.do_epoch(session=session, sequences=self.valid_seq, mode="valid")
@@ -152,17 +149,16 @@ class ConvLSTM(object):
                     with open("v3/valid-predictions-epoch%d" % epoch, "w") as out:
                         result = np.float128(0.0)
                         for img, stats in valid_predictions.items():
-                            print(img, stats)
                             result += stats[-1]
 
                     print("Validation unnormalized RMSE:", np.sqrt(result / len(valid_predictions)))
 
                     with open("v3/test-predictions-epoch%d" % epoch, "w") as out:
                         _, test_predictions = self.do_epoch(session=session, sequences=self.test_seq, mode="test")
-                        print("frame_id,steering_angle")
+                        # print("frame_id,steering_angle")
                         for img, pred in test_predictions.items():
                             img = img.replace("challenge_2/Test-final/center/", "")
-                            print("%s,%f" % (img, pred))
+                            # print("%s,%f" % (img, pred))
 
                 if epoch != configs.NUM_EPOCHS - 1:
                     print("Training")

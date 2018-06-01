@@ -64,12 +64,12 @@ RNN_PROJ = 32
 
 KEEP_PROB_TRAIN = 0.25
 
-NUM_EPOCHS = 20
+NUM_EPOCHS = 5
 
 CSV_HEADER = "index, timestamp, width, height, frame_id, filename, angle, torque, speed, lat, long, alt".split(",")
 OUTPUTS = CSV_HEADER[-6:-3]  # angle,torque,speed
 OUTPUT_DIM = len(OUTPUTS)  # predict all features: steering angle, torque and vehicle speed
 
-DS_PATH = "/Volumes/Personal_Drive/Datasets/udacity-driving/dataset-1/"
-TRAIN_DS_PATH = "/Volumes/Personal_Drive/Datasets/udacity-driving/dataset-1/mac_train_center_inter.csv"
-TEST_DS_PATH = "/Volumes/Personal_Drive/Datasets/udacity-driving/dataset-2/interpolated.csv"
+DS_PATH = "/home/neil/dataset/udacity/"
+TRAIN_DS_PATH = "/home/neil/dataset/udacity/main.csv"
+TEST_DS_PATH = "/home/neil/dataset/udacity/test.csv"
