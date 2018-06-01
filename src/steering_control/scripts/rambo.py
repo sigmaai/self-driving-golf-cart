@@ -1,5 +1,8 @@
 #
-#
+# Rambo model predictor class
+# Udacity self-driving challenge 2
+# (c) Yongyang Nie, 2018
+# All Rights Reserved
 #
 
 import glob

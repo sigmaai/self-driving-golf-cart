@@ -5,7 +5,6 @@
 # (c) Yongyang Nie, 2018. All Rights Reserved
 # Contact: contact@neilnie.com
 #
-#
 
 import pandas as pd
 import numpy as np
@@ -13,12 +12,24 @@ import utils as utils
 import models.models as models
 import configs as configs
 import matplotlib.pyplot as plt
+from models.ConvLSTM import ConvLSTM
+
 
 validation = True
 visualize = False
 
 
 def train(data_type="UDAT", model_type="Comma", load_weights=False, steps=5000, epochs=5, validation=False):
+
+    # --------- check for model type  -------------
+    if model_type == "comma":
+        model = models.commaai_model()
+    elif model_type == "nvidia":
+        model = models.nvidia_model()
+    elif model_type == "rambo":
+        model = models.create_rambo_model()
+    else:
+        raise Exception("Unknown model type: " + model_type + ". Please enter a valid model type")
 
     # --------- check for dataset type ------------
     if data_type == "UDAT":
@@ -29,19 +40,6 @@ def train(data_type="UDAT", model_type="Comma", load_weights=False, steps=5000, 
         training_gen = utils.self_batch_generator(labels, 8, True)
     else:
         raise Exception('Please enter a valid dataset type')
-
-
-    # --------- check for model type  -------------
-    if model_type == "comma":
-        model = models.commaai_model()
-    elif model_type == "nvidia":
-        model = models.nvidia_model()
-    elif model_type == "rambo":
-        model = models.create_rambo_model()
-    elif model_type == "convLSTM":
-        model = models.autumn()
-    else:
-        raise Exception("Unknown model type: " + model_type + ". Please enter a valid model type")
 
     print("data length {}".format(len(labels)))
 
@@ -65,7 +63,6 @@ def train(data_type="UDAT", model_type="Comma", load_weights=False, steps=5000, 
     else:
         model.fit_generator(training_gen, steps_per_epoch=steps, epochs=epochs, verbose=1)
 
-
     # standard model naming scheme
     # "[purpose]-[model type]-[dataset used]-[version].h5"
     # example:
@@ -74,6 +71,13 @@ def train(data_type="UDAT", model_type="Comma", load_weights=False, steps=5000, 
     model.save('str-cai-self-v4.h5')
 
 
+def train_conv_lstm():
+
+    graph = ConvLSTM()
+    graph.train(graph=graph.graph, saver=graph.saver)
+
+
 if __name__ == "__main__":
 
-    train(data_type="SELF", model_type="comma", epochs=5, load_weights=True, validation=True)
+    # train(data_type="SELF", model_type="comma", epochs=5, load_weights=True, validation=True)
+    train_conv_lstm()

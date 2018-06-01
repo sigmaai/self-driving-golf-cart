@@ -1,5 +1,9 @@
 #!/usr/bin/python
-
+#
+# Test steering hardware with Udacity dataset
+# (c) Yongyang Nie, 2018. All Rights Reserved
+# Self-driving vehicle project.
+#
 
 import pandas as pd
 import cv2

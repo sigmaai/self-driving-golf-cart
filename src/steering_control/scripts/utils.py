@@ -5,7 +5,6 @@
 # (c) Yongyang Nie, 2018. All Rights Reserved
 # Contact: contact@neilnie.com
 #
-#
 
 import cv2
 import numpy as np
@@ -14,7 +13,97 @@ import configs as configs
 import os.path
 
 
-INPUT_SHAPE = (configs.image_height, configs.image_width, 3)
+# -----------------------------------------------------------------------------------
+
+class BatchGenerator(object):
+
+    def __init__(self, sequence, seq_len, batch_size):
+        self.sequence = sequence
+        self.seq_len = seq_len
+        self.batch_size = batch_size
+        chunk_size = 1 + (len(sequence) - 1) / batch_size
+        self.indices = [(i * chunk_size) % len(sequence) for i in range(batch_size)]
+
+    def next(self):
+        while True:
+            output = []
+
+            print("self.batch_size: " + str(self.batch_size))
+
+            for i in range(self.batch_size):
+
+                idx = int(self.indices[i])
+                left_pad = self.sequence[idx - configs.LEFT_CONTEXT:idx]
+
+                if len(left_pad) < configs.LEFT_CONTEXT:
+                    left_pad = [self.sequence[0]] * (configs.LEFT_CONTEXT - len(left_pad)) + left_pad
+                assert len(left_pad) == configs.LEFT_CONTEXT
+
+                leftover = len(self.sequence) - idx
+
+                if leftover >= self.seq_len:
+                    result = self.sequence[idx:idx + self.seq_len]
+                else:
+                    result = self.sequence[idx:] + self.sequence[:self.seq_len - leftover]
+                assert len(result) == self.seq_len
+
+                self.indices[i] = (idx + self.seq_len) % len(self.sequence)
+                images, targets = zip(*result)
+                images_left_pad, _ = zip(*left_pad)
+                output.append((np.stack(images_left_pad + images), np.stack(targets)))
+
+            output = list(zip(*output))
+            output = [np.stack(output[0]), np.stack(output[1])]
+
+            return output
+
+
+def read_csv(filename):
+
+    with open(filename, 'r') as f:
+
+        lines = [ln.strip().split(",")[-7:-3] for ln in f.readlines()]
+        lines = map(lambda x: (x[0], np.float32(x[1:])), lines)  # imagefile, outputs
+        return lines
+
+
+def process_csv(filename, val=5):
+
+    print("processing csv files, please wait...")
+
+    sum_f = np.float128([0.0] * configs.OUTPUT_DIM)
+    sum_sq_f = np.float128([0.0] * configs.OUTPUT_DIM)
+    lines = read_csv(filename)
+
+    # leave val% for validation
+    train_seq = []
+    valid_seq = []
+    count = 0
+
+    for ln in lines:
+
+        if count < configs.SEQ_LEN * configs.BATCH_SIZE * (100 - val):
+            train_seq.append(ln)
+            sum_f += ln[1]
+            sum_sq_f += ln[1] * ln[1]
+        else:
+            valid_seq.append(ln)
+        count += 1
+        count %= configs.SEQ_LEN * configs.BATCH_SIZE * 100
+
+    mean = sum_f / len(train_seq)
+    var = sum_sq_f / len(train_seq) - mean * mean
+    std = np.sqrt(var)
+    print("train seq length: " + str(len(train_seq)), "val sequence length: " + str(len(valid_seq)))
+    print("mean: " + str(mean), "standard deviation: " + str(
+        std))  # we will need these statistics to normalize the outputs (and ground truth inputs)
+
+    print("finished processing csv files!")
+
+    return (train_seq, valid_seq), (mean, std)
+
+
+# -----------------------------------------------------------------------------------
 
 
 # --------------HELPER-METHODS-------------- #
@@ -251,7 +340,6 @@ def self_batch_generator(data, batch_size, is_training):
                 break
 
         yield images, steers
-
 
 
 def validation_generator(data, batch_size):
