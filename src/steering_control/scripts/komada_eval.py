@@ -14,15 +14,12 @@ import cv2
 import numpy as np
 import tensorflow as tf
 
-from math import pi
-from rmse import calc_rmse
-from generator import gen
-import time
-
 
 class KomandaModel(object):
+
     def __init__(self, checkpoint_dir, metagraph_file):
-        self.graph =tf.Graph()
+
+        self.graph = tf.Graph()
         self.LEFT_CONTEXT = 5 # TODO remove hardcode; store it in the graph
         with self.graph.as_default():
             saver = tf.train.import_meta_graph(metagraph_file)
@@ -58,27 +55,16 @@ class KomandaModel(object):
         return steering[0][0]
 
 
-if __name__ == '__main__':
-
-    parser = argparse.ArgumentParser(description='Model Runner for team komanda')
-    parser.add_argument('bagfile', type=str, help='Path to ROS bag')
-    parser.add_argument('metagraph_file', type=str, help='Path to the metagraph file')
-    parser.add_argument('checkpoint_dir', type=str, help='Path to the checkpoint dir')
-    parser.add_argument('--debug_print', dest='debug_print', action='store_true', help='Debug print of predicted steering commands')
-    args = parser.parse_args()
-
-    def make_predictor():
-        model = KomandaModel(checkpoint_dir=args.checkpoint_dir, metagraph_file=args.metagraph_file)
-        return lambda img: model.predict(img)
-
-    def process(predictor, img):
-        steering = predictor(img)
-        if args.debug_print:
-            print(steering)
-        return steering
-    model = make_predictor()
-
-    print(calc_rmse(lambda image_pred: model(image_pred), gen(args.bagfile)))
+# if __name__ == '__main__':
+#
+#     parser = argparse.ArgumentParser(description='Model Runner for team komanda')
+#     parser.add_argument('metagraph_file', type=str, help='Path to the metagraph file')
+#     parser.add_argument('checkpoint_dir', type=str, help='Path to the checkpoint dir')
+#
+#     args = parser.parse_args()
+#
+#
+#
 
 
 # some python notes to myself

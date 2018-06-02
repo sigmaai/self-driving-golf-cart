@@ -18,6 +18,7 @@ dataset_dirs = ["/home/neil/dataset/steering/train/part-1",
                 "/home/neil/dataset/steering/train/part-5"
                 ]
 val_dir = "/home/neil/dataset/steering/val/"
+
 # ---------------------------------------------------------------------------------
 
 # TRAINING
@@ -64,7 +65,7 @@ RNN_PROJ = 32
 
 KEEP_PROB_TRAIN = 0.25
 
-NUM_EPOCHS = 5
+NUM_EPOCHS = 15
 
 CSV_HEADER = "index, timestamp, width, height, frame_id, filename, angle, torque, speed, lat, long, alt".split(",")
 OUTPUTS = CSV_HEADER[-6:-3]  # angle,torque,speed
@@ -73,3 +74,4 @@ OUTPUT_DIM = len(OUTPUTS)  # predict all features: steering angle, torque and ve
 DS_PATH = "/home/neil/dataset/udacity/"
 TRAIN_DS_PATH = "/home/neil/dataset/udacity/main.csv"
 TEST_DS_PATH = "/home/neil/dataset/udacity/test.csv"
+VAL_DIR = "/home/neil/dataset/steering/test/"

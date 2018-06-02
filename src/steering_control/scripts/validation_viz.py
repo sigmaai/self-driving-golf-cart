@@ -14,8 +14,9 @@ from os import path
 import matplotlib
 import matplotlib.backends.backend_agg as agg
 import pylab
-from models import models
-from src.steering_control.scripts.models import utils
+from komada_eval import KomandaModel
+from models import utils
+from models import configs
 
 matplotlib.use("Agg")
 
@@ -119,20 +120,18 @@ def preprocess_img(img):
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description='Path viewer')
-    parser.add_argument('--model', type=str, help='path to the trained model')
-    parser.add_argument('--dataset', type=str, help='dataset folder with csv and image folders')
+    parser.add_argument('--metagraph', type=str, help='path to the trained model')
+    parser.add_argument('--checkpoint', type=str, help='dataset folder with csv and image folders')
+
     args = parser.parse_args()
 
-    dataset_path = args.dataset
-    cnn = models.commaai_model()
-    cnn.load_weights(args.model)
-    cnn.summary()
+    model = KomandaModel(checkpoint_dir=args.checkpoint, metagraph_file=args.metagraph)
 
     # steerings and images
-    steering_labels = path.join(dataset_path, 'labels.csv')
+    steering_labels = path.join(configs.VAL_DIR, 'labels.csv')
 
     # read the steering labels and image path
-    df_truth = pd.read_csv(steering_labels, usecols=['file_name', 'radian'], index_col=None)
+    df_truth = pd.read_csv(steering_labels, usecols=['frame_id', 'steering_angle'], index_col=None)
 
     # Create second screen with matplotlibs
     fig = pylab.figure(figsize=[6.4, 1.6], dpi=100)
@@ -161,15 +160,14 @@ if __name__ == "__main__":
         if i%100 == 0:
             print('%.2f seconds elapsed' % (i/20))
 
-        p = dataset_path + df_truth['file_name'].loc[i]
+        p = configs.VAL_DIR + "center/" + str(df_truth['frame_id'].loc[i]) + ".jpg"
 
         if path.isfile(p):
 
-            actual_steers = df_truth['radian'].loc[i] # * 0.1 - 8 * 0.0174533  # 1 degree right correction
+            actual_steers = df_truth['steering_angle'].loc[i] # * 0.1 - 8 * 0.0174533  # 1 degree right correction
 
             img = cv2.cvtColor(cv2.imread(p), cv2.COLOR_BGR2RGB)
-            image = np.array([utils.load_image(p)])  # the model expects 4D array
-            prediction = cnn.predict(image)[0]
+            prediction = model.predict(img)
 
             draw_path_on(img, speed_ms, actual_steers * 0.05)            # human is blue
             draw_path_on(img, speed_ms, prediction * 0.05, (255, 0, 0))  # prediction is red
@@ -196,7 +194,7 @@ if __name__ == "__main__":
             screen.blit(camera_surface, (0, 0))
 
             diceDisplay = myFont.render(str(round(actual_steers * PI_RAD, 4)), 1, blue)
-            diceDisplay2 = myFont.render(str(round(prediction[0] * PI_RAD, 4)), 1, red)
+            diceDisplay2 = myFont.render(str(round(prediction * PI_RAD, 4)), 1, red)
             screen.blit(randNumLabel, (50, 420))
             screen.blit(randNumLabel2, (400, 420))
             screen.blit(diceDisplay, (50, 450))

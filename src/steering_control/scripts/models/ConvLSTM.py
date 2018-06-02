@@ -57,6 +57,7 @@ class ConvLSTM(object):
             net = slim.fully_connected(net, 256, activation_fn=tf.nn.relu)
             net = tf.nn.dropout(x=net, keep_prob=keep_prob)
             net = slim.fully_connected(net, 128, activation_fn=None)
+
             return self.layer_norm(tf.nn.elu(net + aux1 + aux2 + aux3 + aux4))  # aux[1-4] are residual connections (shortcuts)
 
     def do_epoch(self, session, sequences, mode):
@@ -106,7 +107,7 @@ class ConvLSTM(object):
 
             if mode != "test":
                 acc_loss += loss
-                print(str(step + 1) + "/" + str(total_num_steps) + "loss: " + str(np.sqrt(acc_loss / (step + 1))))
+                print(str(step + 1) + "/" + str(total_num_steps) + " " + "loss: " + str(np.sqrt(acc_loss / (step + 1))))
 
         if mode != "test":
             return np.sqrt(acc_loss / total_num_steps), valid_predictions
@@ -186,37 +187,38 @@ class ConvLSTM(object):
 
         graph = tf.Graph()
 
+        graph = tf.Graph()
+
         with graph.as_default():
-
             # inputs
-            self.learning_rate = tf.placeholder_with_default(input=1e-4, shape=())
+            learning_rate = tf.placeholder_with_default(input=1e-4, shape=())
             self.keep_prob = tf.placeholder_with_default(input=1.0, shape=())
-            aux_cost_weight = tf.placeholder_with_default(input=0.1, shape=())
 
-            self.inputs = tf.placeholder(shape=(configs.BATCH_SIZE, configs.LEFT_CONTEXT + configs.SEQ_LEN), dtype=tf.string)  # pathes to png files from the central camera
-            self.targets = tf.placeholder(shape=(configs.BATCH_SIZE, configs.SEQ_LEN, configs.OUTPUT_DIM), dtype=tf.float32)  # seq_len x batch_size x OUTPUT_DIM
+            self.inputs = tf.placeholder(shape=(configs.BATCH_SIZE, configs.LEFT_CONTEXT + configs.SEQ_LEN),
+                                    dtype=tf.string)  # pathes to png files from the central camera
+            self.targets = tf.placeholder(shape=(configs.BATCH_SIZE, configs.SEQ_LEN, configs.OUTPUT_DIM),
+                                     dtype=tf.float32)  # seq_len x batch_size x OUTPUT_DIM
             targets_normalized = (self.targets - self.mean) / self.std
 
             input_images = tf.stack([tf.image.decode_png(tf.read_file(x))
-                                     for x in tf.unstack(tf.reshape(self.inputs, shape=[(configs.LEFT_CONTEXT + configs.SEQ_LEN) * configs.BATCH_SIZE]))
-                                     ])
+                                     for x in
+                                     tf.unstack(tf.reshape(self.inputs, shape=[(configs.LEFT_CONTEXT + configs.SEQ_LEN) * configs.BATCH_SIZE]))])
             input_images = -1.0 + 2.0 * tf.cast(input_images, tf.float32) / 255.0
             input_images.set_shape([(configs.LEFT_CONTEXT + configs.SEQ_LEN) * configs.BATCH_SIZE, configs.HEIGHT, configs.WIDTH, configs.CHANNELS])
-            visual_conditions_reshaped = self.apply_vision_simple(image=input_images, keep_prob=self.keep_prob, batch_size=configs.BATCH_SIZE, seq_len=configs.SEQ_LEN)
+            visual_conditions_reshaped = self.apply_vision_simple(image=input_images, keep_prob=self.keep_prob,
+                                                             batch_size=configs.BATCH_SIZE, seq_len=configs.SEQ_LEN)
             visual_conditions = tf.reshape(visual_conditions_reshaped, [configs.BATCH_SIZE, configs.SEQ_LEN, -1])
             visual_conditions = tf.nn.dropout(x=visual_conditions, keep_prob=self.keep_prob)
 
             rnn_inputs_with_ground_truth = (visual_conditions, targets_normalized)
             rnn_inputs_autoregressive = (
-                visual_conditions, tf.zeros(shape=(configs.BATCH_SIZE, configs.SEQ_LEN, configs.OUTPUT_DIM), dtype=tf.float32))
+            visual_conditions, tf.zeros(shape=(configs.BATCH_SIZE, configs.SEQ_LEN, configs.OUTPUT_DIM), dtype=tf.float32))
 
             internal_cell = tf.nn.rnn_cell.LSTMCell(num_units=configs.RNN_SIZE, num_proj=configs.RNN_PROJ)
-            cell_with_ground_truth = SamplingRNNCell(num_outputs=configs.OUTPUT_DIM,
-                                                     use_ground_truth=True,
-                                                     internal_cell=internal_cell)
-            cell_autoregressive = SamplingRNNCell(num_outputs=configs.OUTPUT_DIM,
-                                                  use_ground_truth=False,
-                                                  internal_cell=internal_cell)
+            cell_with_ground_truth = SamplingRNNCell(num_outputs=configs.OUTPUT_DIM, use_ground_truth=True,
+                                                     internal_cell=internal_cell, keep_prob=self.keep_prob)
+            cell_autoregressive = SamplingRNNCell(num_outputs=configs.OUTPUT_DIM, use_ground_truth=False,
+                                                  internal_cell=internal_cell, keep_prob=self.keep_prob)
 
             controller_initial_state_variables = helper.get_initial_state(cell_autoregressive.state_size)
             self.controller_initial_state_autoregressive = helper.deep_copy_initial_state(controller_initial_state_variables)
@@ -224,28 +226,28 @@ class ConvLSTM(object):
 
             with tf.variable_scope("predictor"):
                 out_gt, self.controller_final_state_gt = tf.nn.dynamic_rnn(cell=cell_with_ground_truth,
-                                                                           inputs=rnn_inputs_with_ground_truth,
-                                                                           sequence_length=[configs.SEQ_LEN] * configs.BATCH_SIZE,
-                                                                           initial_state=controller_initial_state_gt,
-                                                                           dtype=tf.float32,
-                                                                           swap_memory=True, time_major=False)
+                                                                      inputs=rnn_inputs_with_ground_truth,
+                                                                      sequence_length=[configs.SEQ_LEN] * configs.BATCH_SIZE,
+                                                                      initial_state=controller_initial_state_gt,
+                                                                      dtype=tf.float32,
+                                                                      swap_memory=True, time_major=False)
             with tf.variable_scope("predictor", reuse=True):
                 out_autoregressive, self.controller_final_state_autoregressive = tf.nn.dynamic_rnn(cell=cell_autoregressive,
-                                                                                                   inputs=rnn_inputs_autoregressive,
-                                                                                                   sequence_length=[configs.SEQ_LEN] * configs.BATCH_SIZE,
-                                                                                                   initial_state=self.controller_initial_state_autoregressive,
-                                                                                                   dtype=tf.float32,
-                                                                                                   swap_memory=True,
-                                                                                                   time_major=False)
+                                                                                              inputs=rnn_inputs_autoregressive,
+                                                                                              sequence_length=[configs.SEQ_LEN] * configs.BATCH_SIZE,
+                                                                                              initial_state=self.controller_initial_state_autoregressive,
+                                                                                              dtype=tf.float32,
+                                                                                              swap_memory=True,
+                                                                                              time_major=False)
 
             mse_gt = tf.reduce_mean(tf.squared_difference(out_gt, targets_normalized))
             mse_autoregressive = tf.reduce_mean(tf.squared_difference(out_autoregressive, targets_normalized))
             self.mse_autoregressive_steering = tf.reduce_mean(tf.squared_difference(out_autoregressive[:, :, 0], targets_normalized[:, :, 0]))
             steering_predictions = (out_autoregressive[:, :, 0] * self.std[0]) + self.mean[0]
 
-            total_loss = self.mse_autoregressive_steering + aux_cost_weight * (mse_gt + mse_autoregressive)
+            total_loss = self.mse_autoregressive_steering  # + 0.1 * (mse_gt + mse_autoregressive)
 
-            optimizer = helper.get_optimizer(total_loss, self.learning_rate)
+            optimizer = helper.get_optimizer(total_loss, learning_rate)
 
             tf.summary.scalar("MAIN TRAIN METRIC: rmse_autoregressive_steering", tf.sqrt(self.mse_autoregressive_steering))
             tf.summary.scalar("rmse_gt", tf.sqrt(mse_gt))

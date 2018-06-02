@@ -11,13 +11,14 @@ class SamplingRNNCell(tf.nn.rnn_cell.RNNCell):
 
     """Simple sampling RNN cell."""
 
-    def __init__(self, num_outputs, use_ground_truth, internal_cell):
+    def __init__(self, num_outputs, use_ground_truth, internal_cell, keep_prob):
         """
         if use_ground_truth then don't sample
         """
         self._num_outputs = num_outputs
         self._use_ground_truth = use_ground_truth  # boolean
         self._internal_cell = internal_cell  # may be LSTM or GRU or anything
+        self.__keep_prob = keep_prob
 
     @property
     def state_size(self):
