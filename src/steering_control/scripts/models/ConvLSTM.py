@@ -187,8 +187,6 @@ class ConvLSTM(object):
 
         graph = tf.Graph()
 
-        graph = tf.Graph()
-
         with graph.as_default():
             # inputs
             learning_rate = tf.placeholder_with_default(input=1e-4, shape=())
