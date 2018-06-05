@@ -18,8 +18,6 @@ from komada_eval import KomandaModel
 from models import utils
 from models import configs
 
-matplotlib.use("Agg")
-
 pygame.init()
 size = (320*2, 160*4)
 pygame.display.set_caption("self driving data viewer")
@@ -119,13 +117,10 @@ def preprocess_img(img):
 # ***** main loop *****
 if __name__ == "__main__":
 
-    parser = argparse.ArgumentParser(description='Path viewer')
-    parser.add_argument('--metagraph', type=str, help='path to the trained model')
-    parser.add_argument('--checkpoint', type=str, help='dataset folder with csv and image folders')
+    checkpoint = "/home/neil/Workspace/self-driving-golf-cart/src/steering_control/scripts/jupyter/v3"
+    metagraph = "/home/neil/Workspace/self-driving-golf-cart/src/steering_control/scripts/jupyter/v3/checkpoint-sdc-ch2.meta"
 
-    args = parser.parse_args()
-
-    model = KomandaModel(checkpoint_dir=args.checkpoint, metagraph_file=args.metagraph)
+    model = KomandaModel(checkpoint_dir=checkpoint, metagraph_file=metagraph)
 
     # steerings and images
     steering_labels = path.join(configs.VAL_DIR, 'labels.csv')

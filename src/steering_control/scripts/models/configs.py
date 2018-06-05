@@ -65,7 +65,7 @@ RNN_PROJ = 32
 
 KEEP_PROB_TRAIN = 0.25
 
-NUM_EPOCHS = 15
+NUM_EPOCHS = 2
 
 CSV_HEADER = "index, timestamp, width, height, frame_id, filename, angle, torque, speed, lat, long, alt".split(",")
 OUTPUTS = CSV_HEADER[-6:-3]  # angle,torque,speed

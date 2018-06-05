@@ -107,7 +107,8 @@ class ConvLSTM(object):
 
             if mode != "test":
                 acc_loss += loss
-                print(str(step + 1) + "/" + str(total_num_steps) + " " + "loss: " + str(np.sqrt(acc_loss / (step + 1))))
+                if (step + 1) % 10 == 0:
+                    print(str(step + 1) + "/" + str(total_num_steps) + " " + "loss: " + str(np.sqrt(acc_loss / (step + 1))))
 
         if mode != "test":
             return np.sqrt(acc_loss / total_num_steps), valid_predictions
@@ -143,6 +144,7 @@ class ConvLSTM(object):
                 if best_validation_score is None:
                     best_validation_score = valid_score
 
+                print("validation score: " + str(best_validation_score))
                 if valid_score < best_validation_score:
                     saver.save(session, 'v3/checkpoint-sdc-ch2')
                     best_validation_score = valid_score
@@ -154,16 +156,10 @@ class ConvLSTM(object):
 
                     print("Validation unnormalized RMSE:", np.sqrt(result / len(valid_predictions)))
 
-                    with open("v3/test-predictions-epoch%d" % epoch, "w") as out:
-                        _, test_predictions = self.do_epoch(session=session, sequences=self.test_seq, mode="test")
-                        # print("frame_id,steering_angle")
-                        for img, pred in test_predictions.items():
-                            img = img.replace("challenge_2/Test-final/center/", "")
-                            # print("%s,%f" % (img, pred))
-
                 if epoch != configs.NUM_EPOCHS - 1:
                     print("Training")
-                    self.do_epoch(session=session, sequences=self.train_seq, mode="train")
+                    train_score = self.do_epoch(session=session, sequences=self.train_seq, mode="train")
+                    print("train score: " + str(train_score))
 
     def build_graph(self):
 
@@ -193,9 +189,9 @@ class ConvLSTM(object):
             self.keep_prob = tf.placeholder_with_default(input=1.0, shape=())
 
             self.inputs = tf.placeholder(shape=(configs.BATCH_SIZE, configs.LEFT_CONTEXT + configs.SEQ_LEN),
-                                    dtype=tf.string)  # pathes to png files from the central camera
+                                         dtype=tf.string)  # pathes to png files from the central camera
             self.targets = tf.placeholder(shape=(configs.BATCH_SIZE, configs.SEQ_LEN, configs.OUTPUT_DIM),
-                                     dtype=tf.float32)  # seq_len x batch_size x OUTPUT_DIM
+                                          dtype=tf.float32)  # seq_len x batch_size x OUTPUT_DIM
             targets_normalized = (self.targets - self.mean) / self.std
 
             input_images = tf.stack([tf.image.decode_png(tf.read_file(x))
@@ -203,6 +199,8 @@ class ConvLSTM(object):
                                      tf.unstack(tf.reshape(self.inputs, shape=[(configs.LEFT_CONTEXT + configs.SEQ_LEN) * configs.BATCH_SIZE]))])
             input_images = -1.0 + 2.0 * tf.cast(input_images, tf.float32) / 255.0
             input_images.set_shape([(configs.LEFT_CONTEXT + configs.SEQ_LEN) * configs.BATCH_SIZE, configs.HEIGHT, configs.WIDTH, configs.CHANNELS])
+            input_images = tf.identity(input_images, name="input_images")
+
             visual_conditions_reshaped = self.apply_vision_simple(image=input_images, keep_prob=self.keep_prob,
                                                              batch_size=configs.BATCH_SIZE, seq_len=configs.SEQ_LEN)
             visual_conditions = tf.reshape(visual_conditions_reshaped, [configs.BATCH_SIZE, configs.SEQ_LEN, -1])

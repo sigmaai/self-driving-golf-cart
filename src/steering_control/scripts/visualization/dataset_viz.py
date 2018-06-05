@@ -106,25 +106,16 @@ def preprocess_img(img):
 # ***** main loop *****
 if __name__ == "__main__":
 
-    parser = argparse.ArgumentParser(description='Path viewer')
-    parser.add_argument('--dataset', type=str, help='path to the trained model')
-    args = parser.parse_args()
+    path = "/home/neil/dataset/udacity/test.csv"
 
-    dataset_path = args.dataset
-
-    # steerings and images
-    steering_labels = path.join(dataset_path, 'labels.csv')
-
-    # read the steering labels and image path
-    df_truth = pd.read_csv(steering_labels, usecols=['file_name', 'radian'], index_col=None)
+    gd_truth = pd.read_csv(path, index_col=None).values
 
     blue = (0, 0, 255)
     myFont = pygame.font.SysFont("monospace", 20)
     randNumLabel = myFont.render('model steer Angle:', 1, blue)
     speed_ms = 5  # log['speed'][i]
 
-    # Run through all images
-    for i in range(0, len(df_truth)):
+    for i in range(0, len(gd_truth)):
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -133,25 +124,66 @@ if __name__ == "__main__":
         if i%100 == 0:
             print('%.2f seconds elapsed' % (i/20))
 
-        p = dataset_path + str(df_truth["file_name"][i])
+        img = cv2.imread(gd_truth[i][5])
+        img = preprocess_img(img)
 
-        if path.isfile(p) :
-            img = cv2.imread(p)
-            img = preprocess_img(img)
+        actual_steers = gd_truth[i][6]
 
-            actual_steers = df_truth['radian'].loc[i] * 0.1 - 8 * 0.0174533  # 1 degree right correction
+        draw_path_on(img, speed_ms, actual_steers)
 
-            draw_path_on(img, speed_ms, actual_steers)
+        # draw on
+        pygame.surfarray.blit_array(camera_surface, img.swapaxes(0, 1))
+        screen.blit(camera_surface, (0, 0))
 
-            # draw on
-            pygame.surfarray.blit_array(camera_surface, img.swapaxes(0, 1))
-            screen.blit(camera_surface, (0, 0))
+        diceDisplay = myFont.render(str(actual_steers), 1, blue)
+        screen.blit(randNumLabel, (50, 420))
+        screen.blit(diceDisplay, (50, 450))
+        clock.tick(60)
+        pygame.display.flip()
 
-            diceDisplay = myFont.render(str(actual_steers), 1, blue)
-            screen.blit(randNumLabel, (50, 420))
-            screen.blit(diceDisplay, (50, 450))
-            clock.tick(60)
-            pygame.display.flip()
-        else:
-            pass
+    # my own dataset
+    # dataset_path = args.dataset
+    #
+    # # steerings and images
+    # steering_labels = path.join(dataset_path, 'labels.csv')
+    #
+    # # read the steering labels and image path
+    # df_truth = pd.read_csv(steering_labels, usecols=['file_name', 'radian'], index_col=None)
+    #
+    # blue = (0, 0, 255)
+    # myFont = pygame.font.SysFont("monospace", 20)
+    # randNumLabel = myFont.render('model steer Angle:', 1, blue)
+    # speed_ms = 5  # log['speed'][i]
+    #
+    # # Run through all images
+    # for i in range(0, len(df_truth)):
+    #
+    #     for event in pygame.event.get():
+    #         if event.type == pygame.QUIT:
+    #             break
+    #
+    #     if i%100 == 0:
+    #         print('%.2f seconds elapsed' % (i/20))
+    #
+    #     p = dataset_path + str(df_truth["file_name"][i])
+    #
+    #     if path.isfile(p) :
+    #         img = cv2.imread(p)
+    #         img = preprocess_img(img)
+    #
+    #         actual_steers = df_truth['radian'].loc[i] * 0.1 - 8 * 0.0174533  # 1 degree right correction
+    #
+    #         draw_path_on(img, speed_ms, actual_steers)
+    #
+    #         # draw on
+    #         pygame.surfarray.blit_array(camera_surface, img.swapaxes(0, 1))
+    #         screen.blit(camera_surface, (0, 0))
+    #
+    #         diceDisplay = myFont.render(str(actual_steers), 1, blue)
+    #         screen.blit(randNumLabel, (50, 420))
+    #         screen.blit(diceDisplay, (50, 450))
+    #         clock.tick(60)
+    #         pygame.display.flip()
+    #     else:
+    #         pass
 
