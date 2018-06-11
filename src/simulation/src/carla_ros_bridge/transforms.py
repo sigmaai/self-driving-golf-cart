@@ -1,21 +1,20 @@
-#
-# Helper methods for ros client
-# (c) Yongyang Nie, 2018
-# Contact: contact@neilnie.com
-#
-
+"""
+Tool functions to convert transforms from carla to ros coordinate system
+"""
+from geometry_msgs.msg import Transform, Pose
 import tf
-from carla.sensor import Transform
-from visualization_msgs.msg import Marker
-from carla.sensor import Transform as carla_Transform
 
 
 def carla_transform_to_ros_transform(carla_transform):
+    """
+    Convert a carla transform to a ros transform
+    :param carla_transform:
+    :return: a ros transform
+    """
     transform_matrix = carla_transform.matrix
 
     x, y, z = tf.transformations.translation_from_matrix(transform_matrix)
     quat = tf.transformations.quaternion_from_matrix(transform_matrix)
-
 
     ros_transform = Transform()
     # remember that we go from left-handed system (unreal) to right-handed system (ros)
@@ -38,6 +37,11 @@ def carla_transform_to_ros_transform(carla_transform):
 
 
 def carla_transform_to_ros_pose(carla_transform):
+    """
+    convert a carla transform to ros pose msg
+    :param carla_transform:
+    :return: a ros pose msg
+    """
     transform_matrix = Transform(carla_transform).matrix
 
     x, y, z = tf.transformations.translation_from_matrix(transform_matrix)
@@ -55,7 +59,14 @@ def carla_transform_to_ros_pose(carla_transform):
 
     return ros_transform
 
-def _ros_transform_to_pose(ros_transform):
+
+def ros_transform_to_pose(ros_transform):
+    """
+    Util function to convert a ros transform into a ros pose
+
+    :param ros_transform:
+    :return: a ros pose msg
+    """
     pose = Pose()
     pose.position.x, pose.position.y, pose.position.z = ros_transform.translation.x, \
                                                         ros_transform.translation.y, \
@@ -63,56 +74,6 @@ def _ros_transform_to_pose(ros_transform):
 
     pose.orientation.x, pose.orientation.y, pose.orientation.z, pose.orientation.w = ros_transform.rotation.x, \
                                                                                      ros_transform.rotation.y, \
-                                                                                     ros_transform.rotation.z,\
+                                                                                     ros_transform.rotation.z, \
                                                                                      ros_transform.rotation.w
     return pose
-
-
-def update_marker_pose(object, base_marker):
-
-    ros_transform = carla_transform_to_ros_transform(carla_Transform(object.transform))
-    base_marker.pose = _ros_transform_to_pose(ros_transform)
-
-    base_marker.scale.x = object.box_extent.x * 2.0
-    base_marker.scale.y = object.box_extent.y * 2.0
-    base_marker.scale.z = object.box_extent.z * 2.0
-
-    base_marker.type = Marker.CUBE
-
-
-lookup_table_marker_id = {}  # <-- TODO: migrate this in a class
-def get_vehicle_marker(object, header, agent_id=88, player=False):
-    """
-    :param pb2 object (vehicle, pedestrian or traffic light)
-    :param base_marker: a marker to fill/update
-    :return: a marker
-    """
-    marker = Marker(header=header)
-    marker.color.a = 0.3
-    if player:
-        marker.color.g = 1
-        marker.color.r = 0
-        marker.color.b = 0
-    else:
-        marker.color.r = 1
-        marker.color.g = 0
-        marker.color.b = 0
-
-    if agent_id not in lookup_table_marker_id:
-        lookup_table_marker_id[agent_id] = len(lookup_table_marker_id)
-    _id = lookup_table_marker_id[agent_id]
-
-    marker.id = _id
-    marker.text = "id = {}".format(_id)
-    update_marker_pose(object, marker)
-
-
-    if not player:  # related to bug request #322
-        marker.scale.x = marker.scale.x / 100.0
-        marker.scale.y = marker.scale.y / 100.0
-        marker.scale.z = marker.scale.z / 100.0
-
-    # the box pose seems to require a little bump to be well aligned with camera depth
-    marker.pose.position.z += marker.scale.z / 2.0
-
-    return marker
