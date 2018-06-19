@@ -1,2 +1,2 @@
 cruise_control:data_logger:detection/lane_detection:detection/object_detection:detection/tl_detection:driver:localization:osm:path_planning:segmentation:sensors/cv_camera:sensors/gps:simulation:steering_control
--DCATKIN_DEVEL_PREFIX=/home/yongyang/Workspace/self-driving-golf-cart/devel -DCMAKE_INSTALL_PREFIX=/home/yongyang/Workspace/self-driving-golf-cart/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/home/neil/Workspace/self-driving-golf-cart/devel -DCMAKE_INSTALL_PREFIX=/home/neil/Workspace/self-driving-golf-cart/install -G Unix Makefiles

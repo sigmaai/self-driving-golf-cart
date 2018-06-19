@@ -1,24 +1,24 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/yongyang/Workspace/self-driving-golf-cart/build/CMakeFiles/CMakeTmp
+Change Dir: /home/neil/Workspace/self-driving-golf-cart/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f4307/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f4307.dir/build.make CMakeFiles/cmTC_f4307.dir/build
-make[1]: Entering directory '/home/yongyang/Workspace/self-driving-golf-cart/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_f4307.dir/CheckSymbolExists.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_f4307.dir/CheckSymbolExists.c.o   -c /home/yongyang/Workspace/self-driving-golf-cart/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_f4307
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f4307.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_f4307.dir/CheckSymbolExists.c.o  -o cmTC_f4307 -rdynamic 
-CMakeFiles/cmTC_f4307.dir/CheckSymbolExists.c.o: In function `main':
+Run Build Command:"/usr/bin/make" "cmTC_25e4b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_25e4b.dir/build.make CMakeFiles/cmTC_25e4b.dir/build
+make[1]: Entering directory '/home/neil/Workspace/self-driving-golf-cart/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_25e4b.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_25e4b.dir/CheckSymbolExists.c.o   -c /home/neil/Workspace/self-driving-golf-cart/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_25e4b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_25e4b.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_25e4b.dir/CheckSymbolExists.c.o  -o cmTC_25e4b -rdynamic 
+CMakeFiles/cmTC_25e4b.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_f4307.dir/build.make:97: recipe for target 'cmTC_f4307' failed
-make[1]: *** [cmTC_f4307] Error 1
-make[1]: Leaving directory '/home/yongyang/Workspace/self-driving-golf-cart/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_f4307/fast' failed
-make: *** [cmTC_f4307/fast] Error 2
+CMakeFiles/cmTC_25e4b.dir/build.make:97: recipe for target 'cmTC_25e4b' failed
+make[1]: *** [cmTC_25e4b] Error 1
+make[1]: Leaving directory '/home/neil/Workspace/self-driving-golf-cart/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_25e4b/fast' failed
+make: *** [cmTC_25e4b/fast] Error 2
 
-File /home/yongyang/Workspace/self-driving-golf-cart/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/neil/Workspace/self-driving-golf-cart/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -34,22 +34,22 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/yongyang/Workspace/self-driving-golf-cart/build/CMakeFiles/CMakeTmp
+Change Dir: /home/neil/Workspace/self-driving-golf-cart/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_09ac4/fast"
-/usr/bin/make -f CMakeFiles/cmTC_09ac4.dir/build.make CMakeFiles/cmTC_09ac4.dir/build
-make[1]: Entering directory '/home/yongyang/Workspace/self-driving-golf-cart/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_09ac4.dir/CheckFunctionExists.c.o
-/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_09ac4.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
-Linking C executable cmTC_09ac4
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_09ac4.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_09ac4.dir/CheckFunctionExists.c.o  -o cmTC_09ac4 -rdynamic -lpthreads 
+Run Build Command:"/usr/bin/make" "cmTC_4a540/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4a540.dir/build.make CMakeFiles/cmTC_4a540.dir/build
+make[1]: Entering directory '/home/neil/Workspace/self-driving-golf-cart/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4a540.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_4a540.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_4a540
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4a540.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_4a540.dir/CheckFunctionExists.c.o  -o cmTC_4a540 -rdynamic -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_09ac4.dir/build.make:97: recipe for target 'cmTC_09ac4' failed
-make[1]: *** [cmTC_09ac4] Error 1
-make[1]: Leaving directory '/home/yongyang/Workspace/self-driving-golf-cart/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_09ac4/fast' failed
-make: *** [cmTC_09ac4/fast] Error 2
+CMakeFiles/cmTC_4a540.dir/build.make:97: recipe for target 'cmTC_4a540' failed
+make[1]: *** [cmTC_4a540] Error 1
+make[1]: Leaving directory '/home/neil/Workspace/self-driving-golf-cart/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_4a540/fast' failed
+make: *** [cmTC_4a540/fast] Error 2
 
 

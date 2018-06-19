@@ -67,14 +67,14 @@ set(cv_camera_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(cv_camera_SOURCE_PREFIX /home/yongyang/Workspace/self-driving-golf-cart/src/sensors/cv_camera)
-  set(cv_camera_DEVEL_PREFIX /home/yongyang/Workspace/self-driving-golf-cart/devel)
+  set(cv_camera_SOURCE_PREFIX /home/neil/Workspace/self-driving-golf-cart/src/sensors/cv_camera)
+  set(cv_camera_DEVEL_PREFIX /home/neil/Workspace/self-driving-golf-cart/devel)
   set(cv_camera_INSTALL_PREFIX "")
   set(cv_camera_PREFIX ${cv_camera_DEVEL_PREFIX})
 else()
   set(cv_camera_SOURCE_PREFIX "")
   set(cv_camera_DEVEL_PREFIX "")
-  set(cv_camera_INSTALL_PREFIX /home/yongyang/Workspace/self-driving-golf-cart/install)
+  set(cv_camera_INSTALL_PREFIX /home/neil/Workspace/self-driving-golf-cart/install)
   set(cv_camera_PREFIX ${cv_camera_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(cv_camera_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/yongyang/Workspace/self-driving-golf-cart/src/sensors/cv_camera/include;/opt/ros/kinetic/include/opencv-3.3.1-dev;/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv " STREQUAL " ")
+if(NOT "/home/neil/Workspace/self-driving-golf-cart/src/sensors/cv_camera/include;/opt/ros/kinetic/include/opencv-3.3.1-dev;/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv " STREQUAL " ")
   set(cv_camera_INCLUDE_DIRS "")
-  set(_include_dirs "/home/yongyang/Workspace/self-driving-golf-cart/src/sensors/cv_camera/include;/opt/ros/kinetic/include/opencv-3.3.1-dev;/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv")
+  set(_include_dirs "/home/neil/Workspace/self-driving-golf-cart/src/sensors/cv_camera/include;/opt/ros/kinetic/include/opencv-3.3.1-dev;/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://wiki.ros.org/cv_camera " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/yongyang/Workspace/self-driving-golf-cart/src/sensors/cv_camera/in
         message(FATAL_ERROR "Project 'cv_camera' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'cv_camera' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/yongyang/Workspace/self-driving-golf-cart/src/sensors/cv_camera/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'cv_camera' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/neil/Workspace/self-driving-golf-cart/src/sensors/cv_camera/${idir}'.  ${_report}")
     endif()
     _list_append_unique(cv_camera_INCLUDE_DIRS ${include})
   endforeach()
@@ -129,7 +129,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/yongyang/Workspace/self-driving-golf-cart/devel/lib;/home/yongyang/Workspace/self-driving-golf-cart/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/neil/Workspace/self-driving-golf-cart/devel/lib;/home/neil/Workspace/self-driving-golf-cart/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

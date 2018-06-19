@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yongyang/Workspace/self-driving-golf-cart/src
+CMAKE_SOURCE_DIR = /home/neil/Workspace/self-driving-golf-cart/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yongyang/Workspace/self-driving-golf-cart/build
+CMAKE_BINARY_DIR = /home/neil/Workspace/self-driving-golf-cart/build
 
 # Utility rule file for roslint.
 
@@ -63,10 +63,10 @@ sensors/gps/CMakeFiles/roslint.dir/build: roslint
 .PHONY : sensors/gps/CMakeFiles/roslint.dir/build
 
 sensors/gps/CMakeFiles/roslint.dir/clean:
-	cd /home/yongyang/Workspace/self-driving-golf-cart/build/sensors/gps && $(CMAKE_COMMAND) -P CMakeFiles/roslint.dir/cmake_clean.cmake
+	cd /home/neil/Workspace/self-driving-golf-cart/build/sensors/gps && $(CMAKE_COMMAND) -P CMakeFiles/roslint.dir/cmake_clean.cmake
 .PHONY : sensors/gps/CMakeFiles/roslint.dir/clean
 
 sensors/gps/CMakeFiles/roslint.dir/depend:
-	cd /home/yongyang/Workspace/self-driving-golf-cart/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yongyang/Workspace/self-driving-golf-cart/src /home/yongyang/Workspace/self-driving-golf-cart/src/sensors/gps /home/yongyang/Workspace/self-driving-golf-cart/build /home/yongyang/Workspace/self-driving-golf-cart/build/sensors/gps /home/yongyang/Workspace/self-driving-golf-cart/build/sensors/gps/CMakeFiles/roslint.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/neil/Workspace/self-driving-golf-cart/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/neil/Workspace/self-driving-golf-cart/src /home/neil/Workspace/self-driving-golf-cart/src/sensors/gps /home/neil/Workspace/self-driving-golf-cart/build /home/neil/Workspace/self-driving-golf-cart/build/sensors/gps /home/neil/Workspace/self-driving-golf-cart/build/sensors/gps/CMakeFiles/roslint.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : sensors/gps/CMakeFiles/roslint.dir/depend
 

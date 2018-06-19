@@ -1,8 +1,8 @@
-prefix=/home/yongyang/Workspace/self-driving-golf-cart/install
+prefix=/home/neil/Workspace/self-driving-golf-cart/install
 
 Name: osm_cartography
 Description: Description of osm_cartography
 Version: 0.2.4
-Cflags: -I/home/yongyang/Workspace/self-driving-golf-cart/install/include
-Libs: -L/home/yongyang/Workspace/self-driving-golf-cart/install/lib 
+Cflags: -I/home/neil/Workspace/self-driving-golf-cart/install/include
+Libs: -L/home/neil/Workspace/self-driving-golf-cart/install/lib 
 Requires: dynamic_reconfigure geodesy geographic_msgs geometry_msgs rospy tf std_msgs visualization_msgs

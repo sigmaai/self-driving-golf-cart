@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yongyang/Workspace/self-driving-golf-cart/src
+CMAKE_SOURCE_DIR = /home/neil/Workspace/self-driving-golf-cart/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yongyang/Workspace/self-driving-golf-cart/build
+CMAKE_BINARY_DIR = /home/neil/Workspace/self-driving-golf-cart/build
 
 # Utility rule file for _run_tests_gps.
 
@@ -63,10 +63,10 @@ sensors/gps/CMakeFiles/_run_tests_gps.dir/build: _run_tests_gps
 .PHONY : sensors/gps/CMakeFiles/_run_tests_gps.dir/build
 
 sensors/gps/CMakeFiles/_run_tests_gps.dir/clean:
-	cd /home/yongyang/Workspace/self-driving-golf-cart/build/sensors/gps && $(CMAKE_COMMAND) -P CMakeFiles/_run_tests_gps.dir/cmake_clean.cmake
+	cd /home/neil/Workspace/self-driving-golf-cart/build/sensors/gps && $(CMAKE_COMMAND) -P CMakeFiles/_run_tests_gps.dir/cmake_clean.cmake
 .PHONY : sensors/gps/CMakeFiles/_run_tests_gps.dir/clean
 
 sensors/gps/CMakeFiles/_run_tests_gps.dir/depend:
-	cd /home/yongyang/Workspace/self-driving-golf-cart/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yongyang/Workspace/self-driving-golf-cart/src /home/yongyang/Workspace/self-driving-golf-cart/src/sensors/gps /home/yongyang/Workspace/self-driving-golf-cart/build /home/yongyang/Workspace/self-driving-golf-cart/build/sensors/gps /home/yongyang/Workspace/self-driving-golf-cart/build/sensors/gps/CMakeFiles/_run_tests_gps.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/neil/Workspace/self-driving-golf-cart/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/neil/Workspace/self-driving-golf-cart/src /home/neil/Workspace/self-driving-golf-cart/src/sensors/gps /home/neil/Workspace/self-driving-golf-cart/build /home/neil/Workspace/self-driving-golf-cart/build/sensors/gps /home/neil/Workspace/self-driving-golf-cart/build/sensors/gps/CMakeFiles/_run_tests_gps.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : sensors/gps/CMakeFiles/_run_tests_gps.dir/depend
 

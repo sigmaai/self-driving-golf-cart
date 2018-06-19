@@ -1,8 +1,8 @@
-# Install script for directory: /home/yongyang/Workspace/self-driving-golf-cart/src/driver
+# Install script for directory: /home/neil/Workspace/self-driving-golf-cart/src/driver
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/yongyang/Workspace/self-driving-golf-cart/install")
+  set(CMAKE_INSTALL_PREFIX "/home/neil/Workspace/self-driving-golf-cart/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,17 +33,17 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yongyang/Workspace/self-driving-golf-cart/build/driver/catkin_generated/installspace/driver.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/build/driver/catkin_generated/installspace/driver.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/driver/cmake" TYPE FILE FILES
-    "/home/yongyang/Workspace/self-driving-golf-cart/build/driver/catkin_generated/installspace/driverConfig.cmake"
-    "/home/yongyang/Workspace/self-driving-golf-cart/build/driver/catkin_generated/installspace/driverConfig-version.cmake"
+    "/home/neil/Workspace/self-driving-golf-cart/build/driver/catkin_generated/installspace/driverConfig.cmake"
+    "/home/neil/Workspace/self-driving-golf-cart/build/driver/catkin_generated/installspace/driverConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/driver" TYPE FILE FILES "/home/yongyang/Workspace/self-driving-golf-cart/src/driver/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/driver" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/src/driver/package.xml")
 endif()
 

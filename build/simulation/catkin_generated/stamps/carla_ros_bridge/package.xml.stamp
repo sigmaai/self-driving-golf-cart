@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>simulation</name>
+  <name>carla_ros_bridge</name>
   <version>0.0.1</version>
-  <description>The simulation package</description>
+  <description>The carla_ros_bridge package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
