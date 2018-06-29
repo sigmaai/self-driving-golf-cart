@@ -43,7 +43,7 @@ For the full documentation of the development process, please visit: [neilnie.co
 Bon Voyage 😀
 
 # Simulation
-If you want to run the code inside the Carla self-driving simulator, please refer to this [documentation](./src/simulation/README.md).
+Building a self-driving car is hard. Not everyone has access to expensive hardware. If you want to run the code inside the CARLA self-driving simulator, please refer to this [documentation](./src/simulation/README.md). The ROS system in this project can run on the CARLA simulator. 
 
 <img src="./media/simulator.png" alt="Drawing" width="480"/>
 
