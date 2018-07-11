@@ -5,14 +5,24 @@
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/self-driving-golf-cart.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/self-driving-golf-cart.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/jupyter/ConvLSTM Behavioral Cloning Training.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/src/steering_control/scripts/jupyter/ConvLSTM Behavioral Cloning Training.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/jupyter/sdc-ch2-v3.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/src/steering_control/scripts/jupyter/sdc-ch2-v3.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/komada_eval.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/steering_control/scripts/komada_eval.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/models/ConvLSTM.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/steering_control/scripts/models/ConvLSTM.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/models/configs.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/steering_control/scripts/models/configs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/models/helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/steering_control/scripts/models/helper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/validation_viz.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/steering_control/scripts/validation_viz.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/visualization/dataset_viz.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/steering_control/scripts/visualization/dataset_viz.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/segmentation/scripts/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/steering_control/scripts/auxiliary/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/autumn.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/steering_control/scripts/auxiliary/autumn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/komada_eval.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/models/ConvLSTM.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/models/SamplingRNNCell.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/models/vgg16_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/steering_control/scripts/models/vgg16_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/rambo.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/steering_control/scripts/auxiliary/rambo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/rmse.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/weights/AutoPilot/checkpoint" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/weights/AutoPilot/model.ckpt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/weights/AutoPilot/model.ckpt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/weights/autumn/autumn-cnn-model-tf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/weights/autumn/autumn-cnn-weights.ckpt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/weights/autumn/autumn-lstm-model-keras.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/weights/autumn/autumn-lstm-weights.hdf5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/weights/rweights/X_train_mean.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/steering_control/scripts/weights/rweights/final_model.hdf5" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,34 +32,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/self_driving_golf_cart$validation_viz.coverage" NAME="validation_viz Coverage Results" MODIFIED="1528067368542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/steering_control/scripts" />
     <SUITE FILE_PATH="coverage/self_driving_golf_cart$dataset_viz.coverage" NAME="dataset_viz Coverage Results" MODIFIED="1528036322222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/steering_control/scripts/visualization" />
+    <SUITE FILE_PATH="coverage/self_driving_golf_cart$validation_viz.coverage" NAME="validation_viz Coverage Results" MODIFIED="1528067368542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/steering_control/scripts" />
     <SUITE FILE_PATH="coverage/self_driving_golf_cart$steering_hardware_test.coverage" NAME="steering_hardware_test Coverage Results" MODIFIED="1527345476126" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/steering_control/scripts" />
     <SUITE FILE_PATH="coverage/self_driving_golf_cart$train.coverage" NAME="train Coverage Results" MODIFIED="1527861816681" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/steering_control/scripts" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="komada_eval.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/komada_eval.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="56" column="45" selection-start-line="56" selection-start-column="45" selection-end-line="56" selection-end-column="45" />
-              <folding>
-                <element signature="e#144#159#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConvLSTM.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/models/ConvLSTM.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="146" column="70" selection-start-line="146" selection-start-column="70" selection-end-line="146" selection-end-column="70" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="validation_viz.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/validation_viz.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -59,10 +48,40 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="vgg16_model.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/models/vgg16_model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1005">
+              <caret line="72" column="26" selection-start-line="72" selection-end-line="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="validation.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/validation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="720">
+              <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rambo.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/auxiliary/rambo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+              <folding>
+                <element signature="e#117#128#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="configs.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/models/configs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
+            <state relative-caret-position="1005">
               <caret line="67" column="14" selection-start-line="67" selection-start-column="14" selection-end-line="67" selection-end-column="14" />
             </state>
           </provider>
@@ -140,6 +159,7 @@
         <option value="$PROJECT_DIR$/src/steering_control/scripts/models/helper.py" />
         <option value="$PROJECT_DIR$/src/steering_control/scripts/models/configs.py" />
         <option value="$PROJECT_DIR$/src/steering_control/scripts/models/ConvLSTM.py" />
+        <option value="$PROJECT_DIR$/src/steering_control/scripts/models/vgg16_model.py" />
       </list>
     </option>
   </component>
@@ -152,18 +172,16 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="56" />
-    <option name="y" value="-11" />
-    <option name="width" value="1545" />
-    <option name="height" value="912" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="2048" />
+    <option name="height" value="1129" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -180,27 +198,13 @@
               <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
               <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="steering_control" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="steering_control" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="steering_control" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="cruise_control" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -209,6 +213,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/steering_control/scripts/auxiliary" />
       <recent name="$PROJECT_DIR$/src/steering_control/scripts/models" />
     </key>
   </component>
@@ -288,7 +293,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="56" y="-11" width="1545" height="912" extended-state="6" />
+    <frame x="0" y="23" width="2048" height="1129" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -298,7 +303,7 @@
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32858992" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1970608" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15752742" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -311,7 +316,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32945737" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,13 +326,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/models/ConvLSTM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="77" column="45" selection-start-line="77" selection-start-column="45" selection-end-line="77" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/visualization/testing_visualizer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-720" />
@@ -363,14 +361,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/simulation/scripts/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1905">
-          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/simulation/README.md">
+    <entry file="file://$PROJECT_DIR$/src/simulation/scripts/client.py" />
+    <entry file="file://$PROJECT_DIR$/src/simulation/Readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="15">
@@ -380,7 +372,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/simulation/README.md">
+    <entry file="file://$PROJECT_DIR$/src/simulation/Readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="195">
@@ -390,21 +382,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/simulation/scripts/helper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="30" lean-forward="true" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/simulation/scripts/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/simulation/README.md">
+    <entry file="file://$PROJECT_DIR$/src/simulation/scripts/helper.py" />
+    <entry file="file://$PROJECT_DIR$/src/simulation/scripts/client.py" />
+    <entry file="file://$PROJECT_DIR$/src/simulation/Readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="195">
@@ -414,20 +394,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/simulation/scripts/helper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="30" lean-forward="true" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/simulation/scripts/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="21" lean-forward="true" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/simulation/scripts/helper.py" />
+    <entry file="file://$PROJECT_DIR$/src/simulation/scripts/client.py" />
     <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/steering_controller">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -535,28 +503,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/simulation/scripts/helper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/rambo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/simulation/scripts/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="43" column="15" lean-forward="true" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/simulation/README.md">
+    <entry file="file://$PROJECT_DIR$/src/simulation/scripts/helper.py" />
+    <entry file="file://$PROJECT_DIR$/src/simulation/scripts/client.py" />
+    <entry file="file://$PROJECT_DIR$/src/simulation/Readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="150">
@@ -581,27 +530,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/models/SamplingRNNCell.py">
+    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/models/SamplingRNNCell.py" />
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/ops.py" />
+    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/visualization/dataset_viz.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+        <state relative-caret-position="1620">
+          <caret line="114" column="31" selection-start-line="114" selection-start-column="31" selection-end-line="114" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/validation.py">
+    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/komada_eval.py" />
+    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/models/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
+        <state relative-caret-position="225">
+          <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/ops.py">
+    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/models/configs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="3746" column="6" selection-start-line="3746" selection-start-column="6" selection-end-line="3746" selection-end-column="6" />
+        <state relative-caret-position="1005">
+          <caret line="67" column="14" selection-start-line="67" selection-start-column="14" selection-end-line="67" selection-end-column="14" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/models/ConvLSTM.py" />
     <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/validation_viz.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1410">
@@ -609,47 +562,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/visualization/dataset_viz.py">
+    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/models/vgg16_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1620">
-          <caret line="114" column="31" selection-start-line="114" selection-start-column="31" selection-end-line="114" selection-end-column="31" />
+        <state relative-caret-position="1005">
+          <caret line="72" column="26" selection-start-line="72" selection-end-line="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/validation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/auxiliary/rambo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
           <folding>
-            <element signature="e#106#143#0" expanded="true" />
+            <element signature="e#117#128#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/komada_eval.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="56" column="45" selection-start-line="56" selection-start-column="45" selection-end-line="56" selection-end-column="45" />
-          <folding>
-            <element signature="e#144#159#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/models/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
-          <folding>
-            <element signature="e#164#174#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/models/configs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="67" column="14" selection-start-line="67" selection-start-column="14" selection-end-line="67" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/models/ConvLSTM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="146" column="70" selection-start-line="146" selection-start-column="70" selection-end-line="146" selection-end-column="70" />
         </state>
       </provider>
     </entry>

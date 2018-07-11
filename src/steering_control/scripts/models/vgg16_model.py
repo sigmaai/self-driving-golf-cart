@@ -1,3 +1,5 @@
+
+
 from keras.models import Sequential
 from keras.layers import Convolution2D, ZeroPadding2D, MaxPooling2D
 from keras.layers.core import Flatten, Dense, Dropout, Lambda
@@ -56,7 +58,7 @@ def get_model():
     model = load_model_weights(model, "vgg16_weights.h5")
     
     model.add(Lambda(global_average_pooling, output_shape=global_average_pooling_shape))
-    model.add(Dense(2, activation='softmax', init='uniform'))
+    model.add(Dense(1, activation='softmax', init='uniform'))
     sgd = SGD(lr=0.01, decay=1e-6, momentum=0.5, nesterov=True)
     model.compile(loss='categorical_crossentropy', optimizer = sgd, metrics=['accuracy'])
     return model
