@@ -1,5 +1,0 @@
-car
-truck
-pedestrian
-traffic light
-cyclist

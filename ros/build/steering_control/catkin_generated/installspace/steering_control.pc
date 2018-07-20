@@ -1,0 +1,8 @@
+prefix=/home/neil/Workspace/self-driving-golf-cart/ros/install
+
+Name: steering_control
+Description: Description of steering_control
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/neil/Workspace/self-driving-golf-cart/ros/install/lib 
+Requires: 

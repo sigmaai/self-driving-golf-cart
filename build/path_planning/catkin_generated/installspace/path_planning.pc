@@ -1,8 +1,0 @@
-prefix=/home/neil/Workspace/self-driving-golf-cart/install
-
-Name: path_planning
-Description: Description of path_planning
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/neil/Workspace/self-driving-golf-cart/install/lib 
-Requires: 

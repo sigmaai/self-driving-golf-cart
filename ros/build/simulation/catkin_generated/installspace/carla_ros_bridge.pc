@@ -1,0 +1,8 @@
+prefix=/home/neil/Workspace/self-driving-golf-cart/ros/install
+
+Name: carla_ros_bridge
+Description: Description of carla_ros_bridge
+Version: 0.0.1
+Cflags: 
+Libs: -L/home/neil/Workspace/self-driving-golf-cart/ros/install/lib 
+Requires: 

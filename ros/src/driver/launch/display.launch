@@ -1,0 +1,36 @@
+<launch>
+
+	<!-- upload urdf -->
+ 	<param name="robot_description" textfile="$(find driver)/urdf/robot.urdf" />
+  	<arg name="gui" default="true" />
+    <param name="use_gui" value="$(arg gui)"/>
+  
+    <!-- load rviz configs -->
+    <arg name="rvizconfig" default="$(find driver)/rviz/default.rviz" />
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+
+    <!-- ================= maps and visualization =================    -->
+
+    <!-- transformation node --> 
+    <node pkg="tf" type="static_transform_publisher" name="local_map_tf" args="696400.1 4713254.8 0 0 0 0 1 map local_map 30" />
+        
+    <arg name="url" default="package://osm_cartography/maps/deerfield.osm" />
+
+    <!-- start map server -->
+    <node pkg="osm_cartography" type="osm_server" name="osm_server" />
+
+    <node pkg="osm_cartography" type="viz_osm" name="viz_osm" >
+        <param name="map_url" value="$(arg url)" />
+    </node>
+
+    <!-- ========= initialize GPS & localization modules ===+===== -->
+
+    <include file="$(find localization)/launch/localization.launch"/>
+
+    <!-- ==================== launch rviz ======================   -->
+
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+
+</launch>
+
