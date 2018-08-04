@@ -3917,24 +3917,6 @@ steering_control/preinstall:
 .PHONY : steering_control/preinstall
 
 #=============================================================================
-# Directory level rules for directory detection/tl_detection
-
-# Convenience name for "all" pass in the directory.
-detection/tl_detection/all:
-
-.PHONY : detection/tl_detection/all
-
-# Convenience name for "clean" pass in the directory.
-detection/tl_detection/clean:
-
-.PHONY : detection/tl_detection/clean
-
-# Convenience name for "preinstall" pass in the directory.
-detection/tl_detection/preinstall:
-
-.PHONY : detection/tl_detection/preinstall
-
-#=============================================================================
 # Directory level rules for directory osm
 
 # Convenience name for "all" pass in the directory.

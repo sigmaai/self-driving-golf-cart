@@ -16,7 +16,7 @@ from std_msgs.msg import Image
 from std_msgs.msg import Float32
 from cv_bridge import CvBridge, CvBridgeError
 
-class CruisePredictor:
+class CruiseNode:
 
     def __init__(self):
 

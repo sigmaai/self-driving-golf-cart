@@ -129,7 +129,6 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/neil/Workspace/self-driving-golf-cart/ros/build/localization/cmake_install.cmake")
   include("/home/neil/Workspace/self-driving-golf-cart/ros/build/path_planning/cmake_install.cmake")
   include("/home/neil/Workspace/self-driving-golf-cart/ros/build/steering_control/cmake_install.cmake")
-  include("/home/neil/Workspace/self-driving-golf-cart/ros/build/detection/tl_detection/cmake_install.cmake")
   include("/home/neil/Workspace/self-driving-golf-cart/ros/build/osm/cmake_install.cmake")
 
 endif()

@@ -17,7 +17,7 @@ from std_msgs.msg import Float32
 from cv_bridge import CvBridge, CvBridgeError
 
 
-class SteeringPredictor:
+class SteeringNode:
 
     def __init__(self):
 
@@ -50,7 +50,7 @@ class SteeringPredictor:
         try:
             cv_image = self.bridge.imgmsg_to_cv2(data, "bgr8")
         except CvBridgeError as e:
-            print(e)
+            raise e
 
         self.current_frame = cv_image
 

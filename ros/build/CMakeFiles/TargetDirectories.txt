@@ -211,13 +211,6 @@
 /home/neil/Workspace/self-driving-golf-cart/ros/build/steering_control/CMakeFiles/install/local.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/build/steering_control/CMakeFiles/test.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/build/steering_control/CMakeFiles/edit_cache.dir
-/home/neil/Workspace/self-driving-golf-cart/ros/build/detection/tl_detection/CMakeFiles/list_install_components.dir
-/home/neil/Workspace/self-driving-golf-cart/ros/build/detection/tl_detection/CMakeFiles/install.dir
-/home/neil/Workspace/self-driving-golf-cart/ros/build/detection/tl_detection/CMakeFiles/rebuild_cache.dir
-/home/neil/Workspace/self-driving-golf-cart/ros/build/detection/tl_detection/CMakeFiles/install/strip.dir
-/home/neil/Workspace/self-driving-golf-cart/ros/build/detection/tl_detection/CMakeFiles/install/local.dir
-/home/neil/Workspace/self-driving-golf-cart/ros/build/detection/tl_detection/CMakeFiles/test.dir
-/home/neil/Workspace/self-driving-golf-cart/ros/build/detection/tl_detection/CMakeFiles/edit_cache.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/build/osm/CMakeFiles/install.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/build/osm/CMakeFiles/rebuild_cache.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/build/osm/CMakeFiles/test.dir

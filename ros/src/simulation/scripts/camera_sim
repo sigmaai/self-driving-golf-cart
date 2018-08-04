@@ -1,0 +1,43 @@
+#!/usr/bin/python
+
+"""
+publish the frames of the dataset
+under the topic of: /cv_camera_node/image_sim
+
+(c) Neil Nie, 2018
+All Rights Reserved
+Contact: contact@neilnie.com
+
+"""
+
+import cv2
+import pandas as pd
+import rospy
+from sensor_msgs.msg import Image
+from cv_bridge import CvBridge, CvBridgeError
+
+
+class CameraSim():
+
+    def __init__(self):
+
+        rospy.init_node('cv_camera_sim')
+        self.bridge = CvBridge()
+
+        self.camera_pub = rospy.Publisher('/cv_camera_node/image_sim', Image, queue_size=10)
+        self.rate = rospy.Rate(15)
+
+        self.frame_path = rospy.get_param("/simulation/frame_path")
+        df_truth = pd.read_csv(self.frame_path, usecols=['frame_id', 'steering_angle'], index_col=None)
+
+        for i in range(df_truth.size()):
+
+            frame = cv2.cvtColor(cv2.imread(df_truth['frame_id'].loc[i]), cv2.COLOR_BGR2RGB)
+
+            try:
+                img_msg = self.bridge.cv2_to_imgmsg(frame, "bgr8")
+            except CvBridgeError as e:
+                raise e
+
+            self.camera_pub.publish(img_msg)
+            self.rate.sleep()
