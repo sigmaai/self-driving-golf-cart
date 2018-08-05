@@ -2,7 +2,7 @@
 
 """
 publish the frames of the dataset
-under the topic of: /cv_camera_node/image_sim
+under the topic of: /cv_camera/image_sim
 
 (c) Neil Nie, 2018
 All Rights Reserved
@@ -16,6 +16,8 @@ import rospy
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge, CvBridgeError
 
+# TODO: waiting to be completed
+
 
 class CameraSim():
 
@@ -24,7 +26,7 @@ class CameraSim():
         rospy.init_node('cv_camera_sim')
         self.bridge = CvBridge()
 
-        self.camera_pub = rospy.Publisher('/cv_camera_node/image_sim', Image, queue_size=10)
+        self.camera_pub = rospy.Publisher('/cv_camera/image_sim', Image, queue_size=10)
         self.rate = rospy.Rate(15)
 
         self.frame_path = rospy.get_param("/simulation/frame_path")

@@ -7,42 +7,45 @@
 # (c) Yongyang Nie, 2018, All rights Reserved
 #
 
-import numpy as np
+import warnings
 import cv2
-from models import models
-
+from steering_predictor import SteeringPredictor
 import rospy
 from sensor_msgs.msg import Image
 from std_msgs.msg import Float32
 from cv_bridge import CvBridge, CvBridgeError
 
+# TODO: must test with steering predictor class.
 
 class SteeringNode:
 
     def __init__(self):
 
-        rospy.init_node('steering_controller')
-        rospy.Subscriber('/cv_camera_node/image_raw', Image, callback=self.image_update_callback, queue_size=5)
+        rospy.init_node('steering_node')
 
         self.current_frame = None
         self.bridge = CvBridge()
-        self.model_path = rospy.get_param("/steering_controller/model_path")
-        rospy.loginfo('loading model from path: %s', self.model_path)
 
-        self.scale_factor = rospy.get_param("/steering_controller/scale_factor")
+        rospy.Subscriber('/cv_camera_node/image_raw', Image, callback=self.image_update_callback, queue_size=8)
+
+        self.model_path = rospy.get_param("/steering_node/model_path")
+        rospy.loginfo('loading model from path: %s', self.model_path)
+        self.scale_factor = rospy.get_param("/steering_node/scale_factor")
         rospy.loginfo('loaded scaling factor: %s', self.scale_factor)
 
-        self.cnn = models.commaai_model()
-        self.cnn.load_weights(self.model_path)
+        self.predictor = SteeringPredictor(weight_path=self.model_path, model_type='rgb')
         print('steering deep learning model loaded')
 
         steering_pub = rospy.Publisher('/vehicle/dbw/steering_cmds/', Float32, queue_size=5)
         rate = rospy.Rate(15)
 
-        while not rospy.is_shutdown() and self.current_frame is not None:
-            angle = self.predict_steering(self.current_frame)
-            angle = angle * int(self.scale_factor)
-            steering_pub.publish(angle)
+        while not rospy.is_shutdown():
+            if self.current_frame is not None:
+                angle = self.predictor.predict(self.current_frame)
+                angle = angle * int(self.scale_factor)
+                steering_pub.publish(angle)
+            else:
+                steering_pub.publish(0)
             rate.sleep()
 
     def image_update_callback(self, data):
@@ -54,16 +57,10 @@ class SteeringNode:
 
         self.current_frame = cv_image
 
-    def predict_steering(self, image):
-
-        input = cv2.resize(image, (320, 160))
-        predicted_angle = self.cnn.predict(np.array([input]))[0][0]
-        return predicted_angle
-
 
 if __name__ == "__main__":
 
     try:
-        SteeringPredictor()
+        SteeringNode()
     except rospy.ROSInterruptException:
         pass

@@ -1,3 +1,18 @@
+<!--
+##################################################
+This is the master launch file for the program.
+if you are looking for a way to run the system
+as a whole, you are at the right place. Currently,
+rviz and rosbag are running as default. No random
+changes accepted
+
+(c) Yongyang Nie, 2018
+All Rights Reserved.
+
+##################################################
+-->
+
+
 <launch>
 
 	<!--open up the camera -->
@@ -8,6 +23,7 @@
     	<param name="port" value="/dev/ttyACM0" />
     </node>
 
+    <!-- launch steering node -->
     <include file="$(find steering_control)/launch/steering_control.launch"/>
 
     <!-- open rviz launch -->

@@ -1,0 +1,9 @@
+<launch>
+
+    <node name="steering_node" type="steering_node" pkg="steering_control">
+    	<param name="/model_path" value="$(find steering_control)/scripts/weights/i3d_rgb_64_8.h5" />
+    	<param name="length" value="64" />
+    	<param name="scale_factor" value='30' />
+  	</node>
+    
+</launch>
