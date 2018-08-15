@@ -1,0 +1,352 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>About ROS &mdash; Self-Driving Golf Cart 0.1.5 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="End-to-End Steering" href="End-to-End Steering.html" />
+    <link rel="prev" title="Building Your Own Hardware" href="Building Your Own Hardware.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Self-Driving Golf Cart
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="Getting Started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Running the Simulation.html">Running the Simulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Building Your Own Hardware.html">Building Your Own Hardware</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">About ROS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ros-packages-nodes">ROS Packages &amp; Nodes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#gps">gps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#steering-control">steering_control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cv-camera">cv_camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#driver">driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#osm-cartography">osm_cartography</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#important-ros-topics">Important ROS Topics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#topics-for-the-dbw-drive-by-wire-system">topics for the DBW (Drive by Wire) system</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#topics-for-visualization">topics for visualization</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="End-to-End Steering.html">End-to-End Steering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Semantic Segmentation.html">Semantic Segmentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Drive by Wire.html">Drive by Wire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Object Detection.html">Object Detection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Localization.html">Localization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Simulation.html">Simulation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Contact</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Self-Driving Golf Cart</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>About ROS</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/About ROS.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="about-ros">
+<h1>About ROS<a class="headerlink" href="#about-ros" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="ros-packages-nodes">
+<h2>ROS Packages &amp; Nodes<a class="headerlink" href="#ros-packages-nodes" title="Permalink to this headline">¶</a></h2>
+<p>The self-driving golf cart run on the robotics middleware called ROS (Robot Operating System). Below you will find all the packages, nodes, topics and other information about ROS in this project. If you are new to ROS, I highly recommend you to check out their tutorials and examples on their website: <a class="reference external" href="http://wiki.ros.org/ROS/Tutorials">http://wiki.ros.org/ROS/Tutorials</a></p>
+<div class="section" id="gps">
+<h3>gps<a class="headerlink" href="#gps" title="Permalink to this headline">¶</a></h3>
+<p>The GPS package functions as a rudimentary localization sensor. Below are the nodes in the package.</p>
+<p>node(s):</p>
+<ul class="simple">
+<li>gps_receiver</li>
+<li>nmea_topic_driver</li>
+<li>nmea_topic_serial_reader</li>
+</ul>
+<p>The GPS package manages and publishes the data received from a GPS module connected via serial. The package publishes:</p>
+<p>topic(s)</p>
+<ul class="simple">
+<li>/sensor/gps/fix</li>
+<li>/sensor/gps/vel</li>
+</ul>
+</div>
+<div class="section" id="steering-control">
+<h3>steering_control<a class="headerlink" href="#steering-control" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>steering_control</li>
+</ul>
+<p>The steering control package controls the steering system of the vehicle. If publishes $ /vehicle/dbw/steering_cmds/ while subscribes to the camera feed. (Node currently functioning) The Arduino subsribes to the steering_cmds and controls the steering accordingly.</p>
+</div>
+<div class="section" id="cv-camera">
+<h3>cv_camera<a class="headerlink" href="#cv-camera" title="Permalink to this headline">¶</a></h3>
+<p>This is the camera (perception sensor) package.</p>
+<ul class="simple">
+<li>cv_camera_node</li>
+</ul>
+</div>
+<div class="section" id="driver">
+<h3>driver<a class="headerlink" href="#driver" title="Permalink to this headline">¶</a></h3>
+<p>The driver package is will run entire self-driving software. There are two launch files: <cite>display.launch</cite> &amp; <cite>drive.launch</cite>. The display launch file runs rviz. The drive launch file will run the self-driving systems, i.e. steering control, cruise control, sensors… (drive.launch under development. display.launch functioning)</p>
+<p>node(s):</p>
+<ul class="simple">
+<li>drive</li>
+</ul>
+<p>launch files:</p>
+<ul class="simple">
+<li>drive.launch</li>
+<li>display.launch</li>
+</ul>
+</div>
+<div class="section" id="osm-cartography">
+<h3>osm_cartography<a class="headerlink" href="#osm-cartography" title="Permalink to this headline">¶</a></h3>
+<p>This package broadcasts and processes .osm files. OSM files are OpenStreetMap files which contain detailed information about the environment, such as coordinates of roads, building and landmarks. Currently, the main function of the package is to broadcast the osm info to rviz for visualization. (Node currently functioning)</p>
+<p>node(s):</p>
+<ul class="simple">
+<li>osm_client</li>
+<li>osm_server</li>
+<li>viz_osm</li>
+</ul>
+<p>### localization</p>
+<p>### path_planning</p>
+<p>### cruise_control</p>
+<ul class="simple">
+<li>cruise_controller</li>
+</ul>
+<p>### tl_detection</p>
+<ul class="simple">
+<li>tl_detection</li>
+</ul>
+<p>### lane_detection</p>
+<ul class="simple">
+<li>lane_detection</li>
+</ul>
+<p>### object_detection</p>
+<ul class="simple">
+<li>object_detection</li>
+</ul>
+<p>### segmentation</p>
+<ul class="simple">
+<li>segmentation</li>
+</ul>
+</div>
+</div>
+<div class="section" id="important-ros-topics">
+<h2>Important ROS Topics<a class="headerlink" href="#important-ros-topics" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="topics-for-the-dbw-drive-by-wire-system">
+<h3>topics for the DBW (Drive by Wire) system<a class="headerlink" href="#topics-for-the-dbw-drive-by-wire-system" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>/cv_camera_node/image_raw</li>
+<li>/vehicle/dbw/steering_cmds/</li>
+<li>/vehicle/dbw/accel_cmds/</li>
+<li>/sensor/steering_encoder/value</li>
+</ul>
+</div>
+<div class="section" id="topics-for-visualization">
+<h3>topics for visualization<a class="headerlink" href="#topics-for-visualization" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>/visual/steering/angle_img</li>
+<li>/visual/detection/object/bbox_img (x)</li>
+<li>/visual/detection/lane/marking_img (x)</li>
+<li>/visual/segmentation/seg_img (x)</li>
+</ul>
+<ol class="loweralpha simple" start="24">
+<li>implementing in progress</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="End-to-End Steering.html" class="btn btn-neutral float-right" title="End-to-End Steering" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Building Your Own Hardware.html" class="btn btn-neutral" title="Building Your Own Hardware" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Neil Nie.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1.5',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

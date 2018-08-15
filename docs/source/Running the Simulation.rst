@@ -36,3 +36,7 @@ Check Unreal's documentation "Building On Linux" if any of the steps above fail.
 Installing Carla
 ================
 
+To install Carla the simulator is simple. Just head over to their releases page on Github and download the latest pre-built release. At the time of writing, the latest release can be found here: https://drive.google.com/open?id=1JprRbFf6UlvpqX98hQiUG9U4W_E-keiv
+
+
+
