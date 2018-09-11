@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/neil/Workspace/self-driving-golf-cart/ros/build
 include sensors/gps/CMakeFiles/run_tests_gps_roslint_package.dir/progress.make
 
 sensors/gps/CMakeFiles/run_tests_gps_roslint_package:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/build/sensors/gps && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/catkin/cmake/test/run_tests.py /home/neil/Workspace/self-driving-golf-cart/ros/build/test_results/gps/roslint-gps.xml --working-dir /home/neil/Workspace/self-driving-golf-cart/ros/build/sensors/gps /opt/ros/kinetic/share/roslint/cmake/../../../lib/roslint/test_wrapper\ /home/neil/Workspace/self-driving-golf-cart/ros/build/test_results/gps/roslint-gps.xml\ make\ roslint_gps
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/build/sensors/gps && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/catkin/cmake/test/run_tests.py /home/neil/Workspace/self-driving-golf-cart/ros/build/test_results/gps/roslint-gps.xml --working-dir /home/neil/Workspace/self-driving-golf-cart/ros/build/sensors/gps "/opt/ros/kinetic/share/roslint/cmake/../../../lib/roslint/test_wrapper /home/neil/Workspace/self-driving-golf-cart/ros/build/test_results/gps/roslint-gps.xml make roslint_gps"
 
 run_tests_gps_roslint_package: sensors/gps/CMakeFiles/run_tests_gps_roslint_package
 run_tests_gps_roslint_package: sensors/gps/CMakeFiles/run_tests_gps_roslint_package.dir/build.make

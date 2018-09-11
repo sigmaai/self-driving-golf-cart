@@ -134,12 +134,16 @@ class Visualization():
 
     def __init__(self):
 
-        rospy.init_node('steering_visualization')
+        rospy.init_node('steering_visualization_node')
 
         self.current_frame = None
         self.bridge = CvBridge()
         self.steering_angle = 0.0
 
+        # Please note that currently the visualization node only listens
+        # to the camera raw images and the steering commands. However,
+        # these fixed parameters can be changed for simulation visualization
+        # as well. # TODO: Maybe change the subscriber topic name to ros param
         rospy.Subscriber('/cv_camera_node/image_raw', Image, callback=self.image_update_callback, queue_size=8)
         rospy.Subscriber('/vehicle/dbw/steering_cmds', Float32, callback=self.steering_cmd_callback)
 

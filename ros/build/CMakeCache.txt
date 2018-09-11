@@ -74,6 +74,10 @@ CATKIN_ENABLE_TESTING:BOOL=ON
 //Catkin skip testing
 CATKIN_SKIP_TESTING:BOOL=OFF
 
+//Replace the CMake install command with a custom implementation
+// using symlinks instead of copying resources
+CATKIN_SYMLINK_INSTALL:BOOL=OFF
+
 //List of ';' separated packages to build
 CATKIN_WHITELIST_PACKAGES:STRING=
 
@@ -555,6 +559,12 @@ segmentation_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/s
 
 //The directory containing a CMake configuration file for sensor_msgs.
 sensor_msgs_DIR:PATH=/opt/ros/kinetic/share/sensor_msgs/cmake
+
+//Value Computed by CMake
+simulation_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/build/simulation
+
+//Value Computed by CMake
+simulation_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/simulation
 
 //The directory containing a CMake configuration file for smclib.
 smclib_DIR:PATH=/opt/ros/kinetic/share/smclib/cmake

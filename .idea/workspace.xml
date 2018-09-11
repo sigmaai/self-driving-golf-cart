@@ -3,26 +3,35 @@
   <component name="ChangeListManager">
     <list default="true" id="8075d57d-0c29-4084-b018-ee8c503d1889" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/build/catkin_generated/installspace/_setup_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/catkin_generated/installspace/_setup_util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/build/catkin_generated/setup_cached.sh" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/catkin_generated/setup_cached.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/build/catkin_generated/stamps/Project/_setup_util.py.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/catkin_generated/stamps/Project/_setup_util.py.stamp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/build/steering_control/catkin_generated/installspace/steering_controlConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/steering_control/catkin_generated/installspace/steering_controlConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/build/steering_control/catkin_generated/package.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/steering_control/catkin_generated/package.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/build/steering_control/catkin_generated/stamps/steering_control/package.xml.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/steering_control/catkin_generated/stamps/steering_control/package.xml.stamp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/devel/_setup_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/devel/_setup_util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/devel/share/steering_control/cmake/steering_controlConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/devel/share/steering_control/cmake/steering_controlConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/driver/launch/drive.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/driver/launch/drive.launch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/launch/steering_control.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/steering_control/launch/steering_control.launch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/launch/steering_so.launch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/package.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/steering_control/package.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/scripts/models/configs.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/steering_control/scripts/models/configs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/scripts/old/preprocess_dataset.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/scripts/old/train.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/scripts/old/validation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/scripts/old/visualization_old.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/CMakeFiles/CMakeRuleHashes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/CTestTestfile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/CTestTestfile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/catkin/catkin_generated/version/package.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/catkin/catkin_generated/version/package.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/catkin_generated/order_packages.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/catkin_generated/order_packages.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/catkin_generated/stamps/Project/package.xml.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/catkin_generated/stamps/Project/package.xml.stamp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/osm/CMakeFiles/_run_tests_osm_cartography_roslaunch-check_launch.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/osm/CMakeFiles/_run_tests_osm_cartography_roslaunch-check_launch.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/osm/CMakeFiles/run_tests_osm_cartography_roslaunch-check_launch.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/osm/CMakeFiles/run_tests_osm_cartography_roslaunch-check_launch.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/_run_tests_cv_camera_rostest_test_cv_camera.test.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/_run_tests_cv_camera_rostest_test_cv_camera.test.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/_run_tests_cv_camera_rostest_test_no_yaml.test.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/_run_tests_cv_camera_rostest_test_no_yaml.test.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/run_tests_cv_camera_rostest_test_cv_camera.test.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/run_tests_cv_camera_rostest_test_cv_camera.test.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/run_tests_cv_camera_rostest_test_no_yaml.test.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/run_tests_cv_camera_rostest_test_no_yaml.test.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/gps/CMakeFiles/_run_tests_gps_roslint_package.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/sensors/gps/CMakeFiles/_run_tests_gps_roslint_package.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/gps/CMakeFiles/run_tests_gps_roslint_package.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/sensors/gps/CMakeFiles/run_tests_gps_roslint_package.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/simulation/catkin_generated/package.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/simulation/catkin_generated/package.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/simulation/catkin_generated/pkg.develspace.context.pc.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/simulation/catkin_generated/pkg.develspace.context.pc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/simulation/catkin_generated/pkg.installspace.context.pc.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/simulation/catkin_generated/pkg.installspace.context.pc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/simulation/catkin_generated/setup_py_interrogation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/simulation/catkin_generated/setup_py_interrogation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/simulation/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/simulation/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/simulation/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/simulation/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/simulation/package.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/simulation/package.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/simulation/scripts/data_sim" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ros/src/steering_control/scripts/steering_node" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/steering_control/scripts/steering_node" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/scripts/steering_predictor.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/steering_control/scripts/steering_predictor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ros/src/steering_control/scripts/visualization/visualization.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/steering_control/scripts/visualization/visualization.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,51 +50,110 @@
     <session id="-2069309069">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="as" value="25" />
-          <entry key="camera_sim" value="39" />
+          <entry key="camera_sim" value="172" />
+          <entry key="camera_sim_node" value="889" />
+          <entry key="data_sim" value="2" />
           <entry key="launch" value="640" />
-          <entry key="py" value="477" />
-          <entry key="steering_node" value="423" />
+          <entry key="py" value="808" />
+          <entry key="steering_node" value="424" />
+          <entry key="txt" value="4" />
           <entry key="xml" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="ActionScript" value="25" />
-          <entry key="Python" value="939" />
+          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="Python" value="2295" />
           <entry key="XML" value="654" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="camera_sim" value="1" />
+          <entry key="camera_sim_node" value="1" />
           <entry key="cv_camera_node" value="1" />
+          <entry key="data_sim" value="1" />
           <entry key="js" value="1" />
           <entry key="launch" value="14" />
-          <entry key="py" value="6" />
-          <entry key="txt" value="1" />
-          <entry key="xml" value="1" />
+          <entry key="py" value="8" />
+          <entry key="steering_node" value="1" />
+          <entry key="txt" value="2" />
+          <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JavaScript" value="1" />
-          <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="6" />
-          <entry key="XML" value="15" />
+          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="Python" value="12" />
+          <entry key="XML" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ros/src/steering_control/scripts/steering_node">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-25">
+              <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim_node">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+              <folding>
+                <element signature="e#209#219#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ros/src/steering_control/scripts/visualization/visualization.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="349">
+              <caret line="145" column="78" selection-start-line="145" selection-start-column="78" selection-end-line="145" selection-end-column="78" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ros/src/simulation/package.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="376">
+              <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ros/src/simulation/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -96,7 +164,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>carla_Transform</find>
       <find>INPUT_SHAPE</find>
       <find>src.steering_control.scripts.configs</find>
       <find>total_num_steps</find>
@@ -126,10 +193,12 @@
       <find>print</find>
       <find>'''</find>
       <find>cv_camera_node</find>
+      <find>carla_ros_bridge</find>
     </findStrings>
     <replaceStrings>
       <replace>configs</replace>
       <replace>&quot;&quot;&quot;</replace>
+      <replace>simulation</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -163,9 +232,7 @@
         <option value="$PROJECT_DIR$/ros/src/simulation/scripts/dataset_sim.py" />
         <option value="$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim.py" />
         <option value="$PROJECT_DIR$/ros/src/steering_control/scripts/steering_controller" />
-        <option value="$PROJECT_DIR$/ros/src/simulation/scripts/data_sim" />
         <option value="$PROJECT_DIR$/ros/src/simulation/scripts/preprocess_data.py" />
-        <option value="$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim" />
         <option value="$PROJECT_DIR$/ros/src/steering_control/scripts/models/configs.py" />
         <option value="$PROJECT_DIR$/ros/src/steering_control/package.xml" />
         <option value="$PROJECT_DIR$/ros/src/steering_control/launch/steering_software.launch" />
@@ -173,9 +240,14 @@
         <option value="$PROJECT_DIR$/ros/src/steering_control/scripts/steering_predictor.py" />
         <option value="$PROJECT_DIR$/ros/src/steering_control/launch/steering_control.launch" />
         <option value="$PROJECT_DIR$/ros/src/steering_control/launch/steering_stand_alone.launch" />
+        <option value="$PROJECT_DIR$/ros/src/driver/launch/drive.launch" />
+        <option value="$PROJECT_DIR$/ros/src/simulation/scripts/data_sim" />
+        <option value="$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim" />
+        <option value="$PROJECT_DIR$/ros/src/simulation/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/ros/src/simulation/package.xml" />
         <option value="$PROJECT_DIR$/ros/src/steering_control/scripts/steering_node" />
         <option value="$PROJECT_DIR$/ros/src/steering_control/scripts/visualization/visualization.py" />
-        <option value="$PROJECT_DIR$/ros/src/driver/launch/drive.launch" />
+        <option value="$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim_node" />
       </list>
     </option>
   </component>
@@ -186,9 +258,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="55" />
+    <option name="x" value="57" />
     <option name="y" value="24" />
-    <option name="width" value="1552" />
+    <option name="width" value="1545" />
     <option name="height" value="876" />
   </component>
   <component name="ProjectView">
@@ -196,7 +268,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -220,22 +291,14 @@
               <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
               <item name="ros" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="cruise_control" type="462c0819:PsiDirectoryNode" />
+              <item name="simulation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
               <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
               <item name="ros" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="cruise_control" type="462c0819:PsiDirectoryNode" />
-              <item name="launch" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
-              <item name="ros" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="cruise_control" type="462c0819:PsiDirectoryNode" />
+              <item name="simulation" type="462c0819:PsiDirectoryNode" />
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -243,22 +306,30 @@
               <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
               <item name="ros" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="cruise_control" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-              <item name="weights" type="462c0819:PsiDirectoryNode" />
+              <item name="steering_control" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
               <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
               <item name="ros" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="cruise_control" type="462c0819:PsiDirectoryNode" />
-              <item name="speed_control" type="462c0819:PsiDirectoryNode" />
+              <item name="steering_control" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
+              <item name="ros" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="steering_control" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="visualization" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -369,9 +440,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="55" y="24" width="1552" height="876" extended-state="0" />
+    <frame x="57" y="24" width="1545" height="876" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16289894" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16700067" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -440,16 +512,6 @@
     <entry file="file://$PROJECT_DIR$/ros/src/steering_control/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#178#188#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/steering_control/package.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -471,20 +533,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/steering_control/launch/steering_software.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/data_sim">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/steering_control/launch/steering_software.launch" />
     <entry file="file://$PROJECT_DIR$/ros/devel/lib/cv_camera/cv_camera_node">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -512,16 +561,6 @@
     <entry file="file://$PROJECT_DIR$/ros/src/steering_control/launch/hardware_test.launch">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/steering_control/scripts/visualization/visualization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="142" column="41" selection-start-line="142" selection-start-column="41" selection-end-line="142" selection-end-column="41" />
-          <folding>
-            <element signature="e#143#161#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/steering_control/scripts/models/configs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="287">
@@ -533,19 +572,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="467">
           <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-          <folding>
-            <element signature="e#1#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/steering_control/scripts/steering_node">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="35" column="48" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
-          <folding>
-            <element signature="e#186#201#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -560,6 +586,71 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="4" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/data_sim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#194#212#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+          <folding>
+            <element signature="e#173#183#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/simulation/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/simulation/package.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="513" column="8" selection-start-line="513" selection-start-column="8" selection-end-line="513" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/steering_control/scripts/visualization/visualization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="145" column="78" selection-start-line="145" selection-start-column="78" selection-end-line="145" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/steering_control/scripts/steering_node">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-25">
+          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim_node">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+          <folding>
+            <element signature="e#209#219#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

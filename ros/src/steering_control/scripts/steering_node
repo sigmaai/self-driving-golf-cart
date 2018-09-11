@@ -7,7 +7,6 @@
 # (c) Yongyang Nie, 2018, All rights Reserved
 #
 
-import warnings
 import cv2
 from steering_predictor import SteeringPredictor
 import rospy
@@ -15,7 +14,6 @@ from sensor_msgs.msg import Image
 from std_msgs.msg import Float32
 from cv_bridge import CvBridge, CvBridgeError
 
-# TODO: must test with steering predictor class.
 
 class SteeringNode:
 

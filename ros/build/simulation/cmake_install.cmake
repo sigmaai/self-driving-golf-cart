@@ -37,22 +37,22 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/ros/build/simulation/catkin_generated/installspace/carla_ros_bridge.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/ros/build/simulation/catkin_generated/installspace/simulation.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/carla_ros_bridge/cmake" TYPE FILE FILES
-    "/home/neil/Workspace/self-driving-golf-cart/ros/build/simulation/catkin_generated/installspace/carla_ros_bridgeConfig.cmake"
-    "/home/neil/Workspace/self-driving-golf-cart/ros/build/simulation/catkin_generated/installspace/carla_ros_bridgeConfig-version.cmake"
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simulation/cmake" TYPE FILE FILES
+    "/home/neil/Workspace/self-driving-golf-cart/ros/build/simulation/catkin_generated/installspace/simulationConfig.cmake"
+    "/home/neil/Workspace/self-driving-golf-cart/ros/build/simulation/catkin_generated/installspace/simulationConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/carla_ros_bridge" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/ros/src/simulation/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simulation" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/ros/src/simulation/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/carla_ros_bridge" TYPE FILE FILES
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/simulation" TYPE FILE FILES
     "/home/neil/Workspace/self-driving-golf-cart/ros/src/simulation/client.launch"
     "/home/neil/Workspace/self-driving-golf-cart/ros/src/simulation/client_with_rviz.launch"
     "/home/neil/Workspace/self-driving-golf-cart/ros/src/simulation/test/ros_bridge_client.test"
