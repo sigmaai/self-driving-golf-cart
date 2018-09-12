@@ -8,18 +8,15 @@ import struct
 import object_detection.msg
 
 class DetectionResults(genpy.Message):
-  _md5sum = "c90c5dbacc052c188fd5956bea4e6f91"
+  _md5sum = "c9a646c35e7a13cc2d94d4de60869423"
   _type = "object_detection/DetectionResults"
   _has_header = False #flag to mark the presence of a Header object
   _full_text = """DetectionResult[] results
 ================================================================================
 MSG: object_detection/DetectionResult
-string out_class
+uint32 out_class
 float32 out_score
-uint32 upper_left
-uint32 upper_right
-uint32 lower_left
-uint32 lower_right"""
+float32[] location"""
   __slots__ = ['results']
   _slot_types = ['object_detection/DetectionResult[]']
 
@@ -60,14 +57,12 @@ uint32 lower_right"""
       length = len(self.results)
       buff.write(_struct_I.pack(length))
       for val1 in self.results:
-        _x = val1.out_class
-        length = len(_x)
-        if python3 or type(_x) == unicode:
-          _x = _x.encode('utf-8')
-          length = len(_x)
-        buff.write(struct.pack('<I%ss'%length, length, _x))
         _x = val1
-        buff.write(_get_struct_f4I().pack(_x.out_score, _x.upper_left, _x.upper_right, _x.lower_left, _x.lower_right))
+        buff.write(_get_struct_If().pack(_x.out_class, _x.out_score))
+        length = len(val1.location)
+        buff.write(_struct_I.pack(length))
+        pattern = '<%sf'%length
+        buff.write(struct.pack(pattern, *val1.location))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -86,19 +81,17 @@ uint32 lower_right"""
       self.results = []
       for i in range(0, length):
         val1 = object_detection.msg.DetectionResult()
+        _x = val1
+        start = end
+        end += 8
+        (_x.out_class, _x.out_score,) = _get_struct_If().unpack(str[start:end])
         start = end
         end += 4
         (length,) = _struct_I.unpack(str[start:end])
+        pattern = '<%sf'%length
         start = end
-        end += length
-        if python3:
-          val1.out_class = str[start:end].decode('utf-8')
-        else:
-          val1.out_class = str[start:end]
-        _x = val1
-        start = end
-        end += 20
-        (_x.out_score, _x.upper_left, _x.upper_right, _x.lower_left, _x.lower_right,) = _get_struct_f4I().unpack(str[start:end])
+        end += struct.calcsize(pattern)
+        val1.location = struct.unpack(pattern, str[start:end])
         self.results.append(val1)
       return self
     except struct.error as e:
@@ -115,14 +108,12 @@ uint32 lower_right"""
       length = len(self.results)
       buff.write(_struct_I.pack(length))
       for val1 in self.results:
-        _x = val1.out_class
-        length = len(_x)
-        if python3 or type(_x) == unicode:
-          _x = _x.encode('utf-8')
-          length = len(_x)
-        buff.write(struct.pack('<I%ss'%length, length, _x))
         _x = val1
-        buff.write(_get_struct_f4I().pack(_x.out_score, _x.upper_left, _x.upper_right, _x.lower_left, _x.lower_right))
+        buff.write(_get_struct_If().pack(_x.out_class, _x.out_score))
+        length = len(val1.location)
+        buff.write(_struct_I.pack(length))
+        pattern = '<%sf'%length
+        buff.write(val1.location.tostring())
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -142,19 +133,17 @@ uint32 lower_right"""
       self.results = []
       for i in range(0, length):
         val1 = object_detection.msg.DetectionResult()
+        _x = val1
+        start = end
+        end += 8
+        (_x.out_class, _x.out_score,) = _get_struct_If().unpack(str[start:end])
         start = end
         end += 4
         (length,) = _struct_I.unpack(str[start:end])
+        pattern = '<%sf'%length
         start = end
-        end += length
-        if python3:
-          val1.out_class = str[start:end].decode('utf-8')
-        else:
-          val1.out_class = str[start:end]
-        _x = val1
-        start = end
-        end += 20
-        (_x.out_score, _x.upper_left, _x.upper_right, _x.lower_left, _x.lower_right,) = _get_struct_f4I().unpack(str[start:end])
+        end += struct.calcsize(pattern)
+        val1.location = numpy.frombuffer(str[start:end], dtype=numpy.float32, count=length)
         self.results.append(val1)
       return self
     except struct.error as e:
@@ -164,9 +153,9 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_f4I = None
-def _get_struct_f4I():
-    global _struct_f4I
-    if _struct_f4I is None:
-        _struct_f4I = struct.Struct("<f4I")
-    return _struct_f4I
+_struct_If = None
+def _get_struct_If():
+    global _struct_If
+    if _struct_If is None:
+        _struct_If = struct.Struct("<If")
+    return _struct_If

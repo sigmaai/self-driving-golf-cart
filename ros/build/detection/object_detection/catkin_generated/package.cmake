@@ -1,6 +1,6 @@
 set(_CATKIN_CURRENT_PACKAGE "object_detection")
 set(object_detection_VERSION "0.0.0")
-set(object_detection_MAINTAINER "neil <neil@todo.todo>")
+set(object_detection_MAINTAINER "neil <contact@neilnie.com>")
 set(object_detection_PACKAGE_FORMAT "2")
 set(object_detection_BUILD_DEPENDS "rospy" "std_msgs" "message_generation")
 set(object_detection_BUILD_EXPORT_DEPENDS "rospy" "std_msgs")

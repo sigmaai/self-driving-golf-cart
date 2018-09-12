@@ -1,6 +1,3 @@
-string out_class
+uint32 out_class
 float32 out_score
-uint32 upper_left
-uint32 upper_right
-uint32 lower_left
-uint32 lower_right
+float32[] location

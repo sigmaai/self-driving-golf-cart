@@ -61,22 +61,19 @@
    self)
   )
 
-(setf (get object_detection::DetectionResults :md5sum-) "c90c5dbacc052c188fd5956bea4e6f91")
+(setf (get object_detection::DetectionResults :md5sum-) "c9a646c35e7a13cc2d94d4de60869423")
 (setf (get object_detection::DetectionResults :datatype-) "object_detection/DetectionResults")
 (setf (get object_detection::DetectionResults :definition-)
       "DetectionResult[] results
 ================================================================================
 MSG: object_detection/DetectionResult
-string out_class
+uint32 out_class
 float32 out_score
-uint32 upper_left
-uint32 upper_right
-uint32 lower_left
-uint32 lower_right
+float32[] location
 ")
 
 
 
-(provide :object_detection/DetectionResults "c90c5dbacc052c188fd5956bea4e6f91")
+(provide :object_detection/DetectionResults "c9a646c35e7a13cc2d94d4de60869423")
 
 

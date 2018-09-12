@@ -24,42 +24,27 @@ struct DetectionResult_
   typedef DetectionResult_<ContainerAllocator> Type;
 
   DetectionResult_()
-    : out_class()
+    : out_class(0)
     , out_score(0.0)
-    , upper_left(0)
-    , upper_right(0)
-    , lower_left(0)
-    , lower_right(0)  {
+    , location()  {
     }
   DetectionResult_(const ContainerAllocator& _alloc)
-    : out_class(_alloc)
+    : out_class(0)
     , out_score(0.0)
-    , upper_left(0)
-    , upper_right(0)
-    , lower_left(0)
-    , lower_right(0)  {
+    , location(_alloc)  {
   (void)_alloc;
     }
 
 
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _out_class_type;
+   typedef uint32_t _out_class_type;
   _out_class_type out_class;
 
    typedef float _out_score_type;
   _out_score_type out_score;
 
-   typedef uint32_t _upper_left_type;
-  _upper_left_type upper_left;
-
-   typedef uint32_t _upper_right_type;
-  _upper_right_type upper_right;
-
-   typedef uint32_t _lower_left_type;
-  _lower_left_type lower_left;
-
-   typedef uint32_t _lower_right_type;
-  _lower_right_type lower_right;
+   typedef std::vector<float, typename ContainerAllocator::template rebind<float>::other >  _location_type;
+  _location_type location;
 
 
 
@@ -139,12 +124,12 @@ struct MD5Sum< ::object_detection::DetectionResult_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "5fb792480f070cbc69af8da53d614697";
+    return "3b7fae78ce58faba54a3eab2d7ca9e3c";
   }
 
   static const char* value(const ::object_detection::DetectionResult_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x5fb792480f070cbcULL;
-  static const uint64_t static_value2 = 0x69af8da53d614697ULL;
+  static const uint64_t static_value1 = 0x3b7fae78ce58fabaULL;
+  static const uint64_t static_value2 = 0x54a3eab2d7ca9e3cULL;
 };
 
 template<class ContainerAllocator>
@@ -163,12 +148,9 @@ struct Definition< ::object_detection::DetectionResult_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "string out_class\n\
+    return "uint32 out_class\n\
 float32 out_score\n\
-uint32 upper_left\n\
-uint32 upper_right\n\
-uint32 lower_left\n\
-uint32 lower_right\n\
+float32[] location\n\
 ";
   }
 
@@ -189,10 +171,7 @@ namespace serialization
     {
       stream.next(m.out_class);
       stream.next(m.out_score);
-      stream.next(m.upper_left);
-      stream.next(m.upper_right);
-      stream.next(m.lower_left);
-      stream.next(m.lower_right);
+      stream.next(m.location);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -212,17 +191,15 @@ struct Printer< ::object_detection::DetectionResult_<ContainerAllocator> >
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::object_detection::DetectionResult_<ContainerAllocator>& v)
   {
     s << indent << "out_class: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.out_class);
+    Printer<uint32_t>::stream(s, indent + "  ", v.out_class);
     s << indent << "out_score: ";
     Printer<float>::stream(s, indent + "  ", v.out_score);
-    s << indent << "upper_left: ";
-    Printer<uint32_t>::stream(s, indent + "  ", v.upper_left);
-    s << indent << "upper_right: ";
-    Printer<uint32_t>::stream(s, indent + "  ", v.upper_right);
-    s << indent << "lower_left: ";
-    Printer<uint32_t>::stream(s, indent + "  ", v.lower_left);
-    s << indent << "lower_right: ";
-    Printer<uint32_t>::stream(s, indent + "  ", v.lower_right);
+    s << indent << "location[]" << std::endl;
+    for (size_t i = 0; i < v.location.size(); ++i)
+    {
+      s << indent << "  location[" << i << "]: ";
+      Printer<float>::stream(s, indent + "  ", v.location[i]);
+    }
   }
 };
 

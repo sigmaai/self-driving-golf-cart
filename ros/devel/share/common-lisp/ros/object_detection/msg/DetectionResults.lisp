@@ -58,16 +58,16 @@
   "object_detection/DetectionResults")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<DetectionResults>)))
   "Returns md5sum for a message object of type '<DetectionResults>"
-  "c90c5dbacc052c188fd5956bea4e6f91")
+  "c9a646c35e7a13cc2d94d4de60869423")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'DetectionResults)))
   "Returns md5sum for a message object of type 'DetectionResults"
-  "c90c5dbacc052c188fd5956bea4e6f91")
+  "c9a646c35e7a13cc2d94d4de60869423")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<DetectionResults>)))
   "Returns full string definition for message of type '<DetectionResults>"
-  (cl:format cl:nil "DetectionResult[] results~%================================================================================~%MSG: object_detection/DetectionResult~%string out_class~%float32 out_score~%uint32 upper_left~%uint32 upper_right~%uint32 lower_left~%uint32 lower_right~%~%"))
+  (cl:format cl:nil "DetectionResult[] results~%================================================================================~%MSG: object_detection/DetectionResult~%uint32 out_class~%float32 out_score~%float32[] location~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'DetectionResults)))
   "Returns full string definition for message of type 'DetectionResults"
-  (cl:format cl:nil "DetectionResult[] results~%================================================================================~%MSG: object_detection/DetectionResult~%string out_class~%float32 out_score~%uint32 upper_left~%uint32 upper_right~%uint32 lower_left~%uint32 lower_right~%~%"))
+  (cl:format cl:nil "DetectionResult[] results~%================================================================================~%MSG: object_detection/DetectionResult~%uint32 out_class~%float32 out_score~%float32[] location~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <DetectionResults>))
   (cl:+ 0
      4 (cl:reduce #'cl:+ (cl:slot-value msg 'results) :key #'(cl:lambda (ele) (cl:declare (cl:ignorable ele)) (cl:+ (roslisp-msg-protocol:serialization-length ele))))

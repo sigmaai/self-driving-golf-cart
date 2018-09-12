@@ -71,7 +71,7 @@ class DetectionResults {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return 'c90c5dbacc052c188fd5956bea4e6f91';
+    return 'c9a646c35e7a13cc2d94d4de60869423';
   }
 
   static messageDefinition() {
@@ -80,12 +80,9 @@ class DetectionResults {
     DetectionResult[] results
     ================================================================================
     MSG: object_detection/DetectionResult
-    string out_class
+    uint32 out_class
     float32 out_score
-    uint32 upper_left
-    uint32 upper_right
-    uint32 lower_left
-    uint32 lower_right
+    float32[] location
     `;
   }
 

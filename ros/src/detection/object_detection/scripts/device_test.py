@@ -24,7 +24,7 @@
 # do not run this file from this directory
 # run it from the top directory of the workspace
 
-from detection.object.object_detector import ObjectDetector
+from object_detector import ObjectDetector
 import cv2
 import numpy as np
 from imutils.video import VideoStream
@@ -57,7 +57,7 @@ def read_cam():
             # -----------------------------------------------------
             # run the network and detection
 
-            result = detector.detect_object(image)
+            result = detector.detect_object(image, visualize=True)
 
             displayBuf = np.array(result)
 
@@ -69,9 +69,6 @@ def read_cam():
             if key == 27:  # ESC key
                 cv2.destroyAllWindows()
                 break
-
-    else:
-        print("camera open failed")
 
 
 if __name__ == '__main__':

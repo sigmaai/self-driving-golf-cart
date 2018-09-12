@@ -7,17 +7,14 @@ import struct
 
 
 class DetectionResult(genpy.Message):
-  _md5sum = "5fb792480f070cbc69af8da53d614697"
+  _md5sum = "3b7fae78ce58faba54a3eab2d7ca9e3c"
   _type = "object_detection/DetectionResult"
   _has_header = False #flag to mark the presence of a Header object
-  _full_text = """string out_class
+  _full_text = """uint32 out_class
 float32 out_score
-uint32 upper_left
-uint32 upper_right
-uint32 lower_left
-uint32 lower_right"""
-  __slots__ = ['out_class','out_score','upper_left','upper_right','lower_left','lower_right']
-  _slot_types = ['string','float32','uint32','uint32','uint32','uint32']
+float32[] location"""
+  __slots__ = ['out_class','out_score','location']
+  _slot_types = ['uint32','float32','float32[]']
 
   def __init__(self, *args, **kwds):
     """
@@ -27,7 +24,7 @@ uint32 lower_right"""
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       out_class,out_score,upper_left,upper_right,lower_left,lower_right
+       out_class,out_score,location
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -37,24 +34,15 @@ uint32 lower_right"""
       super(DetectionResult, self).__init__(*args, **kwds)
       #message fields cannot be None, assign default values for those that are
       if self.out_class is None:
-        self.out_class = ''
+        self.out_class = 0
       if self.out_score is None:
         self.out_score = 0.
-      if self.upper_left is None:
-        self.upper_left = 0
-      if self.upper_right is None:
-        self.upper_right = 0
-      if self.lower_left is None:
-        self.lower_left = 0
-      if self.lower_right is None:
-        self.lower_right = 0
+      if self.location is None:
+        self.location = []
     else:
-      self.out_class = ''
+      self.out_class = 0
       self.out_score = 0.
-      self.upper_left = 0
-      self.upper_right = 0
-      self.lower_left = 0
-      self.lower_right = 0
+      self.location = []
 
   def _get_types(self):
     """
@@ -68,14 +56,12 @@ uint32 lower_right"""
     :param buff: buffer, ``StringIO``
     """
     try:
-      _x = self.out_class
-      length = len(_x)
-      if python3 or type(_x) == unicode:
-        _x = _x.encode('utf-8')
-        length = len(_x)
-      buff.write(struct.pack('<I%ss'%length, length, _x))
       _x = self
-      buff.write(_get_struct_f4I().pack(_x.out_score, _x.upper_left, _x.upper_right, _x.lower_left, _x.lower_right))
+      buff.write(_get_struct_If().pack(_x.out_class, _x.out_score))
+      length = len(self.location)
+      buff.write(_struct_I.pack(length))
+      pattern = '<%sf'%length
+      buff.write(struct.pack(pattern, *self.location))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -86,19 +72,17 @@ uint32 lower_right"""
     """
     try:
       end = 0
+      _x = self
+      start = end
+      end += 8
+      (_x.out_class, _x.out_score,) = _get_struct_If().unpack(str[start:end])
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
+      pattern = '<%sf'%length
       start = end
-      end += length
-      if python3:
-        self.out_class = str[start:end].decode('utf-8')
-      else:
-        self.out_class = str[start:end]
-      _x = self
-      start = end
-      end += 20
-      (_x.out_score, _x.upper_left, _x.upper_right, _x.lower_left, _x.lower_right,) = _get_struct_f4I().unpack(str[start:end])
+      end += struct.calcsize(pattern)
+      self.location = struct.unpack(pattern, str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -111,14 +95,12 @@ uint32 lower_right"""
     :param numpy: numpy python module
     """
     try:
-      _x = self.out_class
-      length = len(_x)
-      if python3 or type(_x) == unicode:
-        _x = _x.encode('utf-8')
-        length = len(_x)
-      buff.write(struct.pack('<I%ss'%length, length, _x))
       _x = self
-      buff.write(_get_struct_f4I().pack(_x.out_score, _x.upper_left, _x.upper_right, _x.lower_left, _x.lower_right))
+      buff.write(_get_struct_If().pack(_x.out_class, _x.out_score))
+      length = len(self.location)
+      buff.write(_struct_I.pack(length))
+      pattern = '<%sf'%length
+      buff.write(self.location.tostring())
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -130,19 +112,17 @@ uint32 lower_right"""
     """
     try:
       end = 0
+      _x = self
+      start = end
+      end += 8
+      (_x.out_class, _x.out_score,) = _get_struct_If().unpack(str[start:end])
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
+      pattern = '<%sf'%length
       start = end
-      end += length
-      if python3:
-        self.out_class = str[start:end].decode('utf-8')
-      else:
-        self.out_class = str[start:end]
-      _x = self
-      start = end
-      end += 20
-      (_x.out_score, _x.upper_left, _x.upper_right, _x.lower_left, _x.lower_right,) = _get_struct_f4I().unpack(str[start:end])
+      end += struct.calcsize(pattern)
+      self.location = numpy.frombuffer(str[start:end], dtype=numpy.float32, count=length)
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -151,9 +131,9 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_f4I = None
-def _get_struct_f4I():
-    global _struct_f4I
-    if _struct_f4I is None:
-        _struct_f4I = struct.Struct("<f4I")
-    return _struct_f4I
+_struct_If = None
+def _get_struct_If():
+    global _struct_If
+    if _struct_If is None:
+        _struct_If = struct.Struct("<If")
+    return _struct_If

@@ -115,12 +115,12 @@ struct MD5Sum< ::object_detection::DetectionResults_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "c90c5dbacc052c188fd5956bea4e6f91";
+    return "c9a646c35e7a13cc2d94d4de60869423";
   }
 
   static const char* value(const ::object_detection::DetectionResults_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xc90c5dbacc052c18ULL;
-  static const uint64_t static_value2 = 0x8fd5956bea4e6f91ULL;
+  static const uint64_t static_value1 = 0xc9a646c35e7a13ccULL;
+  static const uint64_t static_value2 = 0x2d94d4de60869423ULL;
 };
 
 template<class ContainerAllocator>
@@ -142,12 +142,9 @@ struct Definition< ::object_detection::DetectionResults_<ContainerAllocator> >
     return "DetectionResult[] results\n\
 ================================================================================\n\
 MSG: object_detection/DetectionResult\n\
-string out_class\n\
+uint32 out_class\n\
 float32 out_score\n\
-uint32 upper_left\n\
-uint32 upper_right\n\
-uint32 lower_left\n\
-uint32 lower_right\n\
+float32[] location\n\
 ";
   }
 
