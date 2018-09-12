@@ -24,13 +24,12 @@
 
   
 
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Semantic Segmentation" href="Semantic Segmentation.html" />
-    <link rel="prev" title="Welcome to Self-Driving Golf Cart’s documentation!" href="index.html" /> 
+    <link rel="prev" title="About ROS" href="About ROS.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -79,9 +78,31 @@
               
             
             
-              <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">End-to-End Steering</a></li>
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="Getting Started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Running the Simulation.html">Running the Simulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Building Your Own Hardware.html">Building Your Own Hardware</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="About ROS.html">About ROS</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">End-to-End Steering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-run-inferencing">How to Run Inferencing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#i3d-model-architecture">I3D Model Architecture</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#motives">Motives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#model">Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#results">Results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#performance">Performance</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Semantic Segmentation.html">Semantic Segmentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Drive by Wire.html">Drive by Wire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Object Detection.html">Object Detection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Localization.html">Localization</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
@@ -152,6 +173,56 @@
             
   <div class="section" id="end-to-end-steering">
 <h1>End-to-End Steering<a class="headerlink" href="#end-to-end-steering" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>In 1989, ALVINN, the self-driving car (truck) made by Dr. Dean Pomerleau and his team, drove around the Carnegie Mellon campus. According to Pomerleau, The vehicle was powered by a CPU slower than the Apple Watch. The car used a fully connected neural network to predict the steering angle of the car in real time. Fast forward twenty years, NVIDIA proposed a novel method that combines Pomerleau’s idea with the modern GPU, giving NVIDIA’s car the capability to accurately perform real-time end to end steering prediction. Around the same time, Udacity held a challenge that asked researchers to create the best end to end steering prediction model. This project is deeply inspired by that competition, and the goal is to further the work in behavioral cloning for self-driving vehicles.</p>
+</div>
+<div class="section" id="how-to-run-inferencing">
+<h2>How to Run Inferencing<a class="headerlink" href="#how-to-run-inferencing" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Clone/download this repository</li>
+</ol>
+<p>2. Download the pre-trained weights here: <a class="reference external" href="https://drive.google.com/file/d/19DR2fIR6yl_DdqQzPrGrcvbp_MxXC0Pa/view?usp=sharing">https://drive.google.com/file/d/19DR2fIR6yl_DdqQzPrGrcvbp_MxXC0Pa/view?usp=sharing</a>.
+3.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd &lt;YOUR REPO DIRECTORY&gt;
+</pre></div>
+</div>
+<p>Then in your own Python program or Python console:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ from steering_predictor import SteeringPredictor
+$ predictor = SteeringPredictor(&#39;&lt;SAVED MODEL PATH&gt;&#39;, &#39;&lt;MODEL TYPE&gt;&#39;)
+$ steering_pred = predictor.predict_steering_angle(&lt;IMAGE&gt;)
+</pre></div>
+</div>
+<p>Please note that the possible model types are <cite>rgb</cite> and <cite>flow</cite>. The input image must be an RGB image of any size. For more information, please refer to the code comments and documentations.</p>
+</div>
+<div class="section" id="i3d-model-architecture">
+<h2>I3D Model Architecture<a class="headerlink" href="#i3d-model-architecture" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="motives">
+<h3>Motives<a class="headerlink" href="#motives" title="Permalink to this headline">¶</a></h3>
+<p>NVIDIA’s paper used a convolutional neural network with a single frame input. I believe that, even though this architecture yielded good results, the single frame CNN doesn’t provide any temporal information which is critical in self-driving. This is the motive behind choosing the i3d architecture, which is rich in spacial-temporal information.</p>
+</div>
+<div class="section" id="model">
+<h3>Model<a class="headerlink" href="#model" title="Permalink to this headline">¶</a></h3>
+<p>The input of the network is a 3d convolutional block, with the shape of <cite>n * weight * height * 3</cite>. <cite>n</cite> is the length of the input sequence. Furthermore, the network also uses nine inception modules. The output layers are modified to accommodate for this regression problem. A flatten layer and a dense layer are added to the back of the network.</p>
+<p>![](./media/model.png)</p>
+</div>
+<div class="section" id="results">
+<h3>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h3>
+<p>During training, RMSE (root mean squared error) is used for the loss function. Udacity’s open source driving dataset is used for training and testing. RMSE is also the benchmark for the validation results. For the results of the Udacity challenge, please click [here](<a class="reference external" href="https://github.com/udacity/self-driving-car/tree/master/challenges/challenge-2">https://github.com/udacity/self-driving-car/tree/master/challenges/challenge-2</a>).</p>
+<div class="line-block">
+<div class="line">Model Type                            | Parameters   | Training Loss| Validation Score|</div>
+<div class="line">——————            <a href="#id1"><span class="problematic" id="id2">|:------------:|</span></a> ————:| —————:|</div>
+<div class="line">Single Frame ConvNet          | – million   | —          | 0.1320          |</div>
+<div class="line">i3d 32 Frame RGB              | 12.2 million | 0.0299       | 0.0862          |</div>
+<div class="line"><strong>i3d 64 Frame RGB</strong>          | 12.2 million | 0.0430       | <strong>0.0530</strong>      |</div>
+</div>
+<p>The i3d model architecture proved that spacial-temporal information could drastically improve the performance of the behavioral cloning system. After fewer than 80K steps of training, the network’s validation loss scored half of the validation score of the single frame CNN.</p>
+</div>
+<div class="section" id="performance">
+<h3>Performance<a class="headerlink" href="#performance" title="Permalink to this headline">¶</a></h3>
+<p>This good performance comes at a cost. On the one hand, the 32 frames i3d network’s inference time on a GTX 1080 is 0.07 seconds, making the realtime frame rate ~15fps. On the other hand, the 64 frames network’s inference time is 0.13 seconds, which makes the frame-rate ~7fps. One of the best ways to improve performance is to improve the hardware of the system. A fast multicore CPU with hyper-threading would drastically improve the inference speed.</p>
+</div>
+</div>
 </div>
 
 
@@ -165,7 +236,7 @@
         <a href="Semantic Segmentation.html" class="btn btn-neutral float-right" title="Semantic Segmentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Welcome to Self-Driving Golf Cart’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="About ROS.html" class="btn btn-neutral" title="About ROS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -211,10 +282,7 @@
 
   
 
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="_static/js/theme.js"></script>
 
   <script type="text/javascript">
       jQuery(function () {

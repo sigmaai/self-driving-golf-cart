@@ -14,8 +14,6 @@ import models.configs as configs
 import cv2
 
 
-# TODO: must test implementation
-
 class SteeringPredictor:
 
     def __init__(self, weight_path, model_type):

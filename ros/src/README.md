@@ -39,7 +39,7 @@ The GPS package manages and publishes the data received from a GPS module connec
 - /sensor/gps/fix
 - /sensor/gps/vel
 
-### teering_control
+### steering_control
 
 - steering_control
 

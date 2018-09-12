@@ -21,6 +21,14 @@ Tutorials
    Running the Simulation
    Building Your Own Hardware
 
+ROS
+===
+
+.. toctree::
+   :maxdepth: 2
+   
+   About ROS
+
 Modules
 =======
 
@@ -32,7 +40,6 @@ Modules
    Drive by Wire
    Object Detection
    Localization
-   Simulation
 
 Information
 ============
