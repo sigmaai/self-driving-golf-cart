@@ -22,7 +22,12 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-"""Run a YOLO_v2 style detection model test images."""
+"""
+Run a YOLO_v2 style detection model test images.
+The ros node calls (uses) this class to run object detection
+for questions, contact: contact@neilnie.com
+
+"""
 
 
 import colorsys
@@ -42,7 +47,6 @@ class ObjectDetector:
     def __init__(self, model_path, classes_path, anchors_path, score_threshold, iou_threshold, height, width):
 
         """
-
         :param model_path:
         :param classes_path:
         :param anchors_path:

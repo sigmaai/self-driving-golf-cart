@@ -1,4 +1,10 @@
-"""Draw predicted or ground truth boxes on input image."""
+"""
+Helper script
+Draw predicted or ground truth boxes on input image.
+
+(c) Yongyang Nie, 2018
+Contact: contact@neilnie.com.
+"""
 
 import colorsys
 import random

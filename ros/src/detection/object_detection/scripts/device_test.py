@@ -21,8 +21,10 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-# do not run this file from this directory
+# *** do not run this file from this directory **
 # run it from the top directory of the workspace
+# this is simply a test for the object detector. Please not
+# that this script ** is not a part of ROS **
 
 from object_detector import ObjectDetector
 import cv2
