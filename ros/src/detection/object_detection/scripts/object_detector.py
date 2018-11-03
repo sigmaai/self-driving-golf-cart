@@ -44,7 +44,7 @@ from yad2k.models.keras_yolo import yolo_eval, yolo_head
 
 class ObjectDetector:
 
-    def __init__(self, model_path, classes_path, anchors_path, score_threshold, iou_threshold, height, width):
+    def __init__(self, model_path, classes_path, anchors_path, score_threshold, iou_threshold, size):
 
         """
         :param model_path:
@@ -52,8 +52,7 @@ class ObjectDetector:
         :param anchors_path:
         :param score_threshold:
         :param iou_threshold:
-        :param height:
-        :param width:
+        :param size
         """
 
         model_path = os.path.expanduser(model_path)
@@ -79,9 +78,7 @@ class ObjectDetector:
         hsv_tuples = [(x / len(class_names), 1., 1.)
                       for x in range(len(class_names))]
         self.colors = list(map(lambda x: colorsys.hsv_to_rgb(*x), hsv_tuples))
-        self.colors = list(
-            map(lambda x: (int(x[0] * 255), int(x[1] * 255), int(x[2] * 255)),
-                self.colors))
+        self.colors = list(map(lambda x: (int(x[0] * 255), int(x[1] * 255), int(x[2] * 255)), self.colors))
         random.seed(10101)              # Fixed seed for consistent colors across runs.
         random.shuffle(self.colors)     # Shuffle colors to decorrelate adjacent classes.
         random.seed(None)               # Reset seed to default.
@@ -89,33 +86,29 @@ class ObjectDetector:
         # Generate output tensor targets for filtered bounding boxes.
         yolo_outputs = yolo_head(self.yolo_model.output, anchors, len(class_names))
         self.input_image_shape = K.placeholder(shape=(2,))
-        self.boxes, self.scores, self.classes = yolo_eval(
-            yolo_outputs,
-            self.input_image_shape,
-            score_threshold=score_threshold,
-            iou_threshold=iou_threshold)
+        self.boxes, self.scores, self.classes = yolo_eval(yolo_outputs,
+                                                          self.input_image_shape,
+                                                          score_threshold,
+                                                          iou_threshold=iou_threshold)
 
         # Graphics of stuff
         self.font = ImageFont.truetype(font=configs.font_path,
-                                       size=np.floor(3e-2 * height + 0.5).astype('int32'))
-        self.thickness = (width + height) // 300
+                                       size=np.floor(3e-2 * size[1] + 0.5).astype('int32'))
+        self.thickness = (size[0] + size[1]) // 300
 
-        self.width = width
-        self.height = height
+        self.size = size
 
     def detect_object(self, image, visualize=False):
 
         """
-
         :param image:
         :param visualize:
         :return:
         """
 
-        image = Image.fromarray(cv2.resize(image, (self.width, self.height)))
+        image = Image.fromarray(cv2.resize(image, (self.size[0], self.size[1])))
 
-        resized_image = image.resize(
-            tuple(reversed(self.model_image_size)), Image.BICUBIC)
+        resized_image = image.resize(tuple(reversed(self.model_image_size)), Image.BICUBIC)
         image_data = np.array(resized_image, dtype='float32')
 
         image_data /= 255.

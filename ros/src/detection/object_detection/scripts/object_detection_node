@@ -52,23 +52,23 @@ class ObjectDetectionNode:
         self.current_frame = None
         self.bridge = CvBridge()
 
-        print("we are in")
+        print("Object Detection Started")
+        print("Tiny Yolo V3")
 
         # TODO: Impelement these configs in the launch file
-        self.model_path = configs.model_path            # rospy.get_param("/object_detection/model_path")
-        self.classes_path = configs.classes_path        # rospy.get_param("/object_detection/classes_path")
-        self.anchors_path = configs.anchors_path        # rospy.get_param("/object_detection/anchors_path")
-        self.iou_threshold = configs.iou_threshold      # rospy.get_param("/object_detection/")
-        self.score_threshold = configs.score_threshold  # rospy.get_param("/object_detection/")
-        self.input_height = configs.height              # rospy.get_param("/object_detection/")
-        self.input_width = configs.width                # rospy.get_param("/object_detection/")
+        self.model_path = configs.model_path              # rospy.get_param("/object_detection/model_path")
+        self.classes_path = configs.classes_path          # rospy.get_param("/object_detection/classes_path")
+        self.anchors_path = configs.anchors_path          # rospy.get_param("/object_detection/anchors_path")
+        self.iou_threshold = configs.iou_threshold        # rospy.get_param("/object_detection/")
+        self.score_threshold = configs.score_threshold    # rospy.get_param("/object_detection/")
+        self.input_size = (configs.height, configs.width) # rospy.get_param("/object_detection/")
 
         self.detector = ObjectDetector(model_path=self.model_path,
                                        classes_path=self.classes_path,
                                        anchors_path=self.anchors_path,
                                        score_threshold=self.score_threshold,
                                        iou_threshold=self.iou_threshold,
-                                       height=self.input_height, width=self.input_width)
+                                       size=self.input_size)
 
         detection_image_pub = rospy.Publisher('/detection/object/detection_visualization/', Image, queue_size=10)
         detection_results_pub = rospy.Publisher('/detection/object/detection_result', DetectionResults, queue_size=10)

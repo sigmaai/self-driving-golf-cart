@@ -2,68 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8075d57d-0c29-4084-b018-ee8c503d1889" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/ros/src/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ros/src/detection/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ros/src/detection/object_detection/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/model_data/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/object_detector.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/build/catkin_generated/generate_cached_setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/catkin_generated/generate_cached_setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/build/catkin_generated/installspace/_setup_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/catkin_generated/installspace/_setup_util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/build/catkin_generated/order_packages.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/catkin_generated/order_packages.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/build/catkin_generated/setup_cached.sh" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/catkin_generated/setup_cached.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/build/catkin_generated/stamps/Project/_setup_util.py.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/catkin_generated/stamps/Project/_setup_util.py.stamp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/build/cruise_control/catkin_generated/installspace/cruise_controlConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/cruise_control/catkin_generated/installspace/cruise_controlConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/build/data_logger/catkin_generated/installspace/data_loggerConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/data_logger/catkin_generated/installspace/data_loggerConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/build/detection/lane_detection/catkin_generated/installspace/lane_detectionConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/detection/lane_detection/catkin_generated/installspace/lane_detectionConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/build/detection/object_detection/catkin_generated/installspace/object_detectionConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/detection/object_detection/catkin_generated/installspace/object_detectionConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/build/detection/object_detection/catkin_generated/package.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/detection/object_detection/catkin_generated/package.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/build/detection/object_detection/catkin_generated/stamps/object_detection/package.xml.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/detection/object_detection/catkin_generated/stamps/object_detection/package.xml.stamp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/build/driver/catkin_generated/installspace/driverConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/driver/catkin_generated/installspace/driverConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/build/localization/catkin_generated/installspace/localizationConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/localization/catkin_generated/installspace/localizationConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/build/osm/catkin_generated/installspace/osm_cartographyConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/osm/catkin_generated/installspace/osm_cartographyConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/build/path_planning/catkin_generated/installspace/path_planningConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/path_planning/catkin_generated/installspace/path_planningConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/build/segmentation/catkin_generated/installspace/segmentationConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/segmentation/catkin_generated/installspace/segmentationConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/catkin_generated/installspace/cv_cameraConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/sensors/cv_camera/catkin_generated/installspace/cv_cameraConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/build/sensors/gps/catkin_generated/installspace/gpsConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/sensors/gps/catkin_generated/installspace/gpsConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/build/simulation/catkin_generated/installspace/simulationConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/simulation/catkin_generated/installspace/simulationConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/build/steering_control/catkin_generated/installspace/steering_controlConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/steering_control/catkin_generated/installspace/steering_controlConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/devel/_setup_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/devel/_setup_util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/devel/include/object_detection/DetectionResult.h" beforeDir="false" afterPath="$PROJECT_DIR$/ros/devel/include/object_detection/DetectionResult.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/devel/include/object_detection/DetectionResults.h" beforeDir="false" afterPath="$PROJECT_DIR$/ros/devel/include/object_detection/DetectionResults.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/devel/lib/python2.7/dist-packages/object_detection/msg/_DetectionResult.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/devel/lib/python2.7/dist-packages/object_detection/msg/_DetectionResult.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/devel/lib/python2.7/dist-packages/object_detection/msg/_DetectionResults.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/devel/lib/python2.7/dist-packages/object_detection/msg/_DetectionResults.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/devel/share/common-lisp/ros/object_detection/msg/DetectionResult.lisp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/devel/share/common-lisp/ros/object_detection/msg/DetectionResult.lisp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/devel/share/common-lisp/ros/object_detection/msg/DetectionResults.lisp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/devel/share/common-lisp/ros/object_detection/msg/DetectionResults.lisp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/devel/share/common-lisp/ros/object_detection/msg/_package_DetectionResult.lisp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/devel/share/common-lisp/ros/object_detection/msg/_package_DetectionResult.lisp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/devel/share/cruise_control/cmake/cruise_controlConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/devel/share/cruise_control/cmake/cruise_controlConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/devel/share/cv_camera/cmake/cv_cameraConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/devel/share/cv_camera/cmake/cv_cameraConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/devel/share/data_logger/cmake/data_loggerConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/devel/share/data_logger/cmake/data_loggerConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/devel/share/driver/cmake/driverConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/devel/share/driver/cmake/driverConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/devel/share/gennodejs/ros/object_detection/msg/DetectionResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/ros/devel/share/gennodejs/ros/object_detection/msg/DetectionResult.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/devel/share/gennodejs/ros/object_detection/msg/DetectionResults.js" beforeDir="false" afterPath="$PROJECT_DIR$/ros/devel/share/gennodejs/ros/object_detection/msg/DetectionResults.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/devel/share/gps/cmake/gpsConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/devel/share/gps/cmake/gpsConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/devel/share/lane_detection/cmake/lane_detectionConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/devel/share/lane_detection/cmake/lane_detectionConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/devel/share/localization/cmake/localizationConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/devel/share/localization/cmake/localizationConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/devel/share/object_detection/cmake/object_detectionConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/devel/share/object_detection/cmake/object_detectionConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/devel/share/osm_cartography/cmake/osm_cartographyConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/devel/share/osm_cartography/cmake/osm_cartographyConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/devel/share/path_planning/cmake/path_planningConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/devel/share/path_planning/cmake/path_planningConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/devel/share/roseus/ros/object_detection/msg/DetectionResult.l" beforeDir="false" afterPath="$PROJECT_DIR$/ros/devel/share/roseus/ros/object_detection/msg/DetectionResult.l" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/devel/share/roseus/ros/object_detection/msg/DetectionResults.l" beforeDir="false" afterPath="$PROJECT_DIR$/ros/devel/share/roseus/ros/object_detection/msg/DetectionResults.l" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/devel/share/segmentation/cmake/segmentationConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/devel/share/segmentation/cmake/segmentationConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/devel/share/simulation/cmake/simulationConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/devel/share/simulation/cmake/simulationConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/devel/share/steering_control/cmake/steering_controlConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/devel/share/steering_control/cmake/steering_controlConfig.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/object_detection/model_data/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/object_detection/model_data/coco_classes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/model_data/coco_classes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/object_detection/model_data/configs.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/model_data/configs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/object_detection/model_data/pascal_classes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/model_data/pascal_classes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/object_detection/model_data/yolo.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/object_detection/model_data/yolo_anchors.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/model_data/yolo_anchors.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/object_detection/msg/DetectionResult.msg" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/object_detection/msg/DetectionResult.msg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/object_detection/package.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/object_detection/package.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/detect_objects" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/detect_objects" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/device_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/device_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/object_detection_node" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/object_detection_node" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/object_detector.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/object_detector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/yolo.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/yolo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/yolo3/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/yolo3/model.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,11 +38,12 @@
     <session id="-2069309069">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -111,7 +55,8 @@
           <entry key="detect_objects" value="1240" />
           <entry key="launch" value="640" />
           <entry key="msg" value="39" />
-          <entry key="py" value="1071" />
+          <entry key="object_detection_node" value="113" />
+          <entry key="py" value="1428" />
           <entry key="steering_node" value="424" />
           <entry key="txt" value="4" />
           <entry key="xml" value="32" />
@@ -121,7 +66,7 @@
         <counts>
           <entry key="ActionScript" value="25" />
           <entry key="PLAIN_TEXT" value="43" />
-          <entry key="Python" value="3798" />
+          <entry key="Python" value="4268" />
           <entry key="XML" value="672" />
         </counts>
       </usages-collector>
@@ -137,7 +82,8 @@
           <entry key="js" value="1" />
           <entry key="launch" value="15" />
           <entry key="msg" value="5" />
-          <entry key="py" value="13" />
+          <entry key="object_detection_node" value="2" />
+          <entry key="py" value="15" />
           <entry key="steering_node" value="1" />
           <entry key="txt" value="3" />
           <entry key="xml" value="4" />
@@ -148,69 +94,45 @@
           <entry key="C++" value="6" />
           <entry key="JavaScript" value="1" />
           <entry key="PLAIN_TEXT" value="9" />
-          <entry key="Python" value="18" />
+          <entry key="Python" value="22" />
           <entry key="XML" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.vcs.git.usages" />
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ros/src/steering_control/scripts/visualization/visualization.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="514">
-              <caret line="156" column="66" lean-forward="true" selection-start-line="156" selection-start-column="15" selection-end-line="156" selection-end-column="66" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/scripts/detect_objects">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1005">
-              <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
-              <folding>
-                <element signature="e#1189#1199#0" expanded="true" />
-                <marker date="1536720924115" expanded="true" signature="3822:3832" ph="..." />
-                <marker date="1536720924115" expanded="true" signature="4084:4383" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/msg/DetectionResult.msg">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/msg/DetectionResults.msg">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/scripts/object_detector.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="120" column="23" selection-start-line="120" selection-start-column="18" selection-end-line="120" selection-end-column="23" />
+            <state relative-caret-position="1635">
+              <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
               <folding>
-                <element signature="e#1186#1201#0" expanded="true" />
+                <element signature="e#1294#1309#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim_node">
+        <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/scripts/object_detection_node">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="-365">
+              <caret line="67" column="31" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/scripts/yolo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="149">
+              <caret line="145" column="31" lean-forward="true" selection-start-line="145" selection-start-column="31" selection-end-line="145" selection-end-column="31" />
+              <folding>
+                <element signature="e#102#117#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -226,8 +148,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>src.steering_control.scripts.configs</find>
-      <find>total_num_steps</find>
       <find>best_validation_score</find>
       <find>controller_initial_state_variables</find>
       <find>cell_autoregressive</find>
@@ -247,20 +167,22 @@
       <find>self.steering_predictions</find>
       <find>self.inputs</find>
       <find>feed_dict</find>
-      <find>self.input</find>
       <find>input_images</find>
       <find>variable</find>
       <find>controller_initial_state</find>
-      <find>'''</find>
       <find>cv_camera_node</find>
       <find>carla_ros_bridge</find>
       <find>message</find>
       <find>print</find>
+      <find>'''</find>
+      <find>close_ses</find>
+      <find>self.input</find>
+      <find>model_image_size</find>
     </findStrings>
     <replaceStrings>
       <replace>configs</replace>
-      <replace>&quot;&quot;&quot;</replace>
       <replace>simulation</replace>
+      <replace>&quot;&quot;&quot;</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -269,7 +191,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/steering_control/scripts/steering_hardware_test" />
         <option value="$PROJECT_DIR$/src/steering_control/scripts/steering_hardware_test.py" />
         <option value="$PROJECT_DIR$/src/simulation/README.md" />
         <option value="$PROJECT_DIR$/src/simulation/scripts/carla_ros_bridge.py" />
@@ -314,10 +235,13 @@
         <option value="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/device_test.py" />
         <option value="$PROJECT_DIR$/ros/src/detection/object_detection/package.xml" />
         <option value="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/model_data/configs.py" />
-        <option value="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/object_detector.py" />
         <option value="$PROJECT_DIR$/ros/src/detection/object_detection/msg/Box.msg" />
         <option value="$PROJECT_DIR$/ros/src/detection/object_detection/msg/DetectionResult.msg" />
         <option value="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/detect_objects" />
+        <option value="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/yolo3/model.py" />
+        <option value="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/object_detection_node" />
+        <option value="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/object_detector.py" />
+        <option value="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/yolo.py" />
       </list>
     </option>
   </component>
@@ -338,6 +262,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -378,15 +303,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="detection" type="462c0819:PsiDirectoryNode" />
               <item name="object_detection" type="462c0819:PsiDirectoryNode" />
-              <item name="msg" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
-              <item name="ros" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="detection" type="462c0819:PsiDirectoryNode" />
-              <item name="object_detection" type="462c0819:PsiDirectoryNode" />
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -397,44 +313,12 @@
               <item name="detection" type="462c0819:PsiDirectoryNode" />
               <item name="object_detection" type="462c0819:PsiDirectoryNode" />
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
-              <item name="yad2k" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
-              <item name="ros" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="driver" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
-              <item name="ros" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="steering_control" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
-              <item name="ros" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="steering_control" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
-              <item name="ros" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="steering_control" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-              <item name="visualization" type="462c0819:PsiDirectoryNode" />
+              <item name="model_data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -549,16 +433,15 @@
     <frame x="54" y="-4" width="1547" height="905" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16877918" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.61044174" visible="true" weight="0.17078052" />
+      <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32860824" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32858992" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3298969" />
+      <window_info anchor="bottom" id="TODO" order="6" visible="true" weight="0.32860824" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.34270415" />
@@ -569,7 +452,8 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
+      <window_info active="true" anchor="right" id="Structure" order="4" sideWeight="0.38955823" visible="true" weight="0.19346231" />
+      <window_info anchor="right" id="Database" order="5" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -579,10 +463,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/komada_eval.py" />
-    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/models/utils.py" />
-    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/models/configs.py" />
-    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/models/ConvLSTM.py" />
     <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/validation_viz.py" />
     <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/models/vgg16_model.py" />
     <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/validation.py" />
@@ -696,20 +576,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim_node">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/scripts/configs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/scripts/configs.py" />
     <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/package.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="606">
@@ -728,9 +595,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="59" column="66" selection-start-line="59" selection-start-column="66" selection-end-line="59" selection-end-column="66" />
-          <folding>
-            <element signature="e#1213#1272#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -738,9 +602,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="541">
           <caret line="57" selection-start-line="57" selection-end-line="57" />
-          <folding>
-            <element signature="e#186#196#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -772,16 +633,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/scripts/object_detector.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="120" column="23" selection-start-line="120" selection-start-column="18" selection-end-line="120" selection-end-column="23" />
-          <folding>
-            <element signature="e#1186#1201#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/sensors/cv_camera/package.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -792,6 +643,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/msg/Box.msg" />
+    <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/scripts/detect_objects">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+          <folding>
+            <element signature="e#1189#1199#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/msg/DetectionResult.msg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -799,32 +661,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/msg/Box.msg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/msg/DetectionResults.msg">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/scripts/detect_objects">
+    <entry file="file://$PROJECT_DIR$/ros/src/steering_control/scripts/visualization/visualization.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1005">
-          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+        <state relative-caret-position="1995">
+          <caret line="145" column="23" selection-start-line="145" selection-start-column="23" selection-end-line="145" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CODE_OF_CONDUCT.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-73" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/scripts/object_detector.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1635">
+          <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
           <folding>
-            <element signature="e#1189#1199#0" expanded="true" />
-            <marker date="1536720924115" expanded="true" signature="3822:3832" ph="..." />
-            <marker date="1536720924115" expanded="true" signature="4084:4383" ph="..." />
+            <element signature="e#1294#1309#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/steering_control/scripts/visualization/visualization.py">
+    <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/scripts/object_detection_node">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="156" column="66" lean-forward="true" selection-start-line="156" selection-start-column="15" selection-end-line="156" selection-end-column="66" />
+        <state relative-caret-position="-365">
+          <caret line="67" column="31" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/scripts/yolo3/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="225" column="32" selection-start-line="225" selection-start-column="32" selection-end-line="225" selection-end-column="32" />
+          <folding>
+            <element signature="e#39#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim_node">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/scripts/yolo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="145" column="31" lean-forward="true" selection-start-line="145" selection-start-column="31" selection-end-line="145" selection-end-column="31" />
+          <folding>
+            <element signature="e#102#117#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
