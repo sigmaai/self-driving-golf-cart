@@ -25,7 +25,7 @@ echo_and_run mkdir -p "$DESTDIR/home/neil/Workspace/self-driving-golf-cart/ros/i
 echo_and_run /usr/bin/env \
     PYTHONPATH="/home/neil/Workspace/self-driving-golf-cart/ros/install/lib/python2.7/dist-packages:/home/neil/Workspace/self-driving-golf-cart/ros/build/lib/python2.7/dist-packages:$PYTHONPATH" \
     CATKIN_BINARY_DIR="/home/neil/Workspace/self-driving-golf-cart/ros/build" \
-    "/usr/bin/python" \
+    "/usr/bin/python2" \
     "/home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/gps/setup.py" \
     build --build-base "/home/neil/Workspace/self-driving-golf-cart/ros/build/sensors/gps" \
     install \
