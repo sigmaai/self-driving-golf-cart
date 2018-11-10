@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+#
 """
 Class definition of YOLO_v3 style detection model on image and video
 """
@@ -58,15 +58,12 @@ class YOLO(object):
 
     def generate(self):
 
-        model_path = os.path.expanduser(self.model_path)
-        assert model_path.endswith('.h5'), 'Keras model or weights must be a .h5 file.'
-
         # Load model, or construct model and load weights.
         num_anchors = len(self.anchors)
         num_classes = len(self.class_names)
         is_tiny_version = num_anchors==6 # default setting
         try:
-            self.yolo_model = load_model(model_path, compile=False)
+            self.yolo_model = load_model(self.model_path, compile=False)
         except:
             self.yolo_model = tiny_yolo_body(Input(shape=(None,None,3)), num_anchors//2, num_classes) \
                 if is_tiny_version else yolo_body(Input(shape=(None,None,3)), num_anchors//3, num_classes)
@@ -76,7 +73,7 @@ class YOLO(object):
                 num_anchors/len(self.yolo_model.output) * (num_classes + 5), \
                 'Mismatch between model and given anchor and class sizes'
 
-        print('{} model, anchors, and classes loaded.'.format(model_path))
+        print('{} model, anchors, and classes loaded.'.format(self.model_path))
 
         # Generate colors for drawing bounding boxes.
         hsv_tuples = [(x / len(self.class_names), 1., 1.)

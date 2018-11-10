@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8075d57d-0c29-4084-b018-ee8c503d1889" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/ros/src/sensors/cv_camera/launch/start_camera.launch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ros/src/sensors/cv_camera/scripts/image_view.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/model_data/coco_classes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/model_data/coco_classes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/model_data/configs.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/model_data/configs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/model_data/pascal_classes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/model_data/tiny_yolo_anchors.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/model_data/tiny_yolo_anchors.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/model_data/voc_classes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/model_data/voc_classes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/object_detector.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/object_detector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/visualization" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/yolo.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/yolo.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,10 +45,10 @@
           <entry key="project.closed" value="6" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.4" value="2" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -54,11 +60,12 @@
           <entry key="detect_objects" value="1240" />
           <entry key="launch" value="676" />
           <entry key="msg" value="39" />
-          <entry key="object_detection_node" value="113" />
-          <entry key="py" value="1428" />
+          <entry key="object_detection_node" value="118" />
+          <entry key="py" value="1551" />
           <entry key="sh" value="25" />
           <entry key="steering_node" value="424" />
           <entry key="txt" value="4" />
+          <entry key="visualization" value="6" />
           <entry key="xml" value="32" />
         </counts>
       </usages-collector>
@@ -66,7 +73,7 @@
         <counts>
           <entry key="ActionScript" value="25" />
           <entry key="PLAIN_TEXT" value="68" />
-          <entry key="Python" value="4268" />
+          <entry key="Python" value="4402" />
           <entry key="XML" value="708" />
         </counts>
       </usages-collector>
@@ -78,15 +85,17 @@
           <entry key="cv_camera_node" value="1" />
           <entry key="data_sim" value="1" />
           <entry key="detect_objects" value="1" />
+          <entry key="gitignore" value="1" />
           <entry key="h" value="2" />
           <entry key="js" value="1" />
           <entry key="launch" value="17" />
           <entry key="msg" value="5" />
-          <entry key="object_detection_node" value="2" />
-          <entry key="py" value="15" />
+          <entry key="object_detection_node" value="3" />
+          <entry key="py" value="17" />
           <entry key="sh" value="1" />
           <entry key="steering_node" value="1" />
-          <entry key="txt" value="4" />
+          <entry key="txt" value="6" />
+          <entry key="visualization" value="1" />
           <entry key="xml" value="4" />
         </counts>
       </usages-collector>
@@ -94,8 +103,8 @@
         <counts>
           <entry key="C++" value="6" />
           <entry key="JavaScript" value="1" />
-          <entry key="PLAIN_TEXT" value="11" />
-          <entry key="Python" value="22" />
+          <entry key="PLAIN_TEXT" value="14" />
+          <entry key="Python" value="26" />
           <entry key="XML" value="21" />
         </counts>
       </usages-collector>
@@ -104,7 +113,52 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/scripts/yolo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="158">
+              <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/scripts/object_detector.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="115" column="49" selection-start-line="115" selection-start-column="49" selection-end-line="115" selection-end-column="49" />
+              <folding>
+                <element signature="e#1294#1309#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/scripts/object_detection_node">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/scripts/model_data/configs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -158,7 +212,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/simulation/scripts/carla_ros_bridge.py" />
         <option value="$PROJECT_DIR$/src/simulation/scripts/helper.py" />
         <option value="$PROJECT_DIR$/src/simulation/scripts/client.py" />
         <option value="$PROJECT_DIR$/src/steering_control/scripts/rambo.py" />
@@ -199,16 +252,17 @@
         <option value="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/configs.py" />
         <option value="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/device_test.py" />
         <option value="$PROJECT_DIR$/ros/src/detection/object_detection/package.xml" />
-        <option value="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/model_data/configs.py" />
         <option value="$PROJECT_DIR$/ros/src/detection/object_detection/msg/Box.msg" />
         <option value="$PROJECT_DIR$/ros/src/detection/object_detection/msg/DetectionResult.msg" />
         <option value="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/detect_objects" />
         <option value="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/yolo3/model.py" />
-        <option value="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/object_detection_node" />
-        <option value="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/object_detector.py" />
-        <option value="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/yolo.py" />
         <option value="$PROJECT_DIR$/ros/src/sensors/cv_camera/launch/start_camera.launch" />
         <option value="$PROJECT_DIR$/ros/src/sensors/cv_camera/scripts/image_view.sh" />
+        <option value="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/model_data/configs.py" />
+        <option value="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/yolo.py" />
+        <option value="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/visualization" />
+        <option value="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/object_detector.py" />
+        <option value="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/object_detection_node" />
       </list>
     </option>
   </component>
@@ -218,7 +272,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="54" />
     <option name="y" value="-4" />
     <option name="width" value="1547" />
@@ -253,15 +307,24 @@
               <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
               <item name="ros" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sensors" type="462c0819:PsiDirectoryNode" />
+              <item name="detection" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
               <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
               <item name="ros" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sensors" type="462c0819:PsiDirectoryNode" />
-              <item name="cv_camera" type="462c0819:PsiDirectoryNode" />
+              <item name="detection" type="462c0819:PsiDirectoryNode" />
+              <item name="object_detection" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
+              <item name="ros" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="detection" type="462c0819:PsiDirectoryNode" />
+              <item name="object_detection" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -380,16 +443,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="27" width="1543" height="873" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.61044174" visible="true" weight="0.17301269" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.61044174" visible="true" weight="0.1750167" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32860824" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32746956" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32858992" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" visible="true" weight="0.32882273" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32882273" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.34270415" />
@@ -411,20 +475,8 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/steering_control/scripts/auxiliary/rambo.py" />
-    <entry file="file://$PROJECT_DIR$/ros/src/steering_control/scripts/simulation.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/dataset_sim.py" />
-    <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim.py" />
     <entry file="file://$PROJECT_DIR$/ros/src/steering_control/scripts/steering_controller" />
-    <entry file="file:///opt/ros/kinetic/lib/python2.7/dist-packages/cv_bridge/core.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="224" column="8" selection-start-line="224" selection-start-column="8" selection-end-line="224" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///opt/ros/kinetic/lib/python2.7/dist-packages/cv_bridge/core.py" />
     <entry file="file://$PROJECT_DIR$/ros/src/steering_control/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -500,13 +552,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/data_sim" />
     <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim" />
-    <entry file="file:///opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="513" column="8" selection-start-line="513" selection-start-column="8" selection-end-line="513" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py" />
     <entry file="file://$PROJECT_DIR$/ros/src/simulation/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -571,13 +617,6 @@
         <state relative-caret-position="-1039" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/scripts/model_data/configs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/sensors/cv_camera/package.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -628,33 +667,6 @@
     <entry file="file://$PROJECT_DIR$/ros/src/sensors/cv_camera/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/scripts/object_detector.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="109" selection-start-line="109" selection-end-line="109" />
-          <folding>
-            <element signature="e#1294#1309#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/scripts/object_detection_node">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="67" column="31" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/scripts/yolo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="145" column="31" selection-start-line="145" selection-start-column="31" selection-end-line="145" selection-end-column="31" />
-          <folding>
-            <element signature="e#102#117#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/sensors/cv_camera/launch/start_camera.launch">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -673,6 +685,56 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/scripts/model_data/tiny_yolo_anchors.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/scripts/model_data/yolo_anchors.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/scripts/model_data/configs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/scripts/yolo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/scripts/visualization">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="77" column="35" lean-forward="true" selection-start-line="77" selection-start-column="35" selection-end-line="77" selection-end-column="35" />
+          <folding>
+            <element signature="e#127#152#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/scripts/object_detector.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="115" column="49" selection-start-line="115" selection-start-column="49" selection-end-line="115" selection-end-column="49" />
+          <folding>
+            <element signature="e#1294#1309#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/scripts/object_detection_node">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
         </state>
       </provider>
     </entry>

@@ -4,12 +4,12 @@
 # All Rights Reserved.
 # -----------------------------------
 
-model_path = "/home/neil/Workspace/self-driving-golf-cart/ros/src/detection/object_detection/scripts/model_data/yolo.h5"
-anchors_path = "/home/neil/Workspace/self-driving-golf-cart/ros/src/detection/object_detection/scripts/model_data/yolo_anchors.txt"
+model_path = "/home/neil/Workspace/self-driving-golf-cart/ros/src/detection/object_detection/scripts/model_data/yolov3-tiny-keras.h5"
+anchors_path = "/home/neil/Workspace/self-driving-golf-cart/ros/src/detection/object_detection/scripts/model_data/tiny_yolo_anchors.txt"
 classes_path = "/home/neil/Workspace/self-driving-golf-cart/ros/src/detection/object_detection/scripts/model_data/coco_classes.txt"
 font_path = '/home/neil/Workspace/self-driving-golf-cart/ros/src/detection/object_detection/font/FiraMono-Medium.otf'
 
-t_model_path = "./yolo.h5"
+t_model_path = "./yolov3-tiny-keras.h5"
 t_anchors_path = "./model_data/yolo_anchors.txt"
 t_classes_path = "./model_data/pascal_classes.txt"
 
