@@ -5,6 +5,7 @@
 [![Documentation Status](https://readthedocs.org/projects/self-driving-golf-cart/badge/?version=latest)](https://self-driving-golf-cart.readthedocs.io/en/latest/?badge=latest)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](paypal.me/YongyangNie)
 [![Build Status](https://travis-ci.org/sigmaai/self-driving-golf-cart.svg?branch=master)](https://travis-ci.org/sigmaai/self-driving-golf-cart)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 # Introduction
 
@@ -48,10 +49,23 @@ Building a self-driving car is hard. Not everyone has access to expensive hardwa
 <img src="./media/simulator.png" alt="Drawing" width="480"/>
 
 # ROS
-This project is being developed using ROS. The launch files will launch the neccesary nodes as well as rviz for visualization. For more information on ROS, nodes, topics and others please refer to the [README](./src/README.md) in the `./src` directory.
+This project is being developed using ROS. The launch files will launch the neccesary nodes as well as rviz for visualization. For more information on ROS, nodes, topics and others please refer to the [README](./src/README.md) in the `./src` directory. 
 
-## Steering
-We deploy deep learning, specifically behavorial cloning for the steering steering system. This work was inspired by [Nvidia](https://arxiv.org/pdf/1604.07316.pdf). We developed our own convolutional neural network to predict the steering angle based on images captured by the front-facing camera. The hardware system steer-by-wire system is custom designed in-house. Here is a video demo.
+# Deep Learning for Autonomous Steering
+
+### Motives
+In 1989, ALVINN (the self-driving truck) made by Dr. Dean Pomerleau and his team, drove around the Carnegie Mellon campus. According to Pomerleau, The vehicle was powered by a CPU slower than the Apple Watch. The car used a fully connected neural network to predict the steering angle of the car in real time. Fast forward twenty years, NVIDIA proposed a novel method that combines Pomerleau's idea with the modern GPU, giving NVIDIA's car the capability to accurately perform real-time end to end steering prediction. Around the same time, Udacity held a challenge that asked researchers to create the best end to end steering prediction model. This project is deeply inspired by that competition, and the goal is to further the work in behavioral cloning for self-driving vehicles. 
+
+NVIDIA's paper used a convolutional neural network with a single frame input. I believe that, even though this architecture yielded good results, the single frame CNN doesn't provide any temporal information which is critical in self-driving. This is the motive behind choosing the i3d architecture, which is rich in spacial-temporal information.
+
+<!--In fact, the winner of the Udacity challenge (team komanda) deployed a Convolutional LSTM architecture originally used for video classification and weather forecasting. -->
+
+### Model
+The input of the network is a 3d convolutional block, with the shape of `n * weight * height * 3`. `n` is the length of the input sequence. Furthermore, the network also uses nine inception modules. The output layers are modified to accommodate for this regression problem. A flatten layer and a dense layer are added to the back of the network. 
+
+<img src="./media/model.png" alt="Drawing" width="480"/>
+
+Here is a video demo of deep learning model running on the autonomous golf cart. 
 
 [![IMAGE ALT TEXT HERE](https://i.ytimg.com/vi/4bZ40W4BGoE/hqdefault.jpg)](https://www.youtube.com/watch?v=CcUXtViFQeU&t=5s)
 
@@ -74,6 +88,8 @@ Currently, the localization module uses GPS (Global Positioning System) to find 
 <img src="./media/gps-loc.png" alt="Drawing" width="480"/>
 
 Furthermore, we are relying on OSM (Open Street Map) data for navigation. OSM maps provide detailed information about the paths, buildings and other landmarks in the surrounding. Currently, navigation is only limited to a geofenced area.
+
+<img src="./media/osm-1.png" alt="Drawing" width="480"/>
 
 # Path Planning
 
@@ -98,7 +114,7 @@ For the second phase of the development process, we will focus on making the sys
 - Implement a localization system.
 - Write a path planner.
 - Collect more data in our geofenced enviroment. ✅
-- Improve the computing system. ✅
+- Improve the computer hardware. ✅
 - Improve the sensor system.
 
 We are keeping track of all our progress here [CHECKLIST](./CHECKLIST.md). 
