@@ -1,3 +1,19 @@
+<!--
+##################################################
+Run the object detection system through this launch
+file. You can find the parameters below.
+
+(c) Yongyang Nie, 2018
+All Rights Reserved.
+
+##################################################
+-->
+
 <launch>
+
+    <!--open up the camera -->
+	<node name="object_detection_node" pkg="object_detection" type="object_detection_node">
+            <param name="visualization" value="1" type="bool"/>
+    </node>
 
 </launch>

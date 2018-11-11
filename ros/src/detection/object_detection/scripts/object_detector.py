@@ -142,7 +142,7 @@ class ObjectDetector:
             image = cv2.resize(np.array(image), (640, 480))
             return image, out_boxes, out_scores, out_classes
         else:
-            return out_boxes, out_scores, out_classes
+            return None, out_boxes, out_scores, out_classes
 
     def draw_bboxes(self, image, b_boxes, scores, classes):
 
