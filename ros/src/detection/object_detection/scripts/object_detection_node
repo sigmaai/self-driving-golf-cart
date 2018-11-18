@@ -33,7 +33,6 @@ from PIL import Image
 #ros
 import rospy
 from sensor_msgs.msg import Image
-from model_data import configs
 from cv_bridge import CvBridge, CvBridgeError
 from object_detection.msg import DetectionResult
 from object_detection.msg import DetectionResults
@@ -49,16 +48,16 @@ class ObjectDetectionNode:
         self.current_frame = None
         self.bridge = CvBridge()
 
-        print("Object Detection Started")
-        print("Tiny Yolo V3")
+        rospy.loginfo("Object Detection Initializing")
+        rospy.loginfo("Tiny Yolo V3")
 
-        # TODO: Impelement these configs in the launch file
-        self.model_path = configs.model_path              # rospy.get_param("/object_detection/model_path")
-        self.classes_path = configs.classes_path          # rospy.get_param("/object_detection/classes_path")
-        self.anchors_path = configs.anchors_path          # rospy.get_param("/object_detection/anchors_path")
-        self.iou_threshold = configs.iou_threshold        # rospy.get_param("/object_detection/")
-        self.score_threshold = configs.score_threshold    # rospy.get_param("/object_detection/")
-        self.input_size = (configs.height, configs.width) # rospy.get_param("/object_detection/")
+        self.visualize = rospy.get_param("/object_detection_node/visualization")
+        self.model_path = rospy.get_param("/object_detection_node/model_path")
+        self.classes_path = rospy.get_param("/object_detection_node/classes_path")
+        self.anchors_path = rospy.get_param("/object_detection_node/anchors_path")
+        self.iou_threshold = rospy.get_param("/object_detection_node/iou_threshold")
+        self.score_threshold = rospy.get_param("/object_detection_node/score_threshold")
+        self.input_size = (416, 416)
 
         self.detector = ObjectDetector(model_path=self.model_path,
                                        classes_path=self.classes_path,
@@ -73,12 +72,13 @@ class ObjectDetectionNode:
 
         while not rospy.is_shutdown():
             if self.current_frame is not None:
-                image, out_boxes, out_scores, out_classes = self.detector.detect_object(self.current_frame, visualize=True)
+                image, out_boxes, out_scores, out_classes = \
+                    self.detector.detect_object(self.current_frame, visualize=self.visualize)
+                # rospy.loginfo(image.shape)
                 img_msg = self.bridge.cv2_to_imgmsg(image, "bgr8")
                 detection_image_pub.publish(img_msg)
                 msg = self.convert_results_to_message(out_boxes, out_scores, out_classes)
                 detection_results_pub.publish(msg)
-
             rate.sleep()
 
     def image_update_callback(self, data):

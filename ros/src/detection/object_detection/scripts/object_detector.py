@@ -31,7 +31,7 @@ for questions, contact: contact@neilnie.com
 import colorsys
 import cv2
 import os
-import model_data.configs as configs
+# import model_data.configs as configs
 import numpy as np
 from keras import backend as K
 from keras.models import load_model
@@ -39,6 +39,7 @@ from keras.layers import Input
 from PIL import Image, ImageDraw, ImageFont
 from yolo3.model import yolo_eval, yolo_body, tiny_yolo_body
 
+font_path = '/home/neil/Workspace/self-driving-golf-cart/ros/src/detection/object_detection/font/FiraMono-Medium.otf'
 
 class ObjectDetector:
 
@@ -53,14 +54,14 @@ class ObjectDetector:
         :param size
 
         """
-        self.model_path = model_path  # rospy.get_param("/object_detection/model_path")
-        self.classes_path = classes_path  # rospy.get_param("/object_detection/classes_path")
-        self.anchors_path = anchors_path  # rospy.get_param("/object_detection/anchors_path")
-        self.iou = iou_threshold  # rospy.get_param("/object_detection/")
-        self.score = score_threshold  # rospy.get_param("/object_detection/")
-        self.model_image_size = size  # rospy.get_param("/object_detection/")
+        self.model_path = model_path
+        self.classes_path = classes_path
+        self.anchors_path = anchors_path
+        self.iou = iou_threshold
+        self.score = score_threshold
+        self.model_image_size = size
 
-        self.font = ImageFont.truetype(font=configs.font_path, size=np.floor(3e-2 * size[1] + 0.5).astype('int32'))
+        self.font = ImageFont.truetype(font=font_path, size=np.floor(3e-2 * size[1] + 0.5).astype('int32'))
         self.thickness = (size[0] + size[1]) // 300
 
         self.class_names = self._get_class()
