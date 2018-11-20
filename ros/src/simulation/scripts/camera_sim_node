@@ -32,20 +32,22 @@ class CameraSimNode():
 
         self.camera_pub = rospy.Publisher('/cv_camera_node/image_sim', Image, queue_size=10)
         self.sim_angle_pub = rospy.Publisher("/simulation/dbw/steering_cmds", Float32, queue_size=10)
-        self.rate = rospy.Rate(10)
 
-        self.frame_path = '/home/neil/dataset/steering/val' # rospy.get_param("/simulation/frame_path")
+        frame_path = rospy.get_param("/camera_sim_node/sim_data_path")
+        time_delay = rospy.get_param("/camera_sim_node/time_delay")
 
-        # The csv data is read below. It must have two columns.
-        # the first column is image name, second frame steering angle
-        # the csv file contains many nonexisting frame information
+        self.rate = rospy.Rate(1)
+
+        # The csv data is read below. It must have two columns. the first column is image name,
+        # second frame steering angle the csv file contains many nonexisting frame information
         # which is disregarded in the flowing loop.
-        df_truth = pd.read_csv(self.frame_path + "/labels.csv").values
+        df_truth = pd.read_csv(frame_path + "/labels.csv").values
 
+        rospy.loginfo("Simulated Camera Feed Initialized. Publisher path: '/cv_camera_node/image_sim'")
         while not rospy.is_shutdown():
 
             for data in df_truth:
-                im_path = self.frame_path + data[0]
+                im_path = frame_path + data[0]
 
                 if os.path.isfile(im_path):
                     frame = cv2.imread(im_path)
@@ -55,9 +57,10 @@ class CameraSimNode():
                         raise e
                     self.sim_angle_pub.publish(data[1])
                     self.camera_pub.publish(img_msg)
+                    rospy.sleep(time_delay)
 
             self.rate.sleep()
-
+            rospy.signal_shutdown("Data Set Exhausted")
 
 if __name__ == "__main__":
 

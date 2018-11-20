@@ -1,0 +1,10 @@
+<launch>
+
+    <node name="camera_sim_node" type="camera_sim_node" pkg="simulation" output="screen">
+    	<param name="sim_data_path" value="/home/neil/dataset/steering/val"/>
+        <param name="time_delay" value="0.02"/>
+  	</node>
+
+    <node pkg="cv_camera" name="image_view" type="image_view.sh" />
+
+</launch>

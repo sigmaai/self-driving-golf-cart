@@ -24,15 +24,21 @@ class SteeringNode:
         self.current_frame = None
         self.bridge = CvBridge()
 
-        rospy.Subscriber('/cv_camera_node/image_raw', Image, callback=self.image_update_callback, queue_size=8)
+        simulation = rospy.get_param("/steering_node/simulation")
+        if (simulation):
+            rospy.logwarn("You are in simulation mode. If this is unintentional, please quite the program immediately")
+            rospy.Subscriber('/cv_camera_node/image_sim', Image, callback=self.image_update_callback, queue_size=8)
+        else:
+            rospy.Subscriber('/cv_camera_node/image_raw', Image, callback=self.image_update_callback, queue_size=8)
 
         self.model_path = rospy.get_param("/steering_node/model_path")
-        rospy.loginfo('loading model from path: %s', self.model_path)
         self.scale_factor = rospy.get_param("/steering_node/scale_factor")
-        rospy.loginfo('loaded scaling factor: %s', self.scale_factor)
+        self.input_length = rospy.get_param("/steering_node/length")
+        self.predictor = SteeringPredictor(weight_path=self.model_path,
+                                           model_type='rgb',
+                                           input_length=self.input_length)
 
-        self.predictor = SteeringPredictor(weight_path=self.model_path, model_type='rgb')
-        print('steering deep learning model loaded')
+        rospy.loginfo("Deep Learning Steering Prediction System Initialized")
 
         steering_pub = rospy.Publisher('/vehicle/dbw/steering_cmds/', Float32, queue_size=5)
         rate = rospy.Rate(15)

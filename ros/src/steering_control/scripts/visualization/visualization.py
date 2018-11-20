@@ -85,8 +85,6 @@ class Visualization():
         return y_actual, curvature
 
     # main methods --
-
-    # TODO: Test this method!
     def visualize_line(self, img, speed_ms, angle_steers, color=(0, 0, 255)):
 
         path_x = np.arange(0, 50.1, 0.5)
@@ -140,11 +138,17 @@ class Visualization():
         self.bridge = CvBridge()
         self.steering_angle = 0.0
 
-        # Please note that currently the visualization node only listens
-        # to the camera raw images and the steering commands. However,
-        # these fixed parameters can be changed for simulation visualization
-        # as well. # TODO: Maybe change the subscriber topic name to ros param
-        rospy.Subscriber('/cv_camera_node/image_raw', Image, callback=self.image_update_callback, queue_size=8)
+        # Please note that the visualization node listens to either the raw
+        # camera input or the simulated camera input. Please change this
+        # setting in the launch file (/launch/steering_control.launch)
+        # or specify this parameter in your command line input.
+        simulation = rospy.get_param("/steering_node/simulation")
+        if (simulation):
+            rospy.logwarn("You are in simulation mode. If this is unintentional, please quite the program immediately")
+            rospy.Subscriber('/cv_camera_node/image_sim', Image, callback=self.image_update_callback, queue_size=8)
+        else:
+            rospy.Subscriber('/cv_camera_node/image_raw', Image, callback=self.image_update_callback, queue_size=8)
+
         rospy.Subscriber('/vehicle/dbw/steering_cmds', Float32, callback=self.steering_cmd_callback)
 
         visual_pub = rospy.Publisher('/visual/steering/angle_img', Image, queue_size=5)

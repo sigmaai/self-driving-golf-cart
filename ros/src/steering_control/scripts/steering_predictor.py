@@ -16,7 +16,7 @@ import cv2
 
 class SteeringPredictor:
 
-    def __init__(self, weight_path, model_type):
+    def __init__(self, weight_path, model_type, input_length):
 
         """
         Constructor for SteeringPredictor class
@@ -24,7 +24,7 @@ class SteeringPredictor:
         :param model_type:
         """
 
-        self.model = Inception3D(input_shape=(configs.LENGTH, configs.IMG_HEIGHT, configs.IMG_WIDTH, 3), weights_path=weight_path)
+        self.model = Inception3D(input_shape=(input_length, configs.IMG_HEIGHT, configs.IMG_WIDTH, 3), weights_path=weight_path)
         self.inputs = []
         self.model_type = model_type
 

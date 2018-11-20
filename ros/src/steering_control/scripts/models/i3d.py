@@ -36,8 +36,7 @@ import helper
 
 class Inception3D:
 
-    def __init__(self, weights_path=None, input_shape=None,
-                 dropout_prob=0.0, classes=1):
+    def __init__(self, weights_path=None, input_shape=None, dropout_prob=0.0, classes=1):
 
         """Instantiates the Inflated 3D Inception v1 architecture.
 
@@ -113,122 +112,6 @@ class Inception3D:
             self.model.fit_generator(train_gen, steps_per_epoch=epoch_steps, epochs=epochs, verbose=1, callbacks=[tensorboard])
 
         self.model.save(save_path)
-
-    def create_small_model(self, img_input):
-
-        """create and return the i3d model
-        :param: img_input: input shape of the network.
-        :return: A Keras model instance.
-        """
-
-        # Determine proper input shape
-
-        channel_axis = 4
-
-        # Downsampling via convolution (spatial and temporal)
-        x = self.conv3d_bath_norm(img_input, 64, 7, 7, 7, strides=(2, 2, 2), padding='same', name='Conv3d_1a_7x7')
-
-        # Downsampling (spatial only)
-        x = MaxPooling3D((1, 3, 3), strides=(1, 2, 2), padding='same', name='MaxPool2d_2a_3x3')(x)
-        x = self.conv3d_bath_norm(x, 64, 1, 1, 1, strides=(1, 1, 1), padding='same', name='Conv3d_2b_1x1')
-        x = self.conv3d_bath_norm(x, 192, 3, 3, 3, strides=(1, 1, 1), padding='same', name='Conv3d_2c_3x3')
-
-        # Downsampling (spatial only)
-        x = MaxPooling3D((1, 3, 3), strides=(1, 2, 2), padding='same', name='MaxPool2d_3a_3x3')(x)
-
-        # Mixed 3b
-        branch_0 = self.conv3d_bath_norm(x, 64, 1, 1, 1, padding='same', name='Conv3d_3b_0a_1x1')
-
-        branch_1 = self.conv3d_bath_norm(x, 96, 1, 1, 1, padding='same', name='Conv3d_3b_1a_1x1')
-        branch_1 = self.conv3d_bath_norm(branch_1, 128, 3, 3, 3, padding='same', name='Conv3d_3b_1b_3x3')
-
-        branch_2 = self.conv3d_bath_norm(x, 16, 1, 1, 1, padding='same', name='Conv3d_3b_2a_1x1')
-        branch_2 = self.conv3d_bath_norm(branch_2, 32, 3, 3, 3, padding='same', name='Conv3d_3b_2b_3x3')
-
-        branch_3 = MaxPooling3D((3, 3, 3), strides=(1, 1, 1), padding='same', name='MaxPool2d_3b_3a_3x3')(x)
-        branch_3 = self.conv3d_bath_norm(branch_3, 32, 1, 1, 1, padding='same', name='Conv3d_3b_3b_1x1')
-
-        x = layers.concatenate([branch_0, branch_1, branch_2, branch_3], axis=channel_axis, name='Mixed_3b')
-
-        # Mixed 3c
-        branch_0 = self.conv3d_bath_norm(x, 128, 1, 1, 1, padding='same', name='Conv3d_3c_0a_1x1')
-
-        branch_1 = self.conv3d_bath_norm(x, 128, 1, 1, 1, padding='same', name='Conv3d_3c_1a_1x1')
-        branch_1 = self.conv3d_bath_norm(branch_1, 192, 3, 3, 3, padding='same', name='Conv3d_3c_1b_3x3')
-
-        branch_2 = self.conv3d_bath_norm(x, 32, 1, 1, 1, padding='same', name='Conv3d_3c_2a_1x1')
-        branch_2 = self.conv3d_bath_norm(branch_2, 96, 3, 3, 3, padding='same', name='Conv3d_3c_2b_3x3')
-
-        branch_3 = MaxPooling3D((3, 3, 3), strides=(1, 1, 1), padding='same', name='MaxPool2d_3c_3a_3x3')(x)
-        branch_3 = self.conv3d_bath_norm(branch_3, 64, 1, 1, 1, padding='same', name='Conv3d_3c_3b_1x1')
-
-        x = layers.concatenate([branch_0, branch_1, branch_2, branch_3], axis=channel_axis, name='Mixed_3c')
-
-        # Downsampling (spatial and temporal)
-        x = MaxPooling3D((3, 3, 3), strides=(2, 2, 2), padding='same', name='MaxPool2d_4a_3x3')(x)
-
-        # Mixed 4b
-        branch_0 = self.conv3d_bath_norm(x, 192, 1, 1, 1, padding='same', name='Conv3d_4b_0a_1x1')
-
-        branch_1 = self.conv3d_bath_norm(x, 96, 1, 1, 1, padding='same', name='Conv3d_4b_1a_1x1')
-        branch_1 = self.conv3d_bath_norm(branch_1, 208, 3, 3, 3, padding='same', name='Conv3d_4b_1b_3x3')
-
-        branch_2 = self.conv3d_bath_norm(x, 16, 1, 1, 1, padding='same', name='Conv3d_4b_2a_1x1')
-        branch_2 = self.conv3d_bath_norm(branch_2, 48, 3, 3, 3, padding='same', name='Conv3d_4b_2b_3x3')
-
-        branch_3 = MaxPooling3D((3, 3, 3), strides=(1, 1, 1), padding='same', name='MaxPool2d_4b_3a_3x3')(x)
-        branch_3 = self.conv3d_bath_norm(branch_3, 64, 1, 1, 1, padding='same', name='Conv3d_4b_3b_1x1')
-
-        x = layers.concatenate([branch_0, branch_1, branch_2, branch_3], axis=channel_axis, name='Mixed_4b')
-
-        # Mixed 4c
-        branch_0 = self.conv3d_bath_norm(x, 160, 1, 1, 1, padding='same', name='Conv3d_4c_0a_1x1')
-
-        branch_1 = self.conv3d_bath_norm(x, 112, 1, 1, 1, padding='same', name='Conv3d_4c_1a_1x1')
-        branch_1 = self.conv3d_bath_norm(branch_1, 224, 3, 3, 3, padding='same', name='Conv3d_4c_1b_3x3')
-
-        branch_2 = self.conv3d_bath_norm(x, 24, 1, 1, 1, padding='same', name='Conv3d_4c_2a_1x1')
-        branch_2 = self.conv3d_bath_norm(branch_2, 64, 3, 3, 3, padding='same', name='Conv3d_4c_2b_3x3')
-
-        branch_3 = MaxPooling3D((3, 3, 3), strides=(1, 1, 1), padding='same', name='MaxPool2d_4c_3a_3x3')(x)
-        branch_3 = self.conv3d_bath_norm(branch_3, 64, 1, 1, 1, padding='same', name='Conv3d_4c_3b_1x1')
-
-        x = layers.concatenate([branch_0, branch_1, branch_2, branch_3], axis=channel_axis, name='Mixed_4c')
-
-        # Mixed 4d
-        branch_0 = self.conv3d_bath_norm(x, 128, 1, 1, 1, padding='same', name='Conv3d_4d_0a_1x1')
-
-        branch_1 = self.conv3d_bath_norm(x, 128, 1, 1, 1, padding='same', name='Conv3d_4d_1a_1x1')
-        branch_1 = self.conv3d_bath_norm(branch_1, 256, 3, 3, 3, padding='same', name='Conv3d_4d_1b_3x3')
-
-        branch_2 = self.conv3d_bath_norm(x, 24, 1, 1, 1, padding='same', name='Conv3d_4d_2a_1x1')
-        branch_2 = self.conv3d_bath_norm(branch_2, 64, 3, 3, 3, padding='same', name='Conv3d_4d_2b_3x3')
-
-        branch_3 = MaxPooling3D((3, 3, 3), strides=(1, 1, 1), padding='same', name='MaxPool2d_4d_3a_3x3')(x)
-        branch_3 = self.conv3d_bath_norm(branch_3, 64, 1, 1, 1, padding='same', name='Conv3d_4d_3b_1x1')
-
-        x = layers.concatenate([branch_0, branch_1, branch_2, branch_3], axis=channel_axis, name='Mixed_4d')
-
-        x = AveragePooling3D((2, 7, 7), strides=(1, 1, 1), padding='valid', name='global_avg_pool')(x)
-
-        x = Flatten()(x)
-        x = Dropout(0.5)(x)
-        # x = Dense(128, activation='relu')(x)
-        # x = Dropout(0.5)(x)
-        x = Dense(64, activation='relu')(x)
-        x = Dropout(0.5)(x)
-        x = Dense(32, activation='relu')(x)
-        x = Dropout(0.5)(x)
-        x = Dense(self.classes)(x)
-
-        inputs = img_input
-
-        # create model
-        model = Model(inputs, x, name='i3d_inception')
-        sgd = SGD(lr=0.0001, decay=1e-6, momentum=0.9, nesterov=True)
-        model.compile(loss=self.root_mean_squared_error, optimizer=sgd)
-
-        return model
 
     def create_model(self, img_input, optimizer=Adam(lr=1e-4)):
 
