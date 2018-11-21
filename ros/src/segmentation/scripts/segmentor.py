@@ -8,9 +8,9 @@
 # (c) Yongyang Nie 2018
 
 
-import semantic_segmentation.models.enet_naive_upsampling.model as enet
-import semantic_segmentation.utils as utils
-import semantic_segmentation.configs as configs
+import models.enet_naive_upsampling.model as enet
+import utils as utils
+import configs as configs
 import cv2
 import numpy as np
 from PIL import Image

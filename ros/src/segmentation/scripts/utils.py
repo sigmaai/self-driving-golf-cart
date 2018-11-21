@@ -5,16 +5,12 @@
 # ==============================================================================
 #
 
-import re
 import cv2
-import semantic_segmentation.configs as configs
-#import configs
+import configs
 import numpy as np
 import os
-import scipy.misc
-from glob import glob
 from collections import namedtuple
-import time
+
 
 
 Label = namedtuple('Label', [
@@ -237,7 +233,6 @@ def validation_generator(labels, batch_size):
             batch_masks[index] = gt_image
 
         yield batch_images, batch_masks
-
 
 
 def train_generator(ls, batch_size):

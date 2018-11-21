@@ -1,10 +1,14 @@
 #
+# Preproccesing script for the CityScape Dataset
+# Has bugs and not maintained.
+# Please refer to CityScape's github repo for
+# their data processing script.
 #
+# Neil Nie (c) 2018, All Rights Reserved
 #
 
 import os
 import csv
-
 
 def preprocess_deepdrive(data_dir, train=True):
 
