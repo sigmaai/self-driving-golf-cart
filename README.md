@@ -32,12 +32,11 @@ For the full documentation of the development process, please visit: [neilnie.co
 # Running the code
 1. Please download/clone the repository.
 2. Make sure you have all the [dependencies](./requirements.txt) installed. 
-3. Make sure that you have the [ROS](http://wiki.ros.org/ROS/Installation) installed on your computer.
-4. `cd YOUR_PROJECT_DIRECTORY`
+3. Make sure that you have the [ROS](http://wiki.ros.org/melodic/Installation/Ubuntu) installed on your computer.
+4. `cd PROJECT_DIRECTORY/ros`
 5. `catkin_make`
 6. `source devel/setup.bash`
-7. `roscore`
-8. `roslaunch driver drive.launch`
+7. `roslaunch driver drive.launch`
 
 <img src="./media/running.png" alt="image" width="480"/>
 
