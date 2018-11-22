@@ -26,12 +26,11 @@ All Rights Reserved.
     <!-- launch steering node -->
     <include file="$(find steering_control)/launch/steering_control.launch"/>
 
-    <!-- -->
+    <!-- start object detection -->
     <include file="$(find object_detection)/launch/object_detection.launch"/>
 
-    <!-- -->
+    <!-- start semantic segmentation -->
     <include file="$(find segmentation)/launch/segmentation.launch"/>
-
 
     <!-- open rviz launch -->
     <include file="$(find driver)/launch/display.launch"/>
