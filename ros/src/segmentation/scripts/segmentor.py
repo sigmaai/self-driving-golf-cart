@@ -16,16 +16,16 @@ import numpy as np
 from PIL import Image
 
 
-class Segmentor:
+class Segmentor():
 
-    def __init__(self, type):
+    def __init__(self, type, weight_path):
 
         if type == "ENET":
             self.model = enet.build(len(utils.labels), configs.img_height, configs.img_width)
         elif type == "ICNET":
             self.model = enet.build(len(utils.labels), configs.img_height, configs.img_width)
 
-        self.model.load_weights(configs.infer_model_path)
+        self.model.load_weights(weight_path)
         self.backgrounds = self.load_color_backgrounds()
 
     @staticmethod
@@ -57,12 +57,11 @@ class Segmentor:
         output = self.model.predict(np.array([image]))[0]
         if visualize:
             im_mask = self.convert_class_to_rgb(output)
+            viz = cv2.addWeighted(im_mask, 0.8, image, 0.8, 0)
+            viz = cv2.resize(viz, (640, 480))
+            return output, viz
         else:
-            im_mask = image
-
-        img_pred = cv2.addWeighted(im_mask, 0.8, image, 0.8, 0)
-        img_pred = cv2.resize(img_pred, (640, 480))
-        return output, img_pred
+            return output, None
 
     def convert_class_to_rgb(self, image_labels, threshold=0.05):
 

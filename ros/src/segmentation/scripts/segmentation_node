@@ -1,0 +1,100 @@
+#! /usr/bin/env python
+
+# MIT License. Must include author and license in your work.
+
+# Copyright (c) 2017-2018 Yongyang Nie
+
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+"""
+Run a YOLO_v2 style detection model test images.
+This ROS node uses the object detector class to run detection.
+"""
+
+from segmentor import Segmentor
+from PIL import Image
+import numpy as np
+import rospy
+from sensor_msgs.msg import Image
+from cv_bridge import CvBridge, CvBridgeError
+from segmentation.msg import SegmentationResult
+
+
+class ObjectDetectionNode:
+
+    def __init__(self):
+
+        rospy.init_node('segmentation_node')
+        rospy.Subscriber('/cv_camera_node/image_raw', Image, callback=self.image_update_callback, queue_size=5)
+
+        self.current_frame = None
+        self.bridge = CvBridge()
+
+        # Get ROS parameters
+        self.weight_path = rospy.get_param("/segmentation_node/weight_path")
+        self.visualize = rospy.get_param("/segmentation_node/visualization")
+        self.segmentor = Segmentor(type="ENET", weight_path=self.weight_path)
+
+        # Setup publishers
+        segmentation_image_pub = rospy.Publisher('/segmentation/visualization/', Image, queue_size=10)
+        segmentation_results_pub = rospy.Publisher('/segmentation/output', SegmentationResult, queue_size=10)
+        rate = rospy.Rate(15)
+
+        # Running ROS loop
+        rospy.loginfo("Semantic Segmentation Started")
+        rospy.loginfo("v1.0.0")
+        while not rospy.is_shutdown():
+            if self.current_frame is not None:
+                output, visualization = self.segmentor.semantic_segmentation(self.current_frame, visualize=self.visualize)
+                viz_msg = self.bridge.cv2_to_imgmsg(visualization, "bgr8")      # convert image to ROS msg type
+                segmentation_image_pub.publish(viz_msg)                         # publish the visualization image
+                msg = self.convert_results_to_message(output)                   # convert output to ROS msg type
+                segmentation_results_pub.publish(msg)                           # publish using publisher
+
+            rate.sleep()
+
+    def image_update_callback(self, data):
+
+        try:
+            cv_image = self.bridge.imgmsg_to_cv2(data, "bgr8")
+        except CvBridgeError as e:
+            raise e
+
+        self.current_frame = cv_image
+
+    def convert_results_to_message(self, segmentation_output):
+
+        msg = SegmentationResult()
+        msg.width = 640
+        msg.height = 360
+        msg.depth = segmentation_output.shape[2]
+        for i in range(msg.depth):
+            split = np.array(segmentation_output[:, :, i], dtype=np.uint8)  # must convert seg output to uint8
+            img_msg = self.bridge.cv2_to_imgmsg(split, "mono8")             # convert image to ROS msg type
+            msg.data.append(img_msg)
+
+        return msg
+
+
+if __name__ == "__main__":
+
+    try:
+        ObjectDetectionNode()
+    except rospy.ROSInterruptException:
+        pass

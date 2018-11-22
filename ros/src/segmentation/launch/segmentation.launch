@@ -1,0 +1,20 @@
+<!--
+##################################################
+Run the segmentation system through this launch
+file. You can find the parameters below.
+
+(c) Yongyang Nie, 2018
+All Rights Reserved.
+
+##################################################
+-->
+
+<launch>
+
+    <!--open up the camera -->
+	<node name="segmentation_node" pkg="segmentation" type="segmentation_node" output="screen">
+        <param name="visualization" value="1" type="bool"/>
+        <param name="weight_path" value="$(find segmentation)/scripts/weights/enet-c-v1-3.h5"/>
+    </node>
+
+</launch>

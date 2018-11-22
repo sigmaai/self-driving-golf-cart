@@ -16,7 +16,7 @@ All Rights Reserved.
 <launch>
 
 	<!--open up the camera -->
-	<node name="cv_camera_node" pkg="cv_camera" type="cv_camera_node" />
+	<include file="$(find cv_camera)/launch/start_camera.launch"/>
     
     <!-- setup the Arduino serial -->
     <node name="serial_node" pkg="rosserial_python" type="serial_node.py">
@@ -25,6 +25,13 @@ All Rights Reserved.
 
     <!-- launch steering node -->
     <include file="$(find steering_control)/launch/steering_control.launch"/>
+
+    <!-- -->
+    <include file="$(find object_detection)/launch/object_detection.launch"/>
+
+    <!-- -->
+    <include file="$(find segmentation)/launch/segmentation.launch"/>
+
 
     <!-- open rviz launch -->
     <include file="$(find driver)/launch/display.launch"/>
