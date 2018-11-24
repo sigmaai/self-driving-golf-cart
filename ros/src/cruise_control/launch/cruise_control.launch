@@ -3,12 +3,14 @@
     <!-- setup the Arduino serial -->
 
     <node name="cruise_control_node" type="cruise_control_node" pkg="cruise_control" output="screen">
-    	<param name="model_path" value="$(find cruise_control)/scripts/weights/i3d_speed_comma_rgb_64_3.h5" />
+    	<param name="model_path" value="$(find cruise_control)/scripts/weights/i3d_accel_rgb_64_latest.h5" />
     	<param name="length" value="64" />
     	<param name="scale_factor" value='1' />
+        <param name="gpu_frac" value="0.33"/>
         <param name="simulation" value="0" type="bool"/> <!-- Please Make Sure This is Correct! -->
   	</node>
 
+    <node name="cruise_control_visualization" type="visualization.py" pkg="cruise_control" output="screen"/>
     
 </launch>
 

@@ -79,24 +79,23 @@ before_install:
   - rosdep update
   - ls
 
-# before_script:
-#   # source dependencies: install using wstool.
-#   - cd $CI_SOURCE_PATH/ros
-#   # package depdencies: install using rosdep.
-#   - rosdep install -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO
+before_script:
+  # source dependencies: install using wstool.
+  - cd ros
+  # package depdencies: install using rosdep.
+  - rosdep install -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO
 
-# # Compile and test (mark the build as failed if any step fails). If the
-# # CATKIN_OPTIONS file exists, use it as an argument to catkin_make, for example
-# # to blacklist certain packages.
-# #
-# # NOTE on testing: `catkin_make run_tests` will show the output of the tests
-# # (gtest, nosetest, etc..) but always returns 0 (success) even if a test
-# # fails. Running `catkin_test_results` aggregates all the results and returns
-# # non-zero when a test fails (which notifies Travis the build failed).
-# script:
-#   - cd $CI_SOURCE_PATH/ros
-#   - catkin_make
-#   # Run the tests, ensuring the path is set correctly.
-#   - source devel/setup.bash
+# Compile and test (mark the build as failed if any step fails). If the
+# CATKIN_OPTIONS file exists, use it as an argument to catkin_make, for example
+# to blacklist certain packages.
+#
+# NOTE on testing: `catkin_make run_tests` will show the output of the tests
+# (gtest, nosetest, etc..) but always returns 0 (success) even if a test
+# fails. Running `catkin_test_results` aggregates all the results and returns
+# non-zero when a test fails (which notifies Travis the build failed).
+script:
+  - cd ros
+  - catkin_make
+  - source devel/setup.bash
 
   

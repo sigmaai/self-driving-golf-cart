@@ -12,7 +12,8 @@ import rospy
 from sensor_msgs.msg import Image
 from std_msgs.msg import Float32
 from cv_bridge import CvBridge, CvBridgeError
-
+import tensorflow as tf
+from keras.backend.tensorflow_backend import set_session
 
 class CruiseControlNode:
 
@@ -35,6 +36,12 @@ class CruiseControlNode:
         self.scale_factor = rospy.get_param("/cruise_control_node/scale_factor")
         self.input_length = rospy.get_param("/cruise_control_node/length")
         input_size = (224, 224)
+
+        # Limit tensorflow GPU memory useage.
+        config = tf.ConfigProto()
+        config.gpu_options.per_process_gpu_memory_fraction = rospy.get_param("/cruise_control_node/gpu_frac")
+        set_session(tf.Session(config=config))
+
         self.predictor = SpeedPredictor(weight_path=self.model_path,
                                         model_type='rgb',
                                         input_length=self.input_length,

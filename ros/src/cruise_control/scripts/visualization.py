@@ -1,164 +1,96 @@
-'''
-Dataset visualization tool
-Original By: Comma.ai and Chris Gundling
-Revised and used by Neil Nie
-'''
+#!/usr/bin/python
+#
+# Results video generator Udacity Challenge 2
+# Original By: Comma.ai and Chris Gundling
+# Revised and used by Neil Nie
+#
 
-import matplotlib.backends.backend_agg as agg
 import numpy as np
+from PIL import Image as PILImage
+from PIL import ImageFont
+from PIL import ImageDraw
 import cv2
-import pygame
-import os
-import pylab
-from i3d import Inception3D
-import helper
-import configs
-from termcolor import colored
 
-pygame.init()
-size = (640, 640)
-pygame.display.set_caption("speed prediction viewer")
-screen = pygame.display.set_mode(size, pygame.DOUBLEBUF)
-screen.set_alpha(None)
-
-camera_surface = pygame.surface.Surface((640, 480), 0, 24).convert()
-clock = pygame.time.Clock()
-
-PI_RAD = (180 / np.pi)
-white = (255, 255, 255)
-
-# Create second screen with matplotlibs
-fig = pylab.figure(figsize=[6.4, 1.6], dpi=100)
-ax = fig.gca()
-ax.tick_params(axis='x', labelsize=8)
-ax.tick_params(axis='y', labelsize=8)
-line1, = ax.plot([], [], 'b.-', label='Human')
-A = []
-ax.legend(loc='upper left', fontsize=8)
-
-myFont = pygame.font.SysFont("monospace", 18)
-randNumLabel = myFont.render('Human Driving Speed:', 1, white)
+# ROS
+import rospy
+from sensor_msgs.msg import Image
+from std_msgs.msg import Float32
+from cv_bridge import CvBridge, CvBridgeError
 
 
-def test_loop(model_path, model_type):
+class Visualization():
 
-    '''
-    for visualizing the model with the comma AI
-    test dataset. The ds doesn't contain training labels.
+    def apply_visualization(self, image, accel):
 
-    :param model_path: the path of the trained Keras model
-    :param model_type: the type of model, rgb, flow or rgb-flow
-    :return: None
-    '''
+        background = PILImage.fromarray(np.uint8(image))
+        if accel < -1:
+            sw = PILImage.open("/home/neil/Workspace/self-driving-golf-cart/ros/src/cruise_control/scripts/resources/stop.png")
+            sw = sw.resize((80, 80), PILImage.ANTIALIAS)
+            background.paste(sw, (10, 38), sw)
 
-    print(colored('Preparing', 'blue'))
+        draw = ImageDraw.Draw(background)
+        font = ImageFont.truetype("/home/neil/Workspace/self-driving-golf-cart/ros/src/steering_control/scripts/resources/FiraMono-Medium.otf", 20)
+        draw.text((40, 420), str(round(accel, 3)), (255, 255, 255), font=font)
+        draw.text((10, 10), "Cruise Control Running... v1.0.0", (255, 255, 255), font=font)
+        text = ""
+        if accel < 0:
+            text = 'Slow'
+        elif accel > 0:
+            text = 'Speed Up'
+        draw.text((40, 380), text, (255, 255, 255), font=font)
+        steering_img = cv2.resize(np.array(background), (640, 480))
+        return steering_img
 
-    model = Inception3D(weights_path=model_path, input_shape=(configs.LENGTH, configs.IMG_HEIGHT, configs.IMG_WIDTH, configs.CHANNELS))
+    def image_update_callback(self, data):
 
-    # read the steering labels and image path
-    files = os.listdir(configs.TEST_DIR)
+        try:
+            cv_image = self.bridge.imgmsg_to_cv2(data, "bgr8")
+        except CvBridgeError as e:
+            raise e
 
-    inputs = []
-    starting_index = 10000
+        self.current_frame = cv_image
 
-    start = input("prompt")
-    if start is not 'start':
-        exit(0)
+    def accel_cmds_callback(self, data):
 
-    if model_type == 'rgb':
+        self.accel_cmds = data.data
 
-        for i in range(starting_index, starting_index + configs.LENGTH):
-            img = helper.load_image(configs.TEST_DIR + "frame" + str(i) + ".jpg")
-            inputs.append(img)
+    def __init__(self):
 
-        print(colored('Started', 'blue'))
+        rospy.init_node('cruise_control_visualization_node')
 
-        # Run through all images
-        for i in range(starting_index + configs.LENGTH + 1, len(files) - 1):
+        self.current_frame = None
+        self.bridge = CvBridge()
+        self.accel_cmds = 0.0
 
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    break
+        # Please note that the visualization node listens to either the raw
+        # camera input or the simulated camera input. Please change this
+        # setting in the launch file (/launch/cruise_control.launch)
+        # or specify this parameter in your command line input.
+        simulation = rospy.get_param("/cruise_control_node/simulation")
+        if (simulation):
+            rospy.logwarn("You are in simulation mode. If this is unintentional, please quite the program immediately")
+            rospy.Subscriber('/cv_camera_node/image_sim', Image, callback=self.image_update_callback, queue_size=8)
+        else:
+            rospy.Subscriber('/cv_camera_node/image_raw', Image, callback=self.image_update_callback, queue_size=8)
 
-            img = helper.load_image(configs.TEST_DIR + "frame" + str(i) + ".jpg", resize=False)
-            in_frame = cv2.resize(img, (configs.IMG_WIDTH, configs.IMG_HEIGHT))
-            inputs.pop(0)
-            inputs.append(in_frame)
-            input_array = np.array([input])
-            prediction = model.model.predict(input_array)[0][0]
+        rospy.Subscriber('/vehicle/dbw/cruise_cmds', Float32, callback=self.accel_cmds_callback)
 
-            pygame_loop(prediction=prediction, img=img)
+        visual_pub = rospy.Publisher('/visual/cruise_control/accel_img', Image, queue_size=5)
+        rate = rospy.Rate(15)
 
-    elif model_type == 'flow':
+        while not rospy.is_shutdown():
 
-        previous = helper.load_image(configs.TEST_DIR + "frame" + str(starting_index) + ".jpg")
+            if self.current_frame is not None:
+                image = self.apply_visualization(image=self.current_frame, accel=self.accel_cmds)
+                img_msg = self.bridge.cv2_to_imgmsg(image, "bgr8")
+                visual_pub.publish(img_msg)
 
-        for i in range(starting_index, starting_index + configs.LENGTH):
-
-            img = helper.load_image(configs.TEST_DIR + "frame" + str(i) + ".jpg")
-            in_frame = cv2.resize(img, (configs.IMG_WIDTH, configs.IMG_HEIGHT))
-            flow = helper.optical_flow(previous=previous, current=in_frame)
-            inputs.append(flow)
-
-        previous = helper.load_image(configs.TEST_DIR + "frame" + str(starting_index + configs.LENGTH) + ".jpg")
-
-        for i in range(starting_index + configs.LENGTH + 1, len(files) - 1):
-
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    break
-
-            img = helper.load_image(configs.TEST_DIR + "frame" + str(i) + ".jpg", resize=False)
-            in_frame = cv2.resize(img, (configs.IMG_WIDTH, configs.IMG_HEIGHT))
-            flow = helper.optical_flow(previous, in_frame)
-            inputs.pop(0)
-            inputs.append(flow)
-            input_array = np.array([np.asarray(inputs)])
-            prediction = model.model.predict(input_array)[0][0]
-
-            pygame_loop(prediction=prediction, img=img)
-
-    else:
-        raise Exception('Sorry, the model type is not recognized')
-
-
-def pygame_loop(prediction, img):
-
-    if prediction <= 10:
-        speed_label = myFont.render('Slow', 1, white)
-    elif prediction > 10 and prediction <= 25:
-        speed_label = myFont.render('Medium', 1, white)
-    elif prediction > 25 and prediction <= 40:
-        speed_label = myFont.render('Fast', 1, white)
-    else:
-        speed_label = myFont.render('Very Fast', 1, white)
-
-    A.append(prediction)
-    line1.set_ydata(A)
-    line1.set_xdata(range(len(A)))
-    ax.relim()
-    ax.autoscale_view()
-
-    canvas = agg.FigureCanvasAgg(fig)
-    canvas.draw()
-    renderer = canvas.get_renderer()
-    raw_data = renderer.tostring_rgb()
-    size = canvas.get_width_height()
-    surf = pygame.image.fromstring(raw_data, size, "RGB")
-    screen.blit(surf, (0, 480))
-
-    # draw on
-    pygame.surfarray.blit_array(camera_surface, img.swapaxes(0, 1))
-    screen.blit(camera_surface, (0, 0))
-
-    diceDisplay = myFont.render(str(prediction), 1, white)
-    screen.blit(randNumLabel, (50, 420))
-    screen.blit(speed_label, (300, 420))
-    screen.blit(diceDisplay, (50, 450))
-    clock.tick(60)
-    pygame.display.flip()
+            rate.sleep()
 
 
 if __name__ == "__main__":
 
-    test_loop(model_path='i3d_speed_comma_rgb_64_3.h5', model_type='rgb')
+    try:
+        Visualization()
+    except rospy.ROSInterruptException:
+        pass
