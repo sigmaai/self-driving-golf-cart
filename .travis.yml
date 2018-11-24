@@ -39,7 +39,7 @@
 ################################################################################
 
 # Use ubuntu trusty (14.04) with sudo privileges.
-dist: trusty
+dist: xenial
 sudo: required
 language:
   - generic
@@ -68,8 +68,8 @@ before_install:
   - sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
   - sudo apt-get update -qq
   - sudo apt-get install dpkg
-  - sudo apt-get install -y python-catkin-pkg python-rosdep python-wstool ros-$ROS_DISTRO-catkin
-  - source /opt/ros/$ROS_DISTRO/setup.bash
+  - sudo apt-get install ros-melodic-desktop-full
+  - sudo apt-get install -y python-catkin-pkg python-rosdep python-wstool
   # Prepare rosdep to install dependencies.
   - sudo rosdep init
   - rosdep update

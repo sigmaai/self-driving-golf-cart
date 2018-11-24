@@ -1,16 +1,14 @@
 <launch>
-
-	<!--open up the camera -->
-	<node name="cv_camera_node" pkg="cv_camera" type="cv_camera_node" />
     
     <!-- setup the Arduino serial -->
-    <node name="serial_node" pkg="rosserial_python" type="serial_node.py">
-    	<param name="port" value="/dev/ttyACM0" />
-    </node>
 
-    <node name="logger" type="logger" pkg="steering_logger">
-    	<param name="logger_path" value="/home/neil/Desktop/data" />
+    <node name="cruise_control_node" type="cruise_control_node" pkg="cruise_control" output="screen">
+    	<param name="model_path" value="$(find cruise_control)/scripts/weights/i3d_speed_comma_rgb_64_3.h5" />
+    	<param name="length" value="64" />
+    	<param name="scale_factor" value='1' />
+        <param name="simulation" value="0" type="bool"/> <!-- Please Make Sure This is Correct! -->
   	</node>
+
     
 </launch>
 
