@@ -3,7 +3,7 @@
 </center>
 
 [![Documentation Status](https://readthedocs.org/projects/self-driving-golf-cart/badge/?version=latest)](https://self-driving-golf-cart.readthedocs.io/en/latest/?badge=latest)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](paypal.me/YongyangNie)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/YongyangNie)
 [![Build Status](https://travis-ci.org/sigmaai/self-driving-golf-cart.svg?branch=master)](https://travis-ci.org/sigmaai/self-driving-golf-cart)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
@@ -27,7 +27,7 @@ Welcome! This is an open source self-driving development platform aimed for rapi
 
 Path planning is coming soon...
 
-For the full documentation of the development process, please visit: [neilnie.com](neilnie.com)
+For the full documentation of the development process, please visit: [neilnie.com](https://neilnie.com)
 
 # Running the code
 1. Please download/clone the repository.
