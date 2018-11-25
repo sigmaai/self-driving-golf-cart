@@ -81,9 +81,12 @@ before_install:
 
 before_script:
   # source dependencies: install using wstool.
-  - cd ros
+  - sudo rm -rf /home/travis/build/sigmaai/self-driving-golf-cart/ros/build
+  - sudo rm -rf /home/travis/build/sigmaai/self-driving-golf-cart/ros/devel
+
   # package depdencies: install using rosdep.
   - rosdep install -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO
+  - cd /home/travis/build/sigmaai/self-driving-golf-cart/ros
 
 # Compile and test (mark the build as failed if any step fails). If the
 # CATKIN_OPTIONS file exists, use it as an argument to catkin_make, for example
@@ -94,7 +97,6 @@ before_script:
 # fails. Running `catkin_test_results` aggregates all the results and returns
 # non-zero when a test fails (which notifies Travis the build failed).
 script:
-  - cd ros
   - catkin_make
   - source devel/setup.bash
 
