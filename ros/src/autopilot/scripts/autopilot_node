@@ -1,0 +1,81 @@
+#!/usr/bin/python
+#
+# ROS node for steering controller
+# publishes /dbw/steering_angle as Float64
+#
+# Developed & maintained by Neil Nie
+# (c) Yongyang Nie, 2018, All rights Reserved
+#
+
+from pilot import Pilot
+import rospy
+from sensor_msgs.msg import Image
+from std_msgs.msg import Float32
+from cv_bridge import CvBridge, CvBridgeError
+import tensorflow as tf
+from keras.backend.tensorflow_backend import set_session
+
+class AutoPilotNode:
+
+    def __init__(self):
+
+        rospy.init_node('autopilot_node')
+
+        self.current_frame = None
+        self.bridge = CvBridge()
+
+        simulation = rospy.get_param("/autopilot_node/simulation")
+        if (simulation):
+            rospy.logwarn("You are in simulation mode. If this is unintentional, please quite the program immediately")
+            rospy.Subscriber('/cv_camera_node/image_sim', Image, callback=self.image_update_callback, queue_size=8)
+        else:
+            rospy.Subscriber('/cv_camera_node/image_raw', Image, callback=self.image_update_callback, queue_size=8)
+
+        self.model_path = rospy.get_param("/autopilot_node/model_path")
+        self.angle_scale = rospy.get_param("/autopilot_node/angle_scale")
+        self.accel_scale = rospy.get_param("/autopilot_node/accel_scale")
+        self.input_length = rospy.get_param("/autopilot_node/length")
+
+        # Limit tensorflow GPU memory useage.
+        config = tf.ConfigProto()
+        config.gpu_options.per_process_gpu_memory_fraction = rospy.get_param("/autopilot_node/gpu_frac")
+        set_session(tf.Session(config=config))
+
+        self.predictor = Pilot(weight_path=self.model_path,
+                               model_type='rgb',
+                               input_length=self.input_length)
+
+        rospy.loginfo("Deep Learning Steering Prediction System Initialized")
+
+        steering_pub = rospy.Publisher('/vehicle/dbw/steering_cmds/', Float32, queue_size=5)
+        accel_pub = rospy.Publisher('/vehicle/dbw/cruise_cmds/', Float32, queue_size=5)
+        rate = rospy.Rate(15)
+
+        while not rospy.is_shutdown():
+            if self.current_frame is not None:
+                commands = self.predictor.predict(self.current_frame)
+                angle = commands[0] * self.angle_scale
+                accel = commands[1] * self.accel_scale
+                steering_pub.publish(angle)
+                accel_pub.publish(accel)
+            else:
+                steering_pub.publish(0) # Default steering command is 0 == lock steering
+                accel_pub.publish(-1)   # Default accel command is -1 == apply brakes
+            rate.sleep()
+
+    def image_update_callback(self, data):
+
+        try:
+            cv_image = self.bridge.imgmsg_to_cv2(data, "bgr8")
+        except CvBridgeError as e:
+            raise e
+
+        self.current_frame = cv_image
+
+
+if __name__ == "__main__":
+
+    try:
+        AutoPilotNode()
+    except rospy.ROSInterruptException:
+        pass

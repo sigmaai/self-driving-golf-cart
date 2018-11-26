@@ -1399,7 +1399,7 @@ rosserial_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 rosserial_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f cruise_control/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/build.make cruise_control/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f autopilot/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/build.make autopilot/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/build
 .PHONY : rosserial_msgs_generate_messages_cpp/fast
 
 #=============================================================================
@@ -1412,7 +1412,7 @@ rosserial_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 rosserial_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f cruise_control/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/build.make cruise_control/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f autopilot/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/build.make autopilot/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/build
 .PHONY : rosserial_msgs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -1425,7 +1425,7 @@ rosserial_msgs_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 rosserial_msgs_generate_messages_eus/fast:
-	$(MAKE) -f cruise_control/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/build.make cruise_control/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/build
+	$(MAKE) -f autopilot/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/build.make autopilot/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/build
 .PHONY : rosserial_msgs_generate_messages_eus/fast
 
 #=============================================================================
@@ -1438,7 +1438,7 @@ rosserial_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 rosserial_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f cruise_control/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/build.make cruise_control/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f autopilot/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/build.make autopilot/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/build
 .PHONY : rosserial_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -1451,7 +1451,7 @@ rosserial_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 rosserial_msgs_generate_messages_py/fast:
-	$(MAKE) -f cruise_control/CMakeFiles/rosserial_msgs_generate_messages_py.dir/build.make cruise_control/CMakeFiles/rosserial_msgs_generate_messages_py.dir/build
+	$(MAKE) -f autopilot/CMakeFiles/rosserial_msgs_generate_messages_py.dir/build.make autopilot/CMakeFiles/rosserial_msgs_generate_messages_py.dir/build
 .PHONY : rosserial_msgs_generate_messages_py/fast
 
 #=============================================================================

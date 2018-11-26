@@ -1,8 +1,0 @@
-prefix=/usr/local
-
-Name: data_logger
-Description: Description of data_logger
-Version: 0.0.0
-Cflags: 
-Libs: -L/usr/local/lib 
-Requires: 

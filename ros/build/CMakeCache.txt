@@ -482,6 +482,12 @@ actionlib_DIR:PATH=/opt/ros/melodic/share/actionlib/cmake
 //The directory containing a CMake configuration file for actionlib_msgs.
 actionlib_msgs_DIR:PATH=/opt/ros/melodic/share/actionlib_msgs/cmake
 
+//Value Computed by CMake
+autopilot_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/build/autopilot
+
+//Value Computed by CMake
+autopilot_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/autopilot
+
 //The directory containing a CMake configuration file for bond.
 bond_DIR:PATH=/opt/ros/melodic/share/bond/cmake
 
@@ -502,12 +508,6 @@ class_loader_DIR:PATH=/opt/ros/melodic/share/class_loader/cmake
 
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/melodic/share/cpp_common/cmake
-
-//Value Computed by CMake
-cruise_control_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/build/cruise_control
-
-//Value Computed by CMake
-cruise_control_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cruise_control
 
 //The directory containing a CMake configuration file for cv_bridge.
 cv_bridge_DIR:PATH=/opt/ros/melodic/share/cv_bridge/cmake
@@ -741,12 +741,6 @@ smclib_DIR:PATH=/opt/ros/melodic/share/smclib/cmake
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/melodic/share/std_msgs/cmake
 
-//Value Computed by CMake
-steering_control_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/build/steering_control
-
-//Value Computed by CMake
-steering_control_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/steering_control
-
 //The directory containing a CMake configuration file for tf2.
 tf2_DIR:PATH=/opt/ros/melodic/share/tf2/cmake
 
@@ -912,7 +906,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=17
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=16
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

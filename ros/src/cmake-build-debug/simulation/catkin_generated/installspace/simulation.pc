@@ -1,8 +1,0 @@
-prefix=/usr/local
-
-Name: simulation
-Description: Description of simulation
-Version: 0.0.1
-Cflags: 
-Libs: -L/usr/local/lib 
-Requires: 
