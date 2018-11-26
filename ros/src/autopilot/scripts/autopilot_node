@@ -38,7 +38,7 @@ class AutoPilotNode:
 
         # Limit tensorflow GPU memory useage.
         config = tf.ConfigProto()
-        config.gpu_options.per_process_gpu_memory_fraction = rospy.get_param("/cruise_control_node/gpu_frac")
+        config.gpu_options.per_process_gpu_memory_fraction = rospy.get_param("/autopilot_node/gpu_frac")
         set_session(tf.Session(config=config))
 
         self.predictor = Pilot(weight_path=self.model_path,

@@ -1,8 +1,0 @@
-prefix=/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/devel
-
-Name: segmentation
-Description: Description of segmentation
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/yongyang/Workspace/self-driving-golf-cart/src/cmake-build-debug/devel/lib 
-Requires: 

@@ -27,7 +27,6 @@ from keras.layers import Dropout
 from keras.layers import Reshape
 from keras.optimizers import Adam
 from keras.layers import Flatten
-from keras.optimizers import SGD
 from keras.callbacks import TensorBoard
 import datetime
 from keras import backend as K
@@ -36,7 +35,8 @@ import helper
 
 class Inception3D:
 
-    def __init__(self, weights_path=None, input_shape=None, dropout_prob=0.0, classes=1):
+    def __init__(self, weights_path=None, input_shape=None,
+                 dropout_prob=0.0, classes=2):
 
         """Instantiates the Inflated 3D Inception v1 architecture.
 
@@ -329,5 +329,4 @@ class Inception3D:
             x = Activation('relu', name=name)(x)
 
         return x
-
 

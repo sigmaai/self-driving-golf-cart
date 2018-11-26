@@ -43,11 +43,12 @@ class Pilot:
             self.inputs.append(image)
 
         if len(self.inputs) == configs.LENGTH:
-            prediction = self.model.model.predict(np.array([self.inputs]))[0][0]
+            prediction = self.model.model.predict(np.array([self.inputs]))[0]
             self.inputs.pop(0)
+
             return prediction
 
         if len(self.inputs) > configs.LENGTH:
             raise ValueError("Input length can't be longer than network input length")
 
-        return 0.0
+        return [0.0, -1.0]
