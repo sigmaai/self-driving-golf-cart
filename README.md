@@ -29,35 +29,37 @@ Path planning is coming soon...
 
 For the full documentation of the development process, please visit: [neilnie.com](https://neilnie.com)
 
-# Running the code
-1. Please download/clone the repository.
-2. Make sure you have all the [dependencies](./requirements.txt) installed. 
+# Try it out
+1. Download/clone the repository.
+2. Make sure you have all the [dependencies](./ros/requirements.txt) installed. 
 3. Make sure that you have the [ROS](http://wiki.ros.org/melodic/Installation/Ubuntu) installed on your computer.
 4. `cd PROJECT_DIRECTORY/ros`
 5. `catkin_make`
 6. `source devel/setup.bash`
 7. `roslaunch driver drive.launch`
 
+You should see this screen pop up. 
+
 <img src="./media/running.png" alt="image" width="480"/>
 
 Bon Voyage 😀
 
 # Simulation
-Building a self-driving car is hard. Not everyone has access to expensive hardware. If you want to run the code inside the CARLA self-driving simulator, please refer to this [documentation](./src/simulation/README.md). The ROS system in this project can run on the CARLA simulator. 
+Building a self-driving car is hard. Not everyone has access to expensive hardware. If you want to run the code inside the CARLA self-driving simulator, please refer to this [documentation](./ros/src/simulation/README.md). The ROS system in this project can run on the CARLA simulator. 
 
 <img src="./media/simulator.png" alt="Drawing" width="480"/>
 
 # ROS
-This project is being developed using ROS. The launch files will launch the neccesary nodes as well as rviz for visualization. For more information on ROS, nodes, topics and others please refer to the [README](./src/README.md) in the `./src` directory. 
+This project is being developed using ROS. The launch files will launch the neccesary nodes as well as rviz for visualization. For more information on ROS, nodes, topics and others please refer to the [README](./ros/src/README.md) in the `./src` directory. 
 
-# Deep Learning for Autonomous Steering
+# The Autopilot System
+TAS, found here in the [autopilot node](./ros/src/autopilot), uses deep learning to predict the steering commands and acceleration commands for the vehicle, only using data collected by the front facing camera. 
+## Behavioral cloning with 3D ConvNets
 
 ### Motives
-In 1989, ALVINN (the self-driving truck) made by Dr. Dean Pomerleau and his team, drove around the Carnegie Mellon campus. According to Pomerleau, The vehicle was powered by a CPU slower than the Apple Watch. The car used a fully connected neural network to predict the steering angle of the car in real time. Fast forward twenty years, NVIDIA proposed a novel method that combines Pomerleau's idea with the modern GPU, giving NVIDIA's car the capability to accurately perform real-time end to end steering prediction. Around the same time, Udacity held a challenge that asked researchers to create the best end to end steering prediction model. This project is deeply inspired by that competition, and the goal is to further the work in behavioral cloning for self-driving vehicles. 
+Several years ago, NVIDIA proposed a novel deep learning approach allowed their car to accurately perform real-time end-to-end steering command prediction. Around the same time, Udacity held a challenge that asked researchers to create the best end-to-end steering prediction model. This component is inspired by the competition, and the goal is to further the work in behavioral cloning for self-driving vehicles. 
 
-NVIDIA's paper used a convolutional neural network with a single frame input. I believe that, even though this architecture yielded good results, the single frame CNN doesn't provide any temporal information which is critical in self-driving. This is the motive behind choosing the i3d architecture, which is rich in spacial-temporal information.
-
-<!--In fact, the winner of the Udacity challenge (team komanda) deployed a Convolutional LSTM architecture originally used for video classification and weather forecasting. -->
+NVIDIA's paper used a convolutional neural network with a single frame input. I believe that the single-frame-input CNN doesn't provide any temporal information which is critical in self-driving. This is the motive behind choosing the i3d architecture, which is rich in spacial-temporal information.
 
 ### Model
 The input of the network is a 3d convolutional block, with the shape of `n * weight * height * 3`. `n` is the length of the input sequence. Furthermore, the network also uses nine inception modules. The output layers are modified to accommodate for this regression problem. A flatten layer and a dense layer are added to the back of the network. 
@@ -68,9 +70,7 @@ Here is a video demo of deep learning model running on the autonomous golf cart.
 
 [![IMAGE ALT TEXT HERE](https://i.ytimg.com/vi/4bZ40W4BGoE/hqdefault.jpg)](https://www.youtube.com/watch?v=CcUXtViFQeU&t=5s)
 
-# Autonomous Cruise Control System (ACCS)
-
-#### Semantic Segmentation
+## Semantic Segmentation
 
 <img src="./media/seg.png" alt="Drawing" width="480"/>
 
@@ -119,7 +119,7 @@ For the second phase of the development process, we will focus on making the sys
 We are keeping track of all our progress here [CHECKLIST](./CHECKLIST.md). 
 
 # Contact / Info
-If you are interested in the detailed development process of this project, you can visit Neil's blog at [neilnie.com](neilnie.com) to find out more about it. Neil will make sure to keep you posted about all of the latest development on the club.
+If you are interested in the detailed development process of this project, you can visit Neil's blog at [neilnie.com](https://neilnie.com) to find out more about it. Neil will make sure to keep you posted about all of the latest development on the club.
 
 **Developers:**
 

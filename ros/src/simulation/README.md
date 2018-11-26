@@ -1,13 +1,10 @@
 
-# Ros bridge for Carla simulator
+# ROS bridge for Carla simulator
 
 This ros package aims at providing a simple ros bridge for carla simulator.
 
 ![rviz setup](./assets/rviz_carla_default.png "rviz")
 ![depthcloud](./assets/depth_cloud_and_lidar.png "depthcloud")
-
-![short video](https://youtu.be/S_NoN2GBtdY)
-
 
 # Features
 
@@ -26,7 +23,7 @@ This ros package aims at providing a simple ros bridge for carla simulator.
 
 # Setup
 
-## Create a catkin workspace and install carla_ros_bridge package
+## Create a catkin workspace and install "carla ros bridge" package
 
 ### Create the catkin workspace:
 

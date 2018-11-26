@@ -81,9 +81,14 @@ before_install:
 
 before_script:
   # source dependencies: install using wstool.
-  - cd /home/travis/build/sigmaai/self-driving-golf-cart/ros
+  - cd ros
   - sudo rm -rf /home/travis/build/sigmaai/self-driving-golf-cart/ros/build
   - sudo rm -rf /home/travis/build/sigmaai/self-driving-golf-cart/ros/devel
+  - cd src
+  - wstool init
+  - if [[ -f $ROSINSTALL_FILE ]] ; then wstool merge $ROSINSTALL_FILE ; fi
+  - wstool up
+  - cd home/travis/build/sigmaai/self-driving-golf-cart/ros/
   # package depdencies: install using rosdep.
   - rosdep install -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO
   
