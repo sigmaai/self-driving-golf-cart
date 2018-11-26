@@ -3364,184 +3364,184 @@ clean: sensors/cv_camera/CMakeFiles/clean_test_results_cv_camera.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory cruise_control
+# Directory level rules for directory autopilot
 
 # Convenience name for "all" pass in the directory.
-cruise_control/all:
+autopilot/all:
 
-.PHONY : cruise_control/all
+.PHONY : autopilot/all
 
 # Convenience name for "clean" pass in the directory.
-cruise_control/clean: cruise_control/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/clean
-cruise_control/clean: cruise_control/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/clean
-cruise_control/clean: cruise_control/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/clean
-cruise_control/clean: cruise_control/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/clean
-cruise_control/clean: cruise_control/CMakeFiles/rosserial_msgs_generate_messages_py.dir/clean
+autopilot/clean: autopilot/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/clean
+autopilot/clean: autopilot/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/clean
+autopilot/clean: autopilot/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/clean
+autopilot/clean: autopilot/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/clean
+autopilot/clean: autopilot/CMakeFiles/rosserial_msgs_generate_messages_py.dir/clean
 
-.PHONY : cruise_control/clean
+.PHONY : autopilot/clean
 
 # Convenience name for "preinstall" pass in the directory.
-cruise_control/preinstall:
+autopilot/preinstall:
 
-.PHONY : cruise_control/preinstall
+.PHONY : autopilot/preinstall
 
 #=============================================================================
-# Target rules for target cruise_control/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir
+# Target rules for target autopilot/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir
 
 # All Build rule for target.
-cruise_control/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all:
-	$(MAKE) -f cruise_control/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/build.make cruise_control/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/depend
-	$(MAKE) -f cruise_control/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/build.make cruise_control/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/build
+autopilot/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f autopilot/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/build.make autopilot/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f autopilot/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/build.make autopilot/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/build/CMakeFiles --progress-num= "Built target rosserial_msgs_generate_messages_cpp"
-.PHONY : cruise_control/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all
+.PHONY : autopilot/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
-cruise_control/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+autopilot/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 cruise_control/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 autopilot/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/build/CMakeFiles 0
-.PHONY : cruise_control/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/rule
+.PHONY : autopilot/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-rosserial_msgs_generate_messages_cpp: cruise_control/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/rule
+rosserial_msgs_generate_messages_cpp: autopilot/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/rule
 
 .PHONY : rosserial_msgs_generate_messages_cpp
 
 # clean rule for target.
-cruise_control/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/clean:
-	$(MAKE) -f cruise_control/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/build.make cruise_control/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/clean
-.PHONY : cruise_control/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/clean
+autopilot/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f autopilot/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/build.make autopilot/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/clean
+.PHONY : autopilot/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/clean
 
 # clean rule for target.
-clean: cruise_control/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/clean
+clean: autopilot/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target cruise_control/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir
+# Target rules for target autopilot/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir
 
 # All Build rule for target.
-cruise_control/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/all:
-	$(MAKE) -f cruise_control/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/build.make cruise_control/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/depend
-	$(MAKE) -f cruise_control/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/build.make cruise_control/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/build
+autopilot/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) -f autopilot/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/build.make autopilot/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) -f autopilot/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/build.make autopilot/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/build/CMakeFiles --progress-num= "Built target rosserial_msgs_generate_messages_lisp"
-.PHONY : cruise_control/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/all
+.PHONY : autopilot/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
-cruise_control/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+autopilot/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 cruise_control/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 autopilot/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/build/CMakeFiles 0
-.PHONY : cruise_control/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/rule
+.PHONY : autopilot/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-rosserial_msgs_generate_messages_lisp: cruise_control/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/rule
+rosserial_msgs_generate_messages_lisp: autopilot/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/rule
 
 .PHONY : rosserial_msgs_generate_messages_lisp
 
 # clean rule for target.
-cruise_control/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/clean:
-	$(MAKE) -f cruise_control/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/build.make cruise_control/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/clean
-.PHONY : cruise_control/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/clean
+autopilot/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f autopilot/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/build.make autopilot/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/clean
+.PHONY : autopilot/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/clean
 
 # clean rule for target.
-clean: cruise_control/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/clean
+clean: autopilot/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target cruise_control/CMakeFiles/rosserial_msgs_generate_messages_eus.dir
+# Target rules for target autopilot/CMakeFiles/rosserial_msgs_generate_messages_eus.dir
 
 # All Build rule for target.
-cruise_control/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/all:
-	$(MAKE) -f cruise_control/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/build.make cruise_control/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/depend
-	$(MAKE) -f cruise_control/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/build.make cruise_control/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/build
+autopilot/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/all:
+	$(MAKE) -f autopilot/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/build.make autopilot/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/depend
+	$(MAKE) -f autopilot/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/build.make autopilot/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/build/CMakeFiles --progress-num= "Built target rosserial_msgs_generate_messages_eus"
-.PHONY : cruise_control/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/all
+.PHONY : autopilot/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
-cruise_control/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+autopilot/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 cruise_control/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 autopilot/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/build/CMakeFiles 0
-.PHONY : cruise_control/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/rule
+.PHONY : autopilot/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-rosserial_msgs_generate_messages_eus: cruise_control/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/rule
+rosserial_msgs_generate_messages_eus: autopilot/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/rule
 
 .PHONY : rosserial_msgs_generate_messages_eus
 
 # clean rule for target.
-cruise_control/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/clean:
-	$(MAKE) -f cruise_control/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/build.make cruise_control/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/clean
-.PHONY : cruise_control/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/clean
+autopilot/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) -f autopilot/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/build.make autopilot/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/clean
+.PHONY : autopilot/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/clean
 
 # clean rule for target.
-clean: cruise_control/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/clean
+clean: autopilot/CMakeFiles/rosserial_msgs_generate_messages_eus.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target cruise_control/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir
+# Target rules for target autopilot/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir
 
 # All Build rule for target.
-cruise_control/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/all:
-	$(MAKE) -f cruise_control/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/build.make cruise_control/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/depend
-	$(MAKE) -f cruise_control/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/build.make cruise_control/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/build
+autopilot/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f autopilot/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/build.make autopilot/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f autopilot/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/build.make autopilot/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/build/CMakeFiles --progress-num= "Built target rosserial_msgs_generate_messages_nodejs"
-.PHONY : cruise_control/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/all
+.PHONY : autopilot/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
-cruise_control/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+autopilot/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 cruise_control/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 autopilot/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/build/CMakeFiles 0
-.PHONY : cruise_control/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/rule
+.PHONY : autopilot/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-rosserial_msgs_generate_messages_nodejs: cruise_control/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/rule
+rosserial_msgs_generate_messages_nodejs: autopilot/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/rule
 
 .PHONY : rosserial_msgs_generate_messages_nodejs
 
 # clean rule for target.
-cruise_control/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f cruise_control/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/build.make cruise_control/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/clean
-.PHONY : cruise_control/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/clean
+autopilot/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f autopilot/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/build.make autopilot/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/clean
+.PHONY : autopilot/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/clean
 
 # clean rule for target.
-clean: cruise_control/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/clean
+clean: autopilot/CMakeFiles/rosserial_msgs_generate_messages_nodejs.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target cruise_control/CMakeFiles/rosserial_msgs_generate_messages_py.dir
+# Target rules for target autopilot/CMakeFiles/rosserial_msgs_generate_messages_py.dir
 
 # All Build rule for target.
-cruise_control/CMakeFiles/rosserial_msgs_generate_messages_py.dir/all:
-	$(MAKE) -f cruise_control/CMakeFiles/rosserial_msgs_generate_messages_py.dir/build.make cruise_control/CMakeFiles/rosserial_msgs_generate_messages_py.dir/depend
-	$(MAKE) -f cruise_control/CMakeFiles/rosserial_msgs_generate_messages_py.dir/build.make cruise_control/CMakeFiles/rosserial_msgs_generate_messages_py.dir/build
+autopilot/CMakeFiles/rosserial_msgs_generate_messages_py.dir/all:
+	$(MAKE) -f autopilot/CMakeFiles/rosserial_msgs_generate_messages_py.dir/build.make autopilot/CMakeFiles/rosserial_msgs_generate_messages_py.dir/depend
+	$(MAKE) -f autopilot/CMakeFiles/rosserial_msgs_generate_messages_py.dir/build.make autopilot/CMakeFiles/rosserial_msgs_generate_messages_py.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/build/CMakeFiles --progress-num= "Built target rosserial_msgs_generate_messages_py"
-.PHONY : cruise_control/CMakeFiles/rosserial_msgs_generate_messages_py.dir/all
+.PHONY : autopilot/CMakeFiles/rosserial_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
-cruise_control/CMakeFiles/rosserial_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+autopilot/CMakeFiles/rosserial_msgs_generate_messages_py.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 cruise_control/CMakeFiles/rosserial_msgs_generate_messages_py.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 autopilot/CMakeFiles/rosserial_msgs_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/build/CMakeFiles 0
-.PHONY : cruise_control/CMakeFiles/rosserial_msgs_generate_messages_py.dir/rule
+.PHONY : autopilot/CMakeFiles/rosserial_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-rosserial_msgs_generate_messages_py: cruise_control/CMakeFiles/rosserial_msgs_generate_messages_py.dir/rule
+rosserial_msgs_generate_messages_py: autopilot/CMakeFiles/rosserial_msgs_generate_messages_py.dir/rule
 
 .PHONY : rosserial_msgs_generate_messages_py
 
 # clean rule for target.
-cruise_control/CMakeFiles/rosserial_msgs_generate_messages_py.dir/clean:
-	$(MAKE) -f cruise_control/CMakeFiles/rosserial_msgs_generate_messages_py.dir/build.make cruise_control/CMakeFiles/rosserial_msgs_generate_messages_py.dir/clean
-.PHONY : cruise_control/CMakeFiles/rosserial_msgs_generate_messages_py.dir/clean
+autopilot/CMakeFiles/rosserial_msgs_generate_messages_py.dir/clean:
+	$(MAKE) -f autopilot/CMakeFiles/rosserial_msgs_generate_messages_py.dir/build.make autopilot/CMakeFiles/rosserial_msgs_generate_messages_py.dir/clean
+.PHONY : autopilot/CMakeFiles/rosserial_msgs_generate_messages_py.dir/clean
 
 # clean rule for target.
-clean: cruise_control/CMakeFiles/rosserial_msgs_generate_messages_py.dir/clean
+clean: autopilot/CMakeFiles/rosserial_msgs_generate_messages_py.dir/clean
 
 .PHONY : clean
 
@@ -4330,24 +4330,6 @@ simulation/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/clean:
 clean: simulation/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/clean
 
 .PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory steering_control
-
-# Convenience name for "all" pass in the directory.
-steering_control/all:
-
-.PHONY : steering_control/all
-
-# Convenience name for "clean" pass in the directory.
-steering_control/clean:
-
-.PHONY : steering_control/clean
-
-# Convenience name for "preinstall" pass in the directory.
-steering_control/preinstall:
-
-.PHONY : steering_control/preinstall
 
 #=============================================================================
 # Directory level rules for directory osm

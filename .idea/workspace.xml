@@ -2,7 +2,127 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8075d57d-0c29-4084-b018-ee8c503d1889" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/ros/src/cruise_control/launch/cruise_control.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cruise_control/launch/cruise_control.launch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/CMakeFiles/3.10.2/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/CMakeFiles/3.10.2/CMakeSystem.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/CMakeFiles/CMakeError.log" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/CMakeFiles/CMakeError.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/catkin_generated/setup_cached.sh" beforeDir="false" afterPath="$PROJECT_DIR$/ros/build/catkin_generated/setup_cached.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/detection/lane_detection/CMakeFiles/std_msgs_generate_messages_cpp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/detection/lane_detection/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/detection/lane_detection/CMakeFiles/std_msgs_generate_messages_cpp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/detection/lane_detection/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/detection/lane_detection/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/detection/lane_detection/CMakeFiles/std_msgs_generate_messages_cpp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/detection/lane_detection/CMakeFiles/std_msgs_generate_messages_eus.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/detection/lane_detection/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/detection/lane_detection/CMakeFiles/std_msgs_generate_messages_eus.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/detection/lane_detection/CMakeFiles/std_msgs_generate_messages_eus.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/detection/lane_detection/CMakeFiles/std_msgs_generate_messages_eus.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/detection/lane_detection/CMakeFiles/std_msgs_generate_messages_eus.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/detection/lane_detection/CMakeFiles/std_msgs_generate_messages_lisp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/detection/lane_detection/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/detection/lane_detection/CMakeFiles/std_msgs_generate_messages_lisp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/detection/lane_detection/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/detection/lane_detection/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/detection/lane_detection/CMakeFiles/std_msgs_generate_messages_lisp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/detection/lane_detection/CMakeFiles/std_msgs_generate_messages_nodejs.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/detection/lane_detection/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/detection/lane_detection/CMakeFiles/std_msgs_generate_messages_nodejs.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/detection/lane_detection/CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/detection/lane_detection/CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/detection/lane_detection/CMakeFiles/std_msgs_generate_messages_nodejs.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/detection/lane_detection/CMakeFiles/std_msgs_generate_messages_py.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/detection/lane_detection/CMakeFiles/std_msgs_generate_messages_py.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/detection/lane_detection/CMakeFiles/std_msgs_generate_messages_py.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/detection/lane_detection/CMakeFiles/std_msgs_generate_messages_py.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/detection/lane_detection/CMakeFiles/std_msgs_generate_messages_py.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/detection/lane_detection/CMakeFiles/std_msgs_generate_messages_py.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/geometry_msgs_generate_messages_eus.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/geometry_msgs_generate_messages_eus.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/geometry_msgs_generate_messages_eus.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/geometry_msgs_generate_messages_py.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/geometry_msgs_generate_messages_py.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/geometry_msgs_generate_messages_py.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/sensor_msgs_generate_messages_eus.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/sensor_msgs_generate_messages_eus.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/sensor_msgs_generate_messages_eus.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/sensor_msgs_generate_messages_py.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/sensor_msgs_generate_messages_py.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/build/sensors/cv_camera/CMakeFiles/sensor_msgs_generate_messages_py.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/autopilot/scripts/weights/training/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/autopilot/scripts/weights/training/configs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cruise_control/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cruise_control/launch/cruise_control.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cruise_control/package.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cruise_control/scripts/configs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cruise_control/scripts/cruise_control_node" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cruise_control/scripts/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cruise_control/scripts/models/i3d.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cruise_control/scripts/models/model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cruise_control/scripts/resources/stop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cruise_control/scripts/speed_predictor.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cruise_control/scripts/visualization.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cruise_control/scripts/weights/trained-nv-4.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cruise_control/speed_control/speed_control.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/arduino_motor_control/arduino_motor_control.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/launch/hardware_test.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/launch/hardware_test.launch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/launch/steering_control.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/launch/autopilot.launch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/launch/steering_stand_alone.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/package.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/package.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/scripts/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/scripts/hardware_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/hardware_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/scripts/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/visualization/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/scripts/models/configs.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/models/configs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/scripts/models/helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/models/helper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/scripts/models/i3d.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/models/i3d.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/scripts/models/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/scripts/resources/FiraMono-Medium.otf" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/resources/FiraMono-Medium.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/scripts/resources/sw.png" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/resources/sw.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/scripts/resources/test.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/resources/test.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/scripts/simulation.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/simulation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/scripts/steering_node" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/autopilot_node" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/scripts/steering_predictor.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/pilot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/scripts/visualization/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/visualization/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/scripts/visualization/dataset_viz.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/visualization/dataset_viz.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/scripts/visualization/testing_visualizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/visualization/testing_visualizer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/scripts/visualization/visualization.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/visualization/visualization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/scripts/weights/own/trained-cai-v6-3.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/scripts/weights/own/trained-cai-v6.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/scripts/weights/str-cai-self-v4.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/scripts/weights/training/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/scripts/weights/training/str-cai-self-v1.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/steering_control/scripts/weights/training/str-cai-self-v2.h5" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,54 +153,39 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.travis.yml">
+        <entry file="file://$PROJECT_DIR$/ros/src/autopilot/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="870">
-              <caret line="58" column="27" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
+            <state relative-caret-position="15">
+              <caret line="1" column="17" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ros/src/autopilot/launch/autopilot.launch">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ros/src/autopilot/package.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ros/src/cruise_control/launch/cruise_control.launch">
+        <entry file="file://$PROJECT_DIR$/ros/src/autopilot/scripts/autopilot_node">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
-              <caret line="12" column="85" selection-start-line="12" selection-start-column="85" selection-end-line="12" selection-end-column="85" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ros/src/cruise_control/scripts/cruise_control_node">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="39" column="45" lean-forward="true" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+              <caret line="33" column="22" lean-forward="true" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
               <folding>
-                <element signature="e#208#250#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ros/src/cruise_control/scripts/visualization.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="28" column="43" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
-              <folding>
-                <element signature="e#143#161#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ros/src/steering_control/scripts/steering_predictor.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="26" column="73" selection-start-line="26" selection-start-column="73" selection-end-line="26" selection-end-column="73" />
-              <folding>
-                <element signature="e#182#216#0" expanded="true" />
+                <element signature="e#186#209#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -140,13 +245,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ros/src/simulation/scripts/dataset_sim.py" />
-        <option value="$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim.py" />
-        <option value="$PROJECT_DIR$/ros/src/steering_control/scripts/steering_controller" />
-        <option value="$PROJECT_DIR$/ros/src/simulation/scripts/preprocess_data.py" />
-        <option value="$PROJECT_DIR$/ros/src/steering_control/scripts/models/configs.py" />
-        <option value="$PROJECT_DIR$/ros/src/steering_control/package.xml" />
-        <option value="$PROJECT_DIR$/ros/src/steering_control/launch/steering_software.launch" />
         <option value="$PROJECT_DIR$/ros/src/steering_control/launch/steering_stand_alone.launch" />
         <option value="$PROJECT_DIR$/ros/src/simulation/scripts/data_sim" />
         <option value="$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim" />
@@ -190,7 +288,14 @@
         <option value="$PROJECT_DIR$/ros/src/cruise_control/scripts/models/i3d.py" />
         <option value="$PROJECT_DIR$/ros/src/cruise_control/scripts/visualization.py" />
         <option value="$PROJECT_DIR$/ros/src/cruise_control/scripts/cruise_control_node" />
+        <option value="$PROJECT_DIR$/ros/src/AutoPilot/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/ros/src/AutoPilot/package.xml" />
+        <option value="$PROJECT_DIR$/ros/src/autopilot/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/ros/src/autopilot/package.xml" />
+        <option value="$PROJECT_DIR$/ros/src/autopilot/scripts/pilot.py" />
+        <option value="$PROJECT_DIR$/ros/src/autopilot/launch/autopilot.launch" />
         <option value="$PROJECT_DIR$/ros/src/cruise_control/launch/cruise_control.launch" />
+        <option value="$PROJECT_DIR$/ros/src/autopilot/scripts/autopilot_node" />
       </list>
     </option>
   </component>
@@ -228,22 +333,7 @@
               <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
               <item name="ros" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="cruise_control" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
-              <item name="ros" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="cruise_control" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
-              <item name="ros" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="steering_control" type="462c0819:PsiDirectoryNode" />
+              <item name="autopilot" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -255,10 +345,13 @@
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="cv_camera_node&#9;FILE&#9;file:///home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/cv_camera/src/cv_camera_nodelet.cpp" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="/opt/ros/melodic/lib/python2.7/dist-packages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ros/src/AutoPilot" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/ros/src/sensors/cv_camera" />
       <recent name="$PROJECT_DIR$/ros/src/detection/object_detection/scripts" />
@@ -355,11 +448,13 @@
       <workItem from="1543090984010" duration="163000" />
       <workItem from="1543091179226" duration="2366000" />
       <workItem from="1543099380998" duration="128000" />
+      <workItem from="1543191592429" duration="11000" />
+      <workItem from="1543191612666" duration="1056000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14064000" />
+    <option name="totallyTimeSpent" value="15131000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -372,9 +467,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="27" width="1543" height="873" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.61044174" visible="true" weight="0.19906479" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.61044174" visible="true" weight="0.20440882" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32702702" />
@@ -401,42 +495,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/scripts/model_data/tiny_yolo_anchors.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/scripts/model_data/yolo_anchors.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/scripts/yolo.py" />
-    <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/scripts/visualization" />
-    <entry file="file://$PROJECT_DIR$/ros/src/sensors/cv_camera/src/cv_camera_nodelet.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/steering_control/scripts/visualization/testing_visualizer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-360">
-          <caret line="114" column="69" selection-start-line="114" selection-start-column="69" selection-end-line="114" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/steering_control/scripts/visualization/dataset_viz.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="143" selection-start-line="143" selection-end-line="189" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/scripts/model_data/configs.py" />
-    <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/scripts/object_detector.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="654">
-          <caret line="68" column="35" selection-start-line="68" selection-start-column="35" selection-end-line="68" selection-end-column="35" />
-          <folding>
-            <element signature="e#1292#1307#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/steering_control/launch/steering.launch" />
     <entry file="file://$PROJECT_DIR$/ros/src/steering_control/launch/steering_stand_alone.launch">
       <provider selected="true" editor-type-id="text-editor">
@@ -684,19 +742,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/cruise_control/scripts/visualization.py">
+    <entry file="file://$PROJECT_DIR$/ros/src/AutoPilot/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="28" column="43" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
-          <folding>
-            <element signature="e#143#161#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/AutoPilot/launch/hardware_test.launch">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/steering_control/scripts/steering_predictor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
+        <state relative-caret-position="-48">
           <caret line="26" column="73" selection-start-line="26" selection-start-column="73" selection-end-line="26" selection-end-column="73" />
           <folding>
             <element signature="e#182#216#0" expanded="true" />
@@ -704,20 +762,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/cruise_control/scripts/cruise_control_node">
+    <entry file="file://$PROJECT_DIR$/ros/src/AutoPilot/package.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="72" column="10" lean-forward="true" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/cruise_control/scripts/visualization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+          <folding>
+            <element signature="e#143#161#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/autopilot/scripts/pilot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="39" column="45" lean-forward="true" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#182#216#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/autopilot/scripts/hardware_test.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/cruise_control/scripts/cruise_control_node">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="50" column="77" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="87" />
           <folding>
             <element signature="e#208#250#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/autopilot/package.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/autopilot/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="17" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/cruise_control/launch/cruise_control.launch">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="47" lean-forward="true" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/autopilot/launch/autopilot.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/autopilot/scripts/autopilot_node">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="12" column="85" selection-start-line="12" selection-start-column="85" selection-end-line="12" selection-end-column="85" />
+          <caret line="33" column="22" lean-forward="true" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+          <folding>
+            <element signature="e#186#209#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

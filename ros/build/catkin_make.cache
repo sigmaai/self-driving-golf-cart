@@ -1,2 +1,2 @@
-cruise_control:data_logger:detection/lane_detection:detection/object_detection:driver:localization:osm:path_planning:segmentation:sensors/cv_camera:sensors/gps:simulation:steering_control
+autopilot:data_logger:detection/lane_detection:detection/object_detection:driver:localization:osm:path_planning:segmentation:sensors/cv_camera:sensors/gps:simulation
 -DCATKIN_DEVEL_PREFIX=/home/neil/Workspace/self-driving-golf-cart/ros/devel -DCMAKE_INSTALL_PREFIX=/home/neil/Workspace/self-driving-golf-cart/ros/install -G Unix Makefiles
