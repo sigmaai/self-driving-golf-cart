@@ -88,7 +88,7 @@ before_script:
   - wstool init
   - if [[ -f $ROSINSTALL_FILE ]] ; then wstool merge $ROSINSTALL_FILE ; fi
   - wstool up
-  - cd home/travis/build/sigmaai/self-driving-golf-cart/ros/
+  - cd /home/travis/build/sigmaai/self-driving-golf-cart/ros/
   # package depdencies: install using rosdep.
   - rosdep install -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO
   
