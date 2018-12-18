@@ -1,5 +1,5 @@
 <center>
-<img src="./media/cover.png" alt="Drawing" style="width: 700;"/>
+<img src="./media/cover.png" alt="Drawing"/>
 </center>
 
 [![Documentation Status](https://readthedocs.org/projects/self-driving-golf-cart/badge/?version=latest)](https://self-driving-golf-cart.readthedocs.io/en/latest/?badge=latest)
@@ -12,27 +12,26 @@
 Welcome! This is an open source self-driving development platform aimed for rapid prototyping, deep learning and robotics research. The system currently runs on a modified electric golf cart, but the code could work on a real car as well. Here are our goals:
 
 ### Goals:
-1. Research and develop a deep learning-driven self-driving car.
-2. The vehicle should be able to navigate from point A to point B autonomously within a geofenced area.
+Research and develop a deep learning-driven self-driving car. The vehicle should be able to navigate autonomously between locations within a geofenced area.
 
-#### Here are the modules in this project.
+#### The modules in this project.
 
-1. End-to-End steering (Behavioral cloning)
+1. End-to-End Steering (Behavioral cloning)
 2. Semantic Segmentation
-3. Drive by Wire (DBW)
-4. Object Detection 🚙
+3. Object Detection 🚙
+4. Drive by Wire (DBW)
 5. Traffic Light Detection 🚦
 6. Lane Detection 🛣
 7. Localization 🛰️ (currently with GPS)
 
 Path planning is coming soon...
 
-For the full documentation of the development process, please visit: [neilnie.com](https://neilnie.com)
+For the full documentation of the development process, please visit my website: [www.neilnie.com](https://www.neilnie.com)
 
 # Try it out
-1. Download/clone the repository.
+1. Clone the repository.
 2. Make sure you have all the [dependencies](./ros/requirements.txt) installed. 
-3. Make sure that you have the [ROS](http://wiki.ros.org/melodic/Installation/Ubuntu) installed on your computer.
+3. Make sure that you have [ROS](http://wiki.ros.org/melodic/Installation/Ubuntu) installed on your computer. (I am currently using ROS Melodic)
 4. `cd PROJECT_DIRECTORY/ros`
 5. `catkin_make`
 6. `source devel/setup.bash`
@@ -42,21 +41,22 @@ You should see this screen pop up.
 
 <img src="./media/running.png" alt="image" width="480"/>
 
-Bon Voyage 😀
+🚙 Bon Voyage 😀
+
+# ROS
+This project uses ROS. The launch files will launch the neccesary nodes as well as rviz for visualization. For more information on ROS, nodes, topics and others please refer to the [README](./ros/src/README.md) in the `./src` directory. 
+
 
 # Simulation
-Building a self-driving car is hard. Not everyone has access to expensive hardware. If you want to run the code inside the CARLA self-driving simulator, please refer to this [documentation](./ros/src/simulation/README.md). The ROS system in this project can run on the CARLA simulator. 
+(🏗 Construction Zone 🚧)
+
+Building a self-driving car is hard. Not everyone has access to expensive hardware. I am currently trying to integrate this project with the CARLA self-driving simulator. If you are interested in CARLA, please refer to this [documentation](./ros/src/simulation/README.md). The ROS system in this project can *partially* run on the CARLA simulator. 
 
 <img src="./media/simulator.png" alt="Drawing" width="480"/>
 
-# ROS
-This project is being developed using ROS. The launch files will launch the neccesary nodes as well as rviz for visualization. For more information on ROS, nodes, topics and others please refer to the [README](./ros/src/README.md) in the `./src` directory. 
-
 # The Autopilot System
 TAS, found here in the [autopilot node](./ros/src/autopilot), uses deep learning to predict the steering commands and acceleration commands for the vehicle, only using data collected by the front facing camera. 
-## Behavioral cloning with 3D ConvNets
-
-### Motives
+### End-to-End Behavioral Cloning
 Several years ago, NVIDIA proposed a novel deep learning approach allowed their car to accurately perform real-time end-to-end steering command prediction. Around the same time, Udacity held a challenge that asked researchers to create the best end-to-end steering prediction model. This component is inspired by the competition, and the goal is to further the work in behavioral cloning for self-driving vehicles. 
 
 NVIDIA's paper used a convolutional neural network with a single frame input. I believe that the single-frame-input CNN doesn't provide any temporal information which is critical in self-driving. This is the motive behind choosing the i3d architecture, which is rich in spacial-temporal information.
@@ -71,10 +71,9 @@ Here is a video demo of deep learning model running on the autonomous golf cart.
 [![IMAGE ALT TEXT HERE](https://i.ytimg.com/vi/4bZ40W4BGoE/hqdefault.jpg)](https://www.youtube.com/watch?v=CcUXtViFQeU&t=5s)
 
 ## Semantic Segmentation
+The cart understands its surrounding  through semantic segmentation, which is a technique in computer that classifies each pixel in an image into different categories. The vehicle can also make decisions based on the segmentic segmentation results. The cart can change its speed based on the proximity to nearby obstacles.
 
 <img src="./media/seg.png" alt="Drawing" width="480"/>
-
-The cart understands the surrounding  through semantic segmentation, which is a technique in computer that classifies each pixel in an image. The vehicle can also make decisions based on the segmentic segmentation results. The cart can change its speed based on the proximity to nearby obstacles.
 
 We deployed the ENet architecture for segmentation. ENet is design to work well in realtime applications. For more information, please visit the [paper](http://arxiv.org/pdf/1606.02147.pdf). We used the CityScape dataset for training and the python code for training and inferencing are located in the `./src/segmentation/scripts` directory.
 
