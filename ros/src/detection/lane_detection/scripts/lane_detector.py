@@ -1,13 +1,16 @@
 #
+# Lane Detection Class
+# Part of the <lane_detection> node
+# The <detection> module
 #
-#
-#
+# The self-driving-golf cart
+# (c) Neil Nie
 
 import numpy as np
 import cv2
 import glob
 import matplotlib.pyplot as plt
-from detection.lane import utils
+import utils
 
 
 class LaneDetector():

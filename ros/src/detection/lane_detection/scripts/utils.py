@@ -7,7 +7,10 @@
 import cv2
 import numpy as np
 import glob
-from detection.lane import configs
+import configs
+
+# TODO: update the test images
+# TODO: update the path to the test images.
 
 
 def get_test_images():

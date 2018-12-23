@@ -1,10 +1,13 @@
 #!/usr/bin/python
 #
-# Results video generator Udacity Challenge 2
+# The AutoPilot module <visualization> node
+# Part of the self-driving golf cart project
+#
 # Original By: Comma.ai and Chris Gundling
 # Revised and used by Neil Nie
 #
 
+# General Dependencies
 import numpy as np
 from skimage import transform as tf
 from vis.visualization import visualize_cam
@@ -12,7 +15,8 @@ import cv2
 from PIL import Image as PILImage
 from PIL import ImageFont
 from PIL import ImageDraw
-# ROS
+
+# ROS Dependencies
 import rospy
 from sensor_msgs.msg import Image
 from std_msgs.msg import Float32
@@ -163,8 +167,9 @@ class Visualization():
         self.bridge = CvBridge()
         self.steering_angle = 0.0
         self.accel_cmds = -1
-        # Please note that the visualization node listens to either the raw
-        # camera input or the simulated camera input. Please change this
+
+        # Please note that the visualization node listens to either the
+        # *raw camera* or the *simulated camera* . Please change this
         # setting in the launch file (/launch/steering_control.launch)
         # or specify this parameter in your command line input.
         simulation = rospy.get_param("/autopilot_node/simulation")
