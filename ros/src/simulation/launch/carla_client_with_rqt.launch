@@ -1,0 +1,4 @@
+<launch>
+<include file="$(find simulation)/launch/carla_client.launch"  pass_all_args="True"/>
+<node pkg="rqt_gui" type="rqt_gui" name="rqt_gui" args="--perspective-file $(find simulation)/config/EgoVehicleControlInfo.perspective"/>
+</launch>
