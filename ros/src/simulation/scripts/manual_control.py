@@ -552,14 +552,13 @@ class CameraManager(object):
             carla.Transform(carla.Location(x=-5.5, z=2.8), carla.Rotation(pitch=-15)),
             carla.Transform(carla.Location(x=1.6, z=1.7))]
         self._transform_index = 1
-        self._sensors = [
-            ['sensor.camera.rgb', cc.Raw, 'Camera RGB'],
-            ['sensor.camera.depth', cc.Raw, 'Camera Depth (Raw)'],
-            ['sensor.camera.depth', cc.Depth, 'Camera Depth (Gray Scale)'],
-            ['sensor.camera.depth', cc.LogarithmicDepth, 'Camera Depth (Logarithmic Gray Scale)'],
-            ['sensor.camera.semantic_segmentation', cc.Raw, 'Camera Semantic Segmentation (Raw)'],
-            ['sensor.camera.semantic_segmentation', cc.CityScapesPalette, 'Camera Semantic Segmentation (CityScapes Palette)'],
-            ['sensor.lidar.ray_cast', None, 'Lidar (Ray-Cast)']]
+        self._sensors = [['sensor.camera.rgb', cc.Raw, 'Camera RGB'],
+                         ['sensor.camera.depth', cc.Raw, 'Camera Depth (Raw)'],
+                         ['sensor.camera.depth', cc.Depth, 'Camera Depth (Gray Scale)'],
+                         ['sensor.camera.depth', cc.LogarithmicDepth, 'Camera Depth (Logarithmic Gray Scale)'],
+                         ['sensor.camera.semantic_segmentation', cc.Raw, 'Camera Semantic Segmentation (Raw)'],
+                         ['sensor.camera.semantic_segmentation', cc.CityScapesPalette, 'Camera Semantic Segmentation (CityScapes Palette)'],
+                         ['sensor.lidar.ray_cast', None, 'Lidar (Ray-Cast)']]
         world = self._parent.get_world()
         bp_library = world.get_blueprint_library()
         for item in self._sensors:
@@ -584,11 +583,6 @@ class CameraManager(object):
 
         if needs_respawn:
 
-            # destroying current sensor
-            # todo: make sure that sensors won't self-destroy
-            # if self.sensor is not None:
-            #     self.sensor.destroy()
-            #     self._surface = None
             self.sensor = self._parent.get_world().spawn_actor(self._sensors[index][-1],
                                                                self._camera_transforms[self._transform_index],
                                                                attach_to=self._parent)
@@ -711,16 +705,15 @@ def main():
 
     args.width, args.height = [int(x) for x in args.res.split('x')]
 
-    log_level = logging.DEBUG if args.debug else logging.INFO
-    logging.basicConfig(format='%(levelname)s: %(message)s', level=log_level)
-
-    logging.info('listening to server %s:%s', args.host, args.port)
+    # log_level = logging.DEBUG if args.debug else logging.INFO
+    # logging.basicConfig(format='%(levelname)s: %(message)s', level=log_level)
+    #
+    # logging.info('listening to server %s:%s', args.host, args.port)
 
     print(__doc__)
 
     try:
         game_loop(args)
-
     except KeyboardInterrupt:
         print('\nCancelled by user. Bye!')
 

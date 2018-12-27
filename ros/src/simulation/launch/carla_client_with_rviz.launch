@@ -1,4 +1,5 @@
+
 <launch>
-<include file="$(find simulation)/launch/carla_client.launch"  pass_all_args="True"/>
-<node pkg="rviz" type="rviz" name="rviz" args="-d $(find simulation)/config/carla_default_rviz.cfg.rviz"/>
+    <include file="$(find simulation)/launch/carla_client.launch"  pass_all_args="True"/>
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find simulation)/config/carla_default_rviz.cfg.rviz"/>
 </launch>

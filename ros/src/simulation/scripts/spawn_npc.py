@@ -47,7 +47,7 @@ def main():
         metavar='N',
         default=20,
         type=int,
-        help='number of vehicles (default: 10)')
+        help='number of vehicles (default: 20)')
     argparser.add_argument(
         '-d', '--delay',
         metavar='D',

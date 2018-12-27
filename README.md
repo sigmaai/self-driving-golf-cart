@@ -2,11 +2,7 @@
 <img src="./media/cover.png" alt="Drawing"/>
 </center>
 
-[![Build Status](https://travis-ci.org/sigmaai/self-driving-golf-cart.svg?branch=master)](https://travis-ci.org/sigmaai/self-driving-golf-cart)
-[![codebeat badge](https://codebeat.co/badges/3b223e1c-a2e3-462f-91ff-b8aaddedf1d2)](https://codebeat.co/projects/github-com-sigmaai-self-driving-golf-cart-master)
-[![Documentation Status](https://readthedocs.org/projects/self-driving-golf-cart/badge/?version=latest)](https://self-driving-golf-cart.readthedocs.io/en/latest/?badge=latest)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/YongyangNie)
+[![Build Status](https://travis-ci.org/sigmaai/self-driving-golf-cart.svg?branch=master)](https://travis-ci.org/sigmaai/self-driving-golf-cart) [![codebeat badge](https://codebeat.co/badges/3b223e1c-a2e3-462f-91ff-b8aaddedf1d2)](https://codebeat.co/projects/github-com-sigmaai-self-driving-golf-cart-master) [![Documentation Status](https://readthedocs.org/projects/self-driving-golf-cart/badge/?version=latest)](https://self-driving-golf-cart.readthedocs.io/en/latest/?badge=latest) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/YongyangNie)
 
 # Introduction
 
@@ -40,7 +36,9 @@ For the full documentation of the development process, please visit my website: 
 
 You should see this screen pop up. 
 
-<img src="./media/running.png" alt="image" width="480"/>
+<center>
+	<img src="./media/running.png" alt="image" width="640"/>
+</center>
 
 🚙 Bon Voyage 😀
 
@@ -53,9 +51,12 @@ This project uses ROS. The launch files will launch the neccesary nodes as well 
 
 Building a self-driving car is hard. Not everyone has access to expensive hardware. I am currently trying to integrate this project with the CARLA self-driving simulator. If you are interested in CARLA, please refer to this [documentation](./ros/src/simulation/README.md). The ROS system in this project can *partially* run on the CARLA simulator. 
 
-<img src="./media/simulator.png" alt="Drawing" width="480"/>
+<center>
+    <img src="./ros/src/simulation/assets/simulator-1.png" alt="Drawing" width="640"/>
+</center>
 
 # The Autopilot System
+
 TAS, found here in the [autopilot node](./ros/src/autopilot), uses deep learning to predict the steering commands and acceleration commands for the vehicle, only using data collected by the front facing camera. 
 ### End-to-End Behavioral Cloning
 Several years ago, NVIDIA proposed a novel deep learning approach allowed their car to accurately perform real-time end-to-end steering command prediction. Around the same time, Udacity held a challenge that asked researchers to create the best end-to-end steering prediction model. This component is inspired by the competition, and the goal is to further the work in behavioral cloning for self-driving vehicles. 
@@ -65,30 +66,38 @@ NVIDIA's paper used a convolutional neural network with a single frame input. I 
 ### Model
 The input of the network is a 3d convolutional block, with the shape of `n * weight * height * 3`. `n` is the length of the input sequence. Furthermore, the network also uses nine inception modules. The output layers are modified to accommodate for this regression problem. A flatten layer and a dense layer are added to the back of the network. 
 
-<img src="./media/model.png" alt="Drawing" width="480"/>
+<center>
+	<img src="./media/model.png" alt="Drawing" width="640"/>
+</center>
 
 Here is a video demo of deep learning model running on the autonomous golf cart. 
 
-[![IMAGE ALT TEXT HERE](https://i.ytimg.com/vi/4bZ40W4BGoE/hqdefault.jpg)](https://www.youtube.com/watch?v=CcUXtViFQeU&t=5s)
+[VIDEO DEMO](https://www.youtube.com/watch?v=4bZ40W4BGoE)
 
 ## Semantic Segmentation
 The cart understands its surrounding  through semantic segmentation, which is a technique in computer that classifies each pixel in an image into different categories. The vehicle can also make decisions based on the segmentic segmentation results. The cart can change its speed based on the proximity to nearby obstacles.
 
-<img src="./media/seg.png" alt="Drawing" width="480"/>
+<center>
+<img src="./media/seg.png" alt="Drawing" width="640"/>
+</center>
 
 We deployed the ENet architecture for segmentation. ENet is design to work well in realtime applications. For more information, please visit the [paper](http://arxiv.org/pdf/1606.02147.pdf). We used the CityScape dataset for training and the python code for training and inferencing are located in the `./src/segmentation/scripts` directory.
 
-[![IMAGE ALT TEXT HERE](https://i.ytimg.com/vi/_y2RCakRrc4/hqdefault.jpg)](https://www.youtube.com/watch?v=_y2RCakRrc4)
+[VIDEO DEMO](https://www.youtube.com/watch?v=_y2RCakRrc4)
 
 # Localization
 
 Currently, the localization module uses GPS (Global Positioning System) to find the precise location of the vehicle. However, GPS is far from enough. Localization using lidar and radar (sensor fusion and particle filters) are currently under development.
 
-<img src="./media/gps-loc.png" alt="Drawing" width="480"/>
+<center>
+	<img src="./media/gps-loc.png" alt="Drawing" width="640"/>
+</center>
 
 Furthermore, we are relying on OSM (Open Street Map) data for navigation. OSM maps provide detailed information about the paths, buildings and other landmarks in the surrounding. Currently, navigation is only limited to a geofenced area.
 
-<img src="./media/osm-1.png" alt="Drawing" width="480"/>
+<center>
+	<img src="./media/osm-1.png" alt="Drawing" width="640"/>
+</center>
 
 # Path Planning
 
