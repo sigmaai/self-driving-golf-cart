@@ -109,13 +109,10 @@ class Camera(Sensor):
         :param carla_image: carla image object
         :type carla_image: carla.Image
         """
-        if ((carla_image.height != self._camera_info.height) or
-                (carla_image.width != self._camera_info.width)):
-            rospy.logerr(
-                "Camera{} received image not matching configuration".format(self.topic_name()))
+        if ((carla_image.height != self._camera_info.height) or (carla_image.width != self._camera_info.width)):
+            rospy.logerr("Camera{} received image not matching configuration".format(self.topic_name()))
 
-        image_data_array, encoding = self.get_carla_image_data_array(
-            carla_image=carla_image)
+        image_data_array, encoding = self.get_carla_image_data_array(carla_image=carla_image)
         img_msg = Camera.cv_bridge.cv2_to_imgmsg(image_data_array, encoding=encoding)
         # the camera data is in respect to the camera's own frame
         img_msg.header = self.get_msg_header(use_parent_frame=False)
@@ -279,9 +276,8 @@ class DepthCamera(Camera):
         #    shape=(carla_image.height, carla_image.width, 1),
         #    dtype=numpy.float32, buffer=carla_image.raw_data)
         #
-        bgra_image = numpy.ndarray(
-            shape=(carla_image.height, carla_image.width, 4),
-            dtype=numpy.uint8, buffer=carla_image.raw_data)
+        bgra_image = numpy.ndarray(shape=(carla_image.height, carla_image.width, 4),
+                                   dtype=numpy.uint8, buffer=carla_image.raw_data)
 
         # Apply (R + G * 256 + B * 256 * 256) / (256**3 - 1) * 1000
         # according to the documentation:

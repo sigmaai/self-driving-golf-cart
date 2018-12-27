@@ -1,6 +1,13 @@
+
 <launch>
-  <arg name='rosbag_fname' default=''/>
-  <param name="rosbag_fname" value="$(arg rosbag_fname)"/>
-  <rosparam file="$(find simulation)/config/settings.yaml" command="load" />
-  <node pkg="simulation" name="carla_client" type="client.py" output="screen"/>
+
+    <!-- Launch Carla -->
+
+    <!-- <node name="launch_carla" pkg="simulation" type="launch_carla.sh" />
+    -->
+    <arg name='rosbag_fname' default=''/>
+    <param name="rosbag_fname" value="$(arg rosbag_fname)"/>
+    <rosparam file="$(find simulation)/config/settings.yaml" command="load" />
+    <node pkg="simulation" name="carla_client" type="client.py" output="screen"/>
+
 </launch>
