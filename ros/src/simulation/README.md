@@ -7,8 +7,11 @@ __Important Note:__
 This documentation is for CARLA versions *newer* than 0.9.1. The CARLA release 0.9.1
 does not work out of the box with the ROS bridge.
 
-![rviz setup](./assets/rviz_carla_default.png "rviz")
-![depthcloud](./assets/depth_cloud_and_lidar.png "depthcloud")
+![rviz setup](./assets/simulator-1.png "rviz")
+
+
+
+![depthcloud](./assets/simulator-2.png "depthcloud")
 
 # Features
 
@@ -18,21 +21,27 @@ does not work out of the box with the ROS bridge.
 - [x] Handle ROS dependencies
 - [x] Marker/bounding box messages for cars/pedestrian
 - [x] Lidar sensor support
-- [ ] Rosbag in the bridge (in order to avoid rosbag record -a small time errors)
-- [ ] Add traffic light support
 
-## Install the CARLA Python API
+# How to Run CARLA & the Simulation Package
+
+## 1. Setting Up:
+
+### 1.1 Install CARLA
+
+Download the compiled version of the CARLA simulator from [here](https://github.com/carla-simulator/carla/releases)
+
+Please refer to the CARLA [documentation](https://carla.readthedocs.io/en/latest/getting_started/) or open an issue if you have any questions or problems. 
+
+### 1.2. Install the CARLA Python API
+
+At this point, you should have downloaded the compiled version of the CARLA simulator. 
 
     sudo easy_install <path/to/carla/>/PythonAPI/<your_egg_file>
 
 Just as an example, for me, the command is this:
-	
-    sudo easy_install '/home/neil/carla/PythonAPI/carla-0.9.2-py2.7-linux-x86_64.egg'
-    
-Please note that you have to put in the complete path to the egg-file including
-the egg-file itself. Please use the one, that is supported by your Python version.
-Depending on the type of CARLA (pre-build, or build from source), the egg files
-are typically located either directly in the PythonAPI folder or in PythonAPI/dist.
+​    sudo easy_install '/home/neil/carla/PythonAPI/carla-0.9.2-py2.7-linux-x86_64.egg'
+
+Please note that you have to put in the complete path to the egg-file including the egg-file itself. Please use the one, that is supported by your Python version. Depending on the type of CARLA (pre-build, or build from source), the egg files are typically located either directly in the PythonAPI folder or in PythonAPI/dist.
 
 Check the installation is successfull by trying to import carla from python:
 
@@ -40,37 +49,43 @@ Check the installation is successfull by trying to import carla from python:
 
 You should see the Success message without any errors.
 
-## Install other requirements:
+### 1.3. Install other requirements:
 
     sudo apt-get install python-protobuf
     pip install --user simple-pid
 
+If you have followed the instructions closely, you should be ready to use CARLA and the `simulation_package`
 
-# Start the ROS bridge
+## 2. Running
 
-First run the simulator. For the full and latest documentary, please always refer to the carla official website. (see carla documentation: http://carla.readthedocs.io/en/latest/)
+### 2.1. Compile the project
 
-     ./CarlaUE4.sh -ResX=320 -ResY=240
+Navigate to the  `ros` directory of the self-driving golf cart project. Then enter & run the commands:
+
+    catkin_make
+    source devel/setup.bash
+
+### 2.2 Launch CARLA
+
+First run the simulator. For the full and latest documentary, please always refer to the carla official website. (see carla documentation: http://carla.readthedocs.io/en/latest/). I have created a simple script. Enter the following command and run the script.
+
+    rosrun simulation launch_carla.sh 
 
 Wait for the message:
 
     Waiting for the client to connect...
 
-Then start the ros bridge:
+### 2.3 Start the ros bridge & rviz:
 
-	roslaunch simulation carla_client.launch
+    roslaunch simulation carla_client_with_rviz.launch
 
-To start the ros bridge with rviz use:
+You should see a new `rviz` window. There should be no sensor data yet.  You can setup the vehicle configuration config/settings.yaml.
 
-    roslaunch carla_ros_bridge carla_client_with_rviz.launch
-
-You can setup the vehicle configuration config/settings.yaml.
-
-Then you can __make use of the CARLA Python API script__ `manual_control.py`.
+This launch file also  __make use of the CARLA Python API script__ `manual_control.py`.
 This spawns a vehicle with role_name='hero' which is interpreted as the ego
 vehicle as defined by the config/settings.yaml.
 
-You can then further spawn other vehicles using `spawn_npc.py` from CARLA Python API.
+The launch file also further spawn 30 other vehicles using `spawn_npc.py` from CARLA Python API.
 Then those vehicles will show up also on ROS side.
 
 # Test control messages

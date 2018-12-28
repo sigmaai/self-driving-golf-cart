@@ -10,4 +10,7 @@
     <rosparam file="$(find simulation)/config/settings.yaml" command="load" />
     <node pkg="simulation" name="carla_client" type="client.py" output="screen"/>
 
+    <node pkg="simulation" name="manual_control" type="manual_control.py" output="screen"/>
+    <node pkg="simulation" name="spawn_npc" type="spawn_npc.py" output="screen"/>
+
 </launch>

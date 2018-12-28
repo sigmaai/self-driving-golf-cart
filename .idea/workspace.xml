@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8075d57d-0c29-4084-b018-ee8c503d1889" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Screenshot from 2018-12-26 21-14-44.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/simulator.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/simulation/launch/carla_client_with_rviz.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/simulation/launch/carla_client_with_rviz.launch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/simulation/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/simulation/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/simulation/launch/carla_client.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/simulation/launch/carla_client.launch" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ros/src/simulation/scripts/manual_control.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/simulation/scripts/manual_control.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ros/src/simulation/scripts/spawn_npc.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/simulation/scripts/spawn_npc.py" afterDir="false" />
     </list>
@@ -38,14 +36,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/manual_control.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="355" column="3" selection-start-line="355" selection-start-column="3" selection-end-line="355" selection-end-column="3" />
-              <folding>
-                <element signature="e#1049#1086#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="400">
+              <caret line="664" column="11" selection-start-line="664" selection-start-column="11" selection-end-line="664" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -53,20 +48,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ros/src/simulation/launch/carla_client_with_rviz.launch">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="239">
-                <caret line="134" column="19" selection-start-line="134" selection-start-column="19" selection-end-line="134" selection-end-column="19" />
-              </first_editor>
-              <second_editor />
+            <state relative-caret-position="15">
+              <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -74,7 +57,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/camera.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
+            <state relative-caret-position="3870">
               <caret line="270" column="22" selection-start-line="270" selection-start-column="22" selection-end-line="270" selection-end-column="22" />
               <folding>
                 <element signature="e#160#190#0" expanded="true" />
@@ -86,8 +69,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/spawn_npc.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
+            <state relative-caret-position="465">
+              <caret line="33" column="15" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -95,8 +78,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ros/src/simulation/launch/carla_client.launch">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="210">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -112,8 +95,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>controller_initial_state_autoregressive</find>
-      <find>targets_normalized</find>
       <find>controller_final_state_gt</find>
       <find>mse_autoregressive_steering</find>
       <find>controller_final_state_autoregressive</find>
@@ -139,14 +120,17 @@
       <find>message</find>
       <find>steering</find>
       <find>CMAKE_SOURCE_DIR = /home/neil/Workspace/self-driving-golf-cart/ros/src</find>
-      <find>args.host</find>
       <find>self.hud.noti</find>
       <find>toggle_recording</find>
+      <find>args.safe</find>
+      <find>args.host</find>
+      <find>args.</find>
     </findStrings>
     <replaceStrings>
       <replace>configs</replace>
       <replace>simulation</replace>
       <replace>&quot;&quot;&quot;</replace>
+      <replace>host</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -203,12 +187,12 @@
         <option value="$PROJECT_DIR$/docs/build/html/_static/jquery-3.2.1.js" />
         <option value="$PROJECT_DIR$/ros/src/simulation/scripts/launch_carla.sh" />
         <option value="$PROJECT_DIR$/ros/src/simulation/README.md" />
-        <option value="$PROJECT_DIR$/ros/src/simulation/launch/carla_client.launch" />
         <option value="$PROJECT_DIR$/ros/src/simulation/scripts/camera.py" />
-        <option value="$PROJECT_DIR$/ros/src/simulation/scripts/manual_control.py" />
-        <option value="$PROJECT_DIR$/ros/src/simulation/scripts/spawn_npc.py" />
         <option value="$PROJECT_DIR$/ros/src/simulation/launch/carla_client_with_rviz.launch" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/ros/src/simulation/launch/carla_client.launch" />
+        <option value="$PROJECT_DIR$/ros/src/simulation/scripts/spawn_npc.py" />
+        <option value="$PROJECT_DIR$/ros/src/simulation/scripts/manual_control.py" />
       </list>
     </option>
   </component>
@@ -248,14 +232,6 @@
               <item name="ros" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="simulation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
-              <item name="ros" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="simulation" type="462c0819:PsiDirectoryNode" />
-              <item name="launch" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
@@ -387,12 +363,13 @@
       <workItem from="1545787108412" duration="3537000" />
       <workItem from="1545870519181" duration="6357000" />
       <workItem from="1545884606770" duration="605000" />
-      <workItem from="1545928995642" duration="2351000" />
+      <workItem from="1545928995642" duration="4607000" />
+      <workItem from="1545969135925" duration="650000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31399000" />
+    <option name="totallyTimeSpent" value="34305000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -405,9 +382,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="27" width="1543" height="873" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5096525" visible="true" weight="0.21175684" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5096525" visible="true" weight="0.21442886" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32702702" />
@@ -418,7 +394,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.34054053" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3391892" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Python Console" order="12" />
@@ -697,16 +673,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/autopilot/scripts/visualization/testing_visualizer.py" />
     <entry file="file://$PROJECT_DIR$/ros/src/autopilot/scripts/visualization/dataset_viz.py" />
-    <entry file="file://$PROJECT_DIR$/ros/src/simulation/launch/carla_client.launch">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1875">
+            <caret line="134" column="19" selection-start-line="134" selection-start-column="19" selection-end-line="134" selection-end-column="19" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/manual_control.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="400">
+          <caret line="664" column="11" selection-start-line="664" selection-start-column="11" selection-end-line="664" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/simulation/launch/carla_client_with_rviz.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/camera.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
+        <state relative-caret-position="3870">
           <caret line="270" column="22" selection-start-line="270" selection-start-column="22" selection-end-line="270" selection-end-column="22" />
           <folding>
             <element signature="e#160#190#0" expanded="true" />
@@ -716,35 +709,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/spawn_npc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
+        <state relative-caret-position="465">
+          <caret line="33" column="15" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/manual_control.py">
+    <entry file="file://$PROJECT_DIR$/ros/src/simulation/launch/carla_client.launch">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="355" column="3" selection-start-line="355" selection-start-column="3" selection-end-line="355" selection-end-column="3" />
-          <folding>
-            <element signature="e#1049#1086#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/simulation/launch/carla_client_with_rviz.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="239">
-            <caret line="134" column="19" selection-start-line="134" selection-start-column="19" selection-end-line="134" selection-end-column="19" />
-          </first_editor>
-          <second_editor />
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>

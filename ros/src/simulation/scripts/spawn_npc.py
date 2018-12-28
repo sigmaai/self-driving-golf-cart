@@ -29,47 +29,22 @@ import time
 
 def main():
 
-    argparser = argparse.ArgumentParser(
-        description=__doc__)
-    argparser.add_argument(
-        '--host',
-        metavar='H',
-        default='127.0.0.1',
-        help='IP of the host server (default: 127.0.0.1)')
-    argparser.add_argument(
-        '-p', '--port',
-        metavar='P',
-        default=2000,
-        type=int,
-        help='TCP port to listen to (default: 2000)')
-    argparser.add_argument(
-        '-n', '--number-of-vehicles',
-        metavar='N',
-        default=20,
-        type=int,
-        help='number of vehicles (default: 20)')
-    argparser.add_argument(
-        '-d', '--delay',
-        metavar='D',
-        default=2.0,
-        type=float,
-        help='delay in seconds between spawns (default: 2.0)')
-    argparser.add_argument(
-        '--safe',
-        action='store_true',
-        help='avoid spawning vehicles prone to accidents')
-    args = argparser.parse_args()
+    port = 2000
+    number_of_vehicles = 30
+    delay = 2.0
+    host = "127.0.0.1"
+    safe = True
 
     actor_list = []
 
     try:
 
-        client = carla.Client(args.host, args.port)
+        client = carla.Client(host, port)
         client.set_timeout(2.0)
         world = client.get_world()
         blueprints = world.get_blueprint_library().filter('vehicle.*')
 
-        if args.safe:
+        if safe:
             blueprints = [x for x in blueprints if int(x.get_attribute('number_of_wheels')) == 4]
             blueprints = [x for x in blueprints if not x.id.endswith('isetta')]
 
@@ -93,7 +68,7 @@ def main():
 
         print('found %d spawn points.' % len(spawn_points))
 
-        count = args.number_of_vehicles
+        count = number_of_vehicles
 
         for spawn_point in spawn_points:
             if try_spawn_random_vehicle_at(spawn_point):
@@ -102,11 +77,11 @@ def main():
                 break
 
         while count > 0:
-            time.sleep(args.delay)
+            time.sleep(delay)
             if try_spawn_random_vehicle_at(random.choice(spawn_points)):
                 count -= 1
 
-        print('spawned %d vehicles, press Ctrl+C to exit.' % args.number_of_vehicles)
+        print('spawned %d vehicles, press Ctrl+C to exit.' % number_of_vehicles)
 
         while True:
             time.sleep(10)
