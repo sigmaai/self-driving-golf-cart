@@ -43,13 +43,15 @@ You should see this screen pop up.
 🚙 Bon Voyage 😀
 
 # ROS
-This project uses ROS. The launch files will launch the neccesary nodes as well as rviz for visualization. For more information on ROS, nodes, topics and others please refer to the [README](./ros/src/README.md) in the `./src` directory. 
+This project uses ROS. The launch files will launch the neccesary nodes as well as rviz for visualization. __For more information on ROS, nodes, topics and others please refer to the ROS [README](./ros/README.md).__
 
 
 # Simulation
 (🏗 Construction Zone 🚧)
 
 Building a self-driving car is hard. Not everyone has access to expensive hardware. I am currently trying to integrate this project with the CARLA self-driving simulator. If you are interested in CARLA, please refer to this [documentation](./ros/src/simulation/README.md). The ROS system in this project can *partially* run on the CARLA simulator. 
+
+__If you want to try out the simulator, please refer to the documentation [here](./ros/src/simulation/README.md).__
 
 <center>
     <img src="./ros/src/simulation/assets/simulator-1.png" alt="Drawing" width="640"/>

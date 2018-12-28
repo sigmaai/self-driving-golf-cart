@@ -6,6 +6,23 @@ Here is a list of packages. Underneath each package are nodes in that package.
 
 ------------------------------
 
+### simulation
+The major purpose of the simulation package is to connect our self-driving system to CARLA simulator. To run the package, please refer to the documentation [here](./src/simulation/README.md).
+
+The simulation package can also run simulated camera inputs using the `camera_sim_node`
+
+#### Nodes:
+- `carla_client`
+- `camera_sim_node`
+
+#### Launch Files:
+- `carla_client.launch`
+- `carla_client_with_rviz.launch`
+- `carla_client_with_rqt.launch`
+- `start_camera_sim.launch`
+
+------------------------------
+
 ### autopilot
 The autopilot node is the brain of the self-driving car. It uses end-to-end
 deep learning to predict the steering, acceleration and braking commands of 

@@ -9,8 +9,6 @@ does not work out of the box with the ROS bridge.
 
 ![rviz setup](./assets/simulator-1.png "rviz")
 
-
-
 ![depthcloud](./assets/simulator-2.png "depthcloud")
 
 # Features
@@ -22,7 +20,12 @@ does not work out of the box with the ROS bridge.
 - [x] Marker/bounding box messages for cars/pedestrian
 - [x] Lidar sensor support
 
+# General System Diagram
+![Image](./assets/self-driving-golf-cart-flow-chart-sim.jpg)
+
 # How to Run CARLA & the Simulation Package
+
+Please follow the instructions to run the self-driving software with ROS and CARLA.
 
 ## 1. Setting Up:
 
@@ -39,7 +42,8 @@ At this point, you should have downloaded the compiled version of the CARLA simu
     sudo easy_install <path/to/carla/>/PythonAPI/<your_egg_file>
 
 Just as an example, for me, the command is this:
-​    sudo easy_install '/home/neil/carla/PythonAPI/carla-0.9.2-py2.7-linux-x86_64.egg'
+
+	sudo easy_install '/home/neil/carla/PythonAPI/carla-0.9.2-py2.7-linux-x86_64.egg'
 
 Please note that you have to put in the complete path to the egg-file including the egg-file itself. Please use the one, that is supported by your Python version. Depending on the type of CARLA (pre-build, or build from source), the egg files are typically located either directly in the PythonAPI folder or in PythonAPI/dist.
 
