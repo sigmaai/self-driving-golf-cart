@@ -21,7 +21,10 @@ does not work out of the box with the ROS bridge.
 - [x] Lidar sensor support
 
 # General System Diagram
-![Image](./assets/self-driving-golf-cart-flow-chart-sim.jpg)
+
+<center>
+<img src="./assets/self-driving-golf-cart-flow-chart-sim.jpg" alt="drawing" width="300"/>
+</center>
 
 # How to Run CARLA & the Simulation Package
 
