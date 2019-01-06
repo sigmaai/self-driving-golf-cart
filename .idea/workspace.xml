@@ -2,38 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8075d57d-0c29-4084-b018-ee8c503d1889" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/ros/src/driver/launch/serial.launch" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ros/src/arduino/linear_actuator_controller/linear_actuator_controller.ino" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/arduino/linear_actuator_controller/linear_actuator_controller.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/autopilot/scripts/autopilot_node" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/autopilot_node" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joy/CHANGELOG.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joy/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joy/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joy/config/ps4joy.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joy/launch/ps4joy.launch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joy/mainpage.dox" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joy/migration_rules/Joy.bmr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joy/package.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joy/scripts/joy_remap.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joy/src/joy_node.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joy/test/saved/Joy.saved" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joy/test/test_joy_msg_migration.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joystick_drivers/CHANGELOG.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joystick_drivers/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joystick_drivers/package.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/ps3joy/CHANGELOG.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/ps3joy/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/ps3joy/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/ps3joy/diagnostics.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/ps3joy/doc/bluetooth_devices.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/ps3joy/doc/testing.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/ps3joy/doc/troubleshooting.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/ps3joy/launch/ps3.launch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/ps3joy/package.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/ps3joy/scripts/ps3joy.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/ps3joy/scripts/ps3joy_node.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/ps3joy/scripts/ps3joysim.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/ps3joy/src/sixpair.c" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +37,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ros/src/autopilot/scripts/autopilot_node">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state relative-caret-position="660">
               <caret line="52" column="57" selection-start-line="52" selection-start-column="57" selection-end-line="52" selection-end-column="57" />
               <folding>
                 <element signature="e#186#209#0" expanded="true" />
@@ -79,37 +50,34 @@
         <entry file="file://$PROJECT_DIR$/ros/src/sensors/joystick/launch/joystick.launch">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ros/src/sensors/joystick/scripts/input_switch.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="33" column="10" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ros/src/sensors/joystick/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="195">
-                <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
-              </first_editor>
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/ros/src/sensors/joystick/scripts/input_switch.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ros/src/autopilot/scripts/visualization/visualization.py">
+        <entry file="file://$PROJECT_DIR$/ros/src/driver/launch/drive.launch">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="204" selection-start-line="204" selection-end-line="209" selection-end-column="12" />
+            <state relative-caret-position="180">
+              <caret line="21" column="62" lean-forward="true" selection-start-line="21" selection-start-column="62" selection-end-line="21" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ros/src/driver/launch/serial.launch">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -172,7 +140,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim_node" />
         <option value="$PROJECT_DIR$/ros/src/segmentation/scripts/utils.py" />
         <option value="$PROJECT_DIR$/ros/src/segmentation/scripts/preprocess_dataset.py" />
         <option value="$PROJECT_DIR$/ros/src/segmentation/msg/SegmentationResult.msg" />
@@ -223,10 +190,11 @@
         <option value="$PROJECT_DIR$/ros/src/sensors/joystick/launch/joystick.launch" />
         <option value="$PROJECT_DIR$/ros/src/sensors/joystick/scripts/input_switch.py" />
         <option value="$PROJECT_DIR$/ros/src/sensors/joystick/README.md" />
+        <option value="$PROJECT_DIR$/ros/src/driver/launch/serial.launch" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="57" />
     <option name="y" value="27" />
     <option name="width" value="1543" />
@@ -261,6 +229,21 @@
               <item name="ros" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="autopilot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
+              <item name="ros" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="driver" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
+              <item name="ros" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="driver" type="462c0819:PsiDirectoryNode" />
+              <item name="launch" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
@@ -427,11 +410,13 @@
       <workItem from="1546655387167" duration="2225000" />
       <workItem from="1546736197819" duration="1441000" />
       <workItem from="1546739819728" duration="1327000" />
+      <workItem from="1546790897557" duration="749000" />
+      <workItem from="1546791738911" duration="1829000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40233000" />
+    <option name="totallyTimeSpent" value="42811000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -443,10 +428,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="57" y="27" width="1543" height="873" extended-state="0" />
+    <frame x="57" y="27" width="1543" height="873" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5096525" visible="true" weight="0.23179692" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5096525" visible="true" weight="0.23847695" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32702702" />
@@ -457,7 +442,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4995015" weight="0.3391892" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4995015" visible="true" weight="0.3391892" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50049853" side_tool="true" weight="0.33847636" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Python Console" order="12" />
@@ -473,8 +458,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ros/src/simulation/src/carla_ros_bridge/bridge_with_rosbag.py" />
-    <entry file="file://$PROJECT_DIR$/ros/src/simulation/src/carla_ros_bridge/bridge.py" />
     <entry file="file://$PROJECT_DIR$/ros/src/simulation/setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -615,11 +598,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joy/config/ps4joy.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-159" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joy/config/ps4joy.yaml" />
     <entry file="file://$PROJECT_DIR$/ros/src/autopilot/launch/autopilot.launch">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -643,16 +622,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/sensors/joystick_drivers/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="90">
-            <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/sensors/joystick_drivers/README.md" />
     <entry file="file://$PROJECT_DIR$/ros/src/detection/object_detection/scripts/object_detection_node">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="111">
@@ -663,33 +633,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joy/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joy/package.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joy/launch/ps4joy.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joy/scripts/joy_remap.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1770">
-          <caret line="118" column="32" lean-forward="true" selection-start-line="118" selection-start-column="32" selection-end-line="118" selection-end-column="32" />
-          <folding>
-            <element signature="e#105#115#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joy/CMakeLists.txt" />
+    <entry file="file://$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joy/package.xml" />
+    <entry file="file://$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joy/launch/ps4joy.launch" />
+    <entry file="file://$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joy/scripts/joy_remap.py" />
     <entry file="file:///opt/ros/melodic/lib/python2.7/dist-packages/std_msgs/msg/_Bool.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -704,58 +651,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joy/src/joy_node.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="83" column="31" selection-start-line="83" selection-start-column="28" selection-end-line="83" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joy/launch/joystick.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joy/scripts/input_switch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#1#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joy/src/joy_node.cpp" />
+    <entry file="file://$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joy/launch/joystick.launch" />
+    <entry file="file://$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joy/scripts/input_switch.py" />
     <entry file="file://$PROJECT_DIR$/ros/src/autopilot/scripts/visualization/visualization.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
           <caret line="204" selection-start-line="204" selection-end-line="209" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/sensors/joystick/launch/joystick.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/autopilot/scripts/autopilot_node">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="52" column="57" selection-start-line="52" selection-start-column="57" selection-end-line="52" selection-end-column="57" />
-          <folding>
-            <element signature="e#186#209#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/sensors/joystick/scripts/input_switch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="33" column="10" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -766,6 +668,44 @@
             <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/autopilot/scripts/autopilot_node">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="52" column="57" selection-start-line="52" selection-start-column="57" selection-end-line="52" selection-end-column="57" />
+          <folding>
+            <element signature="e#186#209#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/sensors/joystick/launch/joystick.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/driver/launch/serial.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/driver/launch/drive.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="21" column="62" lean-forward="true" selection-start-line="21" selection-start-column="62" selection-end-line="21" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/sensors/joystick/scripts/input_switch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>

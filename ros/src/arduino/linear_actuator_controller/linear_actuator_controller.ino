@@ -4,13 +4,6 @@
 // (c) Yongyang Nie, All rights reserved
 //
 
-
-#if defined(ARDUINO) && ARDUINO >= 100
-#include "Arduino.h"
-#else
-#include <WProgram.h>
-#endif
-
 #include <ros.h>
 #include <std_msgs/Float32.h>
 #include <std_msgs/Bool.h>
@@ -21,14 +14,14 @@
 #define M_PI 3.14159265359
 #define THRESHOLD 0.5
 
-#define la_max 1000
-#define la_min 10
-#define encoder_a 2
-#define encoder_b 3
+#define la_max 1023
+#define la_min 90
+#define pot_pin 0
 
 unsigned long count;      // count for encode *might have duplicate variables
 double pos = 0.0;         // steering position
-boolean joystick_enabled;
+boolean joystick_enabled = true;
+float cmd_val = 0.0;
 
 ros::NodeHandle nh;
 
@@ -37,19 +30,21 @@ ros::NodeHandle nh;
 void steering_callback( const std_msgs::Float32& cmd_msg) {
 
   if (!joystick_enabled) {
-    float cmd_val = map(cmd_msg.data, -1, 1, la_min, la_max);
-    steering(cmd_val);
+    float cmd = map(cmd_msg.data, -1, 1, la_min, la_max);
+    // steering(cmd);
   }
 }
 
 void joystick_callback( const sensor_msgs::Joy& cmd_msg) {
-  
-  if (joystick_enabled) {
+
+  //if (joystick_enabled) {
     float *axes = cmd_msg.axes;
     // int buttons[10] = cmd_msg.buttons;
-    float cmd_val = map(axes[0], -1, 1, la_min, la_max);
-    steering(cmd_val);
-  }
+    float cmd = axes[0];
+    // float cmd = map(axes[0], -1, 1, la_min, la_max);
+    cmd_val = cmd;
+    // steering(cmd);
+  //}
 }
 
 void joystick_enabled_callback( const std_msgs::Bool& cmd_msg) {
@@ -60,6 +55,9 @@ ros::Subscriber<std_msgs::Float32> sub1("/vehicle/dbw/steering_cmds/", steering_
 ros::Subscriber<sensor_msgs::Joy> sub2("/sensor/joystick/joy", joystick_callback);
 ros::Subscriber<std_msgs::Bool> sub3("/sensor/joystick/enabled", joystick_enabled_callback);
 
+std_msgs::Float32 pos_msg;
+ros::Publisher pos_pub("/sensor/vehicle/steering/actuator_position", &pos_msg);
+
 void setup() {
 
   nh.initNode();
@@ -67,28 +65,23 @@ void setup() {
   nh.subscribe(sub2);
   nh.subscribe(sub3);
 
-  //setup encoder
-  attachInterrupt(0, encoderPinChangeA, CHANGE);
-  attachInterrupt(1, encoderPinChangeB, CHANGE);
-
+  nh.advertise(pos_pub);
+  
   //setup motor
   pinMode(RPWM, OUTPUT);
   pinMode(LPWM, OUTPUT);
-
-  Serial.begin(9600);
 
   pos = 0.0;
 }
 
 void loop() {
+  
+  pos = analogRead(pot_pin);
+
+  pos_msg.data = pos;
+  pos_pub.publish(&pos_msg);
+
   nh.spinOnce();
-
-  Serial.print("Current Position: ");
-  Serial.println(pos);
-  Serial.print("Joystick Enabled: ");
-  Serial.println(joystick_enabled);
-  Serial.println("-----------------");
-
   delay(1);
 }
 
@@ -116,14 +109,6 @@ void steering(double angle) {
   pos = count;
 }
 
-// BEGIN ---- Linear Actuator Encoder Interrupt ----------------------
-void encoderPinChangeA() {
-  count += digitalRead(encoder_a) == digitalRead(encoder_b) ? -1 : 1;
-}
-
-void encoderPinChangeB() {
-  count += digitalRead(encoder_a) != digitalRead(encoder_b) ? -1 : 1;
-}
 
 // END ------ Linear Actuator Encoder Interrupt ----------------------
 
