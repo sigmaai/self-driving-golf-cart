@@ -28,28 +28,31 @@
 
 unsigned long count;      // count for encode *might have duplicate variables
 double pos = 0.0;         // steering position
-float steering_value;     // steering value
 boolean joystick_enabled;
 
 ros::NodeHandle nh;
 
 // the ros callback methods must be declared before the ros subscriber statement.
 
-void steering_callback( const std_msgs::Float32& cmd_msg){
+void steering_callback( const std_msgs::Float32& cmd_msg) {
 
-  // int buttons[10] = cmd_msg.buttons;
-  float cmd_val = map(cmd_msg.data, -1, 1, la_min, la_max);
-  steering(cmd_val);
+  if (!joystick_enabled) {
+    float cmd_val = map(cmd_msg.data, -1, 1, la_min, la_max);
+    steering(cmd_val);
+  }
 }
 
 void joystick_callback( const sensor_msgs::Joy& cmd_msg) {
-  float *axes = cmd_msg.axes;
-  // int buttons[10] = cmd_msg.buttons;
-  float cmd_val = map(axes[0], -1, 1, la_min, la_max);
-  steering(cmd_val);
+  
+  if (joystick_enabled) {
+    float *axes = cmd_msg.axes;
+    // int buttons[10] = cmd_msg.buttons;
+    float cmd_val = map(axes[0], -1, 1, la_min, la_max);
+    steering(cmd_val);
+  }
 }
 
-void joystick_enabled_callback( const std_msgs::Bool& cmd_msg){  
+void joystick_enabled_callback( const std_msgs::Bool& cmd_msg) {
   joystick_enabled = cmd_msg.data;
 }
 
@@ -67,23 +70,32 @@ void setup() {
   //setup encoder
   attachInterrupt(0, encoderPinChangeA, CHANGE);
   attachInterrupt(1, encoderPinChangeB, CHANGE);
-  
+
   //setup motor
   pinMode(RPWM, OUTPUT);
   pinMode(LPWM, OUTPUT);
-  
+
+  Serial.begin(9600);
+
   pos = 0.0;
 }
 
 void loop() {
   nh.spinOnce();
+
+  Serial.print("Current Position: ");
+  Serial.println(pos);
+  Serial.print("Joystick Enabled: ");
+  Serial.println(joystick_enabled);
+  Serial.println("-----------------");
+
   delay(1);
 }
 
 // This method MAY BE WRONG
 void steering(double angle) {
 
-  while (1) {
+  while (true) {
     if (angle > 0) {
       if (count > angle) {
         stop_actuator();
