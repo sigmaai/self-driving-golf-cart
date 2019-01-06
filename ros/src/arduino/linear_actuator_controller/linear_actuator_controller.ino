@@ -13,45 +13,66 @@
 
 #include <ros.h>
 #include <std_msgs/Float32.h>
+#include <std_msgs/Bool.h>
+#include <sensor_msgs/Joy.h>
 
 #define RPWM 7
 #define LPWM 6
-#define LEN 6 //length of the actual message
-// #define FPS 1
 #define M_PI 3.14159265359
 #define THRESHOLD 0.5
 
-unsigned long count; //count for encode
-double pos = 0.0; //steering position
-float steering_value; //steering value
-boolean dir; //steering direction
+#define la_max 1000
+#define la_min 10
+#define encoder_a 2
+#define encoder_b 3
 
-//function when receive encoder interrupt
-const int encoder_a = 2; // Green - pin 2 - Digital
-const int encoder_b = 3; // White - pin 3 - Digital
+unsigned long count;      // count for encode *might have duplicate variables
+double pos = 0.0;         // steering position
+float steering_value;     // steering value
+boolean joystick_enabled;
 
 ros::NodeHandle nh;
 
-void steering_callback( const std_msgs::Float32& cmd_msg) {
-  float angle = cmd_msg.data;
-  steering(angle);
+// the ros callback methods must be declared before the ros subscriber statement.
+
+void steering_callback( const std_msgs::Float32& cmd_msg){
+
+  // int buttons[10] = cmd_msg.buttons;
+  float cmd_val = map(cmd_msg.data, -1, 1, la_min, la_max);
+  steering(cmd_val);
 }
 
-ros::Subscriber<std_msgs::Float32> sub("/vehicle/dbw/steering_cmds/", steering_callback);
+void joystick_callback( const sensor_msgs::Joy& cmd_msg) {
+  float *axes = cmd_msg.axes;
+  // int buttons[10] = cmd_msg.buttons;
+  float cmd_val = map(axes[0], -1, 1, la_min, la_max);
+  steering(cmd_val);
+}
+
+void joystick_enabled_callback( const std_msgs::Bool& cmd_msg){  
+  joystick_enabled = cmd_msg.data;
+}
+
+ros::Subscriber<std_msgs::Float32> sub1("/vehicle/dbw/steering_cmds/", steering_callback);
+ros::Subscriber<sensor_msgs::Joy> sub2("/sensor/joystick/joy", joystick_callback);
+ros::Subscriber<std_msgs::Bool> sub3("/sensor/joystick/enabled", joystick_enabled_callback);
 
 void setup() {
 
   nh.initNode();
-  nh.subscribe(sub);
+  nh.subscribe(sub1);
+  nh.subscribe(sub2);
+  nh.subscribe(sub3);
 
   //setup encoder
   attachInterrupt(0, encoderPinChangeA, CHANGE);
   attachInterrupt(1, encoderPinChangeB, CHANGE);
+  
   //setup motor
   pinMode(RPWM, OUTPUT);
   pinMode(LPWM, OUTPUT);
+  
   pos = 0.0;
-  dir = 0;
 }
 
 void loop() {
@@ -59,30 +80,31 @@ void loop() {
   delay(1);
 }
 
+// This method MAY BE WRONG
 void steering(double angle) {
 
   while (1) {
     if (angle > 0) {
-      if (getRadian(count) > angle) {
-        st();
+      if (count > angle) {
+        stop_actuator();
         break;
       }
       else
-        mv(255, 0);
+        move_actuator(255, 0);
 
     } else {
-      if (getRadian(count) < angle) {
-        st();
+      if (count < angle) {
+        stop_actuator();
         break;
       }
       else
-        mv(255, 1);
+        move_actuator(255, 1);
     }
   }
-
-  pos = getRadian(count);
+  pos = count;
 }
 
+// BEGIN ---- Linear Actuator Encoder Interrupt ----------------------
 void encoderPinChangeA() {
   count += digitalRead(encoder_a) == digitalRead(encoder_b) ? -1 : 1;
 }
@@ -91,12 +113,11 @@ void encoderPinChangeB() {
   count += digitalRead(encoder_a) != digitalRead(encoder_b) ? -1 : 1;
 }
 
-//turn encoder count to radian value
-double getRadian(int c) {
-  return (double)c * 0.6428571429 * (M_PI / 180.0);
-}
+// END ------ Linear Actuator Encoder Interrupt ----------------------
 
-void mv(int spd, boolean dir) {
+// BEGIN ---- Helper Methods  ----------------------------------------
+
+void move_actuator(int spd, boolean dir) {
   if (dir) {
     analogWrite(LPWM, 0);
     analogWrite(RPWM, spd);
@@ -106,8 +127,11 @@ void mv(int spd, boolean dir) {
   }
 }
 
-void st() {
+void stop_actuator() {
   analogWrite(LPWM, 0);
   analogWrite(RPWM, 0);
   delay(10);
 }
+
+// END ------ Helper Methods  ----------------------------------------
+

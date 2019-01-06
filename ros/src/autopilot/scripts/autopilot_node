@@ -8,12 +8,15 @@
 #
 
 from pilot import Pilot
+
 import rospy
-from sensor_msgs.msg import Image
 from std_msgs.msg import Float32
+from sensor_msgs.msg import Image
 from cv_bridge import CvBridge, CvBridgeError
+
 import tensorflow as tf
 from keras.backend.tensorflow_backend import set_session
+
 
 class AutoPilotNode:
 
@@ -49,7 +52,7 @@ class AutoPilotNode:
 
         steering_pub = rospy.Publisher('/vehicle/dbw/steering_cmds/', Float32, queue_size=5)
         accel_pub = rospy.Publisher('/vehicle/dbw/cruise_cmds/', Float32, queue_size=5)
-        rate = rospy.Rate(15)
+        rate = rospy.Rate(24)
 
         while not rospy.is_shutdown():
             if self.current_frame is not None:

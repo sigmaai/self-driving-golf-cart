@@ -1,0 +1,11 @@
+
+<launch>
+    <!-- assumes ds4drv is running -->
+    <node name="joy_node" pkg="joy" type="joy_node">
+
+    </node>
+    <!-- remap joy to emulate ps3joy mappings -->
+    <node name="input_switch" pkg="joy" type="input_switch.py" output="screen">
+    </node>
+
+</launch>

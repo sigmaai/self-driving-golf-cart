@@ -185,8 +185,8 @@ public:
 
     // Parameters
     ros::NodeHandle nh_param("~");
-    pub_ = nh_.advertise<sensor_msgs::Joy>("joy", 1);
-    ros::Subscriber sub = nh_.subscribe("joy/set_feedback", 10, &Joystick::set_feedback, this);
+    pub_ = nh_.advertise<sensor_msgs::Joy>("/sensor/joystick/joy", 1);
+    ros::Subscriber sub = nh_.subscribe("/sensor/joystick/set_feedback", 10, &Joystick::set_feedback, this);
     nh_param.param<std::string>("dev", joy_dev_, "/dev/input/js0");
     nh_param.param<std::string>("dev_ff", joy_def_ff_, "/dev/input/by-id/usb-Sony_PLAYSTATION_R_3_Controller-event-joystick");
     nh_param.param<std::string>("dev_name", joy_dev_name_, "");
