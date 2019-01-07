@@ -37,7 +37,7 @@ void steering_callback( const std_msgs::Float32& cmd_msg) {
 void joystick_callback( const std_msgs::Float32& cmd_msg) {
 
   if (joystick_enabled) {
-    cmd_val = cmd.data;
+    cmd_val = cmd_msg.data;
     steering(cmd_val);
   }
 }
@@ -47,7 +47,7 @@ void joystick_enabled_callback( const std_msgs::Bool& cmd_msg) {
 }
 
 ros::Subscriber<std_msgs::Float32> sub1("/vehicle/dbw/steering_cmds/", steering_callback);
-ros::Subscriber<std_msgs::Float32> sub2("/sensor/joystick/joy/left_stick_x", joystick_callback);
+ros::Subscriber<std_msgs::Float32> sub2("/sensor/joystick/left_stick_x", joystick_callback);
 ros::Subscriber<std_msgs::Bool> sub3("/sensor/joystick/enabled", joystick_enabled_callback);
 
 std_msgs::Float32 pos_msg;
@@ -75,7 +75,6 @@ void loop() {
 
   pos_msg.data = pos;
   pos_pub.publish(&pos_msg);
-
   nh.spinOnce();
   delay(5);
 }

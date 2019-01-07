@@ -12,3 +12,6 @@ Message Type: `Bool`
  
 The purpose of this is to switch between manual input and autonomous input. If joystick is disabled, the
 vehicle automatically listens to autonomous inputs. 
+
+min 190
+max 680

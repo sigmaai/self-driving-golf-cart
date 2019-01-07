@@ -39,6 +39,6 @@ class SelectiveOutput(object):
 if __name__ == "__main__":
 
     try:
-        InputSwitch()
+        SelectiveOutput()
     except rospy.ROSInterruptException:
         pass
