@@ -7,7 +7,6 @@
 #include <ros.h>
 #include <std_msgs/Float32.h>
 #include <std_msgs/Bool.h>
-#include <sensor_msgs/Joy.h>
 
 #define RPWM 7
 #define LPWM 6
@@ -30,21 +29,17 @@ ros::NodeHandle nh;
 void steering_callback( const std_msgs::Float32& cmd_msg) {
 
   if (!joystick_enabled) {
-    float cmd = map(cmd_msg.data, -1, 1, la_min, la_max);
+    // float cmd = map(cmd_msg.data, -1, 1, la_min, la_max);
     // steering(cmd);
   }
 }
 
-void joystick_callback( const sensor_msgs::Joy& cmd_msg) {
+void joystick_callback( const std_msgs::Float32& cmd_msg) {
 
-  //if (joystick_enabled) {
-    float *axes = cmd_msg.axes;
-    // int buttons[10] = cmd_msg.buttons;
-    float cmd = axes[0];
-    // float cmd = map(axes[0], -1, 1, la_min, la_max);
-    cmd_val = cmd;
-    // steering(cmd);
-  //}
+  if (joystick_enabled) {
+    cmd_val = cmd.data;
+    steering(cmd_val);
+  }
 }
 
 void joystick_enabled_callback( const std_msgs::Bool& cmd_msg) {
@@ -52,7 +47,7 @@ void joystick_enabled_callback( const std_msgs::Bool& cmd_msg) {
 }
 
 ros::Subscriber<std_msgs::Float32> sub1("/vehicle/dbw/steering_cmds/", steering_callback);
-ros::Subscriber<sensor_msgs::Joy> sub2("/sensor/joystick/joy", joystick_callback);
+ros::Subscriber<std_msgs::Float32> sub2("/sensor/joystick/joy/left_stick_x", joystick_callback);
 ros::Subscriber<std_msgs::Bool> sub3("/sensor/joystick/enabled", joystick_enabled_callback);
 
 std_msgs::Float32 pos_msg;
@@ -82,31 +77,19 @@ void loop() {
   pos_pub.publish(&pos_msg);
 
   nh.spinOnce();
-  delay(1);
+  delay(5);
 }
 
 // This method MAY BE WRONG
-void steering(double angle) {
+void steering(double input) {
 
-  while (true) {
-    if (angle > 0) {
-      if (count > angle) {
-        stop_actuator();
-        break;
-      }
-      else
-        move_actuator(255, 0);
-
-    } else {
-      if (count < angle) {
-        stop_actuator();
-        break;
-      }
-      else
-        move_actuator(255, 1);
-    }
+  if (input > 0){
+    move_actuator(255, 0);
+  }else if (input < 0){
+    move_actuator(255, 1);
+  }else{
+    stop_actuator();
   }
-  pos = count;
 }
 
 

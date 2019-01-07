@@ -8,4 +8,7 @@
     <node name="input_switch" pkg="joy" type="input_switch.py" output="screen">
     </node>
 
+    <node name="selective_output" pkg="joy" type="selective_output.py" output="screen">
+    </node>
+
 </launch>
