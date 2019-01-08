@@ -13,8 +13,8 @@
 #define M_PI 3.14159265359
 #define THRESHOLD 0.5
 
-#define la_max 1023
-#define la_min 90
+#define la_max 680
+#define la_min 190 
 #define pot_pin 0
 
 unsigned long count;      // count for encode *might have duplicate variables
@@ -72,7 +72,7 @@ void setup() {
 void loop() {
   
   pos = analogRead(pot_pin);
-
+  
   pos_msg.data = pos;
   pos_pub.publish(&pos_msg);
   nh.spinOnce();
@@ -82,9 +82,9 @@ void loop() {
 // This method MAY BE WRONG
 void steering(double input) {
 
-  if (input > 0){
+  if (input > 0 && pos > la_min ){
     move_actuator(255, 0);
-  }else if (input < 0){
+  }else if (input < 0 && pos < la_max){
     move_actuator(255, 1);
   }else{
     stop_actuator();
