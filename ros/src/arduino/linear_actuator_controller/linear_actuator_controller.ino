@@ -13,8 +13,8 @@
 #define M_PI 3.14159265359
 #define THRESHOLD 0.5
 
-#define la_max 680
-#define la_min 190 
+#define la_max 700
+#define la_min 195 
 #define pot_pin 0
 
 unsigned long count;      // count for encode *might have duplicate variables
@@ -82,9 +82,9 @@ void loop() {
 // This method MAY BE WRONG
 void steering(double input) {
 
-  if (input > 0 && pos > la_min ){
+  if (input > 0 && pos < la_max){
     move_actuator(255, 0);
-  }else if (input < 0 && pos < la_max){
+  }else if (input < 0 && pos > la_min){
     move_actuator(255, 1);
   }else{
     stop_actuator();

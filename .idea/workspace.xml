@@ -12,10 +12,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/self_driving_golf_cart$steering_hardware_test.coverage" NAME="steering_hardware_test Coverage Results" MODIFIED="1527345476126" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/steering_control/scripts" />
     <SUITE FILE_PATH="coverage/self_driving_golf_cart$dataset_viz.coverage" NAME="dataset_viz Coverage Results" MODIFIED="1528036322222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/steering_control/scripts/visualization" />
-    <SUITE FILE_PATH="coverage/self_driving_golf_cart$train.coverage" NAME="train Coverage Results" MODIFIED="1527861816681" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/steering_control/scripts" />
+    <SUITE FILE_PATH="coverage/self_driving_golf_cart$steering_hardware_test.coverage" NAME="steering_hardware_test Coverage Results" MODIFIED="1527345476126" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/steering_control/scripts" />
     <SUITE FILE_PATH="coverage/self_driving_golf_cart$validation_viz.coverage" NAME="validation_viz Coverage Results" MODIFIED="1528067368542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/steering_control/scripts" />
+    <SUITE FILE_PATH="coverage/self_driving_golf_cart$train.coverage" NAME="train Coverage Results" MODIFIED="1527861816681" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/steering_control/scripts" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -68,7 +68,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="210">
-                <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+                <caret line="14" selection-start-line="14" selection-end-line="14" />
               </first_editor>
               <second_editor />
             </state>
@@ -205,7 +205,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="26" />
     <option name="width" value="1440" />
     <option name="height" value="874" />
@@ -215,7 +215,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -238,6 +237,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -370,11 +370,12 @@
       <workItem from="1546822510606" duration="696000" />
       <workItem from="1546901302215" duration="69000" />
       <workItem from="1546959174660" duration="7000" />
+      <workItem from="1546992355187" duration="602000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43583000" />
+    <option name="totallyTimeSpent" value="44185000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -386,9 +387,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="26" width="1440" height="874" extended-state="6" />
+    <frame x="57" y="27" width="1543" height="873" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5096525" visible="true" weight="0.23748212" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5096525" visible="true" weight="0.2244489" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32702702" />
@@ -399,7 +400,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4995015" visible="true" weight="0.33631712" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4995015" visible="true" weight="0.3364865" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50049853" side_tool="true" weight="0.33847636" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Python Console" order="12" />
@@ -413,9 +414,6 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ros/src/simulation/test/ros_bridge_client.py" />
@@ -643,7 +641,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="210">
-            <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <caret line="14" selection-start-line="14" selection-end-line="14" />
           </first_editor>
           <second_editor />
         </state>
