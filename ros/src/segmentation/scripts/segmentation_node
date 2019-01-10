@@ -49,7 +49,7 @@ class ObjectDetectionNode:
         # Get ROS parameters
         self.weight_path = rospy.get_param("/segmentation_node/weight_path")
         self.visualize = rospy.get_param("/segmentation_node/visualization")
-        self.segmentor = Segmentor(type="ENET", weight_path=self.weight_path)
+        self.segmentor = Segmentor(weight_path=self.weight_path)
 
         # Setup publishers
         segmentation_image_pub = rospy.Publisher('/segmentation/visualization/', Image, queue_size=10)
@@ -58,7 +58,7 @@ class ObjectDetectionNode:
 
         # Running ROS loop
         rospy.loginfo("Semantic Segmentation Started")
-        rospy.loginfo("v1.0.0")
+        rospy.loginfo("v1.5.0")
         while not rospy.is_shutdown():
             if self.current_frame is not None:
                 output, visualization = self.segmentor.semantic_segmentation(self.current_frame, visualize=self.visualize)
@@ -81,8 +81,8 @@ class ObjectDetectionNode:
     def convert_results_to_message(self, segmentation_output):
 
         msg = SegmentationResult()
-        msg.width = 640
-        msg.height = 360
+        msg.width = 1024
+        msg.height = 512
         msg.depth = segmentation_output.shape[2]
         for i in range(msg.depth):
             split = np.array(segmentation_output[:, :, i], dtype=np.uint8)  # must convert seg output to uint8

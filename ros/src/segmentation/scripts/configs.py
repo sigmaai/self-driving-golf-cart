@@ -5,8 +5,10 @@
 #
 
 batch_size = 8
-img_height = 360
-img_width = 640
+img_height = 512
+img_width = 1024
+nb_classes = 34
+
 learning_rate = 1e-4
 nb_epoch = 10
 
