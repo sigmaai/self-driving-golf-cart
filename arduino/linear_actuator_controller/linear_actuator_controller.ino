@@ -82,9 +82,9 @@ void loop() {
 // This method MAY BE WRONG
 void steering(double input) {
 
-  if (input > 0 && pos < la_max){
+  if (input > 0 && pos > la_min){
     move_actuator(255, 0);
-  }else if (input < 0 && pos > la_min){
+  }else if (input < 0 && pos < la_max){
     move_actuator(255, 1);
   }else{
     stop_actuator();

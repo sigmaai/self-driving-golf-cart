@@ -13,11 +13,12 @@ class InputSwitch(object):
     def __init__(self):
 
         self.enabled = False
+        #
         rospy.init_node('input_switch')
 
         rospy.Subscriber('/sensor/joystick/joy', Joy, callback=self.joystick_input_callback, queue_size=5)
         self.publisher = rospy.Publisher('/sensor/joystick/enabled', data_class=Bool, queue_size=5)
-
+        self.publisher = rospy.Publisher('/sensor/joystick/rqt_enabled', data_class=Bool, queue_size=5)
         rate = rospy.Rate(24)
 
         while not rospy.is_shutdown():
