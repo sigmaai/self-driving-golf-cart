@@ -10,17 +10,19 @@
 
 #define RPWM 7
 #define LPWM 6
-#define M_PI 3.14159265359
+#define M_PI 3.14159265358979
 #define THRESHOLD 0.5
 
 #define la_max 700
-#define la_min 195 
+#define la_min 195
+#define la_md = 415
 #define pot_pin 0
 
 unsigned long count;      // count for encode *might have duplicate variables
 double pos = 0.0;         // steering position
-boolean joystick_enabled = true;
+boolean joystick_enabled = false;
 float cmd_val = 0.0;
+float target_pos = 0.0;
 
 ros::NodeHandle nh;
 
@@ -28,9 +30,10 @@ ros::NodeHandle nh;
 
 void steering_callback( const std_msgs::Float32& cmd_msg) {
 
+  // target_pos = cmd_msg.data;
   if (!joystick_enabled) {
-    // float cmd = map(cmd_msg.data, -1, 1, la_min, la_max);
-    // steering(cmd);
+    float cmd = map(cmd_msg.data, -M_PI, M_PI, la_min, la_max);
+    target_pos = cmd;
   }
 }
 
@@ -38,7 +41,14 @@ void joystick_callback( const std_msgs::Float32& cmd_msg) {
 
   if (joystick_enabled) {
     cmd_val = cmd_msg.data;
-    steering(cmd_val);
+    if (cmd_val > 0 && pos > la_min) {
+      move_actuator(255, 0);
+      // going out 
+    } else if (cmd_val < 0 && pos < la_max) {
+      move_actuator(255, 1);
+    } else {
+      stop_actuator();
+    }
   }
 }
 
@@ -61,34 +71,37 @@ void setup() {
   nh.subscribe(sub3);
 
   nh.advertise(pos_pub);
-  
+
   //setup motor
   pinMode(RPWM, OUTPUT);
   pinMode(LPWM, OUTPUT);
 
-  pos = 0.0;
+  pos = analogRead(pot_pin);
+  target_pos = pos;
 }
 
 void loop() {
-  
+
   pos = analogRead(pot_pin);
-  
+
   pos_msg.data = pos;
   pos_pub.publish(&pos_msg);
+  
+  if (!joystick_enabled){
+
+    if (abs(pos - target_pos) > 5) {
+      if (pos < target_pos)
+        move_actuator(255, 1);
+       else if (pos > target_pos)
+        move_actuator(255, 0);
+    }
+    else {
+      stop_actuator();
+    }
+  }
+  
   nh.spinOnce();
   delay(5);
-}
-
-// This method MAY BE WRONG
-void steering(double input) {
-
-  if (input > 0 && pos > la_min){
-    move_actuator(255, 0);
-  }else if (input < 0 && pos < la_max){
-    move_actuator(255, 1);
-  }else{
-    stop_actuator();
-  }
 }
 
 
