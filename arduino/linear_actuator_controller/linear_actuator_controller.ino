@@ -4,6 +4,13 @@
 // (c) Yongyang Nie, All rights reserved
 //
 
+// IMPORTANT NOTES:
+// --------------------------------
+// RED motor wire connected to side
+// RED batt wire connected to mid
+// MOVE dir 1 is out
+// --------------------------------
+
 #include <ros.h>
 #include <std_msgs/Float32.h>
 #include <std_msgs/Bool.h>
@@ -32,7 +39,7 @@ void steering_callback( const std_msgs::Float32& cmd_msg) {
 
   // target_pos = cmd_msg.data;
   if (!joystick_enabled) {
-    float cmd = map(cmd_msg.data, -M_PI, M_PI, la_min, la_max);
+    double cmd = mapf(cmd_msg.data, -M_PI, M_PI, la_min, la_max);
     target_pos = cmd;
   }
 }
@@ -53,13 +60,18 @@ void joystick_callback( const std_msgs::Float32& cmd_msg) {
 }
 
 void joystick_enabled_callback( const std_msgs::Bool& cmd_msg) {
+  if (joystick_enabled == true){
+    target_pos = pos;
+  }
   joystick_enabled = cmd_msg.data;
 }
 
+// declare all subscribers
 ros::Subscriber<std_msgs::Float32> sub1("/vehicle/dbw/steering_cmds/", steering_callback);
 ros::Subscriber<std_msgs::Float32> sub2("/sensor/joystick/left_stick_x", joystick_callback);
 ros::Subscriber<std_msgs::Bool> sub3("/sensor/joystick/enabled", joystick_enabled_callback);
 
+// declare the publisher
 std_msgs::Float32 pos_msg;
 ros::Publisher pos_pub("/sensor/vehicle/steering/actuator_position", &pos_msg);
 
@@ -89,7 +101,7 @@ void loop() {
   
   if (!joystick_enabled){
 
-    if (abs(pos - target_pos) > 5) {
+    if (abs(pos - target_pos) > 12) {
       if (pos < target_pos)
         move_actuator(255, 1);
        else if (pos > target_pos)
@@ -123,6 +135,11 @@ void stop_actuator() {
   analogWrite(LPWM, 0);
   analogWrite(RPWM, 0);
   delay(10);
+}
+
+double mapf(double x, double in_min, double in_max, double out_min, double out_max)
+{
+    return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 
 // END ------ Helper Methods  ----------------------------------------
