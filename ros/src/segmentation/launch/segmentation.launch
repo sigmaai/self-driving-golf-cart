@@ -14,7 +14,7 @@ All Rights Reserved.
     <!--open up the camera -->
 	<node name="segmentation_node" pkg="segmentation" type="segmentation_node" output="screen">
         <param name="visualization" value="1" type="bool"/>
-        <param name="weight_path" value="$(find segmentation)/scripts/weights/icnet_large_full_059_0.752.h5"/>
+        <param name="weight_path" value="$(find segmentation)/scripts/weights/icnet_super_large_full_045_0.800.h5"/>
     </node>
 
 </launch>

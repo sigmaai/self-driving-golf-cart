@@ -10,29 +10,34 @@
 
 from models.icnet import ICNet
 import utils as utils
-import configs as configs
 import cv2
 import numpy as np
-from PIL import Image
 
 
 class Segmentor():
 
-    def __init__(self, weight_path):
+    def __init__(self, weight_path, img_width, img_height, nb_classes, disp_width, disp_height):
 
-        self.model = ICNet(width=1024, height=512, n_classes=configs.nb_classes, weight_path=weight_path, training=False)
+        self.model = ICNet(width=img_width, height=img_height, n_classes=nb_classes,
+                           weight_path=weight_path, training=False)
+
+        self.img_width = img_width
+        self.img_height = img_height
+        self.disp_width = disp_width
+        self.disp_height = disp_height
+        self.nb_classes = nb_classes
+
         print(self.model.model.summary())
         self.backgrounds = self.load_color_backgrounds()
 
-    @staticmethod
-    def load_color_backgrounds():
+    def load_color_backgrounds(self):
 
         backgrounds = []
 
         for i in range(len(utils.labels)):
             color = utils.labels[i][7]
 
-            bg = np.zeros((configs.img_height, configs.img_width, 3), dtype=np.uint8)
+            bg = np.zeros((self.disp_height, self.disp_width, 3), dtype=np.uint8)
             bg[:, :, 0].fill(color[0])
             bg[:, :, 1].fill(color[1])
             bg[:, :, 2].fill(color[2])
@@ -49,13 +54,14 @@ class Segmentor():
         # output: output of ConvNet
         # img_pred: visualization
 
-        image = cv2.resize(image, (configs.img_width, configs.img_height))
-        output = self.model.model.predict(np.array([image]))[0]
+        in_img = cv2.resize(image, (self.img_width, self.img_height))
+        disp_img = cv2.resize(in_img, (self.disp_width, self.disp_height))
+        output = self.model.model.predict(np.array([in_img]))[0]
+        output = cv2.resize(output, (self.disp_width, self.disp_height))
 
         if visualize:
             im_mask = self.convert_class_to_rgb(image_labels=output)
-            viz = cv2.addWeighted(im_mask, 0.8, image, 0.8, 0)
-            viz = cv2.resize(viz, (configs.img_width, configs.img_height))
+            viz = cv2.addWeighted(im_mask, 0.8, disp_img, 0.8, 0)
             return output, viz
         else:
             return output, None
@@ -66,14 +72,14 @@ class Segmentor():
         # convert any pixel < threshold to 0
         # then use bitwise_and
 
-        output = np.zeros((configs.img_height, configs.img_width, 3), dtype=np.uint8)
+        output = np.zeros((self.disp_height, self.disp_width, 3), dtype=np.uint8)
 
-        for i in range(configs.nb_classes):
+        for i in range(self.nb_classes):
+
             split = image_labels[:, :, i]
             split[split > threshold] = 1
             split[split < threshold] = 0
             split[:] *= 255
-            split = cv2.resize(split.astype(np.uint8), (configs.img_width, configs.img_height))
 
             res = cv2.bitwise_and(self.backgrounds[i], self.backgrounds[i], mask=split)
 

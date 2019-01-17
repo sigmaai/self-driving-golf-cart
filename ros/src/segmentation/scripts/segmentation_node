@@ -23,7 +23,7 @@
 # SOFTWARE.
 
 """
-Run a YOLO_v2 style detection model test images.
+Run a semantic segmentation node.
 This ROS node uses the object detector class to run detection.
 """
 
@@ -49,7 +49,8 @@ class ObjectDetectionNode:
         # Get ROS parameters
         self.weight_path = rospy.get_param("/segmentation_node/weight_path")
         self.visualize = rospy.get_param("/segmentation_node/visualization")
-        self.segmentor = Segmentor(weight_path=self.weight_path)
+        self.segmentor = Segmentor(weight_path=self.weight_path, img_height=1024, img_width=2048,
+                                   disp_height=512, disp_width=1024)
 
         # Setup publishers
         segmentation_image_pub = rospy.Publisher('/segmentation/visualization/', Image, queue_size=10)
