@@ -190,7 +190,7 @@ class Visualization():
 
             if self.current_frame is not None:
                 # Apply Steering Visualization #  -0.025
-                image = self.visualize_line(img=self.current_frame.copy(), angle_steers=self.steering_angle * 0.00, speed_ms=5)
+                image = self.visualize_line(img=self.current_frame.copy(), angle_steers=self.steering_angle * -0.025, speed_ms=5)
                 img_msg = self.bridge.cv2_to_imgmsg(image, "bgr8")
                 steering_viz_pub.publish(img_msg)
 
