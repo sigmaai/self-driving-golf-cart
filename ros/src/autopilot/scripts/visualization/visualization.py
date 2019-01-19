@@ -28,7 +28,7 @@ class Visualization():
     # ***** get perspective transform for images *****
     rsrc = \
         [[43.45456230828867, 118.00743250075844],
-         [104.5055617352614, 69.46865203761757],
+         [104.5055617352614, 83.46865203761757],
          [114.86050156739812, 60.83953551083698],
          [129.74572757609468, 50.48459567870026],
          [132.98164627363735, 46.38576532847949],
@@ -189,8 +189,8 @@ class Visualization():
         while not rospy.is_shutdown():
 
             if self.current_frame is not None:
-                # Apply Steering Visualization
-                image = self.visualize_line(img=self.current_frame.copy(), angle_steers=self.steering_angle * 0.1, speed_ms=5)
+                # Apply Steering Visualization #  -0.025
+                image = self.visualize_line(img=self.current_frame.copy(), angle_steers=self.steering_angle * 0.00, speed_ms=5)
                 img_msg = self.bridge.cv2_to_imgmsg(image, "bgr8")
                 steering_viz_pub.publish(img_msg)
 

@@ -35,31 +35,31 @@ class CameraSimNode():
 
         frame_path = rospy.get_param("/camera_sim_node/sim_data_path")
         time_delay = rospy.get_param("/camera_sim_node/time_delay")
-
-        self.rate = rospy.Rate(1)
+        self.rate = rospy.Rate(8)
 
         # The csv data is read below. It must have two columns. the first column is image name,
         # second frame steering angle the csv file contains many nonexisting frame information
         # which is disregarded in the flowing loop.
-        df_truth = pd.read_csv(frame_path + "/labels.csv").values
 
         rospy.loginfo("Simulated Camera Feed Initialized. Publisher path: '/cv_camera_node/image_sim'")
         while not rospy.is_shutdown():
 
-            for data in df_truth:
-                im_path = frame_path + data[0]
+            for i in range(len(os.listdir(frame_path))):
+                im_path = frame_path + str(i) + ".png"
 
+                # check to see if the file exists
                 if os.path.isfile(im_path):
                     frame = cv2.imread(im_path)
                     try:
                         img_msg = self.bridge.cv2_to_imgmsg(frame, "bgr8")
                     except CvBridgeError as e:
                         raise e
-                    self.sim_angle_pub.publish(data[1])
+                    # publish image
                     self.camera_pub.publish(img_msg)
-                    rospy.sleep(time_delay)
 
-            self.rate.sleep()
+                # ros rate sleep
+                self.rate.sleep()
+
             rospy.signal_shutdown("Data Set Exhausted")
 
 if __name__ == "__main__":

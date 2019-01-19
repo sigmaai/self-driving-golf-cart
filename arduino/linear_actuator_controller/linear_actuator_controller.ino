@@ -21,7 +21,7 @@
 #define THRESHOLD 0.5
 
 #define la_max 700
-#define la_min 195
+#define la_min 190
 #define la_md = 415
 #define pot_pin 0
 
@@ -38,8 +38,15 @@ ros::NodeHandle nh;
 void steering_callback( const std_msgs::Float32& cmd_msg) {
 
   // target_pos = cmd_msg.data;
+  double input = cmd_msg.data;
+  if (input < -M_PI){
+    input = -M_PI;
+  }else if (input > M_PI){
+    input = M_PI;
+  }
+  
   if (!joystick_enabled) {
-    double cmd = mapf(cmd_msg.data, -M_PI, M_PI, la_min, la_max);
+    double cmd = mapf(input, -M_PI, M_PI, la_min, la_max);
     target_pos = cmd;
   }
 }
@@ -101,7 +108,7 @@ void loop() {
   
   if (!joystick_enabled){
 
-    if (abs(pos - target_pos) > 12) {
+    if (abs(pos - target_pos) > 20) {
       if (pos < target_pos)
         move_actuator(255, 1);
        else if (pos > target_pos)
