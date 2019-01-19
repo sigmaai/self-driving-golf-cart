@@ -91,7 +91,7 @@ topics for the DBW (Drive by Wire) system
 -----------------------------------------
 - /cv\_camera\_node/image_raw
 - /vehicle/dbw/steering_cmds/
-- /vehicle/dbw/accel_cmds/
+- /vehicle/dbw/cruise_cmds/
 - /sensor/steering_encoder/value
 
 topics for visualization

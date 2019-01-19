@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8075d57d-0c29-4084-b018-ee8c503d1889" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arduino/brake_motor_controller/brake_motor_controller.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/build/html/_sources/About ROS.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/build/html/_sources/About ROS.rst.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/source/About ROS.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/source/About ROS.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/autopilot/scripts/autopilot_node" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/autopilot_node" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ros/src/autopilot/scripts/visualization/visualization.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/visualization/visualization.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,8 +58,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ros/src/autopilot/launch/autopilot.launch">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+            <state relative-caret-position="330">
+              <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -62,8 +67,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ros/src/autopilot/scripts/visualization/visualization.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="192" column="116" selection-start-line="192" selection-start-column="116" selection-end-line="192" selection-end-column="116" />
+            <state relative-caret-position="211">
+              <caret line="191" column="36" lean-forward="true" selection-start-line="191" selection-start-column="36" selection-end-line="191" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -71,8 +76,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ros/src/autopilot/scripts/autopilot_node">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+            <state relative-caret-position="122">
+              <caret line="70" column="81" selection-start-line="70" selection-start-column="81" selection-end-line="70" selection-end-column="81" />
             </state>
           </provider>
         </entry>
@@ -88,7 +93,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>self.steering_predictions</find>
       <find>self.inputs</find>
       <find>feed_dict</find>
       <find>input_images</find>
@@ -118,6 +122,7 @@
       <find>height</find>
       <find>capture</find>
       <find>configs</find>
+      <find>accel_cmds</find>
     </findStrings>
     <replaceStrings>
       <replace>configs</replace>
@@ -136,8 +141,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ros/src/AutoPilot/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/ros/src/AutoPilot/package.xml" />
         <option value="$PROJECT_DIR$/ros/src/autopilot/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/ros/src/autopilot/package.xml" />
         <option value="$PROJECT_DIR$/ros/src/cruise_control/launch/cruise_control.launch" />
@@ -164,7 +167,6 @@
         <option value="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/README.md" />
         <option value="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joy/launch/ps4joy.launch" />
         <option value="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joy/launch/joystick.launch" />
-        <option value="$PROJECT_DIR$/ros/src/autopilot/scripts/autopilot_node" />
         <option value="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joy/scripts/input_switch.py" />
         <option value="$PROJECT_DIR$/ros/src/driver/launch/serial.launch" />
         <option value="$PROJECT_DIR$/ros/src/sensors/joystick/launch/joystick.launch" />
@@ -187,10 +189,13 @@
         <option value="$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim_node" />
         <option value="$PROJECT_DIR$/ros/src/autopilot/launch/autopilot.launch" />
         <option value="$PROJECT_DIR$/ros/src/autopilot/scripts/visualization/visualization.py" />
+        <option value="$PROJECT_DIR$/docs/build/html/_sources/About ROS.rst.txt" />
+        <option value="$PROJECT_DIR$/docs/source/About ROS.rst" />
+        <option value="$PROJECT_DIR$/ros/src/autopilot/scripts/autopilot_node" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="57" />
     <option name="y" value="27" />
     <option name="width" value="772" />
@@ -225,14 +230,6 @@
               <item name="ros" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="autopilot" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
-              <item name="ros" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="autopilot" type="462c0819:PsiDirectoryNode" />
-              <item name="launch" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
@@ -426,11 +423,12 @@
       <workItem from="1547671051768" duration="803000" />
       <workItem from="1547850597732" duration="4755000" />
       <workItem from="1547859817971" duration="28000" />
+      <workItem from="1547907019438" duration="782000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65116000" />
+    <option name="totallyTimeSpent" value="65898000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -445,7 +443,7 @@
     <frame x="57" y="27" width="1543" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5096525" visible="true" weight="0.16633266" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5096525" visible="true" weight="0.16833667" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32702702" />
@@ -456,7 +454,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4995015" visible="true" weight="0.3364865" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4995015" visible="true" weight="0.3364865" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50049853" side_tool="true" weight="0.33847636" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Python Console" order="12" />
@@ -472,13 +470,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ros/src/simulation/launch/carla_client.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/KiteOnboarding.py" />
     <entry file="file://$PROJECT_DIR$/ros/src/simulation/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -696,24 +687,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/docs/source/About ROS.rst">
+      <provider selected="true" editor-type-id="restructured-text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/autopilot/launch/autopilot.launch">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+        <state relative-caret-position="330">
+          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/autopilot/scripts/autopilot_node">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        <state relative-caret-position="122">
+          <caret line="70" column="81" selection-start-line="70" selection-start-column="81" selection-end-line="70" selection-end-column="81" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/autopilot/scripts/visualization/visualization.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="192" column="116" selection-start-line="192" selection-start-column="116" selection-end-line="192" selection-end-column="116" />
+        <state relative-caret-position="211">
+          <caret line="191" column="36" lean-forward="true" selection-start-line="191" selection-start-column="36" selection-end-line="191" selection-end-column="36" />
         </state>
       </provider>
     </entry>

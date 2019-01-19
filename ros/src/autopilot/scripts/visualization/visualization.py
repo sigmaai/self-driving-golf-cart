@@ -155,9 +155,9 @@ class Visualization():
 
         self.steering_angle = data.data
 
-    def accel_cmds_callback(self, data):
+    def cruise_callback(self, data):
 
-        self.accel_cmds = data.data
+        self.cruise_cmds = data.data
 
     def __init__(self):
 
@@ -166,7 +166,7 @@ class Visualization():
         self.current_frame = None
         self.bridge = CvBridge()
         self.steering_angle = 0.0
-        self.accel_cmds = -1
+        self.cruise_cmds = -1
 
         # Please note that the visualization node listens to either the
         # *raw camera* or the *simulated camera* . Please change this
@@ -180,9 +180,9 @@ class Visualization():
             rospy.Subscriber('/cv_camera_node/image_raw', Image, callback=self.image_update_callback, queue_size=8)
 
         rospy.Subscriber('/vehicle/dbw/steering_cmds', Float32, callback=self.steering_cmd_callback)
-        rospy.Subscriber('/vehicle/dbw/cruise_cmds', Float32, callback=self.accel_cmds_callback)
+        rospy.Subscriber('/vehicle/dbw/cruise_cmds', Float32, callback=self.cruise_callback)
         steering_viz_pub = rospy.Publisher('/visual/autopilot/angle_img', Image, queue_size=5)
-        accel_viz_pub = rospy.Publisher('/visual/autopilot/accel_img', Image, queue_size=5)
+        accel_viz_pub = rospy.Publisher('/visual/autopilot/cruise_img', Image, queue_size=5)
 
         rate = rospy.Rate(15)
 
@@ -195,7 +195,7 @@ class Visualization():
                 steering_viz_pub.publish(img_msg)
 
                 # Apply Accel Visualization
-                image = self.apply_accel_visualization(image=self.current_frame, accel=self.accel_cmds)
+                image = self.apply_accel_visualization(image=self.current_frame, accel=self.cruise_cmds)
                 img_msg = self.bridge.cv2_to_imgmsg(image, "bgr8")
                 accel_viz_pub.publish(img_msg)
 

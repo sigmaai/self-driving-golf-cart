@@ -18,7 +18,6 @@
 #define RPWM 7
 #define LPWM 6
 #define M_PI 3.14159265358979
-#define THRESHOLD 0.5
 
 #define la_max 700
 #define la_min 190
@@ -73,6 +72,7 @@ void joystick_enabled_callback( const std_msgs::Bool& cmd_msg) {
   joystick_enabled = cmd_msg.data;
 }
 
+// ----------------------------------------------------------------------------------------
 // declare all subscribers
 ros::Subscriber<std_msgs::Float32> sub1("/vehicle/dbw/steering_cmds/", steering_callback);
 ros::Subscriber<std_msgs::Float32> sub2("/sensor/joystick/left_stick_x", joystick_callback);
@@ -81,6 +81,7 @@ ros::Subscriber<std_msgs::Bool> sub3("/sensor/joystick/enabled", joystick_enable
 // declare the publisher
 std_msgs::Float32 pos_msg;
 ros::Publisher pos_pub("/sensor/vehicle/steering/actuator_position", &pos_msg);
+// ----------------------------------------------------------------------------------------
 
 void setup() {
 
