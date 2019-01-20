@@ -14,12 +14,12 @@
 #define LPWM 6
 #define M_PI 3.14159265359
 #define POT_MAX 100
-#define POT_MIN 0
+#define POT_MIN 30
 #define LA_MIN 0
 #define LA_MAX 0
 #define LA_PIN 0
 
-ros::NodeHandle nh;
+ros::NodeHandle nh; 
 
 boolean joystick_enabled = false;
 float target_speed = 0.0;
@@ -34,11 +34,10 @@ void cruise_callback( const std_msgs::Float32& cmd_msg) {
 
 void joystick_callback( const std_msgs::Float32& cmd_msg) {
 
-  if (joystick_enabled) {
-
-    if (cmd_val > 0) {
+  if (joystick_enabled == 1) {
+    if (cmd_msg.data >= 0) {
       cmd_val = mapf(cmd_msg.data, 0, 1, POT_MIN, POT_MAX);
-    } else if (cmd_val < 0) {
+    } else {
       // engage brakes
     }
   }
@@ -77,7 +76,6 @@ void setup() {
   // set the slaveSelectPin as an output:
   pinMode (slave_Select_Pin, OUTPUT);
   digitalWrite(slave_Select_Pin, LOW);
-
   // initialize SPI:
   SPI.begin();
 }
@@ -86,18 +84,12 @@ void loop() {
 
   potWrite(slave_Select_Pin, B00010001, cmd_val);
   potWrite(slave_Select_Pin, B00010010, cmd_val);
-
-  /*
-    if (cruise_speed == -1) {
-      potWrite(slave_Select_Pin, B00010001, 0);
-      potWrite(slave_Select_Pin, B00010010, 0);
-
-      press_break(1);
-      delay(1000);
-      release_break(1);
-
-      Serial.println("brakes engaged");
-    }*/
+  
+  pos_msg.data = cmd_val;
+  pos_pub.publish(&pos_msg);
+  
+  nh.spinOnce();
+  delay(5);
 }
 
 
