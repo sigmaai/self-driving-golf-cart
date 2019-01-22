@@ -19,7 +19,6 @@ Tutorials
 
    Getting Started
    Running the Simulation
-   Building Your Own Hardware
 
 ROS
 ===

@@ -3,6 +3,16 @@ About ROS
 
 Below you will find information about all the ROS packages, nodes, topics used in this project.
 
+===========
+Terminology
+===========
+
+**ROS**
+(robot operating system): a collection of software frameworks for robot software development. It provides services designed for hardware abstraction, low-level device control, implementation of commonly used functionality, message-passing between processes, and package management. 
+
+**ROS Nodes**
+a process that performs computations. Nodes are combined together into a graph and communicate with one another using streaming topics, RPC services, and the Parameter Server.  
+
 ===================
 Packages & Nodes
 ===================
@@ -28,7 +38,7 @@ $ start_camera_sim.launch
 
 autopilot
 ---------
-The autopilot node is the brain of the self-driving car. It uses end-to-end
+The autopilot package is the brain of the self-driving car. It uses end-to-end
 deep learning to predict the steering, acceleration and braking commands of 
 the vehicle.  while subscribes to the camera feed. (Node currently functioning) The Arduino subsribes to the steering_cmds and controls the steering accordingly.
 
@@ -37,95 +47,91 @@ the vehicle.  while subscribes to the camera feed. (Node currently functioning) 
 $ autopilot
 $ visualization
 
-**Publishes**::
+**Publishes (the autopilot node)**::
 
 $ /vehicle/dbw/steering_cmds/
 $ /vehicle/dbw/cruise_cmds/
 
-**Subscribes**::
+**Subscribes (all nodes)**::
 
 $ /cv_camera_node/image_raw
 $ /cv_camera_node/image_sim
 
-----------------
 object_detection
 ----------------
 YOLO (You Only Look Once) realtime object detection system.
 
 **Nodes**::
+
 $ object_detection_node
 
 **Publishes**::
+
 $ /detection/object/detection_visualization/
 $ /detection/object/detection_result
 
 **Subscribes**::
+
 $ /cv_camera_node/image_raw
 
-------------
 segmentation
 ------------
 Semantic segmentation node. Deep learning, ConvNets
 
-##### Nodes:
+**Nodes**:
+
 $ segmentation_node
 
-##### Publishes
+**Publishes**::
+
 $ /segmentation/visualization/
 $ /segmentation/output
 
-##### Subscribes
+**Subscribes**::
+
 $ /cv_camera_node/image_raw
 
-------------------------------
-
-### cv_camera
+cv_camera
+---------
 The cameras are the main sensors of the self-driving car. 
 
-##### Nodes:
+**Nodes**::
+
 $ cv_camera_node
 
-##### Publishes
+**Publishes**::
+
 $ /cv_camera_node/image_raw
 
-------------------------------
-
-### driver
+driver
+------
 This is the main package of the project. It pulls together all the individual nodes to create a complete self-driving system.  
 
-##### Nodes:
+**Nodes:
 $ drive
 
-------------------------------
+gps
+---
 
-### gps
 Used for localization. Currently using the Adafruit GPS module, serial communication.
 
-##### Nodes:
+**Nodes**::
 $ gps_receiver
 $ nmea_topic_driver
 $ nmea_topic_serial_reader
 
 The GPS package manages and publishes the data received from a GPS module connected via serial. The package 
 
-#### Publishes:
+**Publishes**::
 
 $ /sensor/gps/fix
 $ /sensor/gps/vel
 
-------------------------------
-
-### data_logger
-The logger node records and compiles a dataset for supervised machine learning purposes. The future is to use rosbag instead of the data_loggar node. (Node currently functioning)
-
-##### Nodes:
-$ logger
-
----------------
 osm_cartography
 ---------------
 
-**Nodes**:
+**Nodes**::
+
 $ osm_client
 $ osm_server
 $ viz_osm
@@ -134,7 +140,10 @@ This package broadcasts and processes .osm files. OSM files are OpenStreetMap fi
 such as coordinates of roads, building and landmarks. Currently, the main function of the package is to broadcast the osm info to rviz for 
 visualization. (Node currently functioning)
 
-**topics for visualization**::
+============================
+ROS Topics for visualization
+============================
+::
 
 $ /visual/steering/angle_img
 $ /visual/detection/object/bbox_img
