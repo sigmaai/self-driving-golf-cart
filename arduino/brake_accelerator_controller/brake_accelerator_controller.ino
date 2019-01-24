@@ -3,6 +3,8 @@
 // Cruise control module | self-driving golf cart project
 // (c) Yongyang Nie, All Rights Reserved
 //
+// 1 is in
+// 0 is out
 
 #include <SPI.h>
 #include <Servo.h>
@@ -15,16 +17,17 @@
 #define M_PI 3.14159265359
 #define POT_MAX 100
 #define POT_MIN 30
-#define LA_MIN 0
-#define LA_MAX 0
+#define LA_MIN 200.0
+#define LA_MAX 685.0
 #define LA_PIN 0
 
-ros::NodeHandle nh; 
+ros::NodeHandle nh;
 
 boolean joystick_enabled = false;
 float target_speed = 0.0;
 float cmd_val = 0.0;
 long actuator_pos = 0;
+float actuator_target_pos = 0.0;
 const int slave_Select_Pin = 10;  // set pin 10 as the slave select for the digital pot:
 
 void cruise_callback( const std_msgs::Float32& cmd_msg) {
@@ -35,16 +38,25 @@ void cruise_callback( const std_msgs::Float32& cmd_msg) {
 void joystick_callback( const std_msgs::Float32& cmd_msg) {
 
   if (joystick_enabled == 1) {
+
     if (cmd_msg.data >= 0) {
+
+      // make sure the brake is released
+      actuator_target_pos = LA_MAX;
       cmd_val = mapf(cmd_msg.data, 0, 1, POT_MIN, POT_MAX);
+
     } else {
+
       // engage brakes
+      float inverted_input = 1.0 + cmd_msg.data;
+      actuator_target_pos = mapf(inverted_input, 0, 1, LA_MIN, LA_MAX);
+
     }
   }
 }
 
 void joystick_enabled_callback( const std_msgs::Bool& cmd_msg) {
-  
+
   joystick_enabled = cmd_msg.data;
 }
 
@@ -72,10 +84,12 @@ void setup() {
   pinMode(LPWM, OUTPUT);
 
   actuator_pos = analogRead(LA_PIN);
+  actuator_target_pos = actuator_pos;
 
   // set the slaveSelectPin as an output:
   pinMode (slave_Select_Pin, OUTPUT);
   digitalWrite(slave_Select_Pin, LOW);
+
   // initialize SPI:
   SPI.begin();
 }
@@ -84,10 +98,21 @@ void loop() {
 
   potWrite(slave_Select_Pin, B00010001, cmd_val);
   potWrite(slave_Select_Pin, B00010010, cmd_val);
-  
-  pos_msg.data = cmd_val;
+
+  actuator_pos = analogRead(LA_PIN);
+  pos_msg.data = actuator_pos;
   pos_pub.publish(&pos_msg);
-  
+
+  if (abs(actuator_pos - actuator_target_pos) > 10) {
+    if (actuator_pos < actuator_target_pos)
+      move_actuator(255, 0);
+    else if (actuator_pos > actuator_target_pos)
+      move_actuator(255, 1);
+  }
+  else {
+    stop_actuator();
+  }
+
   nh.spinOnce();
   delay(5);
 }
