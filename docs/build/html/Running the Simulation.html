@@ -84,6 +84,17 @@
 <li class="toctree-l2"><a class="reference internal" href="#dependencies-pre-installation">Dependencies &amp; Pre-installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#build-unreal-engine">Build Unreal Engine</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#installing-carla">Installing Carla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Running the Simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setting-up">1. Setting Up:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-carla">1.1. Install CARLA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-the-carla-python-api">1.2. Install the CARLA Python API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-other-requirements">1.3. Install other requirements:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#running">2. Running</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#compile-the-project">2.1. Compile the project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#launch-carla">2.2. Launch CARLA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#start-the-ros-bridge-rviz">2.3. Start the ros bridge &amp; rviz::</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Building Your Own Hardware.html">Building Your Own Hardware</a></li>
@@ -167,6 +178,7 @@
             
   <div class="section" id="running-the-simulation">
 <h1>Running the Simulation<a class="headerlink" href="#running-the-simulation" title="Permalink to this headline">¶</a></h1>
+<p>uilding a self-driving car is hard. Not everyone has access to expensive hardware. I am currently trying to integrate this project with the CARLA self-driving simulator. If you are interested in CARLA, please refer to the following documentation. (The current ROS system in this project can only partially run on the CARLA simulator)</p>
 <div class="section" id="dependencies-pre-installation">
 <h2>Dependencies &amp; Pre-installation<a class="headerlink" href="#dependencies-pre-installation" title="Permalink to this headline">¶</a></h2>
 <p>First of all, you need to install the Carla simulator. Carla runs on Unreal Engine, a cross-platform high quality game engine.</p>
@@ -195,6 +207,65 @@ $ ./Setup.sh &amp;&amp; ./GenerateProjectFiles.sh &amp;&amp; make
 <h2>Installing Carla<a class="headerlink" href="#installing-carla" title="Permalink to this headline">¶</a></h2>
 <p>To install Carla the simulator is simple. Just head over to their releases page on Github and download the latest pre-built release. At the time of writing, the latest release can be found here: <a class="reference external" href="https://drive.google.com/open?id=1JprRbFf6UlvpqX98hQiUG9U4W_E-keiv">https://drive.google.com/open?id=1JprRbFf6UlvpqX98hQiUG9U4W_E-keiv</a></p>
 </div>
+<div class="section" id="id1">
+<h2>Running the Simulation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="setting-up">
+<h3>1. Setting Up:<a class="headerlink" href="#setting-up" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="install-carla">
+<h3>1.1. Install CARLA<a class="headerlink" href="#install-carla" title="Permalink to this headline">¶</a></h3>
+<p>Download the compiled version of the CARLA simulator from here</p>
+<p>Please refer to the CARLA documentation or open an issue if you have any questions or problems.</p>
+</div>
+<div class="section" id="install-the-carla-python-api">
+<h3>1.2. Install the CARLA Python API<a class="headerlink" href="#install-the-carla-python-api" title="Permalink to this headline">¶</a></h3>
+<p>At this point, you should have downloaded the compiled version of the CARLA simulator.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo easy_install &lt;path/to/carla/&gt;/PythonAPI/&lt;your_egg_file&gt;
+</pre></div>
+</div>
+<p>Just as an example, for me, the command is this::
+$ sudo easy_install ‘/home/neil/carla/PythonAPI/carla-0.9.2-py2.7-linux-x86_64.egg’</p>
+<p>Please note that you have to put in the complete path to the egg-file including the egg-file itself. Please use the one, that is supported by your Python version. Depending on the type of CARLA (pre-build, or build from source), the egg files are typically located either directly in the PythonAPI folder or in PythonAPI/dist.</p>
+<p>Check the installation is successfull by trying to import carla from python:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -c &#39;import carla;print(&quot;Success&quot;)&#39;
+</pre></div>
+</div>
+<p>You should see the Success message without any errors.</p>
+</div>
+<div class="section" id="install-other-requirements">
+<h3>1.3. Install other requirements:<a class="headerlink" href="#install-other-requirements" title="Permalink to this headline">¶</a></h3>
+<p>$ sudo apt-get install python-protobuf
+$ pip install –user simple-pid
+If you have followed the instructions closely, you should be ready to use CARLA and the simulation_package</p>
+</div>
+<div class="section" id="running">
+<h3>2. Running<a class="headerlink" href="#running" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="compile-the-project">
+<h3>2.1. Compile the project<a class="headerlink" href="#compile-the-project" title="Permalink to this headline">¶</a></h3>
+<p>Navigate to the ros directory of the self-driving golf cart project. Then enter &amp; run the commands:</p>
+<p>$ catkin_make
+$ source devel/setup.bash</p>
+</div>
+<div class="section" id="launch-carla">
+<h3>2.2. Launch CARLA<a class="headerlink" href="#launch-carla" title="Permalink to this headline">¶</a></h3>
+<p>First run the simulator. For the full and latest documentary, please always refer to the carla official website. (see carla documentation: <a class="reference external" href="http://carla.readthedocs.io/en/latest/">http://carla.readthedocs.io/en/latest/</a>). I have created a simple script. Enter the following command and run the script:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ rosrun simulation launch_carla.sh
+</pre></div>
+</div>
+<p>Wait for the message:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ Waiting for the client to connect...
+</pre></div>
+</div>
+</div>
+<div class="section" id="start-the-ros-bridge-rviz">
+<h3>2.3. Start the ros bridge &amp; rviz::<a class="headerlink" href="#start-the-ros-bridge-rviz" title="Permalink to this headline">¶</a></h3>
+<p>$ roslaunch simulation carla_client_with_rviz.launch
+You should see a new rviz window. There should be no sensor data yet. You can setup the vehicle configuration config/settings.yaml.</p>
+<p>This launch file also make use of the CARLA Python API script manual_control.py. This spawns a vehicle with role_name=’hero’ which is interpreted as the ego vehicle as defined by the config/settings.yaml.</p>
+<p>The launch file also further spawn 30 other vehicles using spawn_npc.py from CARLA Python API. Then those vehicles will show up also on ROS side.</p>
+</div>
+</div>
 </div>
 
 
@@ -217,7 +288,7 @@ $ ./Setup.sh &amp;&amp; ./GenerateProjectFiles.sh &amp;&amp; make
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, Neil Nie
+        &copy; Copyright 2018, Neil Nie.
 
     </p>
   </div>
@@ -236,24 +307,21 @@ $ ./Setup.sh &amp;&amp; ./GenerateProjectFiles.sh &amp;&amp; make
 
   
 
-    
-    
-      <script type="text/javascript">
-          var DOCUMENTATION_OPTIONS = {
-              URL_ROOT:'./',
-              VERSION:'0.1.5',
-              LANGUAGE:'None',
-              COLLAPSE_INDEX:false,
-              FILE_SUFFIX:'.html',
-              HAS_SOURCE:  true,
-              SOURCELINK_SUFFIX: '.txt'
-          };
-      </script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1.5',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 

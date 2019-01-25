@@ -85,17 +85,14 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">About ROS</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#ros-packages-nodes">ROS Packages &amp; Nodes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#gps">gps</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#steering-control">steering_control</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#cv-camera">cv_camera</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#driver">driver</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#osm-cartography">osm_cartography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#packages-nodes">Packages &amp; Nodes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#simulation">simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#autopilot">autopilot</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#object-detection">object_detection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#segmentation">segmentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#osm-cartography">osm_cartography</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#important-ros-topics">Important ROS Topics</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#topics-for-the-dbw-drive-by-wire-system">topics for the DBW (Drive by Wire) system</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#topics-for-visualization">topics for visualization</a></li>
 </ul>
 </li>
 </ul>
@@ -177,107 +174,114 @@
             
   <div class="section" id="about-ros">
 <h1>About ROS<a class="headerlink" href="#about-ros" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="ros-packages-nodes">
-<h2>ROS Packages &amp; Nodes<a class="headerlink" href="#ros-packages-nodes" title="Permalink to this headline">¶</a></h2>
-<p>The self-driving golf cart run on the robotics middleware called ROS (Robot Operating System). Below you will find all the packages, nodes, topics and other information about ROS in this project. If you are new to ROS, I highly recommend you to check out their tutorials and examples on their website: <a class="reference external" href="http://wiki.ros.org/ROS/Tutorials">http://wiki.ros.org/ROS/Tutorials</a></p>
-<div class="section" id="gps">
-<h3>gps<a class="headerlink" href="#gps" title="Permalink to this headline">¶</a></h3>
-<p>The GPS package functions as a rudimentary localization sensor. Below are the nodes in the package.</p>
-<p>node(s):</p>
-<ul class="simple">
-<li>gps_receiver</li>
-<li>nmea_topic_driver</li>
-<li>nmea_topic_serial_reader</li>
-</ul>
-<p>The GPS package manages and publishes the data received from a GPS module connected via serial. The package publishes:</p>
-<p>topic(s)</p>
-<ul class="simple">
-<li>/sensor/gps/fix</li>
-<li>/sensor/gps/vel</li>
-</ul>
+<p>Below you will find information about all the ROS packages, nodes, topics used in this project.</p>
+<div class="section" id="packages-nodes">
+<h2>Packages &amp; Nodes<a class="headerlink" href="#packages-nodes" title="Permalink to this headline">¶</a></h2>
+<p>Here is a list of packages. Underneath each package are nodes in that package.</p>
+<div class="section" id="simulation">
+<h3>simulation<a class="headerlink" href="#simulation" title="Permalink to this headline">¶</a></h3>
+<p>The major purpose of the simulation package is to connect our self-driving system to CARLA simulator. To run the package, please refer to the documentation [here](./src/simulation/README.md).</p>
+<p>The simulation package can also run simulated camera inputs using the camera_sim_node</p>
+<p><strong>Nodes</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ carla_client
+$ camera_sim_node
+</pre></div>
 </div>
-<div class="section" id="steering-control">
-<h3>steering_control<a class="headerlink" href="#steering-control" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li>steering_control</li>
-</ul>
-<p>The steering control package controls the steering system of the vehicle. If publishes $ /vehicle/dbw/steering_cmds/ while subscribes to the camera feed. (Node currently functioning) The Arduino subsribes to the steering_cmds and controls the steering accordingly.</p>
+<p><strong>Launch Files</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ carla_client.launch
+$ carla_client_with_rviz.launch
+$ carla_client_with_rqt.launch
+$ start_camera_sim.launch
+</pre></div>
 </div>
-<div class="section" id="cv-camera">
-<h3>cv_camera<a class="headerlink" href="#cv-camera" title="Permalink to this headline">¶</a></h3>
-<p>This is the camera (perception sensor) package.</p>
-<ul class="simple">
-<li>cv_camera_node</li>
-</ul>
 </div>
-<div class="section" id="driver">
-<h3>driver<a class="headerlink" href="#driver" title="Permalink to this headline">¶</a></h3>
-<p>The driver package is will run entire self-driving software. There are two launch files: <cite>display.launch</cite> &amp; <cite>drive.launch</cite>. The display launch file runs rviz. The drive launch file will run the self-driving systems, i.e. steering control, cruise control, sensors… (drive.launch under development. display.launch functioning)</p>
-<p>node(s):</p>
-<ul class="simple">
-<li>drive</li>
-</ul>
-<p>launch files:</p>
-<ul class="simple">
-<li>drive.launch</li>
-<li>display.launch</li>
-</ul>
+<div class="section" id="autopilot">
+<h3>autopilot<a class="headerlink" href="#autopilot" title="Permalink to this headline">¶</a></h3>
+<p>The autopilot node is the brain of the self-driving car. It uses end-to-end
+deep learning to predict the steering, acceleration and braking commands of
+the vehicle.  while subscribes to the camera feed. (Node currently functioning) The Arduino subsribes to the steering_cmds and controls the steering accordingly.</p>
+<p><strong>Nodes</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ autopilot
+$ visualization
+</pre></div>
+</div>
+<p><strong>Publishes</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ /vehicle/dbw/steering_cmds/
+$ /vehicle/dbw/cruise_cmds/
+</pre></div>
+</div>
+<p><strong>Subscribes</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ /cv_camera_node/image_raw
+$ /cv_camera_node/image_sim
+</pre></div>
+</div>
+<div class="section" id="object-detection">
+<h4>object_detection<a class="headerlink" href="#object-detection" title="Permalink to this headline">¶</a></h4>
+<p>YOLO (You Only Look Once) realtime object detection system.</p>
+<p><strong>Nodes</strong>::
+$ object_detection_node</p>
+<p><strong>Publishes</strong>::
+$ /detection/object/detection_visualization/
+$ /detection/object/detection_result</p>
+<p><strong>Subscribes</strong>::
+$ /cv_camera_node/image_raw</p>
+</div>
+<div class="section" id="segmentation">
+<h4>segmentation<a class="headerlink" href="#segmentation" title="Permalink to this headline">¶</a></h4>
+<p>Semantic segmentation node. Deep learning, ConvNets</p>
+<p>##### Nodes:
+$ segmentation_node</p>
+<p>##### Publishes
+$ /segmentation/visualization/
+$ /segmentation/output</p>
+<p>##### Subscribes
+$ /cv_camera_node/image_raw</p>
+<hr class="docutils" />
+<p>### cv_camera
+The cameras are the main sensors of the self-driving car.</p>
+<p>##### Nodes:
+$ cv_camera_node</p>
+<p>##### Publishes
+$ /cv_camera_node/image_raw</p>
+<hr class="docutils" />
+<p>### driver
+This is the main package of the project. It pulls together all the individual nodes to create a complete self-driving system.</p>
+<p>##### Nodes:
+$ drive</p>
+<hr class="docutils" />
+<p>### gps
+Used for localization. Currently using the Adafruit GPS module, serial communication.</p>
+<p>##### Nodes:
+$ gps_receiver
+$ nmea_topic_driver
+$ nmea_topic_serial_reader</p>
+<p>The GPS package manages and publishes the data received from a GPS module connected via serial. The package</p>
+<p>#### Publishes:</p>
+<p>$ /sensor/gps/fix
+$ /sensor/gps/vel</p>
+<hr class="docutils" />
+<p>### data_logger
+The logger node records and compiles a dataset for supervised machine learning purposes. The future is to use rosbag instead of the data_loggar node. (Node currently functioning)</p>
+<p>##### Nodes:
+$ logger</p>
 </div>
 <div class="section" id="osm-cartography">
-<h3>osm_cartography<a class="headerlink" href="#osm-cartography" title="Permalink to this headline">¶</a></h3>
-<p>This package broadcasts and processes .osm files. OSM files are OpenStreetMap files which contain detailed information about the environment, such as coordinates of roads, building and landmarks. Currently, the main function of the package is to broadcast the osm info to rviz for visualization. (Node currently functioning)</p>
-<p>node(s):</p>
-<ul class="simple">
-<li>osm_client</li>
-<li>osm_server</li>
-<li>viz_osm</li>
-</ul>
-<p>### localization</p>
-<p>### path_planning</p>
-<p>### cruise_control</p>
-<ul class="simple">
-<li>cruise_controller</li>
-</ul>
-<p>### tl_detection</p>
-<ul class="simple">
-<li>tl_detection</li>
-</ul>
-<p>### lane_detection</p>
-<ul class="simple">
-<li>lane_detection</li>
-</ul>
-<p>### object_detection</p>
-<ul class="simple">
-<li>object_detection</li>
-</ul>
-<p>### segmentation</p>
-<ul class="simple">
-<li>segmentation</li>
-</ul>
+<h4>osm_cartography<a class="headerlink" href="#osm-cartography" title="Permalink to this headline">¶</a></h4>
+<p><strong>Nodes</strong>:
+$ osm_client
+$ osm_server
+$ viz_osm</p>
+<p>This package broadcasts and processes .osm files. OSM files are OpenStreetMap files which contain detailed information about the environment,
+such as coordinates of roads, building and landmarks. Currently, the main function of the package is to broadcast the osm info to rviz for
+visualization. (Node currently functioning)</p>
+<p><strong>topics for visualization</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ /visual/steering/angle_img
+$ /visual/detection/object/bbox_img
+$ /visual/detection/lane/marking_img
+$ /visual/segmentation/seg_img
+</pre></div>
 </div>
 </div>
-<div class="section" id="important-ros-topics">
-<h2>Important ROS Topics<a class="headerlink" href="#important-ros-topics" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="topics-for-the-dbw-drive-by-wire-system">
-<h3>topics for the DBW (Drive by Wire) system<a class="headerlink" href="#topics-for-the-dbw-drive-by-wire-system" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li>/cv_camera_node/image_raw</li>
-<li>/vehicle/dbw/steering_cmds/</li>
-<li>/vehicle/dbw/accel_cmds/</li>
-<li>/sensor/steering_encoder/value</li>
-</ul>
-</div>
-<div class="section" id="topics-for-visualization">
-<h3>topics for visualization<a class="headerlink" href="#topics-for-visualization" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li>/visual/steering/angle_img</li>
-<li>/visual/detection/object/bbox_img (x)</li>
-<li>/visual/detection/lane/marking_img (x)</li>
-<li>/visual/segmentation/seg_img (x)</li>
-</ul>
-<ol class="loweralpha simple" start="24">
-<li>implementing in progress</li>
-</ol>
 </div>
 </div>
 </div>
@@ -302,7 +306,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, Neil Nie
+        &copy; Copyright 2018, Neil Nie.
 
     </p>
   </div>
@@ -321,24 +325,21 @@
 
   
 
-    
-    
-      <script type="text/javascript">
-          var DOCUMENTATION_OPTIONS = {
-              URL_ROOT:'./',
-              VERSION:'0.1.5',
-              LANGUAGE:'None',
-              COLLAPSE_INDEX:false,
-              FILE_SUFFIX:'.html',
-              HAS_SOURCE:  true,
-              SOURCELINK_SUFFIX: '.txt'
-          };
-      </script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1.5',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
