@@ -1,104 +1,142 @@
 About ROS
 =========
 
-====================
-ROS Packages & Nodes
-====================
+Below you will find information about all the ROS packages, nodes, topics used in this project.
 
-The self-driving golf cart run on the robotics middleware called ROS (Robot Operating System). Below you will find all the packages, nodes, topics and other information about ROS in this project. If you are new to ROS, I highly recommend you to check out their tutorials and examples on their website: http://wiki.ros.org/ROS/Tutorials
+===================
+Packages & Nodes
+===================
+Here is a list of packages. Underneath each package are nodes in that package.
 
-gps
----
-The GPS package functions as a rudimentary localization sensor. Below are the nodes in the package. 
+simulation
+----------
+The major purpose of the simulation package is to connect our self-driving system to CARLA simulator. To run the package, please refer to the documentation [here](./src/simulation/README.md).
 
-node(s):
+The simulation package can also run simulated camera inputs using the camera_sim_node
 
-- gps_receiver
-- nmea_topic_driver
-- nmea_topic_serial_reader
+**Nodes**::
 
-The GPS package manages and publishes the data received from a GPS module connected via serial. The package publishes:
+$ carla_client
+$ camera_sim_node
 
-topic(s)
+**Launch Files**::
 
-- /sensor/gps/fix
-- /sensor/gps/vel
+$ carla_client.launch
+$ carla_client_with_rviz.launch
+$ carla_client_with_rqt.launch
+$ start_camera_sim.launch
 
-steering_control
-----------------
-- steering_control
-
-The steering control package controls the steering system of the vehicle. If publishes $ /vehicle/dbw/steering_cmds/ while subscribes to the camera feed. (Node currently functioning) The Arduino subsribes to the steering_cmds and controls the steering accordingly.
-
-cv_camera
+autopilot
 ---------
-This is the camera (perception sensor) package. 
+The autopilot node is the brain of the self-driving car. It uses end-to-end
+deep learning to predict the steering, acceleration and braking commands of 
+the vehicle.  while subscribes to the camera feed. (Node currently functioning) The Arduino subsribes to the steering_cmds and controls the steering accordingly.
 
-- cv_camera_node
+**Nodes**::
 
-driver
-------
-The driver package is will run entire self-driving software. There are two launch files: `display.launch` & `drive.launch`. The display launch file runs rviz. The drive launch file will run the self-driving systems, i.e. steering control, cruise control, sensors... (drive.launch under development. display.launch functioning)
+$ autopilot
+$ visualization
 
-node(s):
+**Publishes**::
 
-- drive
+$ /vehicle/dbw/steering_cmds/
+$ /vehicle/dbw/cruise_cmds/
 
-launch files:
+**Subscribes**::
 
-- drive.launch
-- display.launch
+$ /cv_camera_node/image_raw
+$ /cv_camera_node/image_sim
 
+----------------
+object_detection
+----------------
+YOLO (You Only Look Once) realtime object detection system.
+
+**Nodes**::
+$ object_detection_node
+
+**Publishes**::
+$ /detection/object/detection_visualization/
+$ /detection/object/detection_result
+
+**Subscribes**::
+$ /cv_camera_node/image_raw
+
+------------
+segmentation
+------------
+Semantic segmentation node. Deep learning, ConvNets
+
+##### Nodes:
+$ segmentation_node
+
+##### Publishes
+$ /segmentation/visualization/
+$ /segmentation/output
+
+##### Subscribes
+$ /cv_camera_node/image_raw
+
+------------------------------
+
+### cv_camera
+The cameras are the main sensors of the self-driving car. 
+
+##### Nodes:
+$ cv_camera_node
+
+##### Publishes
+$ /cv_camera_node/image_raw
+
+------------------------------
+
+### driver
+This is the main package of the project. It pulls together all the individual nodes to create a complete self-driving system.  
+
+##### Nodes:
+$ drive
+
+------------------------------
+
+### gps
+Used for localization. Currently using the Adafruit GPS module, serial communication.
+
+##### Nodes:
+$ gps_receiver
+$ nmea_topic_driver
+$ nmea_topic_serial_reader
+
+The GPS package manages and publishes the data received from a GPS module connected via serial. The package 
+
+#### Publishes:
+
+$ /sensor/gps/fix
+$ /sensor/gps/vel
+
+------------------------------
+
+### data_logger
+The logger node records and compiles a dataset for supervised machine learning purposes. The future is to use rosbag instead of the data_loggar node. (Node currently functioning)
+
+##### Nodes:
+$ logger
+
+---------------
 osm_cartography
 ---------------
-This package broadcasts and processes .osm files. OSM files are OpenStreetMap files which contain detailed information about the environment, such as coordinates of roads, building and landmarks. Currently, the main function of the package is to broadcast the osm info to rviz for visualization. (Node currently functioning)
 
-node(s): 
+**Nodes**:
+$ osm_client
+$ osm_server
+$ viz_osm
 
-- osm_client
-- osm_server
-- viz_osm
+This package broadcasts and processes .osm files. OSM files are OpenStreetMap files which contain detailed information about the environment, 
+such as coordinates of roads, building and landmarks. Currently, the main function of the package is to broadcast the osm info to rviz for 
+visualization. (Node currently functioning)
 
-### localization
+**topics for visualization**::
 
-### path_planning
-
-### cruise_control
-
-- cruise_controller
-
-### tl_detection
-
-- tl_detection
-
-### lane_detection
-	
-- lane_detection
-
-### object_detection
-
-- object_detection
-
-### segmentation
-
-- segmentation
-
-====================
-Important ROS Topics
-====================
-
-topics for the DBW (Drive by Wire) system
------------------------------------------
-- /cv\_camera\_node/image_raw
-- /vehicle/dbw/steering_cmds/
-- /vehicle/dbw/cruise_cmds/
-- /sensor/steering_encoder/value
-
-topics for visualization
-------------------------
-- /visual/steering/angle_img
-- /visual/detection/object/bbox_img (x)
-- /visual/detection/lane/marking_img (x)
-- /visual/segmentation/seg_img (x)
-
-(x) implementing in progress
+$ /visual/steering/angle_img
+$ /visual/detection/object/bbox_img
+$ /visual/detection/lane/marking_img
+$ /visual/segmentation/seg_img
