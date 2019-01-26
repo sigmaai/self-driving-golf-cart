@@ -17,8 +17,8 @@
 #define M_PI 3.14159265359
 #define POT_MAX 100
 #define POT_MIN 30
-#define LA_MIN 200.0
-#define LA_MAX 685.0
+#define LA_MIN 395.0
+#define LA_MAX 570.0
 #define LA_PIN 0
 
 ros::NodeHandle nh;
@@ -48,6 +48,7 @@ void joystick_callback( const std_msgs::Float32& cmd_msg) {
     } else {
 
       // engage brakes
+      cmd_val = POT_MIN;
       float inverted_input = 1.0 + cmd_msg.data;
       actuator_target_pos = mapf(inverted_input, 0, 1, LA_MIN, LA_MAX);
 
