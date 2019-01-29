@@ -10,13 +10,12 @@ All Rights Reserved.
 
 from models.i3d import Inception3D
 import numpy as np
-import models.configs as configs
 import cv2
 
 
 class Pilot:
 
-    def __init__(self, weight_path, model_type, input_length):
+    def __init__(self, weight_path, model_type, input_length, img_height, img_width):
 
         """
         Constructor for SteeringPredictor class
@@ -24,7 +23,10 @@ class Pilot:
         :param model_type:
         """
 
-        self.model = Inception3D(input_shape=(input_length, configs.IMG_HEIGHT, configs.IMG_WIDTH, 3), weights_path=weight_path)
+        self.img_height = img_height
+        self.img_width = img_width
+        self.length = input_length
+        self.model = Inception3D(input_shape=(input_length, self.img_height, self.img_width, 3), weights_path=weight_path)
         self.inputs = []
         self.model_type = model_type
 
@@ -37,18 +39,18 @@ class Pilot:
         :return:        steering angle
         """
 
-        image = cv2.resize(image, (configs.IMG_WIDTH, configs.IMG_HEIGHT))
+        image = cv2.resize(image, (self.img_width, self.img_height))
 
-        if len(self.inputs) < configs.LENGTH:
+        if len(self.inputs) < self.length:
             self.inputs.append(image)
 
-        if len(self.inputs) == configs.LENGTH:
+        if len(self.inputs) == self.length:
             prediction = self.model.model.predict(np.array([self.inputs]))[0]
             self.inputs.pop(0)
 
             return prediction
 
-        if len(self.inputs) > configs.LENGTH:
+        if len(self.inputs) > self.length:
             raise ValueError("Input length can't be longer than network input length")
 
         return [0.0, -1.0]

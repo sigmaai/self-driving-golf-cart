@@ -27,6 +27,8 @@ class AutoPilotNode:
         self.current_frame = None
         self.bridge = CvBridge()
 
+        # --------------------------------------------------------------------------------------------------------------
+
         simulation = rospy.get_param("/autopilot_node/simulation")
         if (simulation):
             rospy.logwarn("You are in simulation mode. If this is unintentional, please quite the program immediately")
@@ -35,10 +37,14 @@ class AutoPilotNode:
             rospy.Subscriber('/cv_camera_node/image_raw', Image, callback=self.image_update_callback, queue_size=8)
 
         # --------------------------------------------------------------------------------------------------------------
+
         self.model_path = rospy.get_param("/autopilot_node/model_path")
         self.angle_scale = rospy.get_param("/autopilot_node/angle_scale")
         self.accel_scale = rospy.get_param("/autopilot_node/accel_scale")
         self.input_length = rospy.get_param("/autopilot_node/length")
+        self.img_height = rospy.get_param("/autopilot_node/img_height")
+        self.img_width = rospy.get_param("/autopilot_node/img_width")
+
         # --------------------------------------------------------------------------------------------------------------
 
         # Limit tensorflow GPU memory useage.
@@ -46,9 +52,11 @@ class AutoPilotNode:
         config.gpu_options.per_process_gpu_memory_fraction = rospy.get_param("/autopilot_node/gpu_frac")
         set_session(tf.Session(config=config))
 
+        # --------------------------------------------------------------------------------------------------------------
+
         self.predictor = Pilot(weight_path=self.model_path,
                                model_type='rgb',
-                               input_length=self.input_length)
+                               input_length=self.input_length, img_height=self.img_height, img_width=self.img_width)
 
         rospy.loginfo("Deep Learning Steering Prediction System Initialized")
 
@@ -57,7 +65,7 @@ class AutoPilotNode:
         accel_pub = rospy.Publisher('/vehicle/dbw/cruise_cmds/', Float32, queue_size=5)
         # --------------------------------------------------------------------------------------------------------------
 
-        rate = rospy.Rate(24)
+        rate = rospy.Rate(30)
 
         while not rospy.is_shutdown():
             if self.current_frame is not None:

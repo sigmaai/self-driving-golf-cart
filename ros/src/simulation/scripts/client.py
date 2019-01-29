@@ -25,7 +25,7 @@ except IndexError:
 
 import carla
 
-from bridge import CarlaRosBridge
+from ros_carla_bridge import CarlaRosBridge
 
 def main():
     """
