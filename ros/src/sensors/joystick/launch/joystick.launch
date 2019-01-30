@@ -11,4 +11,7 @@
     <node name="selective_output" pkg="joy" type="selective_output.py" output="screen">
     </node>
 
+    <node name="camera_select" pkg="joy" type="camera_select.py" output="screen">
+    </node>
+
 </launch>

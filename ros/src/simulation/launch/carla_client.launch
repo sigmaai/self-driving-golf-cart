@@ -2,8 +2,6 @@
 <launch>
 
     <!-- Launch Carla -->
-    <arg name='rosbag_fname' default=''/>
-    <param name="rosbag_fname" value="$(arg rosbag_fname)"/>
     <rosparam file="$(find simulation)/config/settings.yaml" command="load" />
     <node pkg="simulation" name="carla_client" type="client.py" output="screen"/>
 
@@ -11,7 +9,10 @@
     <node pkg="simulation" name="manual_control" type="manual_control.py" output="screen"/>
     <node pkg="simulation" name="spawn_npc" type="spawn_npc.py" output="screen"/>
 
+    <!-- Launch Joystick control -->
+    <include file="$(find joy)/launch/joystick.launch"  pass_all_args="True"/>
+
     <include file="$(find autopilot)/launch/autopilot.launch"  pass_all_args="True"/>
-    <node pkg="simulation" name="self_driving_system_bridge" type="self_driving_system_bridge.py" output="screen" />
+    <node pkg="simulation" name="autopilot_bridge" type="autopilot_bridge.py" output="screen" />
 
 </launch>

@@ -664,7 +664,7 @@ def game_loop():
 
 def main():
 
-    print(__doc__)
+    # print(__doc__)
 
     try:
         game_loop()
