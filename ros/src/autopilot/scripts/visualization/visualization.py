@@ -20,6 +20,7 @@ from PIL import ImageDraw
 import rospy
 from sensor_msgs.msg import Image
 from std_msgs.msg import Float32
+from std_msgs.msg import Int8
 from cv_bridge import CvBridge, CvBridgeError
 
 
@@ -142,14 +143,43 @@ class Visualization():
         heatmap = cv2.resize(heatmap, (640, 480))
         return heatmap
 
-    def image_update_callback(self, data):
+    # ------------------------------------------------------------------------------------------------------------------
+    # cv_camera callback
+    def real_camera_update_callback(self, data):
 
         try:
             cv_image = self.bridge.imgmsg_to_cv2(data, "bgr8")
         except CvBridgeError as e:
             raise e
 
-        self.current_frame = cv_image
+        if self.camera_select == 0:
+            self.current_frame = cv_image
+
+    # sim_camera callback
+    def sim_camera_update_callback(self, data):
+
+        try:
+            cv_image = self.bridge.imgmsg_to_cv2(data, "bgr8")
+        except CvBridgeError as e:
+            raise e
+
+        if self.camera_select == 1:
+            self.current_frame = cv_image
+
+    # carla simulator rgb camera callback
+    def carla_rgb_camera_update_callback(self, data):
+
+        try:
+            cv_image = self.bridge.imgmsg_to_cv2(data, "bgr8")
+        except CvBridgeError as e:
+            raise e
+
+        if self.camera_select == 2:
+            self.current_frame = cv_image
+
+    # camera input select callback
+    def camera_input_select_callback(self, data):
+        self.camera_select = data.data
 
     def steering_cmd_callback(self, data):
 
@@ -159,6 +189,8 @@ class Visualization():
 
         self.cruise_cmds = data.data
 
+    # ------------------------------------------------------------------------------------------------------------------
+
     def __init__(self):
 
         rospy.init_node('autopilot_visualization_node')
@@ -166,29 +198,28 @@ class Visualization():
         self.current_frame = None
         self.bridge = CvBridge()
         self.steering_angle = 0.0
-        self.cruise_cmds = -1
+        self.cruise_cmds = 0.0
+        self.camera_select = -1
 
-        # Please note that the visualization node listens to either the
-        # *raw camera* or the *simulated camera* . Please change this
-        # setting in the launch file (/launch/steering_control.launch)
-        # or specify this parameter in your command line input.
-        simulation = rospy.get_param("/autopilot_node/simulation")
-        if simulation:
-            rospy.logwarn("You are in simulation mode. If this is unintentional, please quite the program immediately")
-            rospy.Subscriber('/cv_camera_node/image_sim', Image, callback=self.image_update_callback, queue_size=8)
-        else:
-            rospy.Subscriber('/cv_camera_node/image_raw', Image, callback=self.image_update_callback, queue_size=8)
+        # -----------------------------------------
+        rospy.Subscriber('/cv_camera_node/camera_select', Int8, callback=self.camera_input_select_callback)
+        rospy.Subscriber('/cv_camera_node/image_sim', Image, callback=self.real_camera_update_callback, queue_size=8)
+        rospy.Subscriber('/cv_camera_node/image_raw', Image, callback=self.sim_camera_update_callback, queue_size=8)
+        rospy.Subscriber('/carla/ego_vehicle/camera/rgb/front/image_color', Image, callback=self.carla_rgb_camera_update_callback,
+                         queue_size=8)
+
+        # -----------------------------------------
 
         rospy.Subscriber('/vehicle/dbw/steering_cmds', Float32, callback=self.steering_cmd_callback)
         rospy.Subscriber('/vehicle/dbw/cruise_cmds', Float32, callback=self.cruise_callback)
         steering_viz_pub = rospy.Publisher('/visual/autopilot/angle_img', Image, queue_size=5)
         accel_viz_pub = rospy.Publisher('/visual/autopilot/cruise_img', Image, queue_size=5)
 
-        rate = rospy.Rate(15)
+        rate = rospy.Rate(24)
 
         while not rospy.is_shutdown():
 
-            if self.current_frame is not None:
+            if self.current_frame is not None and self.camera_select != -1:
                 # Apply Steering Visualization #  -0.025
                 image = self.visualize_line(img=self.current_frame.copy(), angle_steers=self.steering_angle * -0.025, speed_ms=5)
                 img_msg = self.bridge.cv2_to_imgmsg(image, "bgr8")

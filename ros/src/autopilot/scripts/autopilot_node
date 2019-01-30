@@ -64,7 +64,7 @@ class AutoPilotNode:
         accel_pub = rospy.Publisher('/vehicle/dbw/cruise_cmds/', Float32, queue_size=5)
         # --------------------------------------------------------------------------------------------------------------
 
-        rate = rospy.Rate(30)
+        rate = rospy.Rate(24)
 
         while not rospy.is_shutdown():
             if self.current_frame is not None:
@@ -75,7 +75,8 @@ class AutoPilotNode:
                 accel_pub.publish(accel)
             else:
                 steering_pub.publish(0)     # Default steering command is 0 == lock steering
-                accel_pub.publish(-1)       # Default accel command is -1 == lock brakes
+                # accel_pub.publish(0.0)      # Default accel command is -1 == lock brakes
+
             rate.sleep()
 
     # cv_camera callback
@@ -113,9 +114,9 @@ class AutoPilotNode:
 
     # camera input select callback
     def camera_input_select_callback(self, data):
-        if self.camera_select != data:
+        if self.camera_select != data.data:
             rospy.loginfo("Camera Input Switched")
-        self.camera_select = data
+        self.camera_select = data.data
 
 
 if __name__ == "__main__":

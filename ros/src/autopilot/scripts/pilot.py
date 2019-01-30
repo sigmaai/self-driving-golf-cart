@@ -53,4 +53,4 @@ class Pilot:
         if len(self.inputs) > self.length:
             raise ValueError("Input length can't be longer than network input length")
 
-        return [0.0, -1.0]
+        return [0.0, 0.0]

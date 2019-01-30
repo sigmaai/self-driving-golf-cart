@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8075d57d-0c29-4084-b018-ee8c503d1889" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/ros/src/autopilot/launch/autopilot.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/launch/autopilot.launch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ros/src/autopilot/scripts/autopilot_node" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/autopilot_node" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/joystick/launch/joystick.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/sensors/joystick/launch/joystick.launch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/simulation/launch/carla_client.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/simulation/launch/carla_client.launch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/simulation/scripts/manual_control.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/simulation/scripts/manual_control.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/simulation/scripts/self_driving_system_bridge.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/autopilot/scripts/pilot.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/pilot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/autopilot/scripts/visualization/visualization.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/visualization/visualization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/simulation/scripts/autopilot_bridge.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/simulation/scripts/autopilot_bridge.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/simulation/scripts/spawn_npc.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/simulation/scripts/spawn_npc.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,13 +37,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ros/src/autopilot/scripts/autopilot_node">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="27" column="29" lean-forward="true" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+            <state relative-caret-position="150">
+              <caret line="81" selection-start-line="81" selection-end-line="118" selection-end-column="38" />
               <folding>
                 <element signature="e#186#209#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ros/src/autopilot/scripts/pilot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="346">
+              <caret line="55" column="22" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
+              <folding>
+                <element signature="e#182#216#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ros/src/autopilot/scripts/visualization/visualization.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-479">
+              <caret line="181" selection-start-line="181" selection-end-line="181" />
+              <folding>
+                <element signature="e#211#229#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -53,7 +77,7 @@
         <entry file="file://$PROJECT_DIR$/ros/src/sensors/joystick/launch/joystick.launch">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -67,11 +91,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/autopilot_bridge.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="27" column="51" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
+            <state relative-caret-position="301">
+              <caret line="30" column="54" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
+              <folding>
+                <element signature="e#19#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/spawn_npc.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
@@ -87,8 +123,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>feed_dict</find>
-      <find>input_images</find>
       <find>variable</find>
       <find>controller_initial_state</find>
       <find>cv_camera_node</find>
@@ -117,6 +151,8 @@
       <find>accel_cmds</find>
       <find>from bridge</find>
       <find>print</find>
+      <find>/carla/ego_vehicle/camera/rgb/front/image_color</find>
+      <find>rospy.login</find>
     </findStrings>
     <replaceStrings>
       <replace>configs</replace>
@@ -135,7 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/ros/src/detection/lane_detection/scripts/lane_detector.py" />
         <option value="$PROJECT_DIR$/ros/src/detection/lane_detection/scripts/utils.py" />
         <option value="$PROJECT_DIR$/ros/src/README.md" />
@@ -144,7 +179,6 @@
         <option value="$PROJECT_DIR$/ros/src/simulation/scripts/camera.py" />
         <option value="$PROJECT_DIR$/ros/src/simulation/launch/carla_client_with_rviz.launch" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/ros/src/simulation/scripts/spawn_npc.py" />
         <option value="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/object_detection_node" />
         <option value="$PROJECT_DIR$/ros/src/simulation/README.md" />
         <option value="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/ps3joy/scripts/ps3joy_node.py" />
@@ -169,12 +203,10 @@
         <option value="$PROJECT_DIR$/ros/src/sensors/cv_camera/launch/start_camera.launch" />
         <option value="$PROJECT_DIR$/ros/src/simulation/launch/start_camera_sim.launch" />
         <option value="$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim_node" />
-        <option value="$PROJECT_DIR$/ros/src/autopilot/scripts/visualization/visualization.py" />
         <option value="$PROJECT_DIR$/docs/build/html/_sources/About ROS.rst.txt" />
         <option value="$PROJECT_DIR$/docs/source/About ROS.rst" />
         <option value="$PROJECT_DIR$/ros/src/gui/launch/rqt.launch" />
         <option value="$PROJECT_DIR$/ros/src/sensors/joystick/scripts/selective_output.py" />
-        <option value="$PROJECT_DIR$/ros/src/autopilot/scripts/pilot.py" />
         <option value="$PROJECT_DIR$/ros/src/simulation/scripts/client.py" />
         <option value="$PROJECT_DIR$/ros/src/simulation/scripts/ros_carla_bridge_rosbag.py" />
         <option value="$PROJECT_DIR$/ros/src/sensors/joystick/scripts/camera_switch.py" />
@@ -184,16 +216,20 @@
         <option value="$PROJECT_DIR$/ros/src/simulation/scripts/self_driving_system_bridge.py" />
         <option value="$PROJECT_DIR$/ros/src/simulation/scripts/manual_control.py" />
         <option value="$PROJECT_DIR$/ros/src/simulation/launch/carla_client.launch" />
+        <option value="$PROJECT_DIR$/ros/src/simulation/scripts/spawn_npc.py" />
+        <option value="$PROJECT_DIR$/ros/src/simulation/config/carla_default_rviz.cfg.rviz" />
         <option value="$PROJECT_DIR$/ros/src/autopilot/scripts/autopilot_node" />
+        <option value="$PROJECT_DIR$/ros/src/autopilot/scripts/pilot.py" />
+        <option value="$PROJECT_DIR$/ros/src/autopilot/scripts/visualization/visualization.py" />
         <option value="$PROJECT_DIR$/ros/src/simulation/scripts/autopilot_bridge.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="57" />
-    <option name="y" value="27" />
-    <option name="width" value="772" />
-    <option name="height" value="873" />
+    <option name="x" value="283" />
+    <option name="y" value="452" />
+    <option name="width" value="1230" />
+    <option name="height" value="654" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -399,11 +435,13 @@
       <workItem from="1548727444366" duration="563000" />
       <workItem from="1548728095490" duration="341000" />
       <workItem from="1548805823873" duration="3067000" />
+      <workItem from="1548861398761" duration="1436000" />
+      <workItem from="1548874065929" duration="3340000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75555000" />
+    <option name="totallyTimeSpent" value="80331000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -418,7 +456,7 @@
     <frame x="57" y="27" width="1543" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5096525" visible="true" weight="0.17969272" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5096525" visible="true" weight="0.18503673" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32702702" />
@@ -445,24 +483,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/lib/python2.7/subprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="171" selection-start-line="171" selection-end-line="171" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user_interface.py" />
-    <entry file="file://$PROJECT_DIR$/ros/src/sensors/joystick/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="210">
-            <caret line="14" selection-start-line="14" selection-end-line="14" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/user_interface/user_interface.py" />
     <entry file="file://$PROJECT_DIR$/ros/src/driver/launch/drive.launch">
       <provider selected="true" editor-type-id="text-editor">
@@ -624,13 +644,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/autopilot/scripts/visualization/visualization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="191" column="36" selection-start-line="191" selection-start-column="36" selection-end-line="191" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/autopilot/scripts/models/helper.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -658,26 +671,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/autopilot/scripts/pilot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
-          <folding>
-            <element signature="e#182#216#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/sensors/joystick/scripts/camera_switch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="18" column="57" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
-          <folding>
-            <element signature="e#71#83#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/sensors/joystick/scripts/camera_switch.py" />
     <entry file="file://$PROJECT_DIR$/ros/src/sensors/joystick/scripts/camera_select.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -692,16 +686,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/self_driving_system_bridge.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="e#1#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/self_driving_system_bridge.py" />
     <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/camera.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -745,10 +730,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/autopilot_bridge.py">
+    <entry file="file:///opt/ros/melodic/lib/python2.7/dist-packages/std_msgs/msg/_Float32.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="27" column="51" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
+        <state relative-caret-position="-794">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/spawn_npc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/sensors/joystick/launch/joystick.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
@@ -759,19 +758,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/sensors/joystick/launch/joystick.launch">
+    <entry file="file://$PROJECT_DIR$/ros/src/simulation/config/carla_default_rviz.cfg.rviz">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="168">
+          <caret line="75" column="6" selection-start-line="75" selection-start-column="6" selection-end-line="75" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/autopilot/scripts/autopilot_node">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="27" column="29" lean-forward="true" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+        <state relative-caret-position="150">
+          <caret line="81" selection-start-line="81" selection-end-line="118" selection-end-column="38" />
           <folding>
             <element signature="e#186#209#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/autopilot/scripts/pilot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="55" column="22" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
+          <folding>
+            <element signature="e#182#216#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/autopilot/scripts/visualization/visualization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-479">
+          <caret line="181" selection-start-line="181" selection-end-line="181" />
+          <folding>
+            <element signature="e#211#229#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/autopilot_bridge.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="30" column="54" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
+          <folding>
+            <element signature="e#19#31#0" expanded="true" />
           </folding>
         </state>
       </provider>

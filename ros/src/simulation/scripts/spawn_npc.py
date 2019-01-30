@@ -22,7 +22,6 @@ except IndexError:
 
 import carla
 
-import argparse
 import random
 import time
 
@@ -58,7 +57,7 @@ def main():
             if vehicle is not None:
                 actor_list.append(vehicle)
                 vehicle.set_autopilot()
-                print('spawned %r at %s' % (vehicle.type_id, transform.location))
+                # print('spawned %r at %s' % (vehicle.type_id, transform.location))
                 return True
             return False
 

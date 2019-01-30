@@ -25,11 +25,11 @@ class AutoPilotBridge():
 
         while not rospy.is_shutdown():
 
-            if self.steering_cmd and self.speed_cmd:
+            if self.steering_cmd is not None and self.speed_cmd is not None:
                 ackermann_msg = AckermannDrive()
 
-                ackermann_msg.steering_angle = self.steering_cmd
-                ackermann_msg.speed = self.speed_cmd
+                ackermann_msg.steering_angle = -1.0 * float(self.steering_cmd)
+                ackermann_msg.speed = 5 + float(self.speed_cmd)
 
                 ackermann_pub.publish(ackermann_msg)
 
@@ -37,11 +37,11 @@ class AutoPilotBridge():
 
     def steering_cmd_callback(self, data):
 
-        self.steering_cmd = data
+        self.steering_cmd = data.data
 
     def speed_cmd_callback(self, data):
 
-        self.speed_cmd = data
+        self.speed_cmd = data.data
 
 
 if __name__ == "__main__":
