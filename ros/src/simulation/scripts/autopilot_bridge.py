@@ -28,7 +28,7 @@ class AutoPilotBridge():
             if self.steering_cmd is not None and self.speed_cmd is not None:
                 ackermann_msg = AckermannDrive()
 
-                ackermann_msg.steering_angle = -1.0 * float(self.steering_cmd)
+                ackermann_msg.steering_angle = -0.1 * float(self.steering_cmd)
                 ackermann_msg.speed = 5 + float(self.speed_cmd)
 
                 ackermann_pub.publish(ackermann_msg)

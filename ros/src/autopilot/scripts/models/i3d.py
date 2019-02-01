@@ -27,10 +27,7 @@ from keras.layers import Dropout
 from keras.layers import Reshape
 from keras.optimizers import Adam
 from keras.layers import Flatten
-from keras.callbacks import TensorBoard
-import datetime
 from keras import backend as K
-import helper
 
 
 class Inception3D:
@@ -76,42 +73,6 @@ class Inception3D:
 
     def summary(self):
         print(self.model.summary())
-
-    def train(self, type, labels, val_labels, save_path,
-              epochs=10, epoch_steps=5000, val_steps=1000, validation=False, log_path="logs"):
-
-        """training the model
-
-        :param type: tye type of model. Choices are: flow or rgb
-        :param labels: training labels in numpy format
-        :param val_labels: validation labels in numpy format
-        :param epochs: number of training epochs.
-        :param epoch_steps: number of training steps per epoch. (!= batch_size)
-        :param val_steps: number of validation steps
-        :param log_path: training log path.
-        :param validation: run validation or not. If not validating, val_gen and val_steps can be non.
-        :param log_path: location where the training logs will be saved.
-        :param save_path: location where the trained model will be saved.
-        """
-
-        if type == 'flow':
-            train_gen = helper.udacity_flow_batch_gen(batch_size=2, data=labels)
-            val_gen = helper.udacity_flow_val_gen(batch_size=1, data=val_labels)
-        elif type == 'rgb':
-            train_gen = helper.udacity_batch_generator(batch_size=4, data=labels, augment=False)
-            val_gen = helper.validation_batch_generator(batch_size=2, data=val_labels)
-        else:
-            raise Exception('Sorry, the model type is not recognized')
-
-        tensorboard = TensorBoard(log_dir=(log_path + "/{}".format(datetime.datetime.now())))
-
-        if validation:
-            self.model.fit_generator(train_gen, steps_per_epoch=epoch_steps, epochs=epochs, verbose=1, callbacks=[tensorboard],
-                                     validation_data=val_gen, validation_steps=val_steps)
-        else:
-            self.model.fit_generator(train_gen, steps_per_epoch=epoch_steps, epochs=epochs, verbose=1, callbacks=[tensorboard])
-
-        self.model.save(save_path)
 
     def create_model(self, img_input, optimizer=Adam(lr=1e-4)):
 

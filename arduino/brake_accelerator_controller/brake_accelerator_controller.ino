@@ -15,7 +15,7 @@
 #define RPWM 7
 #define LPWM 6
 #define M_PI 3.14159265359
-#define POT_MAX 100
+#define POT_MAX 150
 #define POT_MIN 30
 #define LA_MIN 395.0
 #define LA_MAX 570.0

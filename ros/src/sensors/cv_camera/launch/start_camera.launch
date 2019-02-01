@@ -3,9 +3,9 @@
 	<!--open up the camera -->
 	<node name="cv_camera_node" pkg="cv_camera" type="cv_camera_node">
 
-
-
     </node>
+
+    <node pkg="cv_camera" name="camera_output_select" type="camera_select.py"/>
 
     <node pkg="cv_camera" name="image_view" type="image_view.sh" />
 

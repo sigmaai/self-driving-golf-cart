@@ -134,7 +134,8 @@ class Visualization():
         return steering_img
 
     # TODO: test this method
-    def visualize_class_activation_map(self, model, image):
+    @staticmethod
+    def visualize_class_activation_map(model, image):
 
         image = cv2.resize(image, (320, 160))
         heatmap = visualize_cam(model, layer_idx=-1, filter_indices=0, seed_input=image, grad_modifier=None)
@@ -145,7 +146,7 @@ class Visualization():
 
     # ------------------------------------------------------------------------------------------------------------------
     # cv_camera callback
-    def real_camera_update_callback(self, data):
+    def camera_update_callback(self, data):
 
         try:
             cv_image = self.bridge.imgmsg_to_cv2(data, "bgr8")
@@ -154,32 +155,6 @@ class Visualization():
 
         if self.camera_select == 0:
             self.current_frame = cv_image
-
-    # sim_camera callback
-    def sim_camera_update_callback(self, data):
-
-        try:
-            cv_image = self.bridge.imgmsg_to_cv2(data, "bgr8")
-        except CvBridgeError as e:
-            raise e
-
-        if self.camera_select == 1:
-            self.current_frame = cv_image
-
-    # carla simulator rgb camera callback
-    def carla_rgb_camera_update_callback(self, data):
-
-        try:
-            cv_image = self.bridge.imgmsg_to_cv2(data, "bgr8")
-        except CvBridgeError as e:
-            raise e
-
-        if self.camera_select == 2:
-            self.current_frame = cv_image
-
-    # camera input select callback
-    def camera_input_select_callback(self, data):
-        self.camera_select = data.data
 
     def steering_cmd_callback(self, data):
 
@@ -202,12 +177,8 @@ class Visualization():
         self.camera_select = -1
 
         # -----------------------------------------
-        rospy.Subscriber('/cv_camera_node/camera_select', Int8, callback=self.camera_input_select_callback)
-        rospy.Subscriber('/cv_camera_node/image_sim', Image, callback=self.real_camera_update_callback, queue_size=8)
-        rospy.Subscriber('/cv_camera_node/image_raw', Image, callback=self.sim_camera_update_callback, queue_size=8)
-        rospy.Subscriber('/carla/ego_vehicle/camera/rgb/front/image_color', Image, callback=self.carla_rgb_camera_update_callback,
-                         queue_size=8)
-
+        rospy.Subscriber('/vehicle/sensor/camera/front/image_color', Image,
+                         callback=self.camera_update_callback, queue_size=8)
         # -----------------------------------------
 
         rospy.Subscriber('/vehicle/dbw/steering_cmds', Float32, callback=self.steering_cmd_callback)
@@ -221,7 +192,7 @@ class Visualization():
 
             if self.current_frame is not None and self.camera_select != -1:
                 # Apply Steering Visualization #  -0.025
-                image = self.visualize_line(img=self.current_frame.copy(), angle_steers=self.steering_angle * -0.025, speed_ms=5)
+                image = self.visualize_line(img=self.current_frame.copy(), angle_steers=self.steering_angle * -0.03, speed_ms=5)
                 img_msg = self.bridge.cv2_to_imgmsg(image, "bgr8")
                 steering_viz_pub.publish(img_msg)
 
