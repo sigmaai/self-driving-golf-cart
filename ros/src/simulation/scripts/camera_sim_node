@@ -31,7 +31,7 @@ class CameraSimNode():
         self.bridge = CvBridge()
 
         self.camera_pub = rospy.Publisher('/cv_camera_node/image_sim', Image, queue_size=10)
-        self.sim_angle_pub = rospy.Publisher("/simulation/dbw/steering_cmds", Float32, queue_size=10)
+        # self.sim_angle_pub = rospy.Publisher("/simulation/dbw/steering_cmds", Float32, queue_size=10)
 
         frame_path = rospy.get_param("/camera_sim_node/sim_data_path")
         time_delay = rospy.get_param("/camera_sim_node/time_delay")

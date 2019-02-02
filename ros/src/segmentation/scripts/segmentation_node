@@ -62,11 +62,11 @@ class ObjectDetectionNode:
         segmentation_image_pub = rospy.Publisher('/segmentation/visualization/', Image, queue_size=10)
         segmentation_results_pub = rospy.Publisher('/segmentation/output', SegmentationResult, queue_size=10)
 
-        rate = rospy.Rate(15)
+        rate = rospy.Rate(24)
 
         # Running ROS loop
         rospy.loginfo("Semantic Segmentation Started")
-        rospy.loginfo("v1.5.0")
+        rospy.loginfo("v1.7.0")
 
         while not rospy.is_shutdown():
             if self.current_frame is not None:

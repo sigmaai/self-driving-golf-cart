@@ -20,7 +20,7 @@ class Segmentor():
 
     def __init__(self, weight_path):
 
-        self.model = ICNet(width=1024, height=512, n_classes=configs.nb_classes, weight_path=weight_path, training=False)
+        self.model = ICNet(width=configs.img_width, height=configs.img_height, n_classes=configs.nb_classes, weight_path=weight_path, training=False)
         print(self.model.model.summary())
         self.backgrounds = self.load_color_backgrounds()
 
@@ -33,9 +33,9 @@ class Segmentor():
             color = utils.labels[i][7]
 
             bg = np.zeros((480, 640, 3), dtype=np.uint8)
-            bg[:, :, 0].fill(color[0])
+            bg[:, :, 0].fill(color[2])
             bg[:, :, 1].fill(color[1])
-            bg[:, :, 2].fill(color[2])
+            bg[:, :, 2].fill(color[0])
             backgrounds.append(bg)
 
         return backgrounds
@@ -54,13 +54,13 @@ class Segmentor():
 
         if visualize:
             im_mask = self.convert_class_to_rgb(image_labels=output)
-            viz = cv2.addWeighted(im_mask, 0.8, cv2.resize(image, (640, 480)), 0.8, 0)
+            viz = cv2.addWeighted(im_mask, 1.0, cv2.resize(image, (640, 480)), 0.8, 0)
             viz = cv2.resize(viz, (640, 480))
             return output, viz
         else:
             return output, None
 
-    def convert_class_to_rgb(self, image_labels, threshold=0.75):
+    def convert_class_to_rgb(self, image_labels, threshold=0.50):
 
         # convert any pixel > threshold to 1
         # convert any pixel < threshold to 0

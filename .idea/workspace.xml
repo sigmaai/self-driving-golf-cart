@@ -3,21 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="8075d57d-0c29-4084-b018-ee8c503d1889" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CODE_OF_CONDUCT.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arduino/brake_accelerator_controller/brake_accelerator_controller.ino" beforeDir="false" afterPath="$PROJECT_DIR$/arduino/brake_accelerator_controller/brake_accelerator_controller.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/autopilot/scripts/autopilot_node" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/autopilot_node" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/autopilot/scripts/models/configs.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/autopilot/scripts/models/helper.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/autopilot/scripts/models/i3d.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/models/i3d.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/autopilot/scripts/visualization/visualization.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/visualization/visualization.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/gui/launch/rqt.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/gui/launch/rqt.launch" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ros/src/segmentation/launch/segmentation.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/segmentation/launch/segmentation.launch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/segmentation/scripts/models/icnet.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/segmentation/scripts/models/icnet.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ros/src/segmentation/scripts/segmentation_node" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/segmentation/scripts/segmentation_node" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ros/src/segmentation/scripts/segmentor.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/segmentation/scripts/segmentor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/cv_camera/launch/start_camera.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/sensors/cv_camera/launch/start_camera.launch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/joystick/launch/joystick.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/sensors/joystick/launch/joystick.launch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/simulation/scripts/autopilot_bridge.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/simulation/scripts/autopilot_bridge.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/segmentation/scripts/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/segmentation/scripts/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim_node" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim_node" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,11 +37,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/segmentation_node">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+            <state relative-caret-position="345">
+              <caret line="62" column="66" lean-forward="true" selection-start-line="62" selection-start-column="66" selection-end-line="62" selection-end-column="66" />
               <folding>
                 <element signature="e#1286#1317#0" expanded="true" />
               </folding>
@@ -62,8 +52,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/segmentor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1026">
-              <caret line="82" selection-start-line="82" selection-end-line="82" />
+            <state relative-caret-position="260">
+              <caret line="62" column="62" selection-start-line="62" selection-start-column="62" selection-end-line="62" selection-end-column="62" />
               <folding>
                 <element signature="e#219#249#0" expanded="true" />
               </folding>
@@ -83,8 +73,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ros/src/segmentation/launch/segmentation.launch">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+            <state relative-caret-position="300">
+              <caret line="20" column="107" lean-forward="true" selection-start-line="20" selection-start-column="78" selection-end-line="20" selection-end-column="107" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/configs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -174,11 +173,8 @@
         <option value="$PROJECT_DIR$/ros/src/gui/package.xml" />
         <option value="$PROJECT_DIR$/ros/src/gui/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/ros/src/sensors/cv_camera/src/capture.cpp" />
-        <option value="$PROJECT_DIR$/ros/src/segmentation/scripts/utils.py" />
         <option value="$PROJECT_DIR$/ros/src/sensors/joystick/scripts/input_switch.py" />
-        <option value="$PROJECT_DIR$/ros/src/segmentation/scripts/configs.py" />
         <option value="$PROJECT_DIR$/ros/src/simulation/launch/start_camera_sim.launch" />
-        <option value="$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim_node" />
         <option value="$PROJECT_DIR$/docs/build/html/_sources/About ROS.rst.txt" />
         <option value="$PROJECT_DIR$/docs/source/About ROS.rst" />
         <option value="$PROJECT_DIR$/ros/src/sensors/joystick/scripts/selective_output.py" />
@@ -205,17 +201,20 @@
         <option value="$PROJECT_DIR$/ros/src/gui/launch/rqt.launch" />
         <option value="$PROJECT_DIR$/ros/src/autopilot/scripts/models/i3d.py" />
         <option value="$PROJECT_DIR$/ros/src/segmentation/scripts/models/icnet.py" />
-        <option value="$PROJECT_DIR$/ros/src/segmentation/launch/segmentation.launch" />
-        <option value="$PROJECT_DIR$/ros/src/segmentation/scripts/segmentor.py" />
+        <option value="$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim_node" />
         <option value="$PROJECT_DIR$/ros/src/segmentation/scripts/segmentation_node" />
+        <option value="$PROJECT_DIR$/ros/src/segmentation/scripts/utils.py" />
+        <option value="$PROJECT_DIR$/ros/src/segmentation/scripts/segmentor.py" />
+        <option value="$PROJECT_DIR$/ros/src/segmentation/launch/segmentation.launch" />
+        <option value="$PROJECT_DIR$/ros/src/segmentation/scripts/configs.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="138" />
+    <option name="x" value="101" />
     <option name="y" value="27" />
-    <option name="width" value="1462" />
-    <option name="height" value="852" />
+    <option name="width" value="1380" />
+    <option name="height" value="804" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -264,6 +263,21 @@
               <item name="segmentation" type="462c0819:PsiDirectoryNode" />
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
               <item name="weights" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
+              <item name="ros" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="simulation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
+              <item name="ros" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="simulation" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -428,12 +442,15 @@
       <workItem from="1548883064969" duration="1237000" />
       <workItem from="1548973083619" duration="6605000" />
       <workItem from="1548985343092" duration="4182000" />
-      <workItem from="1548989925560" duration="49000" />
+      <workItem from="1548989925560" duration="436000" />
+      <workItem from="1549050591675" duration="74000" />
+      <workItem from="1549050941530" duration="2204000" />
+      <workItem from="1549075716808" duration="475000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92564000" />
+    <option name="totallyTimeSpent" value="95704000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -445,10 +462,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="138" y="27" width="1462" height="852" extended-state="0" />
+    <frame x="101" y="27" width="1380" height="804" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5096525" visible="true" weight="0.2069209" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5096525" visible="true" weight="0.22863568" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32702702" />
@@ -521,13 +538,6 @@
     <entry file="file://$PROJECT_DIR$/ros/src/autopilot/scripts/simulation.py" />
     <entry file="file://$PROJECT_DIR$/docs/source/About ROS.rst">
       <provider selected="true" editor-type-id="restructured-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim_node">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="39" column="49" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/bridge.py" />
     <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/client.py">
@@ -712,13 +722,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="110" column="16" lean-forward="true" selection-start-line="110" selection-start-column="16" selection-end-line="110" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/autopilot/scripts/models/i3d.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3505">
@@ -743,10 +746,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/configs.py">
+    <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim_node">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+        <state relative-caret-position="439">
+          <caret line="51" column="35" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="96" column="21" lean-forward="true" selection-start-line="96" selection-start-column="21" selection-end-line="96" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -757,13 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/segmentation/launch/segmentation.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/sensors/cv_camera/launch/start_camera.launch">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -771,23 +774,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/segmentation_node">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="62" column="66" lean-forward="true" selection-start-line="62" selection-start-column="66" selection-end-line="62" selection-end-column="66" />
+          <folding>
+            <element signature="e#1286#1317#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/segmentor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
-          <caret line="82" selection-start-line="82" selection-end-line="82" />
+        <state relative-caret-position="260">
+          <caret line="62" column="62" selection-start-line="62" selection-start-column="62" selection-end-line="62" selection-end-column="62" />
           <folding>
             <element signature="e#219#249#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/segmentation_node">
+    <entry file="file://$PROJECT_DIR$/ros/src/segmentation/launch/segmentation.launch">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
-          <folding>
-            <element signature="e#1286#1317#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="300">
+          <caret line="20" column="107" lean-forward="true" selection-start-line="20" selection-start-column="78" selection-end-line="20" selection-end-column="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/configs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
