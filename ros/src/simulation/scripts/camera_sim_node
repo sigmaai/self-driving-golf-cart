@@ -15,7 +15,7 @@ Contact: contact@neilnie.com
 """
 
 import cv2
-import pandas as pd
+import numpy as np
 import os
 import rospy
 from sensor_msgs.msg import Image
@@ -31,17 +31,16 @@ class CameraSimNode():
         self.bridge = CvBridge()
 
         self.camera_pub = rospy.Publisher('/cv_camera_node/image_sim', Image, queue_size=10)
+        # self.camera_vis_pub1 = rospy.Publisher('/cv_camera_node/image_sim_vis1', Image, queue_size=10)
+        # self.camera_vis_pub2 = rospy.Publisher('/cv_camera_node/image_sim_vis2', Image, queue_size=10)
+        # self.camera_vis_pub3 = rospy.Publisher('/cv_camera_node/image_sim_vis3', Image, queue_size=10)
         # self.sim_angle_pub = rospy.Publisher("/simulation/dbw/steering_cmds", Float32, queue_size=10)
 
         frame_path = rospy.get_param("/camera_sim_node/sim_data_path")
-        time_delay = rospy.get_param("/camera_sim_node/time_delay")
         self.rate = rospy.Rate(8)
 
-        # The csv data is read below. It must have two columns. the first column is image name,
-        # second frame steering angle the csv file contains many nonexisting frame information
-        # which is disregarded in the flowing loop.
-
         rospy.loginfo("Simulated Camera Feed Initialized. Publisher path: '/cv_camera_node/image_sim'")
+
         while not rospy.is_shutdown():
 
             for i in range(len(os.listdir(frame_path))):
@@ -50,12 +49,22 @@ class CameraSimNode():
                 # check to see if the file exists
                 if os.path.isfile(im_path):
                     frame = cv2.imread(im_path)
+
+                    b_channel, g_channel, r_channel = cv2.split(cv2.resize(frame, (160, 120)))
+                    img_rgba = cv2.merge((r_channel, g_channel, b_channel))
+
                     try:
                         img_msg = self.bridge.cv2_to_imgmsg(frame, "bgr8")
+                        img_msg_vis = Image()
+                        img_msg_vis.data = img_rgba.flatten().tolist()
+
                     except CvBridgeError as e:
                         raise e
                     # publish image
                     self.camera_pub.publish(img_msg)
+                    # self.camera_vis_pub1.publish(img_msg_vis)
+                    # self.camera_vis_pub2.publish(img_msg_vis)
+                    # self.camera_vis_pub3.publish(img_msg_vis)
 
                 # ros rate sleep
                 self.rate.sleep()

@@ -1,3 +1,4 @@
+
 <launch>
 
 	<!-- upload urdf -->
@@ -24,7 +25,7 @@
         <param name="map_url" value="$(arg url)" />
     </node>
 
-    <!-- ========= initialize GPS & localization modules ===+===== -->
+    <!-- ========= initialize GPS & localization modules ========= -->
 
     <include file="$(find localization)/launch/localization.launch"/>
 

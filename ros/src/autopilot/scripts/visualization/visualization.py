@@ -20,7 +20,7 @@ from PIL import ImageDraw
 import rospy
 from sensor_msgs.msg import Image
 from std_msgs.msg import Float32
-from std_msgs.msg import Int8
+from std_msgs.msg import Float32MultiArray
 from cv_bridge import CvBridge, CvBridgeError
 
 
@@ -96,7 +96,7 @@ class Visualization():
         path_y, _ = self.calc_lookahead_offset(speed_ms, angle_steers, path_x)
         self.draw_path(img, path_x, path_y, color)
 
-        return img
+        return img, path_x, path_y
 
     def visualize_steering_wheel(self, image, angle):
 
@@ -153,8 +153,7 @@ class Visualization():
         except CvBridgeError as e:
             raise e
 
-        if self.camera_select == 0:
-            self.current_frame = cv_image
+        self.current_frame = cv_image
 
     def steering_cmd_callback(self, data):
 
@@ -174,7 +173,6 @@ class Visualization():
         self.bridge = CvBridge()
         self.steering_angle = 0.0
         self.cruise_cmds = 0.0
-        self.camera_select = -1
 
         # -----------------------------------------
         rospy.Subscriber('/vehicle/sensor/camera/front/image_color', Image,
@@ -183,16 +181,28 @@ class Visualization():
 
         rospy.Subscriber('/vehicle/dbw/steering_cmds', Float32, callback=self.steering_cmd_callback)
         rospy.Subscriber('/vehicle/dbw/cruise_cmds', Float32, callback=self.cruise_callback)
+
         steering_viz_pub = rospy.Publisher('/visual/autopilot/angle_img', Image, queue_size=5)
         accel_viz_pub = rospy.Publisher('/visual/autopilot/cruise_img', Image, queue_size=5)
+        steering_ios_path = rospy.Publisher('/visual/ios/steering/path', Float32MultiArray, queue_size=5)
 
         rate = rospy.Rate(24)
 
         while not rospy.is_shutdown():
 
-            if self.current_frame is not None and self.camera_select != -1:
+            if self.current_frame is not None:
+
                 # Apply Steering Visualization #  -0.025
-                image = self.visualize_line(img=self.current_frame.copy(), angle_steers=self.steering_angle * -0.03, speed_ms=5)
+                image, path_x, path_y = self.visualize_line(img=self.current_frame.copy(),
+                                                            angle_steers=self.steering_angle * -0.035,
+                                                            speed_ms=5)
+
+                # Generate steering path message
+                path_msg = Float32MultiArray()
+                path_msg.data = np.hstack([path_x, path_y])
+                steering_ios_path.publish(path_msg)
+
+                # Generate steering image message
                 img_msg = self.bridge.cv2_to_imgmsg(image, "bgr8")
                 steering_viz_pub.publish(img_msg)
 
