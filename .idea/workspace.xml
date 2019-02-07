@@ -2,36 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8075d57d-0c29-4084-b018-ee8c503d1889" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/ros/src/segmentation/scripts/BirdsEyeView.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/segmentation/scripts/evaluateRoad.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/segmentation/scripts/helper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/segmentation/scripts/simpleExample_transformTestResults2BEV.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/segmentation/scripts/transform2BEV.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/autopilot/launch/autopilot.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/launch/autopilot.launch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/data_logger/arduino_encoder/arduino_encoder.ino" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/data_logger/launch/steering_logger.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/data_logger/launch/steering_logger.launch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/data_logger/scripts/steering_logger" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/data_logger/scripts/steering_logger" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/gui/launch/rqt_with_bag.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/gui/launch/rqt_with_bag.launch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/cv_camera/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/cv_camera/CHANGELOG.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/cv_camera/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/cv_camera/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/cv_camera/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/cv_camera/cv_camera_nodelets.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/cv_camera/include/cv_camera/capture.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/cv_camera/include/cv_camera/driver.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/cv_camera/include/cv_camera/exception.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/cv_camera/launch/start_camera.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/sensors/cv_camera/launch/start_camera.launch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/cv_camera/package.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/cv_camera/scripts/camera_select.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/sensors/cv_camera/scripts/camera_select.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/cv_camera/src/capture.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/cv_camera/src/cv_camera_node.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/cv_camera/src/cv_camera_nodelet.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/cv_camera/src/driver.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/cv_camera/test/capture.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/cv_camera/test/cv_camera.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/cv_camera/test/no_yaml.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/cv_camera/test/sample.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/cv_camera/test/test_cv_camera.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/cv_camera/test/test_cv_camera_no_yaml.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/simulation/launch/start_camera_sim.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/simulation/launch/start_camera_sim.launch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim_node" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim_node" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv_camera/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv_camera/CHANGELOG.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv_camera/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv_camera/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv_camera/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv_camera/cv_camera_nodelets.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv_camera/include/cv_camera/capture.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv_camera/include/cv_camera/driver.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv_camera/include/cv_camera/exception.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv_camera/package.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv_camera/src/capture.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv_camera/src/cv_camera_node.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv_camera/src/cv_camera_nodelet.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv_camera/src/driver.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv_camera/test/capture.avi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv_camera/test/cv_camera.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv_camera/test/no_yaml.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv_camera/test/sample.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv_camera/test/test_cv_camera.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cv_camera/test/test_cv_camera_no_yaml.cpp" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,23 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ros/src/data_logger/scripts/steering_logger">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="657">
-              <caret line="48" column="19" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
-              <folding>
-                <element signature="e#23#33#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim_node">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="32" column="92" selection-start-line="32" selection-start-column="92" selection-end-line="32" selection-end-column="92" />
+            <state relative-caret-position="192">
+              <caret line="39" column="8" lean-forward="true" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
               <folding>
                 <element signature="e#301#311#0" expanded="true" />
               </folding>
@@ -108,10 +92,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ros/src/simulation/launch/start_camera_sim.launch">
+        <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/helper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="93" selection-start-line="3" selection-start-column="93" selection-end-line="3" selection-end-column="93" />
+            <state relative-caret-position="461">
+              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="41" column="93" lean-forward="true" selection-start-line="41" selection-start-column="93" selection-end-line="41" selection-end-column="93" />
             </state>
           </provider>
         </entry>
@@ -175,9 +168,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joy/launch/ps4joy.launch" />
-        <option value="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joy/launch/joystick.launch" />
-        <option value="$PROJECT_DIR$/ros/src/sensors/joystick_drivers/joy/scripts/input_switch.py" />
         <option value="$PROJECT_DIR$/ros/src/driver/launch/serial.launch" />
         <option value="$PROJECT_DIR$/ros/src/sensors/joystick/README.md" />
         <option value="$PROJECT_DIR$/user_interface.py" />
@@ -226,6 +216,9 @@
         <option value="$PROJECT_DIR$/ros/src/data_logger/scripts/steering_logger" />
         <option value="$PROJECT_DIR$/ros/src/simulation/launch/start_camera_sim.launch" />
         <option value="$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim_node" />
+        <option value="$PROJECT_DIR$/ros/src/segmentation/scripts/BirdsEyeView.py" />
+        <option value="$PROJECT_DIR$/ros/src/segmentation/scripts/simpleExample_transformTestResults2BEV.py" />
+        <option value="$PROJECT_DIR$/ros/src/segmentation/scripts/helper.py" />
       </list>
     </option>
   </component>
@@ -243,7 +236,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -267,28 +259,13 @@
               <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
               <item name="ros" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="simulation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
-              <item name="ros" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="simulation" type="462c0819:PsiDirectoryNode" />
-              <item name="launch" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
-              <item name="ros" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="simulation" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="segmentation" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -491,12 +468,13 @@
       <workItem from="1549495557030" duration="622000" />
       <workItem from="1549496629590" duration="2308000" />
       <workItem from="1549503591272" duration="144000" />
-      <workItem from="1549503828082" duration="78000" />
+      <workItem from="1549503828082" duration="360000" />
+      <workItem from="1549558139765" duration="969000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113666000" />
+    <option name="totallyTimeSpent" value="114917000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -509,12 +487,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="74" y="27" width="1522" height="873" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5096525" visible="true" weight="0.24796748" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5096525" visible="true" weight="0.25135502" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32469305" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32297298" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32742155" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -543,36 +520,6 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ros/src/simulation/launch/carla_client_with_rviz.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/sensors/joystick/scripts/camera_switch.py" />
-    <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/self_driving_system_bridge.py" />
-    <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/camera.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="340" column="47" lean-forward="true" selection-start-line="340" selection-start-column="47" selection-end-line="340" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/python_stubs/-1247972723/__builtin__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="798" column="4" selection-start-line="798" selection-start-column="4" selection-end-line="798" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/sensors/joystick/scripts/input_switch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="27" column="40" lean-forward="true" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/manual_control.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
@@ -818,6 +765,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/data_logger/scripts/steering_logger">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="657">
+          <caret line="48" column="19" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
+          <folding>
+            <element signature="e#23#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/data_logger/launch/steering_logger.launch">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -835,13 +792,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/data_logger/scripts/steering_logger">
+    <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/computingPipeline.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="657">
-          <caret line="48" column="19" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
-          <folding>
-            <element signature="e#23#33#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-1130" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/BirdsEyeView.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1436">
+          <caret line="98" selection-start-line="98" selection-end-line="98" />
         </state>
       </provider>
     </entry>
@@ -852,10 +811,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="41" column="93" lean-forward="true" selection-start-line="41" selection-start-column="93" selection-end-line="41" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/helper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/simpleExample_transformTestResults2BEV.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/simpleExample_generateBEVResults.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="4" lean-forward="true" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+          <folding>
+            <element signature="e#436#450#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim_node">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="32" column="92" selection-start-line="32" selection-start-column="92" selection-end-line="32" selection-end-column="92" />
+        <state relative-caret-position="192">
+          <caret line="39" column="8" lean-forward="true" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
           <folding>
             <element signature="e#301#311#0" expanded="true" />
           </folding>
