@@ -20,6 +20,6 @@
     <node name="rqt_gui" pkg="rqt_gui" type="rqt_gui"/>
 
     <!-- All your stuff goes here -->
-    <node pkg="rosbag" type="record" name="vehicle_rosbag" output="screen" args="--all"/>
+    <node pkg="rosbag" type="record" name="vehicle_rosbag" output="screen" args="-a -x '(.*)image_raw(.*)' -o '/home/neil/ros_bag' "/>
 
 </launch>

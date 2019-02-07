@@ -1,7 +1,7 @@
 <launch>
 
     <node name="camera_sim_node" type="camera_sim_node" pkg="simulation" output="screen">
-    	<param name="sim_data_path" value='/hdd/ssd_2/dataset/golf-cart/Dataset/Dataset_Part1/center/'/>
+    	<param name="sim_data_path" value='/hdd/ssd_2/dataset/golf-cart/Dataset/Dataset_Part2/center/'/>
         <param name="has_gt" value="0" />
         <param name="time_delay" value="0.02"/>
   	</node>

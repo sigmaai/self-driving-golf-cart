@@ -31,10 +31,6 @@ class CameraSimNode():
         self.bridge = CvBridge()
 
         self.camera_pub = rospy.Publisher('/cv_camera_node/image_sim', Image, queue_size=10)
-        # self.camera_vis_pub1 = rospy.Publisher('/cv_camera_node/image_sim_vis1', Image, queue_size=10)
-        # self.camera_vis_pub2 = rospy.Publisher('/cv_camera_node/image_sim_vis2', Image, queue_size=10)
-        # self.camera_vis_pub3 = rospy.Publisher('/cv_camera_node/image_sim_vis3', Image, queue_size=10)
-        # self.sim_angle_pub = rospy.Publisher("/simulation/dbw/steering_cmds", Float32, queue_size=10)
 
         frame_path = rospy.get_param("/camera_sim_node/sim_data_path")
         self.rate = rospy.Rate(8)
@@ -50,21 +46,13 @@ class CameraSimNode():
                 if os.path.isfile(im_path):
                     frame = cv2.imread(im_path)
 
-                    b_channel, g_channel, r_channel = cv2.split(cv2.resize(frame, (160, 120)))
-                    img_rgba = cv2.merge((r_channel, g_channel, b_channel))
-
                     try:
                         img_msg = self.bridge.cv2_to_imgmsg(frame, "bgr8")
-                        img_msg_vis = Image()
-                        img_msg_vis.data = img_rgba.flatten().tolist()
 
                     except CvBridgeError as e:
                         raise e
                     # publish image
                     self.camera_pub.publish(img_msg)
-                    # self.camera_vis_pub1.publish(img_msg_vis)
-                    # self.camera_vis_pub2.publish(img_msg_vis)
-                    # self.camera_vis_pub3.publish(img_msg_vis)
 
                 # ros rate sleep
                 self.rate.sleep()

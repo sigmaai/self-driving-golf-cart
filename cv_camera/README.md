@@ -26,7 +26,6 @@ If no calibration data is set, it has dummy values except for width and height.
 * ~image_height (int) try to set capture image height.
 * ~camera_info_url (string) url of camera info yaml.
 * ~file (string: default "") if not "" then use movie file instead of device.
-* ~rescale_camera_info (bool: default false) rescale camera calibration info automatically.
 
 supports CV_CAP_PROP_*, by below params.
 
@@ -65,14 +64,3 @@ Nodelet
 -------------------
 
 This node works as nodelet (cv_camera/CvCameraNodelet).
-
-Contributors
---------------------
-
-PR is welcome. I'll review your code to keep consistency, be patient.
-
-* Oleg Kalachev
-* Mikael Arguedas
-* Maurice Meedendorp
-* Max Schettler
-* Lukas Bulwahn

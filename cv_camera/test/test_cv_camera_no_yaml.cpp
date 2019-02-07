@@ -8,12 +8,12 @@
 sensor_msgs::Image g_image;
 sensor_msgs::CameraInfo g_camera_info;
 
-void ImageCallback(const sensor_msgs::Image::ConstPtr &image)
+void ImageCallback(const sensor_msgs::Image::ConstPtr& image)
 {
   g_image = *image;
 }
 
-void InfoCallback(const sensor_msgs::CameraInfo::ConstPtr &info)
+void InfoCallback(const sensor_msgs::CameraInfo::ConstPtr& info)
 {
   g_camera_info = *info;
 }
@@ -25,12 +25,10 @@ TEST(CvCameraNode, getImage)
                                        1,
                                        &ImageCallback);
   ros::Rate r(10.0);
-  while (sub.getNumPublishers() == 0)
-  {
+  while (sub.getNumPublishers() == 0) {
     r.sleep();
   }
-  while (g_image.header.frame_id == "")
-  {
+  while (g_image.header.frame_id == "") {
     ros::spinOnce();
     r.sleep();
   }
@@ -47,12 +45,10 @@ TEST(CvCameraNode, getCameraInfo)
                                        1,
                                        &InfoCallback);
   ros::Rate r(10.0);
-  while (sub.getNumPublishers() == 0)
-  {
+  while (sub.getNumPublishers() == 0) {
     r.sleep();
   }
-  while (g_camera_info.header.frame_id == "")
-  {
+  while (g_camera_info.header.frame_id == "") {
     ros::spinOnce();
     r.sleep();
   }
