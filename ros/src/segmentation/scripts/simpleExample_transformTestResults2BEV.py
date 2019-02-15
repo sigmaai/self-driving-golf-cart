@@ -18,7 +18,7 @@
 #
 
 import os, sys
-import computeBaseline, transform2BEV
+import transform2BEV
 
 #########################################################################
 # test script to process testing data in perspective domain and 

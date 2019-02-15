@@ -75,23 +75,3 @@ install(DIRECTORY include/${PROJECT_NAME}/
 install(FILES cv_camera_nodelets.xml
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
   )
-
-
-#############
-## Testing ##
-#############
-
-roslint_cpp(
-  src/capture.cpp src/cv_camera_node.cpp src/cv_camera_nodelet.cpp src/driver.cpp
-  )
-
-if (CATKIN_ENABLE_TESTING)
-  find_package(rostest REQUIRED)
-  add_rostest_gtest(test_cv_camera test/cv_camera.test
-    test/test_cv_camera.cpp)
-  target_link_libraries(test_cv_camera ${PROJECT_NAME} ${catkin_LIBRARIES})
-
-  add_rostest_gtest(test_cv_camera_no_yaml test/no_yaml.test
-    test/test_cv_camera_no_yaml.cpp)
-  target_link_libraries(test_cv_camera_no_yaml ${PROJECT_NAME} ${catkin_LIBRARIES})
-endif()

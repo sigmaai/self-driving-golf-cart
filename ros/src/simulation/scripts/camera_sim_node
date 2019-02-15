@@ -15,7 +15,6 @@ Contact: contact@neilnie.com
 """
 
 import cv2
-import numpy as np
 import os
 import rospy
 from sensor_msgs.msg import Image

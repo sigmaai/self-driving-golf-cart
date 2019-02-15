@@ -1,7 +1,7 @@
 <launch>
 
     <node name="steering_logger" type="steering_logger" pkg="data_logger" output="screen">
-    	<param name="logger_path" value="/home/neil/Desktop/data" />
+    	<param name="logger_path" value="/home/neil/Desktop/data-4" />
   	</node>
     
 </launch>

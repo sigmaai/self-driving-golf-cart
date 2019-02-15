@@ -54,7 +54,7 @@ def main(dataFiles, pathToCalib, outputPath, calib_end  = '.txt'):
         assert os.path.isfile(aFile), '%s is not a file' %aFile
         
         file_key = aFile.split('/')[-1].split('.')[0]
-        print "Transforming file %s to Birds Eye View " %file_key 
+        print("Transforming file %s to Birds Eye View " %file_key)
         tags = file_key.split('_')
         data_end = aFile.split(file_key)[-1]
         
@@ -67,8 +67,8 @@ def main(dataFiles, pathToCalib, outputPath, calib_end  = '.txt'):
         
         # Check if calb file exist!
         if not os.path.isfile(calib_file):
-            print "Cannot find calib file: %s" %calib_file
-            print "Attention: It is assumed that input data and calib files have the same name (only different extension)!" 
+            print("Cannot find calib file: %s" %calib_file)
+            print("Attention: It is assumed that input data and calib files have the same name (only different extension)!")
             sys.exit(1)
             
         # Update calibration for Birds Eye View
@@ -98,12 +98,12 @@ if __name__ == "__main__":
     print sys.argv
     # check for correct number of arguments.
     if len(sys.argv)!=4:
-        print "Usage: python transform2BEV.py <InputFiles> <PathToCalib> <OutputPath> "
-        print "<InputFiles>: the files you want to transform to BirdsEyeView, e.g., '/home/elvis/kitti_road/data/*.png' (use quotes!)"
-        print "<PathToCalib>: containing calib data as calib-files, e.g., /home/elvis/kitti_road/calib/" 
-        print "<OutputPath>: where the BirdsEyeView data will be saved, e.g., /home/elvis/kitti_road/data_bev"
-        print "ATTENTION: It is assumed that input data and calib files have the same name (only different extension)!"
-        print  "Your provided parameters: ", sys.argv
+        print("Usage: python transform2BEV.py <InputFiles> <PathToCalib> <OutputPath> ")
+        print("<InputFiles>: the files you want to transform to BirdsEyeView, e.g., '/home/elvis/kitti_road/data/*.png' (use quotes!)")
+        print("<PathToCalib>: containing calib data as calib-files, e.g., /home/elvis/kitti_road/calib/" )
+        print("<OutputPath>: where the BirdsEyeView data will be saved, e.g., /home/elvis/kitti_road/data_bev")
+        print("ATTENTION: It is assumed that input data and calib files have the same name (only different extension)!")
+        print("Your provided parameters: ", sys.argv)
         sys.exit(1)
     
     # parse parameters
