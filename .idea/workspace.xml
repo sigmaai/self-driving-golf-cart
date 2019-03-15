@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8075d57d-0c29-4084-b018-ee8c503d1889" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/data_logger/launch/steering_logger.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/data_logger/launch/steering_logger.launch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/segmentation/scripts/BirdsEyeView.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/segmentation/scripts/BirdsEyeView.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/segmentation/scripts/simpleExample_transformTestResults2BEV.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/segmentation/scripts/simpleExample_transformTestResults2BEV.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/segmentation/scripts/transform2BEV.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/segmentation/scripts/transform2BEV.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/cv_camera/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/sensors/cv_camera/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/cv_camera/scripts/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/autopilot/launch/autopilot.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/launch/autopilot.launch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/simulation/launch/start_camera_sim.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/simulation/launch/start_camera_sim.launch" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim_node" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim_node" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,53 +39,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim_node">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="29" column="32" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="32" />
-              <folding>
-                <element signature="e#301#311#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/BirdsEyeView.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="416" column="55" selection-start-line="416" selection-start-column="55" selection-end-line="416" selection-end-column="55" />
+            <state relative-caret-position="300">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ros/src/data_logger/launch/steering_logger.launch">
+        <entry file="file://$PROJECT_DIR$/ros/src/autopilot/launch/autopilot.launch">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="66" selection-start-line="3" selection-start-column="66" selection-end-line="3" selection-end-column="66" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/simpleExample_transformTestResults2BEV.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="945">
-              <caret line="64" column="11" selection-start-line="64" selection-start-column="11" selection-end-line="64" selection-end-column="11" />
-              <folding>
-                <element signature="e#436#450#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/transform2BEV.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
-              <folding>
-                <element signature="e#383#420#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="390">
+              <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -188,15 +148,12 @@
         <option value="$PROJECT_DIR$/ros/src/segmentation/scripts/configs.py" />
         <option value="$PROJECT_DIR$/ros/src/segmentation/launch/segmentation.launch" />
         <option value="$PROJECT_DIR$/ros/src/gui/launch/rqt.launch" />
-        <option value="$PROJECT_DIR$/ros/src/autopilot/launch/autopilot.launch" />
         <option value="$PROJECT_DIR$/ros/src/sensors/usb_cam/scripts/camera_select.py" />
         <option value="$PROJECT_DIR$/ros/src/sensors/cv_camera/scripts/camera_select.py" />
         <option value="$PROJECT_DIR$/ros/src/sensors/cv_camera/launch/start_camera.launch" />
         <option value="$PROJECT_DIR$/ros/src/gui/launch/rqt_with_bag.launch" />
         <option value="$PROJECT_DIR$/ros/src/data_logger/scripts/steering_logger" />
-        <option value="$PROJECT_DIR$/ros/src/simulation/launch/start_camera_sim.launch" />
         <option value="$PROJECT_DIR$/ros/src/segmentation/scripts/helper.py" />
-        <option value="$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim_node" />
         <option value="$PROJECT_DIR$/ros/src/sensors/cv_camera/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/ros/src/sensors/cv_camera/scripts/cv_bridge_2.py" />
         <option value="$PROJECT_DIR$/ros/src/sensors/cv_camera/scripts/python_cam.py" />
@@ -204,6 +161,9 @@
         <option value="$PROJECT_DIR$/ros/src/segmentation/scripts/transform2BEV.py" />
         <option value="$PROJECT_DIR$/ros/src/segmentation/scripts/BirdsEyeView.py" />
         <option value="$PROJECT_DIR$/ros/src/data_logger/launch/steering_logger.launch" />
+        <option value="$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim_node" />
+        <option value="$PROJECT_DIR$/ros/src/autopilot/launch/autopilot.launch" />
+        <option value="$PROJECT_DIR$/ros/src/simulation/launch/start_camera_sim.launch" />
       </list>
     </option>
   </component>
@@ -244,30 +204,15 @@
               <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
               <item name="ros" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="data_logger" type="462c0819:PsiDirectoryNode" />
+              <item name="sensors" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
               <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
               <item name="ros" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="data_logger" type="462c0819:PsiDirectoryNode" />
-              <item name="launch" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
-              <item name="ros" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="data_logger" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
-              <item name="ros" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="simulation" type="462c0819:PsiDirectoryNode" />
+              <item name="sensors" type="462c0819:PsiDirectoryNode" />
+              <item name="cv_camera" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -482,11 +427,16 @@
       <workItem from="1549814278717" duration="268000" />
       <workItem from="1549815477460" duration="598000" />
       <workItem from="1549916640059" duration="1135000" />
+      <workItem from="1550428433347" duration="575000" />
+      <workItem from="1550520068734" duration="890000" />
+      <workItem from="1550531259667" duration="2194000" />
+      <workItem from="1550869784358" duration="329000" />
+      <workItem from="1551578842185" duration="8000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123600000" />
+    <option name="totallyTimeSpent" value="127596000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -499,9 +449,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="74" y="27" width="1522" height="873" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5096525" visible="true" weight="0.26558265" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5096525" visible="true" weight="0.2195122" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32297298" />
@@ -680,13 +629,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/autopilot/launch/autopilot.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="44" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/sensors/cv_camera/launch/start_camera.launch">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -719,13 +661,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/computingPipeline.py" />
-    <entry file="file://$PROJECT_DIR$/ros/src/simulation/launch/start_camera_sim.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="93" selection-start-line="3" selection-start-column="93" selection-end-line="3" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/simpleExample_generateBEVResults.py" />
     <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/test.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -813,16 +748,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim_node">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="29" column="32" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="32" />
-          <folding>
-            <element signature="e#301#311#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/simpleExample_transformTestResults2BEV.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="945">
@@ -830,6 +755,34 @@
           <folding>
             <element signature="e#436#450#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/data_logger/launch/steering_logger.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="66" selection-start-line="3" selection-start-column="66" selection-end-line="3" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/simulation/launch/start_camera_sim.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim_node">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/BirdsEyeView.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="655">
+          <caret line="416" column="55" selection-start-line="416" selection-start-column="55" selection-end-line="416" selection-end-column="55" />
         </state>
       </provider>
     </entry>
@@ -843,17 +796,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/BirdsEyeView.py">
+    <entry file="file://$PROJECT_DIR$/ros/src/autopilot/launch/autopilot.launch">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="416" column="55" selection-start-line="416" selection-start-column="55" selection-end-line="416" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/data_logger/launch/steering_logger.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="66" selection-start-line="3" selection-start-column="66" selection-end-line="3" selection-end-column="66" />
+        <state relative-caret-position="390">
+          <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
         </state>
       </provider>
     </entry>

@@ -24,7 +24,7 @@ Email: contact@neilnie.com
         <param name="img_width" value="224"/>
         <param name="img_height" value="224"/>
     	<param name="length" value="64" />
-    	<param name="angle_scale" value="-15" />
+    	<param name="angle_scale" value="-12.5" />
         <param name="accel_scale" value="30" />
   	</node>
 

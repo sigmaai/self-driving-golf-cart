@@ -1,4 +1,3 @@
-
 import sensor_msgs.msg
 import sys
 import numpy as np

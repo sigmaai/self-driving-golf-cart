@@ -16,8 +16,8 @@ class python_cam(object):
 
         self.bridge = CvBridge()
 
-        self.numpy_type_to_cvtype = {'uint8': '8U', 'int8': '8S', 'uint16': '16U',
-                                        'int16': '16S', 'int32': '32S', 'float32': '32F',
+        self.numpy_type_to_cvtype = {'uint8': '8U', 'int8': '8S', 'uint16': '16U', 
+        								'int16': '16S', 'int32': '32S', 'float32': '32F',
                                         'float64': '64F'}
         self.numpy_type_to_cvtype.update(dict((v, k) for (k, v) in self.numpy_type_to_cvtype.items()))
 
@@ -31,9 +31,9 @@ class python_cam(object):
         # With webcam get(CV_CAP_PROP_FPS) does not work.
         # Let's see for ourselves.
 
-        cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1024)
-        cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 512)
-        cap.set(cv2.CAP_PROP_FPS, 24)
+        cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
+        cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
+        cap.set(cv2.CAP_PROP_FPS, 30)
 
         fps = cap.get(cv2.CAP_PROP_FPS)
         print "Frames per second using video.get(cv2.CAP_PROP_FPS) : {0}".format(fps)
