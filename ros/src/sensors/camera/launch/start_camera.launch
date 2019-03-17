@@ -1,13 +1,13 @@
 <launch>
 
 	<!--open up the camera -->
-	<node name="cv_camera_node" pkg="cv_camera" type="cv_camera_node">
-        <param name="image_transport" value="compressedDepth"/>
+	<node name="camera_node" pkg="camera" type="python_cam.py">
+    <!--    <param name="image_transport" value="compressedDepth"/> -->
     </node>
 
 
-    <node pkg="cv_camera" name="camera_output_select" type="camera_select.py"/>
+    <node pkg="camera" name="camera_output_select" type="camera_select.py"/>
 
-    <node pkg="cv_camera" name="image_view" type="image_view.sh" />
+    <node pkg="camera" name="image_view" type="image_view.sh" />
 
 </launch>

@@ -25,15 +25,15 @@ class CameraSimNode():
 
     def __init__(self):
 
-        rospy.init_node('cv_camera_sim_node')
+        rospy.init_node('camera_sim_node')
         self.bridge = CvBridge()
 
-        self.camera_pub = rospy.Publisher('/cv_camera_node/image_sim', Image, queue_size=10)
+        self.camera_pub = rospy.Publisher('/camera_node/image_sim', Image, queue_size=10)
 
         frame_path = rospy.get_param("/camera_sim_node/sim_data_path")
         self.rate = rospy.Rate(30)
 
-        rospy.loginfo("Simulated Camera Feed Initialized. Publisher path: '/cv_camera_node/image_sim'")
+        rospy.loginfo("Simulated Camera Feed Initialized. Publisher path: '/camera_node/image_sim'")
 
         while not rospy.is_shutdown():
 

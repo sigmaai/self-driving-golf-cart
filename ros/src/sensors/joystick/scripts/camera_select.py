@@ -17,7 +17,7 @@ class CameraSelect(object):
         rospy.init_node('camera_select')
 
         rospy.Subscriber('/sensor/joystick/joy', Joy, callback=self.joystick_input_callback, queue_size=5)
-        self.publisher = rospy.Publisher('/cv_camera_node/camera_select', data_class=Int8, queue_size=5)
+        self.publisher = rospy.Publisher('/camera_node/camera_select', data_class=Int8, queue_size=5)
         rate = rospy.Rate(24)
 
         while not rospy.is_shutdown():

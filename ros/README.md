@@ -37,8 +37,8 @@ the vehicle.  while subscribes to the camera feed. (Node currently functioning) 
 - `/vehicle/dbw/cruise_cmds/`
 
 ##### Subscribes
-- `/cv_camera_node/image_raw`
-- `/cv_camera_node/image_sim`
+- `/camera_node/image_raw`
+- `/camera_node/image_sim`
 
 ------------------------------
 
@@ -53,7 +53,7 @@ YOLO (You Only Look Once) realtime object detection system.
 - `/detection/object/detection_result`
 
 #### Subscribes:
-- `/cv_camera_node/image_raw`
+- `/camera_node/image_raw`
 
 ------------------------------
 
@@ -68,18 +68,18 @@ Semantic segmentation node. Deep learning, ConvNets
 - `/segmentation/output`
 
 ##### Subscribes
-- `/cv_camera_node/image_raw`
+- `/camera_node/image_raw`
 
 ------------------------------
 
-### cv_camera
+### camera
 The cameras are the main sensors of the self-driving car. 
 
 ##### Nodes:
-- `cv_camera_node`
+- `camera_node`
 
 ##### Publishes
-- `/cv_camera_node/image_raw`
+- `/camera_node/image_raw`
 
 ------------------------------
 

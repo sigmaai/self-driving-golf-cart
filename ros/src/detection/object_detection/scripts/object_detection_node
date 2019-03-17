@@ -43,7 +43,7 @@ class ObjectDetectionNode:
     def __init__(self):
 
         rospy.init_node('object_detection')
-        rospy.Subscriber('/cv_camera_node/image_raw', Image, callback=self.image_update_callback, queue_size=5)
+        rospy.Subscriber('/camera_node/image_raw', Image, callback=self.image_update_callback, queue_size=5)
 
         self.current_frame = None
         self.bridge = CvBridge()

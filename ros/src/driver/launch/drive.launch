@@ -16,7 +16,7 @@ All Rights Reserved.
 <launch>
 
 	<!--open up the camera -->
-	<include file="$(find cv_camera)/launch/start_camera.launch"/>
+	<include file="$(find camera)/launch/start_camera.launch"/>
     
     <!-- setup the Arduino serial -->
     <node name="serial_node" pkg="rosserial_python" type="serial_node.py">
@@ -24,7 +24,7 @@ All Rights Reserved.
     </node>
 
     <!-- launch steering node -->
-    <include file="$(find steering_control)/launch/steering_control.launch"/>
+    <include file="$(find autopilot)/launch/autopilot.launch"/>
 
     <!-- start object detection -->
     <include file="$(find object_detection)/launch/object_detection.launch"/>

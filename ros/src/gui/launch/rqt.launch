@@ -1,7 +1,7 @@
 <launch>
 
     <!-- start camera -->
-    <include file="$(find cv_camera)/launch/start_camera.launch"/>
+    <include file="$(find camera)/launch/start_camera.launch"/>
 
     <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" />
 

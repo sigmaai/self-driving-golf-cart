@@ -16,14 +16,14 @@ class python_cam(object):
 
         self.bridge = CvBridge()
 
-        self.numpy_type_to_cvtype = {'uint8': '8U', 'int8': '8S', 'uint16': '16U', 
-        								'int16': '16S', 'int32': '32S', 'float32': '32F',
-                                        'float64': '64F'}
+        self.numpy_type_to_cvtype = {'uint8': '8U', 'int8': '8S', 'uint16': '16U',
+                                     'int16': '16S', 'int32': '32S', 'float32': '32F',
+                                     'float64': '64F'}
         self.numpy_type_to_cvtype.update(dict((v, k) for (k, v) in self.numpy_type_to_cvtype.items()))
 
         rospy.init_node('python_cam')
 
-        self.publisher = rospy.Publisher('/cv_camera_node/image_raw', data_class=Image, queue_size=5)
+        self.publisher = rospy.Publisher('/camera_node/image_raw', data_class=Image, queue_size=5)
 
         cap = cv2.VideoCapture(0)
 
@@ -31,12 +31,13 @@ class python_cam(object):
         # With webcam get(CV_CAP_PROP_FPS) does not work.
         # Let's see for ourselves.
 
+        # TODO: add the frame size to ros param
         cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
         cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
         cap.set(cv2.CAP_PROP_FPS, 30)
 
         fps = cap.get(cv2.CAP_PROP_FPS)
-        print "Frames per second using video.get(cv2.CAP_PROP_FPS) : {0}".format(fps)
+        print("Frames per second using video.get(cv2.CAP_PROP_FPS) : {0}".format(fps))
 
         rate = rospy.Rate(30)
 

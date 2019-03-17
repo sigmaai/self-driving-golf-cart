@@ -54,8 +54,8 @@ $ /vehicle/dbw/cruise_cmds/
 
 **Subscribes (all nodes)**::
 
-$ /cv_camera_node/image_raw
-$ /cv_camera_node/image_sim
+$ /camera_node/image_raw
+$ /camera_node/image_sim
 
 object_detection
 ----------------
@@ -72,7 +72,7 @@ $ /detection/object/detection_result
 
 **Subscribes**::
 
-$ /cv_camera_node/image_raw
+$ /camera_node/image_raw
 
 segmentation
 ------------
@@ -89,19 +89,19 @@ $ /segmentation/output
 
 **Subscribes**::
 
-$ /cv_camera_node/image_raw
+$ /camera_node/image_raw
 
-cv_camera
+camera
 ---------
 The cameras are the main sensors of the self-driving car. 
 
 **Nodes**::
 
-$ cv_camera_node
+$ camera_node
 
 **Publishes**::
 
-$ /cv_camera_node/image_raw
+$ /camera_node/image_raw
 
 driver
 ------

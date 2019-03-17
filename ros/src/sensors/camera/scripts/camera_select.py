@@ -19,9 +19,9 @@ class CameraSelect(object):
 
         rospy.init_node('camera_select')
 
-        rospy.Subscriber('/cv_camera_node/camera_select', Int8, callback=self.camera_input_select_callback)
-        rospy.Subscriber('/cv_camera_node/image_raw', Image, callback=self.real_camera_update_callback, queue_size=8)
-        rospy.Subscriber('/cv_camera_node/image_sim', Image, callback=self.sim_camera_update_callback, queue_size=8)
+        rospy.Subscriber('/camera_node/camera_select', Int8, callback=self.camera_input_select_callback)
+        rospy.Subscriber('/camera_node/image_raw', Image, callback=self.real_camera_update_callback, queue_size=8)
+        rospy.Subscriber('/camera_node/image_sim', Image, callback=self.sim_camera_update_callback, queue_size=8)
         rospy.Subscriber('/carla/ego_vehicle/camera/rgb/front/image_color', Image,
                          callback=self.carla_rgb_camera_update_callback, queue_size=8)
 
