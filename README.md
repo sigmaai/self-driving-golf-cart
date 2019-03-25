@@ -17,19 +17,25 @@ Research and develop a deep learning-driven self-driving car. The vehicle should
 2. Semantic Segmentation
 3. Object Detection 🚙
 4. Drive by Wire (DBW)
-5. Traffic Light Detection 🚦
-6. Lane Detection 🛣
-7. Localization 🛰️ (currently with GPS)
+5. Localization 🛰️ (currently with GPS)
+6. CARLA simulator integration 
 
-Path planning is coming soon...
+Stereoscopic vision system coming soon...
 
 For the full documentation of the development process, please visit my website: [www.neilnie.com](https://www.neilnie.com)
 
 # Try it out
+Before you jump in, let me describe the hardware requirement for this project. **A webcam is the minimum requirment.** At this point, you can only run the whole system on the actual self-driving vehicle. ROS will throw warnings (even errors) at you if you don't have the hardware connected to your Linux machine. **If you don't have access to the hardware setup, don't worry** 👇
+ 
+- You can tryout individual packages and nodes, and might find them helpful for your own projects. 
+- You can also tryout the CARLA simulator. (Maybe even improve the current system.)
+
+To compile the project:
+
 1. Clone the repository.
 2. Make sure you have all the [dependencies](./ros/requirements.txt) installed. 
-3. Make sure that you have [ROS](http://wiki.ros.org/melodic/Installation/Ubuntu) installed on your computer. (I am currently using ROS Melodic)
-4. `cd PROJECT_DIRECTORY/ros`
+3. Make sure that you have [ROS](http://wiki.ros.org/melodic/Installation/Ubuntu) installed on your computer. (I am using ROS Melodic)
+4. `cd PROJECT_DIRECTORY/ros` 
 5. `catkin_make`
 6. `source devel/setup.bash`
 7. `roslaunch driver drive.launch`
@@ -44,7 +50,6 @@ You should see this screen pop up.
 
 # ROS
 This project uses ROS. The launch files will launch the neccesary nodes as well as rviz for visualization. __For more information on ROS, nodes, topics and others please refer to the ROS [README](./ros/README.md).__
-
 
 # Simulation
 (🏗 Construction Zone 🚧)
