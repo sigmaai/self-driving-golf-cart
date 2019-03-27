@@ -203,9 +203,9 @@ include_directories(
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
 
-set(sources src/particle_filter.cpp src/particle_filter_node.cpp)
-add_executable(particle_filter ${sources} src/particle_filter_node.cpp)
-target_link_libraries(particle_filter ${catkin_LIBRARIES} z ssl uv uWS)
+# set(sources src/particle_filter.cpp src/particle_filter_node.cpp)
+# add_executable(particle_filter ${sources} src/particle_filter_node.cpp)
+# target_link_libraries(particle_filter ${catkin_LIBRARIES} z ssl uv uWS)
 
 #add_executable(talker src/talker.cpp)
 #target_link_libraries(talker ${catkin_LIBRARIES})
