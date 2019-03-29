@@ -2,182 +2,65 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8075d57d-0c29-4084-b018-ee8c503d1889" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/autopilot/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/images/Picto+STEREOLABS_Black.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/images/rqt_diagnostic.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_display_rviz/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_display_rviz/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_display_rviz/images/ZED-Rviz.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_display_rviz/images/ZEDM-Rviz.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_display_rviz/images/depthcloud-RGB.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_display_rviz/launch/display.launch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_display_rviz/launch/display_zedm.launch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_display_rviz/package.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_display_rviz/rviz/zed.rviz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_display_rviz/rviz/zedm.rviz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_ros/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_ros/package.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/cfg/Zed.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/launch/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/launch/zed.launch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/launch/zed_camera.launch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/launch/zed_camera_nodelet.launch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/launch/zed_multi_cam.launch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/launch/zed_multi_gpu.launch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/launch/zed_no_tf.launch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/nodelet_plugins.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/package.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/records/record_depth.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/records/record_stereo.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/scripts/camera_select.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/src/nodelet/include/zed_wrapper_nodelet.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/src/nodelet/src/zed_wrapper_nodelet.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/src/tools/include/sl_tools.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/src/tools/src/sl_tools.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/src/zed_wrapper_node.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/srv/reset_odometry.srv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/srv/reset_tracking.srv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/srv/set_initial_pose.srv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/srv/start_svo_recording.srv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/srv/stop_svo_recording.srv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/urdf/ZED.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/urdf/ZEDM.stl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/urdf/zed.urdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/urdf/zedm.urdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHECKLIST.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHECKLIST.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/breadcrumbs.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/breadcrumbs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/searchbox.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/searchbox.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/static/css/badge_only.css" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/static/css/badge_only.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/static/css/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/static/css/theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/static/fonts/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/static/fonts/FontAwesome.otf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/static/fonts/Lato-Bold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/static/fonts/Lato-Bold.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/static/fonts/Lato-BoldItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/static/fonts/Lato-BoldItalic.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/static/fonts/Lato-Italic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/static/fonts/Lato-Italic.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/static/fonts/Lato-Regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/static/fonts/Lato-Regular.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/static/fonts/RobotoSlab-Bold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/static/fonts/RobotoSlab-Bold.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/static/fonts/RobotoSlab-Regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/static/fonts/RobotoSlab-Regular.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/static/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/static/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/static/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/static/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/static/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/static/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/static/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/static/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/static/fonts/fontawesome-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/static/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/static/js/modernizr.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/static/js/modernizr.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/static/js/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/static/js/theme.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/theme.conf" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/theme.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/versions.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_themes/sphinx_rtd_theme/versions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/make.bat" beforeDir="false" afterPath="$PROJECT_DIR$/docs/make.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/ascs.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/media/ascs.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/attention.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/attention.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/seg_aly_visual.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/seg_aly_visual.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/ros/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ros/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/autopilot/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/autopilot/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/autopilot/package.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/package.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/autopilot/scripts/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ros/src/autopilot/scripts/autopilot_node" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/autopilot_node" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/autopilot/scripts/resources/FiraMono-Medium.otf" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/resources/FiraMono-Medium.otf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/autopilot/scripts/resources/sw.png" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/resources/sw.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/autopilot/scripts/resources/test.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/resources/test.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/autopilot/scripts/visualization/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/visualization/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/autopilot/scripts/visualization/visualization.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/visualization/visualization.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/data_logger/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/data_logger/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/data_logger/package.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/data_logger/package.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/data_logger/scripts/steering_logger" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/data_logger/scripts/steering_logger" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/lane_detection/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/lane_detection/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration10.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration11.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration12.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration12.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration13.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration13.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration14.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration14.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration15.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration15.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration16.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration16.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration17.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration17.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration18.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration18.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration19.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration19.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration20.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration20.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration8.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/lane_detection/camera_cal/calibration9.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/lane_detection/scripts/configs.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/lane_detection/scripts/configs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/lane_detection/scripts/lane_detector.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/lane_detection/scripts/lane_detector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/lane_detection/scripts/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/lane_detection/scripts/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/lane_detection/scripts/visualizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/lane_detection/scripts/visualizer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/object_detection/font/FiraMono-Medium.otf" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/object_detection/font/FiraMono-Medium.otf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/device_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/device_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/model_data/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/model_data/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/object_detection_node" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/object_detection_node" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/yolo3/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/yolo3/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/yolo3/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/yolo3/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/yolo3/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/yolo3/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/driver/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/driver/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/driver/package.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/driver/package.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/driver/scripts/run_bag.sh" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/driver/scripts/run_bag.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/gui/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/gui/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/gui/package.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/gui/package.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/gui/scripts/user_interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/gui/scripts/user_interface.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/localization/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/localization/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/localization/package.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/localization/package.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/localization/scripts/gps_localization.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/localization/scripts/gps_localization.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/localization/src/helper_functions.h" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/localization/src/helper_functions.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/localization/src/json.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/localization/src/json.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/localization/src/map.h" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/localization/src/map.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/localization/src/particle_filter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/localization/src/particle_filter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/localization/src/particle_filter.h" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/localization/src/particle_filter.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/osm/cfg/VizOSM.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/osm/cfg/VizOSM.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/osm/scripts/osm_client" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/osm/scripts/osm_client" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/osm/scripts/osm_server" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/osm/scripts/osm_server" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/osm/scripts/viz_osm" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/osm/scripts/viz_osm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/path_planning/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/path_planning/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/path_planning/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/path_planning/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/path_planning/package.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/path_planning/package.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/path_planning/scripts/global_path.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/path_planning/scripts/global_path.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/rosbridge/rosapi/scripts/rosapi_node" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/rosbridge/rosapi/scripts/rosapi_node" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/capabilities/test_advertise.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/capabilities/test_advertise.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/capabilities/test_call_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/capabilities/test_call_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/capabilities/test_publish.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/capabilities/test_publish.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/capabilities/test_service_capabilities.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/capabilities/test_service_capabilities.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/capabilities/test_subscribe.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/capabilities/test_subscribe.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/experimental/complex_srv+tcp/test_non-ros_service_client_complex-srv.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/experimental/complex_srv+tcp/test_non-ros_service_client_complex-srv.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/experimental/complex_srv+tcp/test_non-ros_service_server_complex-srv.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/experimental/complex_srv+tcp/test_non-ros_service_server_complex-srv.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/experimental/fragmentation+srv+tcp/test_non-ros_service_client_fragmented.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/experimental/fragmentation+srv+tcp/test_non-ros_service_client_fragmented.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/experimental/fragmentation+srv+tcp/test_non-ros_service_server_fragmented.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/experimental/fragmentation+srv+tcp/test_non-ros_service_server_fragmented.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/internal/publishers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/internal/publishers/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/internal/publishers/test_multi_publisher.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/internal/publishers/test_multi_publisher.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/internal/publishers/test_multi_unregistering.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/internal/publishers/test_multi_unregistering.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/internal/publishers/test_publisher_consistency_listener.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/internal/publishers/test_publisher_consistency_listener.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/internal/publishers/test_publisher_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/internal/publishers/test_publisher_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/internal/subscribers/test_multi_subscriber.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/internal/subscribers/test_multi_subscriber.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/internal/subscribers/test_subscriber_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/internal/subscribers/test_subscriber_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/internal/subscribers/test_subscription_modifiers.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/internal/subscribers/test_subscription_modifiers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/internal/test_cbor_conversion.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/internal/test_cbor_conversion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/internal/test_compression.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/internal/test_compression.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/internal/test_message_conversion.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/internal/test_message_conversion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/internal/test_outgoing_message.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/internal/test_outgoing_message.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/internal/test_ros_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/internal/test_ros_loader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/internal/test_services.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_library/test/internal/test_services.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_server/scripts/rosbridge_tcp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_server/scripts/rosbridge_tcp.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_server/scripts/rosbridge_tcp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_server/scripts/rosbridge_udp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_server/scripts/rosbridge_udp.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_server/scripts/rosbridge_udp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_server/scripts/rosbridge_websocket" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_server/scripts/rosbridge_websocket.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_server/scripts/rosbridge_websocket.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_server/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_server/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_server/src/rosbridge_server/tcp_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_server/src/rosbridge_server/tcp_handler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_server/src/rosbridge_server/websocket_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/rosbridge/rosbridge_server/src/rosbridge_server/websocket_handler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/segmentation/scripts/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/segmentation/scripts/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/segmentation/scripts/configs.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/segmentation/scripts/configs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/segmentation/scripts/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/segmentation/scripts/models/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/segmentation/scripts/models/icnet.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/segmentation/scripts/models/icnet.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/segmentation/scripts/segmentation_analyzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/segmentation/scripts/segmentation_analyzer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/autopilot/scripts/visualization/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/autopilot/scripts/visualization/visualization.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/visualization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/gui/launch/rqt.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/gui/launch/rqt.launch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/gui/self-driving-car.perspective" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/segmentation/launch/segmentation.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/segmentation/launch/segmentation.launch" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ros/src/segmentation/scripts/segmentation_node" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/segmentation/scripts/segmentation_node" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ros/src/segmentation/scripts/segmentor.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/segmentation/scripts/segmentor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/segmentation/scripts/testing_imgs/da-1.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/segmentation/scripts/testing_imgs/da-1.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/segmentation/scripts/testing_imgs/da-3.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/segmentation/scripts/testing_imgs/da-3.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/segmentation/scripts/testing_imgs/sn-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/segmentation/scripts/testing_imgs/sn-2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/segmentation/scripts/testing_imgs/start-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/segmentation/scripts/testing_imgs/start-1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/segmentation/scripts/testing_imgs/stop-2.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/segmentation/scripts/testing_imgs/stop-2.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/segmentation/scripts/testing_imgs/test.png" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/segmentation/scripts/testing_imgs/test.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/segmentation/scripts/testing_imgs/test_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/segmentation/scripts/testing_imgs/test_3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/segmentation/scripts/testing_imgs/test_4.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/segmentation/scripts/testing_imgs/test_4.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/segmentation/scripts/testing_imgs/test_5.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/segmentation/scripts/testing_imgs/test_5.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/segmentation/scripts/testing_imgs/test_6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/segmentation/scripts/testing_imgs/test_6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/segmentation/scripts/testing_imgs/test_8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/segmentation/scripts/testing_imgs/test_8.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/segmentation/scripts/testing_imgs/test_9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/segmentation/scripts/testing_imgs/test_9.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/segmentation/scripts/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/segmentation/scripts/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/camera/scripts/camera_select.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/sensors/camera/scripts/camera_select.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/camera/scripts/image_view.sh" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/sensors/camera/scripts/image_view.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/camera/scripts/python_cam.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/sensors/camera/scripts/python_cam.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/gps/scripts/gps_receiver" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/sensors/gps/scripts/gps_receiver" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/gps/scripts/nmea_topic_driver" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/sensors/gps/scripts/nmea_topic_driver" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/gps/scripts/nmea_topic_serial_reader" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/sensors/gps/scripts/nmea_topic_serial_reader" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ros/src/sensors/joystick/scripts/camera_select.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/sensors/joystick/scripts/camera_select.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ros/src/sensors/joystick/scripts/input_switch.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/sensors/joystick/scripts/input_switch.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/joystick/scripts/joy_remap.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/sensors/joystick/scripts/joy_remap.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ros/src/sensors/joystick/scripts/selective_output.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/sensors/joystick/scripts/selective_output.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/sensors/joystick/test/test_joy_msg_migration.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/sensors/joystick/test/test_joy_msg_migration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/simulation/config/EgoVehicleControlParameter.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/simulation/config/EgoVehicleControlParameter.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/simulation/scripts/autopilot_bridge.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/simulation/scripts/autopilot_bridge.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim_node" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim_node" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/simulation/scripts/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/simulation/scripts/client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/simulation/scripts/launch_carla.sh" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/simulation/scripts/launch_carla.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/simulation/scripts/manual_control.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/simulation/scripts/manual_control.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/simulation/scripts/map.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/simulation/scripts/map.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/simulation/scripts/ros_carla_bridge.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/simulation/scripts/ros_carla_bridge.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/simulation/scripts/spawn_npc.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/simulation/scripts/spawn_npc.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -208,23 +91,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim_node">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ros/src/gui/launch/rqt.launch">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
+              <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/segmentor.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-60">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
               <folding>
-                <element signature="e#301#311#0" expanded="true" />
+                <element signature="e#218#248#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/segmentation_node">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="181">
+              <caret line="89" column="94" selection-start-line="89" selection-start-column="94" selection-end-line="89" selection-end-column="94" />
+              <folding>
+                <element signature="e#1286#1317#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ros/src/autopilot/launch/autopilot.launch">
+        <entry file="file://$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/scripts/camera_select.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+            <state relative-caret-position="105">
+              <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+              <folding>
+                <element signature="e#71#83#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ros/src/segmentation/launch/segmentation.launch">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -240,10 +156,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>self.input</find>
-      <find>model_image_size</find>
-      <find>self.draw</find>
-      <find>steering</find>
       <find>CMAKE_SOURCE_DIR = /home/neil/Workspace/self-driving-golf-cart/ros/src</find>
       <find>self.hud.noti</find>
       <find>toggle_recording</find>
@@ -270,6 +182,10 @@
       <find>import</find>
       <find>cv_camera</find>
       <find>steering_control</find>
+      <find>visualization.</find>
+      <find>rgb_raw_topic</find>
+      <find>depth</find>
+      <find>sensing</find>
     </findStrings>
     <replaceStrings>
       <replace>configs</replace>
@@ -289,9 +205,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ros/src/simulation/scripts/client.py" />
-        <option value="$PROJECT_DIR$/ros/src/simulation/scripts/ros_carla_bridge_rosbag.py" />
-        <option value="$PROJECT_DIR$/ros/src/sensors/joystick/scripts/camera_switch.py" />
         <option value="$PROJECT_DIR$/ros/src/simulation/scripts/self_driving_system_bridge.py" />
         <option value="$PROJECT_DIR$/ros/src/simulation/scripts/manual_control.py" />
         <option value="$PROJECT_DIR$/ros/src/simulation/launch/carla_client.launch" />
@@ -305,16 +218,13 @@
         <option value="$PROJECT_DIR$/ros/src/autopilot/scripts/models/helper.py" />
         <option value="$PROJECT_DIR$/ros/src/autopilot/scripts/models/i3d.py" />
         <option value="$PROJECT_DIR$/ros/src/segmentation/scripts/models/icnet.py" />
-        <option value="$PROJECT_DIR$/ros/src/segmentation/scripts/segmentation_node" />
         <option value="$PROJECT_DIR$/ros/src/segmentation/scripts/utils.py" />
-        <option value="$PROJECT_DIR$/ros/src/segmentation/scripts/segmentor.py" />
         <option value="$PROJECT_DIR$/ros/src/rosbridge_suite/rosbridge_server/launch/rosbridge_websocket.launch" />
         <option value="$PROJECT_DIR$/ros/src/driver/launch/display.launch" />
         <option value="$PROJECT_DIR$/ros/src/autopilot/msg/SteeringPath.msg" />
         <option value="$PROJECT_DIR$/ros/src/autopilot/scripts/visualization/visualization.py" />
         <option value="$PROJECT_DIR$/ros/src/autopilot/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/ros/src/segmentation/scripts/configs.py" />
-        <option value="$PROJECT_DIR$/ros/src/segmentation/launch/segmentation.launch" />
         <option value="$PROJECT_DIR$/ros/src/sensors/usb_cam/scripts/camera_select.py" />
         <option value="$PROJECT_DIR$/ros/src/sensors/cv_camera/scripts/camera_select.py" />
         <option value="$PROJECT_DIR$/ros/src/sensors/cv_camera/launch/start_camera.launch" />
@@ -328,7 +238,6 @@
         <option value="$PROJECT_DIR$/ros/src/segmentation/scripts/BirdsEyeView.py" />
         <option value="$PROJECT_DIR$/ros/src/data_logger/launch/steering_logger.launch" />
         <option value="$PROJECT_DIR$/ros/src/autopilot/launch/autopilot.launch" />
-        <option value="$PROJECT_DIR$/ros/src/gui/launch/rqt.launch" />
         <option value="$PROJECT_DIR$/ros/src/gui/launch/rqt_with_bag.launch" />
         <option value="$PROJECT_DIR$/ros/src/simulation/launch/start_camera_sim.launch" />
         <option value="$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim_node" />
@@ -340,6 +249,13 @@
         <option value="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/object_detection_node" />
         <option value="$PROJECT_DIR$/docs/build/html/_sources/About ROS.rst.txt" />
         <option value="$PROJECT_DIR$/ros/src/driver/launch/drive.launch" />
+        <option value="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/launch/CHANGES.md" />
+        <option value="$PROJECT_DIR$/ros/src/gui/launch/rqt.launch" />
+        <option value="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/scripts/camera_select.py" />
+        <option value="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/launch/zed_camera.launch" />
+        <option value="$PROJECT_DIR$/ros/src/segmentation/scripts/segmentor.py" />
+        <option value="$PROJECT_DIR$/ros/src/segmentation/launch/segmentation.launch" />
+        <option value="$PROJECT_DIR$/ros/src/segmentation/scripts/segmentation_node" />
       </list>
     </option>
   </component>
@@ -381,15 +297,39 @@
               <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
               <item name="ros" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="driver" type="462c0819:PsiDirectoryNode" />
+              <item name="segmentation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
               <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
               <item name="ros" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="driver" type="462c0819:PsiDirectoryNode" />
+              <item name="segmentation" type="462c0819:PsiDirectoryNode" />
               <item name="launch" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
+              <item name="ros" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sensors" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
+              <item name="ros" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sensors" type="462c0819:PsiDirectoryNode" />
+              <item name="zed-ros-wrapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
+              <item name="ros" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sensors" type="462c0819:PsiDirectoryNode" />
+              <item name="zed-ros-wrapper" type="462c0819:PsiDirectoryNode" />
+              <item name="zed_wrapper" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -401,21 +341,24 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="cv_camera_node&#9;FILE&#9;file:///home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/cv_camera/src/cv_camera_nodelet.cpp" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="/opt/ros/melodic/lib/python2.7/dist-packages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../semantic-segmentation" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/ros/src/sensors" />
-      <recent name="$PROJECT_DIR$/ros/src/AutoPilot" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ros/src/autopilot/scripts" />
       <recent name="$PROJECT_DIR$/ros/src/sensors/cv_camera" />
       <recent name="$PROJECT_DIR$/ros/src/sensors/usb_cam/scripts" />
       <recent name="$PROJECT_DIR$/ros/src/sensors/usb_cam" />
       <recent name="$PROJECT_DIR$/ros/src/sensors/usb_cam/launch" />
-      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ros/src/sensors" />
+      <recent name="$PROJECT_DIR$/ros/src/AutoPilot" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -613,11 +556,18 @@
       <workItem from="1553090613680" duration="7000" />
       <workItem from="1553533946436" duration="644000" />
       <workItem from="1553711741723" duration="337000" />
+      <workItem from="1553731462265" duration="40000" />
+      <workItem from="1553778610146" duration="2071000" />
+      <workItem from="1553782289405" duration="1142000" />
+      <workItem from="1553786466932" duration="3574000" />
+      <workItem from="1553797562930" duration="9000" />
+      <workItem from="1553809564468" duration="7010000" />
+      <workItem from="1553867892233" duration="5417000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130483000" />
+    <option name="totallyTimeSpent" value="149746000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -629,12 +579,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1533" height="875" extended-state="6" />
+    <frame x="65" y="28" width="1535" height="872" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5096525" visible="true" weight="0.22932078" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5096525" visible="true" weight="0.25251848" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32297298" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32262382" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32742155" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -642,7 +593,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4995015" weight="0.3364865" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4995015" visible="true" weight="0.31994644" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50049853" side_tool="true" weight="0.33847636" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Python Console" order="12" />
@@ -663,57 +614,10 @@
   <component name="VcsManagerConfiguration">
     <ignored-roots>
       <path value="$PROJECT_DIR$/ros/src/rosbridge_suite" />
+      <path value="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper" />
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ros/src/autopilot/scripts/visualization/visualization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="202" selection-start-line="202" selection-end-line="202" />
-          <folding>
-            <element signature="e#211#229#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/autopilot/msg/SteeringPath.msg" />
-    <entry file="file://$PROJECT_DIR$/ros/src/segmentation/launch/segmentation.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="104" selection-start-line="20" selection-start-column="104" selection-end-line="20" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/segmentation_node">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/segmentor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="51" column="46" selection-start-line="51" selection-start-column="46" selection-end-line="51" selection-end-column="46" />
-          <folding>
-            <element signature="e#219#249#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/sensors/cv_camera/src/cv_camera_nodelet.cpp" />
-    <entry file="file://$PROJECT_DIR$/ros/src/sensors/cv_camera/include/cv_camera/driver.h" />
-    <entry file="file://$PROJECT_DIR$/ros/src/sensors/cv_camera/include/cv_camera/capture.h" />
-    <entry file="file://$PROJECT_DIR$/ros/src/sensors/cv_camera/src/capture.cpp" />
-    <entry file="file://$PROJECT_DIR$/ros/src/sensors/cv_camera/src/cv_camera_node.cpp" />
-    <entry file="file://$PROJECT_DIR$/ros/src/sensors/cv_camera/src/driver.cpp" />
-    <entry file="file://$PROJECT_DIR$/ros/src/gui/launch/rqt.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="80" selection-start-line="5" selection-start-column="80" selection-end-line="5" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/sensors/cv_camera/launch/start_camera.launch" />
     <entry file="file://$PROJECT_DIR$/ros/src/gui/launch/rqt_with_bag.launch">
       <provider selected="true" editor-type-id="text-editor">
@@ -761,16 +665,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/sensors/cv_camera/CMakeLists.txt" />
     <entry file="file://$USER_HOME$/.PyCharm2018.3/system/python_stubs/-1247972723/cv2/__init__.py" />
-    <entry file="file:///opt/ros/melodic/lib/python2.7/dist-packages/cv_bridge/core.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="90" column="18" selection-start-line="90" selection-start-column="18" selection-end-line="90" selection-end-column="18" />
-          <folding>
-            <element signature="e#1638#1660#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///opt/ros/melodic/lib/python2.7/dist-packages/cv_bridge/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -868,13 +762,6 @@
     <entry file="file://$PROJECT_DIR$/docs/source/About ROS.rst">
       <provider selected="true" editor-type-id="restructured-text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/sensors/camera/scripts/camera_select.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/localization/src/main.cpp" />
     <entry file="file://$PROJECT_DIR$/ros/src/autopilot/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -904,19 +791,131 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/launch/zed.launch">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/sensors/camera/scripts/camera_select.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" lean-forward="true" selection-end-line="67" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/autopilot/launch/autopilot.launch">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+        <state relative-caret-position="345">
+          <caret line="23" column="45" lean-forward="true" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim_node">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="285">
+          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
           <folding>
             <element signature="e#301#311#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/autopilot/scripts/visualization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-195">
+          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/launch/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="360">
+            <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///opt/ros/melodic/lib/python2.7/dist-packages/cv_bridge/core.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-205">
+          <caret line="140" column="8" selection-start-line="140" selection-start-column="8" selection-end-line="140" selection-end-column="8" />
+          <folding>
+            <element signature="e#1638#1660#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-1247972723/cv2/cv2/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="8391" column="4" selection-start-line="8391" selection-start-column="4" selection-end-line="8391" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/launch/CHANGES.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="90">
+            <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/models/icnet_fusion.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/launch/zed_camera.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="100" column="30" lean-forward="true" selection-start-line="100" selection-start-column="30" selection-end-line="100" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/gui/launch/rqt.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/segmentor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-60">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#218#248#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/segmentation/launch/segmentation.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/scripts/camera_select.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+          <folding>
+            <element signature="e#71#83#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/segmentation_node">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="89" column="94" selection-start-line="89" selection-start-column="94" selection-end-line="89" selection-end-column="94" />
+          <folding>
+            <element signature="e#1286#1317#0" expanded="true" />
           </folding>
         </state>
       </provider>

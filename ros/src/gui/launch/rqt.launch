@@ -1,7 +1,21 @@
 <launch>
 
     <!-- start camera -->
-    <include file="$(find camera)/launch/start_camera.launch"/>
+    <include file="$(find zed_wrapper)/launch/zed_camera.launch">
+
+        <arg name="quality" value="4" />
+        <arg name="max_depth" value="20" />
+        <arg name="confidence" value="50" />
+
+        <arg name="pose_smoothing" value="true" />
+        <arg name="spatial_memory" value="true" />
+        <arg name="floor_alignment" value="true" />
+
+        <arg name="resolution" value="1" />
+
+    </include>
+
+    <node name="camera_select" pkg="zed_wrapper" type="camera_select.py" />
 
     <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" />
 

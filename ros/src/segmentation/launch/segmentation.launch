@@ -17,8 +17,10 @@ All Rights Reserved.
         <param name="input_img_width" value="512"/>
         <param name="output_img_height" value="640"/>
         <param name="output_img_width" value="480"/>
-        <param name="visualization" value="1" type="bool"/>
-        <param name="weight_path" value="$(find segmentation)/scripts/weights/icnet_large_full_040_0.781.h5"/>
+        <param name="visualization" value="0" type="bool"/>
+        <param name="weight_path" value="$(find segmentation)/scripts/weights/icnet_cross_fusion_gl_040_0.886.h5"/>
+
+        <!-- <param name="weight_path" value="$(find segmentation)/scripts/weights/icnet_large_full_040_0.781.h5"/> -->
         <!-- icnet_large_full_2_025_0.796.h5 -->
     </node>
 

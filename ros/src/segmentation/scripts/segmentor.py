@@ -7,20 +7,28 @@
 # Neil Nie & Michael Meng
 # (c) Yongyang Nie 2018
 
-
-from models.icnet import ICNet
+from keras import backend as K
+from models.icnet_fusion import ICNet
 import utils as utils
 import configs as configs
 import cv2
 import numpy as np
-from PIL import Image
+import tensorflow as tf
 
 
 class Segmentor():
 
     def __init__(self, weight_path):
 
-        self.model = ICNet(width=configs.img_width, height=configs.img_height, n_classes=configs.nb_classes, weight_path=weight_path, training=False)
+        K.clear_session()
+
+        config = tf.ConfigProto()
+        config.gpu_options.allow_growth = True
+        sess = tf.Session(config=config)
+        K.set_session(sess)
+
+        self.model = ICNet(width=configs.img_width, height=configs.img_height, n_classes=configs.nb_classes,
+                           weight_path=weight_path, training=True, mode='cross_fusion')
         print(self.model.model.summary())
         self.backgrounds = self.load_color_backgrounds()
 
@@ -40,7 +48,7 @@ class Segmentor():
 
         return backgrounds
 
-    def semantic_segmentation(self, image, visualize=False):
+    def semantic_segmentation(self, image, depth_image, visualize=False):
 
         # parameters
         # image: input image
@@ -50,7 +58,11 @@ class Segmentor():
         # img_pred: visualization
 
         image = cv2.resize(image, (configs.img_width, configs.img_height))
-        output = self.model.model.predict(np.array([image]))[0]
+        depth_image = cv2.resize(depth_image, (configs.img_width, configs.img_height))
+        x = np.array([cv2.cvtColor(image, cv2.COLOR_BGR2RGB)])
+        x_depth = np.array([depth_image])
+
+        output = self.model.model.predict([x, x_depth])[0][0]
 
         if visualize:
             im_mask = self.convert_class_to_rgb(image_labels=output)
