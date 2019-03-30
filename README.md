@@ -6,10 +6,10 @@
 
 # Introduction
 
-Welcome! This is an open source self-driving development platform aimed for rapid prototyping, deep learning and robotics research. The system currently runs on a modified electric golf cart, but the code could work on a real car as well. Here are our goals:
+Welcome! This is an open source self-driving development platform aimed for rapid prototyping, deep learning, and robotics research. The system currently runs on a modified electric golf cart. Here are our goals:
 
 ### Goals:
-Research and develop a deep learning-driven self-driving car. The vehicle should be able to navigate autonomously between locations within a geofenced area.
+Research and develop a deep learning-driven self-driving car. The vehicle should be able to achieve level 4 autonomy within a geofenced area.
 
 #### The modules in this project.
 
@@ -19,8 +19,7 @@ Research and develop a deep learning-driven self-driving car. The vehicle should
 4. Drive by Wire (DBW)
 5. Localization 🛰️ (currently with GPS)
 6. CARLA simulator integration 
-
-Stereoscopic vision system coming soon...
+7. ZED stereoscopic vision system
 
 For the full documentation of the development process, please visit my website: [www.neilnie.com](https://www.neilnie.com)
 
@@ -109,30 +108,6 @@ Furthermore, we are relying on OSM (Open Street Map) data for navigation. OSM ma
 # Path Planning
 
 Coming soon...
-
-# What's next?
-
-#### Phase 1
-
-We have completed phase 1 of the development process, which mainly includes:
-
-- Drive-by-wire system.
-- Autonomous steering system with deep learning
-- Basic obstacle avoidance system using segmentation & detection
-
-As you might have realized, all of these above are focused on computer vision and deep learning. Currently, the vehicle can navigate autonomously in a controlled outdoor environment for about 1000 feet, swiftly avoiding obstacles and stopping for pedistrians.
-
-#### Phase 2
-
-For the second phase of the development process, we will focus on making the system safer and more reliable. Basic plans include:
-
-- Implement a localization system.
-- Write a path planner.
-- Collect more data in our geofenced enviroment. ✅
-- Improve the computer hardware. ✅
-- Improve the sensor system.
-
-We are keeping track of all our progress here [CHECKLIST](./CHECKLIST.md). 
 
 # Contact / Info
 If you are interested in the detailed development process of this project, you can visit Neil's blog at [neilnie.com](https://neilnie.com) to find out more about it. Neil will make sure to keep you posted about all of the latest development on the club.
