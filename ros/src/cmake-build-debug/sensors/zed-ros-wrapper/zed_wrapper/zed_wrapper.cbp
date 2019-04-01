@@ -463,9 +463,6 @@
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/autopilot/scripts/visualization.py">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/autopilot/scripts/weights/i3d_rgb_64_f_v6.h5">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CATKIN_IGNORE">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
@@ -5824,9 +5821,6 @@
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/detection/object_detection/scripts/model_data/yolo_anchors.txt">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/detection/object_detection/scripts/model_data/yolov3-tiny-keras.h5">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/detection/object_detection/scripts/object_detection_node">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
@@ -6061,6 +6055,9 @@
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/point_cloud/src/planar_segmentation.cpp">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/point_cloud/src/point_cloud_transform.cpp">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/.gitignore">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
@@ -6109,25 +6106,13 @@
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosapi/src/rosapi/glob_helper.py">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosapi/src/rosapi/glob_helper.pyc">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosapi/src/rosapi/objectutils.py">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosapi/src/rosapi/objectutils.pyc">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosapi/src/rosapi/params.py">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosapi/src/rosapi/params.pyc">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosapi/src/rosapi/proxy.py">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosapi/src/rosapi/proxy.pyc">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosapi/srv/DeleteParam.srv">
@@ -6247,157 +6232,79 @@
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/capabilities/__init__.py">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/capabilities/__init__.pyc">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/capabilities/advertise.py">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/capabilities/advertise.pyc">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/capabilities/advertise_service.py">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/capabilities/advertise_service.pyc">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/capabilities/call_service.py">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/capabilities/call_service.pyc">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/capabilities/defragmentation.py">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/capabilities/defragmentation.pyc">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/capabilities/fragmentation.py">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/capabilities/fragmentation.pyc">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/capabilities/publish.py">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/capabilities/publish.pyc">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/capabilities/service_response.py">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/capabilities/service_response.pyc">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/capabilities/subscribe.py">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/capabilities/subscribe.pyc">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/capabilities/unadvertise_service.py">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/capabilities/unadvertise_service.pyc">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/capability.py">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/capability.pyc">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/internal/__init__.py">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/internal/__init__.pyc">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/internal/cbor_conversion.py">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/internal/cbor_conversion.pyc">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/internal/exceptions.py">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/internal/exceptions.pyc">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/internal/message_conversion.py">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/internal/message_conversion.pyc">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/internal/outgoing_message.py">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/internal/outgoing_message.pyc">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/internal/pngcompression.py">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/internal/pngcompression.pyc">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/internal/publishers.py">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/internal/publishers.pyc">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/internal/ros_loader.py">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/internal/ros_loader.pyc">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/internal/services.py">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/internal/services.pyc">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/internal/subscribers.py">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/internal/subscribers.pyc">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/internal/subscription_modifiers.py">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/internal/subscription_modifiers.pyc">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/internal/topics.py">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/internal/topics.pyc">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/protocol.py">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/protocol.pyc">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/rosbridge_protocol.py">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/rosbridge_protocol.pyc">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/util/__init__.py">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/util/__init__.pyc">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/src/rosbridge_library/util/cbor.py">
@@ -6559,19 +6466,10 @@
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_server/src/rosbridge_server/tcp_handler.py">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_server/src/rosbridge_server/tcp_handler.pyc">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_server/src/rosbridge_server/udp_handler.py">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_server/src/rosbridge_server/udp_handler.pyc">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_server/src/rosbridge_server/websocket_handler.py">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_server/src/rosbridge_server/websocket_handler.pyc">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_suite/CHANGELOG.rst">
@@ -6737,21 +6635,6 @@
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/segmentation/scripts/weights/.DS_Store">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/segmentation/scripts/weights/icnet_cross_fusion_gl_040_0.886.h5">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/segmentation/scripts/weights/icnet_large_full_040_0.781.h5">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/segmentation/scripts/weights/icnet_large_full_2_025_0.796.h5">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/segmentation/scripts/weights/icnet_square_full_038_0.802.h5">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/segmentation/scripts/weights/icnet_super_large_full_045_0.800.h5">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/camera/CMakeLists.txt">

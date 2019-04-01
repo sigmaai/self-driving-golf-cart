@@ -43,14 +43,14 @@ void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input)
 
     // Create the segmentation object
     pcl::SACSegmentation<pcl::PointXYZ> seg;
-    seg.setOptimizeCoefficients (optimize_coefficients);
+    seg.setOptimizeCoefficients (true);
     seg.setModelType (pcl::SACMODEL_PLANE);
     seg.setMethodType (pcl::SAC_RANSAC);
     seg.setDistanceThreshold (distance_threshold);
-    seg.setEpsAngle(eps_angle);
+    // seg.setEpsAngle(eps_angle);
     seg.setMaxIterations(max_iterations);
 
-// Create the filtering object
+    // Create the filtering object
     pcl::ExtractIndices<pcl::PointXYZ> extract;
 
     int i = 0, nr_points = (int) temp_cloud->points.size ();
@@ -60,11 +60,11 @@ void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input)
         // Segment the largest planar component from the remaining cloud
         seg.setInputCloud (temp_cloud);
         seg.segment (*inliers, *coefficients);
-        if (inliers->indices.size () == 0)
-        {
-            std::cerr << "Could not estimate a planar model for the given dataset." << std::endl;
-            break;
-        }
+//        if (inliers->indices.size () == 0)
+//        {
+//            std::cerr << "Could not estimate a planar model for the given dataset." << std::endl;
+//            break;
+//        }
 
         // Extract the inliers
         extract.setInputCloud(temp_cloud);
@@ -81,14 +81,10 @@ void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input)
     pcl::toROSMsg(*temp_cloud,cloud_publish);
     cloud_publish.header = input->header;
 
-    // std::cerr << "Point cloud data: " << cloud_msg->points.size () << " points" << std::endl;
-
     pub.publish(cloud_publish);
 }
 
 int main (int argc, char** argv){
-
-    ROS_DEBUG("Hello %s", "World");
 
     // Initialize ROS
     ros::init (argc, argv, "planar_segmentation");
@@ -100,11 +96,11 @@ int main (int argc, char** argv){
 //    nh.getParam("normal_distance_weight", normal_distance_weight);
 //    nh.getParam("eps_angle", eps_angle);
 
-    distance_threshold = 0.25;
+    distance_threshold = 0.05;
     max_iterations = 1000;
     optimize_coefficients = true;
     normal_distance_weight = 0.1;
-    eps_angle = 0.27;
+    eps_angle = 0.09;
 
     // Create a ROS subscriber for the input point cloud
     ros::Subscriber sub = nh.subscribe ("/voxel_grid/output", 1, cloud_callback);

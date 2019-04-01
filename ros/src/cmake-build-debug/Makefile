@@ -3197,6 +3197,19 @@ topic_tools_generate_messages_eus/fast:
 .PHONY : topic_tools_generate_messages_eus/fast
 
 #=============================================================================
+# Target rules for targets named point_cloud_transform
+
+# Build rule for target.
+point_cloud_transform: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 point_cloud_transform
+.PHONY : point_cloud_transform
+
+# fast build rule for target.
+point_cloud_transform/fast:
+	$(MAKE) -f point_cloud/CMakeFiles/point_cloud_transform.dir/build.make point_cloud/CMakeFiles/point_cloud_transform.dir/build
+.PHONY : point_cloud_transform/fast
+
+#=============================================================================
 # Target rules for targets named std_srvs_generate_messages_py
 
 # Build rule for target.
@@ -4404,6 +4417,7 @@ help:
 	@echo "... topic_tools_generate_messages_py"
 	@echo "... topic_tools_generate_messages_nodejs"
 	@echo "... topic_tools_generate_messages_eus"
+	@echo "... point_cloud_transform"
 	@echo "... std_srvs_generate_messages_py"
 	@echo "... std_srvs_generate_messages_nodejs"
 	@echo "... std_srvs_generate_messages_cpp"

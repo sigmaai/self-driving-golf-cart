@@ -201,5 +201,5 @@ include_directories(
 add_executable(planar_segmentation src/planar_segmentation.cpp)
 target_link_libraries(planar_segmentation ${catkin_LIBRARIES})
 
-# add_executable(point_cloud_transform src/point_cloud_transform.cpp)
-# target_link_libraries(point_cloud_transform ${catkin_LIBRARIES})
+add_executable(point_cloud_transform src/point_cloud_transform.cpp)
+target_link_libraries(point_cloud_transform ${catkin_LIBRARIES})

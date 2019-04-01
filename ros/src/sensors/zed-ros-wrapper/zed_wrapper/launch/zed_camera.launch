@@ -49,7 +49,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <arg name="two_d_mode"                    default="false" /> <!-- if true the Z value will be fixed to "fixed_z_value", roll and pitch to zero -->
     <arg name="fixed_z_value"                 default="0.0" />
 
-    <arg name="initial_pose"                  default="[0.0,0.0,0.9144.0, 0.0,0.52,0.0]" /> <!-- X, Y, Z, (meter) R, P, Y, (radians)-->
+    <arg name="initial_pose"                  default="[0.0,0.0,0.92075, 0.0, 0.0872665,0.0]" /> <!-- X, Y, Z, (meter) R, P, Y, (radians)-->
 
     <!-- Publish urdf zed -->
     <arg name="publish_urdf"                  default="true" />
@@ -105,7 +105,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <param name="depth_stabilization"   value="1" />
         <param name="pose_smoothing"        value="true" />
         <param name="spatial_memory"        value="true" />
-        <param name="floor_alignment"       value="true" />
+        <param name="floor_alignment"       value="false" />
         <param name="two_d_mode"            value="$(arg two_d_mode)" />
         <param name="fixed_z_value"         value="$(arg fixed_z_value)" />
 
@@ -139,7 +139,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <param name="pose_topic"                value="pose" />
         <param name="odometry_topic"            value="odom" />
 
-        <param name="init_odom_with_first_valid_pose"        value="true" />
+        <param name="init_odom_with_first_valid_pose"        value="false" />
 
         <param name="imu_topic"                 value="imu/data" /> <!-- only used with ZED M -->
         <param name="imu_topic_raw"             value="imu/data_raw" /> <!-- only used with ZED M -->
