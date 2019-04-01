@@ -1,3 +1,0 @@
-<launch>
-  <test test-name="test_tf_message_filter_pcl" pkg="pcl_ros" type="test_tf_message_filter_pcl"/>
-</launch>

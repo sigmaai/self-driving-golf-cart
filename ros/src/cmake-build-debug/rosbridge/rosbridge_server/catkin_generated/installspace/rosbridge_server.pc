@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: rosbridge_server
+Description: Description of rosbridge_server
+Version: 0.10.1
+Cflags: 
+Libs: -L/usr/local/lib 
+Requires: 

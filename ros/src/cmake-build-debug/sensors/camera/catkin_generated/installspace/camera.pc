@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: camera
+Description: Description of camera
+Version: 0.0.0
+Cflags: 
+Libs: -L/usr/local/lib 
+Requires: 

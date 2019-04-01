@@ -1,0 +1,123 @@
+/home/neil/snap/clion-2019.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCATKIN_DEVEL_PREFIX:PATH=/home/neil/Workspace/self-driving-golf-cart/ros/devel -G "CodeBlocks - Unix Makefiles" /home/neil/Workspace/self-driving-golf-cart/ros/src
+-- Using CATKIN_DEVEL_PREFIX: /home/neil/Workspace/self-driving-golf-cart/ros/devel
+-- Using CMAKE_PREFIX_PATH: /home/neil/Workspace/self-driving-golf-cart/ros/devel;/opt/ros/melodic
+-- This workspace overlays: /home/neil/Workspace/self-driving-golf-cart/ros/devel;/opt/ros/melodic
+-- Found PythonInterp: /usr/bin/python2 (found suitable version "2.7.15", minimum required is "2") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python2
+-- Using Debian Python package layout
+-- Using empy: /usr/bin/empy
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Call enable_testing()
+-- Using CATKIN_TEST_RESULTS_DIR: /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/test_results
+-- Found gmock sources under '/usr/src/googletest': gmock will be built
+-- Found PythonInterp: /usr/bin/python2 (found version "2.7.15") 
+-- Found gtest sources under '/usr/src/googletest': gtests will be built
+-- Using Python nosetests: /usr/bin/nosetests-2.7
+-- catkin 0.7.14
+-- BUILD_SHARED_LIBS is on
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- ~~  traversing 22 packages in topological order:
+-- ~~  - rosapi
+-- ~~  - rosbridge_server
+-- ~~  - rosbridge_suite (metapackage)
+-- ~~  - gps
+-- ~~  - segmentation
+-- ~~  - simulation
+-- ~~  - lane_detection
+-- ~~  - object_detection
+-- ~~  - camera
+-- ~~  - joy
+-- ~~  - rosbridge_library
+-- ~~  - autopilot
+-- ~~  - data_logger
+-- ~~  - driver
+-- ~~  - gui
+-- ~~  - localization
+-- ~~  - path_planning
+-- ~~  - point_cloud
+-- ~~  - osm_cartography
+-- ~~  - zed_display_rviz
+-- ~~  - zed_ros (metapackage)
+-- ~~  - zed_wrapper
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- +++ processing catkin package: 'rosapi'
+-- ==> add_subdirectory(rosbridge/rosapi)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- rosapi: 1 messages, 24 services
+-- +++ processing catkin package: 'rosbridge_server'
+-- ==> add_subdirectory(rosbridge/rosbridge_server)
+-- +++ processing catkin metapackage: 'rosbridge_suite'
+-- ==> add_subdirectory(rosbridge/rosbridge_suite)
+-- +++ processing catkin package: 'gps'
+-- ==> add_subdirectory(sensors/gps)
+-- +++ processing catkin package: 'segmentation'
+-- ==> add_subdirectory(segmentation)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- segmentation: 1 messages, 0 services
+-- +++ processing catkin package: 'simulation'
+-- ==> add_subdirectory(simulation)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- simulation: 6 messages, 0 services
+-- +++ processing catkin package: 'lane_detection'
+-- ==> add_subdirectory(detection/lane_detection)
+-- +++ processing catkin package: 'object_detection'
+-- ==> add_subdirectory(detection/object_detection)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- object_detection: 2 messages, 0 services
+-- +++ processing catkin package: 'camera'
+-- ==> add_subdirectory(sensors/camera)
+-- +++ processing catkin package: 'joy'
+-- ==> add_subdirectory(sensors/joystick)
+-- +++ processing catkin package: 'rosbridge_library'
+-- ==> add_subdirectory(rosbridge/rosbridge_library)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- rosbridge_library: 9 messages, 10 services
+-- +++ processing catkin package: 'autopilot'
+-- ==> add_subdirectory(autopilot)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+CMake Warning at cmake-build-debug/autopilot/cmake/autopilot-genmsg.cmake:3 (message):
+  Invoking generate_messages() without having added any message or service
+  file before.
+
+  You should either add add_message_files() and/or add_service_files() calls
+  or remove the invocation of generate_messages().
+Call Stack (most recent call first):
+  /opt/ros/melodic/share/genmsg/cmake/genmsg-extras.cmake:307 (include)
+  autopilot/CMakeLists.txt:74 (generate_messages)
+
+
+-- autopilot: 0 messages, 0 services
+-- +++ processing catkin package: 'data_logger'
+-- ==> add_subdirectory(data_logger)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'driver'
+-- ==> add_subdirectory(driver)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'gui'
+-- ==> add_subdirectory(gui)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'localization'
+-- ==> add_subdirectory(localization)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'path_planning'
+-- ==> add_subdirectory(path_planning)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'point_cloud'
+-- ==> add_subdirectory(point_cloud)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'osm_cartography'
+-- ==> add_subdirectory(osm)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'zed_display_rviz'
+-- ==> add_subdirectory(sensors/zed-ros-wrapper/zed_display_rviz)
+-- +++ processing catkin metapackage: 'zed_ros'
+-- ==> add_subdirectory(sensors/zed-ros-wrapper/zed_ros)
+-- +++ processing catkin package: 'zed_wrapper'
+-- ==> add_subdirectory(sensors/zed-ros-wrapper/zed_wrapper)
+-- Found CUDA: /usr/local/cuda-10.0 (found suitable exact version "10.0") 
+-- Found CUDA: /usr/local/cuda-10.0 (found version "10.0") 
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- zed_wrapper: 0 messages, 5 services
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug

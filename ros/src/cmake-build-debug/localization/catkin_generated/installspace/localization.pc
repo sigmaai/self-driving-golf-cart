@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: localization
+Description: Description of localization
+Version: 0.0.0
+Cflags: 
+Libs: -L/usr/local/lib 
+Requires: 
