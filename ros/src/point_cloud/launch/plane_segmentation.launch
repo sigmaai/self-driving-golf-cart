@@ -1,4 +1,7 @@
 <launch>
+
+  <node pkg="point_cloud" type="point_cloud_transform" name="point_cloud_transform" output="screen" />
+
   <node pkg="nodelet" type="nodelet" name="pcl_manager" args="manager" output="screen" />
 
   <!-- Run a VoxelGrid filter to clean NaNs and downsample the data -->
@@ -6,14 +9,16 @@
     <remap from="~input" to="/point_cloud/cloud_transformed" />
     <rosparam>
       filter_field_name: z
-      filter_limit_min: -0.20
-      filter_limit_max: 0.1
-      filter_limit_negative: False
+      filter_limit_min: -0.15
+      filter_limit_max: 0.05
+      filter_limit_negative: false
       leaf_size: 0.01
     </rosparam>
   </node>
 
-  <node pkg="point_cloud" type="point_cloud_transform" name="point_cloud_transform" output="screen" />
+<!--
+  <node pkg="point_cloud" type="ground_plane_detection" name="ground_plane_detection" output="screen" />
+-->
 
   <!--  &lt;!&ndash; Estimate point normals &ndash;&gt;-->
   <!--  <node pkg="nodelet" type="nodelet" name="normal_estimation" args="load pcl/NormalEstimation pcl_manager" output="screen">-->
@@ -30,20 +35,12 @@
   <!-- Segment the plane -->
   <node pkg="point_cloud" type="planar_segmentation" name="planar_segmentation" output="screen">
     <rosparam>
-      distance_threshold: 0.02
+      distance_threshold: 0.20
       max_iterations: 1000
       optimize_coefficients: true
       normal_distance_weight: 0.1
       eps_angle: 0.10
     </rosparam>
   </node>
-
-  <!--  <node pkg="nodelet" type="nodelet" name="extract_plane_indices" args="load pcl/ExtractIndices pcl_manager" output="screen">-->
-  <!--    <remap from="~input"   to="/voxel_grid/output" />-->
-  <!--    <remap from="~indices" to="/planar_segmentation/inliers" />-->
-  <!--    <rosparam>-->
-  <!--      negative: true-->
-  <!--    </rosparam>-->
-  <!--  </node>-->
 
 </launch>

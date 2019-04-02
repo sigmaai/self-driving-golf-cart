@@ -5,7 +5,6 @@
 
 #include <ros/ros.h>
 #include <ros/console.h>
-#include <geometry_msgs/TransformStamped.h>
 // PCL specific includes
 #include <sensor_msgs/PointCloud2.h>
 #include <pcl_conversions/pcl_conversions.h>

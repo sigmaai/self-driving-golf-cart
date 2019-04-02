@@ -1,4 +1,18 @@
 /home/neil/snap/clion-2019.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCATKIN_DEVEL_PREFIX:PATH=/home/neil/Workspace/self-driving-golf-cart/ros/devel -G "CodeBlocks - Unix Makefiles" /home/neil/Workspace/self-driving-golf-cart/ros/src
+-- The C compiler identification is GNU 7.3.0
+-- The CXX compiler identification is GNU 7.3.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
 -- Using CATKIN_DEVEL_PREFIX: /home/neil/Workspace/self-driving-golf-cart/ros/devel
 -- Using CMAKE_PREFIX_PATH: /home/neil/Workspace/self-driving-golf-cart/ros/devel;/opt/ros/melodic
 -- This workspace overlays: /home/neil/Workspace/self-driving-golf-cart/ros/devel;/opt/ros/melodic
@@ -11,6 +25,15 @@
 -- Using CATKIN_TEST_RESULTS_DIR: /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/test_results
 -- Found gmock sources under '/usr/src/googletest': gmock will be built
 -- Found PythonInterp: /usr/bin/python2 (found version "2.7.15") 
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
 -- Found gtest sources under '/usr/src/googletest': gtests will be built
 -- Using Python nosetests: /usr/bin/nosetests-2.7
 -- catkin 0.7.14
@@ -68,6 +91,8 @@
 -- ==> add_subdirectory(sensors/camera)
 -- +++ processing catkin package: 'joy'
 -- ==> add_subdirectory(sensors/joystick)
+-- Looking for include file linux/joystick.h
+-- Looking for include file linux/joystick.h - found
 -- +++ processing catkin package: 'rosbridge_library'
 -- ==> add_subdirectory(rosbridge/rosbridge_library)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
@@ -116,6 +141,9 @@ Call Stack (most recent call first):
 -- ==> add_subdirectory(sensors/zed-ros-wrapper/zed_wrapper)
 -- Found CUDA: /usr/local/cuda-10.0 (found suitable exact version "10.0") 
 -- Found CUDA: /usr/local/cuda-10.0 (found version "10.0") 
+-- Found OpenMP_C: -fopenmp (found version "4.5") 
+-- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+-- Found OpenMP: TRUE (found version "4.5")  
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
 -- zed_wrapper: 0 messages, 5 services
 -- Configuring done

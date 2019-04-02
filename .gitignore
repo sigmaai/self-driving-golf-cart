@@ -3,3 +3,4 @@ src/steering_control/scripts/v3
 others
 ros/devel
 ros/build
+ros/src/cmake-build-debug

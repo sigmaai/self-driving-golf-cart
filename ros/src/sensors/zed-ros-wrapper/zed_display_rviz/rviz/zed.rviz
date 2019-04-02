@@ -195,8 +195,8 @@ Visualization Manager:
         - Alpha: 1
           Autocompute Intensity Bounds: true
           Autocompute Value Bounds:
-            Max Value: 0.2499890923500061
-            Min Value: -0.24999785423278809
+            Max Value: -9999
+            Min Value: 9999
             Value: true
           Axis: Z
           Channel Name: intensity
@@ -217,12 +217,12 @@ Visualization Manager:
           Size (Pixels): 3
           Size (m): 0.009999999776482582
           Style: Spheres
-          Topic: /voxel_grid/output
+          Topic: /planar_segmentation/output
           Unreliable: false
           Use Fixed Frame: false
           Use rainbow: true
           Value: false
-        - Alpha: 1
+        - Alpha: 0.25
           Autocompute Intensity Bounds: true
           Autocompute Value Bounds:
             Max Value: 0.24085424840450287
@@ -232,7 +232,7 @@ Visualization Manager:
           Channel Name: intensity
           Class: rviz/PointCloud2
           Color: 255; 255; 255
-          Color Transformer: RGB8
+          Color Transformer: Intensity
           Decay Time: 0
           Enabled: false
           Invert Rainbow: false
@@ -247,7 +247,7 @@ Visualization Manager:
           Size (Pixels): 1
           Size (m): 0.009999999776482582
           Style: Points
-          Topic: /zed/point_cloud/cloud_registered
+          Topic: /point_cloud/cloud_transformed
           Unreliable: false
           Use Fixed Frame: true
           Use rainbow: true
@@ -452,25 +452,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 3.967777729034424
+      Distance: 4.332118988037109
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.8386871218681335
-        Y: 0.23033097386360168
-        Z: 0.6654880046844482
+        X: 1.6730257272720337
+        Y: 0.2177855521440506
+        Z: -0.4561769366264343
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.1497972458600998
-      Target Frame: <Fixed Frame>
+      Pitch: 0.22479625046253204
+      Target Frame: zed_camera_center
       Value: Orbit (rviz)
-      Yaw: 3.299093246459961
+      Yaw: 2.749084711074829
     Saved: ~
 Window Geometry:
   Camera view:

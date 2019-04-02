@@ -1,7 +1,9 @@
 
 #include <ros/ros.h>
-// PCL specific includes
 #include <sensor_msgs/PointCloud2.h>
+
+// PCL specific includes
+
 #include <pcl_conversions/pcl_conversions.h>
 #include <pcl/point_cloud.h>
 #include <pcl/point_types.h>
@@ -14,7 +16,6 @@
 #include <pcl/segmentation/sac_segmentation.h>
 #include <ros/console.h>
 
-
 ros::Publisher pub;
 
 float distance_threshold;       //: 0.25    (done)
@@ -26,63 +27,66 @@ float eps_angle;                //: 0.27    (done)
 
 void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input)
 {
+
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_filtered (new pcl::PointCloud<pcl::PointXYZ>);
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_p (new pcl::PointCloud<pcl::PointXYZ>);
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_f (new pcl::PointCloud<pcl::PointXYZ>);
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_output (new pcl::PointCloud<pcl::PointXYZ>);
+
     // Create a container for the data.
-    sensor_msgs::PointCloud2 output;
-
-    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_p (new pcl::PointCloud<pcl::PointXYZ>), cloud_f (new pcl::PointCloud<pcl::PointXYZ>);
-
+    // Convert PointCloud2 msg to PCL
     pcl::PCLPointCloud2 pcl_pc2;
     pcl_conversions::toPCL(*input, pcl_pc2);
-    pcl::PointCloud<pcl::PointXYZ>::Ptr temp_cloud(new pcl::PointCloud<pcl::PointXYZ>);
-    pcl::fromPCLPointCloud2(pcl_pc2,*temp_cloud);
 
-    // perform calculations
-    // --------------------
-    pcl::ModelCoefficients::Ptr coefficients (new pcl::ModelCoefficients);
-    pcl::PointIndices::Ptr inliers (new pcl::PointIndices);
+    pcl::fromPCLPointCloud2(pcl_pc2,*cloud_filtered);
 
+    // perform the calculation
+    pcl::ModelCoefficients::Ptr coefficients (new pcl::ModelCoefficients ());
+    pcl::PointIndices::Ptr inliers (new pcl::PointIndices ());
     // Create the segmentation object
     pcl::SACSegmentation<pcl::PointXYZ> seg;
+    // Optional
     seg.setOptimizeCoefficients (true);
+    // Mandatory
     seg.setModelType (pcl::SACMODEL_PLANE);
     seg.setMethodType (pcl::SAC_RANSAC);
+    seg.setEpsAngle(eps_angle);
+    seg.setMaxIterations (max_iterations);
     seg.setDistanceThreshold (distance_threshold);
-    // seg.setEpsAngle(eps_angle);
-    seg.setMaxIterations(max_iterations);
 
     // Create the filtering object
     pcl::ExtractIndices<pcl::PointXYZ> extract;
 
-    int i = 0, nr_points = (int) temp_cloud->points.size ();
+    int nr_points = (int) cloud_filtered->points.size ();
     // While 30% of the original cloud is still there
-    while (temp_cloud->points.size () > 0.3 * nr_points)
+    while (cloud_filtered->points.size () > 0.3 * nr_points)
     {
         // Segment the largest planar component from the remaining cloud
-        seg.setInputCloud (temp_cloud);
+        seg.setInputCloud (cloud_filtered);
         seg.segment (*inliers, *coefficients);
-//        if (inliers->indices.size () == 0)
-//        {
-//            std::cerr << "Could not estimate a planar model for the given dataset." << std::endl;
-//            break;
-//        }
 
         // Extract the inliers
-        extract.setInputCloud(temp_cloud);
-        extract.setIndices(inliers);
-        extract.setNegative(true);
-        pcl::PointCloud<pcl::PointXYZ> cloudF;
-        extract.filter(cloudF);
-        temp_cloud->swap(cloudF);
+        extract.setInputCloud (cloud_filtered);
+        extract.setIndices (inliers);
+        extract.setNegative (false);
+        extract.filter (*cloud_p);
 
-        i++;
+        pcl::concatenateFields (*cloud_output, *cloud_p, *cloud_output);
+
+        // Create the filtering object
+        extract.setNegative (true);
+        extract.filter (*cloud_f);
+        cloud_filtered.swap (cloud_f);
     }
 
+    // publish filtered cloud data
     sensor_msgs::PointCloud2 cloud_publish;
-    pcl::toROSMsg(*temp_cloud,cloud_publish);
+    pcl::toROSMsg(*cloud_output, cloud_publish);
     cloud_publish.header = input->header;
 
     pub.publish(cloud_publish);
 }
+
 
 int main (int argc, char** argv){
 
@@ -96,11 +100,11 @@ int main (int argc, char** argv){
 //    nh.getParam("normal_distance_weight", normal_distance_weight);
 //    nh.getParam("eps_angle", eps_angle);
 
-    distance_threshold = 0.05;
+    distance_threshold = 0.20;
     max_iterations = 1000;
     optimize_coefficients = true;
     normal_distance_weight = 0.1;
-    eps_angle = 0.09;
+    eps_angle = 30.0f * (M_PI/180.0f);
 
     // Create a ROS subscriber for the input point cloud
     ros::Subscriber sub = nh.subscribe ("/voxel_grid/output", 1, cloud_callback);

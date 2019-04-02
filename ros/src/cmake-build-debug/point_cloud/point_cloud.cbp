@@ -17,207 +17,121 @@
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="topic_tools_generate_messages_py">
+			<Target title="bond_generate_messages_nodejs">
 				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 topic_tools_generate_messages_py"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 bond_generate_messages_nodejs"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="topic_tools_generate_messages_nodejs">
+			<Target title="nodelet_generate_messages_py">
 				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 topic_tools_generate_messages_nodejs"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 nodelet_generate_messages_py"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="topic_tools_generate_messages_eus">
+			<Target title="bond_generate_messages_lisp">
 				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 topic_tools_generate_messages_eus"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 bond_generate_messages_lisp"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="point_cloud_transform">
-				<Option output="/home/neil/Workspace/self-driving-golf-cart/ros/devel/lib/point_cloud/point_cloud_transform" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/devel/lib/point_cloud"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
-					<Add option="-DROS_PACKAGE_NAME=&quot;point_cloud&quot;"/>
-					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
-					<Add directory="/opt/ros/melodic/include"/>
-					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/usr/include/pcl-1.8"/>
-					<Add directory="/usr/include/ni"/>
-					<Add directory="/usr/include/openni2"/>
-					<Add directory="/usr/include/vtk-6.3"/>
-					<Add directory="/usr/include/freetype2"/>
-					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi"/>
-					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent"/>
-					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent/include"/>
-					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include"/>
-					<Add directory="/usr/include/python2.7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include/hdf5/openmpi"/>
-					<Add directory="/usr/include/libxml2"/>
-					<Add directory="/usr/include/jsoncpp"/>
-					<Add directory="/usr/include/tcl"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 point_cloud_transform"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="point_cloud_transform/fast">
-				<Option output="/home/neil/Workspace/self-driving-golf-cart/ros/devel/lib/point_cloud/point_cloud_transform" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/devel/lib/point_cloud"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
-					<Add option="-DROS_PACKAGE_NAME=&quot;point_cloud&quot;"/>
-					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
-					<Add directory="/opt/ros/melodic/include"/>
-					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/usr/include/pcl-1.8"/>
-					<Add directory="/usr/include/ni"/>
-					<Add directory="/usr/include/openni2"/>
-					<Add directory="/usr/include/vtk-6.3"/>
-					<Add directory="/usr/include/freetype2"/>
-					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi"/>
-					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent"/>
-					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent/include"/>
-					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include"/>
-					<Add directory="/usr/include/python2.7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include/hdf5/openmpi"/>
-					<Add directory="/usr/include/libxml2"/>
-					<Add directory="/usr/include/jsoncpp"/>
-					<Add directory="/usr/include/tcl"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 point_cloud_transform/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="std_srvs_generate_messages_py">
+			<Target title="bond_generate_messages_cpp">
 				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 std_srvs_generate_messages_py"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 bond_generate_messages_cpp"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="std_srvs_generate_messages_nodejs">
+			<Target title="nodelet_generate_messages_lisp">
 				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 std_srvs_generate_messages_nodejs"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 nodelet_generate_messages_lisp"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="std_srvs_generate_messages_cpp">
+			<Target title="topic_tools_generate_messages_cpp">
 				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 std_srvs_generate_messages_cpp"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 topic_tools_generate_messages_cpp"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="pcl_ros_gencfg">
+			<Target title="nodelet_generate_messages_eus">
 				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 pcl_ros_gencfg"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 nodelet_generate_messages_eus"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="pcl_msgs_generate_messages_nodejs">
+			<Target title="nodelet_topic_tools_gencfg">
 				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 pcl_msgs_generate_messages_nodejs"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 nodelet_topic_tools_gencfg"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="bond_generate_messages_eus">
+			<Target title="std_srvs_generate_messages_lisp">
 				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 bond_generate_messages_eus"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 std_srvs_generate_messages_lisp"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="bond_generate_messages_py">
+			<Target title="topic_tools_generate_messages_lisp">
 				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 bond_generate_messages_py"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 topic_tools_generate_messages_lisp"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="pcl_msgs_generate_messages_lisp">
+			<Target title="pcl_msgs_generate_messages_eus">
 				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 pcl_msgs_generate_messages_lisp"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 pcl_msgs_generate_messages_eus"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="pcl_msgs_generate_messages_cpp">
+			<Target title="pcl_msgs_generate_messages_py">
 				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 pcl_msgs_generate_messages_cpp"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 pcl_msgs_generate_messages_py"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
@@ -309,71 +223,21 @@
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="std_srvs_generate_messages_eus">
+			<Target title="pcl_msgs_generate_messages_cpp">
 				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 std_srvs_generate_messages_eus"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 pcl_msgs_generate_messages_cpp"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="pcl_msgs_generate_messages_py">
+			<Target title="bond_generate_messages_eus">
 				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 pcl_msgs_generate_messages_py"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="pcl_msgs_generate_messages_eus">
-				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 pcl_msgs_generate_messages_eus"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="topic_tools_generate_messages_lisp">
-				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 topic_tools_generate_messages_lisp"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="nodelet_generate_messages_eus">
-				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 nodelet_generate_messages_eus"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="nodelet_generate_messages_cpp">
-				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 nodelet_generate_messages_cpp"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="topic_tools_generate_messages_cpp">
-				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 topic_tools_generate_messages_cpp"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 bond_generate_messages_eus"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
@@ -389,77 +253,302 @@
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="nodelet_generate_messages_lisp">
+			<Target title="pcl_msgs_generate_messages_nodejs">
 				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 nodelet_generate_messages_lisp"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 pcl_msgs_generate_messages_nodejs"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="std_srvs_generate_messages_lisp">
+			<Target title="std_srvs_generate_messages_eus">
 				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 std_srvs_generate_messages_lisp"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 std_srvs_generate_messages_eus"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="bond_generate_messages_cpp">
+			<Target title="std_srvs_generate_messages_cpp">
 				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 bond_generate_messages_cpp"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 std_srvs_generate_messages_cpp"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="nodelet_topic_tools_gencfg">
+			<Target title="nodelet_generate_messages_cpp">
 				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 nodelet_topic_tools_gencfg"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 nodelet_generate_messages_cpp"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="bond_generate_messages_lisp">
+			<Target title="bond_generate_messages_py">
 				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 bond_generate_messages_lisp"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 bond_generate_messages_py"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="nodelet_generate_messages_py">
+			<Target title="std_srvs_generate_messages_nodejs">
 				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 nodelet_generate_messages_py"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 std_srvs_generate_messages_nodejs"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="bond_generate_messages_nodejs">
+			<Target title="std_srvs_generate_messages_py">
 				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 bond_generate_messages_nodejs"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 std_srvs_generate_messages_py"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="point_cloud_transform">
+				<Option output="/home/neil/Workspace/self-driving-golf-cart/ros/devel/lib/point_cloud/point_cloud_transform" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/devel/lib/point_cloud"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;point_cloud&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/pcl-1.8"/>
+					<Add directory="/usr/include/ni"/>
+					<Add directory="/usr/include/openni2"/>
+					<Add directory="/usr/include/vtk-6.3"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent/include"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include"/>
+					<Add directory="/usr/include/python2.7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include/hdf5/openmpi"/>
+					<Add directory="/usr/include/libxml2"/>
+					<Add directory="/usr/include/jsoncpp"/>
+					<Add directory="/usr/include/tcl"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 point_cloud_transform"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="point_cloud_transform/fast">
+				<Option output="/home/neil/Workspace/self-driving-golf-cart/ros/devel/lib/point_cloud/point_cloud_transform" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/devel/lib/point_cloud"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;point_cloud&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/pcl-1.8"/>
+					<Add directory="/usr/include/ni"/>
+					<Add directory="/usr/include/openni2"/>
+					<Add directory="/usr/include/vtk-6.3"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent/include"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include"/>
+					<Add directory="/usr/include/python2.7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include/hdf5/openmpi"/>
+					<Add directory="/usr/include/libxml2"/>
+					<Add directory="/usr/include/jsoncpp"/>
+					<Add directory="/usr/include/tcl"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 point_cloud_transform/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pcl_msgs_generate_messages_lisp">
+				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 pcl_msgs_generate_messages_lisp"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="topic_tools_generate_messages_eus">
+				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 topic_tools_generate_messages_eus"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="pcl_ros_gencfg">
+				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 pcl_ros_gencfg"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="topic_tools_generate_messages_nodejs">
+				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 topic_tools_generate_messages_nodejs"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="topic_tools_generate_messages_py">
+				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 topic_tools_generate_messages_py"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ground_plane_detection">
+				<Option output="/home/neil/Workspace/self-driving-golf-cart/ros/devel/lib/point_cloud/ground_plane_detection" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/devel/lib/point_cloud"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;point_cloud&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/pcl-1.8"/>
+					<Add directory="/usr/include/ni"/>
+					<Add directory="/usr/include/openni2"/>
+					<Add directory="/usr/include/vtk-6.3"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent/include"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include"/>
+					<Add directory="/usr/include/python2.7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include/hdf5/openmpi"/>
+					<Add directory="/usr/include/libxml2"/>
+					<Add directory="/usr/include/jsoncpp"/>
+					<Add directory="/usr/include/tcl"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 ground_plane_detection"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ground_plane_detection/fast">
+				<Option output="/home/neil/Workspace/self-driving-golf-cart/ros/devel/lib/point_cloud/ground_plane_detection" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/devel/lib/point_cloud"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;point_cloud&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/pcl-1.8"/>
+					<Add directory="/usr/include/ni"/>
+					<Add directory="/usr/include/openni2"/>
+					<Add directory="/usr/include/vtk-6.3"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent/include"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include"/>
+					<Add directory="/usr/include/python2.7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include/hdf5/openmpi"/>
+					<Add directory="/usr/include/libxml2"/>
+					<Add directory="/usr/include/jsoncpp"/>
+					<Add directory="/usr/include/tcl"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 ground_plane_detection/fast"/>
 					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/point_cloud/src/ground_plane_detection.cpp">
+			<Option target="ground_plane_detection"/>
+		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/point_cloud/src/planar_segmentation.cpp">
 			<Option target="planar_segmentation"/>
 		</Unit>

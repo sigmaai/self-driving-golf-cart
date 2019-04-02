@@ -48,8 +48,9 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
     <arg name="two_d_mode"                    default="false" /> <!-- if true the Z value will be fixed to "fixed_z_value", roll and pitch to zero -->
     <arg name="fixed_z_value"                 default="0.0" />
-
-    <arg name="initial_pose"                  default="[0.0,0.0,0.92075, 0.0, 0.0872665,0.0]" /> <!-- X, Y, Z, (meter) R, P, Y, (radians)-->
+                                                                        <!-- 1.7399 0.2967 -->
+<!--    <arg name="initial_pose"                  default="[0.0,0.0,1, 0.0, 0.0872665,0.0]" /> &lt;!&ndash; X, Y, Z, (meter) R, P, Y, (radians)&ndash;&gt;-->
+    <arg name="initial_pose"                  default="[0.0,0.0,1.7399, 0.0, 0.2967,0.0]" /> <!-- X, Y, Z, (meter) R, P, Y, (radians)-->
 
     <!-- Publish urdf zed -->
     <arg name="publish_urdf"                  default="true" />
@@ -92,13 +93,13 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <param name="verbose"               value="$(arg verbose)" />
         <param name="mat_resize_factor"     value="1.0" />
         <param name="quality"               value="4" />
-        <param name="sensing_mode"          value="1" />
+        <param name="sensing_mode"          value="0" />
         <param name="frame_rate"            value="$(arg frame_rate)" />
         <param name="odometry_db"           value="" />
         <param name="openni_depth_mode"     value="0" />
         <param name="gpu_id"                value="$(arg gpu_id)" />
         <param name="confidence"            value="100" />
-        <param name="max_depth"             value="20.0" />
+        <param name="max_depth"             value="40.0" />
         <param name="gain"                  value="100" />
         <param name="exposure"              value="100" />
         <param name="auto_exposure"         value="true" />
