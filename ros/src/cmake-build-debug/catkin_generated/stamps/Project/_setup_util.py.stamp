@@ -250,6 +250,7 @@ def find_env_hooks(environ, cmake_prefix_path):
 def _parse_arguments(args=None):
     parser = argparse.ArgumentParser(description='Generates code blocks for the setup.SHELL script.')
     parser.add_argument('--extend', action='store_true', help='Skip unsetting previous environment variables to extend context')
+    parser.add_argument('--local', action='store_true', help='Only consider this prefix path and ignore other prefix path in the environment')
     return parser.parse_known_args(args=args)[0]
 
 
@@ -261,10 +262,19 @@ if __name__ == '__main__':
             print(e, file=sys.stderr)
             sys.exit(1)
 
-        # environment at generation time
-        CMAKE_PREFIX_PATH = '/home/neil/Workspace/self-driving-golf-cart/ros/devel;/opt/ros/melodic'.split(';')
+        if not args.local:
+            # environment at generation time
+            CMAKE_PREFIX_PATH = '/home/neil/Workspace/self-driving-golf-cart/ros/devel;/opt/ros/melodic'.split(';')
+        else:
+            # don't consider any other prefix path than this one
+            CMAKE_PREFIX_PATH = []
         # prepend current workspace if not already part of CPP
         base_path = os.path.dirname(__file__)
+        # CMAKE_PREFIX_PATH uses forward slash on all platforms, but __file__ is platform dependent
+        # base_path on Windows contains backward slashes, need to be converted to forward slashes before comparison
+        if os.path.sep != '/':
+            base_path = base_path.replace(os.path.sep, '/')
+
         if base_path not in CMAKE_PREFIX_PATH:
             CMAKE_PREFIX_PATH.insert(0, base_path)
         CMAKE_PREFIX_PATH = os.pathsep.join(CMAKE_PREFIX_PATH)

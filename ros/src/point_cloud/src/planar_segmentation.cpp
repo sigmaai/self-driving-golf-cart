@@ -8,7 +8,6 @@
 #include <pcl/point_cloud.h>
 #include <pcl/point_types.h>
 #include <pcl/ModelCoefficients.h>
-#include <pcl/io/pcd_io.h>
 #include <pcl/point_types.h>
 #include <pcl/filters/extract_indices.h>
 #include <pcl/sample_consensus/method_types.h>
@@ -25,8 +24,7 @@ float normal_distance_weight;   //: 0.1
 float eps_angle;                //: 0.27    (done)
 
 
-void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input)
-{
+void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input){
 
     pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_filtered (new pcl::PointCloud<pcl::PointXYZ>);
     pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_p (new pcl::PointCloud<pcl::PointXYZ>);
@@ -59,8 +57,8 @@ void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input)
 
     int nr_points = (int) cloud_filtered->points.size ();
     // While 30% of the original cloud is still there
-    while (cloud_filtered->points.size () > 0.3 * nr_points)
-    {
+    while (cloud_filtered->points.size () > 0.3 * nr_points){
+
         // Segment the largest planar component from the remaining cloud
         seg.setInputCloud (cloud_filtered);
         seg.segment (*inliers, *coefficients);
@@ -71,7 +69,7 @@ void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input)
         extract.setNegative (false);
         extract.filter (*cloud_p);
 
-        pcl::concatenateFields (*cloud_output, *cloud_p, *cloud_output);
+        *cloud_output += *cloud_p;
 
         // Create the filtering object
         extract.setNegative (true);
@@ -81,7 +79,7 @@ void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input)
 
     // publish filtered cloud data
     sensor_msgs::PointCloud2 cloud_publish;
-    pcl::toROSMsg(*cloud_output, cloud_publish);
+    pcl::toROSMsg(*cloud_filtered, cloud_publish);
     cloud_publish.header = input->header;
 
     pub.publish(cloud_publish);
@@ -100,7 +98,7 @@ int main (int argc, char** argv){
 //    nh.getParam("normal_distance_weight", normal_distance_weight);
 //    nh.getParam("eps_angle", eps_angle);
 
-    distance_threshold = 0.20;
+    distance_threshold = 0.05;
     max_iterations = 1000;
     optimize_coefficients = true;
     normal_distance_weight = 0.1;

@@ -6,7 +6,7 @@
 import rospy
 from std_msgs.msg import Int8
 from sensor_msgs.msg import Image
-from cv_bridge import CvBridge, CvBridgeError
+from cv_bridge import CvBridge
 
 
 class CameraSelect(object):
@@ -20,7 +20,7 @@ class CameraSelect(object):
         rospy.init_node('camera_select')
 
         rospy.Subscriber('/camera_node/camera_select', Int8, callback=self.camera_input_select_callback)
-        rospy.Subscriber('rgb/image_rect_color', Image, callback=self.real_camera_update_callback, queue_size=8)
+        rospy.Subscriber('/zed/rgb/image_raw_color', Image, callback=self.real_camera_update_callback, queue_size=8)
         rospy.Subscriber('/camera_node/image_sim', Image, callback=self.sim_camera_update_callback, queue_size=8)
         rospy.Subscriber('/carla/ego_vehicle/camera/rgb/front/image_color', Image,
                          callback=self.carla_rgb_camera_update_callback, queue_size=8)

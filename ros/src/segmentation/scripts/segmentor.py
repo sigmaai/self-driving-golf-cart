@@ -8,7 +8,7 @@
 # (c) Yongyang Nie 2018
 
 from keras import backend as K
-from models.icnet_fusion import ICNet
+from models.icnet import ICNet
 import utils as utils
 import configs as configs
 import cv2
@@ -28,7 +28,10 @@ class Segmentor():
         K.set_session(sess)
 
         self.model = ICNet(width=configs.img_width, height=configs.img_height, n_classes=configs.nb_classes,
-                           weight_path=weight_path, training=True, mode='cross_fusion')
+                           weight_path=weight_path, training=False)
+
+        # self.model = ICNet(width=configs.img_width, height=configs.img_height, n_classes=configs.nb_classes,
+        #                    weight_path=weight_path, training=True, mode='cross_fusion')
         print(self.model.model.summary())
         self.backgrounds = self.load_color_backgrounds()
 
@@ -40,7 +43,7 @@ class Segmentor():
         for i in range(len(utils.labels)):
             color = utils.labels[i][7]
 
-            bg = np.zeros((480, 640, 3), dtype=np.uint8)
+            bg = np.zeros((720, 1280, 3), dtype=np.uint8)
             bg[:, :, 0].fill(color[2])
             bg[:, :, 1].fill(color[1])
             bg[:, :, 2].fill(color[0])
@@ -58,16 +61,21 @@ class Segmentor():
         # img_pred: visualization
 
         image = cv2.resize(image, (configs.img_width, configs.img_height))
-        depth_image = cv2.resize(depth_image, (configs.img_width, configs.img_height))
         x = np.array([cv2.cvtColor(image, cv2.COLOR_BGR2RGB)])
-        x_depth = np.array([depth_image])
+        output = self.model.model.predict([x])[0]
 
-        output = self.model.model.predict([x, x_depth])[0][0]
+        # image = cv2.resize(image, (configs.img_width, configs.img_height))
+        # depth_image = cv2.resize(depth_image, (configs.img_width, configs.img_height))
+        #
+        # x = np.array([cv2.cvtColor(image, cv2.COLOR_BGR2RGB)])
+        # x_depth = np.array([depth_image])
+        #
+        # output = self.model.model.predict([x, x_depth])[0][0]
 
         if visualize:
             im_mask = self.convert_class_to_rgb(image_labels=output)
-            viz = cv2.addWeighted(im_mask, 1.0, cv2.resize(image, (640, 480)), 0.8, 0)
-            viz = cv2.resize(viz, (640, 480))
+            viz = cv2.addWeighted(im_mask, 1.0, cv2.resize(image, (1280, 720)), 0.8, 0)
+            viz = cv2.resize(viz, (1280, 720))
             return output, viz
         else:
             return output, None
@@ -78,14 +86,14 @@ class Segmentor():
         # convert any pixel < threshold to 0
         # then use bitwise_and
 
-        output = np.zeros((480, 640, 3), dtype=np.uint8)
+        output = np.zeros((720, 1280, 3), dtype=np.uint8)
 
         for i in range(configs.nb_classes):
             split = image_labels[:, :, i]
             split[split > threshold] = 1
             split[split < threshold] = 0
             split[:] *= 255
-            split = cv2.resize(split.astype(np.uint8), (640, 480))
+            split = cv2.resize(split.astype(np.uint8), (1280, 720))
 
             res = cv2.bitwise_and(self.backgrounds[i], self.backgrounds[i], mask=split)
 

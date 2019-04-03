@@ -34,10 +34,8 @@ import numpy as np
 import rospy
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge, CvBridgeError
-import configs as configs
 from segmentation.msg import SegmentationResult
 import time
-
 
 
 class ObjectDetectionNode:
@@ -48,7 +46,7 @@ class ObjectDetectionNode:
 
         # ROS subscribers
         rospy.Subscriber('/vehicle/sensor/camera/front/image_color', Image, callback=self.image_update_callback, queue_size=5)
-        rospy.Subscriber('depth/depth_registered', Image, callback=self.depth_image_update_callback, queue_size=5)
+        rospy.Subscriber('/zed/depth/depth_registered', Image, callback=self.depth_image_update_callback, queue_size=5)
 
         self.current_frame = None
         self.depth_frame = None
@@ -73,21 +71,21 @@ class ObjectDetectionNode:
         # Running ROS loop
         rospy.loginfo("Semantic Segmentation Started")
         rospy.loginfo("Visualization: " + str(self.visualize))
-        rospy.loginfo("v1.7.0")
+        rospy.loginfo("v1.8.0")
 
         while not rospy.is_shutdown():
 
             if self.current_frame is not None and self.depth_frame is not None:
 
-                start = time.time()
+                # start = time.time()
                 output, visualization = self.segmentor.semantic_segmentation(self.current_frame, visualize=self.visualize,
                                                                              depth_image=self.depth_frame)
 
-                end = time.time()
-                rospy.loginfo("frame rate: " + str(1 / (end - start)))
+                # end = time.time()
+                # rospy.loginfo("frame rate: " + str(1 / (end - start)))
                 if self.visualize:
                     viz_msg = self.bridge.cv2_to_imgmsg(visualization, "bgr8")  # convert image to ROS msg type
-                    segmentation_image_pub.publish(viz_msg)  # publish the visualization image
+                    segmentation_image_pub.publish(viz_msg)                     # publish the visualization image
                 msg = self.convert_results_to_message(output)                   # convert output to ROS msg type
                 segmentation_results_pub.publish(msg)                           # publish using publisher
 
@@ -114,14 +112,18 @@ class ObjectDetectionNode:
         # require Numpy arrays.
         depth_image[depth_image == np.inf] = 20.0
         depth_image[depth_image == -np.inf] = 0.0
-        norm_image = cv2.normalize(depth_image, None, 1, 0, norm_type=cv2.NORM_MINMAX)
+        depth_image[depth_image == np.nan] = 0
+        norm_image = cv2.normalize(depth_image, None, 0, 1, norm_type=cv2.NORM_MINMAX)
 
         norm_image = 1.0 - norm_image
 
-        output = np.zeros((720, 1280, 3))
+        output = np.zeros((depth_image.shape[0], depth_image.shape[1], 3))
         output[:, :, 0] = norm_image
         output[:, :, 1] = norm_image
         output[:, :, 2] = norm_image
+
+        # cv2.imshow('depth_image', output)
+        # cv2.waitKey(0)
 
         self.depth_frame = output
 

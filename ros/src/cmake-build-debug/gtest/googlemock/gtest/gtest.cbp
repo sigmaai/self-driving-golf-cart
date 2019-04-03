@@ -269,6 +269,15 @@
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/../../../../../../opt/ros/melodic/share/catkin/cmake/templates/generate_cached_setup.py.in">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\templates\"/>
 		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/../../../../../../opt/ros/melodic/share/catkin/cmake/templates/local_setup.bash.in">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/../../../../../../opt/ros/melodic/share/catkin/cmake/templates/local_setup.sh.in">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/../../../../../../opt/ros/melodic/share/catkin/cmake/templates/local_setup.zsh.in">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\templates\"/>
+		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/../../../../../../opt/ros/melodic/share/catkin/cmake/templates/order_packages.context.py.in">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\templates\"/>
 		</Unit>

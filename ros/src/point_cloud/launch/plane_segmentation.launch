@@ -9,16 +9,16 @@
     <remap from="~input" to="/point_cloud/cloud_transformed" />
     <rosparam>
       filter_field_name: z
-      filter_limit_min: -0.15
-      filter_limit_max: 0.05
+      filter_limit_min: -1.0
+      filter_limit_max: 0.25
       filter_limit_negative: false
       leaf_size: 0.01
     </rosparam>
   </node>
 
-<!--
+
   <node pkg="point_cloud" type="ground_plane_detection" name="ground_plane_detection" output="screen" />
--->
+
 
   <!--  &lt;!&ndash; Estimate point normals &ndash;&gt;-->
   <!--  <node pkg="nodelet" type="nodelet" name="normal_estimation" args="load pcl/NormalEstimation pcl_manager" output="screen">-->
