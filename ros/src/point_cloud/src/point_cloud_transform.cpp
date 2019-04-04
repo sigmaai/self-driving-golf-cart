@@ -19,7 +19,6 @@
 #include <pcl/segmentation/sac_segmentation.h>
 #include <pcl_ros/transforms.h>
 
-
 ros::Publisher pub;
 tf::StampedTransform transform;
 
