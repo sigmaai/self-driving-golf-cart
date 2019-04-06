@@ -17,7 +17,7 @@
 -- BUILD_SHARED_LIBS is on
 -- BUILD_SHARED_LIBS is on
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--- ~~  traversing 22 packages in topological order:
+-- ~~  traversing 23 packages in topological order:
 -- ~~  - rosapi
 -- ~~  - rosbridge_server
 -- ~~  - rosbridge_suite (metapackage)
@@ -39,6 +39,7 @@
 -- ~~  - osm_cartography
 -- ~~  - zed_display_rviz
 -- ~~  - zed_ros (metapackage)
+-- ~~  - zed_rtabmap_example
 -- ~~  - zed_wrapper
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -- +++ processing catkin package: 'rosapi'
@@ -76,18 +77,6 @@
 -- +++ processing catkin package: 'autopilot'
 -- ==> add_subdirectory(autopilot)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
-CMake Warning at cmake-build-debug/autopilot/cmake/autopilot-genmsg.cmake:3 (message):
-  Invoking generate_messages() without having added any message or service
-  file before.
-
-  You should either add add_message_files() and/or add_service_files() calls
-  or remove the invocation of generate_messages().
-Call Stack (most recent call first):
-  /opt/ros/melodic/share/genmsg/cmake/genmsg-extras.cmake:307 (include)
-  autopilot/CMakeLists.txt:74 (generate_messages)
-
-
--- autopilot: 0 messages, 0 services
 -- +++ processing catkin package: 'data_logger'
 -- ==> add_subdirectory(data_logger)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
@@ -113,6 +102,8 @@ Call Stack (most recent call first):
 -- ==> add_subdirectory(sensors/zed-ros-wrapper/zed_display_rviz)
 -- +++ processing catkin metapackage: 'zed_ros'
 -- ==> add_subdirectory(sensors/zed-ros-wrapper/zed_ros)
+-- +++ processing catkin package: 'zed_rtabmap_example'
+-- ==> add_subdirectory(zed_rtabmap_example)
 -- +++ processing catkin package: 'zed_wrapper'
 -- ==> add_subdirectory(sensors/zed-ros-wrapper/zed_wrapper)
 -- Found CUDA: /usr/local/cuda-10.0 (found suitable exact version "10.0") 

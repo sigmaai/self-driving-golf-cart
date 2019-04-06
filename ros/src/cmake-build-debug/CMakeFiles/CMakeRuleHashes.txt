@@ -242,7 +242,6 @@ f9538967a8be175641fe1849b38055bf /home/neil/Workspace/self-driving-golf-cart/ros
 81aab5000eb1bed7388902dd50615cae /home/neil/Workspace/self-driving-golf-cart/ros/devel/share/gennodejs/ros/zed_wrapper/srv/set_initial_pose.js
 06d81551bf21da2e6ae882f7cec547c7 /home/neil/Workspace/self-driving-golf-cart/ros/devel/share/gennodejs/ros/zed_wrapper/srv/start_svo_recording.js
 b22340aa870857b9c1b18814bb2bd37b /home/neil/Workspace/self-driving-golf-cart/ros/devel/share/gennodejs/ros/zed_wrapper/srv/stop_svo_recording.js
-929e09613e0b4ca1117e5f5fd5b26f6c /home/neil/Workspace/self-driving-golf-cart/ros/devel/share/roseus/ros/autopilot/manifest.l
 0dbc7d0427182a5e0e15bf7988bb28b8 /home/neil/Workspace/self-driving-golf-cart/ros/devel/share/roseus/ros/object_detection/manifest.l
 fc214b954034ed87aee3dc0d2ad2f7f3 /home/neil/Workspace/self-driving-golf-cart/ros/devel/share/roseus/ros/object_detection/msg/DetectionResult.l
 535cd3b1701e538bc3992a8b03affe29 /home/neil/Workspace/self-driving-golf-cart/ros/devel/share/roseus/ros/object_detection/msg/DetectionResults.l
@@ -308,7 +307,6 @@ cf6c8c164874c2649797fc9c9cb1cb85 /home/neil/Workspace/self-driving-golf-cart/ros
 3980883b7c646efd75eb0c75051dcd48 /home/neil/Workspace/self-driving-golf-cart/ros/devel/share/roseus/ros/zed_wrapper/srv/start_svo_recording.l
 a8b9152b74c00559074529bbd234cad8 /home/neil/Workspace/self-driving-golf-cart/ros/devel/share/roseus/ros/zed_wrapper/srv/stop_svo_recording.l
 0bed2e091fc06702b36aac77645720d6 CMakeFiles/clean_test_results
-918ac67e6921d6e78c22e0356846780b autopilot/CMakeFiles/autopilot_generate_messages_eus
 63d12bfe051a81f4a0c678ed55bf0ab1 detection/object_detection/CMakeFiles/_object_detection_generate_messages_check_deps_DetectionResult
 d67523534990e6e4191bd573287f5acb detection/object_detection/CMakeFiles/_object_detection_generate_messages_check_deps_DetectionResults
 12739925a4bad058619d61544f0169db detection/object_detection/CMakeFiles/object_detection_generate_messages_cpp

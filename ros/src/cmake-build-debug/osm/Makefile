@@ -80,6 +80,16 @@ install/fast: preinstall/fast
 	/home/neil/snap/clion-2019.1/bin/cmake/linux/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -124,16 +134,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -196,51 +196,6 @@ _run_tests_osm_cartography_roslaunch-check_launch: osm/CMakeFiles/_run_tests_osm
 _run_tests_osm_cartography_roslaunch-check_launch/fast:
 	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f osm/CMakeFiles/_run_tests_osm_cartography_roslaunch-check_launch.dir/build.make osm/CMakeFiles/_run_tests_osm_cartography_roslaunch-check_launch.dir/build
 .PHONY : _run_tests_osm_cartography_roslaunch-check_launch/fast
-
-# Convenience name for target.
-osm/CMakeFiles/run_tests_osm_cartography_roslaunch-check_launch.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 osm/CMakeFiles/run_tests_osm_cartography_roslaunch-check_launch.dir/rule
-.PHONY : osm/CMakeFiles/run_tests_osm_cartography_roslaunch-check_launch.dir/rule
-
-# Convenience name for target.
-run_tests_osm_cartography_roslaunch-check_launch: osm/CMakeFiles/run_tests_osm_cartography_roslaunch-check_launch.dir/rule
-
-.PHONY : run_tests_osm_cartography_roslaunch-check_launch
-
-# fast build rule for target.
-run_tests_osm_cartography_roslaunch-check_launch/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f osm/CMakeFiles/run_tests_osm_cartography_roslaunch-check_launch.dir/build.make osm/CMakeFiles/run_tests_osm_cartography_roslaunch-check_launch.dir/build
-.PHONY : run_tests_osm_cartography_roslaunch-check_launch/fast
-
-# Convenience name for target.
-osm/CMakeFiles/run_tests_osm_cartography_roslaunch-check.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 osm/CMakeFiles/run_tests_osm_cartography_roslaunch-check.dir/rule
-.PHONY : osm/CMakeFiles/run_tests_osm_cartography_roslaunch-check.dir/rule
-
-# Convenience name for target.
-run_tests_osm_cartography_roslaunch-check: osm/CMakeFiles/run_tests_osm_cartography_roslaunch-check.dir/rule
-
-.PHONY : run_tests_osm_cartography_roslaunch-check
-
-# fast build rule for target.
-run_tests_osm_cartography_roslaunch-check/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f osm/CMakeFiles/run_tests_osm_cartography_roslaunch-check.dir/build.make osm/CMakeFiles/run_tests_osm_cartography_roslaunch-check.dir/build
-.PHONY : run_tests_osm_cartography_roslaunch-check/fast
-
-# Convenience name for target.
-osm/CMakeFiles/_run_tests_osm_cartography.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 osm/CMakeFiles/_run_tests_osm_cartography.dir/rule
-.PHONY : osm/CMakeFiles/_run_tests_osm_cartography.dir/rule
-
-# Convenience name for target.
-_run_tests_osm_cartography: osm/CMakeFiles/_run_tests_osm_cartography.dir/rule
-
-.PHONY : _run_tests_osm_cartography
-
-# fast build rule for target.
-_run_tests_osm_cartography/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f osm/CMakeFiles/_run_tests_osm_cartography.dir/build.make osm/CMakeFiles/_run_tests_osm_cartography.dir/build
-.PHONY : _run_tests_osm_cartography/fast
 
 # Convenience name for target.
 osm/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/rule:
@@ -333,21 +288,6 @@ geographic_msgs_generate_messages_eus/fast:
 .PHONY : geographic_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
-osm/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 osm/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
-.PHONY : osm/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-visualization_msgs_generate_messages_cpp: osm/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : visualization_msgs_generate_messages_cpp
-
-# fast build rule for target.
-visualization_msgs_generate_messages_cpp/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f osm/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build.make osm/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build
-.PHONY : visualization_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
 osm/CMakeFiles/run_tests_osm_cartography.dir/rule:
 	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 osm/CMakeFiles/run_tests_osm_cartography.dir/rule
 .PHONY : osm/CMakeFiles/run_tests_osm_cartography.dir/rule
@@ -376,6 +316,21 @@ uuid_msgs_generate_messages_lisp: osm/CMakeFiles/uuid_msgs_generate_messages_lis
 uuid_msgs_generate_messages_lisp/fast:
 	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f osm/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/build.make osm/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/build
 .PHONY : uuid_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+osm/CMakeFiles/run_tests_osm_cartography_roslaunch-check.dir/rule:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 osm/CMakeFiles/run_tests_osm_cartography_roslaunch-check.dir/rule
+.PHONY : osm/CMakeFiles/run_tests_osm_cartography_roslaunch-check.dir/rule
+
+# Convenience name for target.
+run_tests_osm_cartography_roslaunch-check: osm/CMakeFiles/run_tests_osm_cartography_roslaunch-check.dir/rule
+
+.PHONY : run_tests_osm_cartography_roslaunch-check
+
+# fast build rule for target.
+run_tests_osm_cartography_roslaunch-check/fast:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f osm/CMakeFiles/run_tests_osm_cartography_roslaunch-check.dir/build.make osm/CMakeFiles/run_tests_osm_cartography_roslaunch-check.dir/build
+.PHONY : run_tests_osm_cartography_roslaunch-check/fast
 
 # Convenience name for target.
 osm/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/rule:
@@ -423,34 +378,34 @@ uuid_msgs_generate_messages_py/fast:
 .PHONY : uuid_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-osm/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 osm/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
-.PHONY : osm/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
+osm/CMakeFiles/osm_cartography_gencfg.dir/rule:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 osm/CMakeFiles/osm_cartography_gencfg.dir/rule
+.PHONY : osm/CMakeFiles/osm_cartography_gencfg.dir/rule
 
 # Convenience name for target.
-visualization_msgs_generate_messages_lisp: osm/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
+osm_cartography_gencfg: osm/CMakeFiles/osm_cartography_gencfg.dir/rule
 
-.PHONY : visualization_msgs_generate_messages_lisp
+.PHONY : osm_cartography_gencfg
 
 # fast build rule for target.
-visualization_msgs_generate_messages_lisp/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f osm/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build.make osm/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build
-.PHONY : visualization_msgs_generate_messages_lisp/fast
+osm_cartography_gencfg/fast:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f osm/CMakeFiles/osm_cartography_gencfg.dir/build.make osm/CMakeFiles/osm_cartography_gencfg.dir/build
+.PHONY : osm_cartography_gencfg/fast
 
 # Convenience name for target.
-osm/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 osm/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule
-.PHONY : osm/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule
+osm/CMakeFiles/_run_tests_osm_cartography.dir/rule:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 osm/CMakeFiles/_run_tests_osm_cartography.dir/rule
+.PHONY : osm/CMakeFiles/_run_tests_osm_cartography.dir/rule
 
 # Convenience name for target.
-visualization_msgs_generate_messages_nodejs: osm/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule
+_run_tests_osm_cartography: osm/CMakeFiles/_run_tests_osm_cartography.dir/rule
 
-.PHONY : visualization_msgs_generate_messages_nodejs
+.PHONY : _run_tests_osm_cartography
 
 # fast build rule for target.
-visualization_msgs_generate_messages_nodejs/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f osm/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build.make osm/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build
-.PHONY : visualization_msgs_generate_messages_nodejs/fast
+_run_tests_osm_cartography/fast:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f osm/CMakeFiles/_run_tests_osm_cartography.dir/build.make osm/CMakeFiles/_run_tests_osm_cartography.dir/build
+.PHONY : _run_tests_osm_cartography/fast
 
 # Convenience name for target.
 osm/CMakeFiles/_run_tests_osm_cartography_roslaunch-check.dir/rule:
@@ -468,49 +423,19 @@ _run_tests_osm_cartography_roslaunch-check/fast:
 .PHONY : _run_tests_osm_cartography_roslaunch-check/fast
 
 # Convenience name for target.
-osm/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 osm/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
-.PHONY : osm/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
+osm/CMakeFiles/run_tests_osm_cartography_roslaunch-check_launch.dir/rule:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 osm/CMakeFiles/run_tests_osm_cartography_roslaunch-check_launch.dir/rule
+.PHONY : osm/CMakeFiles/run_tests_osm_cartography_roslaunch-check_launch.dir/rule
 
 # Convenience name for target.
-visualization_msgs_generate_messages_py: osm/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
+run_tests_osm_cartography_roslaunch-check_launch: osm/CMakeFiles/run_tests_osm_cartography_roslaunch-check_launch.dir/rule
 
-.PHONY : visualization_msgs_generate_messages_py
+.PHONY : run_tests_osm_cartography_roslaunch-check_launch
 
 # fast build rule for target.
-visualization_msgs_generate_messages_py/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f osm/CMakeFiles/visualization_msgs_generate_messages_py.dir/build.make osm/CMakeFiles/visualization_msgs_generate_messages_py.dir/build
-.PHONY : visualization_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-osm/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 osm/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
-.PHONY : osm/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-visualization_msgs_generate_messages_eus: osm/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
-
-.PHONY : visualization_msgs_generate_messages_eus
-
-# fast build rule for target.
-visualization_msgs_generate_messages_eus/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f osm/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build.make osm/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build
-.PHONY : visualization_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-osm/CMakeFiles/osm_cartography_gencfg.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 osm/CMakeFiles/osm_cartography_gencfg.dir/rule
-.PHONY : osm/CMakeFiles/osm_cartography_gencfg.dir/rule
-
-# Convenience name for target.
-osm_cartography_gencfg: osm/CMakeFiles/osm_cartography_gencfg.dir/rule
-
-.PHONY : osm_cartography_gencfg
-
-# fast build rule for target.
-osm_cartography_gencfg/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f osm/CMakeFiles/osm_cartography_gencfg.dir/build.make osm/CMakeFiles/osm_cartography_gencfg.dir/build
-.PHONY : osm_cartography_gencfg/fast
+run_tests_osm_cartography_roslaunch-check_launch/fast:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f osm/CMakeFiles/run_tests_osm_cartography_roslaunch-check_launch.dir/build.make osm/CMakeFiles/run_tests_osm_cartography_roslaunch-check_launch.dir/build
+.PHONY : run_tests_osm_cartography_roslaunch-check_launch/fast
 
 # Help Target
 help:
@@ -520,13 +445,11 @@ help:
 	@echo "... depend"
 	@echo "... install/local"
 	@echo "... install"
+	@echo "... list_install_components"
 	@echo "... edit_cache"
 	@echo "... test"
 	@echo "... clean_test_results_osm_cartography"
 	@echo "... _run_tests_osm_cartography_roslaunch-check_launch"
-	@echo "... run_tests_osm_cartography_roslaunch-check_launch"
-	@echo "... run_tests_osm_cartography_roslaunch-check"
-	@echo "... _run_tests_osm_cartography"
 	@echo "... geographic_msgs_generate_messages_lisp"
 	@echo "... geographic_msgs_generate_messages_nodejs"
 	@echo "... geographic_msgs_generate_messages_cpp"
@@ -534,20 +457,17 @@ help:
 	@echo "... install/strip"
 	@echo "... uuid_msgs_generate_messages_eus"
 	@echo "... geographic_msgs_generate_messages_eus"
-	@echo "... visualization_msgs_generate_messages_cpp"
 	@echo "... run_tests_osm_cartography"
 	@echo "... uuid_msgs_generate_messages_lisp"
+	@echo "... run_tests_osm_cartography_roslaunch-check"
 	@echo "... uuid_msgs_generate_messages_nodejs"
 	@echo "... rebuild_cache"
 	@echo "... geographic_msgs_generate_messages_py"
 	@echo "... uuid_msgs_generate_messages_py"
-	@echo "... list_install_components"
-	@echo "... visualization_msgs_generate_messages_lisp"
-	@echo "... visualization_msgs_generate_messages_nodejs"
-	@echo "... _run_tests_osm_cartography_roslaunch-check"
-	@echo "... visualization_msgs_generate_messages_py"
-	@echo "... visualization_msgs_generate_messages_eus"
 	@echo "... osm_cartography_gencfg"
+	@echo "... _run_tests_osm_cartography"
+	@echo "... _run_tests_osm_cartography_roslaunch-check"
+	@echo "... run_tests_osm_cartography_roslaunch-check_launch"
 .PHONY : help
 
 

@@ -1,0 +1,15 @@
+#
+#
+
+transform_tolerance: 10
+
+obstacle_range: 5.5
+raytrace_range: 8.0
+
+footprint: [[ 0.6096,  1.1684], [-0.6096,  1.1684], [-0.6096, -1.1684], [ 0.6096, -1.1684]]
+footprint_padding: 0.10
+
+observation_sources: point_cloud_sensor
+
+point_cloud_sensor: {sensor_frame: zed_camera_center, data_type: PointCloud2, topic: /zed/point_cloud/cloud_registered, marking: true, clearing: true}
+

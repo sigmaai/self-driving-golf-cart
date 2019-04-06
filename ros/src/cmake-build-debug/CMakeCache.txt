@@ -521,6 +521,9 @@ catkin_DIR:PATH=/opt/ros/melodic/share/catkin/cmake
 //The directory containing a CMake configuration file for class_loader.
 class_loader_DIR:PATH=/opt/ros/melodic/share/class_loader/cmake
 
+//The directory containing a CMake configuration file for costmap_2d.
+costmap_2d_DIR:PATH=/opt/ros/melodic/share/costmap_2d/cmake
+
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/melodic/share/cpp_common/cmake
 
@@ -654,6 +657,9 @@ lane_detection_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros
 //Value Computed by CMake
 lane_detection_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/detection/lane_detection
 
+//The directory containing a CMake configuration file for laser_geometry.
+laser_geometry_DIR:PATH=/opt/ros/melodic/share/laser_geometry/cmake
+
 //Path to a library.
 lib:FILEPATH=/opt/ros/melodic/lib/libbondcpp.so
 
@@ -663,6 +669,9 @@ localization_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/s
 //Value Computed by CMake
 localization_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/localization
 
+//The directory containing a CMake configuration file for map_msgs.
+map_msgs_DIR:PATH=/opt/ros/melodic/share/map_msgs/cmake
+
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/melodic/share/message_filters/cmake
 
@@ -671,6 +680,12 @@ message_generation_DIR:PATH=/opt/ros/melodic/share/message_generation/cmake
 
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/melodic/share/message_runtime/cmake
+
+//The directory containing a CMake configuration file for nav_msgs.
+nav_msgs_DIR:PATH=/opt/ros/melodic/share/nav_msgs/cmake
+
+//The directory containing a CMake configuration file for navigation.
+navigation_DIR:PATH=navigation_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for nodelet.
 nodelet_DIR:PATH=/opt/ros/melodic/share/nodelet/cmake
@@ -798,6 +813,12 @@ rostest_DIR:PATH=/opt/ros/melodic/share/rostest/cmake
 //The directory containing a CMake configuration file for rostime.
 rostime_DIR:PATH=/opt/ros/melodic/share/rostime/cmake
 
+//The directory containing a CMake configuration file for rtabmap.
+rtabmap_DIR:PATH=rtabmap_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for rtabmap_ros.
+rtabmap_ros_DIR:PATH=rtabmap_ros_DIR-NOTFOUND
+
 //Value Computed by CMake
 segmentation_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/segmentation
 
@@ -858,6 +879,9 @@ uuid_msgs_DIR:PATH=/opt/ros/melodic/share/uuid_msgs/cmake
 //The directory containing a CMake configuration file for visualization_msgs.
 visualization_msgs_DIR:PATH=/opt/ros/melodic/share/visualization_msgs/cmake
 
+//The directory containing a CMake configuration file for voxel_grid.
+voxel_grid_DIR:PATH=/opt/ros/melodic/share/voxel_grid/cmake
+
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/melodic/share/xmlrpcpp/cmake
 
@@ -872,6 +896,12 @@ zed_ros_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cm
 
 //Value Computed by CMake
 zed_ros_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/zed-ros-wrapper/zed_ros
+
+//Value Computed by CMake
+zed_rtabmap_example_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/zed_rtabmap_example
+
+//Value Computed by CMake
+zed_rtabmap_example_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/zed_rtabmap_example
 
 //Value Computed by CMake
 zed_wrapper_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper
@@ -999,7 +1029,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=26
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=27
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

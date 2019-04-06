@@ -154,7 +154,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(autopilot_EXPORTED_TARGETS "autopilot_generate_messages_cpp;autopilot_generate_messages_eus;autopilot_generate_messages_lisp;autopilot_generate_messages_nodejs;autopilot_generate_messages_py")
+set(autopilot_EXPORTED_TARGETS "")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${autopilot_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -191,7 +191,7 @@ foreach(depend ${depends})
   list(APPEND autopilot_EXPORTED_TARGETS ${${autopilot_dep}_EXPORTED_TARGETS})
 endforeach()
 
-set(pkg_cfg_extras "autopilot-msg-extras.cmake")
+set(pkg_cfg_extras "")
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${autopilot_DIR}/${extra})

@@ -137,15 +137,15 @@ void cloud_callback_new (const sensor_msgs::PointCloud2ConstPtr& input){
     pcl::OrganizedMultiPlaneSegmentation<PointT, pcl::Normal, pcl::Label> mps;
     pcl::PlaneRefinementComparator<PointT, pcl::Normal, pcl::Label>::Ptr refinement_compare (new pcl::PlaneRefinementComparator<PointT, pcl::Normal, pcl::Label>());
     refinement_compare->setInputCloud (cloud);
-    refinement_compare->setDistanceThreshold (0.15f);
+    refinement_compare->setDistanceThreshold (0.20f);
     refinement_compare->setLabels (labels_ptr);
     refinement_compare->setModelCoefficients (model_coefficients);
     refinement_compare->setRefineLabels (grow_labels);
     refinement_compare->setLabelToModel (label_to_model);
     mps.setRefinementComparator (refinement_compare);
     mps.setMinInliers (500);
-    mps.setAngularThreshold (pcl::deg2rad (5.0));
-    mps.setDistanceThreshold (0.01);
+    mps.setAngularThreshold (pcl::deg2rad (10.0));
+    mps.setDistanceThreshold (0.10);
     mps.setInputCloud (cloud);
     mps.setInputNormals (normal_cloud);
     mps.refine (model_coefficients, inlier_indices, centroids, covariances, labels_ptr, region_indices);
@@ -196,147 +196,6 @@ void cloud_callback_new (const sensor_msgs::PointCloud2ConstPtr& input){
     pub.publish(cloud_publish);
 }
 
-/*
-void cloud_callback_two (const sensor_msgs::PointCloud2ConstPtr& input){
-
-    // Create a container for the data. --------------------------------------------------------------------------------
-    pcl::PointCloud<PointT>::Ptr cloud(new pcl::PointCloud<PointT>);
-    pcl::PCLPointCloud2 pcl_pc2;
-    pcl_conversions::toPCL(*input, pcl_pc2);
-    pcl::fromPCLPointCloud2(pcl_pc2, *cloud);
-
-    // calculate normal vectors ----------------------------------------------------------------------------------------
-    // Create the normal estimation class, and pass the input dataset to it
-    ne.setInputCloud (cloud);
-
-    // Create an empty kdtree representation, and pass it to the normal estimation object.
-    // Its content will be filled inside the object, based on the given input dataset (as no other search surface is given).
-    pcl::search::KdTree<PointT>::Ptr tree (new pcl::search::KdTree<PointT> ());
-    ne.setSearchMethod (tree);
-
-    // Output datasets
-    pcl::PointCloud<pcl::Normal>::Ptr cloud_normals (new pcl::PointCloud<pcl::Normal>);
-    // Use all neighbors in a sphere of radius 3cm
-    ne.setRadiusSearch (0.02);
-    // Compute the features
-    ne.compute (*cloud_normals);
-
-    // -----------------------------------------------------------------------------------------------------------------
-
-    // Set up the groundplane comparator
-    road_comparator->setInputCloud (cloud);
-    road_comparator->setInputNormals (cloud_normals);
-
-    // Run segmentation
-    pcl::PointCloud<pcl::Label> labels;
-    std::vector<pcl::PointIndices> region_indices;
-    road_segmentation.setInputCloud (cloud);
-    road_segmentation.segment (labels, region_indices);
-
-    // Draw the segmentation result
-    pcl::PointCloud<pcl::PointXYZ>::Ptr ground_cloud (new pcl::PointCloud<pcl::PointXYZ>);
-    *//*pcl::PointCloud<pcl::PointXYZRGB>::Ptr ground_image (new pcl::PointCloud<pcl::PointXYZRGB>);
-    pcl::PointCloud<pcl::PointXYZRGB>::Ptr label_image (new pcl::PointCloud<pcl::PointXYZRGB>);
-    ground_image = *cloud;
-    label_image = cloud;*//*
-
-    Eigen::Vector4f clust_centroid = Eigen::Vector4f::Zero ();
-    Eigen::Vector4f vp = Eigen::Vector4f::Zero ();
-    Eigen::Matrix3f clust_cov;
-    pcl::ModelCoefficients model;
-    model.values.resize (4);
-
-    std::vector<pcl::ModelCoefficients> model_coefficients;
-    std::vector<Eigen::Vector4f, Eigen::aligned_allocator<Eigen::Vector4f> > centroids;
-    std::vector<Eigen::Matrix3f, Eigen::aligned_allocator<Eigen::Matrix3f> > covariances;
-    std::vector<pcl::PointIndices> inlier_indices;
-
-    for (const auto &region_index : region_indices){
-
-        if (region_index.indices.size () > 1000){
-
-            for (size_t j = 0; j < region_index.indices.size (); j++){
-
-                pcl::PointXYZ ground_pt (cloud->points[region_index.indices[j]].x,
-                                         cloud->points[region_index.indices[j]].y,
-                                         cloud->points[region_index.indices[j]].z);
-                ground_cloud->points.push_back (ground_pt);
-            }
-
-            // Compute plane info
-            pcl::computeMeanAndCovarianceMatrix (*cloud, region_index.indices, clust_cov, clust_centroid);
-            Eigen::Vector4f plane_params;
-
-            EIGEN_ALIGN16 Eigen::Vector3f::Scalar eigen_value;
-            EIGEN_ALIGN16 Eigen::Vector3f eigen_vector;
-            pcl::eigen33 (clust_cov, eigen_value, eigen_vector);
-            plane_params[0] = eigen_vector[0];
-            plane_params[1] = eigen_vector[1];
-            plane_params[2] = eigen_vector[2];
-            plane_params[3] = 0;
-            plane_params[3] = -1 * plane_params.dot (clust_centroid);
-
-            vp -= clust_centroid;
-            float cos_theta = vp.dot (plane_params);
-            if (cos_theta < 0){
-
-                plane_params *= -1;
-                plane_params[3] = 0;
-                plane_params[3] = -1 * plane_params.dot (clust_centroid);
-            }
-
-            model.values[0] = plane_params[0];
-            model.values[1] = plane_params[1];
-            model.values[2] = plane_params[2];
-            model.values[3] = plane_params[3];
-            model_coefficients.push_back (model);
-            inlier_indices.push_back (region_index);
-            centroids.push_back (clust_centroid);
-            covariances.push_back (clust_cov);
-        }else{
-            ROS_INFO("The field is too small");
-        }
-    }
-
-    //Refinement
-    std::vector<bool> grow_labels;
-    std::vector<int> label_to_model;
-    grow_labels.resize (region_indices.size (), false);
-    label_to_model.resize (region_indices.size (), 0);
-
-    for (size_t i = 0; i < model_coefficients.size (); i++){
-
-        int model_label = (labels)[inlier_indices[i].indices[0]].label;
-        label_to_model[model_label] = static_cast<int> (i);
-        grow_labels[model_label] = true;
-    }
-
-    boost::shared_ptr<pcl::PointCloud<pcl::Label> > labels_ptr (new pcl::PointCloud<pcl::Label>());
-    *labels_ptr = labels;
-    pcl::OrganizedMultiPlaneSegmentation<PointT, pcl::Normal, pcl::Label> mps;
-    pcl::PlaneRefinementComparator<PointT, pcl::Normal, pcl::Label>::Ptr refinement_compare (new pcl::PlaneRefinementComparator<PointT, pcl::Normal, pcl::Label>());
-    refinement_compare->setInputCloud (cloud);
-    refinement_compare->setDistanceThreshold (0.15f);
-    refinement_compare->setLabels (labels_ptr);
-    refinement_compare->setModelCoefficients (model_coefficients);
-    refinement_compare->setRefineLabels (grow_labels);
-    refinement_compare->setLabelToModel (label_to_model);
-    mps.setRefinementComparator (refinement_compare);
-    mps.setMinInliers (500);
-    mps.setAngularThreshold (pcl::deg2rad (3.0));
-    mps.setDistanceThreshold (0.02);
-    mps.setInputCloud (cloud);
-    mps.setInputNormals (cloud_normals);
-    mps.refine (model_coefficients, inlier_indices, centroids, covariances, labels_ptr, region_indices);
-
-    // publish filtered cloud data
-    sensor_msgs::PointCloud2 cloud_publish;
-    pcl::toROSMsg(*ground_cloud, cloud_publish);
-    cloud_publish.header = input->header;
-
-    pub.publish(cloud_publish);
-}*/
-
 int main (int argc, char** argv){
 
     // Initialize ROS
@@ -351,22 +210,22 @@ int main (int argc, char** argv){
     // Create a ROS publisher for the output point cloud
     pub = nh.advertise<sensor_msgs::PointCloud2> ("/point_cloud/ground", 1);
 
-    // ---------------------------------------------------------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     // Set up the groundplane comparator
     // If the camera was pointing straight out, the normal would be:
     Eigen::Vector3f nominal_road_normal (0.0, 0.0, 1.0);
     // Adjust for camera tilt:
-    Eigen::Vector3f tilt_road_normal = Eigen::AngleAxisf (pcl::deg2rad (5.0f), Eigen::Vector3f::UnitX ()) * nominal_road_normal;
+    Eigen::Vector3f tilt_road_normal = Eigen::AngleAxisf (pcl::deg2rad (5.5f), Eigen::Vector3f::UnitX ()) * nominal_road_normal;
     road_comparator->setExpectedGroundNormal (tilt_road_normal);
-    road_comparator->setGroundAngularThreshold (pcl::deg2rad (5.0f));
-    road_comparator->setAngularThreshold (pcl::deg2rad (3.0f));
+    road_comparator->setGroundAngularThreshold (pcl::deg2rad (10.0f));
+    road_comparator->setAngularThreshold (pcl::deg2rad (10.0f));
 
-    // --------------------------------------------------------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
     ne.setNormalEstimationMethod (ne.COVARIANCE_MATRIX);
-    ne.setMaxDepthChangeFactor (0.03f);
+    ne.setMaxDepthChangeFactor (0.10f);
     ne.setNormalSmoothingSize (40.0f); //20.0f
 
-    // --------------------------------------------------------------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------------------------------------
 
     ros::spin();
     return 0;

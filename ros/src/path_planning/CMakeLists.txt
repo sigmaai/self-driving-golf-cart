@@ -16,6 +16,7 @@ find_package(catkin REQUIRED COMPONENTS
   rosserial_msgs
   rosserial_python
   std_msgs
+  costmap_2d
 )
 
 ## System dependencies are found with CMake's conventions
@@ -202,3 +203,8 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+add_library(cost_map_layer src/cost_map_layer.cpp)
+
+install(DIRECTORY
+        launch
+        DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})

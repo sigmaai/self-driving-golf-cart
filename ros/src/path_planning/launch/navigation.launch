@@ -1,0 +1,40 @@
+<!--
+    Navigation Launch file
+    Self-driving golf cart project.
+    Copyright (c) 2019, Yongyang Nie, All Rights Reserved
+
+    MIT License.
+
+    Please contact me at contact@neilnie.com.
+
+-->
+
+<launch>
+
+    <!-- RTAB-map Node
+    <include file="$(find rtabmap_ros)/launch/rtabmap.launch">
+        <arg name="rtabmap_args"		value="-delete_db_on_start" />
+        <arg name="rgb_topic"               	value="/$(arg zed_namespace)/$(arg rgb_topic)" />
+        <arg name="depth_topic"             	value="/$(arg zed_namespace)/$(arg depth_topic)" />
+        <arg name="camera_info_topic"       	value="/$(arg zed_namespace)/$(arg camera_info_topic)" />
+        <arg name="depth_camera_info_topic" 	value="/$(arg zed_namespace)/$(arg depth_camera_info_topic)" />
+        <arg name="frame_id"                  value="$(arg camera_frame)" />
+        <arg name="approx_sync"               value="false" />
+        <arg name="visual_odometry"           value="false" />
+        <arg name="odom_topic"                value="/$(arg zed_namespace)/odom" />
+    </include>
+    -->
+
+    <node name="costmap_node" pkg="costmap_2d" type="costmap_2d_node" >
+        <rosparam file="$(find path_planning)/params/costmap_params.yaml" command="load" ns="local_costmap" />
+    </node>
+
+    <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+        <rosparam file="$(find path_planning)/params/costmap_common_params.yaml" command="load" ns="global_costmap" />
+        <rosparam file="$(find path_planning)/params/costmap_common_params.yaml" command="load" ns="local_costmap" />
+        <rosparam file="$(find path_planning)/params/costmap_local_params.yaml" command="load" />
+        <rosparam file="$(find path_planning)/params/costmap_global_params.yaml" command="load" />
+<!--        <rosparam file="$(find path_planning)/base_local_planner_params.yaml" command="load" />-->
+    </node>
+
+</launch>
