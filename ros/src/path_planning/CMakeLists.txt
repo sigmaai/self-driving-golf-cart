@@ -17,7 +17,12 @@ find_package(catkin REQUIRED COMPONENTS
   rosserial_python
   std_msgs
   costmap_2d
+  pcl_conversions
+  pcl_ros
+  cv_bridge
 )
+
+find_package( OpenCV REQUIRED )
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -204,6 +209,9 @@ include_directories(
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
 add_library(cost_map_layer src/cost_map_layer.cpp)
+
+add_executable(rgb_segmentation_point_cloud src/rgb_segmentation_point_cloud.cpp)
+target_link_libraries(rgb_segmentation_point_cloud ${catkin_LIBRARIES})
 
 install(DIRECTORY
         launch

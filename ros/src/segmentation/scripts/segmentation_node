@@ -63,8 +63,9 @@ class ObjectDetectionNode:
         self.segmentor = Segmentor(weight_path=self.weight_path)
 
         # Setup publishers
-        segmentation_image_pub = rospy.Publisher('/segmentation/visualization/', Image, queue_size=10)
-        segmentation_results_pub = rospy.Publisher('/segmentation/output', SegmentationResult, queue_size=10)
+        segmentation_image_pub = rospy.Publisher('/segmentation/output/visualization/', Image, queue_size=5)
+        segmentation_results_pub = rospy.Publisher('/segmentation/output/full', SegmentationResult, queue_size=5)
+        segmentation_road_pub = rospy.Publisher('/segmentation/output/road', Image, queue_size=5)
 
         rate = rospy.Rate(24)
 
@@ -83,9 +84,16 @@ class ObjectDetectionNode:
 
                 # end = time.time()
                 # rospy.loginfo("frame rate: " + str(1 / (end - start)))
+
                 if self.visualize:
                     viz_msg = self.bridge.cv2_to_imgmsg(visualization, "bgr8")  # convert image to ROS msg type
                     segmentation_image_pub.publish(viz_msg)                     # publish the visualization image
+
+                # publish road
+                road_msg = self.get_road_image(output)
+                segmentation_road_pub.publish(road_msg)
+
+                # publish all segmentation results
                 msg = self.convert_results_to_message(output)                   # convert output to ROS msg type
                 segmentation_results_pub.publish(msg)                           # publish using publisher
 
@@ -140,6 +148,17 @@ class ObjectDetectionNode:
 
         return msg
 
+    def get_road_image(self, output):
+
+        output[:, :, 7][output[:, :, 7] > 0.5] = 1
+        output[:, :, 7][output[:, :, 7] <= 0.5] = 0
+        output[:, :, 7] *= 255
+        road_img = cv2.resize(output[:, :, 7], (1280, 720))
+
+        np_mat = np.array(road_img, dtype=np.uint8)
+        road_msg = self.bridge.cv2_to_imgmsg(np_mat, 'mono8')  # road is index 7, side walk is index 8
+
+        return road_msg
 
 if __name__ == "__main__":
 

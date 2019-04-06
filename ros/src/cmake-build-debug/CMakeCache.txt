@@ -414,6 +414,9 @@ LSB_RELEASE_EXECUTABLE:FILEPATH=/usr/bin/lsb_release
 //Path to a program.
 NOSETESTS:FILEPATH=/usr/bin/nosetests-2.7
 
+//The directory containing a CMake configuration file for OpenCV.
+OpenCV_DIR:PATH=/usr/share/OpenCV
+
 //CXX compiler flags for OpenMP parallelization
 OpenMP_CXX_FLAGS:STRING=-fopenmp
 
@@ -698,6 +701,9 @@ object_detection_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/r
 
 //Value Computed by CMake
 object_detection_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/detection/object_detection
+
+//The directory containing a CMake configuration file for opencv2.
+opencv2_DIR:PATH=opencv2_DIR-NOTFOUND
 
 //Value Computed by CMake
 osm_cartography_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/osm
@@ -1165,6 +1171,8 @@ CUDA_parse_cubin:INTERNAL=/home/neil/snap/clion-2019.1/bin/cmake/linux/share/cma
 CUDA_run_nvcc:INTERNAL=/home/neil/snap/clion-2019.1/bin/cmake/linux/share/cmake-3.13/Modules/FindCUDA/run_nvcc.cmake
 //Details about finding CUDA
 FIND_PACKAGE_MESSAGE_DETAILS_CUDA:INTERNAL=[/usr/local/cuda-10.0][/usr/local/cuda-10.0/bin/nvcc][/usr/local/cuda-10.0/include][/usr/local/cuda-10.0/lib64/libcudart_static.a][v10.0()]
+//Details about finding OpenCV
+FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/usr][v3.2.0()]
 //Details about finding OpenMP
 FIND_PACKAGE_MESSAGE_DETAILS_OpenMP:INTERNAL=[TRUE][TRUE][c ][v()]
 //Details about finding OpenMP_C

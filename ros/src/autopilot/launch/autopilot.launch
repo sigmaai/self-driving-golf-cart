@@ -31,7 +31,3 @@ Email: contact@neilnie.com
   	<node name="autopilot_visualization_node" type="visualization.py" pkg="autopilot" output="screen"/>
     
 </launch>
-
-         <!-- <param name="simulation" value="0" type="bool"/> <<<< Parameter for using sim camera input Please Make Sure This is Correct! -->
-
-
