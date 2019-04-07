@@ -464,14 +464,6 @@
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_ros/CMakeFiles/install/local.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_ros/CMakeFiles/rebuild_cache.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_ros/CMakeFiles/install.dir
-/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/zed_rtabmap_example/CMakeFiles/install/strip.dir
-/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/zed_rtabmap_example/CMakeFiles/install/local.dir
-/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/zed_rtabmap_example/CMakeFiles/test.dir
-/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/zed_rtabmap_example/CMakeFiles/list_install_components.dir
-/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/zed_rtabmap_example/CMakeFiles/dummy_zed_rtabmap_example.dir
-/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/zed_rtabmap_example/CMakeFiles/rebuild_cache.dir
-/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/zed_rtabmap_example/CMakeFiles/edit_cache.dir
-/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/zed_rtabmap_example/CMakeFiles/install.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/install/strip.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/install/local.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/install.dir

@@ -27,7 +27,6 @@
       <config projectName="Project" targetName="dynamic_reconfigure_gencfg" />
       <config projectName="Project" targetName="_rosapi_generate_messages_check_deps_TopicType" />
       <config projectName="Project" targetName="object_detection_generate_messages_nodejs" />
-      <config projectName="Project" targetName="point_cloud_experiment" />
       <config projectName="Project" targetName="_rosbridge_library_generate_messages_check_deps_TestUInt8" />
       <config projectName="Project" targetName="topic_tools_generate_messages_eus" />
       <config projectName="Project" targetName="object_detection_genlisp" />
@@ -79,7 +78,6 @@
       <config projectName="Project" targetName="pcl_msgs_generate_messages_eus" />
       <config projectName="Project" targetName="rosapi_genpy" />
       <config projectName="Project" targetName="rosapi_generate_messages_nodejs" />
-      <config projectName="Project" targetName="dummy_zed_rtabmap_example" />
       <config projectName="Project" targetName="_rosbridge_library_generate_messages_check_deps_TestChar" />
       <config projectName="Project" targetName="_object_detection_generate_messages_check_deps_DetectionResult" />
       <config projectName="Project" targetName="costmap_2d_generate_messages_nodejs" />
@@ -196,6 +194,7 @@
       <config projectName="Project" targetName="map_msgs_generate_messages_eus" />
       <config projectName="Project" targetName="segmentation_generate_messages_eus" />
       <config projectName="Project" targetName="rosapi_generate_messages" />
+      <config projectName="Project" targetName="rgb_segmentation_point_cloud" />
       <config projectName="Project" targetName="tf2_msgs_generate_messages_eus" />
       <config projectName="Project" targetName="actionlib_msgs_generate_messages_eus" />
       <config projectName="Project" targetName="nodelet_generate_messages_cpp" />
@@ -328,79 +327,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aac20b50-5306-4aaa-8779-1228766691d9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/path_planning/scripts/experiment_node.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/path_planning/launch/rtab_map.launch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/path_planning/launch/rtab_map_navigation.launch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/path_planning/launch/rtab_map_outdoor.launch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/path_planning/launch/zed_rtab.launch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/path_planning/params/base_local_planner_params.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frames.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/autopilot/launch/autopilot.launch" beforeDir="false" afterPath="$PROJECT_DIR$/autopilot/launch/autopilot.launch" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CTestTestfile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CTestTestfile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Project.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Project.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/autopilot/autopilot.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/autopilot/autopilot.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/catkin_generated/order_packages.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/catkin_generated/order_packages.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/data_logger/data_logger.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/data_logger/data_logger.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/detection/lane_detection/lane_detection.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/detection/lane_detection/lane_detection.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/detection/object_detection/CMakeFiles/object_detection_generate_messages_cpp.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/detection/object_detection/CMakeFiles/object_detection_generate_messages_cpp.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/detection/object_detection/CMakeFiles/object_detection_generate_messages_py.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/detection/object_detection/CMakeFiles/object_detection_generate_messages_py.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/detection/object_detection/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/detection/object_detection/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/detection/object_detection/object_detection.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/detection/object_detection/object_detection.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/driver/driver.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/driver/driver.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/googlemock/CMakeFiles/gmock_main.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/gtest/googlemock/CMakeFiles/gmock_main.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/googlemock/gmock.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/gtest/googlemock/gmock.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/googlemock/gtest/gtest.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/gtest/googlemock/gtest/gtest.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/gtest/googletest-distribution.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/gtest/googletest-distribution.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/gui/gui.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/gui/gui.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/localization/localization.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/localization/localization.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/osm/osm_cartography.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/osm/osm_cartography.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/path_planning/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/path_planning/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/path_planning/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/path_planning/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/path_planning/path_planning.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/path_planning/path_planning.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/point_cloud/CMakeFiles/point_cloud_transform.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/point_cloud/CMakeFiles/point_cloud_transform.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/point_cloud/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/point_cloud/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/point_cloud/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/point_cloud/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/point_cloud/point_cloud.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/point_cloud/point_cloud.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/rosbridge/rosapi/CMakeFiles/rosapi_generate_messages_cpp.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rosbridge/rosapi/CMakeFiles/rosapi_generate_messages_cpp.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/rosbridge/rosapi/CMakeFiles/rosapi_generate_messages_eus.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rosbridge/rosapi/CMakeFiles/rosapi_generate_messages_eus.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/rosbridge/rosapi/CMakeFiles/rosapi_generate_messages_lisp.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rosbridge/rosapi/CMakeFiles/rosapi_generate_messages_lisp.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/rosbridge/rosapi/CMakeFiles/rosapi_generate_messages_nodejs.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rosbridge/rosapi/CMakeFiles/rosapi_generate_messages_nodejs.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/rosbridge/rosapi/CMakeFiles/rosapi_generate_messages_py.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rosbridge/rosapi/CMakeFiles/rosapi_generate_messages_py.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/rosbridge/rosapi/rosapi.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rosbridge/rosapi/rosapi.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/rosbridge/rosbridge_library/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rosbridge/rosbridge_library/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/rosbridge/rosbridge_library/CMakeFiles/rosbridge_library_generate_messages_cpp.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rosbridge/rosbridge_library/CMakeFiles/rosbridge_library_generate_messages_cpp.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/rosbridge/rosbridge_library/CMakeFiles/rosbridge_library_generate_messages_eus.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rosbridge/rosbridge_library/CMakeFiles/rosbridge_library_generate_messages_eus.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/rosbridge/rosbridge_library/CMakeFiles/rosbridge_library_generate_messages_lisp.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rosbridge/rosbridge_library/CMakeFiles/rosbridge_library_generate_messages_lisp.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/rosbridge/rosbridge_library/CMakeFiles/rosbridge_library_generate_messages_nodejs.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rosbridge/rosbridge_library/CMakeFiles/rosbridge_library_generate_messages_nodejs.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/rosbridge/rosbridge_library/CMakeFiles/rosbridge_library_generate_messages_py.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rosbridge/rosbridge_library/CMakeFiles/rosbridge_library_generate_messages_py.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/rosbridge/rosbridge_library/rosbridge_library.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rosbridge/rosbridge_library/rosbridge_library.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/rosbridge/rosbridge_server/rosbridge_server.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rosbridge/rosbridge_server/rosbridge_server.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/rosbridge/rosbridge_suite/rosbridge_suite.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/rosbridge/rosbridge_suite/rosbridge_suite.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/segmentation/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/segmentation/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/segmentation/CMakeFiles/segmentation_generate_messages_cpp.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/segmentation/CMakeFiles/segmentation_generate_messages_cpp.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/segmentation/CMakeFiles/segmentation_generate_messages_eus.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/segmentation/CMakeFiles/segmentation_generate_messages_eus.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/segmentation/CMakeFiles/segmentation_generate_messages_lisp.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/segmentation/CMakeFiles/segmentation_generate_messages_lisp.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/segmentation/segmentation.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/segmentation/segmentation.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/sensors/camera/camera.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sensors/camera/camera.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/sensors/gps/gps.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sensors/gps/gps.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sensors/joystick/CMakeFiles/joy_node.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sensors/joystick/CMakeFiles/joy_node.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sensors/joystick/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sensors/joystick/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/sensors/joystick/joy.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sensors/joystick/joy.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/sensors/zed-ros-wrapper/zed_display_rviz/zed_display_rviz.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sensors/zed-ros-wrapper/zed_display_rviz/zed_display_rviz.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/sensors/zed-ros-wrapper/zed_ros/zed_ros.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sensors/zed-ros-wrapper/zed_ros/zed_ros.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_gencfg.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_gencfg.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_eus.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_eus.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_nodejs.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_nodejs.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/zed_wrapper.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/zed_wrapper.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/simulation/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/simulation/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/simulation/CMakeFiles/simulation_generate_messages_cpp.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/simulation/CMakeFiles/simulation_generate_messages_cpp.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/simulation/CMakeFiles/simulation_generate_messages_eus.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/simulation/CMakeFiles/simulation_generate_messages_eus.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/simulation/CMakeFiles/simulation_generate_messages_nodejs.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/simulation/CMakeFiles/simulation_generate_messages_nodejs.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/simulation/CMakeFiles/simulation_generate_messages_py.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/simulation/CMakeFiles/simulation_generate_messages_py.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/simulation/simulation.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/simulation/simulation.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/path_planning/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/path_planning/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/segmentation/scripts/segmentation_node" beforeDir="false" afterPath="$PROJECT_DIR$/segmentation/scripts/segmentation_node" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/path_planning/launch/navigation.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/path_planning/params/costmap_common_params.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/path_planning/params/costmap_common_params.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/path_planning/params/costmap_global_params.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/path_planning/params/costmap_global_params.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/path_planning/params/costmap_local_params.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/path_planning/params/costmap_local_params.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/point_cloud/src/ground_plane_detection.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/point_cloud/src/ground_plane_detection.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sensors/zed-ros-wrapper/zed_display_rviz/rviz/zed.rviz" beforeDir="false" afterPath="$PROJECT_DIR$/sensors/zed-ros-wrapper/zed_display_rviz/rviz/zed.rviz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zed_rtabmap_example/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zed_rtabmap_example/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zed_rtabmap_example/images/rtab-map.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zed_rtabmap_example/launch/zed_rtabmap.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zed_rtabmap_example/package.xml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -416,59 +395,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sensors/zed-ros-wrapper/zed_wrapper/scripts/camera_select.py">
+        <entry file="file://$PROJECT_DIR$/path_planning/params/costmap_global_params.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+            <state relative-caret-position="105">
+              <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/path_planning/CMakeLists.txt">
+        <entry file="file://$PROJECT_DIR$/path_planning/params/costmap_common_params.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="212" column="76" selection-start-line="212" selection-start-column="76" selection-end-line="212" selection-end-column="76" />
+            <state relative-caret-position="330">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/segmentation/scripts/utils.py">
+        <entry file="file://$PROJECT_DIR$/path_planning/params/costmap_local_params.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="975">
-              <caret line="78" column="15" selection-start-line="78" selection-start-column="15" selection-end-line="78" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/point_cloud/src/ground_plane_detection.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="82" column="42" selection-start-line="82" selection-start-column="42" selection-end-line="82" selection-end-column="42" />
-              <folding>
-                <element signature="e#41#61#0" expanded="true" />
-                <element signature="e#149#193#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/segmentation/scripts/segmentation_node">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="157" column="51" selection-start-line="157" selection-start-column="51" selection-end-line="157" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/segmentation/scripts/segmentor.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1065">
-              <caret line="77" column="45" selection-start-line="77" selection-start-column="34" selection-end-line="77" selection-end-column="45" />
+            <state relative-caret-position="150">
+              <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -497,6 +445,8 @@
       <find>i</find>
       <find>seg</find>
       <find>PointXYZ</find>
+      <find>camera</find>
+      <find>depth_camera_info_topic</find>
     </findStrings>
     <dirStrings>
       <dir>/usr/src/googletest</dir>
@@ -533,17 +483,22 @@
         <option value="$PROJECT_DIR$/path_planning/launch/costmap.launch" />
         <option value="$PROJECT_DIR$/path_planning/package.xml" />
         <option value="$PROJECT_DIR$/path_planning/params/cost_map.yaml" />
-        <option value="$PROJECT_DIR$/path_planning/params/costmap_local_params.yaml" />
-        <option value="$PROJECT_DIR$/path_planning/params/costmap_common_params.yaml" />
-        <option value="$PROJECT_DIR$/point_cloud/src/ground_plane_detection.cpp" />
         <option value="$PROJECT_DIR$/path_planning/params/costmap_params.yaml" />
         <option value="$PROJECT_DIR$/path_planning/launch/navigation.launch" />
-        <option value="$PROJECT_DIR$/path_planning/params/costmap_global_params.yaml" />
         <option value="$PROJECT_DIR$/sensors/zed-ros-wrapper/zed_wrapper/launch/zed_camera.launch" />
         <option value="$PROJECT_DIR$/path_planning/scripts/experiment_node.py" />
         <option value="$PROJECT_DIR$/segmentation/scripts/segmentation_node" />
         <option value="$PROJECT_DIR$/path_planning/src/point_cloud_experiment.cpp" />
         <option value="$PROJECT_DIR$/path_planning/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/path_planning/launch/rtab_map_outdoor.launch" />
+        <option value="$PROJECT_DIR$/path_planning/params/base_local_planner_params.yaml" />
+        <option value="$PROJECT_DIR$/path_planning/launch/rtab_map.launch" />
+        <option value="$PROJECT_DIR$/path_planning/launch/zed_rtab.launch" />
+        <option value="$PROJECT_DIR$/path_planning/launch/rtab_map_navigation.launch" />
+        <option value="$PROJECT_DIR$/point_cloud/src/ground_plane_detection.cpp" />
+        <option value="$PROJECT_DIR$/path_planning/params/costmap_global_params.yaml" />
+        <option value="$PROJECT_DIR$/path_planning/params/costmap_local_params.yaml" />
+        <option value="$PROJECT_DIR$/path_planning/params/costmap_common_params.yaml" />
       </list>
     </option>
   </component>
@@ -555,7 +510,7 @@
   <component name="OCResolveContextSettings">
     <option name="configuration" value="0-planar_segmentation" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="78" />
     <option name="y" value="28" />
     <option name="width" value="1440" />
@@ -569,22 +524,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="src" type="b2602c69:ProjectViewProjectNode" />
-              <item name="src" type="47feb1d3:ProjectViewModuleNode" />
-            </path>
-            <path>
-              <item name="src" type="b2602c69:ProjectViewProjectNode" />
-              <item name="src" type="47feb1d3:ProjectViewModuleNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -601,7 +540,7 @@
               <item name="src" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="~/Workspace/self-driving-golf-cart/ros/src" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="path_planning" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="params" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="src" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -611,13 +550,8 @@
             <path>
               <item name="src" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="~/Workspace/self-driving-golf-cart/ros/src" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="sensors" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="src" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/Workspace/self-driving-golf-cart/ros/src" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="sensors" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="zed-ros-wrapper" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="point_cloud" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -632,6 +566,22 @@
               <item name="src" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="~/Workspace/self-driving-golf-cart/ros/src" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="path_planning" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="47feb1d3:ProjectViewModuleNode" />
+            </path>
+            <path>
+              <item name="src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -1244,11 +1194,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="dummy_zed_rtabmap_example" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="dummy_zed_rtabmap_example" CONFIG_NAME="Debug">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="dynamic_reconfigure_gencfg" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="dynamic_reconfigure_gencfg" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -1534,11 +1479,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="point_cloud_experiment" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="point_cloud_experiment" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="point_cloud_experiment">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="point_cloud_transform" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="point_cloud_transform" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="point_cloud_transform">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -1565,6 +1505,11 @@
       </method>
     </configuration>
     <configuration name="radar_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="radar_msgs_generate_messages_py" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="rgb_segmentation_point_cloud" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="rgb_segmentation_point_cloud" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="rgb_segmentation_point_cloud">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -2371,7 +2316,6 @@
       <item itemvalue="CMake Application.download_extra_data" />
       <item itemvalue="CMake Application.doxygen" />
       <item itemvalue="CMake Application.dummy_zed_display_rviz" />
-      <item itemvalue="CMake Application.dummy_zed_rtabmap_example" />
       <item itemvalue="CMake Application.dynamic_reconfigure_gencfg" />
       <item itemvalue="CMake Application.dynamic_reconfigure_generate_messages_cpp" />
       <item itemvalue="CMake Application.dynamic_reconfigure_generate_messages_eus" />
@@ -2404,7 +2348,6 @@
       <item itemvalue="CMake Application.nav_msgs_generate_messages_lisp" />
       <item itemvalue="CMake Application.nav_msgs_generate_messages_nodejs" />
       <item itemvalue="CMake Application.nav_msgs_generate_messages_py" />
-      <item itemvalue="CMake Application.point_cloud_experiment" />
       <item itemvalue="CMake Application.nodelet_generate_messages_cpp" />
       <item itemvalue="CMake Application.nodelet_generate_messages_eus" />
       <item itemvalue="CMake Application.nodelet_generate_messages_lisp" />
@@ -2429,6 +2372,7 @@
       <item itemvalue="CMake Application.pcl_msgs_generate_messages_nodejs" />
       <item itemvalue="CMake Application.pcl_msgs_generate_messages_py" />
       <item itemvalue="CMake Application.pcl_ros_gencfg" />
+      <item itemvalue="CMake Application.rgb_segmentation_point_cloud" />
       <item itemvalue="CMake Application.planar_segmentation" />
       <item itemvalue="CMake Application.point_cloud_transform" />
       <item itemvalue="CMake Application.radar_msgs_generate_messages_cpp" />
@@ -2615,12 +2559,13 @@
       <workItem from="1554485943968" duration="1645000" />
       <workItem from="1554577972627" duration="327000" />
       <workItem from="1554579496676" duration="4706000" />
-      <workItem from="1554585335663" duration="1543000" />
+      <workItem from="1554585335663" duration="9221000" />
+      <workItem from="1554666533473" duration="3160000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86788000" />
+    <option name="totallyTimeSpent" value="97626000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2635,7 +2580,7 @@
     <frame x="65" y="28" width="1535" height="872" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2820685" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28609806" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -2667,32 +2612,6 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.yaml" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/localization/src/particle_filter.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1800">
-          <caret line="120" selection-start-line="120" selection-end-line="120" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/localization/src/particle_filter_node.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2310">
-          <caret line="154" column="32" selection-start-line="154" selection-start-column="32" selection-end-line="154" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/localization/src/main.cpp" />
-    <entry file="file://$PROJECT_DIR$/localization/scripts/gps_localization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="35" column="67" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="67" />
-          <folding>
-            <element signature="e#132#144#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/detection/object_detection/scripts/detect_objects" />
     <entry file="file://$PROJECT_DIR$/detection/object_detection/scripts/yad2k/utils/draw_boxes.py" />
     <entry file="file://$PROJECT_DIR$/detection/object_detection/scripts/yad2k/utils/utils.py" />
     <entry file="file://$PROJECT_DIR$/detection/object_detection/scripts/object_detection_node">
@@ -2826,41 +2745,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/path_planning/params/costmap_common_params.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/path_planning/params/costmap_local_params.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" selection-start-column="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/path_planning/params/costmap_global_params.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/path_planning/launch/navigation.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="62" selection-start-line="32" selection-start-column="62" selection-end-line="32" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sensors/zed-ros-wrapper/zed_wrapper/launch/zed_camera.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="92" column="69" selection-start-line="92" selection-start-column="69" selection-end-line="92" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/path_planning/scripts/experiment_node.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -2916,21 +2800,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/segmentation/scripts/segmentor.py">
+    <entry file="file://$PROJECT_DIR$/path_planning/src/point_cloud_experiment.cpp" />
+    <entry file="file://$PROJECT_DIR$/sensors/zed-ros-wrapper/zed_wrapper/scripts/camera_select.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1065">
-          <caret line="77" column="45" selection-start-line="77" selection-start-column="34" selection-end-line="77" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/point_cloud/src/ground_plane_detection.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="82" column="42" selection-start-line="82" selection-start-column="42" selection-end-line="82" selection-end-column="42" />
-          <folding>
-            <element signature="e#41#61#0" expanded="true" />
-            <element signature="e#149#193#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="15">
+          <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -2941,27 +2815,92 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/path_planning/src/point_cloud_experiment.cpp">
+    <entry file="file://$PROJECT_DIR$/segmentation/scripts/segmentor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-91">
-          <caret line="57" column="68" selection-start-line="57" selection-start-column="68" selection-end-line="57" selection-end-column="68" />
-          <folding>
-            <element signature="e#38#58#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="840">
+          <caret line="68" column="9" lean-forward="true" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sensors/zed-ros-wrapper/zed_wrapper/scripts/camera_select.py">
+    <entry file="file://$PROJECT_DIR$/path_planning/launch/rtab_map_outdoor.launch">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
+        <state relative-caret-position="-840">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/path_planning/launch/navigation.launch" />
+    <entry file="file://$PROJECT_DIR$/sensors/zed-ros-wrapper/zed_wrapper/launch/zed_camera.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="59" column="70" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/path_planning/params/base_local_planner_params.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
           <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/path_planning/launch/zed_rtab.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/path_planning/launch/rtab_map_navigation.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="80" selection-start-line="11" selection-start-column="80" selection-end-line="11" selection-end-column="80" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/path_planning/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="212" column="76" selection-start-line="212" selection-start-column="76" selection-end-line="212" selection-end-column="76" />
+        <state relative-caret-position="279">
+          <caret line="206" column="9" selection-start-line="206" selection-start-column="9" selection-end-line="206" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/path_planning/launch/rtab_map.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/point_cloud/src/ground_plane_detection.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2048">
+          <caret line="202" column="68" selection-start-line="202" selection-start-column="68" selection-end-line="202" selection-end-column="68" />
+          <folding>
+            <element signature="e#41#61#0" expanded="true" />
+            <element signature="e#149#193#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/path_planning/params/costmap_local_params.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/path_planning/params/costmap_global_params.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/path_planning/params/costmap_common_params.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>

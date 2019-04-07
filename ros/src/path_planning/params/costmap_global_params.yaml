@@ -2,11 +2,8 @@
 #
 
 global_costmap:
-  global_frame: odom
+  global_frame: map
   robot_base_frame: zed_camera_center
-  update_frequency: 5.0
-  static_map: false
-  rolling_window: true
-  width: 30.0
-  height: 30.0
-  resolution: 0.05
+  update_frequency: 5
+  publish_frequency: 5
+  static_map: true

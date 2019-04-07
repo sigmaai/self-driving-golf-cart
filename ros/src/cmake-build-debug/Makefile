@@ -3951,19 +3951,6 @@ dummy_zed_display_rviz/fast:
 .PHONY : dummy_zed_display_rviz/fast
 
 #=============================================================================
-# Target rules for targets named dummy_zed_rtabmap_example
-
-# Build rule for target.
-dummy_zed_rtabmap_example: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 dummy_zed_rtabmap_example
-.PHONY : dummy_zed_rtabmap_example
-
-# fast build rule for target.
-dummy_zed_rtabmap_example/fast:
-	$(MAKE) -f zed_rtabmap_example/CMakeFiles/dummy_zed_rtabmap_example.dir/build.make zed_rtabmap_example/CMakeFiles/dummy_zed_rtabmap_example.dir/build
-.PHONY : dummy_zed_rtabmap_example/fast
-
-#=============================================================================
 # Target rules for targets named ZEDWrapper
 
 # Build rule for target.
@@ -4592,7 +4579,6 @@ help:
 	@echo "... _run_tests_osm_cartography_roslaunch-check"
 	@echo "... run_tests_osm_cartography_roslaunch-check_launch"
 	@echo "... dummy_zed_display_rviz"
-	@echo "... dummy_zed_rtabmap_example"
 	@echo "... ZEDWrapper"
 	@echo "... zed_wrapper_genpy"
 	@echo "... zed_wrapper_generate_messages_py"

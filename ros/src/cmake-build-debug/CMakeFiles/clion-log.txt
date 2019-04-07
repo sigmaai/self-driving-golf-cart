@@ -17,7 +17,7 @@
 -- BUILD_SHARED_LIBS is on
 -- BUILD_SHARED_LIBS is on
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--- ~~  traversing 23 packages in topological order:
+-- ~~  traversing 22 packages in topological order:
 -- ~~  - rosapi
 -- ~~  - rosbridge_server
 -- ~~  - rosbridge_suite (metapackage)
@@ -39,7 +39,6 @@
 -- ~~  - osm_cartography
 -- ~~  - zed_display_rviz
 -- ~~  - zed_ros (metapackage)
--- ~~  - zed_rtabmap_example
 -- ~~  - zed_wrapper
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -- +++ processing catkin package: 'rosapi'
@@ -102,8 +101,6 @@
 -- ==> add_subdirectory(sensors/zed-ros-wrapper/zed_display_rviz)
 -- +++ processing catkin metapackage: 'zed_ros'
 -- ==> add_subdirectory(sensors/zed-ros-wrapper/zed_ros)
--- +++ processing catkin package: 'zed_rtabmap_example'
--- ==> add_subdirectory(zed_rtabmap_example)
 -- +++ processing catkin package: 'zed_wrapper'
 -- ==> add_subdirectory(sensors/zed-ros-wrapper/zed_wrapper)
 -- Found CUDA: /usr/local/cuda-10.0 (found suitable exact version "10.0") 

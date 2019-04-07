@@ -176,18 +176,6 @@ void cloud_callback_new (const sensor_msgs::PointCloud2ConstPtr& input){
         }
     }
 
-    // note the NAN points in the image as well
-//    for (size_t i = 0; i < cloud->points.size (); i++){
-//
-//        if (!pcl::isFinite (cloud->points[i])){
-//
-//            ground_image->points[i].b = static_cast<pcl::uint8_t>((cloud->points[i].b + 255) / 2);
-//            label_image->points[i].r = 0;
-//            label_image->points[i].g = 0;
-//            label_image->points[i].b = 255;
-//        }
-//    }
-
     // publish filtered cloud data
     sensor_msgs::PointCloud2 cloud_publish;
     pcl::toROSMsg(*label_image, cloud_publish);

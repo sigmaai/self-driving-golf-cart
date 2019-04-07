@@ -152,7 +152,6 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/osm/cmake_install.cmake")
   include("/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_display_rviz/cmake_install.cmake")
   include("/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_ros/cmake_install.cmake")
-  include("/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/zed_rtabmap_example/cmake_install.cmake")
   include("/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/cmake_install.cmake")
 
 endif()

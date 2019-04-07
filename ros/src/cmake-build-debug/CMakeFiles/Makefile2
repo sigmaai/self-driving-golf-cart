@@ -10459,56 +10459,6 @@ sensors/zed-ros-wrapper/zed_ros/preinstall:
 .PHONY : sensors/zed-ros-wrapper/zed_ros/preinstall
 
 #=============================================================================
-# Directory level rules for directory zed_rtabmap_example
-
-# Convenience name for "all" pass in the directory.
-zed_rtabmap_example/all:
-
-.PHONY : zed_rtabmap_example/all
-
-# Convenience name for "clean" pass in the directory.
-zed_rtabmap_example/clean: zed_rtabmap_example/CMakeFiles/dummy_zed_rtabmap_example.dir/clean
-
-.PHONY : zed_rtabmap_example/clean
-
-# Convenience name for "preinstall" pass in the directory.
-zed_rtabmap_example/preinstall:
-
-.PHONY : zed_rtabmap_example/preinstall
-
-#=============================================================================
-# Target rules for target zed_rtabmap_example/CMakeFiles/dummy_zed_rtabmap_example.dir
-
-# All Build rule for target.
-zed_rtabmap_example/CMakeFiles/dummy_zed_rtabmap_example.dir/all:
-	$(MAKE) -f zed_rtabmap_example/CMakeFiles/dummy_zed_rtabmap_example.dir/build.make zed_rtabmap_example/CMakeFiles/dummy_zed_rtabmap_example.dir/depend
-	$(MAKE) -f zed_rtabmap_example/CMakeFiles/dummy_zed_rtabmap_example.dir/build.make zed_rtabmap_example/CMakeFiles/dummy_zed_rtabmap_example.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num= "Built target dummy_zed_rtabmap_example"
-.PHONY : zed_rtabmap_example/CMakeFiles/dummy_zed_rtabmap_example.dir/all
-
-# Build rule for subdir invocation for target.
-zed_rtabmap_example/CMakeFiles/dummy_zed_rtabmap_example.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 zed_rtabmap_example/CMakeFiles/dummy_zed_rtabmap_example.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 0
-.PHONY : zed_rtabmap_example/CMakeFiles/dummy_zed_rtabmap_example.dir/rule
-
-# Convenience name for target.
-dummy_zed_rtabmap_example: zed_rtabmap_example/CMakeFiles/dummy_zed_rtabmap_example.dir/rule
-
-.PHONY : dummy_zed_rtabmap_example
-
-# clean rule for target.
-zed_rtabmap_example/CMakeFiles/dummy_zed_rtabmap_example.dir/clean:
-	$(MAKE) -f zed_rtabmap_example/CMakeFiles/dummy_zed_rtabmap_example.dir/build.make zed_rtabmap_example/CMakeFiles/dummy_zed_rtabmap_example.dir/clean
-.PHONY : zed_rtabmap_example/CMakeFiles/dummy_zed_rtabmap_example.dir/clean
-
-# clean rule for target.
-clean: zed_rtabmap_example/CMakeFiles/dummy_zed_rtabmap_example.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
 # Directory level rules for directory sensors/zed-ros-wrapper/zed_wrapper
 
 # Convenience name for "all" pass in the directory.

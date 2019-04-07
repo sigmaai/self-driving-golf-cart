@@ -84,7 +84,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "simulation/catkin_generated/simulation-msg-extras.cmake.develspace.in"
   "simulation/catkin_generated/simulation-msg-extras.cmake.installspace.in"
   "simulation/cmake/simulation-genmsg.cmake"
-  "zed_rtabmap_example/catkin_generated/package.cmake"
   "../data_logger/CMakeLists.txt"
   "../data_logger/package.xml"
   "../detection/lane_detection/CMakeLists.txt"
@@ -133,8 +132,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../simulation/CMakeLists.txt"
   "../simulation/package.xml"
   "../simulation/setup.py"
-  "../zed_rtabmap_example/CMakeLists.txt"
-  "../zed_rtabmap_example/package.xml"
   "/home/neil/snap/clion-2019.1/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCInformation.cmake"
   "/home/neil/snap/clion-2019.1/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCXXInformation.cmake"
   "/home/neil/snap/clion-2019.1/bin/cmake/linux/share/cmake-3.13/Modules/CMakeCommonLanguageInclude.cmake"
@@ -512,7 +509,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "osm/CMakeFiles/CMakeDirectoryInformation.cmake"
   "sensors/zed-ros-wrapper/zed_display_rviz/CMakeFiles/CMakeDirectoryInformation.cmake"
   "sensors/zed-ros-wrapper/zed_ros/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "zed_rtabmap_example/CMakeFiles/CMakeDirectoryInformation.cmake"
   "sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
@@ -809,7 +805,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "osm/CMakeFiles/_run_tests_osm_cartography_roslaunch-check.dir/DependInfo.cmake"
   "osm/CMakeFiles/run_tests_osm_cartography_roslaunch-check_launch.dir/DependInfo.cmake"
   "sensors/zed-ros-wrapper/zed_display_rviz/CMakeFiles/dummy_zed_display_rviz.dir/DependInfo.cmake"
-  "zed_rtabmap_example/CMakeFiles/dummy_zed_rtabmap_example.dir/DependInfo.cmake"
   "sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/ZEDWrapper.dir/DependInfo.cmake"
   "sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_genpy.dir/DependInfo.cmake"
   "sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_py.dir/DependInfo.cmake"
