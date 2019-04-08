@@ -58,6 +58,7 @@
     <exec_depend>pcl_conversions</exec_depend>
     <exec_depend>pcl_ros</exec_depend>
     <exec_depend>sensor_msgs</exec_depend>
+    <exec_depend>grid_map_msgs</exec_depend>
 
     <build_depend>libpcl-all-dev</build_depend>
     <exec_depend>libpcl-all</exec_depend>

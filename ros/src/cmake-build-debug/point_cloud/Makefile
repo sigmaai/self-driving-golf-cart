@@ -198,6 +198,21 @@ ground_plane_detection/fast:
 .PHONY : ground_plane_detection/fast
 
 # Convenience name for target.
+point_cloud/CMakeFiles/rgb_segmentation_point_cloud.dir/rule:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 point_cloud/CMakeFiles/rgb_segmentation_point_cloud.dir/rule
+.PHONY : point_cloud/CMakeFiles/rgb_segmentation_point_cloud.dir/rule
+
+# Convenience name for target.
+rgb_segmentation_point_cloud: point_cloud/CMakeFiles/rgb_segmentation_point_cloud.dir/rule
+
+.PHONY : rgb_segmentation_point_cloud
+
+# fast build rule for target.
+rgb_segmentation_point_cloud/fast:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/rgb_segmentation_point_cloud.dir/build.make point_cloud/CMakeFiles/rgb_segmentation_point_cloud.dir/build
+.PHONY : rgb_segmentation_point_cloud/fast
+
+# Convenience name for target.
 point_cloud/CMakeFiles/point_cloud_transform.dir/rule:
 	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 point_cloud/CMakeFiles/point_cloud_transform.dir/rule
 .PHONY : point_cloud/CMakeFiles/point_cloud_transform.dir/rule
@@ -293,6 +308,33 @@ src/point_cloud_transform.cpp.s:
 	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/point_cloud_transform.dir/build.make point_cloud/CMakeFiles/point_cloud_transform.dir/src/point_cloud_transform.cpp.s
 .PHONY : src/point_cloud_transform.cpp.s
 
+src/rgb_segmentation_point_cloud.o: src/rgb_segmentation_point_cloud.cpp.o
+
+.PHONY : src/rgb_segmentation_point_cloud.o
+
+# target to build an object file
+src/rgb_segmentation_point_cloud.cpp.o:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/rgb_segmentation_point_cloud.dir/build.make point_cloud/CMakeFiles/rgb_segmentation_point_cloud.dir/src/rgb_segmentation_point_cloud.cpp.o
+.PHONY : src/rgb_segmentation_point_cloud.cpp.o
+
+src/rgb_segmentation_point_cloud.i: src/rgb_segmentation_point_cloud.cpp.i
+
+.PHONY : src/rgb_segmentation_point_cloud.i
+
+# target to preprocess a source file
+src/rgb_segmentation_point_cloud.cpp.i:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/rgb_segmentation_point_cloud.dir/build.make point_cloud/CMakeFiles/rgb_segmentation_point_cloud.dir/src/rgb_segmentation_point_cloud.cpp.i
+.PHONY : src/rgb_segmentation_point_cloud.cpp.i
+
+src/rgb_segmentation_point_cloud.s: src/rgb_segmentation_point_cloud.cpp.s
+
+.PHONY : src/rgb_segmentation_point_cloud.s
+
+# target to generate assembly for a file
+src/rgb_segmentation_point_cloud.cpp.s:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/rgb_segmentation_point_cloud.dir/build.make point_cloud/CMakeFiles/rgb_segmentation_point_cloud.dir/src/rgb_segmentation_point_cloud.cpp.s
+.PHONY : src/rgb_segmentation_point_cloud.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -306,6 +348,7 @@ help:
 	@echo "... planar_segmentation"
 	@echo "... ground_plane_detection"
 	@echo "... install/local"
+	@echo "... rgb_segmentation_point_cloud"
 	@echo "... test"
 	@echo "... point_cloud_transform"
 	@echo "... edit_cache"
@@ -318,6 +361,9 @@ help:
 	@echo "... src/point_cloud_transform.o"
 	@echo "... src/point_cloud_transform.i"
 	@echo "... src/point_cloud_transform.s"
+	@echo "... src/rgb_segmentation_point_cloud.o"
+	@echo "... src/rgb_segmentation_point_cloud.i"
+	@echo "... src/rgb_segmentation_point_cloud.s"
 .PHONY : help
 
 

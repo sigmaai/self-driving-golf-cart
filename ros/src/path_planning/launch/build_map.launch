@@ -1,0 +1,7 @@
+<launch>
+
+    <node pkg="path_planning" name="build_map" type="build_map" output="screen" />
+
+    <node pkg="grid_map_visualization" name="grid_map_visualization" type="grid_map_visualization" output="screen" />
+
+</launch>

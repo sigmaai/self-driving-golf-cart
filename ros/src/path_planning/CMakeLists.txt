@@ -20,9 +20,10 @@ find_package(catkin REQUIRED COMPONENTS
   pcl_conversions
   pcl_ros
   cv_bridge
+  grid_map_ros
+  grid_map_msgs
 )
 
-find_package( OpenCV REQUIRED )
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -210,8 +211,8 @@ include_directories(
 # catkin_add_nosetests(test)
 add_library(cost_map_layer src/cost_map_layer.cpp)
 
-add_executable(rgb_segmentation_point_cloud src/rgb_segmentation_point_cloud.cpp)
-target_link_libraries(rgb_segmentation_point_cloud ${catkin_LIBRARIES})
+add_executable(build_map ../path_planning/src/build_map.cpp)
+target_link_libraries(build_map ${catkin_LIBRARIES})
 
 install(DIRECTORY
         launch

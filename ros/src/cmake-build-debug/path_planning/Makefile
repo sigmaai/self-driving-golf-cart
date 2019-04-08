@@ -168,19 +168,79 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-path_planning/CMakeFiles/rgb_segmentation_point_cloud.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 path_planning/CMakeFiles/rgb_segmentation_point_cloud.dir/rule
-.PHONY : path_planning/CMakeFiles/rgb_segmentation_point_cloud.dir/rule
+path_planning/CMakeFiles/build_map.dir/rule:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 path_planning/CMakeFiles/build_map.dir/rule
+.PHONY : path_planning/CMakeFiles/build_map.dir/rule
 
 # Convenience name for target.
-rgb_segmentation_point_cloud: path_planning/CMakeFiles/rgb_segmentation_point_cloud.dir/rule
+build_map: path_planning/CMakeFiles/build_map.dir/rule
 
-.PHONY : rgb_segmentation_point_cloud
+.PHONY : build_map
 
 # fast build rule for target.
-rgb_segmentation_point_cloud/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/rgb_segmentation_point_cloud.dir/build.make path_planning/CMakeFiles/rgb_segmentation_point_cloud.dir/build
-.PHONY : rgb_segmentation_point_cloud/fast
+build_map/fast:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/build_map.dir/build.make path_planning/CMakeFiles/build_map.dir/build
+.PHONY : build_map/fast
+
+# Convenience name for target.
+path_planning/CMakeFiles/grid_map_msgs_generate_messages_py.dir/rule:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 path_planning/CMakeFiles/grid_map_msgs_generate_messages_py.dir/rule
+.PHONY : path_planning/CMakeFiles/grid_map_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+grid_map_msgs_generate_messages_py: path_planning/CMakeFiles/grid_map_msgs_generate_messages_py.dir/rule
+
+.PHONY : grid_map_msgs_generate_messages_py
+
+# fast build rule for target.
+grid_map_msgs_generate_messages_py/fast:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/grid_map_msgs_generate_messages_py.dir/build.make path_planning/CMakeFiles/grid_map_msgs_generate_messages_py.dir/build
+.PHONY : grid_map_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+path_planning/CMakeFiles/grid_map_msgs_generate_messages_lisp.dir/rule:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 path_planning/CMakeFiles/grid_map_msgs_generate_messages_lisp.dir/rule
+.PHONY : path_planning/CMakeFiles/grid_map_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+grid_map_msgs_generate_messages_lisp: path_planning/CMakeFiles/grid_map_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : grid_map_msgs_generate_messages_lisp
+
+# fast build rule for target.
+grid_map_msgs_generate_messages_lisp/fast:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/grid_map_msgs_generate_messages_lisp.dir/build.make path_planning/CMakeFiles/grid_map_msgs_generate_messages_lisp.dir/build
+.PHONY : grid_map_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+path_planning/CMakeFiles/grid_map_msgs_generate_messages_eus.dir/rule:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 path_planning/CMakeFiles/grid_map_msgs_generate_messages_eus.dir/rule
+.PHONY : path_planning/CMakeFiles/grid_map_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+grid_map_msgs_generate_messages_eus: path_planning/CMakeFiles/grid_map_msgs_generate_messages_eus.dir/rule
+
+.PHONY : grid_map_msgs_generate_messages_eus
+
+# fast build rule for target.
+grid_map_msgs_generate_messages_eus/fast:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/grid_map_msgs_generate_messages_eus.dir/build.make path_planning/CMakeFiles/grid_map_msgs_generate_messages_eus.dir/build
+.PHONY : grid_map_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+path_planning/CMakeFiles/grid_map_msgs_generate_messages_cpp.dir/rule:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 path_planning/CMakeFiles/grid_map_msgs_generate_messages_cpp.dir/rule
+.PHONY : path_planning/CMakeFiles/grid_map_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+grid_map_msgs_generate_messages_cpp: path_planning/CMakeFiles/grid_map_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : grid_map_msgs_generate_messages_cpp
+
+# fast build rule for target.
+grid_map_msgs_generate_messages_cpp/fast:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/grid_map_msgs_generate_messages_cpp.dir/build.make path_planning/CMakeFiles/grid_map_msgs_generate_messages_cpp.dir/build
+.PHONY : grid_map_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 path_planning/CMakeFiles/topic_tools_generate_messages_py.dir/rule:
@@ -226,6 +286,21 @@ std_srvs_generate_messages_eus: path_planning/CMakeFiles/std_srvs_generate_messa
 std_srvs_generate_messages_eus/fast:
 	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make path_planning/CMakeFiles/std_srvs_generate_messages_eus.dir/build
 .PHONY : std_srvs_generate_messages_eus/fast
+
+# Convenience name for target.
+path_planning/CMakeFiles/grid_map_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 path_planning/CMakeFiles/grid_map_msgs_generate_messages_nodejs.dir/rule
+.PHONY : path_planning/CMakeFiles/grid_map_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+grid_map_msgs_generate_messages_nodejs: path_planning/CMakeFiles/grid_map_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : grid_map_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+grid_map_msgs_generate_messages_nodejs/fast:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/grid_map_msgs_generate_messages_nodejs.dir/build.make path_planning/CMakeFiles/grid_map_msgs_generate_messages_nodejs.dir/build
+.PHONY : grid_map_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 path_planning/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule:
@@ -917,6 +992,33 @@ bond_generate_messages_lisp/fast:
 	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/bond_generate_messages_lisp.dir/build.make path_planning/CMakeFiles/bond_generate_messages_lisp.dir/build
 .PHONY : bond_generate_messages_lisp/fast
 
+src/build_map.o: src/build_map.cpp.o
+
+.PHONY : src/build_map.o
+
+# target to build an object file
+src/build_map.cpp.o:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/build_map.dir/build.make path_planning/CMakeFiles/build_map.dir/src/build_map.cpp.o
+.PHONY : src/build_map.cpp.o
+
+src/build_map.i: src/build_map.cpp.i
+
+.PHONY : src/build_map.i
+
+# target to preprocess a source file
+src/build_map.cpp.i:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/build_map.dir/build.make path_planning/CMakeFiles/build_map.dir/src/build_map.cpp.i
+.PHONY : src/build_map.cpp.i
+
+src/build_map.s: src/build_map.cpp.s
+
+.PHONY : src/build_map.s
+
+# target to generate assembly for a file
+src/build_map.cpp.s:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/build_map.dir/build.make path_planning/CMakeFiles/build_map.dir/src/build_map.cpp.s
+.PHONY : src/build_map.cpp.s
+
 src/cost_map_layer.o: src/cost_map_layer.cpp.o
 
 .PHONY : src/cost_map_layer.o
@@ -944,33 +1046,6 @@ src/cost_map_layer.cpp.s:
 	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/cost_map_layer.dir/build.make path_planning/CMakeFiles/cost_map_layer.dir/src/cost_map_layer.cpp.s
 .PHONY : src/cost_map_layer.cpp.s
 
-src/rgb_segmentation_point_cloud.o: src/rgb_segmentation_point_cloud.cpp.o
-
-.PHONY : src/rgb_segmentation_point_cloud.o
-
-# target to build an object file
-src/rgb_segmentation_point_cloud.cpp.o:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/rgb_segmentation_point_cloud.dir/build.make path_planning/CMakeFiles/rgb_segmentation_point_cloud.dir/src/rgb_segmentation_point_cloud.cpp.o
-.PHONY : src/rgb_segmentation_point_cloud.cpp.o
-
-src/rgb_segmentation_point_cloud.i: src/rgb_segmentation_point_cloud.cpp.i
-
-.PHONY : src/rgb_segmentation_point_cloud.i
-
-# target to preprocess a source file
-src/rgb_segmentation_point_cloud.cpp.i:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/rgb_segmentation_point_cloud.dir/build.make path_planning/CMakeFiles/rgb_segmentation_point_cloud.dir/src/rgb_segmentation_point_cloud.cpp.i
-.PHONY : src/rgb_segmentation_point_cloud.cpp.i
-
-src/rgb_segmentation_point_cloud.s: src/rgb_segmentation_point_cloud.cpp.s
-
-.PHONY : src/rgb_segmentation_point_cloud.s
-
-# target to generate assembly for a file
-src/rgb_segmentation_point_cloud.cpp.s:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/rgb_segmentation_point_cloud.dir/build.make path_planning/CMakeFiles/rgb_segmentation_point_cloud.dir/src/rgb_segmentation_point_cloud.cpp.s
-.PHONY : src/rgb_segmentation_point_cloud.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -981,11 +1056,16 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... rgb_segmentation_point_cloud"
+	@echo "... build_map"
+	@echo "... grid_map_msgs_generate_messages_py"
+	@echo "... grid_map_msgs_generate_messages_lisp"
+	@echo "... grid_map_msgs_generate_messages_eus"
+	@echo "... grid_map_msgs_generate_messages_cpp"
 	@echo "... topic_tools_generate_messages_py"
 	@echo "... topic_tools_generate_messages_cpp"
 	@echo "... install/local"
 	@echo "... std_srvs_generate_messages_eus"
+	@echo "... grid_map_msgs_generate_messages_nodejs"
 	@echo "... std_srvs_generate_messages_cpp"
 	@echo "... topic_tools_generate_messages_lisp"
 	@echo "... std_srvs_generate_messages_lisp"
@@ -1034,12 +1114,12 @@ help:
 	@echo "... bond_generate_messages_eus"
 	@echo "... costmap_2d_generate_messages_py"
 	@echo "... bond_generate_messages_lisp"
+	@echo "... src/build_map.o"
+	@echo "... src/build_map.i"
+	@echo "... src/build_map.s"
 	@echo "... src/cost_map_layer.o"
 	@echo "... src/cost_map_layer.i"
 	@echo "... src/cost_map_layer.s"
-	@echo "... src/rgb_segmentation_point_cloud.o"
-	@echo "... src/rgb_segmentation_point_cloud.i"
-	@echo "... src/rgb_segmentation_point_cloud.s"
 .PHONY : help
 
 

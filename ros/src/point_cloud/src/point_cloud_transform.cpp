@@ -25,8 +25,8 @@ tf::StampedTransform transform;
 void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input)
 {
     // Create a container for the data.
-    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_transformed(new pcl::PointCloud<pcl::PointXYZ>);
-    pcl::PointCloud<pcl::PointXYZ>::Ptr temp_cloud(new pcl::PointCloud<pcl::PointXYZ>);
+    pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud_transformed(new pcl::PointCloud<pcl::PointXYZRGB>);
+    pcl::PointCloud<pcl::PointXYZRGB>::Ptr temp_cloud(new pcl::PointCloud<pcl::PointXYZRGB>);
 
     pcl::PCLPointCloud2 pcl_pc2;
     pcl_conversions::toPCL(*input, pcl_pc2);

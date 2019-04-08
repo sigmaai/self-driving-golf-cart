@@ -31,5 +31,8 @@
         <arg name="approx_sync"               value="false" />
         <arg name="visual_odometry"           value="false" />
         <arg name="odom_topic"                value="/$(arg zed_namespace)/odom" />
+        <param name="rtabmap/grid_eroded" value="false"/>
     </include>
+
+
 </launch>

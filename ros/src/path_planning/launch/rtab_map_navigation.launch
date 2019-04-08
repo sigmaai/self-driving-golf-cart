@@ -1,6 +1,10 @@
 <launch>
 
+    <node pkg="path_planning" type="rgb_segmentation_point_cloud" name="rgb_segmentation_point_cloud" />
+
     <group ns="planner">
+
+<!--        <remap from="openni_points" to="/zed/point_cloud/cloud_registered"/>-->
         <remap from="map" to="/rtabmap/proj_map"/>
         <remap from="move_base_simple/goal" to="/planner_goal"/>
 
@@ -9,33 +13,19 @@
             <rosparam file="$(find path_planning)/params/costmap_common_params.yaml" command="load" ns="local_costmap" />
             <rosparam file="$(find path_planning)/params/costmap_local_params.yaml" command="load" />
             <rosparam file="$(find path_planning)/params/costmap_global_params.yaml" command="load" />
-            <rosparam file="$(find path_planning)/params/base_local_planner_params.yaml" command="load" />
+<!--            <rosparam file="$(find path_planning)/params/base_local_planner_params.yaml" command="load" />-->
         </node>
     </group>
 
-<!--    <group ns="/stereo_camera" >-->
 
-<!--        &lt;!&ndash; Generate a point cloud from the disparity image &ndash;&gt;-->
-<!--        <node pkg="nodelet" type="nodelet" name="disparity2cloud" args="load rtabmap_ros/point_cloud_xyz stereo_nodelet">-->
-<!--            <remap from="disparity/image"       to="disparity"/>-->
-<!--            <remap from="disparity/camera_info" to="right/camera_info_throttle"/>-->
-<!--            <remap from="cloud"                to="cloudXYZ"/>-->
+<!--    &lt;!&ndash; Create point cloud for the local planner &ndash;&gt;-->
+<!--    <node pkg="rtabmap_ros" type="obstacles_detection" name="obstacles_detection">-->
+<!--        <remap from="cloud" to="/segmentation/output/road"/>-->
 
-<!--            <param name="voxel_size" type="double" value="0.05"/>-->
-<!--            <param name="decimation" type="int" value="4"/>-->
-<!--            <param name="max_depth" type="double" value="4"/>-->
-<!--        </node>-->
-
-<!--        &lt;!&ndash; Create point cloud for the local planner &ndash;&gt;-->
-<!--        <node pkg="nodelet" type="nodelet" name="obstacles_detection" args="load rtabmap_ros/obstacles_detection stereo_nodelet">-->
-<!--            <remap from="cloud" to="cloudXYZ"/>-->
-<!--            <remap from="obstacles" to="/planner_cloud"/>-->
-
-<!--            <param name="frame_id" type="string" value="base_footprint"/>-->
-<!--            <param name="map_frame_id" type="string" value="map"/>-->
-<!--            <param name="min_cluster_size" type="int" value="20"/>-->
-<!--            <param name="max_obstacles_height" type="double" value="0.0"/>-->
-<!--        </node>-->
-<!--    </group>-->
+<!--        <param name="frame_id" type="string" value="base_footprint"/>-->
+<!--        <param name="map_frame_id" type="string" value="map"/>-->
+<!--        <param name="min_cluster_size" type="int" value="20"/>-->
+<!--        <param name="max_obstacles_height" type="double" value="0.0"/>-->
+<!--    </node>-->
 
 </launch>

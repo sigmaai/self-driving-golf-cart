@@ -45,7 +45,7 @@ class ObjectDetectionNode:
         rospy.init_node('segmentation_node')
 
         # ROS subscribers
-        rospy.Subscriber('/vehicle/sensor/camera/front/image_color', Image, callback=self.image_update_callback, queue_size=5)
+        rospy.Subscriber("/zed/rgb/image_raw_color", Image, callback=self.image_update_callback, queue_size=5)
         rospy.Subscriber('/zed/depth/depth_registered', Image, callback=self.depth_image_update_callback, queue_size=5)
 
         self.current_frame = None

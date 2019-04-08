@@ -13,21 +13,25 @@ controller_patience: 2.0
 NavfnROS:
   allow_unknown: true
 
+
 observation_sources: point_cloud_sensor
+
 point_cloud_sensor: {
   sensor_frame: zed_camera_center,
   data_type: PointCloud2,
-  topic: point_cloud/cloud_experiment,
+  topic: zed/point_cloud/cloud_registered,
+  marking: false,
   clearing: true,
-  marking: true
+  min_obstacle_height: -9999.0,
+  max_obstacle_height: 9999
 }
 
-recovery_behaviors: [
-{name: conservative_clear, type: clear_costmap_recovery/ClearCostmapRecovery},
-{name: aggressive_clear, type: clear_costmap_recovery/ClearCostmapRecovery}
-]
-
-conservative_clear:
-  reset_distance: 3.00
-aggressive_clear:
-  reset_distance: 1.84
+#recovery_behaviors: [
+#{name: conservative_clear, type: clear_costmap_recovery/ClearCostmapRecovery},
+#{name: aggressive_clear, type: clear_costmap_recovery/ClearCostmapRecovery}
+#]
+#
+#conservative_clear:
+#  reset_distance: 3.00
+#aggressive_clear:
+#  reset_distance: 1.84

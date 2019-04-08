@@ -557,6 +557,9 @@ driver_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/dri
 //The directory containing a CMake configuration file for dynamic_reconfigure.
 dynamic_reconfigure_DIR:PATH=/opt/ros/melodic/share/dynamic_reconfigure/cmake
 
+//The directory containing a CMake configuration file for filters.
+filters_DIR:PATH=/opt/ros/melodic/share/filters/cmake
+
 //The directory containing a CMake configuration file for gencpp.
 gencpp_DIR:PATH=/opt/ros/melodic/share/gencpp/cmake
 
@@ -610,6 +613,18 @@ gps_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-
 
 //Value Computed by CMake
 gps_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/gps
+
+//The directory containing a CMake configuration file for grid_map_core.
+grid_map_core_DIR:PATH=/opt/ros/melodic/share/grid_map_core/cmake
+
+//The directory containing a CMake configuration file for grid_map_cv.
+grid_map_cv_DIR:PATH=/opt/ros/melodic/share/grid_map_cv/cmake
+
+//The directory containing a CMake configuration file for grid_map_msgs.
+grid_map_msgs_DIR:PATH=/opt/ros/melodic/share/grid_map_msgs/cmake
+
+//The directory containing a CMake configuration file for grid_map_ros.
+grid_map_ros_DIR:PATH=/opt/ros/melodic/share/grid_map_ros/cmake
 
 //Value Computed by CMake
 gtest_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/gtest/googlemock/gtest

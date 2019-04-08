@@ -11,7 +11,12 @@ find_package(catkin REQUIRED COMPONENTS
   pcl_conversions
   pcl_ros
   sensor_msgs
+  cv_bridge
+  grid_map_msgs
 )
+
+
+find_package( OpenCV REQUIRED )
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -207,3 +212,5 @@ target_link_libraries(point_cloud_transform ${catkin_LIBRARIES})
 add_executable(ground_plane_detection src/ground_plane_detection.cpp)
 target_link_libraries(ground_plane_detection ${catkin_LIBRARIES})
 
+add_executable(rgb_segmentation_point_cloud ../point_cloud/src/rgb_segmentation_point_cloud.cpp)
+target_link_libraries(rgb_segmentation_point_cloud ${catkin_LIBRARIES})

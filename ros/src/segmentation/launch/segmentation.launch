@@ -11,6 +11,8 @@ All Rights Reserved.
 
 <launch>
 
+<!--    <node name="camera_select" pkg="zed_wrapper" type="camera_select.py" />-->
+
     <!--open up the camera -->
 	<node name="segmentation_node" pkg="segmentation" type="segmentation_node" output="screen">
         <param name="input_img_height" value="1024"/>
