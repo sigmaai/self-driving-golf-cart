@@ -30,13 +30,18 @@ ros::Publisher pub, map_pub;
 grid_map::GridMap map;
 
 // Find the last digit
-int lastDigit(int n)
-{
-    // return the last digit
+int lastDigit(int n){
     return (n % 10);
 }
 
-
+/*
+ * This method is very rough. The purpose is to round the point cloud position values
+ * to grid_map position values that the grid_map can recognize. Remember, based on my
+ * map configeration, the grid_map starts at 0.05 and goes up in 0.1, some example
+ * positions are: 0.05, 0.15...4.95. If you want to index the value 0.822,
+ * the system will crash!
+ *
+ */
 float round_float(float var){
 
     // 37.66666 * 100 =3766.66
@@ -56,33 +61,23 @@ void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input){
     pcl_conversions::toPCL(*input, pcl_pc2);
     pcl::fromPCLPointCloud2(pcl_pc2,*temp_cloud);
 
-//     Create the filtering object
+    // Run voxel filter
+    // leaf size is 12cm. This effects the resolution of the map.
     pcl::VoxelGrid<pcl::PointXYZRGB> sor;
     sor.setInputCloud (temp_cloud);
     sor.setLeafSize (0.12f, 0.12f, 0.12f);
     sor.filter (*temp_cloud);
 
+    // run a box filter.
+    // front: [0, 10]
+    // sizes: [-5...0...+5]
     pcl::CropBox<pcl::PointXYZRGB> boxFilter;
     boxFilter.setMin(Eigen::Vector4f(0, -5, -5, 0.0));
     boxFilter.setMax(Eigen::Vector4f(10, 5, +5, 0.0));
     boxFilter.setInputCloud(temp_cloud);
     boxFilter.filter(*temp_cloud);
 
-//    float min_x = 0;
-//    float max_x = 0;
-//    float min_y = 0;
-//    float max_y = 0;
-
     for(auto point: temp_cloud->points){
-
-//        if (point.x < min_x)
-//            min_x = point.x;
-//        if (point.x > max_x)
-//            max_x = point.x;
-//        if (point.y < min_y)
-//            min_y = point.y;
-//        if (point.y > max_y)
-//            max_y = point.y;
 
         float pos_x = (round_float(point.x - 5.0f)) <= 5.0f ? (round_float(point.x - 5.0f)) : 5.0;
         float pos_y = round_float(point.y) <= 5.0f ? round_float(point.y) : 5.0;
@@ -130,17 +125,6 @@ int main (int argc, char** argv) {
              map.getLength().x(), map.getLength().y(),
              map.getSize()(0), map.getSize()(1),
              map.getPosition().x(), map.getPosition().y(), map.getFrameId().c_str());
-
-//    for (grid_map::GridMapIterator it(map); !it.isPastEnd(); ++it) {
-//        grid_map::Position position;
-//        map.getPosition(*it, position);
-//        std::cout << std::to_string(position.x()) << std::endl;
-//        std::cout << std::to_string(position.y()) << std::endl;
-//        std::cout << "-------" << std::endl;    }
-//
-//    std::cout << std::to_string(round_float(1.677)) << std::endl;
-//    std::cout << std::to_string(round_float(2.627)) << std::endl;
-//    std::cout << std::to_string(round_float(0.627)) << std::endl;
 
     ros::spin();
     return 0;

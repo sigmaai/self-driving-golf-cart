@@ -34,5 +34,4 @@
         <param name="rtabmap/grid_eroded" value="false"/>
     </include>
 
-
 </launch>
