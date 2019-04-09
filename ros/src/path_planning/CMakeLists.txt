@@ -22,6 +22,7 @@ find_package(catkin REQUIRED COMPONENTS
   cv_bridge
   grid_map_ros
   grid_map_msgs
+  move_base_msgs
 )
 
 
@@ -209,10 +210,11 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
-add_library(cost_map_layer src/cost_map_layer.cpp)
-
 add_executable(build_map ../path_planning/src/build_map.cpp)
 target_link_libraries(build_map ${catkin_LIBRARIES})
+
+add_executable(navigation_goals ../path_planning/src/navigation_goals.cpp)
+target_link_libraries(navigation_goals ${catkin_LIBRARIES})
 
 install(DIRECTORY
         launch

@@ -15,15 +15,4 @@
         </node>
     </group>
 
-
-<!--    &lt;!&ndash; Create point cloud for the local planner &ndash;&gt;-->
-<!--    <node pkg="rtabmap_ros" type="obstacles_detection" name="obstacles_detection">-->
-<!--        <remap from="cloud" to="/segmentation/output/road"/>-->
-
-<!--        <param name="frame_id" type="string" value="base_footprint"/>-->
-<!--        <param name="map_frame_id" type="string" value="map"/>-->
-<!--        <param name="min_cluster_size" type="int" value="20"/>-->
-<!--        <param name="max_obstacles_height" type="double" value="0.0"/>-->
-<!--    </node>-->
-
 </launch>

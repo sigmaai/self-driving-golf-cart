@@ -84,11 +84,11 @@ void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input){
         float pos_x = (round_float(point.x - 5.0f)) <= 5.0f ? (round_float(point.x - 5.0f)) : 5.0;
         float pos_y = round_float(point.y) <= 5.0f ? round_float(point.y) : 5.0;
 
-        std::cout << std::to_string(pos_x) << std::endl;
-        std::cout << std::to_string(pos_y) << std::endl;
-        std::cout << "-------" << std::endl;
+//        std::cout << std::to_string(pos_x) << std::endl;
+//        std::cout << std::to_string(pos_y) << std::endl;
+//        std::cout << "-------" << std::endl;
 
-        if (point.r == -1.0f && point.g == -1.0f && point.b == -1.0f)
+        if (point.r == 0.0f && point.g == 255.0f && point.b == 0.0f)
             map.atPosition("elevation", grid_map::Position(pos_x, pos_y)) = 0.0;
         else if (point.z > 1.0)
             map.atPosition("elevation", grid_map::Position(pos_x, pos_y)) = 253;
@@ -103,18 +103,18 @@ void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input){
     cloud_publish.header = input->header;
     pub.publish(cloud_publish);
 
-//    ros::Time time = ros::Time::now();
-//    map.setTimestamp(time.toNSec());
-//    grid_map_msgs::GridMap message;
-//    grid_map::GridMapRosConverter::toMessage(map, message);
-//    map_pub.publish(message);
-
-    // Publish grid map.
     ros::Time time = ros::Time::now();
     map.setTimestamp(time.toNSec());
-    nav_msgs::OccupancyGrid message;
-    grid_map::GridMapRosConverter::toOccupancyGrid(map, "elevation", -100.0, 300.0, message);
+    grid_map_msgs::GridMap message;
+    grid_map::GridMapRosConverter::toMessage(map, message);
     map_pub.publish(message);
+
+    // Publish occupancy grid
+//    ros::Time time = ros::Time::now();
+//    map.setTimestamp(time.toNSec());
+//    nav_msgs::OccupancyGrid message;
+//    grid_map::GridMapRosConverter::toOccupancyGrid(map, "elevation", -10.0, 300.0, message);
+//    map_pub.publish(message);
 }
 
 int main (int argc, char** argv) {
@@ -129,12 +129,8 @@ int main (int argc, char** argv) {
     ros::Subscriber sub = nh.subscribe("/point_cloud/ground_segmentation", 1, cloud_callback);
 
     pub = nh.advertise<sensor_msgs::PointCloud2> ("/point_cloud/exp_1", 1);
-    map_pub = nh.advertise<nav_msgs::OccupancyGrid> ("/occupancy_grid", 1);
-//    map_pub = nh.advertise<grid_map_msgs::GridMap> ("/grid_map", 1);
-
-//    costmap_2d::Costmap2D costmap;
-//    costmap = costmap_2d::Costmap2D()
-//    costmap_publisher = costmap_2d::Costmap2DPublisher(nh, )
+    map_pub = nh.advertise<grid_map_msgs::GridMap> ("/grid_map", 1);
+//    map_pub = nh.advertise<nav_msgs::OccupancyGrid> ("/occupancy_grid", 1);
 
     // Create grid map.
     map = grid_map::GridMap({"elevation"});

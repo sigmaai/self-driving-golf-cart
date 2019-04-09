@@ -3,7 +3,7 @@
 #
 
 local_costmap:
-  global_frame: odom
+  global_frame: map
   robot_base_frame: zed_camera_center
   update_frequency: 5.0
   publish_frequency: 5.0

@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+path_planning/CMakeFiles/navigation_goals.dir/rule:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 path_planning/CMakeFiles/navigation_goals.dir/rule
+.PHONY : path_planning/CMakeFiles/navigation_goals.dir/rule
+
+# Convenience name for target.
+navigation_goals: path_planning/CMakeFiles/navigation_goals.dir/rule
+
+.PHONY : navigation_goals
+
+# fast build rule for target.
+navigation_goals/fast:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/navigation_goals.dir/build.make path_planning/CMakeFiles/navigation_goals.dir/build
+.PHONY : navigation_goals/fast
+
+# Convenience name for target.
 path_planning/CMakeFiles/build_map.dir/rule:
 	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 path_planning/CMakeFiles/build_map.dir/rule
 .PHONY : path_planning/CMakeFiles/build_map.dir/rule
@@ -181,6 +196,51 @@ build_map: path_planning/CMakeFiles/build_map.dir/rule
 build_map/fast:
 	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/build_map.dir/build.make path_planning/CMakeFiles/build_map.dir/build
 .PHONY : build_map/fast
+
+# Convenience name for target.
+path_planning/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 path_planning/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule
+.PHONY : path_planning/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+move_base_msgs_generate_messages_lisp: path_planning/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : move_base_msgs_generate_messages_lisp
+
+# fast build rule for target.
+move_base_msgs_generate_messages_lisp/fast:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build.make path_planning/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build
+.PHONY : move_base_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+path_planning/CMakeFiles/move_base_msgs_generate_messages_eus.dir/rule:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 path_planning/CMakeFiles/move_base_msgs_generate_messages_eus.dir/rule
+.PHONY : path_planning/CMakeFiles/move_base_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+move_base_msgs_generate_messages_eus: path_planning/CMakeFiles/move_base_msgs_generate_messages_eus.dir/rule
+
+.PHONY : move_base_msgs_generate_messages_eus
+
+# fast build rule for target.
+move_base_msgs_generate_messages_eus/fast:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/move_base_msgs_generate_messages_eus.dir/build.make path_planning/CMakeFiles/move_base_msgs_generate_messages_eus.dir/build
+.PHONY : move_base_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+path_planning/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/rule:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 path_planning/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/rule
+.PHONY : path_planning/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+move_base_msgs_generate_messages_cpp: path_planning/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : move_base_msgs_generate_messages_cpp
+
+# fast build rule for target.
+move_base_msgs_generate_messages_cpp/fast:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/build.make path_planning/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/build
+.PHONY : move_base_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 path_planning/CMakeFiles/grid_map_msgs_generate_messages_py.dir/rule:
@@ -211,6 +271,21 @@ grid_map_msgs_generate_messages_lisp: path_planning/CMakeFiles/grid_map_msgs_gen
 grid_map_msgs_generate_messages_lisp/fast:
 	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/grid_map_msgs_generate_messages_lisp.dir/build.make path_planning/CMakeFiles/grid_map_msgs_generate_messages_lisp.dir/build
 .PHONY : grid_map_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+path_planning/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 path_planning/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/rule
+.PHONY : path_planning/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+move_base_msgs_generate_messages_nodejs: path_planning/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : move_base_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+move_base_msgs_generate_messages_nodejs/fast:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/build.make path_planning/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/build
+.PHONY : move_base_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 path_planning/CMakeFiles/grid_map_msgs_generate_messages_eus.dir/rule:
@@ -361,6 +436,21 @@ nodelet_topic_tools_gencfg: path_planning/CMakeFiles/nodelet_topic_tools_gencfg.
 nodelet_topic_tools_gencfg/fast:
 	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/nodelet_topic_tools_gencfg.dir/build.make path_planning/CMakeFiles/nodelet_topic_tools_gencfg.dir/build
 .PHONY : nodelet_topic_tools_gencfg/fast
+
+# Convenience name for target.
+path_planning/CMakeFiles/move_base_msgs_generate_messages_py.dir/rule:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 path_planning/CMakeFiles/move_base_msgs_generate_messages_py.dir/rule
+.PHONY : path_planning/CMakeFiles/move_base_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+move_base_msgs_generate_messages_py: path_planning/CMakeFiles/move_base_msgs_generate_messages_py.dir/rule
+
+.PHONY : move_base_msgs_generate_messages_py
+
+# fast build rule for target.
+move_base_msgs_generate_messages_py/fast:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/move_base_msgs_generate_messages_py.dir/build.make path_planning/CMakeFiles/move_base_msgs_generate_messages_py.dir/build
+.PHONY : move_base_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 path_planning/CMakeFiles/nav_msgs_generate_messages_py.dir/rule:
@@ -918,21 +1008,6 @@ nodelet_generate_messages_cpp/fast:
 .PHONY : nodelet_generate_messages_cpp/fast
 
 # Convenience name for target.
-path_planning/CMakeFiles/cost_map_layer.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 path_planning/CMakeFiles/cost_map_layer.dir/rule
-.PHONY : path_planning/CMakeFiles/cost_map_layer.dir/rule
-
-# Convenience name for target.
-cost_map_layer: path_planning/CMakeFiles/cost_map_layer.dir/rule
-
-.PHONY : cost_map_layer
-
-# fast build rule for target.
-cost_map_layer/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/cost_map_layer.dir/build.make path_planning/CMakeFiles/cost_map_layer.dir/build
-.PHONY : cost_map_layer/fast
-
-# Convenience name for target.
 path_planning/CMakeFiles/nodelet_generate_messages_eus.dir/rule:
 	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 path_planning/CMakeFiles/nodelet_generate_messages_eus.dir/rule
 .PHONY : path_planning/CMakeFiles/nodelet_generate_messages_eus.dir/rule
@@ -1019,32 +1094,32 @@ src/build_map.cpp.s:
 	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/build_map.dir/build.make path_planning/CMakeFiles/build_map.dir/src/build_map.cpp.s
 .PHONY : src/build_map.cpp.s
 
-src/cost_map_layer.o: src/cost_map_layer.cpp.o
+src/navigation_goals.o: src/navigation_goals.cpp.o
 
-.PHONY : src/cost_map_layer.o
+.PHONY : src/navigation_goals.o
 
 # target to build an object file
-src/cost_map_layer.cpp.o:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/cost_map_layer.dir/build.make path_planning/CMakeFiles/cost_map_layer.dir/src/cost_map_layer.cpp.o
-.PHONY : src/cost_map_layer.cpp.o
+src/navigation_goals.cpp.o:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/navigation_goals.dir/build.make path_planning/CMakeFiles/navigation_goals.dir/src/navigation_goals.cpp.o
+.PHONY : src/navigation_goals.cpp.o
 
-src/cost_map_layer.i: src/cost_map_layer.cpp.i
+src/navigation_goals.i: src/navigation_goals.cpp.i
 
-.PHONY : src/cost_map_layer.i
+.PHONY : src/navigation_goals.i
 
 # target to preprocess a source file
-src/cost_map_layer.cpp.i:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/cost_map_layer.dir/build.make path_planning/CMakeFiles/cost_map_layer.dir/src/cost_map_layer.cpp.i
-.PHONY : src/cost_map_layer.cpp.i
+src/navigation_goals.cpp.i:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/navigation_goals.dir/build.make path_planning/CMakeFiles/navigation_goals.dir/src/navigation_goals.cpp.i
+.PHONY : src/navigation_goals.cpp.i
 
-src/cost_map_layer.s: src/cost_map_layer.cpp.s
+src/navigation_goals.s: src/navigation_goals.cpp.s
 
-.PHONY : src/cost_map_layer.s
+.PHONY : src/navigation_goals.s
 
 # target to generate assembly for a file
-src/cost_map_layer.cpp.s:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/cost_map_layer.dir/build.make path_planning/CMakeFiles/cost_map_layer.dir/src/cost_map_layer.cpp.s
-.PHONY : src/cost_map_layer.cpp.s
+src/navigation_goals.cpp.s:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/navigation_goals.dir/build.make path_planning/CMakeFiles/navigation_goals.dir/src/navigation_goals.cpp.s
+.PHONY : src/navigation_goals.cpp.s
 
 # Help Target
 help:
@@ -1056,9 +1131,14 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... navigation_goals"
 	@echo "... build_map"
+	@echo "... move_base_msgs_generate_messages_lisp"
+	@echo "... move_base_msgs_generate_messages_eus"
+	@echo "... move_base_msgs_generate_messages_cpp"
 	@echo "... grid_map_msgs_generate_messages_py"
 	@echo "... grid_map_msgs_generate_messages_lisp"
+	@echo "... move_base_msgs_generate_messages_nodejs"
 	@echo "... grid_map_msgs_generate_messages_eus"
 	@echo "... grid_map_msgs_generate_messages_cpp"
 	@echo "... topic_tools_generate_messages_py"
@@ -1071,6 +1151,7 @@ help:
 	@echo "... std_srvs_generate_messages_lisp"
 	@echo "... nodelet_topic_tools_gencfg"
 	@echo "... install"
+	@echo "... move_base_msgs_generate_messages_py"
 	@echo "... nav_msgs_generate_messages_py"
 	@echo "... nav_msgs_generate_messages_nodejs"
 	@echo "... bond_generate_messages_cpp"
@@ -1109,7 +1190,6 @@ help:
 	@echo "... bond_generate_messages_py"
 	@echo "... map_msgs_generate_messages_py"
 	@echo "... nodelet_generate_messages_cpp"
-	@echo "... cost_map_layer"
 	@echo "... nodelet_generate_messages_eus"
 	@echo "... bond_generate_messages_eus"
 	@echo "... costmap_2d_generate_messages_py"
@@ -1117,9 +1197,9 @@ help:
 	@echo "... src/build_map.o"
 	@echo "... src/build_map.i"
 	@echo "... src/build_map.s"
-	@echo "... src/cost_map_layer.o"
-	@echo "... src/cost_map_layer.i"
-	@echo "... src/cost_map_layer.s"
+	@echo "... src/navigation_goals.o"
+	@echo "... src/navigation_goals.i"
+	@echo "... src/navigation_goals.s"
 .PHONY : help
 
 

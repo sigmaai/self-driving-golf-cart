@@ -361,9 +361,14 @@
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/list_install_components.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/rebuild_cache.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/test.dir
+/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/navigation_goals.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/build_map.dir
+/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/move_base_msgs_generate_messages_lisp.dir
+/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/move_base_msgs_generate_messages_eus.dir
+/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/move_base_msgs_generate_messages_cpp.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/grid_map_msgs_generate_messages_py.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/grid_map_msgs_generate_messages_lisp.dir
+/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/grid_map_msgs_generate_messages_eus.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/grid_map_msgs_generate_messages_cpp.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/topic_tools_generate_messages_py.dir
@@ -376,6 +381,7 @@
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/std_srvs_generate_messages_lisp.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/nodelet_topic_tools_gencfg.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/install.dir
+/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/move_base_msgs_generate_messages_py.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/nav_msgs_generate_messages_py.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/nav_msgs_generate_messages_nodejs.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/bond_generate_messages_cpp.dir
@@ -414,7 +420,6 @@
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/bond_generate_messages_py.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/map_msgs_generate_messages_py.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/nodelet_generate_messages_cpp.dir
-/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/cost_map_layer.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/nodelet_generate_messages_eus.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/bond_generate_messages_eus.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/costmap_2d_generate_messages_py.dir

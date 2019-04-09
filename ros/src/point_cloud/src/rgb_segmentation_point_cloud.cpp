@@ -62,10 +62,6 @@ void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input){
                 cloud_output->points[i*segmentation_image.cols + j].r = 0;
                 cloud_output->points[i*segmentation_image.cols + j].g = 255;
                 cloud_output->points[i*segmentation_image.cols + j].b = 0;
-
-//                cloud_output->points[i*segmentation_image.cols + j].r = 0;
-//                cloud_output->points[i*segmentation_image.cols + j].g = 0;
-//                cloud_output->points[i*segmentation_image.cols + j].b = 0;
             }
         }
     }
