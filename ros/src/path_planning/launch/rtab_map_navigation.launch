@@ -1,7 +1,5 @@
 <launch>
 
-    <node pkg="path_planning" type="rgb_segmentation_point_cloud" name="rgb_segmentation_point_cloud" />
-
     <group ns="planner">
 
 <!--        <remap from="openni_points" to="/zed/point_cloud/cloud_registered"/>-->

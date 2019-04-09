@@ -333,8 +333,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aac20b50-5306-4aaa-8779-1228766691d9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/path_planning/launch/rtab_map.launch" beforeDir="false" afterPath="$PROJECT_DIR$/path_planning/launch/rtab_map.launch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/path_planning/params/tutorial_demo.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Project.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Project.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/point_cloud/catkin_generated/package.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/point_cloud/catkin_generated/package.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/point_cloud/catkin_generated/stamps/point_cloud/package.xml.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/point_cloud/catkin_generated/stamps/point_cloud/package.xml.stamp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sensors/zed-ros-wrapper/zed_display_rviz/zed_display_rviz.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sensors/zed-ros-wrapper/zed_display_rviz/zed_display_rviz.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/zed_wrapper.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/zed_wrapper.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/path_planning/launch/build_map.launch" beforeDir="false" afterPath="$PROJECT_DIR$/path_planning/launch/build_map.launch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/path_planning/launch/rtab_map_navigation.launch" beforeDir="false" afterPath="$PROJECT_DIR$/path_planning/launch/rtab_map_navigation.launch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/path_planning/params/costmap_common_params.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/path_planning/params/costmap_common_params.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/path_planning/src/build_map.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/path_planning/src/build_map.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/point_cloud/src/rgb_segmentation_point_cloud.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/point_cloud/src/rgb_segmentation_point_cloud.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -348,7 +358,60 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/path_planning/launch/build_map.launch">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="18" selection-start-line="4" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/point_cloud/src/ground_plane_detection.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="78" selection-start-line="78" selection-end-line="85" selection-end-column="67" />
+              <folding>
+                <element signature="e#41#61#0" expanded="true" />
+                <element signature="e#149#193#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/path_planning/src/build_map.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-556">
+              <caret line="81" selection-start-line="81" selection-end-line="97" selection-end-column="5" />
+              <folding>
+                <element signature="e#38#58#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/path_planning/params/costmap_common_params.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/point_cloud/src/rgb_segmentation_point_cloud.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="269">
+              <caret line="89" column="35" selection-start-line="89" selection-start-column="35" selection-end-line="89" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -420,18 +483,19 @@
         <option value="$PROJECT_DIR$/path_planning/params/costmap_global_params.yaml" />
         <option value="$PROJECT_DIR$/path_planning/params/costmap_local_params.yaml" />
         <option value="$PROJECT_DIR$/path_planning/src/rgb_segmentation_point_cloud.cpp" />
-        <option value="$PROJECT_DIR$/path_planning/launch/rtab_map_navigation.launch" />
-        <option value="$PROJECT_DIR$/path_planning/params/costmap_common_params.yaml" />
         <option value="$PROJECT_DIR$/segmentation/launch/segmentation.launch" />
         <option value="$PROJECT_DIR$/segmentation/scripts/segmentation_node" />
         <option value="$PROJECT_DIR$/path_planning/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/point_cloud/src/rgb_segmentation_point_cloud.cpp" />
         <option value="$PROJECT_DIR$/point_cloud/src/point_cloud_transform.cpp" />
         <option value="$PROJECT_DIR$/point_cloud/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/point_cloud/package.xml" />
-        <option value="$PROJECT_DIR$/path_planning/launch/build_map.launch" />
-        <option value="$PROJECT_DIR$/path_planning/src/build_map.cpp" />
         <option value="$PROJECT_DIR$/path_planning/launch/rtab_map.launch" />
+        <option value="$PROJECT_DIR$/path_planning/params/tutorial_demo.yaml" />
+        <option value="$PROJECT_DIR$/path_planning/params/costmap_common_params.yaml" />
+        <option value="$PROJECT_DIR$/path_planning/launch/rtab_map_navigation.launch" />
+        <option value="$PROJECT_DIR$/path_planning/src/build_map.cpp" />
+        <option value="$PROJECT_DIR$/path_planning/launch/build_map.launch" />
+        <option value="$PROJECT_DIR$/point_cloud/src/rgb_segmentation_point_cloud.cpp" />
       </list>
     </option>
   </component>
@@ -479,6 +543,12 @@
               <item name="src" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="~/Workspace/self-driving-golf-cart/ros/src" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="path_planning" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="params" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="src" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Workspace/self-driving-golf-cart/ros/src" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="path_planning" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
@@ -489,13 +559,14 @@
             <path>
               <item name="src" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="~/Workspace/self-driving-golf-cart/ros/src" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="segmentation" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="point_cloud" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="launch" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="src" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="~/Workspace/self-driving-golf-cart/ros/src" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="segmentation" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="launch" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="point_cloud" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -2286,11 +2357,6 @@
       <item itemvalue="CMake Application.costmap_2d_generate_messages_lisp" />
       <item itemvalue="CMake Application.costmap_2d_generate_messages_nodejs" />
       <item itemvalue="CMake Application.costmap_2d_generate_messages_py" />
-      <item itemvalue="CMake Application.grid_map_msgs_generate_messages_cpp" />
-      <item itemvalue="CMake Application.grid_map_msgs_generate_messages_eus" />
-      <item itemvalue="CMake Application.grid_map_msgs_generate_messages_lisp" />
-      <item itemvalue="CMake Application.grid_map_msgs_generate_messages_nodejs" />
-      <item itemvalue="CMake Application.grid_map_msgs_generate_messages_py" />
       <item itemvalue="CMake Application.derived_object_msgs_generate_messages_cpp" />
       <item itemvalue="CMake Application.derived_object_msgs_generate_messages_eus" />
       <item itemvalue="CMake Application.derived_object_msgs_generate_messages_lisp" />
@@ -2322,6 +2388,11 @@
       <item itemvalue="CMake Application.geometry_msgs_generate_messages_py" />
       <item itemvalue="CMake Application.gmock" />
       <item itemvalue="CMake Application.gmock_main" />
+      <item itemvalue="CMake Application.grid_map_msgs_generate_messages_cpp" />
+      <item itemvalue="CMake Application.grid_map_msgs_generate_messages_eus" />
+      <item itemvalue="CMake Application.grid_map_msgs_generate_messages_lisp" />
+      <item itemvalue="CMake Application.grid_map_msgs_generate_messages_nodejs" />
+      <item itemvalue="CMake Application.grid_map_msgs_generate_messages_py" />
       <item itemvalue="CMake Application.ground_plane_detection" />
       <item itemvalue="CMake Application.gtest" />
       <item itemvalue="CMake Application.gtest_main" />
@@ -2553,11 +2624,12 @@
       <workItem from="1554679436603" duration="1624000" />
       <workItem from="1554724889108" duration="4982000" />
       <workItem from="1554748649362" duration="11894000" />
+      <workItem from="1554817784430" duration="5080000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120284000" />
+    <option name="totallyTimeSpent" value="125364000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2570,8 +2642,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="28" width="1535" height="872" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27132303" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2753526" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -2603,7 +2676,6 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.yaml" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/point_cloud/src/plane_segmentation.cpp" />
     <entry file="file://$PROJECT_DIR$/sensors/zed-ros-wrapper/zed_wrapper/launch/zed_camera_nodelet.launch">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-405" />
@@ -2711,17 +2783,6 @@
         <state relative-caret-position="-5594" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/point_cloud/src/planar_segmentation.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="689">
-          <caret line="109" column="40" selection-start-line="109" selection-start-column="40" selection-end-line="109" selection-end-column="40" />
-          <folding>
-            <element signature="e#1#21#0" expanded="true" />
-            <element signature="e#86#130#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/segmentation/scripts/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="975">
@@ -2774,34 +2835,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/path_planning/launch/rtab_map_navigation.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/path_planning/params/costmap_common_params.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/path_planning/params/costmap_global_params.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/path_planning/params/costmap_local_params.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/segmentation/scripts/segmentation_node">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="309">
@@ -2823,38 +2856,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/point_cloud/launch/plane_segmentation.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="8" selection-start-column="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///opt/ros/melodic/include/grid_map_core/TypeDefs.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/point_cloud/src/ground_plane_detection.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="202" column="68" selection-start-line="202" selection-start-column="68" selection-end-line="202" selection-end-column="68" />
-          <folding>
-            <element signature="e#41#61#0" expanded="true" />
-            <element signature="e#149#193#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/point_cloud/src/point_cloud_transform.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="55" column="40" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
-          <folding>
-            <element signature="e#38#58#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2872,17 +2877,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/path_planning/src/build_map.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="126" column="85" selection-start-line="126" selection-start-column="85" selection-end-line="126" selection-end-column="85" />
-          <folding>
-            <element signature="e#38#58#0" expanded="true" />
-            <element signature="e#143#187#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/path_planning/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -2890,24 +2884,108 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/point_cloud/src/rgb_segmentation_point_cloud.cpp">
+    <entry file="file://$PROJECT_DIR$/path_planning/params/costmap_global_params.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="55" column="45" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
+        <state relative-caret-position="105">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/path_planning/launch/build_map.launch">
+    <entry file="file://$PROJECT_DIR$/path_planning/params/costmap_local_params.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/path_planning/params/tutorial_demo.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/point_cloud/launch/plane_segmentation.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="26" column="30" lean-forward="true" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/path_planning/launch/rtab_map_navigation.launch">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/path_planning/launch/rtab_map.launch">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+        <state relative-caret-position="525">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/point_cloud/src/point_cloud_transform.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="55" column="40" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
+          <folding>
+            <element signature="e#38#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/point_cloud/src/planar_segmentation.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="109" column="40" selection-start-line="109" selection-start-column="40" selection-end-line="109" selection-end-column="40" />
+          <folding>
+            <element signature="e#1#21#0" expanded="true" />
+            <element signature="e#86#130#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/path_planning/launch/build_map.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="18" selection-start-line="4" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/path_planning/params/costmap_common_params.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/point_cloud/src/ground_plane_detection.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="78" selection-start-line="78" selection-end-line="85" selection-end-column="67" />
+          <folding>
+            <element signature="e#41#61#0" expanded="true" />
+            <element signature="e#149#193#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/path_planning/src/build_map.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-556">
+          <caret line="81" selection-start-line="81" selection-end-line="97" selection-end-column="5" />
+          <folding>
+            <element signature="e#38#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/point_cloud/src/rgb_segmentation_point_cloud.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="89" column="35" selection-start-line="89" selection-start-column="35" selection-end-line="89" selection-end-column="35" />
         </state>
       </provider>
     </entry>

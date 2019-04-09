@@ -6514,6 +6514,9 @@
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/path_planning/README.md">
 			<Option target="dummy_zed_display_rviz"/>
 		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/path_planning/launch/build_map.launch">
+			<Option target="dummy_zed_display_rviz"/>
+		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/path_planning/launch/rtab_map.launch">
 			<Option target="dummy_zed_display_rviz"/>
 		</Unit>

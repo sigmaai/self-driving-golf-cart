@@ -48,6 +48,7 @@ void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input){
     pcl::PCLPointCloud2 pcl_pc2;
     pcl_conversions::toPCL(*input, pcl_pc2);
     pcl::fromPCLPointCloud2(pcl_pc2,*temp_cloud);
+    *cloud_output = *temp_cloud;
 
     auto* pixelPtr = (uint8_t*)segmentation_image.data;
 
@@ -57,7 +58,14 @@ void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input){
 
             uint8_t value = pixelPtr[i*segmentation_image.cols + j];
             if (value == 255) {
-                cloud_output->points.push_back(temp_cloud->points[i*segmentation_image.cols + j]);
+
+                cloud_output->points[i*segmentation_image.cols + j].r = 0;
+                cloud_output->points[i*segmentation_image.cols + j].g = 255;
+                cloud_output->points[i*segmentation_image.cols + j].b = 0;
+
+//                cloud_output->points[i*segmentation_image.cols + j].r = 0;
+//                cloud_output->points[i*segmentation_image.cols + j].g = 0;
+//                cloud_output->points[i*segmentation_image.cols + j].b = 0;
             }
         }
     }
