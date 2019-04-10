@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+path_planning/CMakeFiles/localmap_tf_broadcaster.dir/rule:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 path_planning/CMakeFiles/localmap_tf_broadcaster.dir/rule
+.PHONY : path_planning/CMakeFiles/localmap_tf_broadcaster.dir/rule
+
+# Convenience name for target.
+localmap_tf_broadcaster: path_planning/CMakeFiles/localmap_tf_broadcaster.dir/rule
+
+.PHONY : localmap_tf_broadcaster
+
+# fast build rule for target.
+localmap_tf_broadcaster/fast:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/localmap_tf_broadcaster.dir/build.make path_planning/CMakeFiles/localmap_tf_broadcaster.dir/build
+.PHONY : localmap_tf_broadcaster/fast
+
+# Convenience name for target.
 path_planning/CMakeFiles/navigation_goals.dir/rule:
 	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 path_planning/CMakeFiles/navigation_goals.dir/rule
 .PHONY : path_planning/CMakeFiles/navigation_goals.dir/rule
@@ -1094,6 +1109,33 @@ src/build_map.cpp.s:
 	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/build_map.dir/build.make path_planning/CMakeFiles/build_map.dir/src/build_map.cpp.s
 .PHONY : src/build_map.cpp.s
 
+src/localmap_tf_broadcaster.o: src/localmap_tf_broadcaster.cpp.o
+
+.PHONY : src/localmap_tf_broadcaster.o
+
+# target to build an object file
+src/localmap_tf_broadcaster.cpp.o:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/localmap_tf_broadcaster.dir/build.make path_planning/CMakeFiles/localmap_tf_broadcaster.dir/src/localmap_tf_broadcaster.cpp.o
+.PHONY : src/localmap_tf_broadcaster.cpp.o
+
+src/localmap_tf_broadcaster.i: src/localmap_tf_broadcaster.cpp.i
+
+.PHONY : src/localmap_tf_broadcaster.i
+
+# target to preprocess a source file
+src/localmap_tf_broadcaster.cpp.i:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/localmap_tf_broadcaster.dir/build.make path_planning/CMakeFiles/localmap_tf_broadcaster.dir/src/localmap_tf_broadcaster.cpp.i
+.PHONY : src/localmap_tf_broadcaster.cpp.i
+
+src/localmap_tf_broadcaster.s: src/localmap_tf_broadcaster.cpp.s
+
+.PHONY : src/localmap_tf_broadcaster.s
+
+# target to generate assembly for a file
+src/localmap_tf_broadcaster.cpp.s:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f path_planning/CMakeFiles/localmap_tf_broadcaster.dir/build.make path_planning/CMakeFiles/localmap_tf_broadcaster.dir/src/localmap_tf_broadcaster.cpp.s
+.PHONY : src/localmap_tf_broadcaster.cpp.s
+
 src/navigation_goals.o: src/navigation_goals.cpp.o
 
 .PHONY : src/navigation_goals.o
@@ -1131,6 +1173,7 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... localmap_tf_broadcaster"
 	@echo "... navigation_goals"
 	@echo "... build_map"
 	@echo "... move_base_msgs_generate_messages_lisp"
@@ -1197,6 +1240,9 @@ help:
 	@echo "... src/build_map.o"
 	@echo "... src/build_map.i"
 	@echo "... src/build_map.s"
+	@echo "... src/localmap_tf_broadcaster.o"
+	@echo "... src/localmap_tf_broadcaster.i"
+	@echo "... src/localmap_tf_broadcaster.s"
 	@echo "... src/navigation_goals.o"
 	@echo "... src/navigation_goals.i"
 	@echo "... src/navigation_goals.s"

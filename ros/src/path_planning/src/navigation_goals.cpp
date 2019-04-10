@@ -10,7 +10,7 @@ typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> MoveBaseCl
 
 int main(int argc, char** argv){
     
-    ros::init(argc, argv, "navigation_goal");
+    ros::init(argc, argv, "/path_planning/navigation_goal");
 
     //tell the action client that we want to spin a thread by default
     MoveBaseClient ac("move_base", true);
@@ -22,15 +22,16 @@ int main(int argc, char** argv){
 
     move_base_msgs::MoveBaseGoal goal;
 
-    //we'll send a goal to the robot to move 1 meter forward
+    // we'll send a goal to the robot to move 1 meter forward
     // TODO: This is incorrect practice.
-    goal.target_pose.header.frame_id = "zed_camera_center";
+    goal.target_pose.header.frame_id = "base_link";
     goal.target_pose.header.stamp = ros::Time::now();
 
-    goal.target_pose.pose.position.x = 1.0;
+    goal.target_pose.pose.position.x = 3.0;
     goal.target_pose.pose.orientation.w = 1.0;
 
     ROS_INFO("Sending goal");
+
     ac.sendGoal(goal);
 
     ac.waitForResult();

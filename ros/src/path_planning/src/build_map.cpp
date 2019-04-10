@@ -81,7 +81,7 @@ void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input){
 
     for(auto point: temp_cloud->points){
 
-        float pos_x = (round_float(point.x - 5.0f)) <= 5.0f ? (round_float(point.x - 5.0f)) : 5.0;
+        float pos_x = (round_float(point.x)) <= 10.0f ? (round_float(point.x)) : 10.0;
         float pos_y = round_float(point.y) <= 5.0f ? round_float(point.y) : 5.0;
 
 //        std::cout << std::to_string(pos_x) << std::endl;
@@ -109,12 +109,6 @@ void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input){
     grid_map::GridMapRosConverter::toMessage(map, message);
     map_pub.publish(message);
 
-    // Publish occupancy grid
-//    ros::Time time = ros::Time::now();
-//    map.setTimestamp(time.toNSec());
-//    nav_msgs::OccupancyGrid message;
-//    grid_map::GridMapRosConverter::toOccupancyGrid(map, "elevation", -10.0, 300.0, message);
-//    map_pub.publish(message);
 }
 
 int main (int argc, char** argv) {
@@ -122,7 +116,7 @@ int main (int argc, char** argv) {
     // Initialize ROS
     ROS_INFO("Node started");
 
-    ros::init(argc, argv, "path_planning/build_map");
+    ros::init(argc, argv, "build_map");
     ros::NodeHandle nh;
 
     // Create a ROS subscriber for the input point cloud
@@ -130,16 +124,27 @@ int main (int argc, char** argv) {
 
     pub = nh.advertise<sensor_msgs::PointCloud2> ("/point_cloud/exp_1", 1);
     map_pub = nh.advertise<grid_map_msgs::GridMap> ("/grid_map", 1);
-//    map_pub = nh.advertise<nav_msgs::OccupancyGrid> ("/occupancy_grid", 1);
 
     // Create grid map.
     map = grid_map::GridMap({"elevation"});
-    map.setFrameId("map");
+    map.setFrameId("base_link");
     map.setGeometry(grid_map::Length(10, 10), 0.10);
+    map.setPosition(grid_map::Position(5, 0));
     ROS_INFO("Created map with size %f x %f m (%i x %i cells).\n The center of the map is located at (%f, %f) in the %s frame.",
              map.getLength().x(), map.getLength().y(),
              map.getSize()(0), map.getSize()(1),
              map.getPosition().x(), map.getPosition().y(), map.getFrameId().c_str());
+
+//    for (grid_map::GridMapIterator it(map); !it.isPastEnd(); ++it) {
+//        grid_map::Position position;
+//        map.getPosition(*it, position);
+//
+//        std::cout << std::to_string(position.x()) << std::endl;
+//        std::cout << std::to_string(position.y()) << std::endl;
+//        std::cout << "-------" << std::endl;
+//
+//        usleep(2000);
+//    }
 
     ros::spin();
     return 0;

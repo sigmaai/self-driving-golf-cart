@@ -17,6 +17,98 @@
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="localmap_tf_broadcaster">
+				<Option output="/home/neil/Workspace/self-driving-golf-cart/ros/devel/lib/path_planning/localmap_tf_broadcaster" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/devel/lib/path_planning"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;path_planning&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add option="-DEIGEN_FUNCTORS_PLUGIN=&quot;grid_map_core/eigen_plugins/FunctorsPlugin.hpp&quot;"/>
+					<Add option="-DEIGEN_DENSEBASE_PLUGIN=&quot;grid_map_core/eigen_plugins/DenseBasePlugin.hpp&quot;"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/pcl-1.8"/>
+					<Add directory="/usr/include/ni"/>
+					<Add directory="/usr/include/openni2"/>
+					<Add directory="/usr/include/vtk-6.3"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent/include"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include"/>
+					<Add directory="/usr/include/python2.7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include/hdf5/openmpi"/>
+					<Add directory="/usr/include/libxml2"/>
+					<Add directory="/usr/include/jsoncpp"/>
+					<Add directory="/usr/include/tcl"/>
+					<Add directory="/usr/include/opencv"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/Makefile&quot;  VERBOSE=1 localmap_tf_broadcaster"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="localmap_tf_broadcaster/fast">
+				<Option output="/home/neil/Workspace/self-driving-golf-cart/ros/devel/lib/path_planning/localmap_tf_broadcaster" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/devel/lib/path_planning"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;path_planning&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add option="-DEIGEN_FUNCTORS_PLUGIN=&quot;grid_map_core/eigen_plugins/FunctorsPlugin.hpp&quot;"/>
+					<Add option="-DEIGEN_DENSEBASE_PLUGIN=&quot;grid_map_core/eigen_plugins/DenseBasePlugin.hpp&quot;"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/pcl-1.8"/>
+					<Add directory="/usr/include/ni"/>
+					<Add directory="/usr/include/openni2"/>
+					<Add directory="/usr/include/vtk-6.3"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent/include"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include"/>
+					<Add directory="/usr/include/python2.7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include/hdf5/openmpi"/>
+					<Add directory="/usr/include/libxml2"/>
+					<Add directory="/usr/include/jsoncpp"/>
+					<Add directory="/usr/include/tcl"/>
+					<Add directory="/usr/include/opencv"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/Makefile&quot;  VERBOSE=1 localmap_tf_broadcaster/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="navigation_goals">
 				<Option output="/home/neil/Workspace/self-driving-golf-cart/ros/devel/lib/path_planning/navigation_goals" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/devel/lib/path_planning"/>
@@ -784,6 +876,9 @@
 		</Build>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/path_planning/src/build_map.cpp">
 			<Option target="build_map"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/path_planning/src/localmap_tf_broadcaster.cpp">
+			<Option target="localmap_tf_broadcaster"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/path_planning/src/navigation_goals.cpp">
 			<Option target="navigation_goals"/>

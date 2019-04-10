@@ -78,7 +78,7 @@ int main (int argc, char** argv) {
     // Initialize ROS
     ROS_INFO("Node started");
 
-    ros::init(argc, argv, "rgb_segmentation_point_cloud");
+    ros::init(argc, argv, "/point_cloud/rgb_segmentation_point_cloud");
     ros::NodeHandle nh;
 
     // Create a ROS subscriber for the input point cloud

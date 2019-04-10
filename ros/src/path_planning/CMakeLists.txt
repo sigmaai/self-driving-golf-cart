@@ -216,6 +216,9 @@ target_link_libraries(build_map ${catkin_LIBRARIES})
 add_executable(navigation_goals ../path_planning/src/navigation_goals.cpp)
 target_link_libraries(navigation_goals ${catkin_LIBRARIES})
 
+add_executable(localmap_tf_broadcaster ../path_planning/src/localmap_tf_broadcaster.cpp)
+target_link_libraries(localmap_tf_broadcaster ${catkin_LIBRARIES})
+
 install(DIRECTORY
         launch
         DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
