@@ -8,21 +8,17 @@
         <rosparam command="load" file="$(find path_planning)/params/tutorial_demo.yaml" />
     </node>
 
-    <group ns="planner">
+    <remap from="map" to="/grid_map_visualization/elevation_grid"/>
+    <remap from="move_base/current_goal" to="move_base_simple/goal"/>
 
-        <remap from="map" to="/grid_map_visualization/elevation_grid"/>
-        <remap from="planner/move_base/current_goal" to="move_base_simple/goal"/>
+    <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+        <rosparam file="$(find path_planning)/params/costmap_common_params.yaml" command="load" ns="global_costmap" />
+        <rosparam file="$(find path_planning)/params/costmap_common_params.yaml" command="load" ns="local_costmap" />
+        <rosparam file="$(find path_planning)/params/costmap_local_params.yaml" command="load" />
+        <rosparam file="$(find path_planning)/params/costmap_global_params.yaml" command="load" />
+        <rosparam file="$(find path_planning)/params/base_local_planner_params.yaml" command="load" />
+    </node>
 
-
-        <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
-            <rosparam file="$(find path_planning)/params/costmap_common_params.yaml" command="load" ns="global_costmap" />
-            <rosparam file="$(find path_planning)/params/costmap_common_params.yaml" command="load" ns="local_costmap" />
-            <rosparam file="$(find path_planning)/params/costmap_local_params.yaml" command="load" />
-            <rosparam file="$(find path_planning)/params/costmap_global_params.yaml" command="load" />
-            <rosparam file="$(find path_planning)/params/base_local_planner_params.yaml" command="load" />
-        </node>
-    </group>
-
-<!--    <node pkg="path_planning" name="navigation_goals" type="navigation_goals" output="screen" />-->
+    <node pkg="path_planning" name="navigation_goals" type="navigation_goals" output="screen" />
 
 </launch>

@@ -122,7 +122,7 @@ int main (int argc, char** argv) {
     // Initialize ROS
     ROS_INFO("Node started");
 
-    ros::init(argc, argv, "build_map");
+    ros::init(argc, argv, "path_planning/build_map");
     ros::NodeHandle nh;
 
     // Create a ROS subscriber for the input point cloud

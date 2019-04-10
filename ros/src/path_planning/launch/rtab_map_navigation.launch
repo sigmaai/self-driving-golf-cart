@@ -1,18 +1,30 @@
+<!--
+Self-driving vehicle navigation tests using
+rtabmap_ros, and actionlib goals.
+
+Note:
+In order to use `rtab_map_navigation`, `rtab_map` must be running.
+To change navigation goals, please edit the navigation_goals node.
+
+Copyright (c) Yongyang Nie, 2018
+All Rights Reserved
+
+Email: contact@neilnie.com
+
+-->
+
 <launch>
 
-    <group ns="planner">
+    <remap from="map" to="/rtabmap/proj_map"/>
 
-<!--        <remap from="openni_points" to="/zed/point_cloud/cloud_registered"/>-->
-        <remap from="map" to="/rtabmap/proj_map"/>
-        <remap from="move_base_simple/goal" to="/planner_goal"/>
+    <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+        <rosparam file="$(find path_planning)/params/costmap_common_params.yaml" command="load" ns="global_costmap" />
+        <rosparam file="$(find path_planning)/params/costmap_common_params.yaml" command="load" ns="local_costmap" />
+        <rosparam file="$(find path_planning)/params/costmap_local_params.yaml" command="load" />
+        <rosparam file="$(find path_planning)/params/costmap_global_params.yaml" command="load" />
+        <rosparam file="$(find path_planning)/params/base_local_planner_params.yaml" command="load" />
+    </node>
 
-        <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
-            <rosparam file="$(find path_planning)/params/costmap_common_params.yaml" command="load" ns="global_costmap" />
-            <rosparam file="$(find path_planning)/params/costmap_common_params.yaml" command="load" ns="local_costmap" />
-            <rosparam file="$(find path_planning)/params/costmap_local_params.yaml" command="load" />
-            <rosparam file="$(find path_planning)/params/costmap_global_params.yaml" command="load" />
-<!--            <rosparam file="$(find path_planning)/params/base_local_planner_params.yaml" command="load" />-->
-        </node>
-    </group>
+    <node pkg="path_planning" name="navigation_goals" type="navigation_goals" output="screen" />
 
 </launch>

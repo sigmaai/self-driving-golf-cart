@@ -23,6 +23,7 @@ int main(int argc, char** argv){
     move_base_msgs::MoveBaseGoal goal;
 
     //we'll send a goal to the robot to move 1 meter forward
+    // TODO: This is incorrect practice.
     goal.target_pose.header.frame_id = "zed_camera_center";
     goal.target_pose.header.stamp = ros::Time::now();
 

@@ -1,23 +1,20 @@
 #
 #
 
-obstacle_range: 5.0
-raytrace_range: 5.0
+obstacle_range: 8.0
+raytrace_range: 8.0
 footprint: [[ 1.1684, 0.6096], [1.1684, -0.6096], [-1.1684, -0.6096], [-1.1684, 0.6096]]
 footprint_padding: 0.03
-inflation_radius: 0.25
+inflation_radius: 0.10
 transform_tolerance: 5
 
 controller_patience: 2.0
 
-NavfnROS:
-  allow_unknown: true
+recovery_behaviors: [
+{name: conservative_clear, type: clear_costmap_recovery/ClearCostmapRecovery},
+{name: aggressive_clear, type: clear_costmap_recovery/ClearCostmapRecovery}
+]
 
-#recovery_behaviors: [
-#{name: conservative_clear, type: clear_costmap_recovery/ClearCostmapRecovery},
-#{name: aggressive_clear, type: clear_costmap_recovery/ClearCostmapRecovery}
-#]
-#
 #conservative_clear:
 #  reset_distance: 3.00
 #aggressive_clear:

@@ -1,3 +1,19 @@
+<!--
+
+Running rtabmap_ros with the ZED vision system.
+Please make sure that ZED is running before launching
+rtab_map.
+
+For information about navigation, please take a look
+at rtab_map_navigation.launch.
+
+Copyright (c) Yongyang Nie, 2018
+All Rights Reserved
+
+Email: contact@neilnie.com
+
+-->
+
 <launch>
 
     <arg name="zed_namespace"		    	default="zed" />
