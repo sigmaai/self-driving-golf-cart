@@ -78,14 +78,14 @@ int main (int argc, char** argv) {
     // Initialize ROS
     ROS_INFO("Node started");
 
-    ros::init(argc, argv, "/point_cloud/rgb_segmentation_point_cloud");
+    ros::init(argc, argv, "rgb_segmentation_point_cloud");
     ros::NodeHandle nh;
 
     // Create a ROS subscriber for the input point cloud
     ros::Subscriber sub = nh.subscribe("/zed/point_cloud/cloud_registered", 1, cloud_callback);
     ros::Subscriber sub_img = nh.subscribe("/segmentation/output/road", 1, image_callback);
 
-    pub = nh.advertise<sensor_msgs::PointCloud2> ("/point_cloud/ground_segmentation", 1);
+    pub = nh.advertise<sensor_msgs::PointCloud2> ("/ground_segmentation", 1);
 
     ros::spin();
     return 0;

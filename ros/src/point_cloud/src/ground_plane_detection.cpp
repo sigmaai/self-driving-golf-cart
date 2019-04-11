@@ -145,7 +145,7 @@ void cloud_callback_new (const sensor_msgs::PointCloud2ConstPtr& input){
     mps.setRefinementComparator (refinement_compare);
     mps.setMinInliers (500);
     mps.setAngularThreshold (pcl::deg2rad (10.0));
-    mps.setDistanceThreshold (0.10);
+    mps.setDistanceThreshold (0.20);
     mps.setInputCloud (cloud);
     mps.setInputNormals (normal_cloud);
     mps.refine (model_coefficients, inlier_indices, centroids, covariances, labels_ptr, region_indices);
@@ -193,7 +193,7 @@ int main (int argc, char** argv){
     ros::NodeHandle nh;
 
     // Create a ROS subscriber for the input point cloud
-    ros::Subscriber sub = nh.subscribe ("/point_cloud/cloud_transformed", 1, cloud_callback_new);
+    ros::Subscriber sub = nh.subscribe ("/zed/point_cloud/cloud_registered", 1, cloud_callback_new);
 
     // Create a ROS publisher for the output point cloud
     pub = nh.advertise<sensor_msgs::PointCloud2> ("/point_cloud/ground", 1);
@@ -203,10 +203,10 @@ int main (int argc, char** argv){
     // If the camera was pointing straight out, the normal would be:
     Eigen::Vector3f nominal_road_normal (0.0, 0.0, 1.0);
     // Adjust for camera tilt:
-    Eigen::Vector3f tilt_road_normal = Eigen::AngleAxisf (pcl::deg2rad (5.5f), Eigen::Vector3f::UnitX ()) * nominal_road_normal;
+    Eigen::Vector3f tilt_road_normal = Eigen::AngleAxisf (pcl::deg2rad (14.5f), Eigen::Vector3f::UnitX ()) * nominal_road_normal;
     road_comparator->setExpectedGroundNormal (tilt_road_normal);
     road_comparator->setGroundAngularThreshold (pcl::deg2rad (10.0f));
-    road_comparator->setAngularThreshold (pcl::deg2rad (10.0f));
+    road_comparator->setAngularThreshold (pcl::deg2rad (6.0f));
 
     // -----------------------------------------------------------------------------------------------------------------
     ne.setNormalEstimationMethod (ne.COVARIANCE_MATRIX);

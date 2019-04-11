@@ -15,13 +15,9 @@
 #include <pcl/point_cloud.h>
 #include <pcl/point_types.h>
 #include <pcl/ModelCoefficients.h>
-#include <pcl/io/pcd_io.h>
-#include <pcl/point_types.h>
-#include <pcl/filters/extract_indices.h>
 #include <pcl/filters/voxel_grid.h>
 #include <pcl/sample_consensus/method_types.h>
 #include <pcl/sample_consensus/model_types.h>
-#include <pcl/segmentation/sac_segmentation.h>
 #include <pcl_ros/transforms.h>
 #include <pcl/filters/crop_box.h>
 // Gridmap stuff
@@ -97,11 +93,11 @@ void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input){
         }
     }
 
-    // publish point cloud for debugging purposes
-    sensor_msgs::PointCloud2 cloud_publish;
-    pcl::toROSMsg(*temp_cloud,cloud_publish);
-    cloud_publish.header = input->header;
-    pub.publish(cloud_publish);
+//    // publish point cloud for debugging purposes
+//    sensor_msgs::PointCloud2 cloud_publish;
+//    pcl::toROSMsg(*temp_cloud,cloud_publish);
+//    cloud_publish.header = input->header;
+//    pub.publish(cloud_publish);
 
     ros::Time time = ros::Time::now();
     map.setTimestamp(time.toNSec());
@@ -122,7 +118,7 @@ int main (int argc, char** argv) {
     // Create a ROS subscriber for the input point cloud
     ros::Subscriber sub = nh.subscribe("/point_cloud/ground_segmentation", 1, cloud_callback);
 
-    pub = nh.advertise<sensor_msgs::PointCloud2> ("/point_cloud/exp_1", 1);
+//    pub = nh.advertise<sensor_msgs::PointCloud2> ("/point_cloud/exp_1", 1);
     map_pub = nh.advertise<grid_map_msgs::GridMap> ("/grid_map", 1);
 
     // Create grid map.

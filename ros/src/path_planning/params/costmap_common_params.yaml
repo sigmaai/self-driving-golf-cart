@@ -5,7 +5,7 @@ obstacle_range: 8.0
 raytrace_range: 8.0
 footprint: [[ 1.1684, 0.6096], [1.1684, -0.6096], [-1.1684, -0.6096], [-1.1684, 0.6096]]
 footprint_padding: 0.03
-inflation_radius: 0.10
+inflation_radius: 0.20
 transform_tolerance: 5
 
 controller_patience: 2.0
