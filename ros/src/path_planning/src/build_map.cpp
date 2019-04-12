@@ -86,7 +86,7 @@ void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input){
 
         if (point.r == 0.0f && point.g == 255.0f && point.b == 0.0f)
             map.atPosition("elevation", grid_map::Position(pos_x, pos_y)) = 0.0;
-        else if (point.z > 1.0)
+        else if (point.z > 0.75)
             map.atPosition("elevation", grid_map::Position(pos_x, pos_y)) = 253;
         else{
             map.atPosition("elevation", grid_map::Position(pos_x, pos_y)) = point.z;
@@ -118,7 +118,7 @@ int main (int argc, char** argv) {
     // Create a ROS subscriber for the input point cloud
     ros::Subscriber sub = nh.subscribe("/point_cloud/ground_segmentation", 1, cloud_callback);
 
-//    pub = nh.advertise<sensor_msgs::PointCloud2> ("/point_cloud/exp_1", 1);
+    pub = nh.advertise<sensor_msgs::PointCloud2> ("/point_cloud/exp_1", 1);
     map_pub = nh.advertise<grid_map_msgs::GridMap> ("/grid_map", 1);
 
     // Create grid map.

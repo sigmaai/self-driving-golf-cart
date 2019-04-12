@@ -37,7 +37,9 @@ void image_callback(const sensor_msgs::ImageConstPtr& msg)
         return;
     }
 
-    segmentation_image = cv_ptr->image;
+    cv::Mat dst;
+    cv::resize(cv_ptr->image, dst, cv::Size(1920, 1080));
+    segmentation_image = dst;
 }
 
 void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input){
@@ -49,6 +51,14 @@ void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input){
     pcl_conversions::toPCL(*input, pcl_pc2);
     pcl::fromPCLPointCloud2(pcl_pc2,*temp_cloud);
     *cloud_output = *temp_cloud;
+
+//    std::cout << std::to_string(temp_cloud->width) << std::endl;
+//    std::cout << std::to_string(temp_cloud->height) << std::endl;
+//    std::cout << "-------" << std::endl;
+//
+//    std::cout << std::to_string(segmentation_image.cols) << std::endl;
+//    std::cout << std::to_string(segmentation_image.rows) << std::endl;
+//    std::cout << "-------" << std::endl;
 
     auto* pixelPtr = (uint8_t*)segmentation_image.data;
 
@@ -65,6 +75,22 @@ void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input){
             }
         }
     }
+
+
+//    auto* pixelPtr = (uint8_t*)segmentation_image.data;
+//
+//    for(int i = 0; i < segmentation_image.rows; i++){
+//
+//        for(int j = 0; j < segmentation_image.cols; j++){
+//
+//            if (j > 1000) {
+//
+//                cloud_output->points[i*segmentation_image.cols + j].r = 0;
+//                cloud_output->points[i*segmentation_image.cols + j].g = 255;
+//                cloud_output->points[i*segmentation_image.cols + j].b = 0;
+//            }
+//        }
+//    }
 
     sensor_msgs::PointCloud2 cloud_publish;
     pcl::toROSMsg(*cloud_output,cloud_publish);
@@ -85,7 +111,7 @@ int main (int argc, char** argv) {
     ros::Subscriber sub = nh.subscribe("/zed/point_cloud/cloud_registered", 1, cloud_callback);
     ros::Subscriber sub_img = nh.subscribe("/segmentation/output/road", 1, image_callback);
 
-    pub = nh.advertise<sensor_msgs::PointCloud2> ("/ground_segmentation", 1);
+    pub = nh.advertise<sensor_msgs::PointCloud2> ("/point_cloud/ground_segmentation", 1);
 
     ros::spin();
     return 0;

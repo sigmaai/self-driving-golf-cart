@@ -13086,19 +13086,15 @@
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/path_planning/launch/rtab_map.launch">
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/path_planning/launch/navigation.launch">
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/path_planning/launch/rtab_map_navigation.launch">
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/path_planning/launch/rtab_mapping.launch">
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/path_planning/launch/rtab_map_outdoor.launch">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/path_planning/launch/zed_rtab.launch">
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/path_planning/launch/rtab_mapping_navigation.launch">
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
@@ -13130,10 +13126,6 @@
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/path_planning/scripts/experiment_node.py">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/path_planning/scripts/global_path.py">
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
@@ -13157,7 +13149,7 @@
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/point_cloud/launch/plane_segmentation.launch">
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/point_cloud/launch/road_segmentation.launch">
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
@@ -14219,10 +14211,6 @@
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/zed-ros-wrapper/zed_wrapper/records/record_stereo.sh">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/zed-ros-wrapper/zed_wrapper/scripts/camera_select.py">
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>

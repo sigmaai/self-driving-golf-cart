@@ -18,8 +18,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 <launch>
 
-    <node pkg="zed_wrapper" name="camera_select" type="camera_select.py" />
-
     <arg name="svo_file"              default="" /> <!-- <arg name="svo_file" default="path/to/svo/file.svo"> -->
 
     <arg name="camera_model"         default="1" /> <!-- 0=ZED, 1=ZEDM-->

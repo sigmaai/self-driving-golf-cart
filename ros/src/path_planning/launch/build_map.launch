@@ -1,24 +1,29 @@
+
+<!--
+
+Mapping package launch file. If you intend to
+run the navigation stack, please launch navigation.launch
+This file is for mapping only.
+
+Copyright (c) Yongyang Nie, 2019
+All Rights Reserved
+
+For questions, comments, and concerns, please
+contact: contact@neilnie.com
+
+-->
+
 <launch>
+
+    <!--    start point cloud road segmentation. -->
+    <include file="$(find point_cloud)/launch/road_segmentation.launch" />
+
+    <node pkg="path_planning" name="localmap_tf_broadcaster" type="localmap_tf_broadcaster" output="screen" />
 
     <node pkg="path_planning" name="build_map" type="build_map" output="screen" />
 
     <node pkg="grid_map_visualization" type="grid_map_visualization" name="grid_map_visualization" output="screen">
         <rosparam command="load" file="$(find path_planning)/params/tutorial_demo.yaml" />
     </node>
-
-    <remap from="map" to="/grid_map_visualization/elevation_grid"/>
-    <remap from="move_base/current_goal" to="move_base_simple/goal"/>
-
-    <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
-        <rosparam file="$(find path_planning)/params/costmap_common_params.yaml" command="load" ns="global_costmap" />
-        <rosparam file="$(find path_planning)/params/costmap_common_params.yaml" command="load" ns="local_costmap" />
-        <rosparam file="$(find path_planning)/params/costmap_local_params.yaml" command="load" />
-        <rosparam file="$(find path_planning)/params/costmap_global_params.yaml" command="load" />
-        <rosparam file="$(find path_planning)/params/base_local_planner_params.yaml" command="load" />
-    </node>
-
-    <node pkg="path_planning" name="navigation_goals" type="navigation_goals" output="screen" />
-
-    <node pkg="path_planning" name="localmap_tf_broadcaster" type="localmap_tf_broadcaster" output="screen" />
 
 </launch>

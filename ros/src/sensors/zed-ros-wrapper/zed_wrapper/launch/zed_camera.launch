@@ -50,7 +50,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <arg name="fixed_z_value"                 default="0.0" />
                                                                         <!-- 1.7399 0.2967 -->
 <!--    <arg name="initial_pose"                  default="[0.0,0.0,1, 0.0, 0.0872665,0.0]" /> &lt;!&ndash; X, Y, Z, (meter) R, P, Y, (radians)&ndash;&gt;-->
-    <arg name="initial_pose"                  default="[0.0,0.0,1.7399, 0.0, 0.2967,0.0]" /> <!-- X, Y, Z, (meter) R, P, Y, (radians)-->
+    <arg name="initial_pose"                  default="[0.0,0.0,1.7399, 0.0, 0.2565634, 0.0]" /> <!-- X, Y, Z, (meter) R, P, Y, (radians)-->
 
     <!-- Publish urdf zed -->
     <arg name="publish_urdf"                  default="true" />

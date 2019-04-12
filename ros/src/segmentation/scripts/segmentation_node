@@ -153,7 +153,7 @@ class ObjectDetectionNode:
         output[:, :, 7][output[:, :, 7] > 0.5] = 1
         output[:, :, 7][output[:, :, 7] <= 0.5] = 0
         output[:, :, 7] *= 255
-        road_img = cv2.resize(output[:, :, 7], (1280, 720))
+        road_img = cv2.resize(output[:, :, 7], (1920, 1080))
 
         np_mat = np.array(road_img, dtype=np.uint8)
         road_msg = self.bridge.cv2_to_imgmsg(np_mat, 'mono8')  # road is index 7, side walk is index 8

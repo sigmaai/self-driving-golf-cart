@@ -1,0 +1,33 @@
+<!--
+Navigation stack launch file.
+
+Copyright (c) Yongyang Nie, 2019
+All Rights Reserved
+
+For questions, comments, and concerns, please
+contact: contact@neilnie.com
+
+-->
+
+<launch>
+
+    <!--    build maps with grid_map-->
+    <include file="$(find path_planning)/launch/build_map.launch" />
+
+    <!--    remapping topics-->
+    <remap from="map" to="/grid_map_visualization/elevation_grid"/>
+    <remap from="move_base/current_goal" to="move_base_simple/goal"/>
+
+    <!--    launch move base node. This node subscribes to the map published by `build_map`. -->
+    <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+        <rosparam file="$(find path_planning)/params/costmap_common_params.yaml" command="load" ns="global_costmap" />
+        <rosparam file="$(find path_planning)/params/costmap_common_params.yaml" command="load" ns="local_costmap" />
+        <rosparam file="$(find path_planning)/params/costmap_local_params.yaml" command="load" />
+        <rosparam file="$(find path_planning)/params/costmap_global_params.yaml" command="load" />
+        <rosparam file="$(find path_planning)/params/base_local_planner_params.yaml" command="load" />
+    </node>
+
+    <!--    publish navigation goals to `move_base` using actionlib -->
+    <node pkg="path_planning" name="navigation_goals" type="navigation_goals" output="screen" />
+
+</launch>
