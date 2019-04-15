@@ -76,7 +76,7 @@ void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input){
 
         auto point = temp_cloud->points[i];
 
-        float pos_x = (round_float(point.x)) <= (10.0f) ? (round_float(point.x)) : (10.0);
+        float pos_x = (round_float(point.x)) <= (12.0f) ? (round_float(point.x)) : (12.0);
         float pos_y = round_float(point.y) <= (5.0f)? round_float(point.y) : (5.0);
 
         if (point.r == 0.0f && point.g == 255.0f && point.b == 0.0f)
@@ -141,8 +141,8 @@ int main (int argc, char** argv) {
     // Create local grid map
     local_map = grid_map::GridMap({"elevation"});
     local_map.setFrameId("base_link");
-    local_map.setGeometry(grid_map::Length(10, 10), 0.10);
-    local_map.setPosition(grid_map::Position(5, 0));
+    local_map.setGeometry(grid_map::Length(12, 10), 0.10);
+    local_map.setPosition(grid_map::Position(6, 0));
     ROS_INFO("Created map with size %f x %f m (%i x %i cells).\n The center of the map is located at (%f, %f) in the %s frame.",
              local_map.getLength().x(), local_map.getLength().y(),
              local_map.getSize()(0), local_map.getSize()(1),

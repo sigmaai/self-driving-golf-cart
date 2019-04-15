@@ -339,14 +339,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aac20b50-5306-4aaa-8779-1228766691d9" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/path_planning/scripts/hybrid_a_star.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/path_planning/launch/build_map.launch" beforeDir="false" afterPath="$PROJECT_DIR$/path_planning/launch/build_map.launch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/path_planning/launch/navigation.launch" beforeDir="false" afterPath="$PROJECT_DIR$/path_planning/launch/navigation.launch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/path_planning/params/costmap_global_params.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/path_planning/params/costmap_global_params.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/path_planning/params/costmap_local_params.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/path_planning/params/costmap_local_params.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/path_planning/src/build_map.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/path_planning/src/build_map.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/path_planning/src/navigation_goals.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/path_planning/src/navigation_goals.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/point_cloud/src/point_cloud_transform.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/point_cloud/src/point_cloud_transform.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -370,15 +365,33 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/path_planning/src/build_map.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="100" column="19" lean-forward="true" selection-start-line="100" selection-start-column="19" selection-end-line="100" selection-end-column="19" />
+            <state relative-caret-position="375">
+              <caret line="144" column="46" selection-start-line="144" selection-start-column="46" selection-end-line="144" selection-end-column="46" />
               <folding>
                 <element signature="e#38#58#0" expanded="true" />
                 <element signature="e#295#339#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/path_planning/scripts/hybrid_a_star.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/path_planning/launch/rtab_mapping_navigation.launch">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -453,7 +466,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/localization/src/particle_filter_node.cpp" />
         <option value="$PROJECT_DIR$/detection/object_detection/scripts/detect_objects" />
         <option value="$PROJECT_DIR$/detection/object_detection/scripts/device_test.py" />
         <option value="$PROJECT_DIR$/detection/object_detection/scripts/object_detection_node" />
@@ -504,6 +516,7 @@
         <option value="$PROJECT_DIR$/path_planning/params/costmap_local_params.yaml" />
         <option value="$PROJECT_DIR$/path_planning/src/navigation_goals.cpp" />
         <option value="$PROJECT_DIR$/path_planning/src/build_map.cpp" />
+        <option value="$PROJECT_DIR$/path_planning/scripts/hybrid_a_star.py" />
       </list>
     </option>
   </component>
@@ -515,7 +528,7 @@
   <component name="OCResolveContextSettings">
     <option name="configuration" value="0-planar_segmentation" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="78" />
     <option name="y" value="28" />
     <option name="width" value="1440" />
@@ -545,7 +558,7 @@
               <item name="src" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="~/Workspace/self-driving-golf-cart/ros/src" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="path_planning" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="scripts" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -2651,12 +2664,12 @@
       <workItem from="1555005538936" duration="566000" />
       <workItem from="1555012138946" duration="7735000" />
       <workItem from="1555028891041" duration="4135000" />
-      <workItem from="1555265151472" duration="12914000" />
+      <workItem from="1555265151472" duration="15109000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="184220000" />
+    <option name="totallyTimeSpent" value="186415000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2727,7 +2740,6 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.yaml" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/path_planning/configs/cost_map.yaml" />
     <entry file="file://$PROJECT_DIR$/path_planning/src/cost_map_layer.cpp" />
     <entry file="file://$PROJECT_DIR$/path_planning/launch/costmap.launch" />
     <entry file="file://$PROJECT_DIR$/gui/launch/rqt.launch">
@@ -2889,13 +2901,6 @@
         <state relative-caret-position="-360" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/path_planning/launch/rtab_mapping_navigation.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/point_cloud/package.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
@@ -2973,14 +2978,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/path_planning/launch/rtab_mapping_navigation.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/path_planning/src/build_map.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="100" column="19" lean-forward="true" selection-start-line="100" selection-start-column="19" selection-end-line="100" selection-end-column="19" />
+        <state relative-caret-position="375">
+          <caret line="144" column="46" selection-start-line="144" selection-start-column="46" selection-end-line="144" selection-end-column="46" />
           <folding>
             <element signature="e#38#58#0" expanded="true" />
             <element signature="e#295#339#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/path_planning/scripts/hybrid_a_star.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
         </state>
       </provider>
     </entry>
