@@ -6,8 +6,8 @@ local_costmap:
   # TODO: Double check global frame.
   global_frame: base_link
   robot_base_frame: base_link
-  update_frequency: 10.0
-  publish_frequency: 10.0
+  update_frequency: 8.0
+  publish_frequency: 8.0
   static_map: false
   rolling_window: true
   width: 10.0

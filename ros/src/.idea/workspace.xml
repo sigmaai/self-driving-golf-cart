@@ -339,26 +339,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aac20b50-5306-4aaa-8779-1228766691d9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/path_planning/launch/navigation.launch" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Project.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Project.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sensors/zed-ros-wrapper/zed_display_rviz/zed_display_rviz.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sensors/zed-ros-wrapper/zed_display_rviz/zed_display_rviz.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/zed_wrapper.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/zed_wrapper.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/path_planning/launch/build_map.launch" beforeDir="false" afterPath="$PROJECT_DIR$/path_planning/launch/build_map.launch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/path_planning/launch/rtab_map.launch" beforeDir="false" afterPath="$PROJECT_DIR$/path_planning/launch/rtab_mapping.launch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/path_planning/launch/rtab_map_navigation.launch" beforeDir="false" afterPath="$PROJECT_DIR$/path_planning/launch/rtab_mapping_navigation.launch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/path_planning/launch/rtab_map_outdoor.launch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/path_planning/launch/zed_rtab.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/path_planning/launch/navigation.launch" beforeDir="false" afterPath="$PROJECT_DIR$/path_planning/launch/navigation.launch" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/path_planning/params/costmap_global_params.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/path_planning/params/costmap_global_params.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/path_planning/params/costmap_local_params.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/path_planning/params/costmap_local_params.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/path_planning/scripts/experiment_node.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/path_planning/src/build_map.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/path_planning/src/build_map.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/path_planning/src/localmap_tf_broadcaster.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/path_planning/src/localmap_tf_broadcaster.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/point_cloud/launch/plane_segmentation.launch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/point_cloud/src/rgb_segmentation_point_cloud.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/point_cloud/src/rgb_segmentation_point_cloud.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/segmentation/scripts/segmentation_node" beforeDir="false" afterPath="$PROJECT_DIR$/segmentation/scripts/segmentation_node" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sensors/zed-ros-wrapper/zed_wrapper/launch/zed.launch" beforeDir="false" afterPath="$PROJECT_DIR$/sensors/zed-ros-wrapper/zed_wrapper/launch/zed.launch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sensors/zed-ros-wrapper/zed_wrapper/launch/zed_camera.launch" beforeDir="false" afterPath="$PROJECT_DIR$/sensors/zed-ros-wrapper/zed_wrapper/launch/zed_camera.launch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/path_planning/src/navigation_goals.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/path_planning/src/navigation_goals.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/point_cloud/src/point_cloud_transform.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/point_cloud/src/point_cloud_transform.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -376,17 +364,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/path_planning/launch/navigation.launch">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+            <state relative-caret-position="165">
+              <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/path_planning/src/build_map.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="124" column="26" lean-forward="true" selection-start-line="124" selection-start-column="26" selection-end-line="124" selection-end-column="26" />
+            <state relative-caret-position="415">
+              <caret line="100" column="19" lean-forward="true" selection-start-line="100" selection-start-column="19" selection-end-line="100" selection-end-column="19" />
               <folding>
                 <element signature="e#38#58#0" expanded="true" />
                 <element signature="e#295#339#0" expanded="true" />
@@ -396,19 +384,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/path_planning/params/costmap_global_params.yaml">
+        <entry file="file://$PROJECT_DIR$/path_planning/src/navigation_goals.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+            <state relative-caret-position="255">
+              <caret line="17" column="43" lean-forward="true" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+              <folding>
+                <element signature="e#37#57#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/path_planning/params/costmap_local_params.yaml">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/path_planning/launch/build_map.launch">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+            <state relative-caret-position="315">
+              <caret line="27" selection-start-line="27" selection-end-line="28" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/path_planning/params/costmap_global_params.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -440,6 +440,7 @@
       <find>camera</find>
       <find>depth_camera_info_topic</find>
       <find>PERFORMANCE</find>
+      <find>pub</find>
     </findStrings>
     <dirStrings>
       <dir>/usr/src/googletest</dir>
@@ -476,7 +477,6 @@
         <option value="$PROJECT_DIR$/path_planning/launch/rtab_map_outdoor.launch" />
         <option value="$PROJECT_DIR$/path_planning/launch/zed_rtab.launch" />
         <option value="$PROJECT_DIR$/path_planning/src/rgb_segmentation_point_cloud.cpp" />
-        <option value="$PROJECT_DIR$/point_cloud/src/point_cloud_transform.cpp" />
         <option value="$PROJECT_DIR$/point_cloud/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/point_cloud/package.xml" />
         <option value="$PROJECT_DIR$/path_planning/src/navigation_goal.cpp" />
@@ -484,7 +484,6 @@
         <option value="$PROJECT_DIR$/path_planning/launch/rtab_map.launch" />
         <option value="$PROJECT_DIR$/path_planning/params/tutorial_demo.yaml" />
         <option value="$PROJECT_DIR$/path_planning/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/path_planning/src/navigation_goals.cpp" />
         <option value="$PROJECT_DIR$/path_planning/params/costmap_common_params.yaml" />
         <option value="$PROJECT_DIR$/point_cloud/launch/plane_segmentation.launch" />
         <option value="$PROJECT_DIR$/point_cloud/src/ground_plane_detection.cpp" />
@@ -492,17 +491,19 @@
         <option value="$PROJECT_DIR$/path_planning/launch/rtab_mapping_navigation.launch" />
         <option value="$PROJECT_DIR$/sensors/zed-ros-wrapper/zed_wrapper/launch/zed_camera.launch" />
         <option value="$PROJECT_DIR$/path_planning/src/localmap_tf_broadcaster.cpp" />
-        <option value="$PROJECT_DIR$/segmentation/launch/segmentation.launch" />
         <option value="$PROJECT_DIR$/sensors/zed-ros-wrapper/zed_wrapper/launch/zed.launch" />
-        <option value="$PROJECT_DIR$/segmentation/scripts/segmentation_node" />
-        <option value="$PROJECT_DIR$/point_cloud/src/rgb_segmentation_point_cloud.cpp" />
-        <option value="$PROJECT_DIR$/path_planning/launch/build_map.launch" />
         <option value="$PROJECT_DIR$/point_cloud/launch/road_segmentation.launch" />
         <option value="$PROJECT_DIR$/path_planning/launch/mapping_navigation.launch" />
+        <option value="$PROJECT_DIR$/segmentation/launch/segmentation.launch" />
+        <option value="$PROJECT_DIR$/segmentation/scripts/segmentation_node" />
+        <option value="$PROJECT_DIR$/point_cloud/src/rgb_segmentation_point_cloud.cpp" />
         <option value="$PROJECT_DIR$/path_planning/launch/navigation.launch" />
-        <option value="$PROJECT_DIR$/path_planning/src/build_map.cpp" />
+        <option value="$PROJECT_DIR$/path_planning/launch/build_map.launch" />
+        <option value="$PROJECT_DIR$/point_cloud/src/point_cloud_transform.cpp" />
         <option value="$PROJECT_DIR$/path_planning/params/costmap_global_params.yaml" />
         <option value="$PROJECT_DIR$/path_planning/params/costmap_local_params.yaml" />
+        <option value="$PROJECT_DIR$/path_planning/src/navigation_goals.cpp" />
+        <option value="$PROJECT_DIR$/path_planning/src/build_map.cpp" />
       </list>
     </option>
   </component>
@@ -544,35 +545,7 @@
               <item name="src" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="~/Workspace/self-driving-golf-cart/ros/src" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="path_planning" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="launch" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="src" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/Workspace/self-driving-golf-cart/ros/src" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="path_planning" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="params" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="src" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/Workspace/self-driving-golf-cart/ros/src" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="path_planning" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="src" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/Workspace/self-driving-golf-cart/ros/src" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="point_cloud" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="src" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/Workspace/self-driving-golf-cart/ros/src" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="point_cloud" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="launch" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="src" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/Workspace/self-driving-golf-cart/ros/src" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="sensors" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -2677,12 +2650,13 @@
       <workItem from="1554991998522" duration="2564000" />
       <workItem from="1555005538936" duration="566000" />
       <workItem from="1555012138946" duration="7735000" />
-      <workItem from="1555028891041" duration="2934000" />
+      <workItem from="1555028891041" duration="4135000" />
+      <workItem from="1555265151472" duration="12914000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="170105000" />
+    <option name="totallyTimeSpent" value="184220000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2697,7 +2671,7 @@
     <frame x="65" y="28" width="1535" height="872" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20685023" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2095366" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -2753,13 +2727,6 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.yaml" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/autopilot/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2739">
-          <caret line="199" column="9" lean-forward="true" selection-start-line="199" selection-start-column="9" selection-end-line="199" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/path_planning/configs/cost_map.yaml" />
     <entry file="file://$PROJECT_DIR$/path_planning/src/cost_map_layer.cpp" />
     <entry file="file://$PROJECT_DIR$/path_planning/launch/costmap.launch" />
@@ -2809,20 +2776,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/point_cloud/package.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="60" column="44" lean-forward="true" selection-start-line="60" selection-start-column="44" selection-end-line="60" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/point_cloud/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/point_cloud/src/planar_segmentation.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="474">
@@ -2838,30 +2791,10 @@
     <entry file="file://$PROJECT_DIR$/path_planning/src/navigation_goal.cpp" />
     <entry file="file://$PROJECT_DIR$/path_planning/params/costmap_params.yaml" />
     <entry file="file://$PROJECT_DIR$/path_planning/src/localmap_tf_broadcaster.h" />
-    <entry file="file://$PROJECT_DIR$/path_planning/src/navigation_goals.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="45" lean-forward="true" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
-          <folding>
-            <element signature="e#37#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/path_planning/params/base_local_planner_params.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/point_cloud/src/point_cloud_transform.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="55" column="78" selection-start-line="55" selection-start-column="78" selection-end-line="55" selection-end-column="78" />
-          <folding>
-            <element signature="e#38#58#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2879,11 +2812,6 @@
     <entry file="file://$PROJECT_DIR$/path_planning/launch/rtab_map.launch" />
     <entry file="file://$PROJECT_DIR$/path_planning/launch/rtab_map_navigation.launch" />
     <entry file="file://$PROJECT_DIR$/path_planning/launch/zed_rtab.launch" />
-    <entry file="file://$PROJECT_DIR$/path_planning/launch/rtab_mapping.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-178" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/path_planning/src/localmap_tf_broadcaster.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -2910,20 +2838,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/point_cloud/launch/plane_segmentation.launch" />
-    <entry file="file://$PROJECT_DIR$/segmentation/launch/segmentation.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/path_planning/launch/rtab_mapping_navigation.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sensors/zed-ros-wrapper/zed_wrapper/launch/zed.launch">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -2934,10 +2848,65 @@
     <entry file="file://$PROJECT_DIR$/sensors/zed-ros-wrapper/zed_display_rviz/launch/display.launch">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/point_cloud/launch/road_segmentation.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/path_planning/launch/mapping_navigation.launch" />
+    <entry file="file://$PROJECT_DIR$/path_planning/params/costmap_common_params.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/segmentation/launch/segmentation.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/point_cloud/src/rgb_segmentation_point_cloud.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="111" column="57" selection-start-line="111" selection-start-column="57" selection-end-line="111" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/segmentation/scripts/segmentation_node">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="155" column="58" selection-start-line="155" selection-start-column="58" selection-end-line="155" selection-end-column="58" />
+        <state relative-caret-position="100">
+          <caret line="52" column="32" lean-forward="true" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/path_planning/launch/rtab_mapping.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-360" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/path_planning/launch/rtab_mapping_navigation.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/point_cloud/package.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="60" column="44" lean-forward="true" selection-start-line="60" selection-start-column="44" selection-end-line="60" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/point_cloud/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2675">
+          <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -2948,63 +2917,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/point_cloud/src/rgb_segmentation_point_cloud.cpp">
+    <entry file="file://$PROJECT_DIR$/point_cloud/src/point_cloud_transform.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="78" selection-start-line="78" selection-end-line="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/point_cloud/launch/road_segmentation.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/path_planning/launch/mapping_navigation.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/path_planning/launch/build_map.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/path_planning/launch/navigation.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/path_planning/src/build_map.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="124" column="26" lean-forward="true" selection-start-line="124" selection-start-column="26" selection-end-line="124" selection-end-column="26" />
+        <state relative-caret-position="30">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
           <folding>
             <element signature="e#38#58#0" expanded="true" />
-            <element signature="e#295#339#0" expanded="true" />
+            <element signature="e#109#145#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/path_planning/params/costmap_common_params.yaml">
+    <entry file="file://$PROJECT_DIR$/map_merger/launch/map_merger.launch">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/path_planning/params/costmap_global_params.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        <state relative-caret-position="60">
+          <caret line="4" column="42" lean-forward="true" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -3012,6 +2939,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/path_planning/params/costmap_global_params.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/path_planning/src/navigation_goals.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="43" lean-forward="true" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+          <folding>
+            <element signature="e#37#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/path_planning/launch/build_map.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="27" selection-start-line="27" selection-end-line="28" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/path_planning/launch/navigation.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/path_planning/src/build_map.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="100" column="19" lean-forward="true" selection-start-line="100" selection-start-column="19" selection-end-line="100" selection-end-column="19" />
+          <folding>
+            <element signature="e#38#58#0" expanded="true" />
+            <element signature="e#295#339#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

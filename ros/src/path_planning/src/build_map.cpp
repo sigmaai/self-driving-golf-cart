@@ -24,13 +24,9 @@
 #include <grid_map_ros/grid_map_ros.hpp>
 #include <grid_map_msgs/GridMap.h>
 
-ros::Publisher pub, map_pub;
-grid_map::GridMap map;
-
-// Find the last digit
-int lastDigit(int n){
-    return (n % 10);
-}
+ros::Publisher map_pub, map_pub_local;
+grid_map::GridMap global_map, local_map;
+tf::StampedTransform transform;
 
 /*
  * This method is very rough. The purpose is to round the point cloud position values
@@ -47,7 +43,7 @@ float round_float(float var){
     // then type cast to int so value is 3766
     // then divided by 100 so the value converted into 37.66
     float value = (int)(var * 100.0f + 0.5f);
-    value = value + (5.0f - float(lastDigit(int(value))));
+    value = value + (5.0f - float(((int(value) % 10))));
     return (float)value / 100;
 }
 
@@ -75,35 +71,46 @@ void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input){
     boxFilter.setInputCloud(temp_cloud);
     boxFilter.filter(*temp_cloud);
 
-    for(auto point: temp_cloud->points){
 
-        float pos_x = (round_float(point.x)) <= 10.0f ? (round_float(point.x)) : 10.0;
-        float pos_y = round_float(point.y) <= 5.0f ? round_float(point.y) : 5.0;
+    for (int i = 0; i < temp_cloud->points.size(); i+=1) {
 
-//        std::cout << std::to_string(pos_x) << std::endl;
-//        std::cout << std::to_string(pos_y) << std::endl;
-//        std::cout << "-------" << std::endl;
+        auto point = temp_cloud->points[i];
+
+        float pos_x = (round_float(point.x)) <= (10.0f) ? (round_float(point.x)) : (10.0);
+        float pos_y = round_float(point.y) <= (5.0f)? round_float(point.y) : (5.0);
 
         if (point.r == 0.0f && point.g == 255.0f && point.b == 0.0f)
-            map.atPosition("elevation", grid_map::Position(pos_x, pos_y)) = 0.0;
+            local_map.atPosition("elevation", grid_map::Position(pos_x, pos_y)) = 0.0;
         else if (point.z > 0.75)
-            map.atPosition("elevation", grid_map::Position(pos_x, pos_y)) = 253;
-        else{
-            map.atPosition("elevation", grid_map::Position(pos_x, pos_y)) = point.z;
-        }
+            local_map.atPosition("elevation", grid_map::Position(pos_x, pos_y)) = 253;
+        else
+            local_map.atPosition("elevation", grid_map::Position(pos_x, pos_y)) = point.z;
     }
 
-//    // publish point cloud for debugging purposes
-//    sensor_msgs::PointCloud2 cloud_publish;
-//    pcl::toROSMsg(*temp_cloud,cloud_publish);
-//    cloud_publish.header = input->header;
-//    pub.publish(cloud_publish);
+    // publish local map
+    geometry_msgs::TransformStamped tf_msg;
+
+    tf::transformStampedTFToMsg(transform, tf_msg);
+    float trans_x = tf_msg.transform.translation.x + 5;
+    float trans_y = tf_msg.transform.translation.y;
+
+    local_map.setPosition(grid_map::Position(trans_x, trans_y));
+//    local_map["elevation"].
+    // expand global map
+    global_map.addDataFrom(local_map, true, true, true);
+    local_map.setPosition(grid_map::Position(5, 0));
 
     ros::Time time = ros::Time::now();
-    map.setTimestamp(time.toNSec());
-    grid_map_msgs::GridMap message;
-    grid_map::GridMapRosConverter::toMessage(map, message);
-    map_pub.publish(message);
+    local_map.setTimestamp(time.toNSec());
+    nav_msgs::OccupancyGrid message_local;
+    grid_map::GridMapRosConverter::toOccupancyGrid(local_map, "elevation", -10.0, 10.0, message_local);
+    map_pub_local.publish(message_local);
+
+    // publish global map
+    global_map.setTimestamp(time.toNSec());
+    nav_msgs::OccupancyGrid message_global;
+    grid_map::GridMapRosConverter::toOccupancyGrid(global_map, "elevation", -10.0, 10.0, message_global);
+    map_pub.publish(message_global);
 
 }
 
@@ -118,29 +125,43 @@ int main (int argc, char** argv) {
     // Create a ROS subscriber for the input point cloud
     ros::Subscriber sub = nh.subscribe("/point_cloud/ground_segmentation", 1, cloud_callback);
 
-    pub = nh.advertise<sensor_msgs::PointCloud2> ("/point_cloud/exp_1", 1);
-    map_pub = nh.advertise<grid_map_msgs::GridMap> ("/grid_map", 1);
+    map_pub = nh.advertise<nav_msgs::OccupancyGrid> ("/grid_map", 1);
+    map_pub_local = nh.advertise<nav_msgs::OccupancyGrid> ("/grid_map_local", 1);
 
-    // Create grid map.
-    map = grid_map::GridMap({"elevation"});
-    map.setFrameId("base_link");
-    map.setGeometry(grid_map::Length(10, 10), 0.10);
-    map.setPosition(grid_map::Position(5, 0));
+    // Create global grid map.
+    global_map = grid_map::GridMap({"elevation"});
+    global_map.setFrameId("map");
+    global_map.setGeometry(grid_map::Length(10, 10), 0.10);
+    global_map.setPosition(grid_map::Position(5, 0));
     ROS_INFO("Created map with size %f x %f m (%i x %i cells).\n The center of the map is located at (%f, %f) in the %s frame.",
-             map.getLength().x(), map.getLength().y(),
-             map.getSize()(0), map.getSize()(1),
-             map.getPosition().x(), map.getPosition().y(), map.getFrameId().c_str());
+             global_map.getLength().x(), global_map.getLength().y(),
+             global_map.getSize()(0), global_map.getSize()(1),
+             global_map.getPosition().x(), global_map.getPosition().y(), global_map.getFrameId().c_str());
 
-//    for (grid_map::GridMapIterator it(map); !it.isPastEnd(); ++it) {
-//        grid_map::Position position;
-//        map.getPosition(*it, position);
-//
-//        std::cout << std::to_string(position.x()) << std::endl;
-//        std::cout << std::to_string(position.y()) << std::endl;
-//        std::cout << "-------" << std::endl;
-//
-//        usleep(2000);
-//    }
+    // Create local grid map
+    local_map = grid_map::GridMap({"elevation"});
+    local_map.setFrameId("base_link");
+    local_map.setGeometry(grid_map::Length(10, 10), 0.10);
+    local_map.setPosition(grid_map::Position(5, 0));
+    ROS_INFO("Created map with size %f x %f m (%i x %i cells).\n The center of the map is located at (%f, %f) in the %s frame.",
+             local_map.getLength().x(), local_map.getLength().y(),
+             local_map.getSize()(0), local_map.getSize()(1),
+             local_map.getPosition().x(), local_map.getPosition().y(), local_map.getFrameId().c_str());
+
+//    // get robot transform
+    tf::TransformListener listener;
+
+    ros::Rate rate(30.0);
+    while (nh.ok()){
+
+        try {
+            listener.lookupTransform("map", "base_link", ros::Time(), transform);
+        }catch (tf::TransformException ex) {
+            ROS_ERROR("%s", ex.what());
+        }
+        ros::spinOnce();
+        rate.sleep();
+    }
 
     ros::spin();
     return 0;

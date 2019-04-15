@@ -15,15 +15,19 @@ contact: contact@neilnie.com
 
 <launch>
 
-    <!--    start point cloud road segmentation. -->
-    <include file="$(find point_cloud)/launch/road_segmentation.launch" />
+    <group ns="mapping" >
 
-    <node pkg="path_planning" name="localmap_tf_broadcaster" type="localmap_tf_broadcaster" output="screen" />
+        <!--    start point cloud road segmentation. -->
+        <include file="$(find point_cloud)/launch/road_segmentation.launch" />
 
-    <node pkg="path_planning" name="build_map" type="build_map" output="screen" />
+        <node pkg="path_planning" name="localmap_tf_broadcaster" type="localmap_tf_broadcaster" output="screen" />
 
-    <node pkg="grid_map_visualization" type="grid_map_visualization" name="grid_map_visualization" output="screen">
-        <rosparam command="load" file="$(find path_planning)/params/tutorial_demo.yaml" />
-    </node>
+        <node pkg="path_planning" name="build_map" type="build_map" output="screen" />
+
+<!--        <node pkg="grid_map_visualization" type="grid_map_visualization" name="grid_map_visualization" output="screen">-->
+<!--            <rosparam command="load" file="$(find path_planning)/params/tutorial_demo.yaml" />-->
+<!--        </node>-->
+
+    </group>
 
 </launch>
