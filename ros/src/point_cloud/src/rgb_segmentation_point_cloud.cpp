@@ -25,6 +25,7 @@
 ros::Publisher pub;
 tf::StampedTransform transform;
 cv::Mat segmentation_image;
+bool accept_frame;
 
 void image_callback(const sensor_msgs::ImageConstPtr& msg)
 {
@@ -56,15 +57,13 @@ void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input){
 //    std::cout << std::to_string(temp_cloud->height) << std::endl;
 //    std::cout << "-------" << std::endl;
 //
-//    std::cout << std::to_string(segmentation_image.cols) << std::endl;
-//    std::cout << std::to_string(segmentation_image.rows) << std::endl;
-//    std::cout << "-------" << std::endl;
 
     auto* pixelPtr = (uint8_t*)segmentation_image.data;
+    accept_frame = false;
+    
+    for(int i = 0; i < segmentation_image.rows; i+=2){
 
-    for(int i = 0; i < segmentation_image.rows; i++){
-
-        for(int j = 0; j < segmentation_image.cols; j++){
+        for(int j = 0; j < segmentation_image.cols; j+=2){
 
             uint8_t value = pixelPtr[i*segmentation_image.cols + j];
             if (value == 255) {
@@ -76,21 +75,7 @@ void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input){
         }
     }
 
-
-//    auto* pixelPtr = (uint8_t*)segmentation_image.data;
-//
-//    for(int i = 0; i < segmentation_image.rows; i++){
-//
-//        for(int j = 0; j < segmentation_image.cols; j++){
-//
-//            if (j > 1000) {
-//
-//                cloud_output->points[i*segmentation_image.cols + j].r = 0;
-//                cloud_output->points[i*segmentation_image.cols + j].g = 255;
-//                cloud_output->points[i*segmentation_image.cols + j].b = 0;
-//            }
-//        }
-//    }
+    accept_frame = true;
 
     sensor_msgs::PointCloud2 cloud_publish;
     pcl::toROSMsg(*cloud_output,cloud_publish);

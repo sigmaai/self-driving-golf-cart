@@ -32,7 +32,7 @@ int main(int argc, char** argv){
     tf::TransformBroadcaster br;
     tf::Transform transform;
 
-    ros::Rate rate(10.0);
+    ros::Rate rate(60.0);
     while (node.ok()){
         transform.setRotation(toQuaternion(0, -0.2565634, 0));
         transform.setOrigin( tf::Vector3(0.0, 0.0, -1.7399) );

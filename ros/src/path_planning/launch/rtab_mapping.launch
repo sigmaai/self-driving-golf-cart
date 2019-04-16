@@ -38,6 +38,7 @@ Email: contact@neilnie.com
 
     <!-- RTAB-map Node-->
     <include file="$(find rtabmap_ros)/launch/rtabmap.launch">
+
         <arg name="rtabmap_args"		value="--delete_db_on_start" />
         <arg name="rgb_topic"               	value="/$(arg zed_namespace)/$(arg rgb_topic)" />
         <arg name="depth_topic"             	value="/$(arg zed_namespace)/$(arg depth_topic)" />
@@ -48,6 +49,7 @@ Email: contact@neilnie.com
         <arg name="visual_odometry"           value="false" />
         <arg name="odom_topic"                value="/$(arg zed_namespace)/odom" />
         <param name="rtabmap/grid_eroded" value="false"/>
+
     </include>
 
 </launch>

@@ -42,9 +42,11 @@ float round_float(float var){
     // 3766.66 + .5 =37.6716    for rounding off value
     // then type cast to int so value is 3766
     // then divided by 100 so the value converted into 37.66
-    float value = (int)(var * 100.0f + 0.5f);
-    value = value + (5.0f - float(((int(value) % 10))));
-    return (float)value / 100;
+//    float value = (int)(var * 100.0f + 0.5f);
+//    value = value + (0.50f - float(((int(value) % 10))));
+//    return (float)value / 100;
+
+    return ceil(var * 200.0) / 200.0;
 }
 
 void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input){
@@ -59,7 +61,7 @@ void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input){
     // leaf size is 12cm. This effects the resolution of the map.
     pcl::VoxelGrid<pcl::PointXYZRGB> sor;
     sor.setInputCloud (temp_cloud);
-    sor.setLeafSize (0.12f, 0.12f, 0.12f);
+    sor.setLeafSize (0.10f, 0.10f, 0.10f);
     sor.filter (*temp_cloud);
 
     // run a box filter.
@@ -67,10 +69,11 @@ void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input){
     // sizes: [-5...0...+5]
     pcl::CropBox<pcl::PointXYZRGB> boxFilter;
     boxFilter.setMin(Eigen::Vector4f(0, -5, -5, 0.0));
-    boxFilter.setMax(Eigen::Vector4f(10, 5, +5, 0.0));
+    boxFilter.setMax(Eigen::Vector4f(15, 5, +5, 0.0));
     boxFilter.setInputCloud(temp_cloud);
     boxFilter.filter(*temp_cloud);
 
+    local_map.clearAll();
 
     for (int i = 0; i < temp_cloud->points.size(); i+=1) {
 
@@ -79,10 +82,14 @@ void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input){
         float pos_x = (round_float(point.x)) <= (12.0f) ? (round_float(point.x)) : (12.0);
         float pos_y = round_float(point.y) <= (5.0f)? round_float(point.y) : (5.0);
 
+//        std::cout << std::to_string(pos_x) << std::endl;
+//        std::cout << std::to_string(pos_y) << std::endl;
+//        std::cout << "-------" << std::endl;
+
         if (point.r == 0.0f && point.g == 255.0f && point.b == 0.0f)
             local_map.atPosition("elevation", grid_map::Position(pos_x, pos_y)) = 0.0;
-        else if (point.z > 0.75)
-            local_map.atPosition("elevation", grid_map::Position(pos_x, pos_y)) = 253;
+        else if (point.z > 0.50)
+             local_map.atPosition("elevation", grid_map::Position(pos_x, pos_y)) = 255;
         else
             local_map.atPosition("elevation", grid_map::Position(pos_x, pos_y)) = point.z;
     }
@@ -95,23 +102,21 @@ void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input){
     float trans_y = tf_msg.transform.translation.y;
 
     local_map.setPosition(grid_map::Position(trans_x, trans_y));
-//    local_map["elevation"].
-    // expand global map
+
     global_map.addDataFrom(local_map, true, true, true);
-    local_map.setPosition(grid_map::Position(5, 0));
+    local_map.setPosition(grid_map::Position(6, 0));
 
     ros::Time time = ros::Time::now();
     local_map.setTimestamp(time.toNSec());
     nav_msgs::OccupancyGrid message_local;
-    grid_map::GridMapRosConverter::toOccupancyGrid(local_map, "elevation", -10.0, 10.0, message_local);
+    grid_map::GridMapRosConverter::toOccupancyGrid(local_map, "elevation", -300.0, 300.0, message_local);
     map_pub_local.publish(message_local);
 
     // publish global map
     global_map.setTimestamp(time.toNSec());
     nav_msgs::OccupancyGrid message_global;
-    grid_map::GridMapRosConverter::toOccupancyGrid(global_map, "elevation", -10.0, 10.0, message_global);
+    grid_map::GridMapRosConverter::toOccupancyGrid(global_map, "elevation", -300.0, 300.0, message_global);
     map_pub.publish(message_global);
-
 }
 
 int main (int argc, char** argv) {
@@ -131,7 +136,7 @@ int main (int argc, char** argv) {
     // Create global grid map.
     global_map = grid_map::GridMap({"elevation"});
     global_map.setFrameId("map");
-    global_map.setGeometry(grid_map::Length(10, 10), 0.10);
+    global_map.setGeometry(grid_map::Length(10, 10), 0.05);
     global_map.setPosition(grid_map::Position(5, 0));
     ROS_INFO("Created map with size %f x %f m (%i x %i cells).\n The center of the map is located at (%f, %f) in the %s frame.",
              global_map.getLength().x(), global_map.getLength().y(),
@@ -141,14 +146,25 @@ int main (int argc, char** argv) {
     // Create local grid map
     local_map = grid_map::GridMap({"elevation"});
     local_map.setFrameId("base_link");
-    local_map.setGeometry(grid_map::Length(12, 10), 0.10);
+    local_map.setGeometry(grid_map::Length(12, 10), 0.05);
     local_map.setPosition(grid_map::Position(6, 0));
     ROS_INFO("Created map with size %f x %f m (%i x %i cells).\n The center of the map is located at (%f, %f) in the %s frame.",
              local_map.getLength().x(), local_map.getLength().y(),
              local_map.getSize()(0), local_map.getSize()(1),
              local_map.getPosition().x(), local_map.getPosition().y(), local_map.getFrameId().c_str());
 
-//    // get robot transform
+
+//    for (grid_map::GridMapIterator it(local_map); !it.isPastEnd(); ++it) {
+//        grid_map::Position position;
+//        local_map.getPosition(*it, position);
+//        std::cout << std::to_string(position.x()) << std::endl;
+//        std::cout << std::to_string(position.y()) << std::endl;
+//        std::cout << "-------" << std::endl;
+//    }
+//
+//    abort();
+
+    // get robot transform
     tf::TransformListener listener;
 
     ros::Rate rate(30.0);
@@ -165,5 +181,4 @@ int main (int argc, char** argv) {
 
     ros::spin();
     return 0;
-
 }

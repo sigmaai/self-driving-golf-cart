@@ -68,17 +68,6 @@ class HASNode:
             plt.grid(True)
             plt.axis("equal")
 
-            #
-
-            # x = path.xlist
-            # y = path.ylist
-            # yaw = path.yawlist
-            #
-
-            # plt.plot(self.ox, self.oy, ".k")
-            # plt.plot(x, y, "-r", label="Hybrid A* path")
-            # plt.grid(True)
-            # plt.axis("equal")
             plt.pause(0.001)
 
             rate.sleep()

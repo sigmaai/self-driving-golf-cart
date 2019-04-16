@@ -31,7 +31,7 @@
     <!-- start joystick -->
     <include file="$(find joy)/launch/joystick.launch"/>
 
-    <!-- start rqt gui -->
-    <node name="rqt_gui" pkg="rqt_gui" type="rqt_gui"/>
+<!--    &lt;!&ndash; start rqt gui &ndash;&gt;-->
+<!--    <node name="rqt_gui" pkg="rqt_gui" type="rqt_gui"/>-->
 
 </launch>

@@ -7030,7 +7030,34 @@
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/path_planning/scripts/.DS_Store">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/path_planning/scripts/a_star.py">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/path_planning/scripts/a_star.pyc">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/path_planning/scripts/car.py">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/path_planning/scripts/car.pyc">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/path_planning/scripts/global_path.py">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/path_planning/scripts/has_node.py">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/path_planning/scripts/hybrid_a_star.py">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/path_planning/scripts/hybrid_a_star.pyc">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/path_planning/scripts/reeds_shepp_path_planning.py">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/path_planning/scripts/reeds_shepp_path_planning.pyc">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/path_planning/src/build_map.cpp">
