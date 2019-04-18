@@ -20,6 +20,7 @@
 #include <pcl/sample_consensus/model_types.h>
 #include <pcl_ros/transforms.h>
 #include <pcl/filters/crop_box.h>
+#include <chrono>
 // Gridmap stuff
 #include <grid_map_ros/grid_map_ros.hpp>
 #include <grid_map_msgs/GridMap.h>
@@ -51,6 +52,8 @@ float round_float(float var){
 
 void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input){
 
+//    std::chrono::high_resolution_clock::time_point t1 = std::chrono::high_resolution_clock::now();
+
     // Create a container for the data.
     pcl::PointCloud<pcl::PointXYZRGB>::Ptr temp_cloud(new pcl::PointCloud<pcl::PointXYZRGB>);
     pcl::PCLPointCloud2 pcl_pc2;
@@ -65,15 +68,16 @@ void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input){
     sor.filter (*temp_cloud);
 
     // run a box filter.
-    // front: [0, 10]
-    // sizes: [-5...0...+5]
+    // front: [0, 10]; side: [-5...0...+5]
     pcl::CropBox<pcl::PointXYZRGB> boxFilter;
     boxFilter.setMin(Eigen::Vector4f(0, -5, -5, 0.0));
-    boxFilter.setMax(Eigen::Vector4f(15, 5, +5, 0.0));
+    boxFilter.setMax(Eigen::Vector4f(12, 5, +5, 0.0));
     boxFilter.setInputCloud(temp_cloud);
     boxFilter.filter(*temp_cloud);
 
     local_map.clearAll();
+
+//    std::cout << std::to_string(temp_cloud->points.size()) << std::endl;
 
     for (int i = 0; i < temp_cloud->points.size(); i+=1) {
 
@@ -93,8 +97,8 @@ void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input){
         else
             local_map.atPosition("elevation", grid_map::Position(pos_x, pos_y)) = point.z;
     }
-
-    // publish local map
+    /*
+    // publish global map
     geometry_msgs::TransformStamped tf_msg;
 
     tf::transformStampedTFToMsg(transform, tf_msg);
@@ -106,17 +110,25 @@ void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input){
     global_map.addDataFrom(local_map, true, true, true);
     local_map.setPosition(grid_map::Position(6, 0));
 
+    // publish global map
+    global_map.setTimestamp(time.toNSec());
+    nav_msgs::OccupancyGrid message_global;
+    grid_map::GridMapRosConverter::toOccupancyGrid(global_map, "elevation", -300.0, 300.0, message_global);
+    map_pub.publish(message_global);
+
+     */
+    // publish local map
     ros::Time time = ros::Time::now();
     local_map.setTimestamp(time.toNSec());
     nav_msgs::OccupancyGrid message_local;
     grid_map::GridMapRosConverter::toOccupancyGrid(local_map, "elevation", -300.0, 300.0, message_local);
     map_pub_local.publish(message_local);
 
-    // publish global map
-    global_map.setTimestamp(time.toNSec());
-    nav_msgs::OccupancyGrid message_global;
-    grid_map::GridMapRosConverter::toOccupancyGrid(global_map, "elevation", -300.0, 300.0, message_global);
-    map_pub.publish(message_global);
+    // timing test
+//    std::chrono::high_resolution_clock::time_point t2 = std::chrono::high_resolution_clock::now();
+//    auto duration = std::chrono::duration_cast<std::chrono::microseconds>( t2 - t1 ).count();
+//    std::cout << "time" << std::endl;
+//    std::cout << std::to_string(duration) << std::endl;
 }
 
 int main (int argc, char** argv) {
@@ -128,20 +140,20 @@ int main (int argc, char** argv) {
     ros::NodeHandle nh;
 
     // Create a ROS subscriber for the input point cloud
-    ros::Subscriber sub = nh.subscribe("/point_cloud/ground_segmentation", 1, cloud_callback);
+    ros::Subscriber sub = nh.subscribe("/point_cloud/ground_segmentation", 3, cloud_callback);
 
     map_pub = nh.advertise<nav_msgs::OccupancyGrid> ("/grid_map", 1);
-    map_pub_local = nh.advertise<nav_msgs::OccupancyGrid> ("/grid_map_local", 1);
+    map_pub_local = nh.advertise<nav_msgs::OccupancyGrid> ("/grid_map_local", 3);
 
     // Create global grid map.
-    global_map = grid_map::GridMap({"elevation"});
-    global_map.setFrameId("map");
-    global_map.setGeometry(grid_map::Length(10, 10), 0.05);
-    global_map.setPosition(grid_map::Position(5, 0));
-    ROS_INFO("Created map with size %f x %f m (%i x %i cells).\n The center of the map is located at (%f, %f) in the %s frame.",
-             global_map.getLength().x(), global_map.getLength().y(),
-             global_map.getSize()(0), global_map.getSize()(1),
-             global_map.getPosition().x(), global_map.getPosition().y(), global_map.getFrameId().c_str());
+//    global_map = grid_map::GridMap({"elevation"});
+//    global_map.setFrameId("map");
+//    global_map.setGeometry(grid_map::Length(10, 10), 0.05);
+//    global_map.setPosition(grid_map::Position(5, 0));
+//    ROS_INFO("Created map with size %f x %f m (%i x %i cells).\n The center of the map is located at (%f, %f) in the %s frame.",
+//             global_map.getLength().x(), global_map.getLength().y(),
+//             global_map.getSize()(0), global_map.getSize()(1),
+//             global_map.getPosition().x(), global_map.getPosition().y(), global_map.getFrameId().c_str());
 
     // Create local grid map
     local_map = grid_map::GridMap({"elevation"});
@@ -165,9 +177,10 @@ int main (int argc, char** argv) {
 //    abort();
 
     // get robot transform
+
     tf::TransformListener listener;
 
-    ros::Rate rate(30.0);
+    ros::Rate rate(50.0);
     while (nh.ok()){
 
         try {

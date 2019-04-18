@@ -15,7 +15,7 @@ contact: contact@neilnie.com
     <include file="$(find path_planning)/launch/build_map.launch" />
 
     <!--    remapping topics-->
-    <remap from="map" to="/grid_map"/>
+    <remap from="map" to="/grid_map_local"/>
     <remap from="move_base/current_goal" to="move_base_simple/goal"/>
 
     <!--    launch move base node. This node subscribes to the map published by `build_map`. -->

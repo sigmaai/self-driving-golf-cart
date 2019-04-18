@@ -4,17 +4,19 @@
     <list default="true" id="8075d57d-0c29-4084-b018-ee8c503d1889" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ros/src/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/Project.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/Project.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_display_rviz/zed_display_rviz.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_display_rviz/zed_display_rviz.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/zed_wrapper.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/zed_wrapper.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/gui/launch/rqt.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/gui/launch/rqt.launch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/path_planning/launch/build_map.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/path_planning/launch/build_map.launch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/path_planning/launch/navigation.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/path_planning/launch/navigation.launch" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ros/src/path_planning/launch/rtab_mapping.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/path_planning/launch/rtab_mapping.launch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/path_planning/params/base_local_planner_params.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/path_planning/params/base_local_planner_params.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/path_planning/launch/rtab_mapping_navigation.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/path_planning/launch/rtab_mapping_navigation.launch" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ros/src/path_planning/params/costmap_common_params.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/path_planning/params/costmap_common_params.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/path_planning/params/costmap_global_params.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/path_planning/params/costmap_global_params.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ros/src/path_planning/params/costmap_local_params.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/path_planning/params/costmap_local_params.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/path_planning/scripts/a_star.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/path_planning/scripts/a_star.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ros/src/path_planning/scripts/has_node.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/path_planning/scripts/has_node.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/path_planning/src/localmap_tf_broadcaster.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/path_planning/src/localmap_tf_broadcaster.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/path_planning/scripts/hybrid_a_star.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/path_planning/scripts/hybrid_a_star.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/path_planning/src/build_map.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/path_planning/src/build_map.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ros/src/path_planning/src/navigation_goals.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/path_planning/src/navigation_goals.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/point_cloud/src/rgb_segmentation_point_cloud.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/point_cloud/src/rgb_segmentation_point_cloud.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +50,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ros/src/path_planning/scripts/hybrid_a_star.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
+            <state relative-caret-position="15">
               <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
               <folding>
                 <element signature="e#88#99#0" expanded="true" />
@@ -60,8 +62,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ros/src/path_planning/scripts/has_node.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="47" column="32" lean-forward="true" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
+            <state relative-caret-position="228">
+              <caret line="99" column="38" selection-start-line="99" selection-start-column="38" selection-end-line="99" selection-end-column="38" />
               <folding>
                 <element signature="e#1286#1296#0" expanded="true" />
               </folding>
@@ -72,8 +74,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ros/src/path_planning/scripts/a_star.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2955">
-              <caret line="199" column="23" selection-start-line="199" selection-start-column="23" selection-end-line="199" selection-end-column="23" />
+            <state relative-caret-position="406">
+              <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
               <folding>
                 <element signature="e#149#160#0" expanded="true" />
               </folding>
@@ -200,18 +202,18 @@
         <option value="$PROJECT_DIR$/ros/src/path_planning/scripts/car.py" />
         <option value="$PROJECT_DIR$/ros/src/path_planning/scripts/reeds_shepp_path_planning.py" />
         <option value="$PROJECT_DIR$/ros/src/path_planning/scripts/global_path.py" />
-        <option value="$PROJECT_DIR$/ros/src/path_planning/scripts/a_star.py" />
         <option value="$PROJECT_DIR$/ros/src/segmentation/scripts/segmentation_node" />
+        <option value="$PROJECT_DIR$/ros/src/path_planning/scripts/a_star.py" />
         <option value="$PROJECT_DIR$/ros/src/path_planning/scripts/hybrid_a_star.py" />
         <option value="$PROJECT_DIR$/ros/src/path_planning/scripts/has_node.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="74" />
-    <option name="y" value="27" />
-    <option name="width" value="1522" />
-    <option name="height" value="873" />
+    <option name="x" value="97" />
+    <option name="y" value="112" />
+    <option name="width" value="1372" />
+    <option name="height" value="788" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -221,6 +223,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -246,11 +249,18 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="path_planning" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
+              <item name="ros" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="path_planning" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -491,11 +501,15 @@
       <workItem from="1554857681306" duration="3000" />
       <workItem from="1555347451026" duration="7827000" />
       <workItem from="1555445136222" duration="629000" />
+      <workItem from="1555524467055" duration="2000" />
+      <workItem from="1555544043066" duration="130000" />
+      <workItem from="1555544382855" duration="21000" />
+      <workItem from="1555544611785" duration="2569000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="177569000" />
+    <option name="totallyTimeSpent" value="180291000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -510,7 +524,7 @@
     <frame x="65" y="28" width="1535" height="872" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5096525" visible="true" weight="0.22364002" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5096525" visible="true" weight="0.23707186" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32262382" />
@@ -521,7 +535,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4995015" visible="true" weight="0.31994644" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4995015" visible="true" weight="0.31994644" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50049853" side_tool="true" weight="0.33847636" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Python Console" order="12" />
@@ -820,26 +834,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/path_planning/scripts/hybrid_a_star.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-          <folding>
-            <element signature="e#88#99#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/path_planning/scripts/a_star.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2955">
-          <caret line="199" column="23" selection-start-line="199" selection-start-column="23" selection-end-line="199" selection-end-column="23" />
-          <folding>
-            <element signature="e#149#160#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/path_planning/scripts/car.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -850,10 +844,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/path_planning/scripts/hybrid_a_star.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+          <folding>
+            <element signature="e#88#99#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/path_planning/scripts/a_star.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
+          <folding>
+            <element signature="e#149#160#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/path_planning/scripts/has_node.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="47" column="32" lean-forward="true" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
+        <state relative-caret-position="228">
+          <caret line="99" column="38" selection-start-line="99" selection-start-column="38" selection-end-line="99" selection-end-column="38" />
           <folding>
             <element signature="e#1286#1296#0" expanded="true" />
           </folding>

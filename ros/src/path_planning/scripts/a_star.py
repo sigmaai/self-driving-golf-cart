@@ -107,8 +107,7 @@ def dp_planning(sx, sy, gx, gy, ox, oy, reso, rr):
                     heapq.heappush(
                         pq, (node.cost, calc_index(node, xw, minx, miny)))
 
-    rx, ry = calc_final_path(closedset[calc_index(
-        nstart, xw, minx, miny)], closedset, reso)
+    rx, ry = calc_final_path(closedset[calc_index(nstart, xw, minx, miny)], closedset, reso)
 
     return rx, ry, closedset
 

@@ -18,6 +18,8 @@ Email: contact@neilnie.com
     <include file="$(find path_planning)/launch/rtab_mapping.launch" />
 
     <remap from="map" to="/rtabmap/grid_map"/>
+    <remap from="openni_points" to="/zed/point_cloud/cloud_registered"/>
+<!--    <remap from="move_base_simple/goal" to="/planner_goal"/>-->
 
     <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
         <rosparam file="$(find path_planning)/params/costmap_common_params.yaml" command="load" ns="global_costmap" />

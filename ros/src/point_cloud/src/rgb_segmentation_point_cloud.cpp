@@ -17,10 +17,12 @@
 #include <pcl/filters/extract_indices.h>
 #include <pcl/sample_consensus/method_types.h>
 #include <pcl/sample_consensus/model_types.h>
-#include <pcl/segmentation/sac_segmentation.h>
 #include <pcl_ros/transforms.h>
+#include <pcl/filters/voxel_grid.h>
 // opencv
 #include <opencv2/opencv.hpp>
+#include <chrono>
+
 
 ros::Publisher pub;
 tf::StampedTransform transform;
@@ -37,40 +39,40 @@ void image_callback(const sensor_msgs::ImageConstPtr& msg)
         ROS_ERROR("cv_bridge exception: %s", e.what());
         return;
     }
-
-    cv::Mat dst;
-    cv::resize(cv_ptr->image, dst, cv::Size(1920, 1080));
-    segmentation_image = dst;
+    if (accept_frame) {
+        cv::Mat dst;
+        cv::resize(cv_ptr->image, dst, cv::Size(1920, 1080));
+        segmentation_image = dst;
+    }
 }
 
 void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input){
 
+//    std::chrono::high_resolution_clock::time_point t1 = std::chrono::high_resolution_clock::now();
+
     // Create a container for the data.
-    pcl::PointCloud<pcl::PointXYZRGB>::Ptr temp_cloud(new pcl::PointCloud<pcl::PointXYZRGB>);
     pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud_output(new pcl::PointCloud<pcl::PointXYZRGB>);
     pcl::PCLPointCloud2 pcl_pc2;
     pcl_conversions::toPCL(*input, pcl_pc2);
-    pcl::fromPCLPointCloud2(pcl_pc2,*temp_cloud);
-    *cloud_output = *temp_cloud;
+    pcl::fromPCLPointCloud2(pcl_pc2,*cloud_output);
 
 //    std::cout << std::to_string(temp_cloud->width) << std::endl;
 //    std::cout << std::to_string(temp_cloud->height) << std::endl;
 //    std::cout << "-------" << std::endl;
-//
 
-    auto* pixelPtr = (uint8_t*)segmentation_image.data;
     accept_frame = false;
-    
-    for(int i = 0; i < segmentation_image.rows; i+=2){
 
-        for(int j = 0; j < segmentation_image.cols; j+=2){
+    // std::cout << std::to_string(segmentation_image.rows * segmentation_image.cols) << std::endl;
 
-            uint8_t value = pixelPtr[i*segmentation_image.cols + j];
-            if (value == 255) {
+    for(int i = 0; i < segmentation_image.rows; i+=2) {
 
-                cloud_output->points[i*segmentation_image.cols + j].r = 0;
-                cloud_output->points[i*segmentation_image.cols + j].g = 255;
-                cloud_output->points[i*segmentation_image.cols + j].b = 0;
+        for (int j = 0; j < segmentation_image.cols; j += 2) {
+
+            if (segmentation_image.data[i * segmentation_image.cols + j] == 255) {
+
+                cloud_output->points[i * segmentation_image.cols + j].r = 0;
+                cloud_output->points[i * segmentation_image.cols + j].g = 255;
+                cloud_output->points[i * segmentation_image.cols + j].b = 0;
             }
         }
     }
@@ -82,6 +84,12 @@ void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input){
     cloud_publish.header = input->header;
 
     pub.publish(cloud_publish);
+
+//    // timing test
+//    std::chrono::high_resolution_clock::time_point t2 = std::chrono::high_resolution_clock::now();
+//    auto duration = std::chrono::duration_cast<std::chrono::microseconds>( t2 - t1 ).count();
+//    std::cout << "time" << std::endl;
+//    std::cout << std::to_string(duration) << std::endl;
 }
 
 int main (int argc, char** argv) {
@@ -93,10 +101,10 @@ int main (int argc, char** argv) {
     ros::NodeHandle nh;
 
     // Create a ROS subscriber for the input point cloud
-    ros::Subscriber sub = nh.subscribe("/zed/point_cloud/cloud_registered", 1, cloud_callback);
-    ros::Subscriber sub_img = nh.subscribe("/segmentation/output/road", 1, image_callback);
+    ros::Subscriber sub = nh.subscribe("/zed/point_cloud/cloud_registered", 3, cloud_callback);
+    ros::Subscriber sub_img = nh.subscribe("/segmentation/output/road", 3, image_callback);
 
-    pub = nh.advertise<sensor_msgs::PointCloud2> ("/point_cloud/ground_segmentation", 1);
+    pub = nh.advertise<sensor_msgs::PointCloud2> ("/point_cloud/ground_segmentation", 3);
 
     ros::spin();
     return 0;

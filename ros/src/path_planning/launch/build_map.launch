@@ -26,10 +26,6 @@ contact: contact@neilnie.com
 
         <node pkg="point_cloud" name="rgb_segmentation_point_cloud" type="rgb_segmentation_point_cloud" output="screen" />
 
-<!--        <node pkg="grid_map_visualization" type="grid_map_visualization" name="grid_map_visualization" output="screen">-->
-<!--            <rosparam command="load" file="$(find path_planning)/params/tutorial_demo.yaml" />-->
-<!--        </node>-->
-
     </group>
 
 </launch>

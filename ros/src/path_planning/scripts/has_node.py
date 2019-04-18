@@ -35,8 +35,8 @@ import reeds_shepp_path_planning as rs
 from nav_msgs.msg import OccupancyGrid
 import hybrid_a_star
 
-XY_GRID_RESOLUTION = 1.0  # [m]
-YAW_GRID_RESOLUTION = np.deg2rad(5.0)  # [rad]
+XY_GRID_RESOLUTION = 5.0  # [m]
+YAW_GRID_RESOLUTION = np.deg2rad(20.0)  # [rad]
 
 class HASNode:
 
@@ -55,20 +55,29 @@ class HASNode:
         # Running ROS loop
         rospy.loginfo(" ")
 
-        self.start = [40.0, 50.0, np.deg2rad(90.0)]
-        self.goal = [50.0, 100.0, np.deg2rad(90.0)]
+        self.start = [100.0, 5.0, np.deg2rad(90.0)]
+        self.goal = [100.0, 30.0, np.deg2rad(90.0)]
+        self.path = None
 
         while not rospy.is_shutdown():
 
-            plt.cla()
-            plt.plot(self.ox, self.oy, ".k")
-            rs.plot_arrow(self.start[0], self.start[1], self.start[2], fc='g')
-            rs.plot_arrow(self.goal[0], self.goal[1], self.goal[2])
+            if len(self.ox) != 0 and len(self.oy) != 0:
 
-            plt.grid(True)
-            plt.axis("equal")
+                plt.cla()
+                plt.plot(self.ox, self.oy, ".k")
+                rs.plot_arrow(self.start[0], self.start[1], self.start[2], fc='g')
+                rs.plot_arrow(self.goal[0], self.goal[1], self.goal[2])
 
-            plt.pause(0.001)
+                self.path = hybrid_a_star.hybrid_a_star_planning(self.start, self.goal, self.ox, self.oy,
+                                                                 XY_GRID_RESOLUTION,
+                                                                 YAW_GRID_RESOLUTION)
+                # x = self.path.xlist
+                # y = self.path.ylist
+                # yaw = self.path.yawlist
+
+                plt.grid(True)
+                # plt.plot(x, y, "-r", label="Hybrid A* path")
+                plt.pause(0.001)
 
             rate.sleep()
 
@@ -78,6 +87,9 @@ class HASNode:
 
         ox = []
         oy = []
+
+        # print("height: " + str(meta_data.height))
+        # print("width: " + str(meta_data.width))
 
         for row in range(0, meta_data.height):
 
@@ -89,29 +101,21 @@ class HASNode:
                     oy.append(col)
                     ox.insert(0, row)
 
+        for i in range(0, 200, 2):
+            ox.append(i)
+            oy.append(0.0)
+        for i in range(0, 250, 2):
+            ox.append(200)
+            oy.append(i)
+        for i in range(0, 200 + 1, 2):
+            ox.append(i)
+            oy.append(250)
+        for i in range(0, 250 + 1, 2):
+            ox.append(0.0)
+            oy.append(i)
+
         self.ox = ox
         self.oy = oy
-
-        # a = np.asarray(self.ox)
-        # a.tofile('ox.dat')
-        #
-        # b = np.asarray(self.oy)
-        # b.tofile('oy.dat')
-        #
-        # path = hybrid_a_star.hybrid_a_star_planning(self.start, self.goal, self.ox, self.oy, XY_GRID_RESOLUTION,
-        #                                             YAW_GRID_RESOLUTION)
-        #
-        # x = path.xlist
-        # y = path.ylist
-        # yaw = path.yawlist
-        #
-        # plt.cla()
-        # plt.plot(self.ox, self.oy, ".k")
-        # plt.plot(x, y, "-r", label="Hybrid A* path")
-        # plt.grid(True)
-        # plt.axis("equal")
-        #
-        # plt.pause(0.001)
 
 
 if __name__ == "__main__":

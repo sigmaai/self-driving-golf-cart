@@ -19,3 +19,16 @@ conservative_clear:
   reset_distance: 3.00
 aggressive_clear:
   reset_distance: 1.84
+
+observation_sources: point_cloud_sensor
+
+# assuming receiving a cloud from rtabmap_ros/obstacles_detection node
+point_cloud_sensor: {
+    sensor_frame: zed_camera_center,
+    data_type: PointCloud2,
+    topic: /zed/point_cloud/cloud_registered,
+    expected_update_rate: 30.0,
+    marking: true,
+    clearing: true,
+    min_obstacle_height: -99999.0,
+    max_obstacle_height: 99999.0}

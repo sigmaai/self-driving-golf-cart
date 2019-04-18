@@ -19,7 +19,7 @@ import reeds_shepp_path_planning as rs
 from car import move, check_car_collision, MAX_STEER, WB, plot_car
 
 
-XY_GRID_RESOLUTION = 2.0  # [m]
+XY_GRID_RESOLUTION = 5.0  # [m]
 YAW_GRID_RESOLUTION = np.deg2rad(5.0)  # [rad]
 MOTION_RESOLUTION = 0.1  # [m] path interporate resolution
 N_STEER = 20.0  # number of steer command

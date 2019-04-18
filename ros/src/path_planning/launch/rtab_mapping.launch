@@ -23,12 +23,6 @@ Email: contact@neilnie.com
     <arg name="camera_model"         	default="1" /> <!-- 0=ZED, 1=ZEDM-->
     <arg name="serial_number"        	default="0" />
     <arg name="verbose"              	default="true" />
-    <arg name="resolution"           	default="1" /> <!--0=RESOLUTION_HD2K, 1=RESOLUTION_HD1080, 2=RESOLUTION_HD720, 3=RESOLUTION_VGA -->
-    <arg name="frame_rate"           	default="30" />
-    <!-- RESOLUTION_HD2K   -> 2208*1242, available framerates: 15 fps.
-       RESOLUTION_HD1080 -> 1920*1080, available framerates: 15, 30 fps.
-       RESOLUTION_HD720  -> 1280*720,  available framerates: 15, 30, 60 fps.
-       RESOLUTION_VGA    -> 672*376,   available framerates: 15, 30, 60, 100 fps. -->
 
     <arg name="rgb_topic"               	default="rgb/image_rect_color" />
     <arg name="depth_topic"             	default="depth/depth_registered" />
@@ -48,8 +42,19 @@ Email: contact@neilnie.com
         <arg name="approx_sync"               value="false" />
         <arg name="visual_odometry"           value="false" />
         <arg name="odom_topic"                value="/$(arg zed_namespace)/odom" />
-        <param name="rtabmap/grid_eroded" value="false"/>
 
     </include>
+
+    <!-- Create point cloud for the local planner -->
+    <node pkg="nodelet" type="nodelet" name="obstacles_detection" args="load rtabmap_ros/obstacles_detection stereo_nodelet">
+
+        <remap from="cloud" to="/zed/point_cloud/cloud_registered"/>
+        <remap from="obstacles" to="/planner_cloud"/>
+
+        <param name="frame_id" type="string" value="base_footprint"/>
+        <param name="map_frame_id" type="string" value="map"/>
+        <param name="min_cluster_size" type="int" value="20"/>
+        <param name="max_obstacles_height" type="double" value="3.0"/>
+    </node>
 
 </launch>

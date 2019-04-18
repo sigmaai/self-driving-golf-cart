@@ -34,7 +34,7 @@ int main(int argc, char** argv){
     goal.target_pose.pose.position.y = 0.2;
     goal.target_pose.pose.orientation = tf::createQuaternionMsgFromYaw(0);
 
-    ros::Rate rate(10.0);
+    ros::Rate rate(3.0);
 
     while (node.ok()){
 
