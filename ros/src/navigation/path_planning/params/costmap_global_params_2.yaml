@@ -1,0 +1,9 @@
+#
+#
+
+global_costmap:
+  global_frame: map
+  robot_base_frame: base_link
+  update_frequency: 1
+  publish_frequency: 1
+  static_map: true

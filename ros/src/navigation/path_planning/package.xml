@@ -64,9 +64,6 @@
   <exec_depend>message_runtime</exec_depend>
   <exec_depend>roscpp</exec_depend>
   <exec_depend>rospy</exec_depend>
-  <exec_depend>rosserial_client</exec_depend>
-  <exec_depend>rosserial_msgs</exec_depend>
-  <exec_depend>rosserial_python</exec_depend>
   <exec_depend>std_msgs</exec_depend>
   <exec_depend>rtabmap</exec_depend>
   <exec_depend>rtabmap_ros</exec_depend>

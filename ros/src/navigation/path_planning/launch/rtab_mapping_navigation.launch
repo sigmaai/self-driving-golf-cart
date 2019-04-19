@@ -15,7 +15,7 @@ Email: contact@neilnie.com
 
 <launch>
 
-    <include file="$(find path_planning)/launch/rtab_mapping.launch" />
+    <include file="$(find mapping)/launch/rtab_mapping.launch" />
 
     <remap from="map" to="/rtabmap/grid_map" />
     <remap from="move_base/current_goal" to="move_base_simple/goal"/>

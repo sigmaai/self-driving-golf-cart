@@ -682,13 +682,19 @@ laser_geometry_DIR:PATH=/opt/ros/melodic/share/laser_geometry/cmake
 lib:FILEPATH=/opt/ros/melodic/lib/libbondcpp.so
 
 //Value Computed by CMake
-localization_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/localization
+localization_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/gps_localization
 
 //Value Computed by CMake
-localization_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/localization
+localization_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/gps_localization
 
 //The directory containing a CMake configuration file for map_msgs.
 map_msgs_DIR:PATH=/opt/ros/melodic/share/map_msgs/cmake
+
+//Value Computed by CMake
+mapping_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping
+
+//Value Computed by CMake
+mapping_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/mapping
 
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/melodic/share/message_filters/cmake
@@ -730,10 +736,10 @@ osm_cartography_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ro
 osm_cartography_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/osm
 
 //Value Computed by CMake
-path_planning_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning
+path_planning_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/path_planning
 
 //Value Computed by CMake
-path_planning_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/path_planning
+path_planning_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/path_planning
 
 //The directory containing a CMake configuration file for pcl_conversions.
 pcl_conversions_DIR:PATH=/opt/ros/melodic/share/pcl_conversions/cmake
@@ -1053,7 +1059,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=26
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=27
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

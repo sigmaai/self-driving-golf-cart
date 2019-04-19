@@ -1,0 +1,29 @@
+
+<!--
+
+Mapping package launch file. If you intend to
+run the navigation stack, please launch navigation.launch
+This file is for mapping only.
+
+Copyright (c) Yongyang Nie, 2019
+All Rights Reserved
+
+For questions, comments, and concerns, please
+contact: contact@neilnie.com
+
+-->
+
+<launch>
+
+    <group ns="mapping" >
+
+        <!--    start point cloud helper -->
+        <include file="$(find point_cloud)/launch/point_cloud_helper.launch" />
+
+        <node pkg="mapping" name="localmap_tf_broadcaster" type="localmap_tf_broadcaster" output="screen" />
+
+        <node pkg="mapping" name="build_map" type="build_map" output="screen" />
+
+    </group>
+
+</launch>

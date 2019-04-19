@@ -17,7 +17,7 @@
 -- BUILD_SHARED_LIBS is on
 -- BUILD_SHARED_LIBS is on
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--- ~~  traversing 22 packages in topological order:
+-- ~~  traversing 23 packages in topological order:
 -- ~~  - rosapi
 -- ~~  - rosbridge_server
 -- ~~  - rosbridge_suite (metapackage)
@@ -34,6 +34,7 @@
 -- ~~  - driver
 -- ~~  - gui
 -- ~~  - localization
+-- ~~  - mapping
 -- ~~  - path_planning
 -- ~~  - point_cloud
 -- ~~  - osm_cartography
@@ -86,10 +87,13 @@
 -- ==> add_subdirectory(gui)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
 -- +++ processing catkin package: 'localization'
--- ==> add_subdirectory(localization)
+-- ==> add_subdirectory(navigation/gps_localization)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'mapping'
+-- ==> add_subdirectory(navigation/mapping)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
 -- +++ processing catkin package: 'path_planning'
--- ==> add_subdirectory(path_planning)
+-- ==> add_subdirectory(navigation/path_planning)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
 -- +++ processing catkin package: 'point_cloud'
 -- ==> add_subdirectory(point_cloud)

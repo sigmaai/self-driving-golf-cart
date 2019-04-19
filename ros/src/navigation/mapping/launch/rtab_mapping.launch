@@ -16,6 +16,8 @@ Email: contact@neilnie.com
 
 <launch>
 
+    <node pkg="mapping" name="localmap_tf_broadcaster" type="localmap_tf_broadcaster" output="screen" />
+
     <include file="$(find point_cloud)/launch/point_cloud_helper.launch" />
 
     <arg name="zed_namespace"		    	default="zed" />
@@ -62,23 +64,23 @@ Email: contact@neilnie.com
         <param name="Mem/RehearsalSimilarity"      type="string" value="0.30"/>
         <param name="Reg/Force3DoF"                type="string" value="true"/>
         <param name="GridGlobal/MinSize"           type="string" value="20"/>
-        <param name="Grid/MaxGroundAngle" type="string" value="53" />
-        <param name="Grid/CellSize" type="string" value="0.1" />
-        <param name="Grid/ClusterRadius" type="string" value="0.2" />
-        <param name="Grid/RangeMax" type="string" value="7" />
+        <param name="Grid/MaxGroundAngle"          type="string" value="53" />
+        <param name="Grid/CellSize"                type="string" value="0.1" />
+        <param name="Grid/ClusterRadius"           type="string" value="0.2" />
+        <param name="Grid/RangeMax"                type="string" value="7" />
 
     </include>
 
     <!-- Create point cloud for the local planner -->
-    <node pkg="nodelet" type="nodelet" name="obstacles_detection" args="load rtabmap_ros/obstacles_detection stereo_nodelet">
+<!--    <node pkg="nodelet" type="nodelet" name="obstacles_detection" args="load rtabmap_ros/obstacles_detection stereo_nodelet">-->
 
-        <remap from="cloud" to="/zed/point_cloud/cloud_transformed"/>
-<!--        <remap from="obstacles" to="/planner_cloud"/>-->
+<!--        <remap from="cloud" to="/zed/point_cloud/cloud_transformed"/>-->
+<!--&lt;!&ndash;        <remap from="obstacles" to="/planner_cloud"/>&ndash;&gt;-->
 
-        <param name="frame_id" type="string" value="base_link"/>
-        <param name="map_frame_id" type="string" value="map"/>
-        <param name="min_cluster_size" type="int" value="10"/>
-        <param name="max_obstacles_height" type="double" value="4.0"/>
-    </node>
+<!--        <param name="frame_id" type="string" value="base_link"/>-->
+<!--        <param name="map_frame_id" type="string" value="map"/>-->
+<!--        <param name="min_cluster_size" type="int" value="10"/>-->
+<!--        <param name="max_obstacles_height" type="double" value="4.0"/>-->
+<!--    </node>-->
 
 </launch>

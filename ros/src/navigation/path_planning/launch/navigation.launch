@@ -12,7 +12,7 @@ contact: contact@neilnie.com
 <launch>
 
     <!--    build maps with grid_map-->
-    <include file="$(find path_planning)/launch/build_map.launch" />
+    <include file="$(find mapping)/launch/build_map.launch" />
 
     <!--    remapping topics-->
     <remap from="map" to="/grid_map"/>
