@@ -1,8 +1,8 @@
 #
 #
 
-obstacle_range: 8.0
-raytrace_range: 8.0
+obstacle_range: 2.5
+raytrace_range: 3.0
 footprint: [[ 1.1684, 0.6096], [1.1684, -0.6096], [-1.1684, -0.6096], [-1.1684, 0.6096]]
 footprint_padding: 0.05
 inflation_radius: 0.20
@@ -15,20 +15,24 @@ recovery_behaviors: [
 {name: aggressive_clear, type: clear_costmap_recovery/ClearCostmapRecovery}
 ]
 
+NavfnROS:
+  allow_unknown: true
+
 conservative_clear:
   reset_distance: 3.00
 aggressive_clear:
   reset_distance: 1.84
 
+
 observation_sources: point_cloud_sensor
 
-# assuming receiving a cloud from rtabmap_ros/obstacles_detection node
+  # assuming receiving a cloud from rtabmap_ros/obstacles_detection node
 point_cloud_sensor: {
     sensor_frame: zed_camera_center,
     data_type: PointCloud2,
-    topic: /zed/point_cloud/cloud_registered,
-    expected_update_rate: 30.0,
-    marking: true,
-    clearing: true,
-    min_obstacle_height: -99999.0,
-    max_obstacle_height: 99999.0}
+    topic: /point_cloud/ground_segmentation,
+    expected_update_rate: 10.0,
+    marking: false,
+    clearing: true
+}
+

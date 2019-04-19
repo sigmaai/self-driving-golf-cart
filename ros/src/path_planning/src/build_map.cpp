@@ -92,7 +92,7 @@ void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input){
 
         if (point.r == 0.0f && point.g == 255.0f && point.b == 0.0f)
             local_map.atPosition("elevation", grid_map::Position(pos_x, pos_y)) = 0.0;
-        else if (point.z > 0.50)
+        else if (point.z > 0.30)
              local_map.atPosition("elevation", grid_map::Position(pos_x, pos_y)) = 255;
         else
             local_map.atPosition("elevation", grid_map::Position(pos_x, pos_y)) = point.z;
@@ -121,7 +121,7 @@ void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input){
     ros::Time time = ros::Time::now();
     local_map.setTimestamp(time.toNSec());
     nav_msgs::OccupancyGrid message_local;
-    grid_map::GridMapRosConverter::toOccupancyGrid(local_map, "elevation", -300.0, 300.0, message_local);
+    grid_map::GridMapRosConverter::toOccupancyGrid(local_map, "elevation", -100.0, 300.0, message_local);
     map_pub_local.publish(message_local);
 
     // timing test
@@ -142,8 +142,8 @@ int main (int argc, char** argv) {
     // Create a ROS subscriber for the input point cloud
     ros::Subscriber sub = nh.subscribe("/point_cloud/ground_segmentation", 3, cloud_callback);
 
-    map_pub = nh.advertise<nav_msgs::OccupancyGrid> ("/grid_map", 1);
-    map_pub_local = nh.advertise<nav_msgs::OccupancyGrid> ("/grid_map_local", 3);
+//    map_pub = nh.advertise<nav_msgs::OccupancyGrid> ("/grid_map", 1);
+    map_pub_local = nh.advertise<nav_msgs::OccupancyGrid> ("/grid_map", 3);
 
     // Create global grid map.
 //    global_map = grid_map::GridMap({"elevation"});
@@ -173,8 +173,6 @@ int main (int argc, char** argv) {
 //        std::cout << std::to_string(position.y()) << std::endl;
 //        std::cout << "-------" << std::endl;
 //    }
-//
-//    abort();
 
     // get robot transform
 

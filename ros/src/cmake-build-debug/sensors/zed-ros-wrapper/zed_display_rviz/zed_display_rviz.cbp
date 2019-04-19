@@ -106,6 +106,9 @@
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/autopilot/scripts/visualization.py">
 			<Option target="dummy_zed_display_rviz"/>
 		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/autopilot/scripts/weights/i3d_rgb_64_v10.h5">
+			<Option target="dummy_zed_display_rviz"/>
+		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CATKIN_IGNORE">
 			<Option target="dummy_zed_display_rviz"/>
 		</Unit>
@@ -137,6 +140,33 @@
 			<Option target="dummy_zed_display_rviz"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles/3.13.4/CompilerIdCXX/a.out">
+			<Option target="dummy_zed_display_rviz"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles/3.14.2/CMakeCCompiler.cmake">
+			<Option target="dummy_zed_display_rviz"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles/3.14.2/CMakeCXXCompiler.cmake">
+			<Option target="dummy_zed_display_rviz"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles/3.14.2/CMakeDetermineCompilerABI_C.bin">
+			<Option target="dummy_zed_display_rviz"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles/3.14.2/CMakeDetermineCompilerABI_CXX.bin">
+			<Option target="dummy_zed_display_rviz"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles/3.14.2/CMakeSystem.cmake">
+			<Option target="dummy_zed_display_rviz"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles/3.14.2/CompilerIdC/CMakeCCompilerId.c">
+			<Option target="dummy_zed_display_rviz"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles/3.14.2/CompilerIdC/a.out">
+			<Option target="dummy_zed_display_rviz"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles/3.14.2/CompilerIdCXX/CMakeCXXCompilerId.cpp">
+			<Option target="dummy_zed_display_rviz"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles/3.14.2/CompilerIdCXX/a.out">
 			<Option target="dummy_zed_display_rviz"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake">
@@ -2194,6 +2224,27 @@
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/point_cloud_experiment.dir/progress.make">
 			<Option target="dummy_zed_display_rviz"/>
 		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/point_cloud_tf_broadcaster.dir/DependInfo.cmake">
+			<Option target="dummy_zed_display_rviz"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/point_cloud_tf_broadcaster.dir/build.make">
+			<Option target="dummy_zed_display_rviz"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/point_cloud_tf_broadcaster.dir/cmake_clean.cmake">
+			<Option target="dummy_zed_display_rviz"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/point_cloud_tf_broadcaster.dir/depend.make">
+			<Option target="dummy_zed_display_rviz"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/point_cloud_tf_broadcaster.dir/flags.make">
+			<Option target="dummy_zed_display_rviz"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/point_cloud_tf_broadcaster.dir/link.txt">
+			<Option target="dummy_zed_display_rviz"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/point_cloud_tf_broadcaster.dir/progress.make">
+			<Option target="dummy_zed_display_rviz"/>
+		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning/CMakeFiles/progress.marks">
 			<Option target="dummy_zed_display_rviz"/>
 		</Unit>
@@ -2684,6 +2735,27 @@
 			<Option target="dummy_zed_display_rviz"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/CMakeFiles/planar_segmentation.dir/progress.make">
+			<Option target="dummy_zed_display_rviz"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/CMakeFiles/point_cloud_tf_broadcaster.dir/DependInfo.cmake">
+			<Option target="dummy_zed_display_rviz"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/CMakeFiles/point_cloud_tf_broadcaster.dir/build.make">
+			<Option target="dummy_zed_display_rviz"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/CMakeFiles/point_cloud_tf_broadcaster.dir/cmake_clean.cmake">
+			<Option target="dummy_zed_display_rviz"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/CMakeFiles/point_cloud_tf_broadcaster.dir/depend.make">
+			<Option target="dummy_zed_display_rviz"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/CMakeFiles/point_cloud_tf_broadcaster.dir/flags.make">
+			<Option target="dummy_zed_display_rviz"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/CMakeFiles/point_cloud_tf_broadcaster.dir/link.txt">
+			<Option target="dummy_zed_display_rviz"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/CMakeFiles/point_cloud_tf_broadcaster.dir/progress.make">
 			<Option target="dummy_zed_display_rviz"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/CMakeFiles/point_cloud_transform.dir/DependInfo.cmake">
@@ -6712,7 +6784,7 @@
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/point_cloud/CMakeLists.txt">
 			<Option target="dummy_zed_display_rviz"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/point_cloud/launch/road_segmentation.launch">
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/point_cloud/launch/point_cloud_helper.launch">
 			<Option target="dummy_zed_display_rviz"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/point_cloud/package.xml">

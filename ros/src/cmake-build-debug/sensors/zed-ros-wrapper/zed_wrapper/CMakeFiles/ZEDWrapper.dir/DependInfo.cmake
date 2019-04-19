@@ -14,6 +14,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
   "ROSCONSOLE_BACKEND_LOG4CXX"
   "ROS_BUILD_SHARED_LIBS=1"
   "ROS_PACKAGE_NAME=\"zed_wrapper\""
+  "ZEDWrapper_EXPORTS"
   )
 
 # The include file search paths:

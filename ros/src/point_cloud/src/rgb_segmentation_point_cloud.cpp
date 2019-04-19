@@ -27,10 +27,9 @@
 ros::Publisher pub;
 tf::StampedTransform transform;
 cv::Mat segmentation_image;
-bool accept_frame;
 
-void image_callback(const sensor_msgs::ImageConstPtr& msg)
-{
+void image_callback(const sensor_msgs::ImageConstPtr& msg){
+
     cv_bridge::CvImagePtr cv_ptr;
     try{
         cv_ptr = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::MONO8);
@@ -39,11 +38,11 @@ void image_callback(const sensor_msgs::ImageConstPtr& msg)
         ROS_ERROR("cv_bridge exception: %s", e.what());
         return;
     }
-    if (accept_frame) {
-        cv::Mat dst;
-        cv::resize(cv_ptr->image, dst, cv::Size(1920, 1080));
-        segmentation_image = dst;
-    }
+    // 1280, 720
+
+    cv::Mat dst;
+    cv::resize(cv_ptr->image, dst, cv::Size(1920, 1080));
+    segmentation_image = dst;
 }
 
 void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input){
@@ -51,36 +50,35 @@ void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input){
 //    std::chrono::high_resolution_clock::time_point t1 = std::chrono::high_resolution_clock::now();
 
     // Create a container for the data.
-    pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud_output(new pcl::PointCloud<pcl::PointXYZRGB>);
+    pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud_input(new pcl::PointCloud<pcl::PointXYZRGB>);
     pcl::PCLPointCloud2 pcl_pc2;
     pcl_conversions::toPCL(*input, pcl_pc2);
-    pcl::fromPCLPointCloud2(pcl_pc2,*cloud_output);
+    pcl::fromPCLPointCloud2(pcl_pc2,*cloud_input);
 
-//    std::cout << std::to_string(temp_cloud->width) << std::endl;
-//    std::cout << std::to_string(temp_cloud->height) << std::endl;
+    pcl::PointIndices::Ptr inliers(new pcl::PointIndices());
+    pcl::ExtractIndices<pcl::PointXYZRGB> extract;
+
+//    std::cout << std::to_string(cloud_output->width) << std::endl;
+//    std::cout << std::to_string(cloud_output->height) << std::endl;
 //    std::cout << "-------" << std::endl;
 
-    accept_frame = false;
+    for(int i = 0; i < segmentation_image.rows; i+=1) {
 
-    // std::cout << std::to_string(segmentation_image.rows * segmentation_image.cols) << std::endl;
+        for (int j = 0; j < segmentation_image.cols; j += 1) {
 
-    for(int i = 0; i < segmentation_image.rows; i+=2) {
-
-        for (int j = 0; j < segmentation_image.cols; j += 2) {
-
-            if (segmentation_image.data[i * segmentation_image.cols + j] == 255) {
-
-                cloud_output->points[i * segmentation_image.cols + j].r = 0;
-                cloud_output->points[i * segmentation_image.cols + j].g = 255;
-                cloud_output->points[i * segmentation_image.cols + j].b = 0;
-            }
+            auto index = i * segmentation_image.cols + j;
+            if (segmentation_image.data[index] == 255)
+                inliers->indices.push_back(index);
         }
     }
 
-    accept_frame = true;
+    extract.setInputCloud(cloud_input);
+    extract.setIndices(inliers);
+    extract.setNegative(false);
+    extract.filter(*cloud_input);
 
     sensor_msgs::PointCloud2 cloud_publish;
-    pcl::toROSMsg(*cloud_output,cloud_publish);
+    pcl::toROSMsg(*cloud_input,cloud_publish);
     cloud_publish.header = input->header;
 
     pub.publish(cloud_publish);
@@ -94,7 +92,6 @@ void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input){
 
 int main (int argc, char** argv) {
 
-    // Initialize ROS
     ROS_INFO("Node started");
 
     ros::init(argc, argv, "rgb_segmentation_point_cloud");

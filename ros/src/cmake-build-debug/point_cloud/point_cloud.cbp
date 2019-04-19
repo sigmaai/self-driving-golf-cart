@@ -40,7 +40,6 @@
 					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent/include"/>
 					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include"/>
 					<Add directory="/usr/include/python2.7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include/hdf5/openmpi"/>
 					<Add directory="/usr/include/libxml2"/>
 					<Add directory="/usr/include/jsoncpp"/>
@@ -52,6 +51,7 @@
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
@@ -84,7 +84,6 @@
 					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent/include"/>
 					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include"/>
 					<Add directory="/usr/include/python2.7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include/hdf5/openmpi"/>
 					<Add directory="/usr/include/libxml2"/>
 					<Add directory="/usr/include/jsoncpp"/>
@@ -96,6 +95,7 @@
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
@@ -128,7 +128,6 @@
 					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent/include"/>
 					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include"/>
 					<Add directory="/usr/include/python2.7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include/hdf5/openmpi"/>
 					<Add directory="/usr/include/libxml2"/>
 					<Add directory="/usr/include/jsoncpp"/>
@@ -140,6 +139,7 @@
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
@@ -172,7 +172,6 @@
 					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent/include"/>
 					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include"/>
 					<Add directory="/usr/include/python2.7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include/hdf5/openmpi"/>
 					<Add directory="/usr/include/libxml2"/>
 					<Add directory="/usr/include/jsoncpp"/>
@@ -184,6 +183,7 @@
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
@@ -216,7 +216,6 @@
 					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent/include"/>
 					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include"/>
 					<Add directory="/usr/include/python2.7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include/hdf5/openmpi"/>
 					<Add directory="/usr/include/libxml2"/>
 					<Add directory="/usr/include/jsoncpp"/>
@@ -228,6 +227,7 @@
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
@@ -260,7 +260,6 @@
 					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent/include"/>
 					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include"/>
 					<Add directory="/usr/include/python2.7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include/hdf5/openmpi"/>
 					<Add directory="/usr/include/libxml2"/>
 					<Add directory="/usr/include/jsoncpp"/>
@@ -272,6 +271,7 @@
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
@@ -304,7 +304,6 @@
 					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent/include"/>
 					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include"/>
 					<Add directory="/usr/include/python2.7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include/hdf5/openmpi"/>
 					<Add directory="/usr/include/libxml2"/>
 					<Add directory="/usr/include/jsoncpp"/>
@@ -316,6 +315,7 @@
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
@@ -348,7 +348,6 @@
 					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent/include"/>
 					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include"/>
 					<Add directory="/usr/include/python2.7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include/hdf5/openmpi"/>
 					<Add directory="/usr/include/libxml2"/>
 					<Add directory="/usr/include/jsoncpp"/>
@@ -360,6 +359,7 @@
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>

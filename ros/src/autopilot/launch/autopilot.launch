@@ -19,7 +19,7 @@ Email: contact@neilnie.com
 <launch>
 
     <node name="autopilot_node" type="autopilot_node" pkg="autopilot" output="screen">
-    	<param name="model_path" value="$(find autopilot)/scripts/weights/i3d_rgb_64_f_v6.h5" />
+    	<param name="model_path" value="$(find autopilot)/scripts/weights/i3d_rgb_64_v10.h5" />
         <param name="gpu_frac" value="0.30"/>
         <param name="img_width" value="224"/>
         <param name="img_height" value="224"/>

@@ -88,8 +88,8 @@ class HASNode:
         ox = []
         oy = []
 
-        # print("height: " + str(meta_data.height))
-        # print("width: " + str(meta_data.width))
+        print("height: " + str(meta_data.height))
+        print("width: " + str(meta_data.width))
 
         for row in range(0, meta_data.height):
 
@@ -99,7 +99,7 @@ class HASNode:
 
                 if occupancy_data > 90:
                     oy.append(col)
-                    ox.insert(0, row)
+                    ox.append(row)
 
         for i in range(0, 200, 2):
             ox.append(i)

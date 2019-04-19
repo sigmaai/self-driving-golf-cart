@@ -2,7 +2,7 @@
 
   <group ns="point_cloud">
 
-    <!--  <node pkg="point_cloud" type="point_cloud_transform" name="point_cloud_transform" output="screen" />-->
+      <node pkg="point_cloud" type="point_cloud_transform" name="point_cloud_transform" output="screen" />
 
 <!--    <node pkg="nodelet" type="nodelet" name="pcl_manager" args="manager" output="screen" />-->
 
@@ -18,7 +18,7 @@
 <!--      </rosparam>-->
 <!--    </node>-->
 
-    <node pkg="point_cloud" type="ground_plane_detection" name="ground_plane_detection" output="screen" />
+<!--    <node pkg="point_cloud" type="ground_plane_detection" name="ground_plane_detection" output="screen" />-->
 
     <node pkg="point_cloud" type="rgb_segmentation_point_cloud" name="rgb_segmentation_point_cloud" />
 
