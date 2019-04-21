@@ -17,10 +17,7 @@
 -- BUILD_SHARED_LIBS is on
 -- BUILD_SHARED_LIBS is on
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--- ~~  traversing 22 packages in topological order:
--- ~~  - rosapi
--- ~~  - rosbridge_server
--- ~~  - rosbridge_suite (metapackage)
+-- ~~  traversing 18 packages in topological order:
 -- ~~  - gps
 -- ~~  - segmentation
 -- ~~  - simulation
@@ -28,7 +25,6 @@
 -- ~~  - object_detection
 -- ~~  - camera
 -- ~~  - joy
--- ~~  - rosbridge_library
 -- ~~  - autopilot
 -- ~~  - data_logger
 -- ~~  - driver
@@ -41,14 +37,6 @@
 -- ~~  - zed_ros (metapackage)
 -- ~~  - zed_wrapper
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--- +++ processing catkin package: 'rosapi'
--- ==> add_subdirectory(rosbridge/rosapi)
--- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
--- rosapi: 1 messages, 24 services
--- +++ processing catkin package: 'rosbridge_server'
--- ==> add_subdirectory(rosbridge/rosbridge_server)
--- +++ processing catkin metapackage: 'rosbridge_suite'
--- ==> add_subdirectory(rosbridge/rosbridge_suite)
 -- +++ processing catkin package: 'gps'
 -- ==> add_subdirectory(sensors/gps)
 -- +++ processing catkin package: 'segmentation'
@@ -69,10 +57,6 @@
 -- ==> add_subdirectory(sensors/camera)
 -- +++ processing catkin package: 'joy'
 -- ==> add_subdirectory(sensors/joystick)
--- +++ processing catkin package: 'rosbridge_library'
--- ==> add_subdirectory(rosbridge/rosbridge_library)
--- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
--- rosbridge_library: 9 messages, 10 services
 -- +++ processing catkin package: 'autopilot'
 -- ==> add_subdirectory(autopilot)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
