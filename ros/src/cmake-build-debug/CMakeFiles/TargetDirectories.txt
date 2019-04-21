@@ -424,6 +424,7 @@
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/path_planning/CMakeFiles/edit_cache.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/path_planning/CMakeFiles/install/local.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/path_planning/CMakeFiles/test.dir
+/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/path_planning/CMakeFiles/dynamic_navigation_goals.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/path_planning/CMakeFiles/move_base_msgs_generate_messages_eus.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/path_planning/CMakeFiles/move_base_msgs_generate_messages_cpp.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/path_planning/CMakeFiles/move_base_msgs_generate_messages_lisp.dir

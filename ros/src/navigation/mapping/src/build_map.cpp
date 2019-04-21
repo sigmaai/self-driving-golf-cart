@@ -25,8 +25,8 @@
 #include <grid_map_ros/grid_map_ros.hpp>
 #include <grid_map_msgs/GridMap.h>
 
-ros::Publisher map_pub, map_pub_local;
-grid_map::GridMap global_map, local_map;
+ros::Publisher map_pub_local;
+grid_map::GridMap local_map;
 tf::StampedTransform transform;
 
 /*
@@ -97,26 +97,7 @@ void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input){
         else
             local_map.atPosition("elevation", grid_map::Position(pos_x, pos_y)) = point.z;
     }
-    /*
-    // publish global map
-    geometry_msgs::TransformStamped tf_msg;
 
-    tf::transformStampedTFToMsg(transform, tf_msg);
-    float trans_x = tf_msg.transform.translation.x + 5;
-    float trans_y = tf_msg.transform.translation.y;
-
-    local_map.setPosition(grid_map::Position(trans_x, trans_y));
-
-    global_map.addDataFrom(local_map, true, true, true);
-    local_map.setPosition(grid_map::Position(6, 0));
-
-    // publish global map
-    global_map.setTimestamp(time.toNSec());
-    nav_msgs::OccupancyGrid message_global;
-    grid_map::GridMapRosConverter::toOccupancyGrid(global_map, "elevation", -300.0, 300.0, message_global);
-    map_pub.publish(message_global);
-
-     */
     // publish local map
     ros::Time time = ros::Time::now();
     local_map.setTimestamp(time.toNSec());
@@ -145,16 +126,6 @@ int main (int argc, char** argv) {
 //    map_pub = nh.advertise<nav_msgs::OccupancyGrid> ("/grid_map", 1);
     map_pub_local = nh.advertise<nav_msgs::OccupancyGrid> ("/grid_map", 3);
 
-    // Create global grid map.
-//    global_map = grid_map::GridMap({"elevation"});
-//    global_map.setFrameId("map");
-//    global_map.setGeometry(grid_map::Length(10, 10), 0.05);
-//    global_map.setPosition(grid_map::Position(5, 0));
-//    ROS_INFO("Created map with size %f x %f m (%i x %i cells).\n The center of the map is located at (%f, %f) in the %s frame.",
-//             global_map.getLength().x(), global_map.getLength().y(),
-//             global_map.getSize()(0), global_map.getSize()(1),
-//             global_map.getPosition().x(), global_map.getPosition().y(), global_map.getFrameId().c_str());
-
     // Create local grid map
     local_map = grid_map::GridMap({"elevation"});
     local_map.setFrameId("base_link");
@@ -164,7 +135,6 @@ int main (int argc, char** argv) {
              local_map.getLength().x(), local_map.getLength().y(),
              local_map.getSize()(0), local_map.getSize()(1),
              local_map.getPosition().x(), local_map.getPosition().y(), local_map.getFrameId().c_str());
-
 
 //    for (grid_map::GridMapIterator it(local_map); !it.isPastEnd(); ++it) {
 //        grid_map::Position position;

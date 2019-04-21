@@ -213,6 +213,9 @@ include_directories(
 add_executable(navigation_goals ../path_planning/src/navigation_goals.cpp)
 target_link_libraries(navigation_goals ${catkin_LIBRARIES})
 
+add_executable(dynamic_navigation_goals ../path_planning/src/dynamic_navigation_goals.cpp)
+target_link_libraries(dynamic_navigation_goals ${catkin_LIBRARIES})
+
 install(DIRECTORY
         launch
         DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})

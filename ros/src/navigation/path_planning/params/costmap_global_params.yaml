@@ -1,9 +1,7 @@
-#
-#
 
 global_costmap:
-  global_frame: map
-  robot_base_frame: base_link
-  update_frequency: 1
-  publish_frequency: 1
+  global_frame: odom
+  robot_base_frame: zed_camera_center
+  update_frequency: 1.0
+  publish_frequency: 1.0
   static_map: true

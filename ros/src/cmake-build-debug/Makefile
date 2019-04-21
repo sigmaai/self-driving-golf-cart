@@ -3730,6 +3730,19 @@ bond_generate_messages_lisp/fast:
 .PHONY : bond_generate_messages_lisp/fast
 
 #=============================================================================
+# Target rules for targets named dynamic_navigation_goals
+
+# Build rule for target.
+dynamic_navigation_goals: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dynamic_navigation_goals
+.PHONY : dynamic_navigation_goals
+
+# fast build rule for target.
+dynamic_navigation_goals/fast:
+	$(MAKE) -f navigation/path_planning/CMakeFiles/dynamic_navigation_goals.dir/build.make navigation/path_planning/CMakeFiles/dynamic_navigation_goals.dir/build
+.PHONY : dynamic_navigation_goals/fast
+
+#=============================================================================
 # Target rules for targets named move_base_msgs_generate_messages_eus
 
 # Build rule for target.
@@ -4718,6 +4731,7 @@ help:
 	@echo "... bond_generate_messages_eus"
 	@echo "... costmap_2d_generate_messages_py"
 	@echo "... bond_generate_messages_lisp"
+	@echo "... dynamic_navigation_goals"
 	@echo "... move_base_msgs_generate_messages_eus"
 	@echo "... move_base_msgs_generate_messages_cpp"
 	@echo "... move_base_msgs_generate_messages_lisp"

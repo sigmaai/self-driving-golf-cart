@@ -15,19 +15,19 @@ contact: contact@neilnie.com
     <include file="$(find mapping)/launch/build_map.launch" />
 
     <!--    remapping topics-->
-    <remap from="map" to="/grid_map"/>
+    <remap from="map" to="grid_map"/>
     <remap from="move_base/current_goal" to="move_base_simple/goal"/>
 
     <!--    launch move base node. This node subscribes to the map published by `build_map`. -->
     <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
-        <rosparam file="$(find path_planning)/params/costmap_common_params.yaml" command="load" ns="global_costmap" />
-        <rosparam file="$(find path_planning)/params/costmap_common_params.yaml" command="load" ns="local_costmap" />
-        <rosparam file="$(find path_planning)/params/costmap_local_params.yaml" command="load" />
-        <rosparam file="$(find path_planning)/params/costmap_global_params.yaml" command="load" />
+        <rosparam file="$(find path_planning)/params/costmap_common_params_2.yaml" command="load" ns="global_costmap" />
+        <rosparam file="$(find path_planning)/params/costmap_common_params_2.yaml" command="load" ns="local_costmap" />
+        <rosparam file="$(find path_planning)/params/costmap_local_params_2.yaml" command="load" />
+        <rosparam file="$(find path_planning)/params/costmap_global_params_2.yaml" command="load" />
         <rosparam file="$(find path_planning)/params/base_local_planner_params.yaml" command="load" />
     </node>
 
     <!--    publish navigation goals to `move_base` using actionlib -->
-    <node pkg="path_planning" name="navigation_goals" type="navigation_goals" output="screen" />
+<!--    <node pkg="path_planning" name="dynamic_navigation_goals" type="dynamic_navigation_goals" output="screen" />-->
 
 </launch>

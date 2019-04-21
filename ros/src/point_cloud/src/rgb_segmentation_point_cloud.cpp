@@ -45,49 +45,42 @@ void image_callback(const sensor_msgs::ImageConstPtr& msg){
     segmentation_image = dst;
 }
 
-void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input){
-
-//    std::chrono::high_resolution_clock::time_point t1 = std::chrono::high_resolution_clock::now();
+void cloud_callback (const sensor_msgs::PointCloud2ConstPtr& input) {
 
     // Create a container for the data.
-    pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud_input(new pcl::PointCloud<pcl::PointXYZRGB>);
+    pcl::PointCloud<pcl::PointXYZRGB>::Ptr temp_cloud(new pcl::PointCloud<pcl::PointXYZRGB>);
+    pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud_output(new pcl::PointCloud<pcl::PointXYZRGB>);
     pcl::PCLPointCloud2 pcl_pc2;
     pcl_conversions::toPCL(*input, pcl_pc2);
-    pcl::fromPCLPointCloud2(pcl_pc2,*cloud_input);
+    pcl::fromPCLPointCloud2(pcl_pc2, *temp_cloud);
+    *cloud_output = *temp_cloud;
 
-    pcl::PointIndices::Ptr inliers(new pcl::PointIndices());
-    pcl::ExtractIndices<pcl::PointXYZRGB> extract;
-
-//    std::cout << std::to_string(cloud_output->width) << std::endl;
-//    std::cout << std::to_string(cloud_output->height) << std::endl;
+//    std::cout << std::to_string(temp_cloud->width) << std::endl;
+//    std::cout << std::to_string(temp_cloud->height) << std::endl;
 //    std::cout << "-------" << std::endl;
+//
+    auto *pixelPtr = (uint8_t *) segmentation_image.data;
 
-    for(int i = 0; i < segmentation_image.rows; i+=1) {
+    for (int i = 0; i < segmentation_image.rows; i += 2) {
 
-        for (int j = 0; j < segmentation_image.cols; j += 1) {
+        for (int j = 0; j < segmentation_image.cols; j += 2) {
 
-            auto index = i * segmentation_image.cols + j;
-            if (segmentation_image.data[index] == 255)
-                inliers->indices.push_back(index);
+            uint8_t value = pixelPtr[i * segmentation_image.cols + j];
+            if (value == 255) {
+
+                cloud_output->points[i * segmentation_image.cols + j].r = 0;
+                cloud_output->points[i * segmentation_image.cols + j].g = 255;
+                cloud_output->points[i * segmentation_image.cols + j].b = 0;
+            }
         }
     }
 
-    extract.setInputCloud(cloud_input);
-    extract.setIndices(inliers);
-    extract.setNegative(false);
-    extract.filter(*cloud_input);
-
     sensor_msgs::PointCloud2 cloud_publish;
-    pcl::toROSMsg(*cloud_input,cloud_publish);
+    pcl::toROSMsg(*cloud_output, cloud_publish);
     cloud_publish.header = input->header;
 
     pub.publish(cloud_publish);
 
-//    // timing test
-//    std::chrono::high_resolution_clock::time_point t2 = std::chrono::high_resolution_clock::now();
-//    auto duration = std::chrono::duration_cast<std::chrono::microseconds>( t2 - t1 ).count();
-//    std::cout << "time" << std::endl;
-//    std::cout << std::to_string(duration) << std::endl;
 }
 
 int main (int argc, char** argv) {

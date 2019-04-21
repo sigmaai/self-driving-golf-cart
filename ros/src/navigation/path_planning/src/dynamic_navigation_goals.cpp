@@ -9,12 +9,14 @@
 #include <tf/transform_listener.h>
 #include <tf/exceptions.h>
 
+tf::StampedTransform transform;
+
 typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> MoveBaseClient;
 
 int main(int argc, char** argv){
 
 
-    ros::init(argc, argv, "navigation_goal");
+    ros::init(argc, argv, "dynamic_navigation_goals");
     ros::NodeHandle node;
 
     //tell the action client that we want to spin a thread by default
@@ -39,8 +41,20 @@ int main(int argc, char** argv){
 
         ROS_INFO("Sending goal");
 
-        goal.target_pose.pose.position.x = 20;
-        goal.target_pose.pose.orientation = tf::createQuaternionMsgFromYaw(0);
+        try {
+            listener.lookupTransform("map", "base_link", ros::Time(), transform);
+        }catch (tf::TransformException ex) {
+            ROS_ERROR("%s", ex.what());
+        }
+
+        geometry_msgs::TransformStamped tf_msg;
+        tf::transformStampedTFToMsg(transform, tf_msg);
+        float trans_x = tf_msg.transform.translation.x;
+        float trans_y = tf_msg.transform.translation.y;
+
+        goal.target_pose.pose.position.x = trans_x + 8;
+        goal.target_pose.pose.position.y = trans_y;
+        goal.target_pose.pose.orientation = tf::createQuaternionMsgFromYaw(tf_msg.transform.rotation.w);
 
         ac.sendGoal(goal);
 

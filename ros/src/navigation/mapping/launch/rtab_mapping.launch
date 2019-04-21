@@ -22,65 +22,85 @@ Email: contact@neilnie.com
 
     <arg name="zed_namespace"		    	default="zed" />
 
-    <arg name="svo_file"              	default="" /> <!-- <arg name="svo_file" default="path/to/svo/file.svo"> -->
+    <arg name="svo_file"              	    default="" /> <!-- <arg name="svo_file" default="path/to/svo/file.svo"> -->
 
-    <arg name="camera_model"         	default="1" /> <!-- 0=ZED, 1=ZEDM-->
-    <arg name="serial_number"        	default="0" />
-    <arg name="verbose"              	default="true" />
+    <arg name="camera_model"         	    default="1" /> <!-- 0=ZED, 1=ZEDM-->
+    <arg name="serial_number"        	    default="0" />
+    <arg name="verbose"              	    default="true" />
 
     <arg name="rgb_topic"               	default="rgb/image_rect_color" />
     <arg name="depth_topic"             	default="depth/depth_registered" />
     <arg name="camera_info_topic"       	default="rgb/camera_info" />
     <arg name="depth_camera_info_topic" 	default="depth/camera_info" />
-    <arg name="camera_frame"              default="zed_camera_center" />
+    <arg name="camera_frame"                default="zed_camera_center" />
+
+    <!--    point cloud to laser scan-->
+    <node pkg="pointcloud_to_laserscan" name="pointcloud_to_laserscan_node" type="pointcloud_to_laserscan_node" output="screen" >
+
+        <remap from="cloud_in" to="/zed/point_cloud/cloud_registered" />
+        <remap from="scan" to="/$(arg zed_namespace)/laser_scan" />
+
+        <param name="min_height"    type="double" value="-0.20" />
+        <param name="max_height"    type="double" value="1.50" />
+        <param name="target_frame"  type="string" value="base_link" />
+        <param name="range_min"     type="double" value="0.25" />
+        <param name="range_max"     type="double" value="15.00" />
+
+    </node>
 
     <!-- RTAB-map Node-->
     <include file="$(find rtabmap_ros)/launch/rtabmap.launch">
 
-        <arg name="rtabmap_args"		value="--delete_db_on_start" />
+<!--        <arg name="rtabmap_args"		value="&#45;&#45;delete_db_on_start" />-->
         <arg name="rgb_topic"               	value="/$(arg zed_namespace)/$(arg rgb_topic)" />
         <arg name="depth_topic"             	value="/$(arg zed_namespace)/$(arg depth_topic)" />
         <arg name="camera_info_topic"       	value="/$(arg zed_namespace)/$(arg camera_info_topic)" />
         <arg name="depth_camera_info_topic" 	value="/$(arg zed_namespace)/$(arg depth_camera_info_topic)" />
-        <arg name="frame_id"                  value="$(arg camera_frame)" />
-        <arg name="approx_sync"               value="false" />
-        <arg name="visual_odometry"           value="false" />
-        <arg name="odom_topic"                value="/$(arg zed_namespace)/odom" />
+        <arg name="frame_id"                    value="$(arg camera_frame)" />
+        <arg name="approx_sync"                 value="false" />
+        <arg name="visual_odometry"             value="false" />
+        <arg name="odom_topic"                  value="/$(arg zed_namespace)/odom" />
 
-        <!-- When sending goals on /rtabmap/goal topic, use actionlib to communicate with move_base -->
-        <param name="use_action_for_goal" type="bool" value="true"/>
-        <remap from="move_base"            to="/move_base"/>
+        <arg name="scan_topic"                  value="/$(arg zed_namespace)/laser_scan" />
+        <arg name="subscribe_scan"              value="true" />
+
+        <!--        localization mode-->
+        <param name="Mem/IncrementalMemory"        type="string" value="false" />
+        <param name="Mem/InitWMWithAllNodes"       type="string" value="true" />
 
         <!-- RTAB-Map's parameters: do "rosrun rtabmap rtabmap (double-dash)params" to see the list of available parameters. -->
-        <param name="RGBD/ProximityBySpace"        type="string" value="true"/>   <!-- Local loop closure detection (using estimated position) with locations in WM -->
-        <param name="RGBD/OptimizeFromGraphEnd"    type="string" value="false"/>  <!-- Set to false to generate map correction between /map and /odom -->
-        <param name="Kp/MaxDepth"                  type="string" value="4.0"/>
-        <param name="Reg/Strategy"                 type="string" value="0"/>      <!-- Loop closure transformation: 0=Visual, 1=ICP, 2=Visual+ICP -->
-        <param name="Icp/CorrespondenceRatio"      type="string" value="0.3"/>
-        <param name="Vis/MinInliers"               type="string" value="15"/>      <!-- 3D visual words minimum inliers to accept loop closure -->
-        <param name="Vis/InlierDistance"           type="string" value="0.1"/>    <!-- 3D visual words correspondence distance -->
-        <param name="RGBD/ProximityPathMaxNeighbors" type="string" value="0"/>
-        <param name="Rtabmap/TimeThr"              type="string" value="0"/>
-        <param name="Mem/RehearsalSimilarity"      type="string" value="0.30"/>
-        <param name="Reg/Force3DoF"                type="string" value="true"/>
-        <param name="GridGlobal/MinSize"           type="string" value="20"/>
-        <param name="Grid/MaxGroundAngle"          type="string" value="53" />
-        <param name="Grid/CellSize"                type="string" value="0.1" />
-        <param name="Grid/ClusterRadius"           type="string" value="0.2" />
-        <param name="Grid/RangeMax"                type="string" value="7" />
+        <param name="RGBD/ProximityBySpace"             type="string" value="true"/>   <!-- Local loop closure detection (using estimated position) with locations in WM -->
+        <param name="RGBD/OptimizeFromGraphEnd"         type="string" value="false"/>  <!-- Set to false to generate map correction between /map and /odom -->
+        <param name="Kp/MaxDepth"                       type="string" value="4.0"/>
+        <param name="Reg/Strategy"                      type="string" value="0"/>      <!-- Loop closure transformation: 0=Visual, 1=ICP, 2=Visual+ICP -->
+        <param name="Icp/CorrespondenceRatio"           type="string" value="0.3"/>
+        <param name="Vis/MinInliers"                    type="string" value="15"/>      <!-- 3D visual words minimum inliers to accept loop closure -->
+        <param name="Vis/InlierDistance"                type="string" value="0.1"/>    <!-- 3D visual words correspondence distance -->
+        <param name="RGBD/ProximityPathMaxNeighbors"    type="string" value="0"/>
+        <param name="Rtabmap/TimeThr"                   type="string" value="0"/>
+        <param name="Mem/RehearsalSimilarity"           type="string" value="0.30"/>
+        <param name="Reg/Force3DoF"                     type="string" value="true"/>
+        <param name="GridGlobal/MinSize"                type="string" value="20"/>
+
+        <!--        optimizing parameters for ground detection-->
+        <param name="Grid/MaxGroundAngle"               type="string" value="48" />
+        <param name="Grid/CellSize"                     type="string" value="0.05" />
+        <param name="Grid/ClusterRadius"                type="string" value="0.2" />
+        <param name="Grid/RangeMax"                     type="string" value="12" />
+        <param name="Grid/DepthRoiRatios"               type="string" value="0.0 0.0 0.0 0.075" />
 
     </include>
 
-    <!-- Create point cloud for the local planner -->
+<!--    &lt;!&ndash; Create point cloud for the local planner &ndash;&gt;-->
 <!--    <node pkg="nodelet" type="nodelet" name="obstacles_detection" args="load rtabmap_ros/obstacles_detection stereo_nodelet">-->
 
-<!--        <remap from="cloud" to="/zed/point_cloud/cloud_transformed"/>-->
+<!--        <remap from="cloud" to="/zed/point_cloud/cloud_registered"/>-->
 <!--&lt;!&ndash;        <remap from="obstacles" to="/planner_cloud"/>&ndash;&gt;-->
 
 <!--        <param name="frame_id" type="string" value="base_link"/>-->
 <!--        <param name="map_frame_id" type="string" value="map"/>-->
-<!--        <param name="min_cluster_size" type="int" value="10"/>-->
-<!--        <param name="max_obstacles_height" type="double" value="4.0"/>-->
+<!--        <param name="min_cluster_size" type="int" value="20"/>-->
+<!--        <param name="max_obstacles_height" type="double" value="0.25"/>-->
 <!--    </node>-->
 
 </launch>
