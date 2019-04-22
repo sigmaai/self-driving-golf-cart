@@ -3,12 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="8075d57d-0c29-4084-b018-ee8c503d1889" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/ros/src/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/autopilot/launch/autopilot.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/launch/autopilot.launch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/autopilot/scripts/autopilot_node" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/autopilot_node" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/autopilot/scripts/visualization.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/autopilot/scripts/visualization.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/path_planning/src/navigation_goals.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/path_planning/src/navigation_goals.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/point_cloud/src/rgb_segmentation_point_cloud.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/point_cloud/src/rgb_segmentation_point_cloud.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/segmentation/scripts/segmentation_node" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/segmentation/scripts/segmentation_node" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/Project.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/Project.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_display_rviz/zed_display_rviz.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_display_rviz/zed_display_rviz.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/zed_wrapper.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/zed_wrapper.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/navigation/mapping/launch/rtab_mapping.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/navigation/mapping/launch/rtab_mapping.launch" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -198,7 +197,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="97" />
     <option name="y" value="112" />
     <option name="width" value="1372" />
@@ -459,11 +458,12 @@
       <workItem from="1555544382855" duration="21000" />
       <workItem from="1555544611785" duration="2569000" />
       <workItem from="1555588312362" duration="1898000" />
+      <workItem from="1555953379981" duration="2000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="182189000" />
+    <option name="totallyTimeSpent" value="182191000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -475,9 +475,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="28" width="1535" height="872" extended-state="7" />
+    <frame x="65" y="28" width="1535" height="872" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5096525" visible="true" weight="0.24378778" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5096525" visible="true" weight="0.2505037" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32262382" />
