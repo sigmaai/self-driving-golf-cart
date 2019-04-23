@@ -8950,6 +8950,9 @@
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/mapping/launch/rtab_mapping.launch">
 			<Option target="dummy_zed_display_rviz"/>
 		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/mapping/launch/rtabmap_modified.launch">
+			<Option target="dummy_zed_display_rviz"/>
+		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/mapping/package.xml">
 			<Option target="dummy_zed_display_rviz"/>
 		</Unit>

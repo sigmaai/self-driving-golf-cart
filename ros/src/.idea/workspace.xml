@@ -42,10 +42,10 @@
       <config projectName="Project" targetName="_rosbridge_library_generate_messages_check_deps_TestMultipleResponseFields" />
       <config projectName="Project" targetName="planar_segmentation" />
       <config projectName="Project" targetName="_zed_wrapper_generate_messages_check_deps_reset_odometry" />
-      <config projectName="Project" targetName="_rosapi_generate_messages_check_deps_Topics" />
       <config projectName="Project" targetName="costmap_2d_generate_messages_lisp" />
       <config projectName="Project" targetName="roscpp_generate_messages_nodejs" />
       <config projectName="Project" targetName="rosgraph_msgs_generate_messages_eus" />
+      <config projectName="Project" targetName="_rosapi_generate_messages_check_deps_Topics" />
       <config projectName="Project" targetName="costmap_2d_generate_messages_py" />
       <config projectName="Project" targetName="rosbridge_library_generate_messages_lisp" />
       <config projectName="Project" targetName="zed_wrapper_genlisp" />
@@ -76,8 +76,8 @@
       <config projectName="Project" targetName="simulation_gennodejs" />
       <config projectName="Project" targetName="_rosapi_generate_messages_check_deps_ServiceNode" />
       <config projectName="Project" targetName="std_srvs_generate_messages_eus" />
-      <config projectName="Project" targetName="rosapi_genpy" />
       <config projectName="Project" targetName="pcl_msgs_generate_messages_eus" />
+      <config projectName="Project" targetName="rosapi_genpy" />
       <config projectName="Project" targetName="rosapi_generate_messages_nodejs" />
       <config projectName="Project" targetName="_rosbridge_library_generate_messages_check_deps_TestChar" />
       <config projectName="Project" targetName="_object_detection_generate_messages_check_deps_DetectionResult" />
@@ -202,8 +202,8 @@
       <config projectName="Project" targetName="rgb_segmentation_point_cloud" />
       <config projectName="Project" targetName="tf2_msgs_generate_messages_eus" />
       <config projectName="Project" targetName="actionlib_msgs_generate_messages_eus" />
-      <config projectName="Project" targetName="simulation_geneus" />
       <config projectName="Project" targetName="nodelet_generate_messages_cpp" />
+      <config projectName="Project" targetName="simulation_geneus" />
       <config projectName="Project" targetName="radar_msgs_generate_messages_lisp" />
       <config projectName="Project" targetName="rosapi_geneus" />
       <config projectName="Project" targetName="nav_msgs_generate_messages_eus" />
@@ -243,8 +243,8 @@
       <config projectName="Project" targetName="geographic_msgs_generate_messages_nodejs" />
       <config projectName="Project" targetName="_run_tests_gps" />
       <config projectName="Project" targetName="move_base_msgs_generate_messages_nodejs" />
-      <config projectName="Project" targetName="rosbridge_library_generate_messages" />
       <config projectName="Project" targetName="localmap_tf_broadcaster" />
+      <config projectName="Project" targetName="rosbridge_library_generate_messages" />
       <config projectName="Project" targetName="sensor_msgs_generate_messages_cpp" />
       <config projectName="Project" targetName="simulation_generate_messages_lisp" />
       <config projectName="Project" targetName="segmentation_genpy" />
@@ -252,8 +252,8 @@
       <config projectName="Project" targetName="uuid_msgs_generate_messages_eus" />
       <config projectName="Project" targetName="_run_tests_osm_cartography_roslaunch-check_launch" />
       <config projectName="Project" targetName="zed_wrapper_generate_messages_lisp" />
-      <config projectName="Project" targetName="_run_tests_rosbridge_library_rostest_test_internal_test_internal.test" />
       <config projectName="Project" targetName="segmentation_generate_messages_lisp" />
+      <config projectName="Project" targetName="_run_tests_rosbridge_library_rostest_test_internal_test_internal.test" />
       <config projectName="Project" targetName="visualization_msgs_generate_messages_py" />
       <config projectName="Project" targetName="zed_wrapper_gencpp" />
       <config projectName="Project" targetName="tf_generate_messages_nodejs" />
@@ -340,17 +340,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aac20b50-5306-4aaa-8779-1228766691d9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/navigation/mapping/launch/rtabmap_modified.launch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Project.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Project.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/sensors/zed-ros-wrapper/zed_display_rviz/zed_display_rviz.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sensors/zed-ros-wrapper/zed_display_rviz/zed_display_rviz.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/zed_wrapper.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/zed_wrapper.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/navigation/mapping/launch/rtab_mapping.launch" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/mapping/launch/rtab_mapping.launch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navigation/mapping/package.xml" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/mapping/package.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/navigation/mapping/src/localmap_tf_broadcaster.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/mapping/src/localmap_tf_broadcaster.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navigation/path_planning/package.xml" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/path_planning/package.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/navigation/path_planning/params/base_local_planner_params.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/path_planning/params/base_local_planner_params.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/navigation/path_planning/params/costmap_common_params.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/path_planning/params/costmap_common_params.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/navigation/path_planning/params/costmap_global_params.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/path_planning/params/costmap_global_params.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/navigation/path_planning/params/costmap_local_params.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/path_planning/params/costmap_local_params.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/navigation/path_planning/src/navigation_goals.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/path_planning/src/navigation_goals.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -368,8 +369,35 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/navigation/mapping/launch/rtab_mapping.launch">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="72" selection-start-line="72" selection-end-line="74" />
+            <state relative-caret-position="246">
+              <caret line="57" column="55" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/navigation/mapping/src/localmap_tf_broadcaster.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="37" column="55" selection-start-line="37" selection-start-column="55" selection-end-line="37" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/navigation/path_planning/launch/rtab_mapping_navigation.launch">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/navigation/path_planning/params/base_local_planner_params.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -463,16 +491,16 @@
         <option value="$PROJECT_DIR$/navigation/path_planning/src/dynamic_navigation_goals.cpp" />
         <option value="$PROJECT_DIR$/sensors/zed-ros-wrapper/zed_wrapper/launch/zed_camera.launch" />
         <option value="$PROJECT_DIR$/sensors/zed-ros-wrapper/zed_wrapper/launch/zed.launch" />
-        <option value="$PROJECT_DIR$/navigation/path_planning/src/navigation_goals.cpp" />
-        <option value="$PROJECT_DIR$/navigation/path_planning/params/costmap_common_params.yaml" />
-        <option value="$PROJECT_DIR$/navigation/path_planning/params/base_local_planner_params.yaml" />
-        <option value="$PROJECT_DIR$/navigation/path_planning/launch/rtab_mapping_navigation.launch" />
-        <option value="$PROJECT_DIR$/navigation/path_planning/params/costmap_local_params.yaml" />
-        <option value="$PROJECT_DIR$/navigation/path_planning/params/costmap_global_params.yaml" />
         <option value="$PROJECT_DIR$/navigation/path_planning/package.xml" />
         <option value="$PROJECT_DIR$/navigation/mapping/package.xml" />
-        <option value="$PROJECT_DIR$/navigation/mapping/src/localmap_tf_broadcaster.cpp" />
         <option value="$PROJECT_DIR$/navigation/mapping/launch/rtabmap_modified.launch" />
+        <option value="$PROJECT_DIR$/navigation/path_planning/params/costmap_common_params.yaml" />
+        <option value="$PROJECT_DIR$/navigation/path_planning/params/costmap_global_params.yaml" />
+        <option value="$PROJECT_DIR$/navigation/path_planning/src/navigation_goals.cpp" />
+        <option value="$PROJECT_DIR$/navigation/path_planning/launch/rtab_mapping_navigation.launch" />
+        <option value="$PROJECT_DIR$/navigation/path_planning/params/costmap_local_params.yaml" />
+        <option value="$PROJECT_DIR$/navigation/path_planning/params/base_local_planner_params.yaml" />
+        <option value="$PROJECT_DIR$/navigation/mapping/src/localmap_tf_broadcaster.cpp" />
         <option value="$PROJECT_DIR$/navigation/mapping/launch/rtab_mapping.launch" />
       </list>
     </option>
@@ -485,11 +513,11 @@
   <component name="OCResolveContextSettings">
     <option name="configuration" value="0-planar_segmentation" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="79" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="65" />
     <option name="y" value="28" />
-    <option name="width" value="1372" />
-    <option name="height" value="782" />
+    <option name="width" value="1532" />
+    <option name="height" value="872" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -527,13 +555,29 @@
             <path>
               <item name="src" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="~/Workspace/self-driving-golf-cart/ros/src" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="point_cloud" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="navigation" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="mapping" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="src" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="~/Workspace/self-driving-golf-cart/ros/src" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="point_cloud" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="launch" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="navigation" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="path_planning" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="src" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Workspace/self-driving-golf-cart/ros/src" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="navigation" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="path_planning" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="params" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="src" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="~/Workspace/self-driving-golf-cart/ros/src" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="navigation" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="path_planning" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -2676,11 +2720,17 @@
       <workItem from="1555957583527" duration="1720000" />
       <workItem from="1555966131523" duration="9000" />
       <workItem from="1555966176617" duration="5868000" />
+      <workItem from="1556031561486" duration="1687000" />
+      <workItem from="1556033574765" duration="3644000" />
+      <workItem from="1556044482000" duration="2460000" />
+      <workItem from="1556048481094" duration="448000" />
+      <workItem from="1556049469563" duration="1040000" />
+      <workItem from="1556056644302" duration="1822000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="255581000" />
+    <option name="totallyTimeSpent" value="266682000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2692,10 +2742,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="28" width="1535" height="872" extended-state="6" />
+    <frame x="65" y="28" width="1532" height="872" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27602416" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26850605" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -2708,7 +2758,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32797858" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5010925" side_tool="true" weight="0.22547771" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="CMake" order="10" sideWeight="0.4989075" visible="true" weight="0.26773763" />
+      <window_info anchor="bottom" id="CMake" order="10" sideWeight="0.4989075" visible="true" weight="0.2356091" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="13" />
@@ -2916,48 +2966,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/navigation/path_planning/params/costmap_common_params.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/navigation/path_planning/params/base_local_planner_params.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/navigation/path_planning/src/navigation_goals.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="30" column="43" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/navigation/path_planning/params/costmap_global_params.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/navigation/path_planning/params/costmap_local_params.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/navigation/path_planning/launch/rtab_mapping_navigation.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="19" column="11" selection-start-line="19" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/navigation/path_planning/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="397">
@@ -2979,13 +2987,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/navigation/mapping/src/localmap_tf_broadcaster.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="37" column="55" selection-start-line="37" selection-start-column="55" selection-end-line="37" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/navigation/mapping/launch/rtabmap_modified.launch">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
@@ -3000,10 +3001,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/navigation/path_planning/params/costmap_global_params.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/navigation/path_planning/params/costmap_common_params.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="22" lean-forward="true" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/navigation/path_planning/src/navigation_goals.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="45" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/navigation/path_planning/params/costmap_local_params.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/navigation/path_planning/launch/rtab_mapping_navigation.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/navigation/path_planning/params/base_local_planner_params.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/navigation/mapping/src/localmap_tf_broadcaster.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="37" column="55" selection-start-line="37" selection-start-column="55" selection-end-line="37" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/navigation/mapping/launch/rtab_mapping.launch">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="72" selection-start-line="72" selection-end-line="74" />
+        <state relative-caret-position="246">
+          <caret line="57" column="55" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
         </state>
       </provider>
     </entry>

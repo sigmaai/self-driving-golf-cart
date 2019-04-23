@@ -39,7 +39,8 @@ int main(int argc, char** argv){
 
         ROS_INFO("Sending goal");
 
-        goal.target_pose.pose.position.x = 20;
+        goal.target_pose.pose.position.x = 50;
+        goal.target_pose.pose.position.y = 40;
         goal.target_pose.pose.orientation = tf::createQuaternionMsgFromYaw(0);
 
         ac.sendGoal(goal);

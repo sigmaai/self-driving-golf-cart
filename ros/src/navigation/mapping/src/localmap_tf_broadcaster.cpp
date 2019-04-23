@@ -35,7 +35,7 @@ int main(int argc, char** argv){
     ros::Rate rate(60.0);
     while (node.ok()){
         transform.setRotation(toQuaternion(0, 0.0001, 0));
-        transform.setOrigin( tf::Vector3(0.0, 0.0, -1.10) );
+        transform.setOrigin( tf::Vector3(0.0, 0.0, -1.00) );
         br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), "zed_camera_center", "base_link"));
         rate.sleep();
     }

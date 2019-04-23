@@ -52,13 +52,10 @@ Email: contact@neilnie.com
     <!--    RTAB-map Node   -->
     <include file="$(find mapping)/launch/rtabmap_modified.launch">
 
-        <arg name="rtabmap_args"		        value="--delete_db_on_start" />
-
-        <!--    use sim time        -->
-        <arg name="use_sim_time"            value="true"/>
+<!--        <arg name="rtabmap_args"		        value="&#45;&#45;delete_db_on_start" />-->
 
         <!--    localization mode   -->
-        <arg name="localization"            value="false" />
+        <arg name="localization"            value="true" />
 
         <arg name="rgb_topic"               	value="/$(arg zed_namespace)/$(arg rgb_topic)" />
         <arg name="depth_topic"             	value="/$(arg zed_namespace)/$(arg depth_topic)" />
@@ -70,8 +67,8 @@ Email: contact@neilnie.com
         <arg name="odom_topic"                  value="/$(arg zed_namespace)/odom" />
 
         <!--        laser scans and point clouds    -->
-<!--        <arg name="subscribe_scan"              value="true" />-->
-<!--        <arg name="scan_topic"                  value="/$(arg zed_namespace)/laser_scan" />-->
+        <arg name="subscribe_scan"              value="true" />
+        <arg name="scan_topic"                  value="/$(arg zed_namespace)/laser_scan" />
 
         <!--    optimizing parameters for ground detection-->
         <param name="Grid/MaxGroundAngle"               type="string" value="48" />
