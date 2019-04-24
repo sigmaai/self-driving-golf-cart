@@ -5,9 +5,6 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
-subdirs("rosbridge/rosapi")
-subdirs("rosbridge/rosbridge_server")
-subdirs("rosbridge/rosbridge_suite")
 subdirs("sensors/gps")
 subdirs("segmentation")
 subdirs("simulation")
@@ -15,7 +12,6 @@ subdirs("detection/lane_detection")
 subdirs("detection/object_detection")
 subdirs("sensors/camera")
 subdirs("sensors/joystick")
-subdirs("rosbridge/rosbridge_library")
 subdirs("autopilot")
 subdirs("data_logger")
 subdirs("driver")
