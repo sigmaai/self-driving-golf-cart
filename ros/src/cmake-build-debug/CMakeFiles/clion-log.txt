@@ -17,7 +17,14 @@
 -- BUILD_SHARED_LIBS is on
 -- BUILD_SHARED_LIBS is on
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<<<<<<< HEAD
+-- ~~  traversing 23 packages in topological order:
+-- ~~  - rosapi
+-- ~~  - rosbridge_server
+-- ~~  - rosbridge_suite (metapackage)
+=======
 -- ~~  traversing 18 packages in topological order:
+>>>>>>> master
 -- ~~  - gps
 -- ~~  - segmentation
 -- ~~  - simulation
@@ -30,6 +37,7 @@
 -- ~~  - driver
 -- ~~  - gui
 -- ~~  - localization
+-- ~~  - mapping
 -- ~~  - path_planning
 -- ~~  - point_cloud
 -- ~~  - osm_cartography
@@ -60,18 +68,6 @@
 -- +++ processing catkin package: 'autopilot'
 -- ==> add_subdirectory(autopilot)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
-CMake Warning at cmake-build-debug/autopilot/cmake/autopilot-genmsg.cmake:3 (message):
-  Invoking generate_messages() without having added any message or service
-  file before.
-
-  You should either add add_message_files() and/or add_service_files() calls
-  or remove the invocation of generate_messages().
-Call Stack (most recent call first):
-  /opt/ros/melodic/share/genmsg/cmake/genmsg-extras.cmake:307 (include)
-  autopilot/CMakeLists.txt:74 (generate_messages)
-
-
--- autopilot: 0 messages, 0 services
 -- +++ processing catkin package: 'data_logger'
 -- ==> add_subdirectory(data_logger)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
@@ -82,10 +78,13 @@ Call Stack (most recent call first):
 -- ==> add_subdirectory(gui)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
 -- +++ processing catkin package: 'localization'
--- ==> add_subdirectory(localization)
+-- ==> add_subdirectory(navigation/gps_localization)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'mapping'
+-- ==> add_subdirectory(navigation/mapping)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
 -- +++ processing catkin package: 'path_planning'
--- ==> add_subdirectory(path_planning)
+-- ==> add_subdirectory(navigation/path_planning)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
 -- +++ processing catkin package: 'point_cloud'
 -- ==> add_subdirectory(point_cloud)

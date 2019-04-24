@@ -1,0 +1,30 @@
+TrajectoryPlannerROS:
+
+  # Current limits based on AZ3 standalone configuration.
+  acc_lim_x:  0.75
+  acc_lim_y:  0.75
+  acc_lim_theta: 10.00
+  max_vel_x:  3.000
+  min_vel_x:  0.100
+  max_rotational_vel: 0.250
+  min_in_place_rotational_vel: 0.15
+  escape_vel: -0.10
+  holonomic_robot: false
+
+  xy_goal_tolerance:  0.20
+  yaw_goal_tolerance: 0.20
+
+  sim_time: 1.0
+  sim_granularity: 0.025
+  vx_samples: 12
+  vy_samples: 12
+  vtheta_samples: 12
+
+  goal_distance_bias: 0.8
+  path_distance_bias: 0.6
+  occdist_scale: 0.01
+  heading_lookahead: 0.325
+  dwa: false
+
+  oscillation_reset_dist: 0.05
+  meter_scoring: true

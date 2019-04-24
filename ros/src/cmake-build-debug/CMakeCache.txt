@@ -414,6 +414,9 @@ LSB_RELEASE_EXECUTABLE:FILEPATH=/usr/bin/lsb_release
 //Path to a program.
 NOSETESTS:FILEPATH=/usr/bin/nosetests-2.7
 
+//The directory containing a CMake configuration file for OpenCV.
+OpenCV_DIR:PATH=/usr/share/OpenCV
+
 //CXX compiler flags for OpenMP parallelization
 OpenMP_CXX_FLAGS:STRING=-fopenmp
 
@@ -521,6 +524,9 @@ catkin_DIR:PATH=/opt/ros/melodic/share/catkin/cmake
 //The directory containing a CMake configuration file for class_loader.
 class_loader_DIR:PATH=/opt/ros/melodic/share/class_loader/cmake
 
+//The directory containing a CMake configuration file for costmap_2d.
+costmap_2d_DIR:PATH=/opt/ros/melodic/share/costmap_2d/cmake
+
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/melodic/share/cpp_common/cmake
 
@@ -550,6 +556,9 @@ driver_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/dri
 
 //The directory containing a CMake configuration file for dynamic_reconfigure.
 dynamic_reconfigure_DIR:PATH=/opt/ros/melodic/share/dynamic_reconfigure/cmake
+
+//The directory containing a CMake configuration file for filters.
+filters_DIR:PATH=/opt/ros/melodic/share/filters/cmake
 
 //The directory containing a CMake configuration file for gencpp.
 gencpp_DIR:PATH=/opt/ros/melodic/share/gencpp/cmake
@@ -605,6 +614,18 @@ gps_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-
 //Value Computed by CMake
 gps_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/gps
 
+//The directory containing a CMake configuration file for grid_map_core.
+grid_map_core_DIR:PATH=/opt/ros/melodic/share/grid_map_core/cmake
+
+//The directory containing a CMake configuration file for grid_map_cv.
+grid_map_cv_DIR:PATH=/opt/ros/melodic/share/grid_map_cv/cmake
+
+//The directory containing a CMake configuration file for grid_map_msgs.
+grid_map_msgs_DIR:PATH=/opt/ros/melodic/share/grid_map_msgs/cmake
+
+//The directory containing a CMake configuration file for grid_map_ros.
+grid_map_ros_DIR:PATH=/opt/ros/melodic/share/grid_map_ros/cmake
+
 //Value Computed by CMake
 gtest_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/gtest/googlemock/gtest
 
@@ -654,14 +675,26 @@ lane_detection_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros
 //Value Computed by CMake
 lane_detection_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/detection/lane_detection
 
+//The directory containing a CMake configuration file for laser_geometry.
+laser_geometry_DIR:PATH=/opt/ros/melodic/share/laser_geometry/cmake
+
 //Path to a library.
 lib:FILEPATH=/opt/ros/melodic/lib/libbondcpp.so
 
 //Value Computed by CMake
-localization_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/localization
+localization_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/gps_localization
 
 //Value Computed by CMake
-localization_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/localization
+localization_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/gps_localization
+
+//The directory containing a CMake configuration file for map_msgs.
+map_msgs_DIR:PATH=/opt/ros/melodic/share/map_msgs/cmake
+
+//Value Computed by CMake
+mapping_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping
+
+//Value Computed by CMake
+mapping_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/mapping
 
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/melodic/share/message_filters/cmake
@@ -671,6 +704,15 @@ message_generation_DIR:PATH=/opt/ros/melodic/share/message_generation/cmake
 
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/melodic/share/message_runtime/cmake
+
+//The directory containing a CMake configuration file for move_base_msgs.
+move_base_msgs_DIR:PATH=/opt/ros/melodic/share/move_base_msgs/cmake
+
+//The directory containing a CMake configuration file for nav_msgs.
+nav_msgs_DIR:PATH=/opt/ros/melodic/share/nav_msgs/cmake
+
+//The directory containing a CMake configuration file for navigation.
+navigation_DIR:PATH=navigation_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for nodelet.
 nodelet_DIR:PATH=/opt/ros/melodic/share/nodelet/cmake
@@ -684,6 +726,9 @@ object_detection_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/r
 //Value Computed by CMake
 object_detection_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/detection/object_detection
 
+//The directory containing a CMake configuration file for opencv2.
+opencv2_DIR:PATH=opencv2_DIR-NOTFOUND
+
 //Value Computed by CMake
 osm_cartography_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/osm
 
@@ -691,10 +736,10 @@ osm_cartography_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ro
 osm_cartography_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/osm
 
 //Value Computed by CMake
-path_planning_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/path_planning
+path_planning_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/path_planning
 
 //Value Computed by CMake
-path_planning_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/path_planning
+path_planning_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/path_planning
 
 //The directory containing a CMake configuration file for pcl_conversions.
 pcl_conversions_DIR:PATH=/opt/ros/melodic/share/pcl_conversions/cmake
@@ -798,6 +843,12 @@ rostest_DIR:PATH=/opt/ros/melodic/share/rostest/cmake
 //The directory containing a CMake configuration file for rostime.
 rostime_DIR:PATH=/opt/ros/melodic/share/rostime/cmake
 
+//The directory containing a CMake configuration file for rtabmap.
+rtabmap_DIR:PATH=rtabmap_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for rtabmap_ros.
+rtabmap_ros_DIR:PATH=rtabmap_ros_DIR-NOTFOUND
+
 //Value Computed by CMake
 segmentation_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/segmentation
 
@@ -858,6 +909,9 @@ uuid_msgs_DIR:PATH=/opt/ros/melodic/share/uuid_msgs/cmake
 //The directory containing a CMake configuration file for visualization_msgs.
 visualization_msgs_DIR:PATH=/opt/ros/melodic/share/visualization_msgs/cmake
 
+//The directory containing a CMake configuration file for voxel_grid.
+voxel_grid_DIR:PATH=/opt/ros/melodic/share/voxel_grid/cmake
+
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/melodic/share/xmlrpcpp/cmake
 
@@ -872,6 +926,12 @@ zed_ros_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cm
 
 //Value Computed by CMake
 zed_ros_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/zed-ros-wrapper/zed_ros
+
+//Value Computed by CMake
+zed_rtabmap_example_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/zed_rtabmap_example
+
+//Value Computed by CMake
+zed_rtabmap_example_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/zed_rtabmap_example
 
 //Value Computed by CMake
 zed_wrapper_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper
@@ -999,7 +1059,11 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
+<<<<<<< HEAD
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=27
+=======
 CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=22
+>>>>>>> master
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -1135,6 +1199,8 @@ CUDA_parse_cubin:INTERNAL=/home/neil/snap/clion-2019.1/bin/cmake/linux/share/cma
 CUDA_run_nvcc:INTERNAL=/home/neil/snap/clion-2019.1/bin/cmake/linux/share/cmake-3.14/Modules/FindCUDA/run_nvcc.cmake
 //Details about finding CUDA
 FIND_PACKAGE_MESSAGE_DETAILS_CUDA:INTERNAL=[/usr/local/cuda-10.0][/usr/local/cuda-10.0/bin/nvcc][/usr/local/cuda-10.0/include][/usr/local/cuda-10.0/lib64/libcudart_static.a][v10.0()]
+//Details about finding OpenCV
+FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/usr][v3.2.0()]
 //Details about finding OpenMP
 FIND_PACKAGE_MESSAGE_DETAILS_OpenMP:INTERNAL=[TRUE][TRUE][c ][v()]
 //Details about finding OpenMP_C

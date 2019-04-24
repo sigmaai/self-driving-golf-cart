@@ -52,3 +52,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/path_planning" TYPE FILE FILES "/home/neil/Workspace/self-driving-golf-cart/ros/src/path_planning/package.xml")
 endif()
 
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/path_planning" TYPE DIRECTORY FILES "/home/neil/Workspace/self-driving-golf-cart/ros/src/path_planning/launch")
+endif()
+

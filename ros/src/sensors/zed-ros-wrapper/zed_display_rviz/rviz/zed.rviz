@@ -32,9 +32,11 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: DepthCloud
+    SyncSource: ""
 Preferences:
   PromptSaveOnExit: true
+Toolbars:
+  toolButtonStyle: 2
 Visualization Manager:
   Class: ""
   Displays:
@@ -104,14 +106,6 @@ Visualization Manager:
           Value: true
         zed_camera_center:
           Value: true
-        zed_left_camera_frame:
-          Value: false
-        zed_left_camera_optical_frame:
-          Value: false
-        zed_right_camera_frame:
-          Value: false
-        zed_right_camera_optical_frame:
-          Value: false
       Marker Scale: 0.5
       Name: TF
       Show Arrows: false
@@ -121,12 +115,7 @@ Visualization Manager:
         map:
           odom:
             zed_camera_center:
-              zed_left_camera_frame:
-                zed_left_camera_optical_frame:
-                  {}
-              zed_right_camera_frame:
-                zed_right_camera_optical_frame:
-                  {}
+              {}
       Update Interval: 0
       Value: true
     - Class: rviz/Group
@@ -442,7 +431,10 @@ Visualization Manager:
     - Class: rviz/FocusCamera
     - Class: rviz/Measure
     - Class: rviz/SetInitialPose
+      Theta std deviation: 0.2617993950843811
       Topic: /initialpose
+      X std deviation: 0.5
+      Y std deviation: 0.5
     - Class: rviz/SetGoal
       Topic: /move_base_simple/goal
     - Class: rviz/PublishPoint
@@ -459,18 +451,18 @@ Visualization Manager:
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 1.6730257272720337
-        Y: 0.2177855521440506
-        Z: -0.4561769366264343
+        X: 1.6727854013442993
+        Y: -0.1327401101589203
+        Z: -0.4821772277355194
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.22479625046253204
+      Pitch: 0.029796268790960312
       Target Frame: zed_camera_center
       Value: Orbit (rviz)
-      Yaw: 2.749084711074829
+      Yaw: 3.3190853595733643
     Saved: ~
 Window Geometry:
   Camera view:

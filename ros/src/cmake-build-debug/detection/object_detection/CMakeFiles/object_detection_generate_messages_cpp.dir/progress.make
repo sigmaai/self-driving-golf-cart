@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+CMAKE_PROGRESS_1 = 
+CMAKE_PROGRESS_2 = 8
+=======
 CMAKE_PROGRESS_1 = 18
 CMAKE_PROGRESS_2 = 19
+>>>>>>> master
 

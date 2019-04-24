@@ -281,6 +281,10 @@ point_cloud_transform_EXTERNAL_OBJECTS =
 /home/neil/Workspace/self-driving-golf-cart/ros/devel/lib/point_cloud/point_cloud_transform: /usr/lib/x86_64-linux-gnu/libboost_signals.so
 /home/neil/Workspace/self-driving-golf-cart/ros/devel/lib/point_cloud/point_cloud_transform: /opt/ros/melodic/lib/libxmlrpcpp.so
 /home/neil/Workspace/self-driving-golf-cart/ros/devel/lib/point_cloud/point_cloud_transform: /opt/ros/melodic/lib/libtf2.so
+/home/neil/Workspace/self-driving-golf-cart/ros/devel/lib/point_cloud/point_cloud_transform: /opt/ros/melodic/lib/libcv_bridge.so
+/home/neil/Workspace/self-driving-golf-cart/ros/devel/lib/point_cloud/point_cloud_transform: /usr/lib/x86_64-linux-gnu/libopencv_core.so.3.2.0
+/home/neil/Workspace/self-driving-golf-cart/ros/devel/lib/point_cloud/point_cloud_transform: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.3.2.0
+/home/neil/Workspace/self-driving-golf-cart/ros/devel/lib/point_cloud/point_cloud_transform: /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.3.2.0
 /home/neil/Workspace/self-driving-golf-cart/ros/devel/lib/point_cloud/point_cloud_transform: /opt/ros/melodic/lib/librosconsole.so
 /home/neil/Workspace/self-driving-golf-cart/ros/devel/lib/point_cloud/point_cloud_transform: /opt/ros/melodic/lib/librosconsole_log4cxx.so
 /home/neil/Workspace/self-driving-golf-cart/ros/devel/lib/point_cloud/point_cloud_transform: /opt/ros/melodic/lib/librosconsole_backend_interface.so

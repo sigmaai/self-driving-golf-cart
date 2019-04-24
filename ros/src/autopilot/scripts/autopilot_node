@@ -26,11 +26,10 @@ class AutoPilotNode:
 
         self.current_frame = None
         self.bridge = CvBridge()
-        self.camera_select = -1
 
         # --------------------------------------------------------------------------------------------------------------
 
-        rospy.Subscriber('/vehicle/sensor/camera/front/image_color', Image, callback=self.camera_update_callback, queue_size=8)
+        rospy.Subscriber("/zed/rgb/image_raw_color", Image, callback=self.camera_update_callback, queue_size=8)
 
         # --------------------------------------------------------------------------------------------------------------
 

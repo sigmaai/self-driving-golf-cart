@@ -68,16 +68,27 @@ install/strip/fast: preinstall/fast
 	/home/neil/snap/clion-2019.1/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/home/neil/snap/clion-2019.1/bin/cmake/linux/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/home/neil/snap/clion-2019.1/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+.PHONY : install
 
-# Special rule for the target test
-test/fast: test
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/home/neil/snap/clion-2019.1/bin/cmake/linux/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
-.PHONY : test/fast
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -102,17 +113,16 @@ install/local/fast: preinstall/fast
 	/home/neil/snap/clion-2019.1/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/home/neil/snap/clion-2019.1/bin/cmake/linux/bin/cmake -P cmake_install.cmake
-.PHONY : install
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/home/neil/snap/clion-2019.1/bin/cmake/linux/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
 
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/home/neil/snap/clion-2019.1/bin/cmake/linux/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -124,16 +134,6 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,186 +168,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-point_cloud/CMakeFiles/bond_generate_messages_nodejs.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 point_cloud/CMakeFiles/bond_generate_messages_nodejs.dir/rule
-.PHONY : point_cloud/CMakeFiles/bond_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-bond_generate_messages_nodejs: point_cloud/CMakeFiles/bond_generate_messages_nodejs.dir/rule
-
-.PHONY : bond_generate_messages_nodejs
-
-# fast build rule for target.
-bond_generate_messages_nodejs/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/bond_generate_messages_nodejs.dir/build.make point_cloud/CMakeFiles/bond_generate_messages_nodejs.dir/build
-.PHONY : bond_generate_messages_nodejs/fast
-
-# Convenience name for target.
-point_cloud/CMakeFiles/nodelet_generate_messages_py.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 point_cloud/CMakeFiles/nodelet_generate_messages_py.dir/rule
-.PHONY : point_cloud/CMakeFiles/nodelet_generate_messages_py.dir/rule
-
-# Convenience name for target.
-nodelet_generate_messages_py: point_cloud/CMakeFiles/nodelet_generate_messages_py.dir/rule
-
-.PHONY : nodelet_generate_messages_py
-
-# fast build rule for target.
-nodelet_generate_messages_py/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/nodelet_generate_messages_py.dir/build.make point_cloud/CMakeFiles/nodelet_generate_messages_py.dir/build
-.PHONY : nodelet_generate_messages_py/fast
-
-# Convenience name for target.
-point_cloud/CMakeFiles/bond_generate_messages_lisp.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 point_cloud/CMakeFiles/bond_generate_messages_lisp.dir/rule
-.PHONY : point_cloud/CMakeFiles/bond_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-bond_generate_messages_lisp: point_cloud/CMakeFiles/bond_generate_messages_lisp.dir/rule
-
-.PHONY : bond_generate_messages_lisp
-
-# fast build rule for target.
-bond_generate_messages_lisp/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/bond_generate_messages_lisp.dir/build.make point_cloud/CMakeFiles/bond_generate_messages_lisp.dir/build
-.PHONY : bond_generate_messages_lisp/fast
-
-# Convenience name for target.
-point_cloud/CMakeFiles/bond_generate_messages_cpp.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 point_cloud/CMakeFiles/bond_generate_messages_cpp.dir/rule
-.PHONY : point_cloud/CMakeFiles/bond_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-bond_generate_messages_cpp: point_cloud/CMakeFiles/bond_generate_messages_cpp.dir/rule
-
-.PHONY : bond_generate_messages_cpp
-
-# fast build rule for target.
-bond_generate_messages_cpp/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/bond_generate_messages_cpp.dir/build.make point_cloud/CMakeFiles/bond_generate_messages_cpp.dir/build
-.PHONY : bond_generate_messages_cpp/fast
-
-# Convenience name for target.
-point_cloud/CMakeFiles/nodelet_generate_messages_lisp.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 point_cloud/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
-.PHONY : point_cloud/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-nodelet_generate_messages_lisp: point_cloud/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
-
-.PHONY : nodelet_generate_messages_lisp
-
-# fast build rule for target.
-nodelet_generate_messages_lisp/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make point_cloud/CMakeFiles/nodelet_generate_messages_lisp.dir/build
-.PHONY : nodelet_generate_messages_lisp/fast
-
-# Convenience name for target.
-point_cloud/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 point_cloud/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
-.PHONY : point_cloud/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-topic_tools_generate_messages_cpp: point_cloud/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
-
-.PHONY : topic_tools_generate_messages_cpp
-
-# fast build rule for target.
-topic_tools_generate_messages_cpp/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/topic_tools_generate_messages_cpp.dir/build.make point_cloud/CMakeFiles/topic_tools_generate_messages_cpp.dir/build
-.PHONY : topic_tools_generate_messages_cpp/fast
-
-# Convenience name for target.
-point_cloud/CMakeFiles/nodelet_generate_messages_eus.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 point_cloud/CMakeFiles/nodelet_generate_messages_eus.dir/rule
-.PHONY : point_cloud/CMakeFiles/nodelet_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-nodelet_generate_messages_eus: point_cloud/CMakeFiles/nodelet_generate_messages_eus.dir/rule
-
-.PHONY : nodelet_generate_messages_eus
-
-# fast build rule for target.
-nodelet_generate_messages_eus/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/nodelet_generate_messages_eus.dir/build.make point_cloud/CMakeFiles/nodelet_generate_messages_eus.dir/build
-.PHONY : nodelet_generate_messages_eus/fast
-
-# Convenience name for target.
-point_cloud/CMakeFiles/nodelet_topic_tools_gencfg.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 point_cloud/CMakeFiles/nodelet_topic_tools_gencfg.dir/rule
-.PHONY : point_cloud/CMakeFiles/nodelet_topic_tools_gencfg.dir/rule
-
-# Convenience name for target.
-nodelet_topic_tools_gencfg: point_cloud/CMakeFiles/nodelet_topic_tools_gencfg.dir/rule
-
-.PHONY : nodelet_topic_tools_gencfg
-
-# fast build rule for target.
-nodelet_topic_tools_gencfg/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/nodelet_topic_tools_gencfg.dir/build.make point_cloud/CMakeFiles/nodelet_topic_tools_gencfg.dir/build
-.PHONY : nodelet_topic_tools_gencfg/fast
-
-# Convenience name for target.
-point_cloud/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 point_cloud/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
-.PHONY : point_cloud/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_srvs_generate_messages_lisp: point_cloud/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
-
-.PHONY : std_srvs_generate_messages_lisp
-
-# fast build rule for target.
-std_srvs_generate_messages_lisp/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make point_cloud/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
-.PHONY : std_srvs_generate_messages_lisp/fast
-
-# Convenience name for target.
-point_cloud/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 point_cloud/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
-.PHONY : point_cloud/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-topic_tools_generate_messages_lisp: point_cloud/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
-
-.PHONY : topic_tools_generate_messages_lisp
-
-# fast build rule for target.
-topic_tools_generate_messages_lisp/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/topic_tools_generate_messages_lisp.dir/build.make point_cloud/CMakeFiles/topic_tools_generate_messages_lisp.dir/build
-.PHONY : topic_tools_generate_messages_lisp/fast
-
-# Convenience name for target.
-point_cloud/CMakeFiles/pcl_msgs_generate_messages_eus.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 point_cloud/CMakeFiles/pcl_msgs_generate_messages_eus.dir/rule
-.PHONY : point_cloud/CMakeFiles/pcl_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-pcl_msgs_generate_messages_eus: point_cloud/CMakeFiles/pcl_msgs_generate_messages_eus.dir/rule
-
-.PHONY : pcl_msgs_generate_messages_eus
-
-# fast build rule for target.
-pcl_msgs_generate_messages_eus/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/pcl_msgs_generate_messages_eus.dir/build.make point_cloud/CMakeFiles/pcl_msgs_generate_messages_eus.dir/build
-.PHONY : pcl_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-point_cloud/CMakeFiles/pcl_msgs_generate_messages_py.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 point_cloud/CMakeFiles/pcl_msgs_generate_messages_py.dir/rule
-.PHONY : point_cloud/CMakeFiles/pcl_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-pcl_msgs_generate_messages_py: point_cloud/CMakeFiles/pcl_msgs_generate_messages_py.dir/rule
-
-.PHONY : pcl_msgs_generate_messages_py
-
-# fast build rule for target.
-pcl_msgs_generate_messages_py/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/pcl_msgs_generate_messages_py.dir/build.make point_cloud/CMakeFiles/pcl_msgs_generate_messages_py.dir/build
-.PHONY : pcl_msgs_generate_messages_py/fast
-
-# Convenience name for target.
 point_cloud/CMakeFiles/planar_segmentation.dir/rule:
 	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 point_cloud/CMakeFiles/planar_segmentation.dir/rule
 .PHONY : point_cloud/CMakeFiles/planar_segmentation.dir/rule
@@ -363,154 +183,34 @@ planar_segmentation/fast:
 .PHONY : planar_segmentation/fast
 
 # Convenience name for target.
-point_cloud/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 point_cloud/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/rule
-.PHONY : point_cloud/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/rule
+point_cloud/CMakeFiles/ground_plane_detection.dir/rule:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 point_cloud/CMakeFiles/ground_plane_detection.dir/rule
+.PHONY : point_cloud/CMakeFiles/ground_plane_detection.dir/rule
 
 # Convenience name for target.
-pcl_msgs_generate_messages_cpp: point_cloud/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/rule
+ground_plane_detection: point_cloud/CMakeFiles/ground_plane_detection.dir/rule
 
-.PHONY : pcl_msgs_generate_messages_cpp
+.PHONY : ground_plane_detection
 
 # fast build rule for target.
-pcl_msgs_generate_messages_cpp/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/build.make point_cloud/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/build
-.PHONY : pcl_msgs_generate_messages_cpp/fast
+ground_plane_detection/fast:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/ground_plane_detection.dir/build.make point_cloud/CMakeFiles/ground_plane_detection.dir/build
+.PHONY : ground_plane_detection/fast
 
 # Convenience name for target.
-point_cloud/CMakeFiles/bond_generate_messages_eus.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 point_cloud/CMakeFiles/bond_generate_messages_eus.dir/rule
-.PHONY : point_cloud/CMakeFiles/bond_generate_messages_eus.dir/rule
+point_cloud/CMakeFiles/rgb_segmentation_point_cloud.dir/rule:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 point_cloud/CMakeFiles/rgb_segmentation_point_cloud.dir/rule
+.PHONY : point_cloud/CMakeFiles/rgb_segmentation_point_cloud.dir/rule
 
 # Convenience name for target.
-bond_generate_messages_eus: point_cloud/CMakeFiles/bond_generate_messages_eus.dir/rule
+rgb_segmentation_point_cloud: point_cloud/CMakeFiles/rgb_segmentation_point_cloud.dir/rule
 
-.PHONY : bond_generate_messages_eus
+.PHONY : rgb_segmentation_point_cloud
 
 # fast build rule for target.
-bond_generate_messages_eus/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/bond_generate_messages_eus.dir/build.make point_cloud/CMakeFiles/bond_generate_messages_eus.dir/build
-.PHONY : bond_generate_messages_eus/fast
-
-# Convenience name for target.
-point_cloud/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 point_cloud/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
-.PHONY : point_cloud/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-nodelet_generate_messages_nodejs: point_cloud/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
-
-.PHONY : nodelet_generate_messages_nodejs
-
-# fast build rule for target.
-nodelet_generate_messages_nodejs/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make point_cloud/CMakeFiles/nodelet_generate_messages_nodejs.dir/build
-.PHONY : nodelet_generate_messages_nodejs/fast
-
-# Convenience name for target.
-point_cloud/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 point_cloud/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/rule
-.PHONY : point_cloud/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-pcl_msgs_generate_messages_nodejs: point_cloud/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : pcl_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-pcl_msgs_generate_messages_nodejs/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/build.make point_cloud/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/build
-.PHONY : pcl_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-point_cloud/CMakeFiles/std_srvs_generate_messages_eus.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 point_cloud/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
-.PHONY : point_cloud/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-std_srvs_generate_messages_eus: point_cloud/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
-
-.PHONY : std_srvs_generate_messages_eus
-
-# fast build rule for target.
-std_srvs_generate_messages_eus/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make point_cloud/CMakeFiles/std_srvs_generate_messages_eus.dir/build
-.PHONY : std_srvs_generate_messages_eus/fast
-
-# Convenience name for target.
-point_cloud/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 point_cloud/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
-.PHONY : point_cloud/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_srvs_generate_messages_cpp: point_cloud/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
-
-.PHONY : std_srvs_generate_messages_cpp
-
-# fast build rule for target.
-std_srvs_generate_messages_cpp/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make point_cloud/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
-.PHONY : std_srvs_generate_messages_cpp/fast
-
-# Convenience name for target.
-point_cloud/CMakeFiles/nodelet_generate_messages_cpp.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 point_cloud/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
-.PHONY : point_cloud/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-nodelet_generate_messages_cpp: point_cloud/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
-
-.PHONY : nodelet_generate_messages_cpp
-
-# fast build rule for target.
-nodelet_generate_messages_cpp/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make point_cloud/CMakeFiles/nodelet_generate_messages_cpp.dir/build
-.PHONY : nodelet_generate_messages_cpp/fast
-
-# Convenience name for target.
-point_cloud/CMakeFiles/bond_generate_messages_py.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 point_cloud/CMakeFiles/bond_generate_messages_py.dir/rule
-.PHONY : point_cloud/CMakeFiles/bond_generate_messages_py.dir/rule
-
-# Convenience name for target.
-bond_generate_messages_py: point_cloud/CMakeFiles/bond_generate_messages_py.dir/rule
-
-.PHONY : bond_generate_messages_py
-
-# fast build rule for target.
-bond_generate_messages_py/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/bond_generate_messages_py.dir/build.make point_cloud/CMakeFiles/bond_generate_messages_py.dir/build
-.PHONY : bond_generate_messages_py/fast
-
-# Convenience name for target.
-point_cloud/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 point_cloud/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
-.PHONY : point_cloud/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-std_srvs_generate_messages_nodejs: point_cloud/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
-
-.PHONY : std_srvs_generate_messages_nodejs
-
-# fast build rule for target.
-std_srvs_generate_messages_nodejs/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make point_cloud/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build
-.PHONY : std_srvs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-point_cloud/CMakeFiles/std_srvs_generate_messages_py.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 point_cloud/CMakeFiles/std_srvs_generate_messages_py.dir/rule
-.PHONY : point_cloud/CMakeFiles/std_srvs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_srvs_generate_messages_py: point_cloud/CMakeFiles/std_srvs_generate_messages_py.dir/rule
-
-.PHONY : std_srvs_generate_messages_py
-
-# fast build rule for target.
-std_srvs_generate_messages_py/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/std_srvs_generate_messages_py.dir/build.make point_cloud/CMakeFiles/std_srvs_generate_messages_py.dir/build
-.PHONY : std_srvs_generate_messages_py/fast
+rgb_segmentation_point_cloud/fast:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/rgb_segmentation_point_cloud.dir/build.make point_cloud/CMakeFiles/rgb_segmentation_point_cloud.dir/build
+.PHONY : rgb_segmentation_point_cloud/fast
 
 # Convenience name for target.
 point_cloud/CMakeFiles/point_cloud_transform.dir/rule:
@@ -526,96 +226,6 @@ point_cloud_transform: point_cloud/CMakeFiles/point_cloud_transform.dir/rule
 point_cloud_transform/fast:
 	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/point_cloud_transform.dir/build.make point_cloud/CMakeFiles/point_cloud_transform.dir/build
 .PHONY : point_cloud_transform/fast
-
-# Convenience name for target.
-point_cloud/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 point_cloud/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/rule
-.PHONY : point_cloud/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-pcl_msgs_generate_messages_lisp: point_cloud/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : pcl_msgs_generate_messages_lisp
-
-# fast build rule for target.
-pcl_msgs_generate_messages_lisp/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/build.make point_cloud/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/build
-.PHONY : pcl_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-point_cloud/CMakeFiles/topic_tools_generate_messages_eus.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 point_cloud/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
-.PHONY : point_cloud/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-topic_tools_generate_messages_eus: point_cloud/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
-
-.PHONY : topic_tools_generate_messages_eus
-
-# fast build rule for target.
-topic_tools_generate_messages_eus/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/topic_tools_generate_messages_eus.dir/build.make point_cloud/CMakeFiles/topic_tools_generate_messages_eus.dir/build
-.PHONY : topic_tools_generate_messages_eus/fast
-
-# Convenience name for target.
-point_cloud/CMakeFiles/pcl_ros_gencfg.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 point_cloud/CMakeFiles/pcl_ros_gencfg.dir/rule
-.PHONY : point_cloud/CMakeFiles/pcl_ros_gencfg.dir/rule
-
-# Convenience name for target.
-pcl_ros_gencfg: point_cloud/CMakeFiles/pcl_ros_gencfg.dir/rule
-
-.PHONY : pcl_ros_gencfg
-
-# fast build rule for target.
-pcl_ros_gencfg/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/pcl_ros_gencfg.dir/build.make point_cloud/CMakeFiles/pcl_ros_gencfg.dir/build
-.PHONY : pcl_ros_gencfg/fast
-
-# Convenience name for target.
-point_cloud/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 point_cloud/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule
-.PHONY : point_cloud/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-topic_tools_generate_messages_nodejs: point_cloud/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule
-
-.PHONY : topic_tools_generate_messages_nodejs
-
-# fast build rule for target.
-topic_tools_generate_messages_nodejs/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/topic_tools_generate_messages_nodejs.dir/build.make point_cloud/CMakeFiles/topic_tools_generate_messages_nodejs.dir/build
-.PHONY : topic_tools_generate_messages_nodejs/fast
-
-# Convenience name for target.
-point_cloud/CMakeFiles/topic_tools_generate_messages_py.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 point_cloud/CMakeFiles/topic_tools_generate_messages_py.dir/rule
-.PHONY : point_cloud/CMakeFiles/topic_tools_generate_messages_py.dir/rule
-
-# Convenience name for target.
-topic_tools_generate_messages_py: point_cloud/CMakeFiles/topic_tools_generate_messages_py.dir/rule
-
-.PHONY : topic_tools_generate_messages_py
-
-# fast build rule for target.
-topic_tools_generate_messages_py/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/topic_tools_generate_messages_py.dir/build.make point_cloud/CMakeFiles/topic_tools_generate_messages_py.dir/build
-.PHONY : topic_tools_generate_messages_py/fast
-
-# Convenience name for target.
-point_cloud/CMakeFiles/ground_plane_detection.dir/rule:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 point_cloud/CMakeFiles/ground_plane_detection.dir/rule
-.PHONY : point_cloud/CMakeFiles/ground_plane_detection.dir/rule
-
-# Convenience name for target.
-ground_plane_detection: point_cloud/CMakeFiles/ground_plane_detection.dir/rule
-
-.PHONY : ground_plane_detection
-
-# fast build rule for target.
-ground_plane_detection/fast:
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/ground_plane_detection.dir/build.make point_cloud/CMakeFiles/ground_plane_detection.dir/build
-.PHONY : ground_plane_detection/fast
 
 src/ground_plane_detection.o: src/ground_plane_detection.cpp.o
 
@@ -698,6 +308,33 @@ src/point_cloud_transform.cpp.s:
 	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/point_cloud_transform.dir/build.make point_cloud/CMakeFiles/point_cloud_transform.dir/src/point_cloud_transform.cpp.s
 .PHONY : src/point_cloud_transform.cpp.s
 
+src/rgb_segmentation_point_cloud.o: src/rgb_segmentation_point_cloud.cpp.o
+
+.PHONY : src/rgb_segmentation_point_cloud.o
+
+# target to build an object file
+src/rgb_segmentation_point_cloud.cpp.o:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/rgb_segmentation_point_cloud.dir/build.make point_cloud/CMakeFiles/rgb_segmentation_point_cloud.dir/src/rgb_segmentation_point_cloud.cpp.o
+.PHONY : src/rgb_segmentation_point_cloud.cpp.o
+
+src/rgb_segmentation_point_cloud.i: src/rgb_segmentation_point_cloud.cpp.i
+
+.PHONY : src/rgb_segmentation_point_cloud.i
+
+# target to preprocess a source file
+src/rgb_segmentation_point_cloud.cpp.i:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/rgb_segmentation_point_cloud.dir/build.make point_cloud/CMakeFiles/rgb_segmentation_point_cloud.dir/src/rgb_segmentation_point_cloud.cpp.i
+.PHONY : src/rgb_segmentation_point_cloud.cpp.i
+
+src/rgb_segmentation_point_cloud.s: src/rgb_segmentation_point_cloud.cpp.s
+
+.PHONY : src/rgb_segmentation_point_cloud.s
+
+# target to generate assembly for a file
+src/rgb_segmentation_point_cloud.cpp.s:
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug && $(MAKE) -f point_cloud/CMakeFiles/rgb_segmentation_point_cloud.dir/build.make point_cloud/CMakeFiles/rgb_segmentation_point_cloud.dir/src/rgb_segmentation_point_cloud.cpp.s
+.PHONY : src/rgb_segmentation_point_cloud.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -705,42 +342,16 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... bond_generate_messages_nodejs"
-	@echo "... nodelet_generate_messages_py"
-	@echo "... bond_generate_messages_lisp"
-	@echo "... bond_generate_messages_cpp"
-	@echo "... nodelet_generate_messages_lisp"
-	@echo "... topic_tools_generate_messages_cpp"
-	@echo "... nodelet_generate_messages_eus"
-	@echo "... nodelet_topic_tools_gencfg"
-	@echo "... std_srvs_generate_messages_lisp"
-	@echo "... topic_tools_generate_messages_lisp"
-	@echo "... pcl_msgs_generate_messages_eus"
-	@echo "... pcl_msgs_generate_messages_py"
-	@echo "... test"
-	@echo "... planar_segmentation"
-	@echo "... pcl_msgs_generate_messages_cpp"
-	@echo "... rebuild_cache"
-	@echo "... bond_generate_messages_eus"
-	@echo "... nodelet_generate_messages_nodejs"
-	@echo "... pcl_msgs_generate_messages_nodejs"
-	@echo "... std_srvs_generate_messages_eus"
-	@echo "... install/local"
-	@echo "... std_srvs_generate_messages_cpp"
 	@echo "... install"
-	@echo "... nodelet_generate_messages_cpp"
-	@echo "... bond_generate_messages_py"
-	@echo "... std_srvs_generate_messages_nodejs"
-	@echo "... std_srvs_generate_messages_py"
-	@echo "... point_cloud_transform"
-	@echo "... pcl_msgs_generate_messages_lisp"
-	@echo "... topic_tools_generate_messages_eus"
-	@echo "... pcl_ros_gencfg"
-	@echo "... topic_tools_generate_messages_nodejs"
-	@echo "... topic_tools_generate_messages_py"
-	@echo "... ground_plane_detection"
-	@echo "... edit_cache"
 	@echo "... list_install_components"
+	@echo "... rebuild_cache"
+	@echo "... planar_segmentation"
+	@echo "... ground_plane_detection"
+	@echo "... install/local"
+	@echo "... rgb_segmentation_point_cloud"
+	@echo "... test"
+	@echo "... point_cloud_transform"
+	@echo "... edit_cache"
 	@echo "... src/ground_plane_detection.o"
 	@echo "... src/ground_plane_detection.i"
 	@echo "... src/ground_plane_detection.s"
@@ -750,6 +361,9 @@ help:
 	@echo "... src/point_cloud_transform.o"
 	@echo "... src/point_cloud_transform.i"
 	@echo "... src/point_cloud_transform.s"
+	@echo "... src/rgb_segmentation_point_cloud.o"
+	@echo "... src/rgb_segmentation_point_cloud.i"
+	@echo "... src/rgb_segmentation_point_cloud.s"
 .PHONY : help
 
 

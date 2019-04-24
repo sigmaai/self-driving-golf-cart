@@ -1,0 +1,7 @@
+
+global_costmap:
+  global_frame: map
+  robot_base_frame: zed_camera_center
+  update_frequency: 2.0
+  publish_frequency: 2.0
+  static_map: true

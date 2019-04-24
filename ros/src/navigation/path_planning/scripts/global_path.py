@@ -5,7 +5,7 @@ import json
 class GlobalPathPlanner():
 
     def __init__(self):
-        self.gmaps = googlemaps.Client(key="AIzaSyDDAfjrlHHk8murckGuT0mh4yU5QG7dH-g")
+        self.gmaps = googlemaps.Client(key="")
         print("Google Maps initialized")
 
     def direction(self, start, destination):
