@@ -53,18 +53,18 @@ CMAKE_BINARY_DIR = /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-bui
 # Include the progress variables for this target.
 include segmentation/CMakeFiles/segmentation_generate_messages_lisp.dir/progress.make
 
-segmentation/CMakeFiles/segmentation_generate_messages_lisp: /home/neil/Workspace/self-driving-golf-cart/ros/devel/share/common-lisp/ros/segmentation/msg/SegmentationResult.lisp
+segmentation/CMakeFiles/segmentation_generate_messages_lisp: devel/share/common-lisp/ros/segmentation/msg/SegmentationResult.lisp
 
 
-/home/neil/Workspace/self-driving-golf-cart/ros/devel/share/common-lisp/ros/segmentation/msg/SegmentationResult.lisp: /opt/ros/melodic/lib/genlisp/gen_lisp.py
-/home/neil/Workspace/self-driving-golf-cart/ros/devel/share/common-lisp/ros/segmentation/msg/SegmentationResult.lisp: ../segmentation/msg/SegmentationResult.msg
-/home/neil/Workspace/self-driving-golf-cart/ros/devel/share/common-lisp/ros/segmentation/msg/SegmentationResult.lisp: /opt/ros/melodic/share/sensor_msgs/msg/Image.msg
-/home/neil/Workspace/self-driving-golf-cart/ros/devel/share/common-lisp/ros/segmentation/msg/SegmentationResult.lisp: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+devel/share/common-lisp/ros/segmentation/msg/SegmentationResult.lisp: /opt/ros/melodic/lib/genlisp/gen_lisp.py
+devel/share/common-lisp/ros/segmentation/msg/SegmentationResult.lisp: ../segmentation/msg/SegmentationResult.msg
+devel/share/common-lisp/ros/segmentation/msg/SegmentationResult.lisp: /opt/ros/melodic/share/sensor_msgs/msg/Image.msg
+devel/share/common-lisp/ros/segmentation/msg/SegmentationResult.lisp: /opt/ros/melodic/share/std_msgs/msg/Header.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from segmentation/SegmentationResult.msg"
-	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/segmentation && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/neil/Workspace/self-driving-golf-cart/ros/src/segmentation/msg/SegmentationResult.msg -Isegmentation:/home/neil/Workspace/self-driving-golf-cart/ros/src/segmentation/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -p segmentation -o /home/neil/Workspace/self-driving-golf-cart/ros/devel/share/common-lisp/ros/segmentation/msg
+	cd /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/segmentation && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/neil/Workspace/self-driving-golf-cart/ros/src/segmentation/msg/SegmentationResult.msg -Isegmentation:/home/neil/Workspace/self-driving-golf-cart/ros/src/segmentation/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -p segmentation -o /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel/share/common-lisp/ros/segmentation/msg
 
 segmentation_generate_messages_lisp: segmentation/CMakeFiles/segmentation_generate_messages_lisp
-segmentation_generate_messages_lisp: /home/neil/Workspace/self-driving-golf-cart/ros/devel/share/common-lisp/ros/segmentation/msg/SegmentationResult.lisp
+segmentation_generate_messages_lisp: devel/share/common-lisp/ros/segmentation/msg/SegmentationResult.lisp
 segmentation_generate_messages_lisp: segmentation/CMakeFiles/segmentation_generate_messages_lisp.dir/build.make
 
 .PHONY : segmentation_generate_messages_lisp

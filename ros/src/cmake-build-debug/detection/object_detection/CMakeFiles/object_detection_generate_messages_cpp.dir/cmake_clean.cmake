@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/object_detection_generate_messages_cpp"
-  "/home/neil/Workspace/self-driving-golf-cart/ros/devel/include/object_detection/DetectionResults.h"
-  "/home/neil/Workspace/self-driving-golf-cart/ros/devel/include/object_detection/DetectionResult.h"
+  "../../devel/include/object_detection/DetectionResults.h"
+  "../../devel/include/object_detection/DetectionResult.h"
 )
 
 # Per-language clean rules from dependency scanning.

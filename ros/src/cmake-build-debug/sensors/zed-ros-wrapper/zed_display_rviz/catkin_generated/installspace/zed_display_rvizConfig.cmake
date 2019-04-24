@@ -68,7 +68,7 @@ set(zed_display_rviz_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(zed_display_rviz_SOURCE_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/zed-ros-wrapper/zed_display_rviz)
-  set(zed_display_rviz_DEVEL_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/devel)
+  set(zed_display_rviz_DEVEL_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel)
   set(zed_display_rviz_INSTALL_PREFIX "")
   set(zed_display_rviz_PREFIX ${zed_display_rviz_DEVEL_PREFIX})
 else()

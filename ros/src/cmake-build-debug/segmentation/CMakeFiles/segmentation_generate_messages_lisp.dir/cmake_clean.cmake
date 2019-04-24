@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/segmentation_generate_messages_lisp"
-  "/home/neil/Workspace/self-driving-golf-cart/ros/devel/share/common-lisp/ros/segmentation/msg/SegmentationResult.lisp"
+  "../devel/share/common-lisp/ros/segmentation/msg/SegmentationResult.lisp"
 )
 
 # Per-language clean rules from dependency scanning.

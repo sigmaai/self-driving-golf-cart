@@ -26,9 +26,6 @@ BUILD_SHARED_LIBS:BOOL=ON
 //List of ';' separated packages to exclude
 CATKIN_BLACKLIST_PACKAGES:STRING=
 
-//No help, variable specified on the command line.
-CATKIN_DEVEL_PREFIX:PATH=/home/neil/Workspace/self-driving-golf-cart/ros/devel
-
 //Catkin enable testing
 CATKIN_ENABLE_TESTING:BOOL=ON
 
@@ -477,9 +474,6 @@ ZED_DIR:PATH=/usr/local/zed
 ZED_FOUND:BOOL=TRUE
 
 //Path to a file.
-_file_name:FILEPATH=/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library/test/internal/test_internal.test
-
-//Path to a file.
 _gmock_INCLUDES:FILEPATH=/usr/include/gmock/gmock.h
 
 //Path to a file.
@@ -711,9 +705,6 @@ move_base_msgs_DIR:PATH=/opt/ros/melodic/share/move_base_msgs/cmake
 //The directory containing a CMake configuration file for nav_msgs.
 nav_msgs_DIR:PATH=/opt/ros/melodic/share/nav_msgs/cmake
 
-//The directory containing a CMake configuration file for navigation.
-navigation_DIR:PATH=navigation_DIR-NOTFOUND
-
 //The directory containing a CMake configuration file for nodelet.
 nodelet_DIR:PATH=/opt/ros/melodic/share/nodelet/cmake
 
@@ -725,9 +716,6 @@ object_detection_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/r
 
 //Value Computed by CMake
 object_detection_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/detection/object_detection
-
-//The directory containing a CMake configuration file for opencv2.
-opencv2_DIR:PATH=opencv2_DIR-NOTFOUND
 
 //Value Computed by CMake
 osm_cartography_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/osm
@@ -762,35 +750,11 @@ point_cloud_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/sr
 //The directory containing a CMake configuration file for radar_msgs.
 radar_msgs_DIR:PATH=/opt/ros/melodic/share/radar_msgs/cmake
 
-//Value Computed by CMake
-rosapi_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/rosbridge/rosapi
-
-//Value Computed by CMake
-rosapi_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosapi
-
 //The directory containing a CMake configuration file for rosbag.
 rosbag_DIR:PATH=/opt/ros/melodic/share/rosbag/cmake
 
 //The directory containing a CMake configuration file for rosbag_storage.
 rosbag_storage_DIR:PATH=/opt/ros/melodic/share/rosbag_storage/cmake
-
-//Value Computed by CMake
-rosbridge_library_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/rosbridge/rosbridge_library
-
-//Value Computed by CMake
-rosbridge_library_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_library
-
-//Value Computed by CMake
-rosbridge_server_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/rosbridge/rosbridge_server
-
-//Value Computed by CMake
-rosbridge_server_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_server
-
-//Value Computed by CMake
-rosbridge_suite_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/rosbridge/rosbridge_suite
-
-//Value Computed by CMake
-rosbridge_suite_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/rosbridge/rosbridge_suite
 
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/melodic/share/rosconsole/cmake
@@ -837,17 +801,8 @@ rosserial_msgs_DIR:PATH=/opt/ros/melodic/share/rosserial_msgs/cmake
 //The directory containing a CMake configuration file for rosserial_python.
 rosserial_python_DIR:PATH=/opt/ros/melodic/share/rosserial_python/cmake
 
-//The directory containing a CMake configuration file for rostest.
-rostest_DIR:PATH=/opt/ros/melodic/share/rostest/cmake
-
 //The directory containing a CMake configuration file for rostime.
 rostime_DIR:PATH=/opt/ros/melodic/share/rostime/cmake
-
-//The directory containing a CMake configuration file for rtabmap.
-rtabmap_DIR:PATH=rtabmap_DIR-NOTFOUND
-
-//The directory containing a CMake configuration file for rtabmap_ros.
-rtabmap_ros_DIR:PATH=rtabmap_ros_DIR-NOTFOUND
 
 //Value Computed by CMake
 segmentation_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/segmentation
@@ -926,12 +881,6 @@ zed_ros_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cm
 
 //Value Computed by CMake
 zed_ros_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/zed-ros-wrapper/zed_ros
-
-//Value Computed by CMake
-zed_rtabmap_example_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/zed_rtabmap_example
-
-//Value Computed by CMake
-zed_rtabmap_example_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/zed_rtabmap_example
 
 //Value Computed by CMake
 zed_wrapper_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper
@@ -1059,11 +1008,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-<<<<<<< HEAD
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=27
-=======
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=22
->>>>>>> master
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=23
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -1202,11 +1147,11 @@ FIND_PACKAGE_MESSAGE_DETAILS_CUDA:INTERNAL=[/usr/local/cuda-10.0][/usr/local/cud
 //Details about finding OpenCV
 FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/usr][v3.2.0()]
 //Details about finding OpenMP
-FIND_PACKAGE_MESSAGE_DETAILS_OpenMP:INTERNAL=[TRUE][TRUE][c ][v()]
+FIND_PACKAGE_MESSAGE_DETAILS_OpenMP:INTERNAL=[TRUE][TRUE][c ][v4.5()]
 //Details about finding OpenMP_C
-FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_C:INTERNAL=[-fopenmp][/usr/lib/gcc/x86_64-linux-gnu/7/libgomp.so][/usr/lib/x86_64-linux-gnu/libpthread.so][v()]
+FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_C:INTERNAL=[-fopenmp][/usr/lib/gcc/x86_64-linux-gnu/7/libgomp.so][/usr/lib/x86_64-linux-gnu/libpthread.so][v4.5()]
 //Details about finding OpenMP_CXX
-FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_CXX:INTERNAL=[-fopenmp][/usr/lib/gcc/x86_64-linux-gnu/7/libgomp.so][/usr/lib/x86_64-linux-gnu/libpthread.so][v()]
+FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_CXX:INTERNAL=[-fopenmp][/usr/lib/gcc/x86_64-linux-gnu/7/libgomp.so][/usr/lib/x86_64-linux-gnu/libpthread.so][v4.5()]
 //Details about finding PythonInterp
 FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python2][v2.7.15()]
 //Details about finding Threads

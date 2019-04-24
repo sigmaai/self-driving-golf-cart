@@ -68,7 +68,7 @@ set(lane_detection_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(lane_detection_SOURCE_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/src/detection/lane_detection)
-  set(lane_detection_DEVEL_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/devel)
+  set(lane_detection_DEVEL_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel)
   set(lane_detection_INSTALL_PREFIX "")
   set(lane_detection_PREFIX ${lane_detection_DEVEL_PREFIX})
 else()

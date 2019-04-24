@@ -68,7 +68,7 @@ set(driver_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(driver_SOURCE_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/src/driver)
-  set(driver_DEVEL_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/devel)
+  set(driver_DEVEL_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel)
   set(driver_INSTALL_PREFIX "")
   set(driver_PREFIX ${driver_DEVEL_PREFIX})
 else()

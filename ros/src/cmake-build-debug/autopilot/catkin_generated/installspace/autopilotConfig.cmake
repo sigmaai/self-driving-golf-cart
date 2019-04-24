@@ -68,7 +68,7 @@ set(autopilot_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(autopilot_SOURCE_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/src/autopilot)
-  set(autopilot_DEVEL_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/devel)
+  set(autopilot_DEVEL_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel)
   set(autopilot_INSTALL_PREFIX "")
   set(autopilot_PREFIX ${autopilot_DEVEL_PREFIX})
 else()

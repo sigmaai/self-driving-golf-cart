@@ -68,7 +68,7 @@ set(point_cloud_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(point_cloud_SOURCE_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/src/point_cloud)
-  set(point_cloud_DEVEL_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/devel)
+  set(point_cloud_DEVEL_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel)
   set(point_cloud_INSTALL_PREFIX "")
   set(point_cloud_PREFIX ${point_cloud_DEVEL_PREFIX})
 else()

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/segmentation_generate_messages_py"
-  "/home/neil/Workspace/self-driving-golf-cart/ros/devel/lib/python2.7/dist-packages/segmentation/msg/_SegmentationResult.py"
-  "/home/neil/Workspace/self-driving-golf-cart/ros/devel/lib/python2.7/dist-packages/segmentation/msg/__init__.py"
+  "../devel/lib/python2.7/dist-packages/segmentation/msg/_SegmentationResult.py"
+  "../devel/lib/python2.7/dist-packages/segmentation/msg/__init__.py"
 )
 
 # Per-language clean rules from dependency scanning.

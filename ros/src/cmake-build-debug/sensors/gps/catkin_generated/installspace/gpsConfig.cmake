@@ -68,7 +68,7 @@ set(gps_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(gps_SOURCE_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/gps)
-  set(gps_DEVEL_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/devel)
+  set(gps_DEVEL_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel)
   set(gps_INSTALL_PREFIX "")
   set(gps_PREFIX ${gps_DEVEL_PREFIX})
 else()

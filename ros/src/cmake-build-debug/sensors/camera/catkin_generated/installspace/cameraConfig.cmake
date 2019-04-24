@@ -68,7 +68,7 @@ set(camera_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(camera_SOURCE_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/camera)
-  set(camera_DEVEL_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/devel)
+  set(camera_DEVEL_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel)
   set(camera_INSTALL_PREFIX "")
   set(camera_PREFIX ${camera_DEVEL_PREFIX})
 else()

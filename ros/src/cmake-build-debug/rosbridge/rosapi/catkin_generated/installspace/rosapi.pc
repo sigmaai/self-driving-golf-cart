@@ -1,8 +1,0 @@
-prefix=/usr/local
-
-Name: rosapi
-Description: Description of rosapi
-Version: 0.10.1
-Cflags: -I/usr/local/include
-Libs: -L/usr/local/lib 
-Requires: message_runtime

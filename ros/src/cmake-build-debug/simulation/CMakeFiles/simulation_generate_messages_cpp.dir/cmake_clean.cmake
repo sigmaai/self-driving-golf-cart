@@ -1,11 +1,11 @@
 file(REMOVE_RECURSE
   "CMakeFiles/simulation_generate_messages_cpp"
-  "/home/neil/Workspace/self-driving-golf-cart/ros/devel/include/simulation/EgoVehicleControlState.h"
-  "/home/neil/Workspace/self-driving-golf-cart/ros/devel/include/simulation/CarlaVehicleControl.h"
-  "/home/neil/Workspace/self-driving-golf-cart/ros/devel/include/simulation/EgoVehicleControlTarget.h"
-  "/home/neil/Workspace/self-driving-golf-cart/ros/devel/include/simulation/EgoVehicleControlCurrent.h"
-  "/home/neil/Workspace/self-driving-golf-cart/ros/devel/include/simulation/EgoVehicleControlInfo.h"
-  "/home/neil/Workspace/self-driving-golf-cart/ros/devel/include/simulation/EgoVehicleControlMaxima.h"
+  "../devel/include/simulation/EgoVehicleControlState.h"
+  "../devel/include/simulation/CarlaVehicleControl.h"
+  "../devel/include/simulation/EgoVehicleControlTarget.h"
+  "../devel/include/simulation/EgoVehicleControlCurrent.h"
+  "../devel/include/simulation/EgoVehicleControlInfo.h"
+  "../devel/include/simulation/EgoVehicleControlMaxima.h"
 )
 
 # Per-language clean rules from dependency scanning.

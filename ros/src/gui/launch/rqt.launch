@@ -17,8 +17,6 @@
 
     <node name="camera_select" pkg="zed_wrapper" type="camera_select.py" />
 
-    <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" />
-
     <!-- setup the Arduino serial -->
     <node name="serial_node_1" pkg="rosserial_python" type="serial_node.py">
     	<param name="port" value="/dev/ttyACM0" />

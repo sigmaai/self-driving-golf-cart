@@ -68,7 +68,7 @@ set(osm_cartography_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(osm_cartography_SOURCE_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/src/osm)
-  set(osm_cartography_DEVEL_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/devel)
+  set(osm_cartography_DEVEL_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel)
   set(osm_cartography_INSTALL_PREFIX "")
   set(osm_cartography_PREFIX ${osm_cartography_DEVEL_PREFIX})
 else()

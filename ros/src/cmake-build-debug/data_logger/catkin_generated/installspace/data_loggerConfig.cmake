@@ -68,7 +68,7 @@ set(data_logger_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(data_logger_SOURCE_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/src/data_logger)
-  set(data_logger_DEVEL_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/devel)
+  set(data_logger_DEVEL_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel)
   set(data_logger_INSTALL_PREFIX "")
   set(data_logger_PREFIX ${data_logger_DEVEL_PREFIX})
 else()

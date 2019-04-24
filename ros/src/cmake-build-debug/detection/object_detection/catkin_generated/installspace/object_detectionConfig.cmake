@@ -68,7 +68,7 @@ set(object_detection_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(object_detection_SOURCE_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/src/detection/object_detection)
-  set(object_detection_DEVEL_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/devel)
+  set(object_detection_DEVEL_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel)
   set(object_detection_INSTALL_PREFIX "")
   set(object_detection_PREFIX ${object_detection_DEVEL_PREFIX})
 else()

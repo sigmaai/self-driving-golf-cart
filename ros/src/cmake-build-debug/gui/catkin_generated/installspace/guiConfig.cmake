@@ -68,7 +68,7 @@ set(gui_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(gui_SOURCE_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/src/gui)
-  set(gui_DEVEL_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/devel)
+  set(gui_DEVEL_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel)
   set(gui_INSTALL_PREFIX "")
   set(gui_PREFIX ${gui_DEVEL_PREFIX})
 else()

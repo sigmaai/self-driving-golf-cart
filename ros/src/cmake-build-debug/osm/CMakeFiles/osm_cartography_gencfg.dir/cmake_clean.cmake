@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/osm_cartography_gencfg"
-  "/home/neil/Workspace/self-driving-golf-cart/ros/devel/include/osm_cartography/VizOSMConfig.h"
-  "/home/neil/Workspace/self-driving-golf-cart/ros/devel/share/osm_cartography/docs/VizOSMConfig.dox"
-  "/home/neil/Workspace/self-driving-golf-cart/ros/devel/share/osm_cartography/docs/VizOSMConfig-usage.dox"
-  "/home/neil/Workspace/self-driving-golf-cart/ros/devel/lib/python2.7/dist-packages/osm_cartography/cfg/VizOSMConfig.py"
-  "/home/neil/Workspace/self-driving-golf-cart/ros/devel/share/osm_cartography/docs/VizOSMConfig.wikidoc"
+  "../devel/include/osm_cartography/VizOSMConfig.h"
+  "../devel/share/osm_cartography/docs/VizOSMConfig.dox"
+  "../devel/share/osm_cartography/docs/VizOSMConfig-usage.dox"
+  "../devel/lib/python2.7/dist-packages/osm_cartography/cfg/VizOSMConfig.py"
+  "../devel/share/osm_cartography/docs/VizOSMConfig.wikidoc"
 )
 
 # Per-language clean rules from dependency scanning.

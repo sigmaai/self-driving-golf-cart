@@ -68,7 +68,7 @@ set(joy_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(joy_SOURCE_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/joystick)
-  set(joy_DEVEL_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/devel)
+  set(joy_DEVEL_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel)
   set(joy_INSTALL_PREFIX "")
   set(joy_PREFIX ${joy_DEVEL_PREFIX})
 else()

@@ -68,7 +68,7 @@ set(segmentation_CONFIG_INCLUDED TRUE)
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
   set(segmentation_SOURCE_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/src/segmentation)
-  set(segmentation_DEVEL_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/devel)
+  set(segmentation_DEVEL_PREFIX /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel)
   set(segmentation_INSTALL_PREFIX "")
   set(segmentation_PREFIX ${segmentation_DEVEL_PREFIX})
 else()
