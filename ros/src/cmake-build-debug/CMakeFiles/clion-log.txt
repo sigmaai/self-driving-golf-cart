@@ -1,18 +1,4 @@
 /home/neil/snap/clion-2019.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/neil/Workspace/self-driving-golf-cart/ros/src
--- The C compiler identification is GNU 7.3.0
--- The CXX compiler identification is GNU 7.3.0
--- Check for working C compiler: /usr/bin/cc
--- Check for working C compiler: /usr/bin/cc -- works
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Detecting C compile features
--- Detecting C compile features - done
--- Check for working CXX compiler: /usr/bin/c++
--- Check for working CXX compiler: /usr/bin/c++ -- works
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Detecting CXX compile features
--- Detecting CXX compile features - done
 -- Using CATKIN_DEVEL_PREFIX: /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel
 -- Using CMAKE_PREFIX_PATH: /home/neil/Workspace/self-driving-golf-cart/ros/devel;/opt/ros/melodic
 -- This workspace overlays: /home/neil/Workspace/self-driving-golf-cart/ros/devel;/opt/ros/melodic
@@ -25,22 +11,13 @@
 -- Using CATKIN_TEST_RESULTS_DIR: /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/test_results
 -- Found gmock sources under '/usr/src/googletest': gmock will be built
 -- Found PythonInterp: /usr/bin/python2 (found version "2.7.15") 
--- Looking for pthread.h
--- Looking for pthread.h - found
--- Looking for pthread_create
--- Looking for pthread_create - not found
--- Looking for pthread_create in pthreads
--- Looking for pthread_create in pthreads - not found
--- Looking for pthread_create in pthread
--- Looking for pthread_create in pthread - found
--- Found Threads: TRUE  
 -- Found gtest sources under '/usr/src/googletest': gtests will be built
 -- Using Python nosetests: /usr/bin/nosetests-2.7
 -- catkin 0.7.17
 -- BUILD_SHARED_LIBS is on
 -- BUILD_SHARED_LIBS is on
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--- ~~  traversing 19 packages in topological order:
+-- ~~  traversing 20 packages in topological order:
 -- ~~  - gps
 -- ~~  - segmentation
 -- ~~  - simulation
@@ -54,6 +31,7 @@
 -- ~~  - gui
 -- ~~  - localization
 -- ~~  - mapping
+-- ~~  - motion_control
 -- ~~  - path_planning
 -- ~~  - point_cloud
 -- ~~  - osm_cartography
@@ -81,8 +59,6 @@
 -- ==> add_subdirectory(sensors/camera)
 -- +++ processing catkin package: 'joy'
 -- ==> add_subdirectory(sensors/joystick)
--- Looking for include file linux/joystick.h
--- Looking for include file linux/joystick.h - found
 -- +++ processing catkin package: 'autopilot'
 -- ==> add_subdirectory(autopilot)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
@@ -101,13 +77,15 @@
 -- +++ processing catkin package: 'mapping'
 -- ==> add_subdirectory(navigation/mapping)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'motion_control'
+-- ==> add_subdirectory(motion_control)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
 -- +++ processing catkin package: 'path_planning'
 -- ==> add_subdirectory(navigation/path_planning)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
 -- +++ processing catkin package: 'point_cloud'
 -- ==> add_subdirectory(point_cloud)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
--- Found OpenCV: /usr (found version "3.2.0") 
 -- +++ processing catkin package: 'osm_cartography'
 -- ==> add_subdirectory(osm)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
@@ -119,9 +97,9 @@
 -- ==> add_subdirectory(sensors/zed-ros-wrapper/zed_wrapper)
 -- Found CUDA: /usr/local/cuda-10.0 (found suitable exact version "10.0") 
 -- Found CUDA: /usr/local/cuda-10.0 (found version "10.0") 
--- Found OpenMP_C: -fopenmp (found version "4.5") 
--- Found OpenMP_CXX: -fopenmp (found version "4.5") 
--- Found OpenMP: TRUE (found version "4.5")  
+-- Found OpenMP_C: -fopenmp  
+-- Found OpenMP_CXX: -fopenmp  
+-- Found OpenMP: TRUE   
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
 -- zed_wrapper: 0 messages, 5 services
 -- Configuring done

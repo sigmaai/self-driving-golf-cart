@@ -1,0 +1,51 @@
+#!/usr/bin/python
+#
+# ROS node for steering controller
+# publishes /dbw/steering_angle as Float64
+#
+# Developed & maintained by Neil Nie
+# (c) Yongyang Nie, 2018, All rights Reserved
+#
+
+from std_msgs.msg import Float32
+from geometry_msgs.msg import Twist
+import rospy
+
+
+class MotionControlNode:
+
+    def __init__(self):
+
+        rospy.init_node('motion_control_node')
+
+        rospy.Subscriber("/cmd_vel", Twist, callback=self.cmd_vel_callback, queue_size=8)
+
+        self.angle_scale = rospy.get_param("/motion_control_node/angle_scale")
+        self.steering_angle = None
+
+        steering_pub = rospy.Publisher('/vehicle/dbw/steering_cmds/', Float32, queue_size=5)
+
+        rospy.loginfo("Vehicle Motion Control System Initialized")
+        rospy.loginfo("Vehicle steering factor: " + str(self.angle_scale))
+
+        rate = rospy.Rate(30)
+
+        while not rospy.is_shutdown():
+
+            if self.steering_angle is not None:
+                steering_pub.publish(self.steering_angle)      # Default accel command is -1 == lock brakes
+
+            rate.sleep()
+
+    # cv_camera callback
+    def cmd_vel_callback(self, data):
+
+        self.steering_angle = self.angle_scale * data.angular.z
+
+
+if __name__ == "__main__":
+
+    try:
+        MotionControlNode()
+    except rospy.ROSInterruptException:
+        pass

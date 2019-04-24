@@ -7018,6 +7018,24 @@ clean: navigation/mapping/CMakeFiles/bond_generate_messages_lisp.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory motion_control
+
+# Convenience name for "all" pass in the directory.
+motion_control/all:
+
+.PHONY : motion_control/all
+
+# Convenience name for "clean" pass in the directory.
+motion_control/clean:
+
+.PHONY : motion_control/clean
+
+# Convenience name for "preinstall" pass in the directory.
+motion_control/preinstall:
+
+.PHONY : motion_control/preinstall
+
+#=============================================================================
 # Directory level rules for directory navigation/path_planning
 
 # Convenience name for "all" pass in the directory.

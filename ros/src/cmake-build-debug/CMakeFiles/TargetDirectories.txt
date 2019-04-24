@@ -316,6 +316,13 @@
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/bond_generate_messages_eus.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/costmap_2d_generate_messages_py.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/bond_generate_messages_lisp.dir
+/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/motion_control/CMakeFiles/install/strip.dir
+/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/motion_control/CMakeFiles/edit_cache.dir
+/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/motion_control/CMakeFiles/list_install_components.dir
+/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/motion_control/CMakeFiles/test.dir
+/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/motion_control/CMakeFiles/install/local.dir
+/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/motion_control/CMakeFiles/rebuild_cache.dir
+/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/motion_control/CMakeFiles/install.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/path_planning/CMakeFiles/install/strip.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/path_planning/CMakeFiles/list_install_components.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/path_planning/CMakeFiles/edit_cache.dir

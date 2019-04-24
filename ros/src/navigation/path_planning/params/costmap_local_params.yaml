@@ -4,28 +4,28 @@
 
 local_costmap:
 
-  global_frame: odom
-  robot_base_frame: zed_camera_center
-  update_frequency: 5.0
-  publish_frequency: 5.0
+  global_frame: map
+  robot_base_frame: base_link
+  update_frequency: 8.0
+  publish_frequency: 8.0
   static_map: false
   rolling_window: true
-  width: 8.0
+  width: 12.0
   height: 8.0
-  resolution: 0.05
+  resolution: 0.025
   origin_x: 0.0
   origin_y: 0.0
 
-  observation_sources: point_cloud_sensor
+  observation_sources: laser_scan
 
     # assuming receiving a cloud from rtabmap_ros/obstacles_detection node
-  point_cloud_sensor: {
-      sensor_frame: zed_camera_center,
-      data_type: PointCloud2,
-      topic: /zed/point_cloud/cloud_registered,
-      expected_update_rate: 10.0,
+  laser_scan: {
+      sensor_frame: base_link,
+      data_type: LaserScan,
+      topic: /zed/laser_scan,
+      expected_update_rate: 4.0,
       marking: true,
       clearing: true,
-      min_obstacle_height: -10.0,
-      max_obstacle_height: 10.0
+      max_obstacle_height: 1.80,
+      obstacle_range: 8
   }
