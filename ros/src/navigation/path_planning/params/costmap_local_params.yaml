@@ -11,35 +11,33 @@ local_costmap:
   static_map: false
   rolling_window: true
   width: 12.0
-  height: 7.0
-  resolution: 0.05
-  origin_x: -3.0
-  origin_y: 0.0
+  height: 8.0
+  resolution: 0.075
+  origin_x: -6.0
+  origin_y: -3.0
 
-#  observation_sources: laser_scan
+  observation_sources: laser_scan_sensor point_cloud_sensor
 #
-#    # assuming receiving a cloud from rtabmap_ros/obstacles_detection node
-#  laser_scan: {
-#      sensor_frame: base_link,
-#      data_type: LaserScan,
-#      topic: /zed/laser_scan,
-#      expected_update_rate: 5.0,
-#      marking: true,
-#      clearing: true,
-#      min_obstacle_height: -10.0,
-#      max_obstacle_height: 10.0
-#  }
-
-  observation_sources: point_cloud_sensor
+  laser_scan_sensor: {
+    sensor_frame: laser_base,
+    data_type: LaserScan,
+    topic: /zed/laser_scan,
+    marking: false,
+    clearing: true,
+    expected_update_rate: 7.0,
+    inf_is_valid: true, # This parameter does the trick!
+    obstacle_range: 8
+  }
 
   # assuming receiving a cloud from rtabmap_ros/obstacles_detection node
   point_cloud_sensor: {
     sensor_frame: zed_camera_center,
     data_type: PointCloud2,
     topic: /zed/point_cloud/cloud_registered,
-    expected_update_rate: 10.0,
+    expected_update_rate: 15.0,
     marking: true,
     clearing: true,
-    min_obstacle_height: 0.1,
-    max_obstacle_height: 10.0
+    min_obstacle_height: 0.30,
+    max_obstacle_height: 3.0,
+    obstacle_range: 8
   }
