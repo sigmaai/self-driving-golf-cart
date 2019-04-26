@@ -21,7 +21,6 @@ Email: contact@neilnie.com
     <arg name="zed_namespace"		    	default="zed" />
     <arg name="svo_file"              	    default="" /> <!-- <arg name="svo_file" default="path/to/svo/file.svo"> -->
 
-    <arg name="camera_model"         	    default="1" /> <!-- 0=ZED, 1=ZEDM-->
     <arg name="serial_number"        	    default="0" />
     <arg name="verbose"              	    default="true" />
 
@@ -32,8 +31,11 @@ Email: contact@neilnie.com
     <arg name="camera_frame"                default="zed_camera_center" />
 
     <!--    run base frame publisher node -->
-    <node pkg="mapping" name="localmap_tf_broadcaster" type="localmap_tf_broadcaster" output="screen" />
+<!--    <node pkg="mapping" name="localmap_tf_broadcaster" type="localmap_tf_broadcaster" output="screen" />-->
 
+    <node pkg="tf" type="static_transform_publisher" name="camera_base_link" args="0 0 -1.7 0 0 0 zed_camera_center base_link 50" />
+
+    <node pkg="tf" type="static_transform_publisher" name="laser_base_link" args="0 0 -1.10 0 0 0 zed_camera_center laser_base 50" />
 
     <!--    point cloud to laser scan-->
     <node pkg="pointcloud_to_laserscan" name="pointcloud_to_laserscan_node" type="pointcloud_to_laserscan_node" output="screen" >
@@ -41,13 +43,26 @@ Email: contact@neilnie.com
         <remap from="cloud_in" to="/zed/point_cloud/cloud_registered" />
         <remap from="scan" to="/$(arg zed_namespace)/laser_scan" />
 
-        <param name="min_height"    type="double" value="0.00" />
-        <param name="max_height"    type="double" value="1.50" />
+        <param name="min_height"    type="double" value="0.20" />
+        <param name="max_height"    type="double" value="2.00" />
         <param name="target_frame"  type="string" value="base_link" />
         <param name="range_min"     type="double" value="0.25" />
-        <param name="range_max"     type="double" value="12.00" />
+        <param name="range_max"     type="double" value="15.00" />
+        <param name="concurrency_level" type="int" value="1" />
 
     </node>
+
+<!--    <node pkg="nodelet" type="nodelet" name="$(arg nodelet_manager_name)"  args="manager" output="screen" />-->
+<!--    &lt;!&ndash; Virtual laser scan as nodelet &ndash;&gt;-->
+<!--    &lt;!&ndash; "$ sudo apt install ros-kinetic-depthimage-to-laserscan" &ndash;&gt;-->
+<!--    <node pkg="nodelet" type="nodelet" name="depthimage_to_laserscan" args="load depthimage_to_laserscan/DepthImageToLaserScanNodelet zed_nodelet_manager">-->
+<!--        <param name="scan_height" value="10"/>-->
+<!--        <param name="output_frame_id" value="laser_base"/>-->
+<!--        <param name="range_min" value="0.25"/>-->
+<!--        <param name="range_max" value="15" />-->
+<!--        <remap from="image" to="$(arg zed_namespace)/depth/depth_registered"/>-->
+<!--        <remap from="scan"  to="$(arg zed_namespace)/laser_scan" />-->
+<!--    </node>-->
 
     <!--    RTAB-map Node   -->
     <include file="$(find mapping)/launch/rtabmap_modified.launch">

@@ -18,7 +18,7 @@
     <arg name="stereo"          default="false"/>
 
     <!-- Choose visualization -->
-    <arg name="rtabmapviz"              default="true" />
+    <arg name="rtabmapviz"              default="false" />
     <arg name="rviz"                    default="false" />
 
     <!-- Localization-only mode -->

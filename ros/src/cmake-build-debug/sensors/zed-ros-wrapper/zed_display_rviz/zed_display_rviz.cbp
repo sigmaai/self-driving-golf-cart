@@ -1276,6 +1276,18 @@
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/gui/gui.cbp">
 			<Option target="dummy_zed_display_rviz"/>
 		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/motion_control/CMakeFiles/CMakeDirectoryInformation.cmake">
+			<Option target="dummy_zed_display_rviz"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/motion_control/CMakeFiles/progress.marks">
+			<Option target="dummy_zed_display_rviz"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/motion_control/CTestTestfile.cmake">
+			<Option target="dummy_zed_display_rviz"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/motion_control/Makefile">
+			<Option target="dummy_zed_display_rviz"/>
+		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/motion_control/catkin_generated/installspace/motion_control.pc">
 			<Option target="dummy_zed_display_rviz"/>
 		</Unit>
@@ -1301,6 +1313,12 @@
 			<Option target="dummy_zed_display_rviz"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/motion_control/catkin_generated/stamps/motion_control/pkg.pc.em.stamp">
+			<Option target="dummy_zed_display_rviz"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/motion_control/cmake_install.cmake">
+			<Option target="dummy_zed_display_rviz"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/motion_control/motion_control.cbp">
 			<Option target="dummy_zed_display_rviz"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/gps_localization/CMakeFiles/CMakeDirectoryInformation.cmake">
@@ -5158,9 +5176,6 @@
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/mapping/src/build_map.cpp">
 			<Option target="dummy_zed_display_rviz"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/mapping/src/localmap_tf_broadcaster.cpp">
-			<Option target="dummy_zed_display_rviz"/>
-		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/path_planning/.DS_Store">
 			<Option target="dummy_zed_display_rviz"/>
 		</Unit>
@@ -5179,28 +5194,19 @@
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/path_planning/package.xml">
 			<Option target="dummy_zed_display_rviz"/>
 		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/path_planning/params/base_global_planner_params.yaml">
+			<Option target="dummy_zed_display_rviz"/>
+		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/path_planning/params/base_local_planner_params.yaml">
 			<Option target="dummy_zed_display_rviz"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/path_planning/params/costmap_common_params.yaml">
 			<Option target="dummy_zed_display_rviz"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/path_planning/params/costmap_common_params_2.yaml">
-			<Option target="dummy_zed_display_rviz"/>
-		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/path_planning/params/costmap_global_params.yaml">
 			<Option target="dummy_zed_display_rviz"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/path_planning/params/costmap_global_params_2.yaml">
-			<Option target="dummy_zed_display_rviz"/>
-		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/path_planning/params/costmap_local_params.yaml">
-			<Option target="dummy_zed_display_rviz"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/path_planning/params/costmap_local_params_2.yaml">
-			<Option target="dummy_zed_display_rviz"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/path_planning/params/tutorial_demo.yaml">
 			<Option target="dummy_zed_display_rviz"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/path_planning/scripts/.DS_Store">

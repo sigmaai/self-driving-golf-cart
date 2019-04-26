@@ -2,10 +2,58 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8075d57d-0c29-4084-b018-ee8c503d1889" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/Project.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/Project.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/detection/object_detection/CMakeFiles/object_detection_generate_messages_cpp.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/detection/object_detection/CMakeFiles/object_detection_generate_messages_cpp.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/detection/object_detection/CMakeFiles/object_detection_generate_messages_eus.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/detection/object_detection/CMakeFiles/object_detection_generate_messages_eus.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/detection/object_detection/CMakeFiles/object_detection_generate_messages_lisp.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/detection/object_detection/CMakeFiles/object_detection_generate_messages_lisp.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/detection/object_detection/CMakeFiles/object_detection_generate_messages_nodejs.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/detection/object_detection/CMakeFiles/object_detection_generate_messages_nodejs.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/detection/object_detection/CMakeFiles/object_detection_generate_messages_py.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/detection/object_detection/CMakeFiles/object_detection_generate_messages_py.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/detection/object_detection/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/detection/object_detection/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/gtest/googlemock/CMakeFiles/gmock.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/gtest/googlemock/CMakeFiles/gmock.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/gtest/googlemock/gtest/CMakeFiles/gtest.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/gtest/googlemock/gtest/CMakeFiles/gtest.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/osm/CMakeFiles/osm_cartography_gencfg.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/osm/CMakeFiles/osm_cartography_gencfg.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/osm/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/osm/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/point_cloud/CMakeFiles/planar_segmentation.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/point_cloud/CMakeFiles/planar_segmentation.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/point_cloud/CMakeFiles/point_cloud_transform.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/point_cloud/CMakeFiles/point_cloud_transform.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/point_cloud/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/point_cloud/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/segmentation/CMakeFiles/segmentation_generate_messages_cpp.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/segmentation/CMakeFiles/segmentation_generate_messages_cpp.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/segmentation/CMakeFiles/segmentation_generate_messages_eus.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/segmentation/CMakeFiles/segmentation_generate_messages_eus.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/segmentation/CMakeFiles/segmentation_generate_messages_lisp.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/segmentation/CMakeFiles/segmentation_generate_messages_lisp.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/segmentation/CMakeFiles/segmentation_generate_messages_nodejs.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/segmentation/CMakeFiles/segmentation_generate_messages_nodejs.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/segmentation/CMakeFiles/segmentation_generate_messages_py.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/segmentation/CMakeFiles/segmentation_generate_messages_py.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_display_rviz/zed_display_rviz.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_display_rviz/zed_display_rviz.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_cpp.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_cpp.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_eus.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_eus.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_lisp.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_lisp.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_nodejs.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_nodejs.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_py.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_py.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/zed_wrapper.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/zed_wrapper.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/simulation/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/simulation/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/simulation/CMakeFiles/simulation_gencfg.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/simulation/CMakeFiles/simulation_gencfg.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/simulation/CMakeFiles/simulation_generate_messages_cpp.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/simulation/CMakeFiles/simulation_generate_messages_cpp.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/simulation/CMakeFiles/simulation_generate_messages_eus.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/simulation/CMakeFiles/simulation_generate_messages_eus.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/simulation/CMakeFiles/simulation_generate_messages_lisp.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/simulation/CMakeFiles/simulation_generate_messages_lisp.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/simulation/CMakeFiles/simulation_generate_messages_nodejs.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/simulation/CMakeFiles/simulation_generate_messages_nodejs.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/simulation/CMakeFiles/simulation_generate_messages_py.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/simulation/CMakeFiles/simulation_generate_messages_py.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/navigation/mapping/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/navigation/mapping/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/navigation/mapping/launch/rtab_mapping.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/navigation/mapping/launch/rtab_mapping.launch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/navigation/mapping/launch/rtabmap_modified.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/navigation/mapping/launch/rtabmap_modified.launch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/navigation/mapping/src/localmap_tf_broadcaster.cpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ros/src/navigation/path_planning/launch/rtab_mapping_navigation.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/navigation/path_planning/launch/rtab_mapping_navigation.launch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/navigation/path_planning/params/base_local_planner_params.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/navigation/path_planning/params/base_local_planner_params.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/navigation/path_planning/params/costmap_global_params.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/navigation/path_planning/params/costmap_global_params.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/navigation/path_planning/params/costmap_local_params.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/navigation/path_planning/params/costmap_local_params.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/navigation/path_planning/params/base_local_planner_params.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/navigation/path_planning/params/costmap_common_params.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/navigation/path_planning/params/costmap_common_params_2.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/navigation/path_planning/params/costmap_global_params.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/navigation/path_planning/params/costmap_global_params_2.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/navigation/path_planning/params/costmap_local_params.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/navigation/path_planning/params/costmap_local_params_2.yaml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,31 +85,46 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ros/src/autopilot/launch/autopilot.launch">
+        <entry file="file://$PROJECT_DIR$/ros/src/navigation/path_planning/params/base_local_planner_params.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+            <state relative-caret-position="330">
+              <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ros/src/navigation/path_planning/params/base_local_planner_params.yaml">
+        <entry file="file://$PROJECT_DIR$/ros/src/navigation/path_planning/params/costmap_local_params.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+            <state relative-caret-position="180">
+              <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ros/src/autopilot/scripts/visualization.py">
+        <entry file="file://$PROJECT_DIR$/ros/src/navigation/mapping/launch/rtab_mapping.launch">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="176" column="51" selection-start-line="176" selection-start-column="51" selection-end-line="176" selection-end-column="51" />
-              <folding>
-                <element signature="e#211#229#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="109">
+              <caret line="35" column="120" lean-forward="true" selection-start-line="35" selection-start-column="120" selection-end-line="35" selection-end-column="120" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ros/src/navigation/path_planning/params/costmap_global_params.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ros/src/navigation/path_planning/launch/rtab_mapping_navigation.launch">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="25" column="81" lean-forward="true" selection-start-line="25" selection-start-column="81" selection-end-line="25" selection-end-column="81" />
             </state>
           </provider>
         </entry>
@@ -77,8 +140,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>publish</find>
-      <find>joy/set_feedback</find>
       <find>advertise</find>
       <find>Joy</find>
       <find>particle_filter</find>
@@ -107,6 +168,8 @@
       <find>convert_position_pixel2metric</find>
       <find>H_COST</find>
       <find>camera_select</find>
+      <find>laser_base</find>
+      <find>rviz</find>
     </findStrings>
     <replaceStrings>
       <replace>configs</replace>
@@ -126,12 +189,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ros/src/autopilot/msg/SteeringPath.msg" />
-        <option value="$PROJECT_DIR$/ros/src/autopilot/scripts/visualization/visualization.py" />
-        <option value="$PROJECT_DIR$/ros/src/autopilot/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/ros/src/segmentation/scripts/configs.py" />
-        <option value="$PROJECT_DIR$/ros/src/sensors/usb_cam/scripts/camera_select.py" />
-        <option value="$PROJECT_DIR$/ros/src/sensors/cv_camera/scripts/camera_select.py" />
         <option value="$PROJECT_DIR$/ros/src/sensors/cv_camera/launch/start_camera.launch" />
         <option value="$PROJECT_DIR$/ros/src/data_logger/scripts/steering_logger" />
         <option value="$PROJECT_DIR$/ros/src/segmentation/scripts/helper.py" />
@@ -176,15 +233,21 @@
         <option value="$PROJECT_DIR$/ros/src/autopilot/scripts/autopilot_node" />
         <option value="$PROJECT_DIR$/ros/src/segmentation/scripts/segmentation_node" />
         <option value="$PROJECT_DIR$/ros/src/autopilot/scripts/visualization.py" />
+        <option value="$PROJECT_DIR$/ros/src/navigation/path_planning/launch/rtab_mapping_navigation.launch" />
+        <option value="$PROJECT_DIR$/ros/src/navigation/path_planning/params/costmap_common_params.yaml" />
+        <option value="$PROJECT_DIR$/ros/src/navigation/mapping/launch/rtabmap_modified.launch" />
+        <option value="$PROJECT_DIR$/ros/src/navigation/mapping/launch/rtab_mapping.launch" />
+        <option value="$PROJECT_DIR$/ros/src/navigation/path_planning/params/costmap_global_params.yaml" />
         <option value="$PROJECT_DIR$/ros/src/navigation/path_planning/params/base_local_planner_params.yaml" />
+        <option value="$PROJECT_DIR$/ros/src/navigation/path_planning/params/costmap_local_params.yaml" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="97" />
-    <option name="y" value="112" />
-    <option name="width" value="1372" />
-    <option name="height" value="788" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="131" />
+    <option name="y" value="34" />
+    <option name="width" value="1362" />
+    <option name="height" value="784" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -194,7 +257,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -226,7 +288,33 @@
               <item name="ros" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="navigation" type="462c0819:PsiDirectoryNode" />
+              <item name="mapping" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
+              <item name="ros" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="navigation" type="462c0819:PsiDirectoryNode" />
+              <item name="mapping" type="462c0819:PsiDirectoryNode" />
+              <item name="launch" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
+              <item name="ros" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="navigation" type="462c0819:PsiDirectoryNode" />
               <item name="path_planning" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
+              <item name="ros" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="navigation" type="462c0819:PsiDirectoryNode" />
+              <item name="path_planning" type="462c0819:PsiDirectoryNode" />
+              <item name="launch" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
@@ -237,10 +325,15 @@
               <item name="path_planning" type="462c0819:PsiDirectoryNode" />
               <item name="params" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -488,11 +581,14 @@
       <workItem from="1555588312362" duration="1898000" />
       <workItem from="1555953379981" duration="2000" />
       <workItem from="1556140323842" duration="865000" />
+      <workItem from="1556194290915" duration="1000" />
+      <workItem from="1556194700868" duration="940000" />
+      <workItem from="1556238116827" duration="3689000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183056000" />
+    <option name="totallyTimeSpent" value="187686000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -504,10 +600,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="28" width="1535" height="872" extended-state="7" />
+    <frame x="131" y="34" width="1362" height="784" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5096525" visible="true" weight="0.25386167" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5096525" visible="true" weight="0.22720365" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32262382" />
@@ -518,7 +614,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4995015" visible="true" weight="0.31994644" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4995015" visible="true" weight="0.36267072" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50049853" side_tool="true" weight="0.33847636" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Python Console" order="12" />
@@ -543,33 +639,6 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ros/src/localization/src/particle_filter.cpp" />
-    <entry file="file://$PROJECT_DIR$/ros/src/localization/src/particle_filter.h" />
-    <entry file="file://$PROJECT_DIR$/ros/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="468">
-            <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/localization/CMakeLists.txt" />
-    <entry file="file://$PROJECT_DIR$/ros/src/sensors/camera/scripts/cv_bridge_2.py" />
-    <entry file="file://$PROJECT_DIR$/ros/src/sensors/camera/scripts/python_cam.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-          <folding>
-            <element signature="e#71#83#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/source/About ROS.rst">
-      <provider selected="true" editor-type-id="restructured-text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/localization/src/main.cpp" />
     <entry file="file://$PROJECT_DIR$/ros/src/autopilot/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -781,6 +850,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/navigation/path_planning/params/base_global_planner_params.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/navigation/path_planning/launch/rtab_mapping_navigation.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="25" column="81" lean-forward="true" selection-start-line="25" selection-start-column="81" selection-end-line="25" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/autopilot/launch/autopilot.launch">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -788,10 +867,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/navigation/path_planning/params/costmap_common_params.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/navigation/mapping/launch/rtabmap_modified.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="20" column="54" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/navigation/mapping/launch/rtab_mapping.launch">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="35" column="120" lean-forward="true" selection-start-line="35" selection-start-column="120" selection-end-line="35" selection-end-column="120" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/navigation/path_planning/params/base_local_planner_params.yaml">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/navigation/path_planning/params/costmap_global_params.yaml">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/navigation/path_planning/params/costmap_local_params.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>

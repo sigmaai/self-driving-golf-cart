@@ -3,19 +3,13 @@
 
 footprint: [[ 1.1684, 0.6096], [1.1684, -0.6096], [-1.1684, -0.6096], [-1.1684, 0.6096]]
 footprint_padding: 0.05
-inflation_radius: 0.45,
-cost_scaling_factor: 3.00
-resolution: 0.025
-obstacle_range: 8
+inflation_radius: 0.30
 
 inflation_layer:
   inflation_radius: 0.4 # 2xfootprint, it helps to keep the global planned path farther from obstacles
 transform_tolerance: 2
 
 controller_patience: 2.0
-
-GlobalPlanner:
-  allow_unknown: true
 
 recovery_behaviors: [
 {name: conservative_clear, type: clear_costmap_recovery/ClearCostmapRecovery},

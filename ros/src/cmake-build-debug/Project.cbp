@@ -1751,98 +1751,6 @@
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/autopilot/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="localmap_tf_broadcaster">
-				<Option output="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel/lib/mapping/localmap_tf_broadcaster" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel/lib/mapping"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
-					<Add option="-DROS_PACKAGE_NAME=&quot;mapping&quot;"/>
-					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
-					<Add option="-DEIGEN_FUNCTORS_PLUGIN=&quot;grid_map_core/eigen_plugins/FunctorsPlugin.hpp&quot;"/>
-					<Add option="-DEIGEN_DENSEBASE_PLUGIN=&quot;grid_map_core/eigen_plugins/DenseBasePlugin.hpp&quot;"/>
-					<Add directory="/opt/ros/melodic/include"/>
-					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/usr/include/pcl-1.8"/>
-					<Add directory="/usr/include/ni"/>
-					<Add directory="/usr/include/openni2"/>
-					<Add directory="/usr/include/vtk-6.3"/>
-					<Add directory="/usr/include/freetype2"/>
-					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi"/>
-					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent"/>
-					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent/include"/>
-					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include"/>
-					<Add directory="/usr/include/python2.7"/>
-					<Add directory="/usr/include/hdf5/openmpi"/>
-					<Add directory="/usr/include/libxml2"/>
-					<Add directory="/usr/include/jsoncpp"/>
-					<Add directory="/usr/include/tcl"/>
-					<Add directory="/usr/include/opencv"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/Makefile&quot;  VERBOSE=1 localmap_tf_broadcaster"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="localmap_tf_broadcaster/fast">
-				<Option output="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel/lib/mapping/localmap_tf_broadcaster" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel/lib/mapping"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
-					<Add option="-DROS_PACKAGE_NAME=&quot;mapping&quot;"/>
-					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
-					<Add option="-DEIGEN_FUNCTORS_PLUGIN=&quot;grid_map_core/eigen_plugins/FunctorsPlugin.hpp&quot;"/>
-					<Add option="-DEIGEN_DENSEBASE_PLUGIN=&quot;grid_map_core/eigen_plugins/DenseBasePlugin.hpp&quot;"/>
-					<Add directory="/opt/ros/melodic/include"/>
-					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/usr/include/pcl-1.8"/>
-					<Add directory="/usr/include/ni"/>
-					<Add directory="/usr/include/openni2"/>
-					<Add directory="/usr/include/vtk-6.3"/>
-					<Add directory="/usr/include/freetype2"/>
-					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi"/>
-					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent"/>
-					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent/include"/>
-					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include"/>
-					<Add directory="/usr/include/python2.7"/>
-					<Add directory="/usr/include/hdf5/openmpi"/>
-					<Add directory="/usr/include/libxml2"/>
-					<Add directory="/usr/include/jsoncpp"/>
-					<Add directory="/usr/include/tcl"/>
-					<Add directory="/usr/include/opencv"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/Makefile&quot;  VERBOSE=1 localmap_tf_broadcaster/fast"/>
-					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="build_map">
 				<Option output="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel/lib/mapping/build_map" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel/lib/mapping"/>
@@ -5276,6 +5184,22 @@
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/motion_control/CMakeFiles/CMakeDirectoryInformation.cmake">
+			<Option target="dummy_zed_display_rviz"/>
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/motion_control/CMakeFiles/progress.marks">
+			<Option target="dummy_zed_display_rviz"/>
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/motion_control/CTestTestfile.cmake">
+			<Option target="dummy_zed_display_rviz"/>
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/motion_control/Makefile">
+			<Option target="dummy_zed_display_rviz"/>
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/motion_control/catkin_generated/installspace/motion_control.pc">
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
@@ -5309,6 +5233,14 @@
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/motion_control/catkin_generated/stamps/motion_control/pkg.pc.em.stamp">
+			<Option target="dummy_zed_display_rviz"/>
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/motion_control/cmake_install.cmake">
+			<Option target="dummy_zed_display_rviz"/>
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/motion_control/motion_control.cbp">
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
@@ -10453,11 +10385,6 @@
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/mapping/src/localmap_tf_broadcaster.cpp">
-			<Option target="localmap_tf_broadcaster"/>
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/path_planning/.DS_Store">
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
@@ -10482,6 +10409,10 @@
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/path_planning/params/base_global_planner_params.yaml">
+			<Option target="dummy_zed_display_rviz"/>
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/path_planning/params/base_local_planner_params.yaml">
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
@@ -10490,27 +10421,11 @@
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/path_planning/params/costmap_common_params_2.yaml">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/path_planning/params/costmap_global_params.yaml">
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/path_planning/params/costmap_global_params_2.yaml">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/path_planning/params/costmap_local_params.yaml">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/path_planning/params/costmap_local_params_2.yaml">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/path_planning/params/tutorial_demo.yaml">
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>

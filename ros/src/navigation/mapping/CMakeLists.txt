@@ -219,9 +219,6 @@ include_directories(
 add_executable(build_map ../mapping/src/build_map.cpp)
 target_link_libraries(build_map ${catkin_LIBRARIES})
 
-add_executable(localmap_tf_broadcaster ../mapping/src/localmap_tf_broadcaster.cpp)
-target_link_libraries(localmap_tf_broadcaster ${catkin_LIBRARIES})
-
 install(DIRECTORY
         launch
         DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
