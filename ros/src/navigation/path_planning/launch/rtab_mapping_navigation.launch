@@ -30,7 +30,7 @@ Email: contact@neilnie.com
         <rosparam file="$(find path_planning)/params/costmap_local_params.yaml" command="load" />
         <rosparam file="$(find path_planning)/params/costmap_global_params.yaml" command="load" />
         <rosparam file="$(find path_planning)/params/base_local_planner_params.yaml" command="load" />
-<!--         <rosparam file="$(find path_planning)/params/global_planner_params.yaml" command="load" />-->
+        <rosparam file="$(find path_planning)/params/global_planner_params.yaml" command="load" />
 
     </node>
 

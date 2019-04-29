@@ -7,37 +7,42 @@ local_costmap:
   global_frame: map
   robot_base_frame: base_link
   update_frequency: 8.0
-  publish_frequency: 8.0
+  publish_frequency: 5.0
   static_map: false
   rolling_window: true
-  width: 12.0
-  height: 8.0
-  resolution: 0.075
-  origin_x: -6.0
-  origin_y: -3.0
+  width: 16.0
+  height: 7.0
+  resolution: 0.080
 
-  observation_sources: laser_scan_sensor point_cloud_sensor
+  inflation_radius: 0.75
+  cost_scaling_factor: 2.58
+
+#  origin_x: -6.0
+#  origin_y: -3.0
+
+  observation_sources:   laser_scan_sensor point_cloud_sensor
 #
   laser_scan_sensor: {
     sensor_frame: laser_base,
     data_type: LaserScan,
     topic: /zed/laser_scan,
-    marking: false,
+    marking: true,
     clearing: true,
-    expected_update_rate: 7.0,
+    expected_update_rate: 6.0,
     inf_is_valid: true, # This parameter does the trick!
-    obstacle_range: 8
+    obstacle_range: 15,
+    observation_ersistence: 5.0
   }
-
-  # assuming receiving a cloud from rtabmap_ros/obstacles_detection node
+#
   point_cloud_sensor: {
     sensor_frame: zed_camera_center,
     data_type: PointCloud2,
     topic: /zed/point_cloud/cloud_registered,
-    expected_update_rate: 15.0,
+    expected_update_rate: 10.0,
     marking: true,
     clearing: true,
-    min_obstacle_height: 0.30,
-    max_obstacle_height: 3.0,
-    obstacle_range: 8
+    min_obstacle_height: 0.45,
+    max_obstacle_height: 1.75,
+    obstacle_range: 12,
+    observation_persistence: 5.0
   }

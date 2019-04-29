@@ -17,25 +17,20 @@ Email: contact@neilnie.com
 <launch>
 
     <!--    launch file arguments   -->
-    <arg name="nodelet_manager_name"  default="zed_nodelet_manager" />
     <arg name="zed_namespace"		    	default="zed" />
-    <arg name="svo_file"              	    default="" /> <!-- <arg name="svo_file" default="path/to/svo/file.svo"> -->
 
-    <arg name="serial_number"        	    default="0" />
     <arg name="verbose"              	    default="true" />
 
     <arg name="rgb_topic"               	default="rgb/image_rect_color" />
     <arg name="depth_topic"             	default="depth/depth_registered" />
     <arg name="camera_info_topic"       	default="rgb/camera_info" />
     <arg name="depth_camera_info_topic" 	default="depth/camera_info" />
-    <arg name="camera_frame"                default="zed_camera_center" />
 
-    <!--    run base frame publisher node -->
-<!--    <node pkg="mapping" name="localmap_tf_broadcaster" type="localmap_tf_broadcaster" output="screen" />-->
+    <include file="$(find point_cloud)/launch/point_cloud_helper.launch" />
 
-    <node pkg="tf" type="static_transform_publisher" name="camera_base_link" args="0 0 -1.7 0 0 0 zed_camera_center base_link 50" />
+    <node pkg="tf" type="static_transform_publisher" name="camera_base_link" args="0 0 -1.710 0 0 0 zed_camera_center base_link 100" />
 
-    <node pkg="tf" type="static_transform_publisher" name="laser_base_link" args="0 0 -1.10 0 0 0 zed_camera_center laser_base 50" />
+    <node pkg="tf" type="static_transform_publisher" name="laser_base_link"  args="0 0 -1.00 0 0 0 zed_camera_center laser_base 100" />
 
     <!--    point cloud to laser scan-->
     <node pkg="pointcloud_to_laserscan" name="pointcloud_to_laserscan_node" type="pointcloud_to_laserscan_node" output="screen" >
@@ -43,12 +38,13 @@ Email: contact@neilnie.com
         <remap from="cloud_in" to="/zed/point_cloud/cloud_registered" />
         <remap from="scan" to="/$(arg zed_namespace)/laser_scan" />
 
-        <param name="min_height"    type="double" value="0.20" />
-        <param name="max_height"    type="double" value="1.75" />
-        <param name="target_frame"  type="string" value="laser_base" />
-        <param name="range_min"     type="double" value="0.25" />
-        <param name="range_max"     type="double" value="15.00" />
-        <param name="concurrency_level" type="int" value="1" />
+        <param name="min_height"    type="double"   value="0.25"        />
+        <param name="max_height"    type="double"   value="1.75"        />
+        <param name="target_frame"  type="string"   value="laser_base"  />
+        <param name="range_min"     type="double"   value="0.15"        />
+        <param name="range_max"     type="double"   value="15.00"       />
+        <param name="use_inf"       type="boolean"  value="true"        />
+        <param name="concurrency_level" type="int"  value="1"           />
 
     </node>
 
@@ -58,7 +54,7 @@ Email: contact@neilnie.com
 <!--        <arg name="rtabmap_args"		        value="&#45;&#45;delete_db_on_start" />-->
 
         <!--    localization mode   -->
-        <arg name="localization"            value="true" />
+        <arg name="localization"                value="true" />
 
         <arg name="rgb_topic"               	value="/$(arg zed_namespace)/$(arg rgb_topic)" />
         <arg name="depth_topic"             	value="/$(arg zed_namespace)/$(arg depth_topic)" />
@@ -74,11 +70,11 @@ Email: contact@neilnie.com
         <arg name="scan_topic"                  value="/$(arg zed_namespace)/laser_scan" />
 
         <!--    optimizing parameters for ground detection-->
-        <param name="Grid/MaxGroundAngle"               type="string" value="48" />
-        <param name="Grid/CellSize"                     type="string" value="0.05" />
-        <param name="Grid/ClusterRadius"                type="string" value="0.15" />
-        <param name="Grid/RangeMax"                     type="string" value="12" />
-        <param name="Grid/DepthRoiRatios"               type="string" value="0.0 0.0 0.0 0.050" />
+        <param name="Grid/MaxGroundAngle"       type="string" value="48" />
+        <param name="Grid/CellSize"             type="string" value="0.05" />
+        <param name="Grid/ClusterRadius"        type="string" value="0.15" />
+        <param name="Grid/RangeMax"             type="string" value="12" />
+        <param name="Grid/DepthRoiRatios"       type="string" value="0.0 0.0 0.0 0.050" />
 
     </include>
 
