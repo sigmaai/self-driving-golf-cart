@@ -20,11 +20,12 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <arg name="camera_model"          default="0" /> <!-- 0=ZED, 1=ZEDM-->
     <arg name="svo_file"              default="" /><!-- <arg name="svo_file" default="path/to/svo/file.svo"> -->
     <arg name="zed_id"                default="0" />
+
     <!-- If a ZED SN is given, zed_id is ignored and the wrapper will specifically look for the ZED with the corresponding serial number -->
     <arg name="serial_number"         default="0" />     
     <arg name="verbose"               default="true" />
 
-    <arg name="resolution"            default="1" /> <!--0=RESOLUTION_HD2K, 1=RESOLUTION_HD1080, 2=RESOLUTION_HD720, 3=RESOLUTION_VGA -->
+    <arg name="resolution"            default="2" />
     <arg name="frame_rate"            default="30" />
 
     <!-- GPU ID-->
@@ -88,8 +89,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <param name="resolution"            value="$(arg resolution)" />
         <param name="verbose"               value="$(arg verbose)" />
         <param name="mat_resize_factor"     value="1.0" />
-        <param name="quality"               value="4" />
-        <param name="sensing_mode"          value="0" />
+        <param name="quality"               value="3" />
+        <param name="sensing_mode"          value="1" />
         <param name="frame_rate"            value="$(arg frame_rate)" />
         <param name="odometry_db"           value="" />
         <param name="openni_depth_mode"     value="0" />

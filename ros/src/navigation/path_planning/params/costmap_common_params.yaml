@@ -7,7 +7,7 @@ inflation_radius: 0.25
 
 inflation_layer:
   inflation_radius: 0.25 # 2xfootprint, it helps to keep the global planned path farther from obstacles
-transform_tolerance: 2
+transform_tolerance: 5
 
 controller_patience: 2.0
 
