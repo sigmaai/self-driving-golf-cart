@@ -1,3 +1,4 @@
+
 TrajectoryPlannerROS:
 
   acc_lim_x:  1.50
@@ -13,14 +14,14 @@ TrajectoryPlannerROS:
   xy_goal_tolerance:  0.20
   yaw_goal_tolerance: 0.20
 
-  sim_time: 1.25
+  sim_time: 1.50
   angular_sim_granularity: 0.075
   sim_granularity: 0.050
-  vx_samples: 15
-  vtheta_samples: 20
+  vx_samples: 16
+  vtheta_samples: 18
 
   goal_distance_bias: 32.0
-  path_distance_bias: 20.0
+  path_distance_bias: 15.0
   occdist_scale: 0.01
   heading_lookahead: 0.75
 

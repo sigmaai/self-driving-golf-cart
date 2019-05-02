@@ -28,7 +28,7 @@
 -- ~~  - autopilot
 -- ~~  - data_logger
 -- ~~  - driver
--- ~~  - gui
+-- ~~  - driver_control
 -- ~~  - localization
 -- ~~  - mapping
 -- ~~  - motion_control
@@ -68,8 +68,8 @@
 -- +++ processing catkin package: 'driver'
 -- ==> add_subdirectory(driver)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
--- +++ processing catkin package: 'gui'
--- ==> add_subdirectory(gui)
+-- +++ processing catkin package: 'driver_control'
+-- ==> add_subdirectory(drive_control)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
 -- +++ processing catkin package: 'localization'
 -- ==> add_subdirectory(navigation/gps_localization)

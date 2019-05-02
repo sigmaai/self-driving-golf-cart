@@ -90,7 +90,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <param name="verbose"               value="$(arg verbose)" />
         <param name="mat_resize_factor"     value="1.0" />
         <param name="quality"               value="3" />
-        <param name="sensing_mode"          value="1" />
+        <param name="sensing_mode"          value="0" />
         <param name="frame_rate"            value="$(arg frame_rate)" />
         <param name="odometry_db"           value="" />
         <param name="openni_depth_mode"     value="0" />

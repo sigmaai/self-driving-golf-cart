@@ -2053,6 +2053,19 @@ build_map/fast:
 .PHONY : build_map/fast
 
 #=============================================================================
+# Target rules for targets named amcl_gencfg
+
+# Build rule for target.
+amcl_gencfg: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 amcl_gencfg
+.PHONY : amcl_gencfg
+
+# fast build rule for target.
+amcl_gencfg/fast:
+	$(MAKE) -f navigation/mapping/CMakeFiles/amcl_gencfg.dir/build.make navigation/mapping/CMakeFiles/amcl_gencfg.dir/build
+.PHONY : amcl_gencfg/fast
+
+#=============================================================================
 # Target rules for targets named grid_map_msgs_generate_messages_py
 
 # Build rule for target.
@@ -3614,6 +3627,7 @@ help:
 	@echo "... rosserial_msgs_generate_messages_nodejs"
 	@echo "... rosserial_msgs_generate_messages_py"
 	@echo "... build_map"
+	@echo "... amcl_gencfg"
 	@echo "... grid_map_msgs_generate_messages_py"
 	@echo "... grid_map_msgs_generate_messages_lisp"
 	@echo "... grid_map_msgs_generate_messages_eus"

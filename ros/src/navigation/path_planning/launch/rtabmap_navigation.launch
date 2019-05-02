@@ -15,7 +15,7 @@ Email: contact@neilnie.com
 
 <launch>
 
-    <include file="$(find mapping)/launch/rtab_mapping.launch" />
+    <include file="$(find mapping)/launch/rtabmap_localization.launch" />
 
     <remap from="map" to="/rtabmap/grid_map" />
     <remap from="move_base/current_goal" to="move_base_simple/goal"/>
@@ -25,18 +25,19 @@ Email: contact@neilnie.com
 
         <param name="base_global_planner" value="global_planner/GlobalPlanner" />
 
-        <rosparam file="$(find path_planning)/params/costmap_common_params.yaml" command="load" ns="global_costmap" />
-        <rosparam file="$(find path_planning)/params/costmap_common_params.yaml" command="load" ns="local_costmap" />
-        <rosparam file="$(find path_planning)/params/costmap_local_params.yaml" command="load" />
-        <rosparam file="$(find path_planning)/params/costmap_global_params.yaml" command="load" />
-        <rosparam file="$(find path_planning)/params/base_local_planner_params.yaml" command="load" />
-        <rosparam file="$(find path_planning)/params/global_planner_params.yaml" command="load" />
+        <rosparam file="$(find path_planning)/params/costmap_common_params.yaml"       command="load" ns="global_costmap" />
+        <rosparam file="$(find path_planning)/params/costmap_common_params.yaml"       command="load" ns="local_costmap" />
+        <rosparam file="$(find path_planning)/params/costmap_local_params.yaml"        command="load" />
+        <rosparam file="$(find path_planning)/params/costmap_global_params.yaml"       command="load" />
+        <rosparam file="$(find path_planning)/params/base_local_planner_params.yaml"   command="load" />
+        <rosparam file="$(find path_planning)/params/global_planner_params.yaml"       command="load" />
 
     </node>
 
     <node pkg="motion_control" type="motion_control_node" name="motion_control_node" >
 
-        <param name="angle_scale" value="-11.5" />
+        <param name="angle_scale" value="-9.5" />
+
     </node>
 
 <!--    <node pkg="path_planning" name="navigation_goals" type="navigation_goals" output="screen" />-->

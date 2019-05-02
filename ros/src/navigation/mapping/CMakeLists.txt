@@ -23,6 +23,7 @@ find_package(catkin REQUIRED
         cv_bridge
         grid_map_ros
         grid_map_msgs
+        amcl
         )
 
 ## System dependencies are found with CMake's conventions

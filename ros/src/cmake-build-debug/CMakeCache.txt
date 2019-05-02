@@ -494,6 +494,9 @@ actionlib_DIR:PATH=/opt/ros/melodic/share/actionlib/cmake
 //The directory containing a CMake configuration file for actionlib_msgs.
 actionlib_msgs_DIR:PATH=/opt/ros/melodic/share/actionlib_msgs/cmake
 
+//The directory containing a CMake configuration file for amcl.
+amcl_DIR:PATH=/opt/ros/melodic/share/amcl/cmake
+
 //Value Computed by CMake
 autopilot_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/autopilot
 
@@ -547,6 +550,12 @@ driver_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cma
 
 //Value Computed by CMake
 driver_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/driver
+
+//Value Computed by CMake
+driver_control_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/drive_control
+
+//Value Computed by CMake
+driver_control_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/drive_control
 
 //The directory containing a CMake configuration file for dynamic_reconfigure.
 dynamic_reconfigure_DIR:PATH=/opt/ros/melodic/share/dynamic_reconfigure/cmake
@@ -649,10 +658,10 @@ gtest_hide_internal_symbols:BOOL=OFF
 gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 
 //Value Computed by CMake
-gui_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/gui
+gui_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/drive_control
 
 //Value Computed by CMake
-gui_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/gui
+gui_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/drive_control
 
 //The directory containing a CMake configuration file for image_transport.
 image_transport_DIR:PATH=/opt/ros/melodic/share/image_transport/cmake

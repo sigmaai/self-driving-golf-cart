@@ -51,6 +51,7 @@
   <exec_depend>std_msgs</exec_depend>
   <exec_depend>rtabmap</exec_depend>
   <exec_depend>rtabmap_ros</exec_depend>
+  <exec_depend>amcl</exec_depend>
   <exec_depend>depthimage_to_laserscan</exec_depend>
   <exec_depend>pointcloud_to_laserscan</exec_depend>
 
