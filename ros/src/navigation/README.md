@@ -22,7 +22,7 @@ The self-driving vehicle uses a modified version of the ROS navigation stack. Th
 `rtabmap` (realtime appearance based mapping) allows me to construct a global map of the environment. For more information on the mapping package, please check out this [`.launch` file](./ros/src/navigation/mapping/launch/rtab_mapping.launch). 
 
 <center>
-	<img src="https://github.com/sigmaai/self-driving-golf-cart/media/rtab-map.jpg" alt="Drawing" width="640"/>
+	<img src="https://github.com/sigmaai/self-driving-golf-cart/media/rtab-map.png" alt="Drawing" width="640"/>
 </center> 
 
 <a name="Path%20Planning" > </a>
@@ -40,6 +40,13 @@ The project uses the [`move_base`](http://wiki.ros.org/move_base) node from the 
 ### Vehicle Motion Control
 
 The move base node publishes `/cmd_vel` commands, which are processed and sent directly to the vehicle. 
+
+
+# rqt_graph
+
+<center>
+	<img src="https://github.com/sigmaai/self-driving-golf-cart/media/rosgraph-active.png" alt="Drawing" width="640"/>
+</center>
 
 # Contact / Info
 If you are interested in the detailed development process of this project, you can visit Neil's blog at [neilnie.com](https://neilnie.com) to find out more about it. Neil will make sure to keep you posted about all of the latest development on the club.

@@ -27,11 +27,11 @@ For the full documentation of the development process, please visit my website: 
 - [Try it out](#Try%20it%20out)
 - [About ROS](#About%20ROS)
 - [Simulation](#Simulation)
-- [Autopilot & End-to-End Behavioral Cloning](#Autopilot%20&%20End-to-End%20Behavioral%20Cloning)
-	* [What's Behavioral Cloning](#What's%20Behavioral%20Cloning)
+- [Autopilot & End-to-End Behavioral Cloning](#autopilot--end-to-end-behavioral-cloning)
+	* [What's Behavioral Cloning](#whats-behavioral-cloning)
 	* [Model](#Model)
 - [Semantic Segmentation](#Semantic%20Segmentation)
-- [The Navigation Stack](#The%20Navigation%20Stack)
+- [The Navigation Stack](#the-navigation-stack)
 	* [RTABMap](#RTABMap)
 	* [Path Planning](#Path%20Planning)
 	* [Vehicle Motion Control](#Vehicle%20Motion%20Control)
@@ -90,13 +90,13 @@ __If you want to try out the simulator, please refer to the documentation [here]
     <img src="./ros/src/simulation/assets/simulator-1.png" alt="Drawing" width="640"/>
 </center>
 
-<a name="Autopilot%20&%20End-to-End%20Behavioral%20Cloning" ></a>
+<a name="autopilot--end-to-end-behavioral-cloning" ></a>
 
 ## Autopilot & End-to-End Behavioral Cloning
 
 The autopilot system, found here in the [autopilot node](./ros/src/autopilot), uses deep learning to predict the steering commands and acceleration commands for the vehicle, only using data collected by the front facing camera. 
 
-<a name="What's%20Behavioral%20Cloning" > </a>
+<a name="whats-behavioral-cloning" > </a>
 
 ### What's Behavioral Cloning
 In 2016, NVIDIA proposed a novel deep learning approach allowed their car to accurately perform real-time end-to-end steering command prediction. Around the same time, Udacity held a challenge that asked researchers to create the best end-to-end steering prediction model. Our goal is to further the work in behavioral cloning for self-driving vehicles. 
@@ -130,13 +130,11 @@ We deployed the ENet architecture for segmentation. ENet is design to work well 
 
 [VIDEO DEMO](https://www.youtube.com/watch?v=_y2RCakRrc4)
 
-<a name="The%20Navigation%20Stack" > </a>
+<a name="the-navigation-stack" > </a>
 
 ## The Navigation Stack
 
-<center>
-	<img src="./media/nav_stack.png" alt="Drawing" width="640"/>
-</center>
+![](./media/nav_stack.png)
 
 The self-driving vehicle uses a modified version of the ROS navigation stack. The flowchart above illustrate the mapping and path planning process. First, I create a detailed map of the environment with `rtabmap_ros`. With that global map, I use the localization feature of `rtabmap_ros` and the odom feature of the zed camera system to localize and plan paths. 
 
@@ -147,7 +145,7 @@ The self-driving vehicle uses a modified version of the ROS navigation stack. Th
 `rtabmap` (realtime appearance based mapping) allows me to construct a global map of the environment. For more information on the mapping package, please check out this [`.launch` file](./ros/src/navigation/mapping/launch/rtab_mapping.launch). 
 
 <center>
-	<img src="./media/rtab-map.jpg" alt="Drawing" width="640"/>
+	<img src="./media/rtab-map.png" alt="Drawing" width="640"/>
 </center> 
 
 <a name="Path%20Planning" > </a>
@@ -165,6 +163,10 @@ The project uses the [`move_base`](http://wiki.ros.org/move_base) node from the 
 ### Vehicle Motion Control
 
 The move base node publishes `/cmd_vel` commands, which are processed and sent directly to the vehicle. 
+
+<center>
+	<img src="./media/vehicle_side.png" alt="Drawing" width="640"/>
+</center>
 
 # Contact / Info
 If you are interested in the detailed development process of this project, you can visit Neil's blog at [neilnie.com](https://neilnie.com) to find out more about it. Neil will make sure to keep you posted about all of the latest development on the club.
