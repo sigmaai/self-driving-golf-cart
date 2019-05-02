@@ -41,6 +41,13 @@ The project uses the [`move_base`](http://wiki.ros.org/move_base) node from the 
 
 The move base node publishes `/cmd_vel` commands, which are processed and sent directly to the vehicle. 
 
+
+# rqt_graph
+
+<center>
+	<img src="https://github.com/sigmaai/self-driving-golf-cart/media/rosgraph-active.png" alt="Drawing" width="640"/>
+</center>
+
 # Contact / Info
 If you are interested in the detailed development process of this project, you can visit Neil's blog at [neilnie.com](https://neilnie.com) to find out more about it. Neil will make sure to keep you posted about all of the latest development on the club.
 
