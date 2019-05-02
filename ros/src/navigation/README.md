@@ -22,7 +22,7 @@ The self-driving vehicle uses a modified version of the ROS navigation stack. Th
 `rtabmap` (realtime appearance based mapping) allows me to construct a global map of the environment. For more information on the mapping package, please check out this [`.launch` file](./ros/src/navigation/mapping/launch/rtab_mapping.launch). 
 
 <center>
-	<img src="https://github.com/sigmaai/self-driving-golf-cart/media/rtab-map.jpg" alt="Drawing" width="640"/>
+	<img src="https://github.com/sigmaai/self-driving-golf-cart/media/rtab-map.png" alt="Drawing" width="640"/>
 </center> 
 
 <a name="Path%20Planning" > </a>

@@ -4,3 +4,4 @@ others
 ros/devel
 ros/build
 ros/src/cmake-build-debug
+*.DS_Store
