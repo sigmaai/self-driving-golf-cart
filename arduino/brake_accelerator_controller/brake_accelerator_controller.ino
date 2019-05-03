@@ -10,11 +10,12 @@
 #include <Servo.h>
 #include <ros.h>
 #include <std_msgs/Float32.h>
+#include <std_msgs/Float32MultiArray.h>
 #include <std_msgs/Bool.h>
+#include <std_msgs/Header.h>
 
 #define RPWM 7
 #define LPWM 6
-#define M_PI 3.14159265359
 #define POT_MAX 150
 #define POT_MIN 30
 #define LA_MIN 395.0
@@ -24,16 +25,13 @@
 ros::NodeHandle nh;
 
 boolean joystick_enabled = false;
-float target_speed = 0.0;
 float cmd_val = 0.0;
-long actuator_pos = 0;
-float actuator_target_pos = 0.0;
+int actuator_pos = 0;
+float actuator_target_pos = 0;
 const int slave_Select_Pin = 10;  // set pin 10 as the slave select for the digital pot:
-
-void cruise_callback( const std_msgs::Float32& cmd_msg) {
-
-
-}
+long lastest_msg_time = 0;
+float current_vel = 0.0;
+float desired_vel = 0.0;
 
 void joystick_callback( const std_msgs::Float32& cmd_msg) {
 
@@ -61,9 +59,19 @@ void joystick_enabled_callback( const std_msgs::Bool& cmd_msg) {
   joystick_enabled = cmd_msg.data;
 }
 
+void header_callback( const std_msgs::Header& header_msg) {
+  lastest_msg_time = header_msg.stamp.sec;
+}
+
+void vel_callback(const std_msgs::Float32MultiArray& vel_msg) {
+  current_vel = vel_msg.data[0];
+  desired_vel = vel_msg.data[1];
+}
+
 // ----------------------------------------------------------------------------------------
 // declare all subscribers
-ros::Subscriber<std_msgs::Float32> sub1("/vehicle/dbw/cruise_cmds/", cruise_callback);
+ros::Subscriber<std_msgs::Header> header_sub("/vehicle/dbw/vel_cmd_header", header_callback);
+ros::Subscriber<std_msgs::Float32> vel_sub("/vehicle/dbw/velocity", vel_callback);
 ros::Subscriber<std_msgs::Float32> sub2("/sensor/joystick/right_stick_y", joystick_callback);
 ros::Subscriber<std_msgs::Bool> sub3("/sensor/joystick/enabled", joystick_enabled_callback);
 
@@ -75,9 +83,10 @@ ros::Publisher pos_pub("/sensor/vehicle/brake/actuator_position", &pos_msg);
 void setup() {
 
   nh.initNode();
-  nh.subscribe(sub1);
   nh.subscribe(sub2);
   nh.subscribe(sub3);
+  nh.subscribe(header_sub);
+  nh.subscribe(vel_sub);
 
   nh.advertise(pos_pub);
 
@@ -97,13 +106,11 @@ void setup() {
 
 void loop() {
 
+  // accelerator control
   potWrite(slave_Select_Pin, B00010001, cmd_val);
   potWrite(slave_Select_Pin, B00010010, cmd_val);
 
-  actuator_pos = analogRead(LA_PIN);
-  pos_msg.data = actuator_pos;
-  pos_pub.publish(&pos_msg);
-
+  // linear actuator brake control
   if (abs(actuator_pos - actuator_target_pos) > 10) {
     if (actuator_pos < actuator_target_pos)
       move_actuator(255, 0);
@@ -114,10 +121,18 @@ void loop() {
     stop_actuator();
   }
 
+  // publish linear actuator current position
+  actuator_pos = analogRead(LA_PIN);
+  pos_msg.data = actuator_pos;
+  pos_pub.publish(&pos_msg);
+
   nh.spinOnce();
   delay(5);
 }
 
+//
+// ================== Helper methods ================== 
+// 
 
 void potWrite(int slaveSelectPin, byte address, int value) {
   // take the SS pin low to select the chip:

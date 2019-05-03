@@ -30,9 +30,9 @@ Email: contact@neilnie.com
 
     <include file="$(find point_cloud)/launch/point_cloud_helper.launch" />
 
-    <node pkg="tf" type="static_transform_publisher" name="camera_base_link" args="0 0 0 0 0 0 odom base_link 80" />
+    <node pkg="tf" type="static_transform_publisher" name="camera_base_link" args="0 0 -1.71 0 0 0 zed_camera_center base_link  80" />
 
-    <node pkg="tf" type="static_transform_publisher" name="laser_base_link"  args="0 0 0.35 0 0 0 odom laser_base 80" />
+    <node pkg="tf" type="static_transform_publisher" name="laser_base_link"  args="0 0 -1.00 0 0 0 zed_camera_center laser_base 80" />
 
     <!--    point cloud to laser scan-->
     <node pkg="pointcloud_to_laserscan" name="pointcloud_to_laserscan_node" type="pointcloud_to_laserscan_node" output="screen" >
@@ -53,7 +53,7 @@ Email: contact@neilnie.com
     <!--    RTAB-map Node   -->
     <include file="$(find mapping)/launch/rtabmap_modified.launch">
 
-<!--        <arg name="rtabmap_args"		        value="&#45;&#45;delete_db_on_start" />-->
+        <arg name="rtabmap_args"		        value="--delete_db_on_start" />
 
         <!--    mapping mode   -->
         <arg name="localization"                value="false"                           />
