@@ -1,1 +1,0 @@
-DetectionResult[] results
