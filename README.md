@@ -4,12 +4,10 @@
 
 [![Build Status](https://travis-ci.org/sigmaai/self-driving-golf-cart.svg?branch=master)](https://travis-ci.org/sigmaai/self-driving-golf-cart) [![codebeat badge](https://codebeat.co/badges/3b223e1c-a2e3-462f-91ff-b8aaddedf1d2)](https://codebeat.co/projects/github-com-sigmaai-self-driving-golf-cart-master) [![Documentation Status](https://readthedocs.org/projects/self-driving-golf-cart/badge/?version=latest)](https://self-driving-golf-cart.readthedocs.io/en/latest/?badge=latest) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/YongyangNie)
 
-# Introduction
-
-Welcome! This is an open source self-driving development platform aimed for rapid prototyping, deep learning and robotics research. The system currently runs on a modified electric golf cart, but the code could work on a real car as well. Here are our goals:
+Welcome! This is an open source self-driving development platform aimed for rapid prototyping, deep learning, and robotics research. The system currently runs on a modified electric golf cart. Here are our goals:
 
 ### Goals:
-Research and develop a deep learning-driven self-driving car. The vehicle should be able to navigate autonomously between locations within a geofenced area.
+Research and develop a deep learning-driven self-driving car. The vehicle should be able to achieve level 4 autonomy within a geofenced area.
 
 #### The modules in this project.
 
@@ -17,24 +15,56 @@ Research and develop a deep learning-driven self-driving car. The vehicle should
 2. Semantic Segmentation
 3. Object Detection 🚙
 4. Drive by Wire (DBW)
-5. Traffic Light Detection 🚦
-6. Lane Detection 🛣
-7. Localization 🛰️ (currently with GPS)
-
-Path planning is coming soon...
+5. CARLA simulator integration 
+6. ZED stereoscopic vision system
+7. Mapping with rtabamp
+8. Path planning with ROS nav stack. 
+9. Localization, pose tracking, and odom with ZED and rtabmap.
 
 For the full documentation of the development process, please visit my website: [www.neilnie.com](https://www.neilnie.com)
 
-# Try it out
-1. Clone the repository.
-2. Make sure you have all the [dependencies](./ros/requirements.txt) installed. 
-3. Make sure that you have [ROS](http://wiki.ros.org/melodic/Installation/Ubuntu) installed on your computer. (I am currently using ROS Melodic)
-4. `cd PROJECT_DIRECTORY/ros`
-5. `catkin_make`
-6. `source devel/setup.bash`
-7. `roslaunch driver drive.launch`
+## Table of Content
+- [Try it out](#Try%20it%20out)
+- [About ROS](#About%20ROS)
+- [Simulation](#Simulation)
+- [Autopilot & End-to-End Behavioral Cloning](#autopilot--end-to-end-behavioral-cloning)
+	* [What's Behavioral Cloning](#whats-behavioral-cloning)
+	* [Model](#Model)
+- [Semantic Segmentation](#Semantic%20Segmentation)
+- [The Navigation Stack](#the-navigation-stack)
+	* [RTABMap](#RTABMap)
+	* [Path Planning](#Path%20Planning)
+	* [Vehicle Motion Control](#Vehicle%20Motion%20Control)
 
-You should see this screen pop up. 
+<a name="Try%20it%20out"></a>
+
+## Try it out
+Before you jump in, let me describe the hardware requirement for this project. **A webcam is the minimum requirment.** At this point, you can only run the whole system on the actual self-driving vehicle. ROS will throw warnings (even errors) at you if you don't have the hardware connected to your Linux machine. **If you don't have access to the hardware setup, don't worry** 👇
+ 
+- The best way is to download and play back the ROS bags. [coming soon...]
+- You can tryout individual packages and nodes, and might find them helpful for your own projects. 
+- You can also tryout the CARLA simulator. (Maybe even improve the current system.)
+
+To compile the project:
+
+##### Requirements
+
+1. Make sure that you have [ROS](http://wiki.ros.org/melodic/Installation/Ubuntu) installed on your computer. (I am using ROS Melodic)
+2. Make sure you have all the [dependencies](./ros/requirements.txt) installed. 
+
+##### Clone & Compile
+
+1. Clone the repository. `$ git clone https://github.com/sigmaai/self-driving-golf-cart.git`
+2. `$ cd self-driving-golf-cart/ros` 
+3. `$ catkin_make`
+4. `$ source devel/setup.bash`
+
+##### Launch ZED cameras
+- `$ roslaunch zed_wrapper zed.launch` (no rviz)
+- `$ roslaunch zed_display display.launch` (with rviz)
+
+##### Launch the Navigation Stack
+- `$ roslaunch path_planning rtab_mapping_navigation.launch` 
 
 <center>
 	<img src="./media/running.png" alt="image" width="640"/>
@@ -42,11 +72,14 @@ You should see this screen pop up.
 
 🚙 Bon Voyage 😀
 
-# ROS
-This project uses ROS. The launch files will launch the neccesary nodes as well as rviz for visualization. __For more information on ROS, nodes, topics and others please refer to the ROS [README](./ros/README.md).__
+<a name="About%20ROS" > </a>
 
+## About ROS
+This project uses ROS. __For more information on ROS, nodes, topics and others please refer to the ROS [README](./ros/README.md).__
 
-# Simulation
+<a name="Simulation" > </a>
+
+## Simulation
 (🏗 Construction Zone 🚧)
 
 Building a self-driving car is hard. Not everyone has access to expensive hardware. I am currently trying to integrate this project with the CARLA self-driving simulator. If you are interested in CARLA, please refer to this [documentation](./ros/src/simulation/README.md). The ROS system in this project can *partially* run on the CARLA simulator. 
@@ -57,16 +90,24 @@ __If you want to try out the simulator, please refer to the documentation [here]
     <img src="./ros/src/simulation/assets/simulator-1.png" alt="Drawing" width="640"/>
 </center>
 
-# The Autopilot System
+<a name="autopilot--end-to-end-behavioral-cloning" ></a>
 
-TAS, found here in the [autopilot node](./ros/src/autopilot), uses deep learning to predict the steering commands and acceleration commands for the vehicle, only using data collected by the front facing camera. 
-### End-to-End Behavioral Cloning
-Several years ago, NVIDIA proposed a novel deep learning approach allowed their car to accurately perform real-time end-to-end steering command prediction. Around the same time, Udacity held a challenge that asked researchers to create the best end-to-end steering prediction model. This component is inspired by the competition, and the goal is to further the work in behavioral cloning for self-driving vehicles. 
+## Autopilot & End-to-End Behavioral Cloning
+
+The autopilot system, found here in the [autopilot node](./ros/src/autopilot), uses deep learning to predict the steering commands and acceleration commands for the vehicle, only using data collected by the front facing camera. 
+
+<a name="whats-behavioral-cloning" > </a>
+
+### What's Behavioral Cloning
+In 2016, NVIDIA proposed a novel deep learning approach allowed their car to accurately perform real-time end-to-end steering command prediction. Around the same time, Udacity held a challenge that asked researchers to create the best end-to-end steering prediction model. Our goal is to further the work in behavioral cloning for self-driving vehicles. 
+
+<a name="Model" > </a>
+
+### Model
 
 NVIDIA's paper used a convolutional neural network with a single frame input. I believe that the single-frame-input CNN doesn't provide any temporal information which is critical in self-driving. This is the motive behind choosing the i3d architecture, which is rich in spacial-temporal information.
 
-### Model
-The input of the network is a 3d convolutional block, with the shape of `n * weight * height * 3`. `n` is the length of the input sequence. Furthermore, the network also uses nine inception modules. The output layers are modified to accommodate for this regression problem. A flatten layer and a dense layer are added to the back of the network. 
+The input of the network is a 3d convolutional block, with the shape of `n * weight * height * 3`. `n` is the length of the input sequence. A flatten layer and a dense layer are added to the back of the network for the purpose of this regression problem. 
 
 <center>
 	<img src="./media/model.png" alt="Drawing" width="640"/>
@@ -75,6 +116,8 @@ The input of the network is a 3d convolutional block, with the shape of `n * wei
 Here is a video demo of deep learning model running on the autonomous golf cart. 
 
 [VIDEO DEMO](https://www.youtube.com/watch?v=4bZ40W4BGoE)
+
+<a name="Semantic%20Segmentation" > </a>
 
 ## Semantic Segmentation
 The cart understands its surrounding  through semantic segmentation, which is a technique in computer that classifies each pixel in an image into different categories. The vehicle can also make decisions based on the segmentic segmentation results. The cart can change its speed based on the proximity to nearby obstacles.
@@ -87,47 +130,43 @@ We deployed the ENet architecture for segmentation. ENet is design to work well 
 
 [VIDEO DEMO](https://www.youtube.com/watch?v=_y2RCakRrc4)
 
-# Localization
+<a name="the-navigation-stack" > </a>
 
-Currently, the localization module uses GPS (Global Positioning System) to find the precise location of the vehicle. However, GPS is far from enough. Localization using lidar and radar (sensor fusion and particle filters) are currently under development.
+## The Navigation Stack
+
+![](./media/nav_stack.png)
+
+The self-driving vehicle uses a modified version of the ROS navigation stack. The flowchart above illustrate the mapping and path planning process. First, I create a detailed map of the environment with `rtabmap_ros`. With that global map, I use the localization feature of `rtabmap_ros` and the odom feature of the zed camera system to localize and plan paths. 
+
+<a name="RTABMap" > </a>
+
+### RTABMap
+
+`rtabmap` (realtime appearance based mapping) allows me to construct a global map of the environment. For more information on the mapping package, please check out this [`.launch` file](./ros/src/navigation/mapping/launch/rtab_mapping.launch). 
 
 <center>
-	<img src="./media/gps-loc.png" alt="Drawing" width="640"/>
-</center>
+	<img src="./media/rtab-map.png" alt="Drawing" width="640"/>
+</center> 
 
-Furthermore, we are relying on OSM (Open Street Map) data for navigation. OSM maps provide detailed information about the paths, buildings and other landmarks in the surrounding. Currently, navigation is only limited to a geofenced area.
+<a name="Path%20Planning" > </a>
+
+### Path Planning
+
+The project uses the [`move_base`](http://wiki.ros.org/move_base) node from the navigation stack. The image below shows the costmap (in blue and purple), and the global occupancy grid (in black and gray). `move_base` also plans the local and global path. Global paths are shown in green and yellow below. You can find the `yaml` files [here](./ros/src/navigation/path_planning/params). 
 
 <center>
-	<img src="./media/osm-1.png" alt="Drawing" width="640"/>
+	<img src="./media/path_plan_1.png" alt="Drawing" width="640"/>
 </center>
 
-# Path Planning
+<a name="Vehicle%20Motion%20Control" > </a>
 
-Coming soon...
+### Vehicle Motion Control
 
-# What's next?
+The move base node publishes `/cmd_vel` commands, which are processed and sent directly to the vehicle. 
 
-#### Phase 1
-
-We have completed phase 1 of the development process, which mainly includes:
-
-- Drive-by-wire system.
-- Autonomous steering system with deep learning
-- Basic obstacle avoidance system using segmentation & detection
-
-As you might have realized, all of these above are focused on computer vision and deep learning. Currently, the vehicle can navigate autonomously in a controlled outdoor environment for about 1000 feet, swiftly avoiding obstacles and stopping for pedistrians.
-
-#### Phase 2
-
-For the second phase of the development process, we will focus on making the system safer and more reliable. Basic plans include:
-
-- Implement a localization system.
-- Write a path planner.
-- Collect more data in our geofenced enviroment. ✅
-- Improve the computer hardware. ✅
-- Improve the sensor system.
-
-We are keeping track of all our progress here [CHECKLIST](./CHECKLIST.md). 
+<center>
+	<img src="./media/vehicle_side.png" alt="Drawing" width="640"/>
+</center>
 
 # Contact / Info
 If you are interested in the detailed development process of this project, you can visit Neil's blog at [neilnie.com](https://neilnie.com) to find out more about it. Neil will make sure to keep you posted about all of the latest development on the club.

@@ -1,0 +1,45 @@
+<!--
+Self-driving vehicle navigation tests using
+rtabmap_ros, and actionlib goals.
+
+Note:
+In order to use `rtab_map_navigation`, `rtab_map` must be running.
+To change navigation goals, please edit the navigation_goals node.
+
+Copyright (c) Yongyang Nie, 2018
+All Rights Reserved
+
+Email: contact@neilnie.com
+
+-->
+
+<launch>
+
+    <include file="$(find mapping)/launch/rtabmap_localization.launch" />
+
+    <remap from="map" to="/rtabmap/grid_map" />
+    <remap from="move_base/current_goal" to="move_base_simple/goal"/>
+
+
+    <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+
+        <param name="base_global_planner" value="global_planner/GlobalPlanner" />
+
+        <rosparam file="$(find path_planning)/params/costmap_common_params.yaml"       command="load" ns="global_costmap" />
+        <rosparam file="$(find path_planning)/params/costmap_common_params.yaml"       command="load" ns="local_costmap" />
+        <rosparam file="$(find path_planning)/params/costmap_local_params.yaml"        command="load" />
+        <rosparam file="$(find path_planning)/params/costmap_global_params.yaml"       command="load" />
+        <rosparam file="$(find path_planning)/params/base_local_planner_params.yaml"   command="load" />
+        <rosparam file="$(find path_planning)/params/global_planner_params.yaml"       command="load" />
+
+    </node>
+
+    <node pkg="motion_control" type="motion_control_node" name="motion_control_node" >
+
+        <param name="angle_scale" value="-9.5" />
+
+    </node>
+
+<!--    <node pkg="path_planning" name="navigation_goals" type="navigation_goals" output="screen" />-->
+
+</launch>

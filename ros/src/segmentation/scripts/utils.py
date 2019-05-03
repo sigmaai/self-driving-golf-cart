@@ -1,4 +1,4 @@
-# 
+#
 # utilities for semantic segmentation
 # autonomous golf cart project
 # (c) Yongyang Nie, Michael Meng
@@ -20,46 +20,41 @@ from keras.callbacks import Callback
 from keras.utils.data_utils import Sequence
 
 
-#--------------------------------------------------------------------------------
-# Definitions
-#--------------------------------------------------------------------------------
-
-# a label and all meta information
 Label = namedtuple( 'Label' , [
 
     'name'        , # The identifier of this label, e.g. 'car', 'person', ... .
-                    # We use them to uniquely name a class
+    # We use them to uniquely name a class
 
     'id'          , # An integer ID that is associated with this label.
-                    # The IDs are used to represent the label in ground truth images
-                    # An ID of -1 means that this label does not have an ID and thus
-                    # is ignored when creating ground truth images (e.g. license plate).
-                    # Do not modify these IDs, since exactly these IDs are expected by the
-                    # evaluation server.
+    # The IDs are used to represent the label in ground truth images
+    # An ID of -1 means that this label does not have an ID and thus
+    # is ignored when creating ground truth images (e.g. license plate).
+    # Do not modify these IDs, since exactly these IDs are expected by the
+    # evaluation server.
 
     'trainId'     , # Feel free to modify these IDs as suitable for your method. Then create
-                    # ground truth images with train IDs, using the tools provided in the
-                    # 'preparation' folder. However, make sure to validate or submit results
-                    # to our evaluation server using the regular IDs above!
-                    # For trainIds, multiple labels might have the same ID. Then, these labels
-                    # are mapped to the same class in the ground truth images. For the inverse
-                    # mapping, we use the label that is defined first in the list below.
-                    # For example, mapping all void-type classes to the same ID in training,
-                    # might make sense for some approaches.
-                    # Max value is 255!
+    # ground truth images with train IDs, using the tools provided in the
+    # 'preparation' folder. However, make sure to validate or submit results
+    # to our evaluation server using the regular IDs above!
+    # For trainIds, multiple labels might have the same ID. Then, these labels
+    # are mapped to the same class in the ground truth images. For the inverse
+    # mapping, we use the label that is defined first in the list below.
+    # For example, mapping all void-type classes to the same ID in training,
+    # might make sense for some approaches.
+    # Max value is 255!
 
     'category'    , # The name of the category that this label belongs to
 
     'categoryId'  , # The ID of this category. Used to create ground truth images
-                    # on category level.
+    # on category level.
 
     'hasInstances', # Whether this label distinguishes between single instances or not
 
     'ignoreInEval', # Whether pixels having this class as ground truth label are ignored
-                    # during evaluations or not
+    # during evaluations or not
 
     'color'       , # The color of this label
-    ] )
+] )
 
 
 #--------------------------------------------------------------------------------
@@ -100,7 +95,7 @@ labels = [
     Label(  'sky'                  , 23 ,       10 , 'sky'             , 5       , False        , False        , ( 70,130,180) ),
     Label(  'person'               , 24 ,       11 , 'human'           , 6       , True         , False        , (220, 20, 60) ),
     Label(  'rider'                , 25 ,       12 , 'human'           , 6       , True         , False        , (255,  0,  0) ),
-    Label(  'car'                  , 26 ,       13 , 'vehicle'         , 7       , True         , False        , (  0,  0, 142) ),
+    Label(  'car'                  , 26 ,       13 , 'vehicle'         , 7       , True         , False        , (  0,  0,142) ),
     Label(  'truck'                , 27 ,       14 , 'vehicle'         , 7       , True         , False        , (  0,  0, 70) ),
     Label(  'bus'                  , 28 ,       15 , 'vehicle'         , 7       , True         , False        , (  0, 60,100) ),
     Label(  'caravan'              , 29 ,      255 , 'vehicle'         , 7       , True         , True         , (  0,  0, 90) ),
@@ -108,17 +103,8 @@ labels = [
     Label(  'train'                , 31 ,       16 , 'vehicle'         , 7       , True         , False        , (  0, 80,100) ),
     Label(  'motorcycle'           , 32 ,       17 , 'vehicle'         , 7       , True         , False        , (  0,  0,230) ),
     Label(  'bicycle'              , 33 ,       18 , 'vehicle'         , 7       , True         , False        , (119, 11, 32) ),
-    Label(  'license plate'        , -1 ,       -1 , 'vehicle'         , 7       , False        , True         , (  0,  0,142) ),
+    Label(  'license plate'        , -1 ,       -1 , 'vehicle'         , 7       , False        , True         , (  0,  0,142) )
 ]
-
-
-def bc_img(img, s = 1.0, m = 0.0):
-    img = img.astype(np.int)
-    img = img * s + m
-    img[img > 255] = 255
-    img[img < 0] = 0
-    img = img.astype(np.uint8)
-    return img
 
 
 def load_image(path):
@@ -130,15 +116,15 @@ def load_image(path):
     return img
 
 
-def convert_class_to_rgb(image_labels, threshold=0.25):
+def convert_class_to_rgb(image_labels, threshold=0.80):
 
     # convert any pixel > threshold to 1
     # convert any pixel < threshold to 0
     # then use bitwise_and
 
-    output = np.zeros((configs.img_height, 1024, 3), dtype=np.uint8)
+    output = np.zeros((configs.img_height / 2, configs.img_width / 2, 3), dtype=np.uint8)
 
-    for i in range(len(labels)):
+    for i in range(34):
 
         split = image_labels[:, :, i]
         split[split > threshold] = 1
@@ -146,10 +132,10 @@ def convert_class_to_rgb(image_labels, threshold=0.25):
         split[:] *= 255
         split = split.astype(np.uint8)
 
-        bg = np.zeros((configs.img_height, 2014, 3), dtype=np.uint8)
-        bg[:, :, 0].fill(labels[i][2][0])
-        bg[:, :, 1].fill(labels[i][2][1])
-        bg[:, :, 2].fill(labels[i][2][2])
+        bg = np.zeros((configs.img_height / 2, configs.img_width / 2, 3), dtype=np.uint8)
+        bg[:, :, 0].fill(labels[i][7][2])
+        bg[:, :, 1].fill(labels[i][7][1])
+        bg[:, :, 2].fill(labels[i][7][0])
 
         res = cv2.bitwise_and(bg, bg, mask=split)
 
@@ -157,12 +143,163 @@ def convert_class_to_rgb(image_labels, threshold=0.25):
 
     return output
 
+
 # The new training generator
-def generator(df, crop_shape, n_classes=34, batch_size=1, resize_shape=None, horizontal_flip=False,
-                    vertical_flip=False, brightness=0.1, rotation=0.0, zoom=0.0, training=True):
+
+
+def fusion_generator(df, resize_shape, n_classes=34, batch_size=1, horizontal_flip=True,
+                         vertical_flip=False, brightness=0.1, rotation=5.0, zoom=0.1, training=True):
+
+    """
+    the default fusion training generator for mid fusion ICNet
+
+    :param df: the dataframe. provided by the csv
+    :param crop_shape: cropped size of the image.
+    :param n_classes: number of classes to classify
+    :param batch_size: the training batch size. usually default to 5
+    :param horizontal_flip: boolean, apply hori flip to image during training.
+    :param vertical_flip: boolean, apply vert flip to image during training
+    :param brightness:
+    :param rotation:
+    :param zoom:
+    :param training: boolean, if yes, apply augmentation
+    :return:
+    """
+
+    X_color = np.zeros((batch_size, resize_shape[1], resize_shape[0], 3), dtype='float32')
+    X_depth = np.zeros((batch_size, resize_shape[1], resize_shape[0], 3), dtype='float32')
+
+    Y1 = np.zeros((batch_size, resize_shape[1] // 4, resize_shape[0] // 4, n_classes), dtype='float32')
+    Y2 = np.zeros((batch_size, resize_shape[1] // 8, resize_shape[0] // 8, n_classes), dtype='float32')
+    Y3 = np.zeros((batch_size, resize_shape[1] // 16, resize_shape[0] // 16, n_classes), dtype='float32')
+
+    while 1:
+        j = 0
+
+        for index in np.random.permutation(len(df)):
+
+            image, image_depth, label = _load_rgb_depth_image_label(df[index])
+
+            image = cv2.resize(image, resize_shape)
+            image_depth = cv2.resize(image_depth, resize_shape)
+            label = cv2.resize(label, resize_shape)
+
+            # Do augmentation (only if training)
+            if training:
+                if horizontal_flip and random.randint(0, 1):
+                    image = cv2.flip(image, 1)
+                    label = cv2.flip(label, 1)
+                if vertical_flip and random.randint(0, 1):
+                    image = cv2.flip(image, 0)
+                    label = cv2.flip(label, 0)
+                if brightness and random.randint(0, 1):
+                    factor = 1.0 + abs(random.gauss(mu=0.0, sigma=brightness))
+                    if random.randint(0, 1):
+                        factor = 1.0 / factor
+                    table = np.array([((i / 255.0) ** factor) * 255 for i in np.arange(0, 256)]).astype(np.uint8)
+                    image = cv2.LUT(image, table)
+
+                # get rotation or zoom
+                if rotation and random.randint(0, 1):
+                    angle = random.gauss(mu=0.0, sigma=rotation)
+                else:
+                    angle = 0.0
+                if zoom and random.randint(0, 1):
+                    scale = random.gauss(mu=1.0, sigma=zoom)
+                else:
+                    scale = 1.0
+
+                # perform rotation or zoom
+                if rotation or zoom:
+                    M = cv2.getRotationMatrix2D((image.shape[1] // 2, image.shape[0] // 2), angle, scale)
+                    image = cv2.warpAffine(image, M, (image.shape[1], image.shape[0]))
+                    label = cv2.warpAffine(label, M, (label.shape[1], label.shape[0]))
+
+            X_color[j, :, :, :] = image
+            X_depth[j, :, :, :] = image_depth
+
+            Y1[j] = to_categorical(cv2.resize(label, (label.shape[1] // 4, label.shape[0] // 4)), n_classes)
+            Y2[j] = to_categorical(cv2.resize(label, (label.shape[1] // 8, label.shape[0] // 8)), n_classes)
+            Y3[j] = to_categorical(cv2.resize(label, (label.shape[1] // 16, label.shape[0] // 16)), n_classes)
+
+            j += 1
+            if j == batch_size:
+                break
+
+        yield [X_color, X_depth], [Y1, Y2, Y3]
+
+
+# The new training generator
+def early_fusion_generator(df, crop_shape, n_classes=34, batch_size=1, resize_shape=None, horizontal_flip=True,
+                           vertical_flip=False, brightness=0.1, rotation=5.0, zoom=0.1, training=True):
+
+    X = np.zeros((batch_size, crop_shape[1], crop_shape[0], 6), dtype='float32')
+    Y = np.zeros((batch_size, crop_shape[1] // 4, crop_shape[0] // 4, n_classes), dtype='float32')
+
+    while 1:
+
+        j = 0
+
+        for index in np.random.permutation(len(df)):
+
+            image, image_depth, label = _load_rgb_depth_image_label(df[index])
+
+            if resize_shape:
+                image = cv2.resize(image, resize_shape)
+                image_depth = cv2.resize(image_depth, resize_shape)
+                label = cv2.resize(label, resize_shape)
+
+            # Do augmentation (only if training)
+            if training:
+                if horizontal_flip and random.randint(0, 1):
+                    image = cv2.flip(image, 1)
+                    label = cv2.flip(label, 1)
+                if vertical_flip and random.randint(0, 1):
+                    image = cv2.flip(image, 0)
+                    label = cv2.flip(label, 0)
+                if brightness and random.randint(0, 1):
+                    factor = 1.0 + abs(random.gauss(mu=0.0, sigma=brightness))
+                    if random.randint(0, 1):
+                        factor = 1.0 / factor
+                    table = np.array([((i / 255.0) ** factor) * 255 for i in np.arange(0, 256)]).astype(np.uint8)
+                    image = cv2.LUT(image, table)
+
+                # get rotation or zoom
+                if rotation and random.randint(0, 1):
+                    angle = random.gauss(mu=0.0, sigma=rotation)
+                else:
+                    angle = 0.0
+                if zoom and random.randint(0, 1):
+                    scale = random.gauss(mu=1.0, sigma=zoom)
+                else:
+                    scale = 1.0
+
+                # perform rotation or zoom
+                if rotation or zoom:
+                    M = cv2.getRotationMatrix2D((image.shape[1] // 2, image.shape[0] // 2), angle, scale)
+                    image = cv2.warpAffine(image, M, (image.shape[1], image.shape[0]))
+                    label = cv2.warpAffine(label, M, (label.shape[1], label.shape[0]))
+
+            X[j] = np.concatenate((image, image_depth), axis=2)
+            Y[j] = to_categorical(cv2.resize(label, (label.shape[1] // 4, label.shape[0] // 4)), n_classes)
+
+            print(Y[j].shape)
+
+            exit(0)
+
+            j += 1
+            if j == batch_size:
+                break
+
+        yield X, Y
+
+
+# The new training generator
+def generator(df, crop_shape, n_classes=34, batch_size=1, resize_shape=None, horizontal_flip=True,
+              vertical_flip=False, brightness=0.1, rotation=5.0, zoom=0.1, training=True):
 
     X = np.zeros((batch_size, crop_shape[1], crop_shape[0], 3), dtype='float32')
-    Y1 = np.zeros((batch_size, crop_shape[1] // 4, crop_shape[0] // 4, n_classes), dtype='float32')
+    Y = np.zeros((batch_size, crop_shape[1] // 4, crop_shape[0] // 4, n_classes), dtype='float32')
 
     while 1:
         j = 0
@@ -174,10 +311,6 @@ def generator(df, crop_shape, n_classes=34, batch_size=1, resize_shape=None, hor
             image = cv2.imread(image_path, 1)
             image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
             label = cv2.imread(label_path, 0)
-
-            # TODO: fix this stupid patch.
-            # must rotate label...
-            # label = cv2.rotate(label, cv2.ROTATE_90_COUNTERCLOCKWISE)
 
             if resize_shape:
                 image = cv2.resize(image, resize_shape)
@@ -215,26 +348,20 @@ def generator(df, crop_shape, n_classes=34, batch_size=1, resize_shape=None, hor
                     label = cv2.warpAffine(label, M, (label.shape[1], label.shape[0]))
 
             X[j] = image
-
-            # only keep the useful classes
-            # y1 = _filter_labels(to_categorical(cv2.resize(label, (label.shape[1] // 4, label.shape[0] // 4)), n_classes)).transpose()
-
-            y1 = to_categorical(cv2.resize(label, (label.shape[1] // 4, label.shape[0] // 4)), n_classes)# .transpose()
-
-            Y1[j] = y1
+            Y[j] = to_categorical(cv2.resize(label, (label.shape[1] // 4, label.shape[0] // 4)), n_classes)
 
             j += 1
             if j == batch_size:
                 break
 
-        yield X, Y1
+        yield X, Y
 
 
 ##############################################################
 ################ City Scape Generator ########################
 ##############################################################
 
-# * Not working currently
+# *** Not working currently ***
 
 class CityScapeGenerator(Sequence):
 
@@ -353,38 +480,6 @@ class CityScapeGenerator(Sequence):
         gc.collect()
 
 
-class Visualization(Callback):
-
-    def __init__(self, resize_shape=(640, 320), batch_steps=10, n_gpu=1, **kwargs):
-        super(Visualization, self).__init__(**kwargs)
-        self.resize_shape = resize_shape
-        self.batch_steps = batch_steps
-        self.n_gpu = n_gpu
-        self.counter = 0
-
-        # TODO: Remove this lazy hardcoded paths
-        self.test_images_list = glob.glob('datasets/mapillary/testing/images/*')
-        with open('datasets/mapillary/config.json') as config_file:
-            config = json.load(config_file)
-        self.labels = config['labels']
-
-    def on_batch_end(self, batch, logs={}):
-        self.counter += 1
-
-        if self.counter == self.batch_steps:
-            self.counter = 0
-
-            test_image = cv2.resize(cv2.imread(random.choice(self.test_images_list), 1), self.resize_shape)
-
-            inputs = [test_image] * self.n_gpu
-            output, _, _ = self.model.predict(np.array(inputs), batch_size=self.n_gpu)
-
-            cv2.imshow('input', test_image)
-            cv2.waitKey(1)
-            cv2.imshow('output', apply_color_map(np.argmax(output[0], axis=-1), self.labels))
-            cv2.waitKey(1)
-
-
 class PolyDecay:
     def __init__(self, initial_lr, power, n_epochs):
         self.initial_lr = initial_lr
@@ -415,6 +510,47 @@ def apply_color_map(image_array, labels):
     return color_array
 
 
+# =====================
+# Public Helper Methods
+# =====================
+
+
+def load_train_data(cv_path):
+
+    labels = pandas.read_csv(cv_path).values
+    df = []
+    count = 0
+    for row in labels:
+        if os.path.isfile(row[0]) and os.path.isfile(row[1]):
+            count = count + 1
+            df.append(row)
+
+    print("data processing finished")
+    print("data frame size: " + str(count))
+
+    return df
+
+
+def load_val_data(cv_path):
+
+    labels = pandas.read_csv(cv_path).values
+    df = []
+    count = 0
+    for row in labels:
+        if os.path.isfile(row[0]) and os.path.isfile(row[1]):
+            count = count + 1
+            df.append(row)
+
+    print("data processing finished")
+    print("data frame size: " + str(count))
+
+    return df
+
+# ===============
+# Private methods
+# ===============
+
+
 def _random_crop(image, label, crop_shape):
     if (image.shape[0] != label.shape[0]) or (image.shape[1] != label.shape[1]):
         raise Exception('Image and label must have the same dimensions!')
@@ -428,20 +564,24 @@ def _random_crop(image, label, crop_shape):
         raise Exception('Crop shape exceeds image dimensions!')
 
 
-def load_data():
+def _load_rgb_depth_image_label(label_row):
 
-    labels = pandas.read_csv(configs.labelid_path).values
-    df = []
-    count = 0
-    for row in labels:
-        if os.path.isfile(row[0]) and os.path.isfile(row[1]):
-            count = count + 1
-            df.append(row)
+    """
+    private helper method for loading images and labels
+    :param label_row: a row of the label csv file, which contains the path to the images and label.
+    :return: return the rgb image, the depth image, and the label image
+    """
 
-    print("data processing finished")
-    print("data frame size: " + str(count))
+    image_path = label_row[0]
+    depth_image_path = label_row[2]
+    label_path = label_row[1]
+    image = cv2.imread(image_path, 1)
+    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+    image_depth = cv2.imread(depth_image_path, 1)
+    image_depth = cv2.cvtColor(image_depth, cv2.COLOR_BGR2RGB)
+    label = cv2.imread(label_path, 0)
 
-    return df
+    return image, image_depth, label
 
 def _load_data(csv_path):
 

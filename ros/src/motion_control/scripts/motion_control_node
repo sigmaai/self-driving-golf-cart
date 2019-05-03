@@ -1,0 +1,74 @@
+#!/usr/bin/python
+#
+# ROS node for steering controller
+# publishes /dbw/steering_angle as Float64
+#
+# Developed & maintained by Neil Nie
+# (c) Yongyang Nie, 2018, All rights Reserved
+#
+
+from std_msgs.msg import Float32, Header, Float32MultiArray
+from geometry_msgs.msg import Twist
+from nav_msgs.msg import Odometry
+import rospy
+
+
+class MotionControlNode:
+
+    def __init__(self):
+
+        rospy.init_node('motion_control_node')
+
+        # declare all subscribers
+        rospy.Subscriber('/cmd_vel', Twist, callback=self.cmd_vel_callback, queue_size=5)
+        rospy.Subscriber('/zed/odom', Odometry, callback=self.odom_callback, queue_size=5)
+
+        # instance variables
+        self.angle_scale = rospy.get_param('/motion_control_node/angle_scale')
+        self.steering_angle = None
+        self.current_velocity = None
+        self.desire_velocity = None
+
+        # declare all publishers
+        self.steering_pub = rospy.Publisher('/vehicle/dbw/steering_cmds/', Float32, queue_size=5)
+        self.vel_pub = rospy.Publisher('/vehicle/dbw/velocity', Float32MultiArray, queue_size=5)
+        self.header_pub = rospy.Publisher('/vehicle/dbw/vel_cmd_header', Header, queue_size=5)
+
+        rospy.loginfo("Vehicle Motion Control System Initialized")
+        rospy.loginfo("Vehicle steering factor: " + str(self.angle_scale))
+
+        rate = rospy.Rate(30)
+
+        while not rospy.is_shutdown():
+
+            if self.steering_angle is not None:
+                self.steering_pub.publish(self.steering_angle)
+
+            if self.current_velocity is not None and self.desire_velocity is not None:
+
+                vel_array = Float32MultiArray(data=[self.current_velocity, self.desire_velocity])
+                self.vel_pub.publish(vel_array)
+
+            rate.sleep()
+
+    # cv_camera callback
+    def cmd_vel_callback(self, data):
+
+        self.steering_angle = self.angle_scale * data.angular.z
+        self.desire_velocity = data.linear.x
+
+        h = Header()
+        h.stamp = rospy.Time.now()  # Note you need to call rospy.init_node() before this will work
+        self.header_pub.publish(h)
+
+    def odom_callback(self, data):
+
+        self.current_velocity = data.twist.twist.linear.x
+
+
+if __name__ == "__main__":
+
+    try:
+        MotionControlNode()
+    except rospy.ROSInterruptException:
+        pass

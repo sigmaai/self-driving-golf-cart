@@ -1,0 +1,86 @@
+<!--
+
+This launch file is intended for mapping purposes only.
+Do not use this file for localization or navigation.
+
+Please make sure that ZED is running before launching
+rtab_map.
+
+For information about navigation, please take a look
+at rtabmap_navigation.launch.
+
+Copyright (c) Yongyang Nie, 2018
+All Rights Reserved
+
+Email: contact@neilnie.com
+
+-->
+
+<launch>
+
+    <!--    launch file arguments   -->
+    <arg name="zed_namespace"		    	default="zed" />
+
+    <arg name="verbose"              	    default="true" />
+
+    <arg name="rgb_topic"               	default="rgb/image_rect_color" />
+    <arg name="depth_topic"             	default="depth/depth_registered" />
+    <arg name="camera_info_topic"       	default="rgb/camera_info" />
+    <arg name="depth_camera_info_topic" 	default="depth/camera_info" />
+
+    <include file="$(find point_cloud)/launch/point_cloud_helper.launch" />
+
+    <node pkg="tf" type="static_transform_publisher" name="camera_base_link" args="0 0 -1.71 0 0 0 zed_camera_center base_link  80" />
+
+    <node pkg="tf" type="static_transform_publisher" name="laser_base_link"  args="0 0 -1.00 0 0 0 zed_camera_center laser_base 80" />
+
+    <!--    point cloud to laser scan-->
+    <node pkg="pointcloud_to_laserscan" name="pointcloud_to_laserscan_node" type="pointcloud_to_laserscan_node" output="screen" >
+
+        <remap from="cloud_in" to="/zed/point_cloud/cloud_registered" />
+        <remap from="scan" to="/$(arg zed_namespace)/laser_scan" />
+
+        <param name="min_height"            type="double"   value="0.25"        />
+        <param name="max_height"            type="double"   value="1.75"        />
+        <param name="target_frame"          type="string"   value="laser_base"  />
+        <param name="range_min"             type="double"   value="0.15"        />
+        <param name="range_max"             type="double"   value="15.00"       />
+        <param name="use_inf"               type="boolean"  value="true"        />
+        <param name="concurrency_level"     type="int"      value="1"           />
+
+    </node>
+
+    <!--    RTAB-map Node   -->
+    <include file="$(find mapping)/launch/rtabmap_modified.launch">
+
+<!--        <arg name="rtabmap_args"		        value="&#45;&#45;delete_db_on_start" />-->
+
+        <!--    mapping mode   -->
+        <arg name="localization"                value="false"                           />
+        <arg name="publish_tf_map"              value="false"                           />
+        <arg name="visual_odometry"             value="false"                           />
+        <arg name="odom_topic"                  value="/$(arg zed_namespace)/odom"      />
+        <arg name="rtabmapviz"                  value="true"                            />
+
+        <arg name="rgb_topic"               	value="/$(arg zed_namespace)/$(arg rgb_topic)" />
+        <arg name="depth_topic"             	value="/$(arg zed_namespace)/$(arg depth_topic)" />
+        <arg name="camera_info_topic"       	value="/$(arg zed_namespace)/$(arg camera_info_topic)" />
+        <arg name="depth_camera_info_topic" 	value="/$(arg zed_namespace)/$(arg depth_camera_info_topic)" />
+        <arg name="frame_id"                    value="zed_camera_center"               />
+        <arg name="approx_sync"                 value="true"                            />
+        <arg name="initial_pose"                value="0.0,0.0, 0.0, 0.0, 0.0, 0.0"  /> <!-- 1.6764 -->
+
+        <!--    laser scans and point clouds    -->
+        <arg name="subscribe_scan"              value="true" />
+        <arg name="scan_topic"                  value="/$(arg zed_namespace)/laser_scan" />
+
+        <!--    optimizing parameters for ground detection-->
+        <param name="Grid/MaxGroundAngle"       type="string"   value="48" />
+        <param name="Grid/CellSize"             type="string"   value="0.05" />
+        <param name="Grid/ClusterRadius"        type="string"   value="0.15" />
+        <param name="Grid/RangeMax"             type="string"   value="12" />
+        <param name="Grid/DepthRoiRatios"       type="string"   value="0.0 0.0 0.0 0.050" />
+
+    </include>
+
+</launch>

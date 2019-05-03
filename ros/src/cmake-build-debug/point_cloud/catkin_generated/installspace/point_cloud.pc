@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: point_cloud
+Description: Description of point_cloud
+Version: 0.0.0
+Cflags: 
+Libs: -L/usr/local/lib 
+Requires: 

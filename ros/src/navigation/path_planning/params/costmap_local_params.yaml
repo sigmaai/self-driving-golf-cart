@@ -1,0 +1,60 @@
+#
+#
+#
+
+local_costmap:
+
+  global_frame: map
+  robot_base_frame: base_link
+  update_frequency: 10.0
+  publish_frequency: 5.0
+  static_map: false
+  rolling_window: true
+  width: 16.0
+  height: 7.0
+  resolution: 0.080
+
+  inflation_radius: 0.25
+  cost_scaling_factor: 1.58
+
+  observation_sources:   laser_scan_sensor point_cloud_sensor # ground_detection
+
+  # laser scanner sensor, local costmap.
+  laser_scan_sensor: {
+    sensor_frame: laser_base,
+    data_type: LaserScan,
+    topic: /zed/laser_scan,
+    marking: true,
+    clearing: true,
+    expected_update_rate: 15.0,    # the sensor publish rate
+    inf_is_valid: true,
+    obstacle_range: 15,            # the sensor range is defined in the mapping package
+    observation_persistence: 1.0   # low observation_persistence helps clear obstacles
+  }
+
+  # ZED point cloud, local costmap
+  point_cloud_sensor: {
+    sensor_frame: zed_camera_center,
+    data_type: PointCloud2,
+    topic: /zed/point_cloud/cloud_registered,
+    expected_update_rate: 15.0,
+    marking: false,               # the sensor can't mark obstacles
+    clearing: true,               # the sensor only clear obstacles
+    min_obstacle_height: 0.45,
+    max_obstacle_height: 1.75,
+    obstacle_range: 10,           # range of point cloud is less than lidar.
+    observation_persistence: 3.0
+  }
+
+#  ground_detection: {
+#    sensor_frame: zed_camera_center,
+#    data_type: PointCloud2,
+#    topic: /point_cloud/ground_segmentation,
+#    expected_update_rate: 5.0,
+#    marking: false,
+#    clearing: true,
+#    min_obstacle_height: -9999.99,
+#    max_obstacle_height:  9999.99,
+#    obstacle_range: 12,
+#    observation_persistence: 2.0
+#  }

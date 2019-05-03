@@ -1,0 +1,27 @@
+<launch>
+
+  <group ns="point_cloud">
+
+<!--      <node pkg="point_cloud" type="point_cloud_transform" name="point_cloud_transform" output="screen" />-->
+
+<!--    <node pkg="nodelet" type="nodelet" name="pcl_manager" args="manager" output="screen" />-->
+
+<!--    &lt;!&ndash; Run a VoxelGrid filter to clean NaNs and downsample the data &ndash;&gt;-->
+<!--    <node pkg="nodelet" type="nodelet" name="voxel_grid" args="load pcl/VoxelGrid pcl_manager" output="screen">-->
+<!--      <remap from="~input" to="/zed/point_cloud/cloud_registered" />-->
+<!--      <rosparam>-->
+<!--        filter_field_name: z-->
+<!--        filter_limit_min: -10.0-->
+<!--        filter_limit_max: 0.5-->
+<!--        filter_limit_negative: false-->
+<!--        leaf_size: 0.02-->
+<!--      </rosparam>-->
+<!--    </node>-->
+
+<!--    <node pkg="point_cloud" type="ground_plane_detection" name="ground_plane_detection" output="screen" />-->
+
+    <node pkg="point_cloud" type="rgb_segmentation_point_cloud" name="rgb_segmentation_point_cloud" />
+
+  </group>
+
+</launch>

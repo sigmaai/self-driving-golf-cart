@@ -19,7 +19,7 @@ Email: contact@neilnie.com
 <launch>
 
     <node name="autopilot_node" type="autopilot_node" pkg="autopilot" output="screen">
-    	<param name="model_path" value="$(find autopilot)/scripts/weights/i3d_rgb_64_f_v6.h5" />
+    	<param name="model_path" value="$(find autopilot)/scripts/weights/i3d_rgb_64_v10.h5" />
         <param name="gpu_frac" value="0.30"/>
         <param name="img_width" value="224"/>
         <param name="img_height" value="224"/>
@@ -31,7 +31,3 @@ Email: contact@neilnie.com
   	<node name="autopilot_visualization_node" type="visualization.py" pkg="autopilot" output="screen"/>
     
 </launch>
-
-         <!-- <param name="simulation" value="0" type="bool"/> <<<< Parameter for using sim camera input Please Make Sure This is Correct! -->
-
-

@@ -1,0 +1,6 @@
+set(osm_cartography_SETUP_PY_VERSION "0.2.4")
+set(osm_cartography_SETUP_PY_SCRIPTS "")
+set(osm_cartography_SETUP_PY_PACKAGES "osm_cartography")
+set(osm_cartography_SETUP_PY_PACKAGE_DIRS "src/osm_cartography")
+set(osm_cartography_SETUP_PY_MODULES "")
+set(osm_cartography_SETUP_PY_MODULE_DIRS "")
