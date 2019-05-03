@@ -5139,22 +5139,22 @@ driver/preinstall:
 .PHONY : driver/preinstall
 
 #=============================================================================
-# Directory level rules for directory drive_control
+# Directory level rules for directory driver_control
 
 # Convenience name for "all" pass in the directory.
-drive_control/all:
+driver_control/all:
 
-.PHONY : drive_control/all
+.PHONY : driver_control/all
 
 # Convenience name for "clean" pass in the directory.
-drive_control/clean:
+driver_control/clean:
 
-.PHONY : drive_control/clean
+.PHONY : driver_control/clean
 
 # Convenience name for "preinstall" pass in the directory.
-drive_control/preinstall:
+driver_control/preinstall:
 
-.PHONY : drive_control/preinstall
+.PHONY : driver_control/preinstall
 
 #=============================================================================
 # Directory level rules for directory navigation/gps_localization

@@ -34,7 +34,7 @@
     <arg name="rviz_cfg"                    default="$(find rtabmap_ros)/launch/config/rgbd.rviz" />
 
     <arg name="frame_id"                    default="camera_link"   />     <!-- Fixed frame id, you may set "base_link" or "base_footprint" if they are published -->
-    <arg name="odom_frame_id"               default=""     />     <!-- If set, TF is used to get odometry instead of the topic -->
+    <arg name="odom_frame_id"               default="/odom"     />     <!-- If set, TF is used to get odometry instead of the topic -->
     <arg name="map_frame_id"                default="map"/>
     <arg name="ground_truth_frame_id"       default=""/>     <!-- e.g., "world" -->
     <arg name="ground_truth_base_frame_id"  default=""/>  <!-- e.g., "tracker", a fake frame matching the frame "frame_id" (but on different TF tree) -->
@@ -46,7 +46,7 @@
     <arg name="rtabmap_args"                default="$(arg args)"/>   <!-- deprecated, use "args" argument -->
     <arg name="launch_prefix"               default=""/>              <!-- for debugging purpose, it fills launch-prefix tag of the nodes -->
     <arg name="output"                      default="screen"/>        <!-- Control node output (screen or log) -->
-    <arg name="publish_tf_map"              default="false"/>
+    <arg name="publish_tf_map"              default="true"/>
     <arg name="initial_pose"                default="0.0,0.0, 0.0, 0.0, 0.0, 0.0" />
 
     <!-- if timestamps of the input topics are synchronized using approximate or exact time policy-->
@@ -87,7 +87,7 @@
     <arg name="icp_odometry"                default="false"/>         <!-- Launch rtabmap icp odometry node -->
     <arg name="odom_topic"                  default="odom"/>          <!-- Odometry topic name -->
     <arg name="vo_frame_id"                 default="$(arg odom_topic)"/> <!-- Visual/Icp odometry frame ID for TF -->
-    <arg name="publish_tf_odom"             default="false"/>
+    <arg name="publish_tf_odom"             default="true"/>
     <arg name="odom_tf_angular_variance"    default="1"/>             <!-- If TF is used to get odometry, this is the default angular variance -->
     <arg name="odom_tf_linear_variance"     default="1"/>             <!-- If TF is used to get odometry, this is the default linear variance -->
     <arg name="odom_args"                   default=""/>              <!-- More arguments for odometry (overwrite same parameters in rtabmap_args) -->

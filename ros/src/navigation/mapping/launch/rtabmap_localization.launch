@@ -30,9 +30,11 @@ Email: contact@neilnie.com
 
 
     <!--    ros tf static transform-->
-    <node pkg="tf" type="static_transform_publisher" name="camera_base_link" args="0 0 0 0 0 0 odom base_link 80" />
+    <node pkg="tf" type="static_transform_publisher" name="base_link" args="0 0 0 0 0 0 odom base_link 80" />
 
-    <node pkg="tf" type="static_transform_publisher" name="laser_base_link"  args="0 0 -0.65 0 0 0 odom laser_base 80" />
+    <node pkg="tf" type="static_transform_publisher" name="laser_base_link"  args="0 0 0.35 0 0 0 odom laser_base 80" />
+
+<!--    <node pkg="tf" type="static_transform_publisher" name="zed_base_link"  args="0 0 1.65 0 0 0 odom zed_camera_center 80" />-->
 
     <!--    point cloud to laser scan-->
     <node pkg="pointcloud_to_laserscan" name="pointcloud_to_laserscan_node" type="pointcloud_to_laserscan_node" output="screen" >
@@ -58,6 +60,9 @@ Email: contact@neilnie.com
         <arg name="visual_odometry"             value="true"                            />
         <arg name="publish_tf_map"              value="true"                            />
         <arg name="rtabmapviz"                  value="false"                           />
+        <arg name="vo_frame_id"                 value=""                                />
+        <arg name="odom_topic"                  value="/odom"                                />
+
 
         <arg name="rgb_topic"               	value="/$(arg zed_namespace)/$(arg rgb_topic)" />
         <arg name="depth_topic"             	value="/$(arg zed_namespace)/$(arg depth_topic)" />

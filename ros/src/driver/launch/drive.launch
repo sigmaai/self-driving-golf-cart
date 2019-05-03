@@ -1,5 +1,5 @@
 <!--
-##################################################
+
 This is the master launch file for the program.
 if you are looking for a way to run the system
 as a whole, you are at the right place. Currently,
@@ -9,32 +9,29 @@ changes accepted
 (c) Yongyang Nie, 2018
 All Rights Reserved.
 
-##################################################
+Copyright (c) 2019, Yongyang Nie
+All Rights Reserved.
+
+(E): contact@neilnie.com
+(W): www.neilnie.com
+
 -->
 
 
 <launch>
 
-	<!--open up the camera -->
-	<include file="$(find camera)/launch/start_camera.launch"/>
-    
-    <!-- setup the Arduino serial -->
-    <node name="serial_node" pkg="rosserial_python" type="serial_node.py">
-    	<param name="port" value="/dev/ttyACM0" />
-    </node>
+    <!-- launch drive control launch file -->
+    <include file="$(find driver_control)/launch/joystick_control.launch" />
 
-    <!-- launch steering node -->
-    <include file="$(find autopilot)/launch/autopilot.launch"/>
+	<!-- open up the zed camera -->
+	<include file="$(find zed_wrapper)/launch/zed.launch"/>
 
-    <!-- start object detection -->
-    <include file="$(find object_detection)/launch/object_detection.launch"/>
-
-    <!-- start semantic segmentation -->
-    <include file="$(find segmentation)/launch/segmentation.launch"/>
+    <!-- path planning and navigation control -->
+    <include file="$(find path_planning)/launch/rtabmap_navigation.launch" />
 
     <!-- open rviz launch -->
     <include file="$(find driver)/launch/display.launch"/>
 
-    <node pkg="driver" name="run_rosbag" type="run_bag.sh" />
+<!--    <node pkg="driver" name="run_rosbag" type="run_bag.sh" />-->
     
 </launch>

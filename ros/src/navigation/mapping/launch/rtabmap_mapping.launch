@@ -53,7 +53,7 @@ Email: contact@neilnie.com
     <!--    RTAB-map Node   -->
     <include file="$(find mapping)/launch/rtabmap_modified.launch">
 
-        <arg name="rtabmap_args"		        value="--delete_db_on_start" />
+<!--        <arg name="rtabmap_args"		        value="&#45;&#45;delete_db_on_start" />-->
 
         <!--    mapping mode   -->
         <arg name="localization"                value="false"                           />

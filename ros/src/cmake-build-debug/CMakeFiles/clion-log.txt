@@ -69,7 +69,7 @@
 -- ==> add_subdirectory(driver)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
 -- +++ processing catkin package: 'driver_control'
--- ==> add_subdirectory(drive_control)
+-- ==> add_subdirectory(driver_control)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
 -- +++ processing catkin package: 'localization'
 -- ==> add_subdirectory(navigation/gps_localization)

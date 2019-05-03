@@ -552,10 +552,10 @@ driver_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cma
 driver_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/driver
 
 //Value Computed by CMake
-driver_control_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/drive_control
+driver_control_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/driver_control
 
 //Value Computed by CMake
-driver_control_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/drive_control
+driver_control_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/driver_control
 
 //The directory containing a CMake configuration file for dynamic_reconfigure.
 dynamic_reconfigure_DIR:PATH=/opt/ros/melodic/share/dynamic_reconfigure/cmake
