@@ -68,7 +68,7 @@ int main(int argc, char** argv){
 
             // laser frame rotation and origin
             transform_laser.setRotation(toQuaternion(0.0, 0.0, 0.0));
-            transform_laser.setOrigin(tf::Vector3(0, 0, 0.42));
+            transform_laser.setOrigin(tf::Vector3(0, 0, 0.75));
 
         }else {
 
@@ -78,7 +78,7 @@ int main(int argc, char** argv){
 
             // laser frame rotation and origin
             transform_laser.setRotation(toQuaternion(0.0, 0.0, 0.0));
-            transform_laser.setOrigin(tf::Vector3(0, 0, 0.42));
+            transform_laser.setOrigin(tf::Vector3(0, 0, 0.75));
         }
 
         br.sendTransform(tf::StampedTransform(transform_base_link, ros::Time::now(), "/map", "/base_link"));

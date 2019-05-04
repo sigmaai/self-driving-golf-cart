@@ -1,7 +1,7 @@
 /home/neil/snap/clion-2019.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/neil/Workspace/self-driving-golf-cart/ros/src
 -- Using CATKIN_DEVEL_PREFIX: /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel
--- Using CMAKE_PREFIX_PATH: /opt/ros/melodic
--- This workspace overlays: /opt/ros/melodic
+-- Using CMAKE_PREFIX_PATH: /home/neil/Workspace/self-driving-golf-cart/ros/devel;/opt/ros/melodic
+-- This workspace overlays: /home/neil/Workspace/self-driving-golf-cart/ros/devel;/opt/ros/melodic
 -- Found PythonInterp: /usr/bin/python2 (found suitable version "2.7.15", minimum required is "2") 
 -- Using PYTHON_EXECUTABLE: /usr/bin/python2
 -- Using Debian Python package layout
@@ -30,7 +30,6 @@
 -- ~~  - driver
 -- ~~  - driver_control
 -- ~~  - localization
--- ~~  - mapping
 -- ~~  - motion_control
 -- ~~  - path_planning
 -- ~~  - point_cloud
@@ -38,6 +37,7 @@
 -- ~~  - zed_display_rviz
 -- ~~  - zed_ros (metapackage)
 -- ~~  - zed_wrapper
+-- ~~  - mapping
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -- +++ processing catkin package: 'gps'
 -- ==> add_subdirectory(sensors/gps)
@@ -74,9 +74,6 @@
 -- +++ processing catkin package: 'localization'
 -- ==> add_subdirectory(navigation/gps_localization)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
--- +++ processing catkin package: 'mapping'
--- ==> add_subdirectory(navigation/mapping)
--- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
 -- +++ processing catkin package: 'motion_control'
 -- ==> add_subdirectory(motion_control)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
@@ -99,6 +96,10 @@
 -- Found CUDA: /usr/local/cuda-10.0 (found version "10.0") 
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
 -- zed_wrapper: 0 messages, 5 services
+-- +++ processing catkin package: 'mapping'
+-- ==> add_subdirectory(navigation/mapping)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- mapping: 0 messages, 1 services
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug

@@ -24,6 +24,7 @@ find_package(catkin REQUIRED
         grid_map_ros
         grid_map_msgs
         amcl
+        zed_wrapper
         )
 
 ## System dependencies are found with CMake's conventions
@@ -67,11 +68,10 @@ find_package(catkin REQUIRED
 # )
 
 ## Generate services in the 'srv' folder
-# add_service_files(
-#   FILES
-#   Service1.srv
-#   Service2.srv
-# )
+ add_service_files(
+   FILES
+   set_initial_pose.srv
+ )
 
 ## Generate actions in the 'action' folder
 # add_action_files(
@@ -81,10 +81,10 @@ find_package(catkin REQUIRED
 # )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   std_msgs  # Or other packages containing msgs
-# )
+ generate_messages(
+   DEPENDENCIES
+   std_msgs  # Or other packages containing msgs
+ )
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -148,7 +148,6 @@ include_directories(
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
 ## either from message generation or dynamic reconfigure
-# add_dependencies(${PROJECT_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
@@ -215,13 +214,19 @@ include_directories(
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
 
+#add_dependencies(my_nodes ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
 add_executable(build_map ../mapping/src/build_map.cpp)
 target_link_libraries(build_map ${catkin_LIBRARIES})
 
 add_executable(robot_pose_publisher ../mapping/src/robot_pose_publisher.cpp)
 target_link_libraries(robot_pose_publisher ${catkin_LIBRARIES})
+
+add_executable(vehicle_init_pose ../mapping/src/vehicle_init_pose.cpp)
+target_link_libraries(vehicle_init_pose ${catkin_LIBRARIES})
 
 install(DIRECTORY
         launch

@@ -45,7 +45,6 @@
   <build_export_depend>rosserial_msgs</build_export_depend>
   <build_export_depend>rosserial_python</build_export_depend>
   <build_export_depend>std_msgs</build_export_depend>
-  <exec_depend>message_runtime</exec_depend>
   <exec_depend>roscpp</exec_depend>
   <exec_depend>rospy</exec_depend>
   <exec_depend>std_msgs</exec_depend>
@@ -54,6 +53,10 @@
   <exec_depend>amcl</exec_depend>
   <exec_depend>depthimage_to_laserscan</exec_depend>
   <exec_depend>pointcloud_to_laserscan</exec_depend>
+  <exec_depend>zed_wrapper</exec_depend>
+  <build_depend>zed_wrapper</build_depend>
+  <build_depend>message_generation</build_depend>
+  <exec_depend>message_runtime</exec_depend>
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>

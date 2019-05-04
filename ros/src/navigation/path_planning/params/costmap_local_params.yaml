@@ -29,7 +29,7 @@ local_costmap:
     expected_update_rate: 15.0,    # the sensor publish rate
     inf_is_valid: true,
     obstacle_range: 15,            # the sensor range is defined in the mapping package
-    observation_persistence: 1.0   # low observation_persistence helps clear obstacles
+    observation_persistence: 2.0   # low observation_persistence helps clear obstacles
   }
 
   # ZED point cloud, local costmap

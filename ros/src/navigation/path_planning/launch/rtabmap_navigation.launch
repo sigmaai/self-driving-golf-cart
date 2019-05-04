@@ -36,7 +36,7 @@ Email: contact@neilnie.com
 
     <node pkg="motion_control" type="motion_control_node" name="motion_control_node" >
 
-        <param name="angle_scale" value="-9.5" />
+        <param name="angle_scale" value="-10.5" />
 
     </node>
 

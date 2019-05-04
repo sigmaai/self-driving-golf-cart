@@ -29,7 +29,13 @@ Email: contact@neilnie.com
     <include file="$(find point_cloud)/launch/point_cloud_helper.launch" />
 
     <!--    ros tf static transform-->
-    <node pkg="mapping" type="robot_pose_publisher" name="robot_pose_publisher" output="screen" />
+<!--    <node pkg="mapping" type="robot_pose_publisher" name="robot_pose_publisher" output="screen" />-->
+
+    <node pkg="mapping" type="vehicle_init_pose" name="vehicle_init_pos" output="screen" />
+
+    <node pkg="tf" type="static_transform_publisher" name="base_link"  args="0 0 -1.65 0 0 0 zed_camera_center base_link 50" />
+
+    <node pkg="tf" type="static_transform_publisher" name="laser_base"  args="0 0 -1.15 0 0 0 zed_camera_center laser_base 50" />
 
     <!--    point cloud to laser scan-->
     <node pkg="pointcloud_to_laserscan" name="pointcloud_to_laserscan_node" type="pointcloud_to_laserscan_node" output="screen" >
@@ -53,7 +59,7 @@ Email: contact@neilnie.com
         <!--    localization mode   -->
         <arg name="localization"                value="true"                            />
         <arg name="visual_odometry"             value="true"                            />
-        <arg name="publish_tf_map"              value="true"                            />
+        <arg name="publish_tf_map"              value="false"                            />
         <arg name="rtabmapviz"                  value="false"                           />
 
         <arg name="rgb_topic"               	value="/$(arg zed_namespace)/$(arg rgb_topic)" />

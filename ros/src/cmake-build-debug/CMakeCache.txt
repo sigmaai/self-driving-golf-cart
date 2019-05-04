@@ -682,7 +682,7 @@ lane_detection_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros
 laser_geometry_DIR:PATH=/opt/ros/melodic/share/laser_geometry/cmake
 
 //Path to a library.
-lib:FILEPATH=/opt/ros/melodic/lib/libbondcpp.so
+lib:FILEPATH=/opt/ros/melodic/lib/libimage_transport.so
 
 //Value Computed by CMake
 localization_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/gps_localization
@@ -899,6 +899,9 @@ zed_ros_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/se
 
 //Value Computed by CMake
 zed_wrapper_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper
+
+//The directory containing a CMake configuration file for zed_wrapper.
+zed_wrapper_DIR:PATH=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel/share/zed_wrapper/cmake
 
 //Value Computed by CMake
 zed_wrapper_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/zed-ros-wrapper/zed_wrapper

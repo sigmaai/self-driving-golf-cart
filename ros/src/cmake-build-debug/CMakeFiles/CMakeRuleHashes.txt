@@ -7,6 +7,7 @@ d67523534990e6e4191bd573287f5acb detection/object_detection/CMakeFiles/_object_d
 12739925a4bad058619d61544f0169db detection/object_detection/CMakeFiles/object_detection_generate_messages_lisp
 12739925a4bad058619d61544f0169db detection/object_detection/CMakeFiles/object_detection_generate_messages_nodejs
 12739925a4bad058619d61544f0169db detection/object_detection/CMakeFiles/object_detection_generate_messages_py
+49e2995911f422b17370ef80d823dc46 devel/include/mapping/set_initial_pose.h
 66667c72d591e4b278987cca84633f8b devel/include/object_detection/DetectionResult.h
 6d55f4819cb431743e715b03e968a41d devel/include/object_detection/DetectionResults.h
 cec866416b63e58489a9323d65de288e devel/include/osm_cartography/VizOSMConfig.h
@@ -24,6 +25,8 @@ c3ccc928919f67ab3ae2fc5df6d66fac devel/include/simulation/EgoVehicleControlState
 f6466a24defa7d4ecbf8eee866768c80 devel/include/zed_wrapper/set_initial_pose.h
 99722e03108f755b45d2c0a27fe857bb devel/include/zed_wrapper/start_svo_recording.h
 02e6c434d5d7412030925210eaee4159 devel/include/zed_wrapper/stop_svo_recording.h
+cd20fbbcdf38bc34dcd98766cf8db0a9 devel/lib/python2.7/dist-packages/mapping/srv/__init__.py
+523a0be3a69ee05a5b1d0fdafe107f54 devel/lib/python2.7/dist-packages/mapping/srv/_set_initial_pose.py
 3516c0bf35f0d8709fd05500ec5f2545 devel/lib/python2.7/dist-packages/object_detection/msg/_DetectionResult.py
 d711551c1d7821a6a057fef43c3e4aa5 devel/lib/python2.7/dist-packages/object_detection/msg/_DetectionResults.py
 a1b9df9a8231907e18c751a3abb24e13 devel/lib/python2.7/dist-packages/object_detection/msg/__init__.py
@@ -42,6 +45,7 @@ e1ac1ba4a19e409bb7736aa13ffe5dd4 devel/lib/python2.7/dist-packages/simulation/ms
 50056fb8914bb22afd7a17d7079c36a8 devel/lib/python2.7/dist-packages/zed_wrapper/srv/_set_initial_pose.py
 8b948d44ab49b93c6eee024b926f6bc6 devel/lib/python2.7/dist-packages/zed_wrapper/srv/_start_svo_recording.py
 ec5d74dba6bdc7e46c56edd243846959 devel/lib/python2.7/dist-packages/zed_wrapper/srv/_stop_svo_recording.py
+3e464046f06f852889a5f5044f70a405 devel/share/common-lisp/ros/mapping/srv/set_initial_pose.lisp
 00c1f3c07f2296486940abcfbe11f06e devel/share/common-lisp/ros/object_detection/msg/DetectionResult.lisp
 1b5acdd54d8691774c2e5fcbf3df209a devel/share/common-lisp/ros/object_detection/msg/DetectionResults.lisp
 e6e0a1bad94058ff16bb30184c508a5a devel/share/common-lisp/ros/segmentation/msg/SegmentationResult.lisp
@@ -56,6 +60,7 @@ e9feca4baa495b8c32f999df812553be devel/share/common-lisp/ros/zed_wrapper/srv/res
 1f76bc0c499089c6448baa86143967b6 devel/share/common-lisp/ros/zed_wrapper/srv/set_initial_pose.lisp
 a638456905d44e0ee62ad2fa8a805d7a devel/share/common-lisp/ros/zed_wrapper/srv/start_svo_recording.lisp
 92ea9729c0f32600292411f16d63e6a6 devel/share/common-lisp/ros/zed_wrapper/srv/stop_svo_recording.lisp
+e364ff665cd080cd125aa9a10f7bc367 devel/share/gennodejs/ros/mapping/srv/set_initial_pose.js
 b86a13c2667658c89780e0b543abf50b devel/share/gennodejs/ros/object_detection/msg/DetectionResult.js
 0d20292ff321ee728321799edd57ff41 devel/share/gennodejs/ros/object_detection/msg/DetectionResults.js
 c674c593361fa4a5e43e26386bd79bf8 devel/share/gennodejs/ros/segmentation/msg/SegmentationResult.js
@@ -70,6 +75,8 @@ c674c593361fa4a5e43e26386bd79bf8 devel/share/gennodejs/ros/segmentation/msg/Segm
 33a17cf3992ff2c3ed3768210ea730f2 devel/share/gennodejs/ros/zed_wrapper/srv/set_initial_pose.js
 9e2b149038d021283e423eea82ea1e61 devel/share/gennodejs/ros/zed_wrapper/srv/start_svo_recording.js
 0b9a0dcadef96937396cfd244bc1af50 devel/share/gennodejs/ros/zed_wrapper/srv/stop_svo_recording.js
+a56a88765491b4b3110458023984d47b devel/share/roseus/ros/mapping/manifest.l
+59177e648aa692d51beba468e33954bf devel/share/roseus/ros/mapping/srv/set_initial_pose.l
 9ac13f02b409a4c04b6debdbbb317130 devel/share/roseus/ros/object_detection/manifest.l
 f7a7dfccbb94665efbbdaf9198157b07 devel/share/roseus/ros/object_detection/msg/DetectionResult.l
 3da21e16c63592c1bc203ebc04ad363e devel/share/roseus/ros/object_detection/msg/DetectionResults.l
@@ -88,6 +95,12 @@ d1fe12418ea97d994ca2f58ad62487bd devel/share/roseus/ros/zed_wrapper/srv/reset_od
 87d2b207512fcf4ba92ceb25df89abd5 devel/share/roseus/ros/zed_wrapper/srv/set_initial_pose.l
 69543bc005fd69da8415af628d08ac37 devel/share/roseus/ros/zed_wrapper/srv/start_svo_recording.l
 36e2ea4a996d052b5f768de91110528c devel/share/roseus/ros/zed_wrapper/srv/stop_svo_recording.l
+a3e036ec0dfcc298414757a53e54797c navigation/mapping/CMakeFiles/_mapping_generate_messages_check_deps_set_initial_pose
+d4b21c4ca53bb1da9c650e345b530dd1 navigation/mapping/CMakeFiles/mapping_generate_messages_cpp
+d4b21c4ca53bb1da9c650e345b530dd1 navigation/mapping/CMakeFiles/mapping_generate_messages_eus
+d4b21c4ca53bb1da9c650e345b530dd1 navigation/mapping/CMakeFiles/mapping_generate_messages_lisp
+d4b21c4ca53bb1da9c650e345b530dd1 navigation/mapping/CMakeFiles/mapping_generate_messages_nodejs
+d4b21c4ca53bb1da9c650e345b530dd1 navigation/mapping/CMakeFiles/mapping_generate_messages_py
 3fe9681e6cd53180601ccc91b033af20 osm/CMakeFiles/_run_tests_osm_cartography_roslaunch-check_launch
 9800092a3c68ea9cd30e47afe23828ba osm/CMakeFiles/clean_test_results_osm_cartography
 780d4bc933f96e8ad0854f6923338e77 osm/CMakeFiles/osm_cartography_gencfg
