@@ -34,7 +34,7 @@
     <arg name="rviz_cfg"                    default="$(find rtabmap_ros)/launch/config/rgbd.rviz" />
 
     <arg name="frame_id"                    default="camera_link"   />     <!-- Fixed frame id, you may set "base_link" or "base_footprint" if they are published -->
-    <arg name="odom_frame_id"               default="/odom"     />     <!-- If set, TF is used to get odometry instead of the topic -->
+    <arg name="odom_frame_id"               default=""     />     <!-- If set, TF is used to get odometry instead of the topic -->
     <arg name="map_frame_id"                default="map"/>
     <arg name="ground_truth_frame_id"       default=""/>     <!-- e.g., "world" -->
     <arg name="ground_truth_base_frame_id"  default=""/>  <!-- e.g., "tracker", a fake frame matching the frame "frame_id" (but on different TF tree) -->

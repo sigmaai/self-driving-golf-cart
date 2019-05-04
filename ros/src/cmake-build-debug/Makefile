@@ -2274,6 +2274,19 @@ map_msgs_generate_messages_nodejs/fast:
 .PHONY : map_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
+# Target rules for targets named robot_pose_publisher
+
+# Build rule for target.
+robot_pose_publisher: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 robot_pose_publisher
+.PHONY : robot_pose_publisher
+
+# fast build rule for target.
+robot_pose_publisher/fast:
+	$(MAKE) -f navigation/mapping/CMakeFiles/robot_pose_publisher.dir/build.make navigation/mapping/CMakeFiles/robot_pose_publisher.dir/build
+.PHONY : robot_pose_publisher/fast
+
+#=============================================================================
 # Target rules for targets named nav_msgs_generate_messages_eus
 
 # Build rule for target.
@@ -3644,6 +3657,7 @@ help:
 	@echo "... nav_msgs_generate_messages_nodejs"
 	@echo "... bond_generate_messages_cpp"
 	@echo "... map_msgs_generate_messages_nodejs"
+	@echo "... robot_pose_publisher"
 	@echo "... nav_msgs_generate_messages_eus"
 	@echo "... nav_msgs_generate_messages_cpp"
 	@echo "... visualization_msgs_generate_messages_eus"

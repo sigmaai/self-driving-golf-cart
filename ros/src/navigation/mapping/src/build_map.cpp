@@ -1,6 +1,10 @@
-//
-// Created by neil on 4/1/19.
-//
+/*!
+ *
+ * Created by Neil Nie on 4/1/19.
+ *
+ * \author Neil Nie - contact@neilnie.com
+ * \date May 3, 2019
+ */
 
 
 #include <ros/ros.h>

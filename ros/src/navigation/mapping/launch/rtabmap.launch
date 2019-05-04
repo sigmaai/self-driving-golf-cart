@@ -59,7 +59,7 @@ Email: contact@neilnie.com
         <!--    for navigation but no visual odom and tf publishing  -->
         <arg name="localization"                value="true"                            />
         <arg name="publish_tf_map"              value="false"                           />
-        <arg name="visual_odometry"             value="false"                           />
+        <arg name="visual_odometry"             value="true"                            />
         <arg name="odom_topic"                  value="/$(arg zed_namespace)/odom"      />
         <arg name="rtabmapviz"                  value="false"                           />
 

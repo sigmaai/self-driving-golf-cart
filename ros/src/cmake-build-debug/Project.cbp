@@ -2013,6 +2013,98 @@
 					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="robot_pose_publisher">
+				<Option output="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel/lib/mapping/robot_pose_publisher" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel/lib/mapping"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;mapping&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add option="-DEIGEN_FUNCTORS_PLUGIN=&quot;grid_map_core/eigen_plugins/FunctorsPlugin.hpp&quot;"/>
+					<Add option="-DEIGEN_DENSEBASE_PLUGIN=&quot;grid_map_core/eigen_plugins/DenseBasePlugin.hpp&quot;"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/pcl-1.8"/>
+					<Add directory="/usr/include/ni"/>
+					<Add directory="/usr/include/openni2"/>
+					<Add directory="/usr/include/vtk-6.3"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent/include"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include"/>
+					<Add directory="/usr/include/python2.7"/>
+					<Add directory="/usr/include/hdf5/openmpi"/>
+					<Add directory="/usr/include/libxml2"/>
+					<Add directory="/usr/include/jsoncpp"/>
+					<Add directory="/usr/include/tcl"/>
+					<Add directory="/usr/include/opencv"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/Makefile&quot;  VERBOSE=1 robot_pose_publisher"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="robot_pose_publisher/fast">
+				<Option output="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel/lib/mapping/robot_pose_publisher" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel/lib/mapping"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;mapping&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add option="-DEIGEN_FUNCTORS_PLUGIN=&quot;grid_map_core/eigen_plugins/FunctorsPlugin.hpp&quot;"/>
+					<Add option="-DEIGEN_DENSEBASE_PLUGIN=&quot;grid_map_core/eigen_plugins/DenseBasePlugin.hpp&quot;"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/usr/include/pcl-1.8"/>
+					<Add directory="/usr/include/ni"/>
+					<Add directory="/usr/include/openni2"/>
+					<Add directory="/usr/include/vtk-6.3"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi/opal/mca/event/libevent2022/libevent/include"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/openmpi/include"/>
+					<Add directory="/usr/include/python2.7"/>
+					<Add directory="/usr/include/hdf5/openmpi"/>
+					<Add directory="/usr/include/libxml2"/>
+					<Add directory="/usr/include/jsoncpp"/>
+					<Add directory="/usr/include/tcl"/>
+					<Add directory="/usr/include/opencv"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/Makefile&quot;  VERBOSE=1 robot_pose_publisher/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="nav_msgs_generate_messages_eus">
 				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping"/>
 				<Option type="4"/>
@@ -4590,10 +4682,6 @@
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel/lib/pkgconfig/gui.pc">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel/lib/pkgconfig/joy.pc">
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
@@ -4758,14 +4846,6 @@
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel/share/gui/cmake/guiConfig-version.cmake">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel/share/gui/cmake/guiConfig.cmake">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel/share/joy/cmake/joyConfig-version.cmake">
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
@@ -4902,90 +4982,6 @@
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/drive_control/CMakeFiles/CMakeDirectoryInformation.cmake">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/drive_control/CMakeFiles/progress.marks">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/drive_control/CTestTestfile.cmake">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/drive_control/Makefile">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/drive_control/catkin_generated/installspace/driver_control.pc">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/drive_control/catkin_generated/installspace/driver_controlConfig-version.cmake">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/drive_control/catkin_generated/installspace/driver_controlConfig.cmake">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/drive_control/catkin_generated/installspace/gui.pc">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/drive_control/catkin_generated/installspace/guiConfig-version.cmake">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/drive_control/catkin_generated/installspace/guiConfig.cmake">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/drive_control/catkin_generated/ordered_paths.cmake">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/drive_control/catkin_generated/package.cmake">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/drive_control/catkin_generated/pkg.develspace.context.pc.py">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/drive_control/catkin_generated/pkg.installspace.context.pc.py">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/drive_control/catkin_generated/stamps/driver_control/package.xml.stamp">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/drive_control/catkin_generated/stamps/driver_control/pkg.pc.em.stamp">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/drive_control/catkin_generated/stamps/gui/package.xml.stamp">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/drive_control/catkin_generated/stamps/gui/pkg.pc.em.stamp">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/drive_control/cmake_install.cmake">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/drive_control/driver_control.cbp">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/drive_control/gui.cbp">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/driver/CMakeFiles/CMakeDirectoryInformation.cmake">
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
@@ -5046,6 +5042,22 @@
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/driver_control/CMakeFiles/CMakeDirectoryInformation.cmake">
+			<Option target="dummy_zed_display_rviz"/>
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/driver_control/CMakeFiles/progress.marks">
+			<Option target="dummy_zed_display_rviz"/>
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/driver_control/CTestTestfile.cmake">
+			<Option target="dummy_zed_display_rviz"/>
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/driver_control/Makefile">
+			<Option target="dummy_zed_display_rviz"/>
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/driver_control/catkin_generated/installspace/driver_control.pc">
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
@@ -5079,6 +5091,14 @@
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/driver_control/catkin_generated/stamps/driver_control/pkg.pc.em.stamp">
+			<Option target="dummy_zed_display_rviz"/>
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/driver_control/cmake_install.cmake">
+			<Option target="dummy_zed_display_rviz"/>
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/driver_control/driver_control.cbp">
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
@@ -5747,34 +5767,6 @@
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/grid_map_msgs_generate_messages_py.dir/progress.make">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/localmap_tf_broadcaster.dir/DependInfo.cmake">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/localmap_tf_broadcaster.dir/build.make">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/localmap_tf_broadcaster.dir/cmake_clean.cmake">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/localmap_tf_broadcaster.dir/depend.make">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/localmap_tf_broadcaster.dir/flags.make">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/localmap_tf_broadcaster.dir/link.txt">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/localmap_tf_broadcaster.dir/progress.make">
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
@@ -8326,54 +8318,6 @@
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/_zed_wrapper_generate_messages_check_deps_set_led_status.dir/DependInfo.cmake">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/_zed_wrapper_generate_messages_check_deps_set_led_status.dir/build.make">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/_zed_wrapper_generate_messages_check_deps_set_led_status.dir/cmake_clean.cmake">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/_zed_wrapper_generate_messages_check_deps_set_led_status.dir/progress.make">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/_zed_wrapper_generate_messages_check_deps_set_pose.dir/DependInfo.cmake">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/_zed_wrapper_generate_messages_check_deps_set_pose.dir/build.make">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/_zed_wrapper_generate_messages_check_deps_set_pose.dir/cmake_clean.cmake">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/_zed_wrapper_generate_messages_check_deps_set_pose.dir/progress.make">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/_zed_wrapper_generate_messages_check_deps_start_remote_stream.dir/DependInfo.cmake">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/_zed_wrapper_generate_messages_check_deps_start_remote_stream.dir/build.make">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/_zed_wrapper_generate_messages_check_deps_start_remote_stream.dir/cmake_clean.cmake">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/_zed_wrapper_generate_messages_check_deps_start_remote_stream.dir/progress.make">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/_zed_wrapper_generate_messages_check_deps_start_svo_recording.dir/DependInfo.cmake">
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
@@ -8390,22 +8334,6 @@
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/_zed_wrapper_generate_messages_check_deps_stop_remote_stream.dir/DependInfo.cmake">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/_zed_wrapper_generate_messages_check_deps_stop_remote_stream.dir/build.make">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/_zed_wrapper_generate_messages_check_deps_stop_remote_stream.dir/cmake_clean.cmake">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/_zed_wrapper_generate_messages_check_deps_stop_remote_stream.dir/progress.make">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/_zed_wrapper_generate_messages_check_deps_stop_svo_recording.dir/DependInfo.cmake">
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
@@ -8419,22 +8347,6 @@
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/_zed_wrapper_generate_messages_check_deps_stop_svo_recording.dir/progress.make">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/_zed_wrapper_generate_messages_check_deps_toggle_led.dir/DependInfo.cmake">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/_zed_wrapper_generate_messages_check_deps_toggle_led.dir/build.make">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/_zed_wrapper_generate_messages_check_deps_toggle_led.dir/cmake_clean.cmake">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/_zed_wrapper_generate_messages_check_deps_toggle_led.dir/progress.make">
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
@@ -8455,22 +8367,6 @@
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/progress.marks">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/roslint_zed_wrapper.dir/DependInfo.cmake">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/roslint_zed_wrapper.dir/build.make">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/roslint_zed_wrapper.dir/cmake_clean.cmake">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/roslint_zed_wrapper.dir/progress.make">
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
@@ -10647,6 +10543,11 @@
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/mapping/src/robot_pose_publisher.cpp">
+			<Option target="robot_pose_publisher"/>
+			<Option target="dummy_zed_display_rviz"/>
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/path_planning/CMakeLists.txt">
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
@@ -11171,102 +11072,6 @@
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/joystick/test/test_joy_msg_migration.py">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/zed-ros-wrapper/.git/HEAD">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/zed-ros-wrapper/.git/config">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/zed-ros-wrapper/.git/description">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/zed-ros-wrapper/.git/hooks/applypatch-msg.sample">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/zed-ros-wrapper/.git/hooks/commit-msg.sample">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/zed-ros-wrapper/.git/hooks/fsmonitor-watchman.sample">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/zed-ros-wrapper/.git/hooks/post-update.sample">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/zed-ros-wrapper/.git/hooks/pre-applypatch.sample">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/zed-ros-wrapper/.git/hooks/pre-commit.sample">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/zed-ros-wrapper/.git/hooks/pre-push.sample">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/zed-ros-wrapper/.git/hooks/pre-rebase.sample">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/zed-ros-wrapper/.git/hooks/pre-receive.sample">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/zed-ros-wrapper/.git/hooks/prepare-commit-msg.sample">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/zed-ros-wrapper/.git/hooks/update.sample">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/zed-ros-wrapper/.git/index">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/zed-ros-wrapper/.git/info/exclude">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/zed-ros-wrapper/.git/logs/HEAD">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/zed-ros-wrapper/.git/logs/refs/heads/master">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/zed-ros-wrapper/.git/logs/refs/remotes/origin/HEAD">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/zed-ros-wrapper/.git/objects/pack/pack-eba4d71e9a163e5d262d393e184bcff4d31c74b1.idx">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/zed-ros-wrapper/.git/objects/pack/pack-eba4d71e9a163e5d262d393e184bcff4d31c74b1.pack">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/zed-ros-wrapper/.git/packed-refs">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/zed-ros-wrapper/.git/refs/heads/master">
-			<Option target="dummy_zed_display_rviz"/>
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/zed-ros-wrapper/.git/refs/remotes/origin/HEAD">
 			<Option target="dummy_zed_display_rviz"/>
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>

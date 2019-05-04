@@ -220,6 +220,9 @@ include_directories(
 add_executable(build_map ../mapping/src/build_map.cpp)
 target_link_libraries(build_map ${catkin_LIBRARIES})
 
+add_executable(robot_pose_publisher ../mapping/src/robot_pose_publisher.cpp)
+target_link_libraries(robot_pose_publisher ${catkin_LIBRARIES})
+
 install(DIRECTORY
         launch
         DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})

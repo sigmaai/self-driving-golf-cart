@@ -278,6 +278,7 @@
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/nav_msgs_generate_messages_nodejs.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/bond_generate_messages_cpp.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/map_msgs_generate_messages_nodejs.dir
+/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/robot_pose_publisher.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/nav_msgs_generate_messages_eus.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/nav_msgs_generate_messages_cpp.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/visualization_msgs_generate_messages_eus.dir

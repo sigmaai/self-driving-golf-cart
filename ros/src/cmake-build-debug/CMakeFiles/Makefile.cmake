@@ -670,6 +670,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "navigation/mapping/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/DependInfo.cmake"
   "navigation/mapping/CMakeFiles/bond_generate_messages_cpp.dir/DependInfo.cmake"
   "navigation/mapping/CMakeFiles/map_msgs_generate_messages_nodejs.dir/DependInfo.cmake"
+  "navigation/mapping/CMakeFiles/robot_pose_publisher.dir/DependInfo.cmake"
   "navigation/mapping/CMakeFiles/nav_msgs_generate_messages_eus.dir/DependInfo.cmake"
   "navigation/mapping/CMakeFiles/nav_msgs_generate_messages_cpp.dir/DependInfo.cmake"
   "navigation/mapping/CMakeFiles/visualization_msgs_generate_messages_eus.dir/DependInfo.cmake"
