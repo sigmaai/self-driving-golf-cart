@@ -5,7 +5,7 @@
 		<Option title="zed_wrapper"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\opt\;CMake Files\..\..\..\..\..\..\opt\ros\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\catkin\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\platform\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\test\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\tools\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\templates\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\em\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\roslint\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\roslint\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rospy\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rospy\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\std_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\std_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\message_runtime\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\message_runtime\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\cpp_common\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\cpp_common\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\roscpp_serialization\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\roscpp_serialization\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\roscpp_traits\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\roscpp_traits\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rostime\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rostime\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\sensor_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\sensor_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\geometry_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\geometry_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\message_generation\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\message_generation\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\gencpp\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\gencpp\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\genmsg\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\genmsg\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\geneus\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\geneus\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\genlisp\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\genlisp\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\gennodejs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\gennodejs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\genpy\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\genpy\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\derived_object_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\derived_object_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\shape_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\shape_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\radar_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\radar_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\ackermann_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\ackermann_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\tf\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\tf\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\message_filters\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\message_filters\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\roscpp\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\roscpp\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rosconsole\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rosconsole\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rosgraph_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rosgraph_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\xmlrpcpp\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\xmlrpcpp\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\tf2_ros\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\tf2_ros\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\actionlib\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\actionlib\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\actionlib_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\actionlib_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rosgraph\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rosgraph\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\tf2\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\tf2\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\tf2_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\tf2_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\tf2_py\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\tf2_py\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\dynamic_reconfigure\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\dynamic_reconfigure\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\cv_bridge\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\cv_bridge\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\diagnostic_updater\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\diagnostic_updater\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\diagnostic_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\diagnostic_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rosserial_client\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rosserial_client\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rosserial_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rosserial_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rosserial_python\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rosserial_python\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\costmap_2d\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\costmap_2d\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\laser_geometry\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\laser_geometry\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\map_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\map_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\nav_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\nav_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\pluginlib\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\pluginlib\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\class_loader\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\class_loader\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\roslib\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\roslib\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rospack\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rospack\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\visualization_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\visualization_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\voxel_grid\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\voxel_grid\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\pcl_conversions\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\pcl_conversions\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\pcl_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\pcl_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\pcl_ros\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\pcl_ros\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\nodelet\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\nodelet\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\bondcpp\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\bondcpp\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\bond\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\bond\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\smclib\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\smclib\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\nodelet_topic_tools\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\nodelet_topic_tools\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rosbag\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rosbag\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rosbag_storage\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rosbag_storage\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\roslz4\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\roslz4\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\std_srvs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\std_srvs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\topic_tools\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\topic_tools\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\grid_map_ros\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\grid_map_ros\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\grid_map_core\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\grid_map_core\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\grid_map_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\grid_map_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\grid_map_cv\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\grid_map_cv\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\filters\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\filters\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\move_base_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\move_base_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\geodesy\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\geodesy\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\geographic_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\geographic_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\uuid_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\uuid_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\unique_id\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\unique_id\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\roslaunch\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\roslaunch\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\image_transport\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\image_transport\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\stereo_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\stereo_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\tf2_geometry_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\tf2_geometry_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\amcl\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\amcl\cmake\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\usr\lib\python2.7\;CMake Files\..\..\..\..\..\..\usr\lib\python2.7\dist-packages\;CMake Files\..\..\..\..\..\..\usr\lib\python2.7\dist-packages\catkin_pkg\;CMake Files\..\..\..\..\..\..\usr\lib\python2.7\dist-packages\catkin_pkg\templates\;CMake Files\..\..\..\..\..\..\usr\src\;CMake Files\..\..\..\..\..\..\usr\src\googletest\;CMake Files\..\..\..\..\..\..\usr\src\googletest\googlemock\;CMake Files\..\..\..\..\..\..\usr\src\googletest\googletest\;CMake Files\..\..\..\..\..\..\usr\src\googletest\googletest\cmake\;CMake Files\..\..\..\..\..\..\usr\share\;CMake Files\..\..\..\..\..\..\usr\share\OpenCV\;CMake Files\..\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\..\usr\local\zed\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\catkin\;CMake Files\cmake-build-debug\catkin\catkin_generated\;CMake Files\cmake-build-debug\catkin\catkin_generated\version\;CMake Files\cmake-build-debug\catkin_generated\;CMake Files\cmake-build-debug\catkin_generated\installspace\;CMake Files\cmake-build-debug\sensors\;CMake Files\cmake-build-debug\sensors\gps\;CMake Files\cmake-build-debug\sensors\gps\catkin_generated\;CMake Files\cmake-build-debug\sensors\camera\;CMake Files\cmake-build-debug\sensors\camera\catkin_generated\;CMake Files\cmake-build-debug\sensors\joystick\;CMake Files\cmake-build-debug\sensors\joystick\catkin_generated\;CMake Files\cmake-build-debug\sensors\zed-ros-wrapper\;CMake Files\cmake-build-debug\sensors\zed-ros-wrapper\zed_display_rviz\;CMake Files\cmake-build-debug\sensors\zed-ros-wrapper\zed_display_rviz\catkin_generated\;CMake Files\cmake-build-debug\sensors\zed-ros-wrapper\zed_ros\;CMake Files\cmake-build-debug\sensors\zed-ros-wrapper\zed_ros\catkin_generated\;CMake Files\cmake-build-debug\sensors\zed-ros-wrapper\zed_wrapper\;CMake Files\cmake-build-debug\sensors\zed-ros-wrapper\zed_wrapper\catkin_generated\;CMake Files\cmake-build-debug\sensors\zed-ros-wrapper\zed_wrapper\cmake\;CMake Files\cmake-build-debug\segmentation\;CMake Files\cmake-build-debug\segmentation\catkin_generated\;CMake Files\cmake-build-debug\segmentation\cmake\;CMake Files\cmake-build-debug\devel\;CMake Files\cmake-build-debug\devel\share\;CMake Files\cmake-build-debug\devel\share\segmentation\;CMake Files\cmake-build-debug\devel\share\segmentation\cmake\;CMake Files\cmake-build-debug\devel\share\simulation\;CMake Files\cmake-build-debug\devel\share\simulation\cmake\;CMake Files\cmake-build-debug\devel\share\object_detection\;CMake Files\cmake-build-debug\devel\share\object_detection\cmake\;CMake Files\cmake-build-debug\devel\share\zed_wrapper\;CMake Files\cmake-build-debug\devel\share\zed_wrapper\cmake\;CMake Files\cmake-build-debug\devel\share\mapping\;CMake Files\cmake-build-debug\devel\share\mapping\cmake\;CMake Files\cmake-build-debug\simulation\;CMake Files\cmake-build-debug\simulation\catkin_generated\;CMake Files\cmake-build-debug\simulation\cmake\;CMake Files\cmake-build-debug\detection\;CMake Files\cmake-build-debug\detection\lane_detection\;CMake Files\cmake-build-debug\detection\lane_detection\catkin_generated\;CMake Files\cmake-build-debug\detection\object_detection\;CMake Files\cmake-build-debug\detection\object_detection\catkin_generated\;CMake Files\cmake-build-debug\detection\object_detection\cmake\;CMake Files\cmake-build-debug\autopilot\;CMake Files\cmake-build-debug\autopilot\catkin_generated\;CMake Files\cmake-build-debug\data_logger\;CMake Files\cmake-build-debug\data_logger\catkin_generated\;CMake Files\cmake-build-debug\driver\;CMake Files\cmake-build-debug\driver\catkin_generated\;CMake Files\cmake-build-debug\driver_control\;CMake Files\cmake-build-debug\driver_control\catkin_generated\;CMake Files\cmake-build-debug\navigation\;CMake Files\cmake-build-debug\navigation\gps_localization\;CMake Files\cmake-build-debug\navigation\gps_localization\catkin_generated\;CMake Files\cmake-build-debug\navigation\path_planning\;CMake Files\cmake-build-debug\navigation\path_planning\catkin_generated\;CMake Files\cmake-build-debug\navigation\mapping\;CMake Files\cmake-build-debug\navigation\mapping\catkin_generated\;CMake Files\cmake-build-debug\navigation\mapping\cmake\;CMake Files\cmake-build-debug\motion_control\;CMake Files\cmake-build-debug\motion_control\catkin_generated\;CMake Files\cmake-build-debug\point_cloud\;CMake Files\cmake-build-debug\point_cloud\catkin_generated\;CMake Files\cmake-build-debug\osm\;CMake Files\cmake-build-debug\osm\catkin_generated\;CMake Files\sensors\;CMake Files\sensors\gps\;CMake Files\sensors\camera\;CMake Files\sensors\joystick\;CMake Files\sensors\zed-ros-wrapper\;CMake Files\sensors\zed-ros-wrapper\zed_display_rviz\;CMake Files\sensors\zed-ros-wrapper\zed_ros\;CMake Files\sensors\zed-ros-wrapper\zed_wrapper\;CMake Files\segmentation\;CMake Files\simulation\;CMake Files\detection\;CMake Files\detection\lane_detection\;CMake Files\detection\object_detection\;CMake Files\autopilot\;CMake Files\data_logger\;CMake Files\driver\;CMake Files\driver_control\;CMake Files\navigation\;CMake Files\navigation\gps_localization\;CMake Files\navigation\path_planning\;CMake Files\navigation\mapping\;CMake Files\motion_control\;CMake Files\point_cloud\;CMake Files\osm\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\opt\;CMake Files\..\..\..\..\..\..\opt\ros\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\catkin\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\platform\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\test\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\tools\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\templates\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\em\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\roslint\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\roslint\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rospy\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rospy\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\std_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\std_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\message_runtime\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\message_runtime\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\cpp_common\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\cpp_common\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\roscpp_serialization\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\roscpp_serialization\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\roscpp_traits\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\roscpp_traits\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rostime\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rostime\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\sensor_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\sensor_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\geometry_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\geometry_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\message_generation\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\message_generation\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\gencpp\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\gencpp\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\genmsg\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\genmsg\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\geneus\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\geneus\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\genlisp\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\genlisp\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\gennodejs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\gennodejs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\genpy\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\genpy\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\derived_object_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\derived_object_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\shape_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\shape_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\radar_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\radar_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\ackermann_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\ackermann_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\tf\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\tf\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\message_filters\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\message_filters\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\roscpp\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\roscpp\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rosconsole\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rosconsole\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rosgraph_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rosgraph_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\xmlrpcpp\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\xmlrpcpp\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\tf2_ros\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\tf2_ros\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\actionlib\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\actionlib\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\actionlib_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\actionlib_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rosgraph\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rosgraph\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\tf2\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\tf2\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\tf2_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\tf2_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\tf2_py\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\tf2_py\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\dynamic_reconfigure\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\dynamic_reconfigure\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\cv_bridge\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\cv_bridge\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\diagnostic_updater\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\diagnostic_updater\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\diagnostic_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\diagnostic_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rosserial_client\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rosserial_client\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rosserial_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rosserial_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rosserial_python\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rosserial_python\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\costmap_2d\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\costmap_2d\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\laser_geometry\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\laser_geometry\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\map_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\map_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\nav_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\nav_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\pluginlib\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\pluginlib\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\class_loader\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\class_loader\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\roslib\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\roslib\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rospack\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rospack\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\visualization_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\visualization_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\voxel_grid\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\voxel_grid\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\pcl_conversions\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\pcl_conversions\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\pcl_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\pcl_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\pcl_ros\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\pcl_ros\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\nodelet\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\nodelet\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\bondcpp\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\bondcpp\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\bond\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\bond\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\smclib\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\smclib\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\nodelet_topic_tools\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\nodelet_topic_tools\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rosbag\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rosbag\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rosbag_storage\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\rosbag_storage\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\roslz4\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\roslz4\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\std_srvs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\std_srvs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\topic_tools\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\topic_tools\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\grid_map_ros\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\grid_map_ros\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\grid_map_core\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\grid_map_core\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\grid_map_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\grid_map_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\grid_map_cv\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\grid_map_cv\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\filters\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\filters\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\move_base_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\move_base_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\image_transport\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\image_transport\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\stereo_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\stereo_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\tf2_geometry_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\tf2_geometry_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\amcl\;CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\amcl\cmake\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\usr\lib\python2.7\;CMake Files\..\..\..\..\..\..\usr\lib\python2.7\dist-packages\;CMake Files\..\..\..\..\..\..\usr\lib\python2.7\dist-packages\catkin_pkg\;CMake Files\..\..\..\..\..\..\usr\lib\python2.7\dist-packages\catkin_pkg\templates\;CMake Files\..\..\..\..\..\..\usr\src\;CMake Files\..\..\..\..\..\..\usr\src\googletest\;CMake Files\..\..\..\..\..\..\usr\src\googletest\googlemock\;CMake Files\..\..\..\..\..\..\usr\src\googletest\googletest\;CMake Files\..\..\..\..\..\..\usr\src\googletest\googletest\cmake\;CMake Files\..\..\..\..\..\..\usr\share\;CMake Files\..\..\..\..\..\..\usr\share\OpenCV\;CMake Files\..\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\..\usr\local\zed\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\catkin\;CMake Files\cmake-build-debug\catkin\catkin_generated\;CMake Files\cmake-build-debug\catkin\catkin_generated\version\;CMake Files\cmake-build-debug\catkin_generated\;CMake Files\cmake-build-debug\catkin_generated\installspace\;CMake Files\cmake-build-debug\sensors\;CMake Files\cmake-build-debug\sensors\gps\;CMake Files\cmake-build-debug\sensors\gps\catkin_generated\;CMake Files\cmake-build-debug\sensors\camera\;CMake Files\cmake-build-debug\sensors\camera\catkin_generated\;CMake Files\cmake-build-debug\sensors\joystick\;CMake Files\cmake-build-debug\sensors\joystick\catkin_generated\;CMake Files\cmake-build-debug\sensors\zed-ros-wrapper\;CMake Files\cmake-build-debug\sensors\zed-ros-wrapper\zed_display_rviz\;CMake Files\cmake-build-debug\sensors\zed-ros-wrapper\zed_display_rviz\catkin_generated\;CMake Files\cmake-build-debug\sensors\zed-ros-wrapper\zed_ros\;CMake Files\cmake-build-debug\sensors\zed-ros-wrapper\zed_ros\catkin_generated\;CMake Files\cmake-build-debug\sensors\zed-ros-wrapper\zed_wrapper\;CMake Files\cmake-build-debug\sensors\zed-ros-wrapper\zed_wrapper\catkin_generated\;CMake Files\cmake-build-debug\sensors\zed-ros-wrapper\zed_wrapper\cmake\;CMake Files\cmake-build-debug\segmentation\;CMake Files\cmake-build-debug\segmentation\catkin_generated\;CMake Files\cmake-build-debug\segmentation\cmake\;CMake Files\cmake-build-debug\devel\;CMake Files\cmake-build-debug\devel\share\;CMake Files\cmake-build-debug\devel\share\segmentation\;CMake Files\cmake-build-debug\devel\share\segmentation\cmake\;CMake Files\cmake-build-debug\devel\share\simulation\;CMake Files\cmake-build-debug\devel\share\simulation\cmake\;CMake Files\cmake-build-debug\devel\share\object_detection\;CMake Files\cmake-build-debug\devel\share\object_detection\cmake\;CMake Files\cmake-build-debug\devel\share\zed_wrapper\;CMake Files\cmake-build-debug\devel\share\zed_wrapper\cmake\;CMake Files\cmake-build-debug\devel\share\mapping\;CMake Files\cmake-build-debug\devel\share\mapping\cmake\;CMake Files\cmake-build-debug\simulation\;CMake Files\cmake-build-debug\simulation\catkin_generated\;CMake Files\cmake-build-debug\simulation\cmake\;CMake Files\cmake-build-debug\detection\;CMake Files\cmake-build-debug\detection\lane_detection\;CMake Files\cmake-build-debug\detection\lane_detection\catkin_generated\;CMake Files\cmake-build-debug\detection\object_detection\;CMake Files\cmake-build-debug\detection\object_detection\catkin_generated\;CMake Files\cmake-build-debug\detection\object_detection\cmake\;CMake Files\cmake-build-debug\autopilot\;CMake Files\cmake-build-debug\autopilot\catkin_generated\;CMake Files\cmake-build-debug\data_logger\;CMake Files\cmake-build-debug\data_logger\catkin_generated\;CMake Files\cmake-build-debug\driver\;CMake Files\cmake-build-debug\driver\catkin_generated\;CMake Files\cmake-build-debug\driver_control\;CMake Files\cmake-build-debug\driver_control\catkin_generated\;CMake Files\cmake-build-debug\navigation\;CMake Files\cmake-build-debug\navigation\gps_localization\;CMake Files\cmake-build-debug\navigation\gps_localization\catkin_generated\;CMake Files\cmake-build-debug\navigation\path_planning\;CMake Files\cmake-build-debug\navigation\path_planning\catkin_generated\;CMake Files\cmake-build-debug\navigation\mapping\;CMake Files\cmake-build-debug\navigation\mapping\catkin_generated\;CMake Files\cmake-build-debug\navigation\mapping\cmake\;CMake Files\cmake-build-debug\motion_control\;CMake Files\cmake-build-debug\motion_control\catkin_generated\;CMake Files\cmake-build-debug\point_cloud\;CMake Files\cmake-build-debug\point_cloud\catkin_generated\;CMake Files\sensors\;CMake Files\sensors\gps\;CMake Files\sensors\camera\;CMake Files\sensors\joystick\;CMake Files\sensors\zed-ros-wrapper\;CMake Files\sensors\zed-ros-wrapper\zed_display_rviz\;CMake Files\sensors\zed-ros-wrapper\zed_ros\;CMake Files\sensors\zed-ros-wrapper\zed_wrapper\;CMake Files\segmentation\;CMake Files\simulation\;CMake Files\detection\;CMake Files\detection\lane_detection\;CMake Files\detection\object_detection\;CMake Files\autopilot\;CMake Files\data_logger\;CMake Files\driver\;CMake Files\driver_control\;CMake Files\navigation\;CMake Files\navigation\gps_localization\;CMake Files\navigation\path_planning\;CMake Files\navigation\mapping\;CMake Files\motion_control\;CMake Files\point_cloud\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper"/>
@@ -388,9 +388,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/.DS_Store">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/.idea/inspectionProfiles/Project_Default.xml">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
@@ -1228,6 +1225,9 @@
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel/lib/python2.7/dist-packages/libnmea_navsat_driver/__init__.py">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel/lib/python2.7/dist-packages/mapping/__init__.py">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel/lib/python2.7/dist-packages/object_detection/__init__.py">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
@@ -1322,6 +1322,12 @@
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel/share/localization/cmake/localizationConfig.cmake">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel/share/mapping/cmake/mapping-msg-extras.cmake">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel/share/mapping/cmake/mapping-msg-paths.cmake">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/devel/share/mapping/cmake/mappingConfig-version.cmake">
@@ -2410,6 +2416,18 @@
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/CMakeDirectoryInformation.cmake">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/_mapping_generate_messages_check_deps_set_initial_pose.dir/DependInfo.cmake">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/_mapping_generate_messages_check_deps_set_initial_pose.dir/build.make">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/_mapping_generate_messages_check_deps_set_initial_pose.dir/cmake_clean.cmake">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/_mapping_generate_messages_check_deps_set_initial_pose.dir/progress.make">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/amcl_gencfg.dir/DependInfo.cmake">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
@@ -2693,6 +2711,138 @@
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/map_msgs_generate_messages_py.dir/progress.make">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_gencpp.dir/DependInfo.cmake">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_gencpp.dir/build.make">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_gencpp.dir/cmake_clean.cmake">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_gencpp.dir/progress.make">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_generate_messages.dir/DependInfo.cmake">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_generate_messages.dir/build.make">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_generate_messages.dir/cmake_clean.cmake">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_generate_messages.dir/progress.make">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_generate_messages_cpp.dir/DependInfo.cmake">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_generate_messages_cpp.dir/build.make">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_generate_messages_cpp.dir/cmake_clean.cmake">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_generate_messages_cpp.dir/progress.make">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_generate_messages_eus.dir/DependInfo.cmake">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_generate_messages_eus.dir/build.make">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_generate_messages_eus.dir/cmake_clean.cmake">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_generate_messages_eus.dir/progress.make">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_generate_messages_lisp.dir/DependInfo.cmake">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_generate_messages_lisp.dir/build.make">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_generate_messages_lisp.dir/cmake_clean.cmake">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_generate_messages_lisp.dir/progress.make">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_generate_messages_nodejs.dir/DependInfo.cmake">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_generate_messages_nodejs.dir/build.make">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_generate_messages_nodejs.dir/cmake_clean.cmake">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_generate_messages_nodejs.dir/progress.make">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_generate_messages_py.dir/DependInfo.cmake">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_generate_messages_py.dir/build.make">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_generate_messages_py.dir/cmake_clean.cmake">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_generate_messages_py.dir/progress.make">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_geneus.dir/DependInfo.cmake">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_geneus.dir/build.make">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_geneus.dir/cmake_clean.cmake">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_geneus.dir/progress.make">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_genlisp.dir/DependInfo.cmake">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_genlisp.dir/build.make">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_genlisp.dir/cmake_clean.cmake">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_genlisp.dir/progress.make">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_gennodejs.dir/DependInfo.cmake">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_gennodejs.dir/build.make">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_gennodejs.dir/cmake_clean.cmake">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_gennodejs.dir/progress.make">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_genpy.dir/DependInfo.cmake">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_genpy.dir/build.make">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_genpy.dir/cmake_clean.cmake">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/mapping_genpy.dir/progress.make">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/CMakeFiles/nav_msgs_generate_messages_cpp.dir/DependInfo.cmake">
@@ -3151,6 +3301,12 @@
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/Makefile">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/catkin_generated/installspace/mapping-msg-extras.cmake">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/catkin_generated/installspace/mapping-msg-paths.cmake">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/catkin_generated/installspace/mapping.pc">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
@@ -3158,6 +3314,12 @@
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/catkin_generated/installspace/mappingConfig.cmake">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/catkin_generated/mapping-msg-extras.cmake.develspace.in">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/catkin_generated/mapping-msg-extras.cmake.installspace.in">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/catkin_generated/ordered_paths.cmake">
@@ -3175,7 +3337,16 @@
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/catkin_generated/stamps/mapping/package.xml.stamp">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/catkin_generated/stamps/mapping/pkg-genmsg.cmake.em.stamp">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/catkin_generated/stamps/mapping/pkg.pc.em.stamp">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/cmake/mapping-genmsg-context.py">
+			<Option target="all_files_zed_wrapper"/>
+		</Unit>
+		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/cmake/mapping-genmsg.cmake">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping/cmake_install.cmake">
@@ -6292,12 +6463,6 @@
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/mapping/srv/set_initial_pose.srv">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/mapping/srv/start_svo_recording.srv">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/mapping/srv/stop_svo_recording.srv">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/path_planning/CMakeLists.txt">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
@@ -6332,54 +6497,6 @@
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/navigation/path_planning/src/navigation_goals.cpp">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/osm/.gitignore">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/osm/CMakeLists.txt">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/osm/cfg/VizOSM.cfg">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/osm/conf.py">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/osm/launch/geo_planner.launch">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/osm/launch/viz_osm.launch">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/osm/maps/boston.osm">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/osm/maps/deerfield.osm">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/osm/maps/large-prc.osm">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/osm/maps/prc.osm">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/osm/package.xml">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/osm/rviz/geo_planner.rviz">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/osm/scripts/osm_client">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/osm/scripts/osm_server">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/osm/scripts/viz_osm">
-			<Option target="all_files_zed_wrapper"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/osm/setup.py">
 			<Option target="all_files_zed_wrapper"/>
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/point_cloud/CMakeLists.txt">
@@ -7783,45 +7900,6 @@
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/../../../../../../opt/ros/melodic/share/move_base_msgs/cmake/move_base_msgsConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\move_base_msgs\cmake\"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/../../../../../../opt/ros/melodic/share/geodesy/cmake/geodesyConfig-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\geodesy\cmake\"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/../../../../../../opt/ros/melodic/share/geodesy/cmake/geodesyConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\geodesy\cmake\"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/../../../../../../opt/ros/melodic/share/geographic_msgs/cmake/geographic_msgs-msg-extras.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\geographic_msgs\cmake\"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/../../../../../../opt/ros/melodic/share/geographic_msgs/cmake/geographic_msgsConfig-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\geographic_msgs\cmake\"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/../../../../../../opt/ros/melodic/share/geographic_msgs/cmake/geographic_msgsConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\geographic_msgs\cmake\"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/../../../../../../opt/ros/melodic/share/uuid_msgs/cmake/uuid_msgs-msg-extras.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\uuid_msgs\cmake\"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/../../../../../../opt/ros/melodic/share/uuid_msgs/cmake/uuid_msgsConfig-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\uuid_msgs\cmake\"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/../../../../../../opt/ros/melodic/share/uuid_msgs/cmake/uuid_msgsConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\uuid_msgs\cmake\"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/../../../../../../opt/ros/melodic/share/unique_id/cmake/unique_idConfig-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\unique_id\cmake\"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/../../../../../../opt/ros/melodic/share/unique_id/cmake/unique_idConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\unique_id\cmake\"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/../../../../../../opt/ros/melodic/share/roslaunch/cmake/roslaunch-extras.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\roslaunch\cmake\"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/../../../../../../opt/ros/melodic/share/roslaunch/cmake/roslaunchConfig-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\roslaunch\cmake\"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/../../../../../../opt/ros/melodic/share/roslaunch/cmake/roslaunchConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\roslaunch\cmake\"/>
-		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/../../../../../../opt/ros/melodic/share/image_transport/cmake/image_transportConfig-version.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\opt\ros\melodic\share\image_transport\cmake\"/>
 		</Unit>
@@ -8071,15 +8149,6 @@
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/point_cloud/catkin_generated/package.cmake">
 			<Option virtualFolder="CMake Files\cmake-build-debug\point_cloud\catkin_generated\"/>
 		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/osm/catkin_generated/ordered_paths.cmake">
-			<Option virtualFolder="CMake Files\cmake-build-debug\osm\catkin_generated\"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/osm/catkin_generated/package.cmake">
-			<Option virtualFolder="CMake Files\cmake-build-debug\osm\catkin_generated\"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/osm/catkin_generated/setup_py_interrogation.cmake">
-			<Option virtualFolder="CMake Files\cmake-build-debug\osm\catkin_generated\"/>
-		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/sensors/gps/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\sensors\gps\"/>
 		</Unit>
@@ -8199,15 +8268,6 @@
 		</Unit>
 		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/point_cloud/package.xml">
 			<Option virtualFolder="CMake Files\point_cloud\"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/osm/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\osm\"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/osm/package.xml">
-			<Option virtualFolder="CMake Files\osm\"/>
-		</Unit>
-		<Unit filename="/home/neil/Workspace/self-driving-golf-cart/ros/src/osm/setup.py">
-			<Option virtualFolder="CMake Files\osm\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

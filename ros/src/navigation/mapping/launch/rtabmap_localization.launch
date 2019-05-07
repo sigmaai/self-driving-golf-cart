@@ -57,10 +57,10 @@ Email: contact@neilnie.com
     <include file="$(find mapping)/launch/rtabmap_modified.launch">
 
         <!--    localization mode   -->
-        <arg name="localization"                value="true"                            />
-        <arg name="visual_odometry"             value="true"                            />
-        <arg name="publish_tf_map"              value="false"                            />
-        <arg name="rtabmapviz"                  value="false"                           />
+        <arg name="localization"                value="true"                           />
+        <arg name="visual_odometry"             value="true"                           />
+        <arg name="publish_tf_map"              value="false"                          />
+        <arg name="rtabmapviz"                  value="false"                          />
 
         <arg name="rgb_topic"               	value="/$(arg zed_namespace)/$(arg rgb_topic)" />
         <arg name="depth_topic"             	value="/$(arg zed_namespace)/$(arg depth_topic)" />

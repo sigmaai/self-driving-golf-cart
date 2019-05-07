@@ -18,8 +18,8 @@
 #define LPWM 6
 #define POT_MAX 150
 #define POT_MIN 30
-#define LA_MIN 395.0
-#define LA_MAX 570.0
+#define LA_MIN 250.0
+#define LA_MAX 450.0 // 380
 #define LA_PIN 0
 
 ros::NodeHandle nh;

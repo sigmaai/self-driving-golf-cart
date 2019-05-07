@@ -29,8 +29,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <!-- Coordinate frame -->
     <arg name="pose_frame"           default="map" />
     <arg name="odometry_frame"       default="odom" />
-    <arg name="two_d_mode"           default="false" /> <!-- if true the Z value will be fixed to "fixed_z_value", roll and pitch to zero -->
-    <arg name="fixed_z_value"        default="0.0" />
+    <arg name="two_d_mode"           default="true" /> <!-- if true the Z value will be fixed to "fixed_z_value", roll and pitch to zero -->
+    <arg name="fixed_z_value"        default="1.68" />
 
     <group ns="zed">
         <include file="$(find zed_wrapper)/launch/zed_camera.launch">

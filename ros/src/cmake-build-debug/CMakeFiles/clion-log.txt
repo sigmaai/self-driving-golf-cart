@@ -17,7 +17,7 @@
 -- BUILD_SHARED_LIBS is on
 -- BUILD_SHARED_LIBS is on
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--- ~~  traversing 20 packages in topological order:
+-- ~~  traversing 19 packages in topological order:
 -- ~~  - gps
 -- ~~  - segmentation
 -- ~~  - simulation
@@ -33,7 +33,6 @@
 -- ~~  - motion_control
 -- ~~  - path_planning
 -- ~~  - point_cloud
--- ~~  - osm_cartography
 -- ~~  - zed_display_rviz
 -- ~~  - zed_ros (metapackage)
 -- ~~  - zed_wrapper
@@ -82,9 +81,6 @@
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
 -- +++ processing catkin package: 'point_cloud'
 -- ==> add_subdirectory(point_cloud)
--- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
--- +++ processing catkin package: 'osm_cartography'
--- ==> add_subdirectory(osm)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
 -- +++ processing catkin package: 'zed_display_rviz'
 -- ==> add_subdirectory(sensors/zed-ros-wrapper/zed_display_rviz)
