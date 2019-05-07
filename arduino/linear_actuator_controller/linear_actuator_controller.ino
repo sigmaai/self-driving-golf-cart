@@ -29,6 +29,7 @@ double pos = 0.0;         // steering position
 boolean joystick_enabled = false;
 float cmd_val = 0.0;
 float target_pos = 0.0;
+bool killed = false;
 
 ros::NodeHandle nh;
 
@@ -38,12 +39,12 @@ void steering_callback( const std_msgs::Float32& cmd_msg) {
 
   // target_pos = cmd_msg.data;
   double input = cmd_msg.data;
-  if (input < -M_PI){
+  if (input < -M_PI) {
     input = -M_PI;
-  }else if (input > M_PI){
+  } else if (input > M_PI) {
     input = M_PI;
   }
-  
+
   if (!joystick_enabled) {
     double cmd = mapf(input, -M_PI, M_PI, la_min, la_max);
     target_pos = cmd;
@@ -56,7 +57,7 @@ void joystick_callback( const std_msgs::Float32& cmd_msg) {
     cmd_val = cmd_msg.data;
     if (cmd_val > 0 && pos > la_min) {
       move_actuator(255, 0);
-      // going out 
+      // going out
     } else if (cmd_val < 0 && pos < la_max) {
       move_actuator(255, 1);
     } else {
@@ -66,10 +67,15 @@ void joystick_callback( const std_msgs::Float32& cmd_msg) {
 }
 
 void joystick_enabled_callback( const std_msgs::Bool& cmd_msg) {
-  if (joystick_enabled == true){
+  if (joystick_enabled == true) {
     target_pos = pos;
   }
   joystick_enabled = cmd_msg.data;
+}
+
+
+void killswitch_callback( const std_msgs::Bool& cmd_msg) {
+  killed = cmd_msg.data;
 }
 
 // ----------------------------------------------------------------------------------------
@@ -77,6 +83,7 @@ void joystick_enabled_callback( const std_msgs::Bool& cmd_msg) {
 ros::Subscriber<std_msgs::Float32> sub1("/vehicle/dbw/steering_cmds/", steering_callback);
 ros::Subscriber<std_msgs::Float32> sub2("/sensor/joystick/left_stick_x", joystick_callback);
 ros::Subscriber<std_msgs::Bool> sub3("/sensor/joystick/enabled", joystick_enabled_callback);
+ros::Subscriber<std_msgs::Bool> ks_sub("/vehicle/safety/killed", killswitch_callback);
 
 // declare the publisher
 std_msgs::Float32 pos_msg;
@@ -89,6 +96,7 @@ void setup() {
   nh.subscribe(sub1);
   nh.subscribe(sub2);
   nh.subscribe(sub3);
+  nh.subscribe(ks_sub);
 
   nh.advertise(pos_pub);
 
@@ -102,24 +110,28 @@ void setup() {
 
 void loop() {
 
-  pos = analogRead(pot_pin);
+  if (!killed) {
+    pos = analogRead(pot_pin);
 
-  pos_msg.data = pos;
-  pos_pub.publish(&pos_msg);
-  
-  if (!joystick_enabled){
+    pos_msg.data = pos;
+    pos_pub.publish(&pos_msg);
 
-    if (abs(pos - target_pos) > 20) {
-      if (pos < target_pos)
-        move_actuator(255, 1);
-       else if (pos > target_pos)
-        move_actuator(255, 0);
+    if (!joystick_enabled) {
+
+      if (abs(pos - target_pos) > 20) {
+        if (pos < target_pos)
+          move_actuator(255, 1);
+        else if (pos > target_pos)
+          move_actuator(255, 0);
+      }
+      else {
+        stop_actuator();
+      }
     }
-    else {
-      stop_actuator();
-    }
+  } else {
+    stop_actuator();
   }
-  
+
   nh.spinOnce();
   delay(5);
 }
@@ -147,7 +159,7 @@ void stop_actuator() {
 
 double mapf(double x, double in_min, double in_max, double out_min, double out_max)
 {
-    return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+  return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 
 // END ------ Helper Methods  ----------------------------------------
