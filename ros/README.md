@@ -1,8 +1,8 @@
-# Important ROS Information
+# ROS Information
 Below you will find information about all the ROS packages, nodes, topics used in this project.
 
 ## Packages & Nodes
-Here is a list of packages. Underneath each package are nodes in that package.
+Here is a list of packages. Underneath each package are nodes in that package. 
 
 ------------------------------
 
@@ -70,16 +70,14 @@ Semantic segmentation node. Deep learning, ConvNets
 ##### Subscribes
 - `/camera_node/image_raw`
 
-------------------------------
-
-### camera
+<!--### camera
 The cameras are the main sensors of the self-driving car. 
 
 ##### Nodes:
 - `camera_node`
 
 ##### Publishes
-- `/camera_node/image_raw`
+- `/camera_node/image_raw`-->
 
 ------------------------------
 
@@ -116,7 +114,7 @@ The logger node records and compiles a dataset for supervised machine learning p
 
 ------------------------------
 
-### osm_cartography
+<!--### osm_cartography
 
 #### Nodes:
 - `osm_client`
@@ -125,7 +123,7 @@ The logger node records and compiles a dataset for supervised machine learning p
 
 This package broadcasts and processes .osm files. OSM files are OpenStreetMap files which contain detailed information about the environment, 
 such as coordinates of roads, building and landmarks. Currently, the main function of the package is to broadcast the osm info to rviz for 
-visualization. (Node currently functioning)
+visualization. (Node currently functioning)-->
 
 ### topics for visualization
 - /visual/steering/angle_img
