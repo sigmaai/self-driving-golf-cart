@@ -32,6 +32,7 @@ const int slave_Select_Pin = 10;  // set pin 10 as the slave select for the digi
 long lastest_msg_time = 0;
 float current_vel = 0.0;
 float desired_vel = 0.0;
+bool killed = false;
 
 void joystick_callback( const std_msgs::Float32& cmd_msg) {
 
@@ -49,7 +50,6 @@ void joystick_callback( const std_msgs::Float32& cmd_msg) {
       cmd_val = POT_MIN;
       float inverted_input = 1.0 + cmd_msg.data;
       actuator_target_pos = mapf(inverted_input, 0, 1, LA_MIN, LA_MAX);
-
     }
   }
 }
@@ -68,12 +68,17 @@ void vel_callback(const std_msgs::Float32MultiArray& vel_msg) {
   desired_vel = vel_msg.data[1];
 }
 
+void killswitch_callback( const std_msgs::Bool& cmd_msg) {
+  killed = cmd_msg.data;
+}
+
 // ----------------------------------------------------------------------------------------
 // declare all subscribers
 ros::Subscriber<std_msgs::Header> header_sub("/vehicle/dbw/vel_cmd_header", header_callback);
 ros::Subscriber<std_msgs::Float32> vel_sub("/vehicle/dbw/velocity", vel_callback);
 ros::Subscriber<std_msgs::Float32> sub2("/sensor/joystick/right_stick_y", joystick_callback);
 ros::Subscriber<std_msgs::Bool> sub3("/sensor/joystick/enabled", joystick_enabled_callback);
+ros::Subscriber<std_msgs::Bool> ks_sub("/vehicle/safety/killed", killswitch_callback);
 
 // declare the publisher
 std_msgs::Float32 pos_msg;
@@ -87,6 +92,7 @@ void setup() {
   nh.subscribe(sub3);
   nh.subscribe(header_sub);
   nh.subscribe(vel_sub);
+  nh.subscribe(ks_sub);
 
   nh.advertise(pos_pub);
 
@@ -106,6 +112,11 @@ void setup() {
 
 void loop() {
 
+  if (killed){
+    actuator_pos = LA_MAX;
+    cmd_val = POT_MIN;
+  }
+  
   // accelerator control
   potWrite(slave_Select_Pin, B00010001, cmd_val);
   potWrite(slave_Select_Pin, B00010010, cmd_val);

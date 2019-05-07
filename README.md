@@ -67,7 +67,7 @@ To compile the project:
 - `$ roslaunch path_planning rtab_mapping_navigation.launch` 
 
 <center>
-	<img src="./media/running.png" alt="image" width="640"/>
+	<img src="./media/path_planning_2.png" alt="image" width="640"/>
 </center>
 
 🚙 Bon Voyage 😀
