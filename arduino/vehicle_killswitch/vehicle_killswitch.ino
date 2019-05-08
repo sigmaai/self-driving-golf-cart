@@ -66,8 +66,15 @@ void loop(){
   steering_msg.data = steering_val;
   steering_pub.publish(&steering_msg);
 
+  float brake_val = 1.0 - mapf(receiver_input_channel_2, 1480, 1030, 1, 0);
   float accel_val = mapf(receiver_input_channel_1, 1045, 1890, 0, 1);
-  accel_msg.data = accel_val;
+
+  if (brake_val > 0.05) {
+    accel_msg.data = -1 * brake_val;
+  }else{
+    accel_msg.data = accel_val;
+  }
+
   accel_pub.publish(&accel_msg);
   
   nh.spinOnce();

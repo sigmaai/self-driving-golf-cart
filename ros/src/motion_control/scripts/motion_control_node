@@ -31,7 +31,8 @@ class MotionControlNode:
 
         # declare all publishers
         self.steering_pub = rospy.Publisher('/vehicle/dbw/steering_cmds/', Float32, queue_size=5)
-        self.vel_pub = rospy.Publisher('/vehicle/dbw/velocity', Float32MultiArray, queue_size=5)
+        self.current_vel_pub = rospy.Publisher('/vehicle/dbw/current_velocity', Float32, queue_size=5)
+        self.desired_vel_pub = rospy.Publisher('/vehicle/dbw/desired_velocity', Float32, queue_size=5)
         self.header_pub = rospy.Publisher('/vehicle/dbw/vel_cmd_header', Header, queue_size=5)
 
         rospy.loginfo("Vehicle Motion Control System Initialized")
@@ -46,8 +47,8 @@ class MotionControlNode:
 
             if self.current_velocity is not None and self.desire_velocity is not None:
 
-                vel_array = Float32MultiArray(data=[self.current_velocity, self.desire_velocity])
-                self.vel_pub.publish(vel_array)
+                self.current_vel_pub.publish(self.current_velocity)
+                self.desired_vel_pub.publish(self.desire_velocity)
 
             rate.sleep()
 
