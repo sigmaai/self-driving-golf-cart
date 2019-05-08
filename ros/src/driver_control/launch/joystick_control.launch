@@ -14,9 +14,7 @@
 <!--        <arg name="resolution" value="1" />-->
 
 <!--    </include>-->
-
-    <node name="camera_select" pkg="zed_wrapper" type="camera_select.py" />
-
+    
     <!-- setup the Arduino serial -->
     <node name="serial_node_1" pkg="rosserial_python" type="serial_node.py">
     	<param name="port" value="/dev/ttyACM0" />
@@ -24,6 +22,10 @@
 
     <node name="serial_node_2" pkg="rosserial_python" type="serial_node.py">
     	<param name="port" value="/dev/ttyACM1" />
+    </node>
+
+    <node name="serial_node_3" pkg="rosserial_python" type="serial_node.py">
+        <param name="port" value="/dev/ttyACM2" />
     </node>
 
     <!-- start joystick -->

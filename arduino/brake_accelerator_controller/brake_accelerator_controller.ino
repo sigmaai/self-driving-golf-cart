@@ -16,10 +16,10 @@
 
 #define RPWM 7
 #define LPWM 6
-#define POT_MAX 150
+#define POT_MAX 130
 #define POT_MIN 30
-#define LA_MIN 250.0
-#define LA_MAX 450.0 // 380
+#define LA_MIN 300.0 // correct 260
+#define LA_MAX 450.0 // correct 380
 #define LA_PIN 0
 
 ros::NodeHandle nh;
@@ -32,11 +32,12 @@ const int slave_Select_Pin = 10;  // set pin 10 as the slave select for the digi
 long lastest_msg_time = 0;
 float current_vel = 0.0;
 float desired_vel = 0.0;
-bool killed = false;
+boolean killed;
+float remote_accel_val;
 
 void joystick_callback( const std_msgs::Float32& cmd_msg) {
 
-  if (joystick_enabled == 1) {
+  if (joystick_enabled && !killed) {
 
     if (cmd_msg.data >= 0) {
 
@@ -52,6 +53,7 @@ void joystick_callback( const std_msgs::Float32& cmd_msg) {
       actuator_target_pos = mapf(inverted_input, 0, 1, LA_MIN, LA_MAX);
     }
   }
+  
 }
 
 void joystick_enabled_callback( const std_msgs::Bool& cmd_msg) {
@@ -72,6 +74,12 @@ void killswitch_callback( const std_msgs::Bool& cmd_msg) {
   killed = cmd_msg.data;
 }
 
+void dir_accel_callback(const std_msgs::Float32& cmd_msg){
+  
+  // make sure the brake is released
+  remote_accel_val = mapf(cmd_msg.data, 0, 1, POT_MIN, POT_MAX);
+}
+
 // ----------------------------------------------------------------------------------------
 // declare all subscribers
 ros::Subscriber<std_msgs::Header> header_sub("/vehicle/dbw/vel_cmd_header", header_callback);
@@ -79,10 +87,11 @@ ros::Subscriber<std_msgs::Float32> vel_sub("/vehicle/dbw/velocity", vel_callback
 ros::Subscriber<std_msgs::Float32> sub2("/sensor/joystick/right_stick_y", joystick_callback);
 ros::Subscriber<std_msgs::Bool> sub3("/sensor/joystick/enabled", joystick_enabled_callback);
 ros::Subscriber<std_msgs::Bool> ks_sub("/vehicle/safety/killed", killswitch_callback);
+ros::Subscriber<std_msgs::Float32> dir_accel_sub("/sensor/dbw/remote_velocity", dir_accel_callback);
 
 // declare the publisher
-std_msgs::Float32 pos_msg;
-ros::Publisher pos_pub("/sensor/vehicle/brake/actuator_position", &pos_msg);
+//std_msgs::Float32 pos_msg;
+//ros::Publisher pos_pub("/sensor/vehicle/brake/actuator_position", &pos_msg);
 // ----------------------------------------------------------------------------------------
 
 void setup() {
@@ -93,8 +102,9 @@ void setup() {
   nh.subscribe(header_sub);
   nh.subscribe(vel_sub);
   nh.subscribe(ks_sub);
+  nh.subscribe(dir_accel_sub);
 
-  nh.advertise(pos_pub);
+  // nh.advertise(pos_pub);
 
   pinMode(RPWM, OUTPUT);
   pinMode(LPWM, OUTPUT);
@@ -112,14 +122,19 @@ void setup() {
 
 void loop() {
 
-  if (killed){
-    actuator_pos = LA_MAX;
+  if (killed) {
     cmd_val = POT_MIN;
+    actuator_target_pos = LA_MIN;
   }
-  
+ 
   // accelerator control
-  potWrite(slave_Select_Pin, B00010001, cmd_val);
-  potWrite(slave_Select_Pin, B00010010, cmd_val);
+  if (joystick_enabled && !killed) {
+    potWrite(slave_Select_Pin, B00010001, cmd_val);
+    potWrite(slave_Select_Pin, B00010010, cmd_val);
+  } else if (!joystick_enabled && !killed) {
+    potWrite(slave_Select_Pin, B00010001, remote_accel_val);
+    potWrite(slave_Select_Pin, B00010010, remote_accel_val);
+  }
 
   // linear actuator brake control
   if (abs(actuator_pos - actuator_target_pos) > 10) {
@@ -134,8 +149,8 @@ void loop() {
 
   // publish linear actuator current position
   actuator_pos = analogRead(LA_PIN);
-  pos_msg.data = actuator_pos;
-  pos_pub.publish(&pos_msg);
+//  pos_msg.data = actuator_pos;
+//  pos_pub.publish(&pos_msg);
 
   nh.spinOnce();
   delay(5);

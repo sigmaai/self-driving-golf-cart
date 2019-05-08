@@ -8,6 +8,8 @@
 #include <std_msgs/Float32.h>
 #include <std_msgs/Bool.h>
 
+ros::NodeHandle nh;
+
 //Declaring Variables
 byte last_channel_1, last_channel_2, last_channel_3, last_channel_4;
 int receiver_input_channel_1, receiver_input_channel_2, receiver_input_channel_3, receiver_input_channel_4;
@@ -17,36 +19,66 @@ unsigned long timer_1, timer_2, timer_3, timer_4;
 std_msgs::Bool kill_msg;
 ros::Publisher kill_pub("/vehicle/safety/killed", &kill_msg);
 
+std_msgs::Float32 steering_msg;
+ros::Publisher steering_pub("/vehicle/dbw/steering_cmds/", &steering_msg);
+
+std_msgs::Float32 accel_msg;
+ros::Publisher accel_pub("/sensor/dbw/remote_velocity", &accel_msg);
+
+
 //Setup routine
 void setup(){
 
   nh.initNode();
 
   nh.advertise(kill_pub);
-  
+  nh.advertise(steering_pub);
+  nh.advertise(accel_pub);
+
   //Arduino (Atmega) pins default to inputs, so they don't need to be explicitly declared as inputs
   PCICR |= (1 << PCIE0);    // set PCIE0 to enable PCMSK0 scan
   PCMSK0 |= (1 << PCINT0);  // set PCINT0 (digital input 8) to trigger an interrupt on state change
   PCMSK0 |= (1 << PCINT1);  // set PCINT1 (digital input 9) to trigger an interrupt on state change
   PCMSK0 |= (1 << PCINT2);  // set PCINT2 (digital input 10) to trigger an interrupt on state change
   PCMSK0 |= (1 << PCINT3);  // set PCINT3 (digital input 11) to trigger an interrupt on state change
-  Serial.begin(9600); 
+
 }
+
+//void interrupt_method() {
+//
+//  kill_msg.data = true;
+//}
 
 //Main program loop
+
 void loop(){
 
-  bool killed = (receiver_input_channel_1 <= 1100) ? false : true;
-  kill_msg.data = pos;
-  kill_pub.publish(&kill_msg);
-  
-  delay(5);
+  if (receiver_input_channel_4 >= 1600) {
+    kill_msg.data = true;
+  }else{
+    kill_msg.data = false;
+  }
 
+  kill_pub.publish(&kill_msg);
+
+  float filtered_val = mapf(receiver_input_channel_3, 1040, 1890, -1, 1);
+  float steering_val = mapf(filtered_val, -1, 1, -M_PI, M_PI);
+  steering_msg.data = steering_val;
+  steering_pub.publish(&steering_msg);
+
+  float accel_val = mapf(receiver_input_channel_1, 1045, 1890, 0, 1);
+  accel_msg.data = accel_val;
+  accel_pub.publish(&accel_msg);
+  
   nh.spinOnce();
-}
+
+  delay(5);
+} 
 
 //This routine is called every time input 8, 9, 10 or 11 changed state
 ISR(PCINT0_vect){
+
+  
   //Channel 1=========================================
   if(last_channel_1 == 0 && PINB & B00000001 ){         //Input 8 changed from 0 to 1
     last_channel_1 = 1;                                 //Remember current input state
@@ -84,7 +116,8 @@ ISR(PCINT0_vect){
     receiver_input_channel_4 = micros() - timer_4;      //Channel 4 is micros() - timer_4
   }
 }
-//Subroutine for displaying the receiver signals
-void print_signals(){
-  Serial.print(receiver_input_channel_1);
+
+double mapf(double x, double in_min, double in_max, double out_min, double out_max)
+{
+  return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }

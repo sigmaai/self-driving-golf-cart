@@ -29,7 +29,7 @@ double pos = 0.0;         // steering position
 boolean joystick_enabled = false;
 float cmd_val = 0.0;
 float target_pos = 0.0;
-bool killed = false;
+bool killed;
 
 ros::NodeHandle nh;
 
@@ -52,8 +52,8 @@ void steering_callback( const std_msgs::Float32& cmd_msg) {
 }
 
 void joystick_callback( const std_msgs::Float32& cmd_msg) {
-
-  if (joystick_enabled) {
+  
+  if (joystick_enabled && !killed) {
     cmd_val = cmd_msg.data;
     if (cmd_val > 0 && pos > la_min) {
       move_actuator(255, 0);
@@ -67,12 +67,12 @@ void joystick_callback( const std_msgs::Float32& cmd_msg) {
 }
 
 void joystick_enabled_callback( const std_msgs::Bool& cmd_msg) {
+  
   if (joystick_enabled == true) {
-    target_pos = pos;
-  }
-  joystick_enabled = cmd_msg.data;
+      target_pos = pos;
+    }
+    joystick_enabled = cmd_msg.data;
 }
-
 
 void killswitch_callback( const std_msgs::Bool& cmd_msg) {
   killed = cmd_msg.data;
@@ -110,26 +110,26 @@ void setup() {
 
 void loop() {
 
-  if (!killed) {
-    pos = analogRead(pot_pin);
+  pos = analogRead(pot_pin);
 
-    pos_msg.data = pos;
-    pos_pub.publish(&pos_msg);
+  pos_msg.data = pos;
+  pos_pub.publish(&pos_msg);
 
-    if (!joystick_enabled) {
+  if (killed) {
+    target_pos = pos;
+  }
 
-      if (abs(pos - target_pos) > 20) {
-        if (pos < target_pos)
-          move_actuator(255, 1);
-        else if (pos > target_pos)
-          move_actuator(255, 0);
-      }
-      else {
-        stop_actuator();
-      }
+  if (!joystick_enabled) {
+
+    if (abs(pos - target_pos) > 20) {
+      if (pos < target_pos)
+        move_actuator(255, 1);
+      else if (pos > target_pos)
+        move_actuator(255, 0);
     }
-  } else {
-    stop_actuator();
+    else {
+      stop_actuator();
+    }
   }
 
   nh.spinOnce();
@@ -154,7 +154,7 @@ void move_actuator(int spd, boolean dir) {
 void stop_actuator() {
   analogWrite(LPWM, 0);
   analogWrite(RPWM, 0);
-  delay(10);
+  delay(5);
 }
 
 double mapf(double x, double in_min, double in_max, double out_min, double out_max)
@@ -163,4 +163,3 @@ double mapf(double x, double in_min, double in_max, double out_min, double out_m
 }
 
 // END ------ Helper Methods  ----------------------------------------
-
