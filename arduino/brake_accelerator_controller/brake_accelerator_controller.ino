@@ -80,12 +80,14 @@ void killswitch_callback( const std_msgs::Bool& cmd_msg) {
 void dir_accel_callback(const std_msgs::Float32& cmd_msg) {
 
   // make sure the brake is released
-  if (cmd_msg.data < 0) {
-    remote_accel_val = 0;
-    float inverted_input = 1.0 + cmd_msg.data;
-    actuator_target_pos = mapf(inverted_input, 0, 1, LA_MIN, LA_MAX);
-  } else {
-    remote_accel_val = mapf(cmd_msg.data, 0, 1, POT_MIN, POT_MAX);
+  if (!killed) {
+    if (cmd_msg.data < 0) {
+      remote_accel_val = 0;
+      float inverted_input = 1.0 + cmd_msg.data;
+      actuator_target_pos = mapf(inverted_input, 0, 1, LA_MIN, LA_MAX);
+    } else {
+      remote_accel_val = mapf(cmd_msg.data, 0, 1, POT_MIN, POT_MAX);
+    }
   }
 }
 
@@ -96,17 +98,17 @@ void current_vel_callback(const std_msgs::Float32& cmd_msg) {
 void desired_vel_callback(const std_msgs::Float32& cmd_msg) {
 
   desired_velocity = cmd_msg.data;
-  
-  if (abs(current_msg_time - previous_msg_time) <= (1.0 * pow(10, 9))){
-    
+
+  if (abs(current_msg_time - previous_msg_time) <= (1.0 * pow(10, 9))) {
+
     float delta_vel = desired_velocity - current_velocity;
 
     if (delta_vel > 0) {
-      
+
       pot_input = (pot_input < 1.0) ? pot_input + 0.1 : 1.0;
-      
+
       remote_accel_val = mapf(pot_input, 0, 1, POT_MIN, POT_MID);
-    }else {
+    } else {
       remote_accel_val = POT_MIN;
     }
   }
@@ -123,7 +125,7 @@ ros::Subscriber<std_msgs::Float32> sub2("/sensor/joystick/right_stick_y", joysti
 ros::Subscriber<std_msgs::Bool> sub3("/sensor/joystick/enabled", joystick_enabled_callback);
 ros::Subscriber<std_msgs::Bool> ks_sub("/vehicle/safety/killed", killswitch_callback);
 ros::Subscriber<std_msgs::Float32> dir_accel_sub("/sensor/dbw/remote_velocity", dir_accel_callback);
-  
+
 void setup() {
 
   nh.initNode();
@@ -155,7 +157,6 @@ void setup() {
 void loop() {
 
   if (killed) {
-    cmd_val = POT_MIN;
     actuator_target_pos = LA_MIN;
   }
 
@@ -166,6 +167,9 @@ void loop() {
   } else if (!joystick_enabled && !killed) {
     potWrite(slave_Select_Pin, B00010001, remote_accel_val);
     potWrite(slave_Select_Pin, B00010010, remote_accel_val);
+  } else if (killed) {
+    potWrite(slave_Select_Pin, B00010001, POT_MIN);
+    potWrite(slave_Select_Pin, B00010010, POT_MIN);
   }
 
   // linear actuator brake control
@@ -181,7 +185,7 @@ void loop() {
 
   // publish linear actuator current position
   actuator_pos = analogRead(LA_PIN);
-  
+
   nh.spinOnce();
   delay(5);
 }
