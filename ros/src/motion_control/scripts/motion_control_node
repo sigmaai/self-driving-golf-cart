@@ -7,10 +7,11 @@
 # (c) Yongyang Nie, 2018, All rights Reserved
 #
 
-from std_msgs.msg import Float32, Header, Float32MultiArray
+from std_msgs.msg import Float32, Header
 from geometry_msgs.msg import Twist
 from nav_msgs.msg import Odometry
 import rospy
+import math
 
 
 class MotionControlNode:
@@ -29,11 +30,17 @@ class MotionControlNode:
         self.current_velocity = None
         self.desire_velocity = None
 
+        self.current_pose = None
+        self.previous_pose = None
+        self.previous_time = None
+        self.current_time = None
+
         # declare all publishers
-        self.steering_pub = rospy.Publisher('/vehicle/dbw/steering_cmds/', Float32, queue_size=5)
-        self.current_vel_pub = rospy.Publisher('/vehicle/dbw/current_velocity', Float32, queue_size=5)
-        self.desired_vel_pub = rospy.Publisher('/vehicle/dbw/desired_velocity', Float32, queue_size=5)
-        self.header_pub = rospy.Publisher('/vehicle/dbw/vel_cmd_header', Header, queue_size=5)
+        self.steering_pub = rospy.Publisher('/vehicle/dbw/steering_cmds/', Float32, queue_size=3)
+        self.current_vel_pub = rospy.Publisher('/vehicle/dbw/current_velocity', Float32, queue_size=3)
+        self.desired_vel_pub = rospy.Publisher('/vehicle/dbw/desired_velocity', Float32, queue_size=3)
+        self.desired_header_pub = rospy.Publisher('/vehicle/dbw/desired_vel_header', Header, queue_size=3)
+        self.current_header_pub = rospy.Publisher('/vehicle/dbw/current_vel_header', Header, queue_size=3)
 
         rospy.loginfo("Vehicle Motion Control System Initialized")
         rospy.loginfo("Vehicle steering factor: " + str(self.angle_scale))
@@ -45,7 +52,15 @@ class MotionControlNode:
             if self.steering_angle is not None:
                 self.steering_pub.publish(self.steering_angle)
 
-            if self.current_velocity is not None and self.desire_velocity is not None:
+            if self.current_pose is not None and self.previous_pose is not None:
+
+                delta_d = self.distance(self.previous_pose.position.x, self.previous_pose.position.y,
+                                        self.current_pose.position.x, self.current_pose.position.y)
+                delta_t = float(self.current_time - self.previous_time) / float(pow(10, 9))
+
+                self.current_velocity = round(delta_d / delta_t, 8)
+                if self.current_velocity <= 0.0005 :
+                    self.current_velocity = 0
 
                 self.current_vel_pub.publish(self.current_velocity)
                 self.desired_vel_pub.publish(self.desire_velocity)
@@ -60,11 +75,20 @@ class MotionControlNode:
 
         h = Header()
         h.stamp = rospy.Time.now()  # Note you need to call rospy.init_node() before this will work
-        self.header_pub.publish(h)
+        self.desired_header_pub.publish(h)
 
     def odom_callback(self, data):
 
-        self.current_velocity = data.twist.twist.linear.x
+        self.previous_pose = self.current_pose
+        self.current_pose = data.pose.pose
+
+        self.previous_time = self.current_time
+        self.current_time = data.header.stamp.nsecs
+
+        self.current_header_pub.publish(data.header)
+
+    def distance(self, x_1, y_1, x_2, y_2):
+        return math.sqrt(pow((x_2 - x_1), 2) + pow((y_2 - y_1), 2))
 
 
 if __name__ == "__main__":

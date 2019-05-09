@@ -9,18 +9,18 @@
 #include <SPI.h>
 #include <Servo.h>
 #include <ros.h>
+#include <std_msgs/Int16.h>
 #include <std_msgs/Float32.h>
-#include <std_msgs/Float32MultiArray.h>
 #include <std_msgs/Bool.h>
 #include <std_msgs/Header.h>
 
 #define RPWM 7
 #define LPWM 6
 #define POT_MAX 120
-#define POT_MID 90
+#define POT_MID 50
 #define POT_MIN 25
-#define LA_MIN 240.0 // correct 260
-#define LA_MAX 380.0 // correct 380
+#define LA_MIN 15.0 // correct 260
+#define LA_MAX 155.0 // correct 380
 #define LA_PIN 0
 
 ros::NodeHandle nh;
@@ -28,18 +28,38 @@ ros::NodeHandle nh;
 int actuator_pos = 0;
 float actuator_target_pos = 0;
 const int slave_Select_Pin = 10;  // set pin 10 as the slave select for the digital pot:
-int previous_msg_time = 0;
-int current_msg_time = 0;
+
+// make sure that the ROS messages are synced
+// and there is no delay in the path planner.
+long current_vel_time = 0;
+long desired_vel_time = 0;
 
 float cmd_val = 0.0;
 float current_velocity = 0.0;
-float desired_velocity = 0.0;
 float pot_input = 0.0;
 float remote_accel_val = 0.0;
 
 boolean killed = false;
 boolean velocity_callback = false;
 boolean joystick_enabled = false;
+
+int log_val;
+
+void joystick_enabled_callback( const std_msgs::Bool& cmd_msg) {
+  joystick_enabled = cmd_msg.data;
+}
+
+void time_sync_callback( const std_msgs::Header& header_msg) {
+  current_vel_time = header_msg.stamp.nsec;
+}
+
+void killswitch_callback( const std_msgs::Bool& cmd_msg) {
+  killed = cmd_msg.data;
+}
+
+void current_vel_callback(const std_msgs::Float32& cmd_msg) {
+  current_velocity = cmd_msg.data;
+}
 
 // ===== driver control ======
 void joystick_callback( const std_msgs::Float32& cmd_msg) {
@@ -60,22 +80,10 @@ void joystick_callback( const std_msgs::Float32& cmd_msg) {
       actuator_target_pos = mapf(inverted_input, 0, 1, LA_MIN, LA_MAX);
     }
   }
-
 }
 
-void joystick_enabled_callback( const std_msgs::Bool& cmd_msg) {
-
-  joystick_enabled = cmd_msg.data;
-}
-
-void header_callback( const std_msgs::Header& header_msg) {
-  previous_msg_time = current_msg_time;
-  current_msg_time = header_msg.stamp.nsec;
-}
-
-void killswitch_callback( const std_msgs::Bool& cmd_msg) {
-  killed = cmd_msg.data;
-}
+// ========================================================
+// ===================== R C Control ======================
 
 void dir_accel_callback(const std_msgs::Float32& cmd_msg) {
 
@@ -85,60 +93,85 @@ void dir_accel_callback(const std_msgs::Float32& cmd_msg) {
       remote_accel_val = 0;
       float inverted_input = 1.0 + cmd_msg.data;
       actuator_target_pos = mapf(inverted_input, 0, 1, LA_MIN, LA_MAX);
-    } else {
-      remote_accel_val = mapf(cmd_msg.data, 0, 1, POT_MIN, POT_MAX);
-    }
+    } else
+      remote_accel_val = mapf(cmd_msg.data, 0, 1, POT_MIN, POT_MID);
   }
 }
 
-void current_vel_callback(const std_msgs::Float32& cmd_msg) {
-  current_velocity = cmd_msg.data;
-}
-
+// =========================================================
+// =========================================================
 void desired_vel_callback(const std_msgs::Float32& cmd_msg) {
 
-  desired_velocity = cmd_msg.data;
-
-  if (abs(current_msg_time - previous_msg_time) <= (1.0 * pow(10, 9))) {
-
+  if (!joystick_enabled && !killed) {
+    float desired_velocity = cmd_msg.data;
     float delta_vel = desired_velocity - current_velocity;
 
-    if (delta_vel > 0) {
+    // vehicle needs to accelerate
+    if (delta_vel > 0.0 && desired_velocity >= 0.08) {
 
-      pot_input = (pot_input < 1.0) ? pot_input + 0.1 : 1.0;
+      log_val = -1;
 
+      actuator_target_pos = LA_MAX;
+      pot_input = (pot_input < 1.0) ? pot_input + 0.01 : 1.0;
       remote_accel_val = mapf(pot_input, 0, 1, POT_MIN, POT_MID);
-    } else {
+
+    } else if (delta_vel < 0.0 || desired_velocity < 0.8) {
+
       remote_accel_val = POT_MIN;
+
+      // vehicle needs to decelerate
+      if (delta_vel < -0.08 && delta_vel > -0.12) {
+        log_val = 1;
+        actuator_target_pos = LA_MIN + (LA_MAX - LA_MIN) * 0.45;
+      } else if (delta_vel <= -0.12 && delta_vel >= -0.25) {
+        log_val = 2;
+        actuator_target_pos = LA_MIN + (LA_MAX - LA_MIN) * 0.30;
+        // if dramatic deceleration or low speed
+      } else {
+        log_val = 3;
+        actuator_target_pos = LA_MIN;
+      }
     }
+
   }
+  // TODO: This needs to be fixed.
+  // two times, current velocity timestamp
+  //            desired velocity timestamp
+  // if the two has a greater than 0.5 second difference. slowly stop the vehicle.
+  // else
+  // actuator_target_pos = LA_MIN + (LA_MAX - LA_MIN) * 0.85;
 }
 
 // ----------------------------------------------------------------------------------------
 // declare all subscribers
 // ----------------------------------------------------------------------------------------
 
-ros::Subscriber<std_msgs::Header> header_sub("/vehicle/dbw/vel_cmd_header", header_callback);
-ros::Subscriber<std_msgs::Float32> cvel_sub("/vehicle/dbw/current_velocity", current_vel_callback);
-ros::Subscriber<std_msgs::Float32> dvel_sub("/vehicle/dbw/desired_velocity", desired_vel_callback);
-ros::Subscriber<std_msgs::Float32> sub2("/sensor/joystick/right_stick_y", joystick_callback);
-ros::Subscriber<std_msgs::Bool> sub3("/sensor/joystick/enabled", joystick_enabled_callback);
-ros::Subscriber<std_msgs::Bool> ks_sub("/vehicle/safety/killed", killswitch_callback);
-ros::Subscriber<std_msgs::Float32> dir_accel_sub("/sensor/dbw/remote_velocity", dir_accel_callback);
+std_msgs::Int16 pos_msg;
+ros::Publisher pos_pub("/sensor/vehicle/brake/actuator_position", &pos_msg);
 
 void setup() {
+
+  // create all subscribers
+  ros::Subscriber<std_msgs::Float32> time_sync("/vehicle/dbw/time_sync", time_sync_callback);
+  ros::Subscriber<std_msgs::Float32> dvel_sub("/vehicle/dbw/desired_velocity", desired_vel_callback);
+  ros::Subscriber<std_msgs::Float32> cvel_sub("/vehicle/dbw/current_velocity", current_vel_callback);
+
+  ros::Subscriber<std_msgs::Float32> sub2("/sensor/joystick/right_stick_y", joystick_callback);
+  ros::Subscriber<std_msgs::Bool> sub3("/sensor/joystick/enabled", joystick_enabled_callback);
+  ros::Subscriber<std_msgs::Bool> ks_sub("/vehicle/safety/killed", killswitch_callback);
+  ros::Subscriber<std_msgs::Float32> dir_accel_sub("/sensor/dbw/remote_velocity", dir_accel_callback);
 
   nh.initNode();
 
   nh.subscribe(sub2);
   nh.subscribe(sub3);
-  nh.subscribe(header_sub);
+  nh.subscribe(time_sync);
   nh.subscribe(cvel_sub);
   nh.subscribe(dvel_sub);
   nh.subscribe(ks_sub);
   nh.subscribe(dir_accel_sub);
 
-  // nh.advertise(pos_pub);
+  nh.advertise(pos_pub);
 
   pinMode(RPWM, OUTPUT);
   pinMode(LPWM, OUTPUT);
@@ -156,9 +189,15 @@ void setup() {
 
 void loop() {
 
-  if (killed) {
+  if (killed)
     actuator_target_pos = LA_MIN;
-  }
+
+  //  if (!killed && ((float(abs(current_vel_time - desired_vel_time)) / float(pow(10, 9))) >= 0.35)) {
+  //    remote_accel_val = POT_MIN;
+  //    actuator_target_pos = LA_MIN + ((LA_MAX - LA_MIN) * 0.90);
+  //
+  //    log_string = -1;
+  //  }
 
   // accelerator control
   if (joystick_enabled && !killed) {
@@ -179,13 +218,13 @@ void loop() {
     else if (actuator_pos > actuator_target_pos)
       move_actuator(255, 1);
   }
-  else {
+  else
     stop_actuator();
-  }
 
   // publish linear actuator current position
   actuator_pos = analogRead(LA_PIN);
-
+  pos_msg.data = actuator_pos;
+  pos_pub.publish(&pos_msg);
   nh.spinOnce();
   delay(5);
 }
@@ -204,15 +243,6 @@ void potWrite(int slaveSelectPin, byte address, int value) {
   digitalWrite(slaveSelectPin, HIGH);
 }
 
-void press_break(float amount) {
-
-
-}
-
-void release_break(float amount) {
-
-
-}
 
 void move_actuator(int spd, boolean dir) {
   if (dir) {
@@ -227,7 +257,7 @@ void move_actuator(int spd, boolean dir) {
 void stop_actuator() {
   analogWrite(LPWM, 0);
   analogWrite(RPWM, 0);
-  delay(10);
+  delay(5);
 }
 
 double mapf(double x, double in_min, double in_max, double out_min, double out_max) {

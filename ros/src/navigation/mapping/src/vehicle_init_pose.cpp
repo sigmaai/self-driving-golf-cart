@@ -100,7 +100,7 @@ void zed_pose_callback (const geometry_msgs::PoseStamped& pose) {
                                    pose.pose.position.x,
                                    pose.pose.position.x);
 
-    if (rtabmap_covariance < 0.06 && distance > 0.50 && distance < 2.50) {
+    if (rtabmap_covariance < 0.06 && distance > 0.50 && distance < 2.00) {
 
         mapping::set_initial_pose srv;
         srv.request.x = pose.pose.position.x;
