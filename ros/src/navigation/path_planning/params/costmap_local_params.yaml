@@ -14,10 +14,10 @@ local_costmap:
   height: 7.0
   resolution: 0.080
 
-  inflation_radius: 0.25
-  cost_scaling_factor: 1.58
+  inflation_radius: 0.50
+  cost_scaling_factor: 1.80
 
-  observation_sources:   laser_scan_sensor point_cloud_sensor # ground_detection
+  observation_sources: laser_scan_sensor point_cloud_sensor # ground_detection
 
   # laser scanner sensor, local costmap.
   laser_scan_sensor: {

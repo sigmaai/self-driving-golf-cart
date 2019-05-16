@@ -20,13 +20,7 @@
 ros::ServiceClient client;
 bool initial_pose_set = false;
 geometry_msgs::PoseWithCovarianceStamped rtabmap_pose;
-geometry_msgs::PoseStamped zed_pose;
 // =========
-
-inline const char * const BoolToString(bool b){
-
-    return b ? "true" : "false";
-}
 
 void toEulerAngle(double x, double y, double z, double w, double &roll, double &pitch, double &yaw){
 
@@ -64,7 +58,7 @@ void pose_callback (const geometry_msgs::PoseWithCovarianceStamped& pose){
     mapping::set_initial_pose srv;
     srv.request.x = pose.pose.pose.position.x;
     srv.request.y = pose.pose.pose.position.y;
-    srv.request.z = pose.pose.pose.position.z + 1.6764;
+    srv.request.z = 1.6764;                     // the z coordinate of the vehicle is fixed.
 
     double roll, pitch, yaw;
     toEulerAngle(pose.pose.pose.orientation.x,
@@ -93,23 +87,25 @@ void zed_pose_callback (const geometry_msgs::PoseStamped& pose) {
     for (auto i = 0; i < rtabmap_pose.pose.covariance.size(); i++)
         rtabmap_covariance = rtabmap_covariance + rtabmap_pose.pose.covariance[i];
 
-    float distance = calc_distance(rtabmap_pose.pose.pose.position.x,
-                                   rtabmap_pose.pose.pose.position.y,
-                                   rtabmap_pose.pose.pose.position.z,
-                                   pose.pose.position.x,
-                                   pose.pose.position.x,
-                                   pose.pose.position.x);
+    float distance = abs(pose.pose.position.y - rtabmap_pose.pose.pose.position.y);
+    float distance_x = abs(pose.pose.position.x - rtabmap_pose.pose.pose.position.x);
 
-    if (rtabmap_covariance < 0.06 && distance > 0.50 && distance < 2.00) {
+    // need to compare the total covariance.
+    // y - direction shift between 0.1 m to 1.5 m
+    // x - direction shift less than 0.5 m
+    if (rtabmap_covariance < 0.06 && distance > 0.10 && distance < 1.50 && distance_x <= 0.50) {
 
         mapping::set_initial_pose srv;
         srv.request.x = pose.pose.position.x;
-        srv.request.y = pose.pose.position.y;
-        srv.request.z = pose.pose.position.z + 1.6764;
+        srv.request.y = rtabmap_pose.pose.pose.position.y;
+        srv.request.z = 1.6764;                     // the z coordinate of the vehicle is fixed.
 
         double roll, pitch, yaw;
-        toEulerAngle(pose.pose.orientation.x, pose.pose.orientation.y, pose.pose.orientation.z, pose.pose.orientation.w,
-                     roll, pitch, yaw);
+        toEulerAngle(
+                rtabmap_pose.pose.pose.orientation.x, rtabmap_pose.pose.pose.orientation.y,
+                rtabmap_pose.pose.pose.orientation.z, rtabmap_pose.pose.pose.orientation.w,
+                roll, pitch, yaw
+                );
 
         srv.request.R = roll;
         srv.request.P = 0;
@@ -118,7 +114,7 @@ void zed_pose_callback (const geometry_msgs::PoseStamped& pose) {
         if (client.call(srv))
             ROS_INFO("Done");
         else
-            ROS_ERROR("Failed to call service set initial pose");
+            ROS_ERROR("Failed to call service updating pose");
     }
 }
 
@@ -130,7 +126,7 @@ int main(int argc, char **argv){
     client = n.serviceClient<mapping::set_initial_pose>("/zed/set_initial_pose");
 
     ros::Subscriber sub_rtabmap = n.subscribe ("/rtabmap/localization_pose", 5, pose_callback);
-//    ros::Subscriber sub_zed = n.subscribe("/zed/pose", 5, zed_pose_callback);
+    ros::Subscriber sub_zed = n.subscribe("/zed/pose", 5, zed_pose_callback);
 
     ros::spin();
 

@@ -16,6 +16,7 @@ find_package(catkin REQUIRED COMPONENTS
   rosserial_msgs
   rosserial_python
   std_msgs
+  rosbridge_server
 )
 
 ## System dependencies are found with CMake's conventions

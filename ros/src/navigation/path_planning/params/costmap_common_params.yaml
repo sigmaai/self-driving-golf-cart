@@ -11,8 +11,8 @@ transform_tolerance: 5
 
 controller_patience: 2.0
 
-#conservative_clear:
-#  reset_distance: 1.00
-#aggressive_clear:
-#  reset_distance: 0.75
+conservative_clear:
+  reset_distance: 1.00
+aggressive_clear:
+  reset_distance: 0.75
 
