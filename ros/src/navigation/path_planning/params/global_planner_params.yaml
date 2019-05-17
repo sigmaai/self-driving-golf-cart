@@ -3,6 +3,6 @@ GlobalPlanner:
   publish_potential: true
   visualize_potential: true
 
-  cost_factor: 0.55
-  neutral_cost: 66
+  cost_factor: 0.05
+  neutral_cost: 118
   lethal_cost: 253

@@ -40,54 +40,73 @@ int main(int argc, char** argv){
 
     ros::Rate rate(8.0);
 
+    bool running;
+
     while (node.ok()){
 
-        ROS_INFO("Sending goal");
-
         switch (destination) {
-            case 1:
+            case 0:
+                ROS_INFO("Sending goal");
+                ROS_INFO("Dest. #1 received");
+                running = true;
                 goal.target_pose.pose.position.x = 14;
                 goal.target_pose.pose.position.y = 0.9;
                 goal.target_pose.pose.orientation.x = 0;
                 goal.target_pose.pose.orientation.y = 0;
                 goal.target_pose.pose.orientation.z = 0.13744;
                 goal.target_pose.pose.orientation.w = 1.0;
+
                 break;
-            case 2:
+            case 1:
+                ROS_INFO("Sending goal");
+                ROS_INFO("Dest. #2 received");
+                running = true;
                 goal.target_pose.pose.position.x = 43;
-                goal.target_pose.pose.position.y = 12;
+                goal.target_pose.pose.position.y = 12.5;
                 goal.target_pose.pose.orientation.x = 0;
                 goal.target_pose.pose.orientation.y = 0;
                 goal.target_pose.pose.orientation.z = 0.15325;
                 goal.target_pose.pose.orientation.w = 0.988;
+
                 break;
-            case 3:
+            case 2:
+                ROS_INFO("Sending goal");
+                ROS_INFO("Dest. #3 received");
+                running = true;
                 goal.target_pose.pose.position.x = 62;
                 goal.target_pose.pose.position.y = 17;
                 goal.target_pose.pose.orientation.x = 0;
                 goal.target_pose.pose.orientation.y = 0;
                 goal.target_pose.pose.orientation.z = 0.09449;
                 goal.target_pose.pose.orientation.w = 1.0;
+
                 break;
             default: // code to be executed if n doesn't match any cases
-                goal.target_pose.pose.position.x = 0;
-                goal.target_pose.pose.position.y = 0;
-                goal.target_pose.pose.orientation.x = 0.1;
-                goal.target_pose.pose.orientation.y = 0.1;
-                goal.target_pose.pose.orientation.z = 0.1;
-                goal.target_pose.pose.orientation.w = 1.0;
+                ROS_WARN("Waiting...");
+                running = false;
         }
 
-        ac.sendGoal(goal);
+        if (running) {
 
-        ac.waitForResult();
+            ac.sendGoal(goal);
+            ac.waitForResult();
 
-        if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED)
-            ROS_INFO("Hooray, the base is moving forward");
-        else
-            ROS_INFO("The base failed to move forward 2 meters for some reason");
+            if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED)
+                ROS_INFO("Hooray, the base is moving forward");
+            else if (ac.getState() == actionlib::SimpleClientGoalState::REJECTED)
+                ROS_ERROR("Action rejected");
+            else if (ac.getState() == actionlib::SimpleClientGoalState::PENDING)
+                ROS_ERROR("Action pending");
+            else if (ac.getState() == actionlib::SimpleClientGoalState::LOST)
+                ROS_ERROR("Action lost");
+        }
+
         rate.sleep();
+
+        ros::spinOnce();
     }
+
+    ros::spin();
 
     return 0;
 }

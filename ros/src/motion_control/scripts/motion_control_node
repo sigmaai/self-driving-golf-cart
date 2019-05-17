@@ -71,7 +71,7 @@ class MotionControlNode:
     def cmd_vel_callback(self, data):
 
         self.steering_angle = self.angle_scale * data.angular.z
-        self.desire_velocity = data.linear.x
+        self.desire_velocity = data.linear.x * 0.85
 
         h = Header()
         h.stamp = rospy.Time.now()  # Note you need to call rospy.init_node() before this will work

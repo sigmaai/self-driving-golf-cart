@@ -73,7 +73,7 @@ void pose_callback (const geometry_msgs::PoseWithCovarianceStamped& pose){
 
     if (!initial_pose_set) {
         if (client.call(srv)){
-            ROS_INFO("Done");
+            ROS_INFO("Initialized vehicle position");
             initial_pose_set = true;
         }
         else
@@ -87,13 +87,13 @@ void zed_pose_callback (const geometry_msgs::PoseStamped& pose) {
     for (auto i = 0; i < rtabmap_pose.pose.covariance.size(); i++)
         rtabmap_covariance = rtabmap_covariance + rtabmap_pose.pose.covariance[i];
 
-    float distance = abs(pose.pose.position.y - rtabmap_pose.pose.pose.position.y);
+    float distance_y = abs(pose.pose.position.y - rtabmap_pose.pose.pose.position.y);
     float distance_x = abs(pose.pose.position.x - rtabmap_pose.pose.pose.position.x);
 
     // need to compare the total covariance.
     // y - direction shift between 0.1 m to 1.5 m
     // x - direction shift less than 0.5 m
-    if (rtabmap_covariance < 0.06 && distance > 0.10 && distance < 1.50 && distance_x <= 0.50) {
+    if (rtabmap_covariance < 0.06 && distance_y > 0.10 && distance_y < 1.50 && distance_x <= 0.50) {
 
         mapping::set_initial_pose srv;
         srv.request.x = pose.pose.position.x;
@@ -112,7 +112,7 @@ void zed_pose_callback (const geometry_msgs::PoseStamped& pose) {
         srv.request.Y = yaw;
 
         if (client.call(srv))
-            ROS_INFO("Done");
+            ROS_INFO("Updated vehicle position");
         else
             ROS_ERROR("Failed to call service updating pose");
     }
@@ -126,7 +126,7 @@ int main(int argc, char **argv){
     client = n.serviceClient<mapping::set_initial_pose>("/zed/set_initial_pose");
 
     ros::Subscriber sub_rtabmap = n.subscribe ("/rtabmap/localization_pose", 5, pose_callback);
-    ros::Subscriber sub_zed = n.subscribe("/zed/pose", 5, zed_pose_callback);
+    // ros::Subscriber sub_zed = n.subscribe("/zed/pose", 5, zed_pose_callback);
 
     ros::spin();
 
