@@ -194,13 +194,6 @@
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/detection/object_detection/CMakeFiles/object_detection_genpy.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/detection/object_detection/CMakeFiles/test.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/detection/object_detection/CMakeFiles/edit_cache.dir
-/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/camera/CMakeFiles/install/strip.dir
-/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/camera/CMakeFiles/edit_cache.dir
-/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/camera/CMakeFiles/list_install_components.dir
-/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/camera/CMakeFiles/test.dir
-/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/camera/CMakeFiles/install/local.dir
-/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/camera/CMakeFiles/rebuild_cache.dir
-/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/camera/CMakeFiles/install.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/joystick/CMakeFiles/install.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/joystick/CMakeFiles/list_install_components.dir
 /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/sensors/joystick/CMakeFiles/edit_cache.dir

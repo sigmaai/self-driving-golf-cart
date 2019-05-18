@@ -9,6 +9,4 @@
 
     <node name="selective_output" pkg="joy" type="selective_output.py" output="screen"/>
 
-    <node name="joystick_camera_select" pkg="joy" type="camera_select.py" output="screen"/>
-
 </launch>

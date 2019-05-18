@@ -17,13 +17,12 @@
 -- BUILD_SHARED_LIBS is on
 -- BUILD_SHARED_LIBS is on
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--- ~~  traversing 19 packages in topological order:
+-- ~~  traversing 18 packages in topological order:
 -- ~~  - gps
 -- ~~  - segmentation
 -- ~~  - simulation
 -- ~~  - lane_detection
 -- ~~  - object_detection
--- ~~  - camera
 -- ~~  - joy
 -- ~~  - autopilot
 -- ~~  - data_logger
@@ -54,8 +53,6 @@
 -- ==> add_subdirectory(detection/object_detection)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
 -- object_detection: 2 messages, 0 services
--- +++ processing catkin package: 'camera'
--- ==> add_subdirectory(sensors/camera)
 -- +++ processing catkin package: 'joy'
 -- ==> add_subdirectory(sensors/joystick)
 -- +++ processing catkin package: 'autopilot'

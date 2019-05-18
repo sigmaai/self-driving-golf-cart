@@ -10,15 +10,15 @@ local_costmap:
   publish_frequency: 5.0
   static_map: false
   rolling_window: true
-  width: 16.0
-  height: 7.0
+  width: 14.0
+  height: 10.0
   resolution: 0.1
 
 #  plugins:
 #    - {name: 'inflater_layer',  type: "costmap_2d::InflationLayer"}
 #
   inflater_layer:
-    inflation_radius: 0.25
+    inflation_radius: 0.20
     cost_scaling_factor: 0.80
 
   observation_sources: laser_scan_sensor point_cloud_sensor # ground_detection

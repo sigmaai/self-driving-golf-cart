@@ -42,6 +42,7 @@ float remote_accel_val = 0.0;
 boolean killed = false;
 boolean velocity_callback = false;
 boolean joystick_enabled = false;
+boolean go = false;
 
 int log_val;
 
@@ -55,6 +56,10 @@ void time_sync_callback( const std_msgs::Header& header_msg) {
 
 void killswitch_callback( const std_msgs::Bool& cmd_msg) {
   killed = cmd_msg.data;
+}
+
+void set_go_status(const std_msgs::Bool &cmd_msg) {
+  
 }
 
 void current_vel_callback(const std_msgs::Float32& cmd_msg) {
@@ -156,6 +161,7 @@ void setup() {
   ros::Subscriber<std_msgs::Float32> dvel_sub("/vehicle/dbw/desired_velocity", desired_vel_callback);
   ros::Subscriber<std_msgs::Float32> cvel_sub("/vehicle/dbw/current_velocity", current_vel_callback);
 
+  ros::Subscriber<std_msgs::Bool> go_sub("/vehicle/dbw/go", set_go_status);
   ros::Subscriber<std_msgs::Float32> sub2("/sensor/joystick/right_stick_y", joystick_callback);
   ros::Subscriber<std_msgs::Bool> sub3("/sensor/joystick/enabled", joystick_enabled_callback);
   ros::Subscriber<std_msgs::Bool> ks_sub("/vehicle/safety/killed", killswitch_callback);

@@ -15,12 +15,13 @@ Email: contact@neilnie.com
 
 <launch>
 
+    <!-- Start RTAB-map launch file, localization mode -->
     <include file="$(find mapping)/launch/rtabmap_localization.launch" />
 
     <remap from="map" to="/rtabmap/grid_map" />
     <remap from="move_base/current_goal" to="move_base_simple/goal"/>
 
-
+    <!-- Launch the move_base node with the specified config files -->
     <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
 
         <param name="base_global_planner" value="global_planner/GlobalPlanner" />
@@ -40,6 +41,7 @@ Email: contact@neilnie.com
 
     </node>
 
-<!--    <node pkg="path_planning" name="navigation_goals" type="navigation_goals" output="screen" />-->
+    <!-- Receive goals using websocket and iOS user interface -->
+    <node pkg="path_planning" name="navigation_goals" type="navigation_goals" output="screen" />
 
 </launch>

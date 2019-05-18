@@ -1,8 +1,8 @@
 GlobalPlanner:
 
   publish_potential: true
-  visualize_potential: true
 
-  cost_factor: 0.05
-  neutral_cost: 118
+  cost_factor: 3.75
+  neutral_cost: 102
   lethal_cost: 253
+  use_dijkstra: false # double check this parameter!
