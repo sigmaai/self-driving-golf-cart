@@ -299,6 +299,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/ros/melodic/share/map_msgs/cmake/map_msgs-msg-extras.cmake"
   "/opt/ros/melodic/share/map_msgs/cmake/map_msgsConfig-version.cmake"
   "/opt/ros/melodic/share/map_msgs/cmake/map_msgsConfig.cmake"
+  "/opt/ros/melodic/share/map_server/cmake/map_serverConfig-version.cmake"
+  "/opt/ros/melodic/share/map_server/cmake/map_serverConfig.cmake"
   "/opt/ros/melodic/share/message_filters/cmake/message_filtersConfig-version.cmake"
   "/opt/ros/melodic/share/message_filters/cmake/message_filtersConfig.cmake"
   "/opt/ros/melodic/share/message_generation/cmake/message_generationConfig-version.cmake"

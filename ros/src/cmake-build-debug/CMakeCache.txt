@@ -682,7 +682,7 @@ lane_detection_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros
 laser_geometry_DIR:PATH=/opt/ros/melodic/share/laser_geometry/cmake
 
 //Path to a library.
-lib:FILEPATH=/opt/ros/melodic/lib/libimage_transport.so
+lib:FILEPATH=/opt/ros/melodic/lib/libmap_server_image_loader.so
 
 //Value Computed by CMake
 localization_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/gps_localization
@@ -692,6 +692,9 @@ localization_SOURCE_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/s
 
 //The directory containing a CMake configuration file for map_msgs.
 map_msgs_DIR:PATH=/opt/ros/melodic/share/map_msgs/cmake
+
+//The directory containing a CMake configuration file for map_server.
+map_server_DIR:PATH=/opt/ros/melodic/share/map_server/cmake
 
 //Value Computed by CMake
 mapping_BINARY_DIR:STATIC=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/navigation/mapping

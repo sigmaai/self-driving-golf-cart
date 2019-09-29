@@ -25,6 +25,7 @@ find_package(catkin REQUIRED
         grid_map_msgs
         amcl
         zed_wrapper
+        map_server
         )
 
 ## System dependencies are found with CMake's conventions

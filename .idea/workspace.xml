@@ -2,12 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8075d57d-0c29-4084-b018-ee8c503d1889" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arduino/brake_accelerator_controller/brake_accelerator_controller.ino" beforeDir="false" afterPath="$PROJECT_DIR$/arduino/brake_accelerator_controller/brake_accelerator_controller.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arduino/vehicle_killswitch/vehicle_killswitch.ino" beforeDir="false" afterPath="$PROJECT_DIR$/arduino/vehicle_killswitch/vehicle_killswitch.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/motion_control/scripts/motion_control_node" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/motion_control/scripts/motion_control_node" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/navigation/mapping/src/vehicle_init_pose.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/navigation/mapping/src/vehicle_init_pose.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ros/src/navigation/mapping/maps/map.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/Project.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/Project.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/autopilot/autopilot.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/autopilot/autopilot.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/data_logger/data_logger.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/data_logger/data_logger.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/detection/lane_detection/lane_detection.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/detection/lane_detection/lane_detection.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/detection/object_detection/object_detection.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/detection/object_detection/object_detection.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/driver/driver.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/driver/driver.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/gtest/googlemock/gmock.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/gtest/googlemock/gmock.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/gtest/googlemock/gtest/gtest.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/gtest/googlemock/gtest/gtest.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/gtest/googletest-distribution.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/gtest/googletest-distribution.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/point_cloud/point_cloud.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/point_cloud/point_cloud.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/segmentation/segmentation.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/segmentation/segmentation.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/gps/gps.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/gps/gps.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/joystick/joy.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/joystick/joy.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_display_rviz/zed_display_rviz.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_display_rviz/zed_display_rviz.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_ros/zed_ros.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_ros/zed_ros.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/zed_wrapper.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/zed_wrapper.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/simulation/simulation.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/simulation/simulation.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/navigation/mapping/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/navigation/mapping/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/navigation/mapping/launch/rtabmap_localization.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/navigation/mapping/launch/rtabmap_localization.launch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/navigation/mapping/launch/rtabmap_mapping.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/navigation/mapping/launch/rtabmap_mapping.launch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/navigation/mapping/package.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/navigation/mapping/package.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ros/src/navigation/path_planning/params/base_local_planner_params.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/navigation/path_planning/params/base_local_planner_params.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/navigation/path_planning/params/costmap_global_params.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/navigation/path_planning/params/costmap_global_params.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/navigation/path_planning/params/global_planner_params.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/navigation/path_planning/params/global_planner_params.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/navigation/path_planning/src/navigation_goals.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/navigation/path_planning/src/navigation_goals.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/launch/zed.launch" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/launch/zed.launch" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +83,7 @@
         <entry file="file://$PROJECT_DIR$/ros/src/motion_control/scripts/motion_control_node">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="250">
-              <caret line="64" column="16" lean-forward="true" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
+              <caret line="64" column="16" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -188,7 +211,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="72" />
     <option name="y" value="34" />
     <option name="width" value="1528" />
@@ -202,7 +225,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -243,6 +265,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -501,11 +524,12 @@
       <workItem from="1557407791311" duration="4000" />
       <workItem from="1557410238179" duration="286000" />
       <workItem from="1557436349584" duration="1468000" />
+      <workItem from="1558200328056" duration="2000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="195500000" />
+    <option name="totallyTimeSpent" value="195502000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -517,10 +541,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="72" y="34" width="1528" height="864" extended-state="1" />
-    <editor active="true" />
+    <frame x="72" y="34" width="1528" height="864" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5096525" visible="true" weight="0.22537112" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5096525" visible="true" weight="0.22874494" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32262382" />
@@ -531,7 +554,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49730095" visible="true" weight="0.32341" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49730095" visible="true" weight="0.32341" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5026991" side_tool="true" weight="0.32253712" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Python Console" order="12" />
@@ -784,6 +807,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ros/src/navigation/path_planning/params/base_local_planner_params.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/navigation/path_planning/params/costmap_global_params.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -798,17 +828,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/navigation/path_planning/params/base_local_planner_params.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ros/src/motion_control/scripts/motion_control_node">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
-          <caret line="64" column="16" lean-forward="true" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
+          <caret line="64" column="16" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
         </state>
       </provider>
     </entry>

@@ -7,6 +7,5 @@ global_costmap:
   publish_frequency: 3.0
   static_map: true
 
-  inflation_layer:
-    inflation_radius: 0.35
-    cost_scaling_factor: 2.28
+  inflation_radius: 1.75
+  cost_scaling_factor: 5.58

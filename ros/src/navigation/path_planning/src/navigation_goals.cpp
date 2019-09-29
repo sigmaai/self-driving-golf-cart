@@ -24,10 +24,10 @@ int main(int argc, char** argv){
 
     ros::Subscriber sub_rtabmap = node.subscribe ("/dest_select", 5, dest_callback);
 
-    //tell the action client that we want to spin a thread by default
+    // tell the action client that we want to spin a thread by default
     MoveBaseClient ac("move_base", true);
 
-    //wait for the action server to come up
+    // wait for the action server to come up
     while(!ac.waitForServer(ros::Duration(3.0))){
         ROS_INFO("Waiting for the move_base action server to come up");
     }
@@ -82,7 +82,6 @@ int main(int argc, char** argv){
 
                 break;
             default: // code to be executed if n doesn't match any cases
-                ROS_WARN("Waiting...");
                 running = false;
         }
 

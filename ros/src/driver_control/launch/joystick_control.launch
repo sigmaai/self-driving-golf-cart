@@ -9,9 +9,6 @@
     	<param name="port" value="/dev/ttyACM1" />
     </node>
 
-    <node name="serial_node_3" pkg="rosserial_python" type="serial_node.py">
-        <param name="port" value="/dev/ttyACM2" />
-    </node>
 
     <!-- start joystick -->
     <include file="$(find joy)/launch/joystick.launch"/>
@@ -20,9 +17,9 @@
         <arg name="port" value="9090"/>
     </include>
 
-    <node name="visualization" pkg="autopilot" type="visualization.py" >
+<!--    <node name="visualization" pkg="autopilot" type="visualization.py" >-->
 
-    </node>
+<!--    </node>-->
 
 <!--    &lt;!&ndash; start rqt gui &ndash;&gt;-->
 <!--    <node name="rqt_gui" pkg="rqt_gui" type="rqt_gui"/>-->
