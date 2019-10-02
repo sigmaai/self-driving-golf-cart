@@ -134,6 +134,7 @@ devel/lib/libZEDWrapper.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
 devel/lib/libZEDWrapper.so: /usr/local/zed/lib/libsl_input.so
 devel/lib/libZEDWrapper.so: /usr/local/zed/lib/libsl_core.so
 devel/lib/libZEDWrapper.so: /usr/local/zed/lib/libsl_zed.so
+devel/lib/libZEDWrapper.so: /usr/lib/x86_64-linux-gnu/libopenblas.so
 devel/lib/libZEDWrapper.so: /usr/local/cuda-10.0/lib64/libcudart_static.a
 devel/lib/libZEDWrapper.so: /usr/lib/x86_64-linux-gnu/librt.so
 devel/lib/libZEDWrapper.so: /usr/local/cuda-10.0/lib64/libnppial.so
@@ -146,6 +147,10 @@ devel/lib/libZEDWrapper.so: /usr/local/cuda-10.0/lib64/libnppig.so
 devel/lib/libZEDWrapper.so: /usr/local/cuda-10.0/lib64/libnppim.so
 devel/lib/libZEDWrapper.so: /usr/local/cuda-10.0/lib64/libnppist.so
 devel/lib/libZEDWrapper.so: /usr/local/cuda-10.0/lib64/libnppitc.so
+devel/lib/libZEDWrapper.so: /usr/local/cuda-10.0/lib64/libcublas.so
+devel/lib/libZEDWrapper.so: /usr/local/cuda-10.0/lib64/libcurand.so
+devel/lib/libZEDWrapper.so: /usr/local/cuda-10.0/lib64/libcublas.so
+devel/lib/libZEDWrapper.so: /usr/local/cuda-10.0/lib64/libcurand.so
 devel/lib/libZEDWrapper.so: /usr/local/cuda-10.0/lib64/libnpps.so
 devel/lib/libZEDWrapper.so: sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/ZEDWrapper.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library ../../../devel/lib/libZEDWrapper.so"

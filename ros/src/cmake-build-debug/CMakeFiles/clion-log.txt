@@ -17,12 +17,10 @@
 -- BUILD_SHARED_LIBS is on
 -- BUILD_SHARED_LIBS is on
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--- ~~  traversing 20 packages in topological order:
+-- ~~  traversing 17 packages in topological order:
 -- ~~  - gps
 -- ~~  - segmentation
 -- ~~  - simulation
--- ~~  - lane_detection
--- ~~  - object_detection
 -- ~~  - camera
 -- ~~  - joy
 -- ~~  - autopilot
@@ -34,7 +32,6 @@
 -- ~~  - motion_control
 -- ~~  - path_planning
 -- ~~  - point_cloud
--- ~~  - osm_cartography
 -- ~~  - zed_display_rviz
 -- ~~  - zed_ros (metapackage)
 -- ~~  - zed_wrapper
@@ -49,12 +46,6 @@
 -- ==> add_subdirectory(simulation)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
 -- simulation: 6 messages, 0 services
--- +++ processing catkin package: 'lane_detection'
--- ==> add_subdirectory(detection/lane_detection)
--- +++ processing catkin package: 'object_detection'
--- ==> add_subdirectory(detection/object_detection)
--- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
--- object_detection: 2 messages, 0 services
 -- +++ processing catkin package: 'camera'
 -- ==> add_subdirectory(sensors/camera)
 -- +++ processing catkin package: 'joy'
@@ -86,16 +77,18 @@
 -- +++ processing catkin package: 'point_cloud'
 -- ==> add_subdirectory(point_cloud)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
--- +++ processing catkin package: 'osm_cartography'
--- ==> add_subdirectory(osm)
--- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
 -- +++ processing catkin package: 'zed_display_rviz'
 -- ==> add_subdirectory(sensors/zed-ros-wrapper/zed_display_rviz)
 -- +++ processing catkin metapackage: 'zed_ros'
 -- ==> add_subdirectory(sensors/zed-ros-wrapper/zed_ros)
 -- +++ processing catkin package: 'zed_wrapper'
 -- ==> add_subdirectory(sensors/zed-ros-wrapper/zed_wrapper)
--- Found CUDA: /usr/local/cuda-10.0 (found suitable exact version "10.0") 
+-- Looking for sgemm_
+-- Looking for sgemm_ - not found
+-- Looking for sgemm_
+-- Looking for sgemm_ - found
+-- Found BLAS: /usr/lib/x86_64-linux-gnu/libopenblas.so  
+-- Found CUDA: /usr/local/cuda-10.0 (found suitable version "10.0", minimum required is "10") 
 -- Found CUDA: /usr/local/cuda-10.0 (found version "10.0") 
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
 -- zed_wrapper: 0 messages, 5 services

@@ -1253,3 +1253,17 @@ Parsed CXX OpenMP implicit link information from above output:
   implicit fwks: []
 
 
+Determining if the function sgemm_ exists passed with the following output:
+Change Dir: /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_837fa/fast 
+/usr/bin/make -f CMakeFiles/cmTC_837fa.dir/build.make CMakeFiles/cmTC_837fa.dir/build
+make[1]: Entering directory '/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_837fa.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sgemm_   -o CMakeFiles/cmTC_837fa.dir/CheckFunctionExists.c.o   -c /home/neil/snap/clion-2019.1/bin/cmake/linux/share/cmake-3.14/Modules/CheckFunctionExists.c
+Linking C executable cmTC_837fa
+/home/neil/snap/clion-2019.1/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_837fa.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=sgemm_    -rdynamic CMakeFiles/cmTC_837fa.dir/CheckFunctionExists.c.o  -o cmTC_837fa /usr/lib/x86_64-linux-gnu/libopenblas.so 
+make[1]: Leaving directory '/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
