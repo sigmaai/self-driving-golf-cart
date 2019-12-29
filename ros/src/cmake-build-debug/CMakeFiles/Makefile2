@@ -813,7 +813,7 @@ segmentation/CMakeFiles/segmentation_genpy.dir/all: segmentation/CMakeFiles/segm
 
 # Build rule for subdir invocation for target.
 segmentation/CMakeFiles/segmentation_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 segmentation/CMakeFiles/segmentation_genpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 0
 .PHONY : segmentation/CMakeFiles/segmentation_genpy.dir/rule
@@ -874,7 +874,7 @@ segmentation/CMakeFiles/segmentation_generate_messages_nodejs.dir/all: segmentat
 segmentation/CMakeFiles/segmentation_generate_messages_nodejs.dir/all: segmentation/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
 	$(MAKE) -f segmentation/CMakeFiles/segmentation_generate_messages_nodejs.dir/build.make segmentation/CMakeFiles/segmentation_generate_messages_nodejs.dir/depend
 	$(MAKE) -f segmentation/CMakeFiles/segmentation_generate_messages_nodejs.dir/build.make segmentation/CMakeFiles/segmentation_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=45 "Built target segmentation_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=46 "Built target segmentation_generate_messages_nodejs"
 .PHONY : segmentation/CMakeFiles/segmentation_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -943,7 +943,7 @@ segmentation/CMakeFiles/segmentation_geneus.dir/all: segmentation/CMakeFiles/seg
 
 # Build rule for subdir invocation for target.
 segmentation/CMakeFiles/segmentation_geneus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 segmentation/CMakeFiles/segmentation_geneus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 0
 .PHONY : segmentation/CMakeFiles/segmentation_geneus.dir/rule
@@ -972,12 +972,12 @@ segmentation/CMakeFiles/segmentation_generate_messages_eus.dir/all: segmentation
 segmentation/CMakeFiles/segmentation_generate_messages_eus.dir/all: segmentation/CMakeFiles/std_msgs_generate_messages_eus.dir/all
 	$(MAKE) -f segmentation/CMakeFiles/segmentation_generate_messages_eus.dir/build.make segmentation/CMakeFiles/segmentation_generate_messages_eus.dir/depend
 	$(MAKE) -f segmentation/CMakeFiles/segmentation_generate_messages_eus.dir/build.make segmentation/CMakeFiles/segmentation_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=43 "Built target segmentation_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=43,44 "Built target segmentation_generate_messages_eus"
 .PHONY : segmentation/CMakeFiles/segmentation_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 segmentation/CMakeFiles/segmentation_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 segmentation/CMakeFiles/segmentation_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 0
 .PHONY : segmentation/CMakeFiles/segmentation_generate_messages_eus.dir/rule
@@ -1073,7 +1073,7 @@ segmentation/CMakeFiles/segmentation_gencpp.dir/all: segmentation/CMakeFiles/seg
 
 # Build rule for subdir invocation for target.
 segmentation/CMakeFiles/segmentation_gencpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 segmentation/CMakeFiles/segmentation_gencpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 0
 .PHONY : segmentation/CMakeFiles/segmentation_gencpp.dir/rule
@@ -1198,12 +1198,12 @@ segmentation/CMakeFiles/segmentation_generate_messages_cpp.dir/all: segmentation
 segmentation/CMakeFiles/segmentation_generate_messages_cpp.dir/all: segmentation/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 	$(MAKE) -f segmentation/CMakeFiles/segmentation_generate_messages_cpp.dir/build.make segmentation/CMakeFiles/segmentation_generate_messages_cpp.dir/depend
 	$(MAKE) -f segmentation/CMakeFiles/segmentation_generate_messages_cpp.dir/build.make segmentation/CMakeFiles/segmentation_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=42 "Built target segmentation_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num= "Built target segmentation_generate_messages_cpp"
 .PHONY : segmentation/CMakeFiles/segmentation_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 segmentation/CMakeFiles/segmentation_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 segmentation/CMakeFiles/segmentation_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 0
 .PHONY : segmentation/CMakeFiles/segmentation_generate_messages_cpp.dir/rule
@@ -1392,7 +1392,7 @@ segmentation/CMakeFiles/segmentation_generate_messages_lisp.dir/all: segmentatio
 segmentation/CMakeFiles/segmentation_generate_messages_lisp.dir/all: segmentation/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
 	$(MAKE) -f segmentation/CMakeFiles/segmentation_generate_messages_lisp.dir/build.make segmentation/CMakeFiles/segmentation_generate_messages_lisp.dir/depend
 	$(MAKE) -f segmentation/CMakeFiles/segmentation_generate_messages_lisp.dir/build.make segmentation/CMakeFiles/segmentation_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=44 "Built target segmentation_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=45 "Built target segmentation_generate_messages_lisp"
 .PHONY : segmentation/CMakeFiles/segmentation_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1554,12 +1554,12 @@ segmentation/CMakeFiles/segmentation_generate_messages_py.dir/all: segmentation/
 segmentation/CMakeFiles/segmentation_generate_messages_py.dir/all: segmentation/CMakeFiles/std_msgs_generate_messages_py.dir/all
 	$(MAKE) -f segmentation/CMakeFiles/segmentation_generate_messages_py.dir/build.make segmentation/CMakeFiles/segmentation_generate_messages_py.dir/depend
 	$(MAKE) -f segmentation/CMakeFiles/segmentation_generate_messages_py.dir/build.make segmentation/CMakeFiles/segmentation_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=46,47 "Built target segmentation_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=47 "Built target segmentation_generate_messages_py"
 .PHONY : segmentation/CMakeFiles/segmentation_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 segmentation/CMakeFiles/segmentation_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 segmentation/CMakeFiles/segmentation_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 0
 .PHONY : segmentation/CMakeFiles/segmentation_generate_messages_py.dir/rule
@@ -1664,7 +1664,7 @@ all: segmentation/CMakeFiles/segmentation_generate_messages.dir/all
 
 # Build rule for subdir invocation for target.
 segmentation/CMakeFiles/segmentation_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 segmentation/CMakeFiles/segmentation_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 0
 .PHONY : segmentation/CMakeFiles/segmentation_generate_messages.dir/rule
@@ -2015,12 +2015,12 @@ simulation/CMakeFiles/simulation_generate_messages_py.dir/all: simulation/CMakeF
 simulation/CMakeFiles/simulation_generate_messages_py.dir/all: simulation/CMakeFiles/_simulation_generate_messages_check_deps_EgoVehicleControlTarget.dir/all
 	$(MAKE) -f simulation/CMakeFiles/simulation_generate_messages_py.dir/build.make simulation/CMakeFiles/simulation_generate_messages_py.dir/depend
 	$(MAKE) -f simulation/CMakeFiles/simulation_generate_messages_py.dir/build.make simulation/CMakeFiles/simulation_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=69,70,71,72,73 "Built target simulation_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=70,71,72,73,74,75 "Built target simulation_generate_messages_py"
 .PHONY : simulation/CMakeFiles/simulation_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 simulation/CMakeFiles/simulation_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 simulation/CMakeFiles/simulation_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 0
 .PHONY : simulation/CMakeFiles/simulation_generate_messages_py.dir/rule
@@ -2247,7 +2247,7 @@ simulation/CMakeFiles/simulation_generate_messages_eus.dir/all: simulation/CMake
 simulation/CMakeFiles/simulation_generate_messages_eus.dir/all: simulation/CMakeFiles/_simulation_generate_messages_check_deps_EgoVehicleControlTarget.dir/all
 	$(MAKE) -f simulation/CMakeFiles/simulation_generate_messages_eus.dir/build.make simulation/CMakeFiles/simulation_generate_messages_eus.dir/depend
 	$(MAKE) -f simulation/CMakeFiles/simulation_generate_messages_eus.dir/build.make simulation/CMakeFiles/simulation_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=53,54,55,56,57,58 "Built target simulation_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=54,55,56,57,58,59 "Built target simulation_generate_messages_eus"
 .PHONY : simulation/CMakeFiles/simulation_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2860,7 +2860,7 @@ simulation/CMakeFiles/simulation_genpy.dir/all: simulation/CMakeFiles/simulation
 
 # Build rule for subdir invocation for target.
 simulation/CMakeFiles/simulation_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 simulation/CMakeFiles/simulation_genpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 0
 .PHONY : simulation/CMakeFiles/simulation_genpy.dir/rule
@@ -2951,7 +2951,7 @@ clean: simulation/CMakeFiles/radar_msgs_generate_messages_lisp.dir/clean
 simulation/CMakeFiles/simulation_gencfg.dir/all:
 	$(MAKE) -f simulation/CMakeFiles/simulation_gencfg.dir/build.make simulation/CMakeFiles/simulation_gencfg.dir/depend
 	$(MAKE) -f simulation/CMakeFiles/simulation_gencfg.dir/build.make simulation/CMakeFiles/simulation_gencfg.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num= "Built target simulation_gencfg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=48 "Built target simulation_gencfg"
 .PHONY : simulation/CMakeFiles/simulation_gencfg.dir/all
 
 # Include target in all.
@@ -2961,7 +2961,7 @@ all: simulation/CMakeFiles/simulation_gencfg.dir/all
 
 # Build rule for subdir invocation for target.
 simulation/CMakeFiles/simulation_gencfg.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 simulation/CMakeFiles/simulation_gencfg.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 0
 .PHONY : simulation/CMakeFiles/simulation_gencfg.dir/rule
@@ -3834,7 +3834,7 @@ all: simulation/CMakeFiles/simulation_generate_messages.dir/all
 
 # Build rule for subdir invocation for target.
 simulation/CMakeFiles/simulation_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 26
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 27
 	$(MAKE) -f CMakeFiles/Makefile2 simulation/CMakeFiles/simulation_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 0
 .PHONY : simulation/CMakeFiles/simulation_generate_messages.dir/rule
@@ -3965,7 +3965,7 @@ simulation/CMakeFiles/simulation_generate_messages_cpp.dir/all: simulation/CMake
 simulation/CMakeFiles/simulation_generate_messages_cpp.dir/all: simulation/CMakeFiles/_simulation_generate_messages_check_deps_EgoVehicleControlTarget.dir/all
 	$(MAKE) -f simulation/CMakeFiles/simulation_generate_messages_cpp.dir/build.make simulation/CMakeFiles/simulation_generate_messages_cpp.dir/depend
 	$(MAKE) -f simulation/CMakeFiles/simulation_generate_messages_cpp.dir/build.make simulation/CMakeFiles/simulation_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=48,49,50,51,52 "Built target simulation_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=49,50,51,52,53 "Built target simulation_generate_messages_cpp"
 .PHONY : simulation/CMakeFiles/simulation_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4069,7 +4069,7 @@ simulation/CMakeFiles/simulation_generate_messages_lisp.dir/all: simulation/CMak
 simulation/CMakeFiles/simulation_generate_messages_lisp.dir/all: simulation/CMakeFiles/_simulation_generate_messages_check_deps_EgoVehicleControlTarget.dir/all
 	$(MAKE) -f simulation/CMakeFiles/simulation_generate_messages_lisp.dir/build.make simulation/CMakeFiles/simulation_generate_messages_lisp.dir/depend
 	$(MAKE) -f simulation/CMakeFiles/simulation_generate_messages_lisp.dir/build.make simulation/CMakeFiles/simulation_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=59,60,61,62,63 "Built target simulation_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=60,61,62,63,64 "Built target simulation_generate_messages_lisp"
 .PHONY : simulation/CMakeFiles/simulation_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4173,7 +4173,7 @@ simulation/CMakeFiles/simulation_generate_messages_nodejs.dir/all: simulation/CM
 simulation/CMakeFiles/simulation_generate_messages_nodejs.dir/all: simulation/CMakeFiles/_simulation_generate_messages_check_deps_EgoVehicleControlTarget.dir/all
 	$(MAKE) -f simulation/CMakeFiles/simulation_generate_messages_nodejs.dir/build.make simulation/CMakeFiles/simulation_generate_messages_nodejs.dir/depend
 	$(MAKE) -f simulation/CMakeFiles/simulation_generate_messages_nodejs.dir/build.make simulation/CMakeFiles/simulation_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=64,65,66,67,68 "Built target simulation_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=65,66,67,68,69 "Built target simulation_generate_messages_nodejs"
 .PHONY : simulation/CMakeFiles/simulation_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4267,7 +4267,7 @@ all: detection/object_detection/CMakeFiles/object_detection_generate_messages.di
 
 # Build rule for subdir invocation for target.
 detection/object_detection/CMakeFiles/object_detection_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 10
 	$(MAKE) -f CMakeFiles/Makefile2 detection/object_detection/CMakeFiles/object_detection_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 0
 .PHONY : detection/object_detection/CMakeFiles/object_detection_generate_messages.dir/rule
@@ -4296,12 +4296,12 @@ detection/object_detection/CMakeFiles/object_detection_generate_messages_lisp.di
 detection/object_detection/CMakeFiles/object_detection_generate_messages_lisp.dir/all: detection/object_detection/CMakeFiles/_object_detection_generate_messages_check_deps_DetectionResults.dir/all
 	$(MAKE) -f detection/object_detection/CMakeFiles/object_detection_generate_messages_lisp.dir/build.make detection/object_detection/CMakeFiles/object_detection_generate_messages_lisp.dir/depend
 	$(MAKE) -f detection/object_detection/CMakeFiles/object_detection_generate_messages_lisp.dir/build.make detection/object_detection/CMakeFiles/object_detection_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=30 "Built target object_detection_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=30,31 "Built target object_detection_generate_messages_lisp"
 .PHONY : detection/object_detection/CMakeFiles/object_detection_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 detection/object_detection/CMakeFiles/object_detection_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 detection/object_detection/CMakeFiles/object_detection_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 0
 .PHONY : detection/object_detection/CMakeFiles/object_detection_generate_messages_lisp.dir/rule
@@ -4330,12 +4330,12 @@ detection/object_detection/CMakeFiles/object_detection_generate_messages_cpp.dir
 detection/object_detection/CMakeFiles/object_detection_generate_messages_cpp.dir/all: detection/object_detection/CMakeFiles/_object_detection_generate_messages_check_deps_DetectionResults.dir/all
 	$(MAKE) -f detection/object_detection/CMakeFiles/object_detection_generate_messages_cpp.dir/build.make detection/object_detection/CMakeFiles/object_detection_generate_messages_cpp.dir/depend
 	$(MAKE) -f detection/object_detection/CMakeFiles/object_detection_generate_messages_cpp.dir/build.make detection/object_detection/CMakeFiles/object_detection_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=26 "Built target object_detection_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=26,27 "Built target object_detection_generate_messages_cpp"
 .PHONY : detection/object_detection/CMakeFiles/object_detection_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 detection/object_detection/CMakeFiles/object_detection_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 detection/object_detection/CMakeFiles/object_detection_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 0
 .PHONY : detection/object_detection/CMakeFiles/object_detection_generate_messages_cpp.dir/rule
@@ -4367,7 +4367,7 @@ detection/object_detection/CMakeFiles/object_detection_gencpp.dir/all: detection
 
 # Build rule for subdir invocation for target.
 detection/object_detection/CMakeFiles/object_detection_gencpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 detection/object_detection/CMakeFiles/object_detection_gencpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 0
 .PHONY : detection/object_detection/CMakeFiles/object_detection_gencpp.dir/rule
@@ -4396,7 +4396,7 @@ detection/object_detection/CMakeFiles/object_detection_generate_messages_nodejs.
 detection/object_detection/CMakeFiles/object_detection_generate_messages_nodejs.dir/all: detection/object_detection/CMakeFiles/_object_detection_generate_messages_check_deps_DetectionResults.dir/all
 	$(MAKE) -f detection/object_detection/CMakeFiles/object_detection_generate_messages_nodejs.dir/build.make detection/object_detection/CMakeFiles/object_detection_generate_messages_nodejs.dir/depend
 	$(MAKE) -f detection/object_detection/CMakeFiles/object_detection_generate_messages_nodejs.dir/build.make detection/object_detection/CMakeFiles/object_detection_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=31,32 "Built target object_detection_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=32,33 "Built target object_detection_generate_messages_nodejs"
 .PHONY : detection/object_detection/CMakeFiles/object_detection_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4497,7 +4497,7 @@ detection/object_detection/CMakeFiles/object_detection_geneus.dir/all: detection
 
 # Build rule for subdir invocation for target.
 detection/object_detection/CMakeFiles/object_detection_geneus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 detection/object_detection/CMakeFiles/object_detection_geneus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 0
 .PHONY : detection/object_detection/CMakeFiles/object_detection_geneus.dir/rule
@@ -4526,12 +4526,12 @@ detection/object_detection/CMakeFiles/object_detection_generate_messages_eus.dir
 detection/object_detection/CMakeFiles/object_detection_generate_messages_eus.dir/all: detection/object_detection/CMakeFiles/_object_detection_generate_messages_check_deps_DetectionResults.dir/all
 	$(MAKE) -f detection/object_detection/CMakeFiles/object_detection_generate_messages_eus.dir/build.make detection/object_detection/CMakeFiles/object_detection_generate_messages_eus.dir/depend
 	$(MAKE) -f detection/object_detection/CMakeFiles/object_detection_generate_messages_eus.dir/build.make detection/object_detection/CMakeFiles/object_detection_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=27,28,29 "Built target object_detection_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=28,29 "Built target object_detection_generate_messages_eus"
 .PHONY : detection/object_detection/CMakeFiles/object_detection_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 detection/object_detection/CMakeFiles/object_detection_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 detection/object_detection/CMakeFiles/object_detection_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 0
 .PHONY : detection/object_detection/CMakeFiles/object_detection_generate_messages_eus.dir/rule
@@ -4560,7 +4560,7 @@ detection/object_detection/CMakeFiles/object_detection_generate_messages_py.dir/
 detection/object_detection/CMakeFiles/object_detection_generate_messages_py.dir/all: detection/object_detection/CMakeFiles/_object_detection_generate_messages_check_deps_DetectionResults.dir/all
 	$(MAKE) -f detection/object_detection/CMakeFiles/object_detection_generate_messages_py.dir/build.make detection/object_detection/CMakeFiles/object_detection_generate_messages_py.dir/depend
 	$(MAKE) -f detection/object_detection/CMakeFiles/object_detection_generate_messages_py.dir/build.make detection/object_detection/CMakeFiles/object_detection_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=33,34 "Built target object_detection_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=34,35 "Built target object_detection_generate_messages_py"
 .PHONY : detection/object_detection/CMakeFiles/object_detection_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4597,7 +4597,7 @@ detection/object_detection/CMakeFiles/object_detection_genlisp.dir/all: detectio
 
 # Build rule for subdir invocation for target.
 detection/object_detection/CMakeFiles/object_detection_genlisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 detection/object_detection/CMakeFiles/object_detection_genlisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 0
 .PHONY : detection/object_detection/CMakeFiles/object_detection_genlisp.dir/rule
@@ -4839,7 +4839,7 @@ clean: sensors/joystick/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/
 sensors/joystick/CMakeFiles/joy_node.dir/all:
 	$(MAKE) -f sensors/joystick/CMakeFiles/joy_node.dir/build.make sensors/joystick/CMakeFiles/joy_node.dir/depend
 	$(MAKE) -f sensors/joystick/CMakeFiles/joy_node.dir/build.make sensors/joystick/CMakeFiles/joy_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=17 "Built target joy_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=17,18 "Built target joy_node"
 .PHONY : sensors/joystick/CMakeFiles/joy_node.dir/all
 
 # Include target in all.
@@ -4849,7 +4849,7 @@ all: sensors/joystick/CMakeFiles/joy_node.dir/all
 
 # Build rule for subdir invocation for target.
 sensors/joystick/CMakeFiles/joy_node.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 sensors/joystick/CMakeFiles/joy_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 0
 .PHONY : sensors/joystick/CMakeFiles/joy_node.dir/rule
@@ -7211,7 +7211,7 @@ point_cloud/preinstall:
 point_cloud/CMakeFiles/planar_segmentation.dir/all:
 	$(MAKE) -f point_cloud/CMakeFiles/planar_segmentation.dir/build.make point_cloud/CMakeFiles/planar_segmentation.dir/depend
 	$(MAKE) -f point_cloud/CMakeFiles/planar_segmentation.dir/build.make point_cloud/CMakeFiles/planar_segmentation.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=35,36 "Built target planar_segmentation"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=36,37 "Built target planar_segmentation"
 .PHONY : point_cloud/CMakeFiles/planar_segmentation.dir/all
 
 # Include target in all.
@@ -7285,7 +7285,7 @@ clean: point_cloud/CMakeFiles/ground_plane_detection.dir/clean
 point_cloud/CMakeFiles/rgb_segmentation_point_cloud.dir/all:
 	$(MAKE) -f point_cloud/CMakeFiles/rgb_segmentation_point_cloud.dir/build.make point_cloud/CMakeFiles/rgb_segmentation_point_cloud.dir/depend
 	$(MAKE) -f point_cloud/CMakeFiles/rgb_segmentation_point_cloud.dir/build.make point_cloud/CMakeFiles/rgb_segmentation_point_cloud.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=39 "Built target rgb_segmentation_point_cloud"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=39,40 "Built target rgb_segmentation_point_cloud"
 .PHONY : point_cloud/CMakeFiles/rgb_segmentation_point_cloud.dir/all
 
 # Include target in all.
@@ -7295,7 +7295,7 @@ all: point_cloud/CMakeFiles/rgb_segmentation_point_cloud.dir/all
 
 # Build rule for subdir invocation for target.
 point_cloud/CMakeFiles/rgb_segmentation_point_cloud.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 point_cloud/CMakeFiles/rgb_segmentation_point_cloud.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 0
 .PHONY : point_cloud/CMakeFiles/rgb_segmentation_point_cloud.dir/rule
@@ -7322,7 +7322,7 @@ clean: point_cloud/CMakeFiles/rgb_segmentation_point_cloud.dir/clean
 point_cloud/CMakeFiles/point_cloud_transform.dir/all:
 	$(MAKE) -f point_cloud/CMakeFiles/point_cloud_transform.dir/build.make point_cloud/CMakeFiles/point_cloud_transform.dir/depend
 	$(MAKE) -f point_cloud/CMakeFiles/point_cloud_transform.dir/build.make point_cloud/CMakeFiles/point_cloud_transform.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=37,38 "Built target point_cloud_transform"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=38 "Built target point_cloud_transform"
 .PHONY : point_cloud/CMakeFiles/point_cloud_transform.dir/all
 
 # Include target in all.
@@ -7332,7 +7332,7 @@ all: point_cloud/CMakeFiles/point_cloud_transform.dir/all
 
 # Build rule for subdir invocation for target.
 point_cloud/CMakeFiles/point_cloud_transform.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 point_cloud/CMakeFiles/point_cloud_transform.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 0
 .PHONY : point_cloud/CMakeFiles/point_cloud_transform.dir/rule
@@ -8327,7 +8327,6 @@ clean: sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messa
 navigation/mapping/all: navigation/mapping/CMakeFiles/mapping_generate_messages.dir/all
 navigation/mapping/all: navigation/mapping/CMakeFiles/build_map.dir/all
 navigation/mapping/all: navigation/mapping/CMakeFiles/robot_pose_publisher.dir/all
-navigation/mapping/all: navigation/mapping/CMakeFiles/vehicle_init_pose.dir/all
 
 .PHONY : navigation/mapping/all
 
@@ -8347,7 +8346,6 @@ navigation/mapping/clean: navigation/mapping/CMakeFiles/_mapping_generate_messag
 navigation/mapping/clean: navigation/mapping/CMakeFiles/mapping_genpy.dir/clean
 navigation/mapping/clean: navigation/mapping/CMakeFiles/build_map.dir/clean
 navigation/mapping/clean: navigation/mapping/CMakeFiles/robot_pose_publisher.dir/clean
-navigation/mapping/clean: navigation/mapping/CMakeFiles/vehicle_init_pose.dir/clean
 
 .PHONY : navigation/mapping/clean
 
@@ -8429,7 +8427,7 @@ navigation/mapping/CMakeFiles/mapping_generate_messages_cpp.dir/all: segmentatio
 navigation/mapping/CMakeFiles/mapping_generate_messages_cpp.dir/all: navigation/mapping/CMakeFiles/_mapping_generate_messages_check_deps_set_initial_pose.dir/all
 	$(MAKE) -f navigation/mapping/CMakeFiles/mapping_generate_messages_cpp.dir/build.make navigation/mapping/CMakeFiles/mapping_generate_messages_cpp.dir/depend
 	$(MAKE) -f navigation/mapping/CMakeFiles/mapping_generate_messages_cpp.dir/build.make navigation/mapping/CMakeFiles/mapping_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=18 "Built target mapping_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=19 "Built target mapping_generate_messages_cpp"
 .PHONY : navigation/mapping/CMakeFiles/mapping_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -8462,12 +8460,12 @@ navigation/mapping/CMakeFiles/mapping_generate_messages_nodejs.dir/all: segmenta
 navigation/mapping/CMakeFiles/mapping_generate_messages_nodejs.dir/all: navigation/mapping/CMakeFiles/_mapping_generate_messages_check_deps_set_initial_pose.dir/all
 	$(MAKE) -f navigation/mapping/CMakeFiles/mapping_generate_messages_nodejs.dir/build.make navigation/mapping/CMakeFiles/mapping_generate_messages_nodejs.dir/depend
 	$(MAKE) -f navigation/mapping/CMakeFiles/mapping_generate_messages_nodejs.dir/build.make navigation/mapping/CMakeFiles/mapping_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num= "Built target mapping_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=22 "Built target mapping_generate_messages_nodejs"
 .PHONY : navigation/mapping/CMakeFiles/mapping_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 navigation/mapping/CMakeFiles/mapping_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 navigation/mapping/CMakeFiles/mapping_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 0
 .PHONY : navigation/mapping/CMakeFiles/mapping_generate_messages_nodejs.dir/rule
@@ -8527,12 +8525,12 @@ navigation/mapping/CMakeFiles/mapping_generate_messages_py.dir/all: segmentation
 navigation/mapping/CMakeFiles/mapping_generate_messages_py.dir/all: navigation/mapping/CMakeFiles/_mapping_generate_messages_check_deps_set_initial_pose.dir/all
 	$(MAKE) -f navigation/mapping/CMakeFiles/mapping_generate_messages_py.dir/build.make navigation/mapping/CMakeFiles/mapping_generate_messages_py.dir/depend
 	$(MAKE) -f navigation/mapping/CMakeFiles/mapping_generate_messages_py.dir/build.make navigation/mapping/CMakeFiles/mapping_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=22,23 "Built target mapping_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=23 "Built target mapping_generate_messages_py"
 .PHONY : navigation/mapping/CMakeFiles/mapping_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 navigation/mapping/CMakeFiles/mapping_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 navigation/mapping/CMakeFiles/mapping_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 0
 .PHONY : navigation/mapping/CMakeFiles/mapping_generate_messages_py.dir/rule
@@ -8573,7 +8571,7 @@ all: navigation/mapping/CMakeFiles/mapping_generate_messages.dir/all
 
 # Build rule for subdir invocation for target.
 navigation/mapping/CMakeFiles/mapping_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 navigation/mapping/CMakeFiles/mapping_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 0
 .PHONY : navigation/mapping/CMakeFiles/mapping_generate_messages.dir/rule
@@ -8601,12 +8599,12 @@ navigation/mapping/CMakeFiles/mapping_generate_messages_eus.dir/all: segmentatio
 navigation/mapping/CMakeFiles/mapping_generate_messages_eus.dir/all: navigation/mapping/CMakeFiles/_mapping_generate_messages_check_deps_set_initial_pose.dir/all
 	$(MAKE) -f navigation/mapping/CMakeFiles/mapping_generate_messages_eus.dir/build.make navigation/mapping/CMakeFiles/mapping_generate_messages_eus.dir/depend
 	$(MAKE) -f navigation/mapping/CMakeFiles/mapping_generate_messages_eus.dir/build.make navigation/mapping/CMakeFiles/mapping_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=19,20 "Built target mapping_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=20 "Built target mapping_generate_messages_eus"
 .PHONY : navigation/mapping/CMakeFiles/mapping_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 navigation/mapping/CMakeFiles/mapping_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 navigation/mapping/CMakeFiles/mapping_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 0
 .PHONY : navigation/mapping/CMakeFiles/mapping_generate_messages_eus.dir/rule
@@ -8638,7 +8636,7 @@ navigation/mapping/CMakeFiles/mapping_geneus.dir/all: navigation/mapping/CMakeFi
 
 # Build rule for subdir invocation for target.
 navigation/mapping/CMakeFiles/mapping_geneus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 navigation/mapping/CMakeFiles/mapping_geneus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 0
 .PHONY : navigation/mapping/CMakeFiles/mapping_geneus.dir/rule
@@ -8670,7 +8668,7 @@ navigation/mapping/CMakeFiles/mapping_gennodejs.dir/all: navigation/mapping/CMak
 
 # Build rule for subdir invocation for target.
 navigation/mapping/CMakeFiles/mapping_gennodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 navigation/mapping/CMakeFiles/mapping_gennodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 0
 .PHONY : navigation/mapping/CMakeFiles/mapping_gennodejs.dir/rule
@@ -8766,7 +8764,7 @@ navigation/mapping/CMakeFiles/mapping_genpy.dir/all: navigation/mapping/CMakeFil
 
 # Build rule for subdir invocation for target.
 navigation/mapping/CMakeFiles/mapping_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 navigation/mapping/CMakeFiles/mapping_genpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 0
 .PHONY : navigation/mapping/CMakeFiles/mapping_genpy.dir/rule
@@ -8830,7 +8828,7 @@ clean: navigation/mapping/CMakeFiles/build_map.dir/clean
 navigation/mapping/CMakeFiles/robot_pose_publisher.dir/all:
 	$(MAKE) -f navigation/mapping/CMakeFiles/robot_pose_publisher.dir/build.make navigation/mapping/CMakeFiles/robot_pose_publisher.dir/depend
 	$(MAKE) -f navigation/mapping/CMakeFiles/robot_pose_publisher.dir/build.make navigation/mapping/CMakeFiles/robot_pose_publisher.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=40,41 "Built target robot_pose_publisher"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=41,42 "Built target robot_pose_publisher"
 .PHONY : navigation/mapping/CMakeFiles/robot_pose_publisher.dir/all
 
 # Include target in all.
@@ -8857,43 +8855,6 @@ navigation/mapping/CMakeFiles/robot_pose_publisher.dir/clean:
 
 # clean rule for target.
 clean: navigation/mapping/CMakeFiles/robot_pose_publisher.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target navigation/mapping/CMakeFiles/vehicle_init_pose.dir
-
-# All Build rule for target.
-navigation/mapping/CMakeFiles/vehicle_init_pose.dir/all:
-	$(MAKE) -f navigation/mapping/CMakeFiles/vehicle_init_pose.dir/build.make navigation/mapping/CMakeFiles/vehicle_init_pose.dir/depend
-	$(MAKE) -f navigation/mapping/CMakeFiles/vehicle_init_pose.dir/build.make navigation/mapping/CMakeFiles/vehicle_init_pose.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles --progress-num=74,75 "Built target vehicle_init_pose"
-.PHONY : navigation/mapping/CMakeFiles/vehicle_init_pose.dir/all
-
-# Include target in all.
-all: navigation/mapping/CMakeFiles/vehicle_init_pose.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-navigation/mapping/CMakeFiles/vehicle_init_pose.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 navigation/mapping/CMakeFiles/vehicle_init_pose.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/neil/Workspace/self-driving-golf-cart/ros/src/cmake-build-debug/CMakeFiles 0
-.PHONY : navigation/mapping/CMakeFiles/vehicle_init_pose.dir/rule
-
-# Convenience name for target.
-vehicle_init_pose: navigation/mapping/CMakeFiles/vehicle_init_pose.dir/rule
-
-.PHONY : vehicle_init_pose
-
-# clean rule for target.
-navigation/mapping/CMakeFiles/vehicle_init_pose.dir/clean:
-	$(MAKE) -f navigation/mapping/CMakeFiles/vehicle_init_pose.dir/build.make navigation/mapping/CMakeFiles/vehicle_init_pose.dir/clean
-.PHONY : navigation/mapping/CMakeFiles/vehicle_init_pose.dir/clean
-
-# clean rule for target.
-clean: navigation/mapping/CMakeFiles/vehicle_init_pose.dir/clean
 
 .PHONY : clean
 

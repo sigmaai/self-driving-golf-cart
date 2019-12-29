@@ -79,8 +79,7 @@ planar_segmentation_EXTERNAL_OBJECTS =
 
 devel/lib/point_cloud/planar_segmentation: point_cloud/CMakeFiles/planar_segmentation.dir/src/planar_segmentation.cpp.o
 devel/lib/point_cloud/planar_segmentation: point_cloud/CMakeFiles/planar_segmentation.dir/build.make
-devel/lib/point_cloud/planar_segmentation: /opt/ros/melodic/lib/libpcl_ros_filters.so
-devel/lib/point_cloud/planar_segmentation: /opt/ros/melodic/lib/libpcl_ros_io.so
+devel/lib/point_cloud/planar_segmentation: /opt/ros/melodic/lib/libpcl_ros_filter.so
 devel/lib/point_cloud/planar_segmentation: /opt/ros/melodic/lib/libpcl_ros_tf.so
 devel/lib/point_cloud/planar_segmentation: /usr/lib/x86_64-linux-gnu/libpcl_kdtree.so
 devel/lib/point_cloud/planar_segmentation: /usr/lib/x86_64-linux-gnu/libpcl_search.so

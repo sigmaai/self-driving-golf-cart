@@ -49,11 +49,17 @@ system = platform.system()
 IS_DARWIN = (system == 'Darwin')
 IS_WINDOWS = (system == 'Windows')
 
+PATH_TO_ADD_SUFFIX = ['bin']
+if IS_WINDOWS:
+    # while catkin recommends putting dll's into bin, 3rd party packages often put dll's into lib
+    # since Windows finds dll's via the PATH variable, prepend it with path to lib
+    PATH_TO_ADD_SUFFIX.extend([['lib', os.path.join('lib', 'x86_64-linux-gnu')]])
+
 # subfolder of workspace prepended to CMAKE_PREFIX_PATH
 ENV_VAR_SUBFOLDERS = {
     'CMAKE_PREFIX_PATH': '',
     'LD_LIBRARY_PATH' if not IS_DARWIN else 'DYLD_LIBRARY_PATH': ['lib', os.path.join('lib', 'x86_64-linux-gnu')],
-    'PATH': 'bin',
+    'PATH': PATH_TO_ADD_SUFFIX,
     'PKG_CONFIG_PATH': [os.path.join('lib', 'pkgconfig'), os.path.join('lib', 'x86_64-linux-gnu', 'pkgconfig')],
     'PYTHONPATH': 'lib/python2.7/dist-packages',
 }

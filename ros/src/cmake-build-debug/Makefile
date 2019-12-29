@@ -3404,19 +3404,6 @@ robot_pose_publisher/fast:
 	$(MAKE) -f navigation/mapping/CMakeFiles/robot_pose_publisher.dir/build.make navigation/mapping/CMakeFiles/robot_pose_publisher.dir/build
 .PHONY : robot_pose_publisher/fast
 
-#=============================================================================
-# Target rules for targets named vehicle_init_pose
-
-# Build rule for target.
-vehicle_init_pose: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 vehicle_init_pose
-.PHONY : vehicle_init_pose
-
-# fast build rule for target.
-vehicle_init_pose/fast:
-	$(MAKE) -f navigation/mapping/CMakeFiles/vehicle_init_pose.dir/build.make navigation/mapping/CMakeFiles/vehicle_init_pose.dir/build
-.PHONY : vehicle_init_pose/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -3679,7 +3666,6 @@ help:
 	@echo "... mapping_genpy"
 	@echo "... build_map"
 	@echo "... robot_pose_publisher"
-	@echo "... vehicle_init_pose"
 .PHONY : help
 
 

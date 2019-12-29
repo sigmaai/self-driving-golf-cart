@@ -79,8 +79,7 @@ point_cloud_transform_EXTERNAL_OBJECTS =
 
 devel/lib/point_cloud/point_cloud_transform: point_cloud/CMakeFiles/point_cloud_transform.dir/src/point_cloud_transform.cpp.o
 devel/lib/point_cloud/point_cloud_transform: point_cloud/CMakeFiles/point_cloud_transform.dir/build.make
-devel/lib/point_cloud/point_cloud_transform: /opt/ros/melodic/lib/libpcl_ros_filters.so
-devel/lib/point_cloud/point_cloud_transform: /opt/ros/melodic/lib/libpcl_ros_io.so
+devel/lib/point_cloud/point_cloud_transform: /opt/ros/melodic/lib/libpcl_ros_filter.so
 devel/lib/point_cloud/point_cloud_transform: /opt/ros/melodic/lib/libpcl_ros_tf.so
 devel/lib/point_cloud/point_cloud_transform: /usr/lib/x86_64-linux-gnu/libpcl_kdtree.so
 devel/lib/point_cloud/point_cloud_transform: /usr/lib/x86_64-linux-gnu/libpcl_search.so
