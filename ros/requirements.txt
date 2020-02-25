@@ -281,7 +281,7 @@ swiftcodegen == 0.3
 # ros/src/segmentation/scripts/models/icnet_fusion.py: 21
 # ros/src/segmentation/scripts/segmentor.py: 16
 # ros/src/segmentation/scripts/test_icnet.py: 11
-tensorflow_gpu == 1.13.1
+tensorflow_gpu == 1.15.2
 
 # ros/src/navigation/gps_localization/scripts/gps_localization.py: 10
 # ros/src/simulation/scripts/camera.py: 17
