@@ -1,8 +1,0 @@
-prefix=/usr/local
-
-Name: joy
-Description: Description of joy
-Version: 1.12.0
-Cflags: 
-Libs: -L/usr/local/lib 
-Requires: roscpp diagnostic_updater sensor_msgs

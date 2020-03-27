@@ -1,8 +1,0 @@
-prefix=/usr/local
-
-Name: zed_display_rviz
-Description: Description of zed_display_rviz
-Version: 2.7.0
-Cflags: 
-Libs: -L/usr/local/lib 
-Requires: 
