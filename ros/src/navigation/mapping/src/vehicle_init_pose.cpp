@@ -14,7 +14,6 @@
 #include <geometry_msgs/PoseStamped.h>
 #include <geometry_msgs/Pose.h>
 #include "ros/ros.h"
-#include <mapping/set_initial_pose.h>
 
 // =========
 ros::ServiceClient client;

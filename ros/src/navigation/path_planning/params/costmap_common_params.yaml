@@ -3,13 +3,15 @@
 
 footprint: [[ 1.1684, 0.6096], [1.1684, -0.6096], [-1.1684, -0.6096], [-1.1684, 0.6096]]
 footprint_padding: 0.05
+inflation_radius: 0.25
+
 
 transform_tolerance: 5
 
 controller_patience: 2.0
 
-conservative_clear:
-  reset_distance: 1.00
-aggressive_clear:
-  reset_distance: 0.75
+#conservative_clear:
+#  reset_distance: 1.00
+#aggressive_clear:
+#  reset_distance: 0.75
 

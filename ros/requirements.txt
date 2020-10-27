@@ -15,7 +15,7 @@ Keras == 2.2.4
 # ros/src/autopilot/scripts/visualization.py: 14,15,16
 # ros/src/detection/object_detection/scripts/object_detector.py: 39
 # ros/src/detection/object_detection/scripts/yolo3/utils.py: 5
-Pillow == 5.1.0
+Pillow == 6.2.0
 
 # ros/src/autopilot/scripts/pilot.py: 11
 # ros/src/segmentation/scripts/segmentor.py: 11
@@ -281,7 +281,7 @@ swiftcodegen == 0.3
 # ros/src/segmentation/scripts/models/icnet_fusion.py: 21
 # ros/src/segmentation/scripts/segmentor.py: 16
 # ros/src/segmentation/scripts/test_icnet.py: 11
-tensorflow_gpu == 1.13.1
+tensorflow_gpu == 1.15.2
 
 # ros/src/navigation/gps_localization/scripts/gps_localization.py: 10
 # ros/src/simulation/scripts/camera.py: 17

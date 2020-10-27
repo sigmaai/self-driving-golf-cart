@@ -1,42 +1,36 @@
 
 TrajectoryPlannerROS:
 
-  acc_lim_x:  0.35
-  acc_lim_y:  0.35
-  acc_lim_theta: 5.00
-  max_vel_x:  1.75
+  acc_lim_x:  0.45
+  acc_lim_y:  0.45
+  acc_lim_theta: 10.00
+  max_vel_x:  1.35
   min_vel_x:  0.000
-  max_vel_theta: 2.0
-  min_vel_theta: -2.0
+  max_rotational_vel: 0.250
   min_in_place_rotational_vel: 0.15
-  escape_vel: 0.10                  # in the case of the vehicle. there is no reverse.
+  escape_vel: -0.10
   holonomic_robot: false
 
-  # Goal Tolerance Parameters
   xy_goal_tolerance:  0.20
   yaw_goal_tolerance: 0.20
 
   sim_time: 1.75
-  angular_sim_granularity: 0.05
-  sim_granularity: 0.05
+  angular_sim_granularity: 0.075
+  sim_granularity: 0.050
   vx_samples: 16
-  vtheta_samples: 20
+  vtheta_samples: 18
 
-  # Trajectory Scoring Parameters
-  meter_scoring: true
-  pdist_scale: 1.0  # default 0.6
+  pdist_scale: 1.15
   goal_distance_bias: 32.0
-  path_distance_bias: 32.0
+  path_distance_bias: 20.0
   occdist_scale: 0.01
   heading_lookahead: 0.75
-  heading_scoring: true         # is this a conflicting parameter??
-  heading_scoring_timestep: 1.0 # How far to look ahead in time in seconds along the simulated trajectory when using heading scoring
+
   dwa: false
   controller_frequency: 20
 
   oscillation_reset_dist: 0.05
+  meter_scoring: true
 
-
-# ~<name>/prune_plan (bool, default: true)
-  #
-  #Defines whether or not to eat up the plan as the robot moves along the path. If set to true, points will fall off the end of the plan once the robot moves 1 meter past them.
+  publish_potential: true
+  visualize_potential: true

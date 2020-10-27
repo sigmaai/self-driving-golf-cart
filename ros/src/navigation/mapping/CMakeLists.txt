@@ -25,6 +25,7 @@ find_package(catkin REQUIRED
         grid_map_msgs
         amcl
         zed_wrapper
+        map_server
         )
 
 ## System dependencies are found with CMake's conventions
@@ -225,8 +226,8 @@ target_link_libraries(build_map ${catkin_LIBRARIES})
 add_executable(robot_pose_publisher ../mapping/src/robot_pose_publisher.cpp)
 target_link_libraries(robot_pose_publisher ${catkin_LIBRARIES})
 
-add_executable(vehicle_init_pose ../mapping/src/vehicle_init_pose.cpp)
-target_link_libraries(vehicle_init_pose ${catkin_LIBRARIES})
+# add_executable(vehicle_init_pose ../mapping/src/vehicle_init_pose.cpp)
+# target_link_libraries(vehicle_init_pose ${catkin_LIBRARIES})
 
 install(DIRECTORY
         launch

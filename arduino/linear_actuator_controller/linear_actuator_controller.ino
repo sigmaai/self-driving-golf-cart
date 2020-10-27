@@ -29,7 +29,7 @@ double pos = 0.0;         // steering position
 boolean joystick_enabled = false;
 float cmd_val = 0.0;
 float target_pos = 0.0;
-bool killed;
+bool killed = false;
 
 ros::NodeHandle nh;
 
@@ -80,10 +80,6 @@ void killswitch_callback( const std_msgs::Bool& cmd_msg) {
 
 // ----------------------------------------------------------------------------------------
 // declare all subscribers
-ros::Subscriber<std_msgs::Float32> sub1("/vehicle/dbw/steering_cmds/", steering_callback);
-ros::Subscriber<std_msgs::Float32> sub2("/sensor/joystick/left_stick_x", joystick_callback);
-ros::Subscriber<std_msgs::Bool> sub3("/sensor/joystick/enabled", joystick_enabled_callback);
-ros::Subscriber<std_msgs::Bool> ks_sub("/vehicle/safety/killed", killswitch_callback);
 
 // declare the publisher
 std_msgs::Float32 pos_msg;
@@ -91,6 +87,11 @@ ros::Publisher pos_pub("/sensor/vehicle/steering/actuator_position", &pos_msg);
 // ----------------------------------------------------------------------------------------
 
 void setup() {
+
+  ros::Subscriber<std_msgs::Float32> sub1("/vehicle/dbw/steering_cmds/", steering_callback);
+  ros::Subscriber<std_msgs::Float32> sub2("/sensor/joystick/left_stick_x", joystick_callback);
+  ros::Subscriber<std_msgs::Bool> sub3("/sensor/joystick/enabled", joystick_enabled_callback);
+  ros::Subscriber<std_msgs::Bool> ks_sub("/vehicle/safety/killed", killswitch_callback);
 
   nh.initNode();
   nh.subscribe(sub1);
@@ -154,7 +155,6 @@ void move_actuator(int spd, boolean dir) {
 void stop_actuator() {
   analogWrite(LPWM, 0);
   analogWrite(RPWM, 0);
-  delay(5);
 }
 
 double mapf(double x, double in_min, double in_max, double out_min, double out_max)

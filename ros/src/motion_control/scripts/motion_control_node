@@ -39,13 +39,11 @@ class MotionControlNode:
         self.steering_pub = rospy.Publisher('/vehicle/dbw/steering_cmds/', Float32, queue_size=3)
         self.current_vel_pub = rospy.Publisher('/vehicle/dbw/current_velocity', Float32, queue_size=3)
         self.desired_vel_pub = rospy.Publisher('/vehicle/dbw/desired_velocity', Float32, queue_size=3)
-        self.desired_header_pub = rospy.Publisher('/vehicle/dbw/desired_vel_header', Header, queue_size=3)
-        self.current_header_pub = rospy.Publisher('/vehicle/dbw/current_vel_header', Header, queue_size=3)
 
         rospy.loginfo("Vehicle Motion Control System Initialized")
         rospy.loginfo("Vehicle steering factor: " + str(self.angle_scale))
 
-        rate = rospy.Rate(30)
+        rate = rospy.Rate(20)
 
         while not rospy.is_shutdown():
 
@@ -73,10 +71,6 @@ class MotionControlNode:
         self.steering_angle = self.angle_scale * data.angular.z
         self.desire_velocity = data.linear.x * 0.85
 
-        h = Header()
-        h.stamp = rospy.Time.now()  # Note you need to call rospy.init_node() before this will work
-        self.desired_header_pub.publish(h)
-
     def odom_callback(self, data):
 
         self.previous_pose = self.current_pose
@@ -85,7 +79,7 @@ class MotionControlNode:
         self.previous_time = self.current_time
         self.current_time = data.header.stamp.nsecs
 
-        self.current_header_pub.publish(data.header)
+        # self.current_header_pub.publish(data.header)
 
     def distance(self, x_1, y_1, x_2, y_2):
         return math.sqrt(pow((x_2 - x_1), 2) + pow((y_2 - y_1), 2))

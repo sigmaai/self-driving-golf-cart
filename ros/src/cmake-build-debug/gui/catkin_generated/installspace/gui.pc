@@ -1,8 +1,0 @@
-prefix=/usr/local
-
-Name: gui
-Description: Description of gui
-Version: 0.0.1
-Cflags: 
-Libs: -L/usr/local/lib 
-Requires: 

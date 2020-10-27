@@ -1,0 +1,7 @@
+
+image: rtabmap.pgm
+resolution: 0.05
+origin: [-1.05, -5.40, -0.012]
+occupied_thresh: 0.65
+free_thresh: 0.196
+negate: 0

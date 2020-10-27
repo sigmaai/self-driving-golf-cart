@@ -2,14 +2,86 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8075d57d-0c29-4084-b018-ee8c503d1889" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arduino/brake_accelerator_controller/brake_accelerator_controller.ino" beforeDir="false" afterPath="$PROJECT_DIR$/arduino/brake_accelerator_controller/brake_accelerator_controller.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/arduino/vehicle_killswitch/vehicle_killswitch.ino" beforeDir="false" afterPath="$PROJECT_DIR$/arduino/vehicle_killswitch/vehicle_killswitch.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/motion_control/scripts/motion_control_node" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/motion_control/scripts/motion_control_node" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/navigation/mapping/src/vehicle_init_pose.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/navigation/mapping/src/vehicle_init_pose.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ros/src/navigation/path_planning/params/base_local_planner_params.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/navigation/path_planning/params/base_local_planner_params.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/CMakeFiles/CMakeError.log" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/CMakeFiles/CMakeError.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/Project.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/Project.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/autopilot/autopilot.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/autopilot/autopilot.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/autopilot/catkin_generated/installspace/autopilotConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/autopilot/catkin_generated/installspace/autopilotConfig.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/catkin/catkin_generated/version/package.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/catkin/catkin_generated/version/package.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/catkin_generated/installspace/_setup_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/catkin_generated/installspace/_setup_util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/catkin_generated/stamps/Project/_setup_util.py.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/catkin_generated/stamps/Project/_setup_util.py.stamp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/catkin_generated/stamps/Project/interrogate_setup_dot_py.py.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/catkin_generated/stamps/Project/interrogate_setup_dot_py.py.stamp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/catkin_generated/stamps/Project/package.xml.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/catkin_generated/stamps/Project/package.xml.stamp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/data_logger/catkin_generated/installspace/data_loggerConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/data_logger/catkin_generated/installspace/data_loggerConfig.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/data_logger/data_logger.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/data_logger/data_logger.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/detection/lane_detection/catkin_generated/installspace/lane_detectionConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/detection/lane_detection/catkin_generated/installspace/lane_detectionConfig.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/detection/lane_detection/lane_detection.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/detection/lane_detection/lane_detection.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/detection/object_detection/CMakeFiles/object_detection_generate_messages_cpp.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/detection/object_detection/CMakeFiles/object_detection_generate_messages_cpp.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/detection/object_detection/CMakeFiles/object_detection_generate_messages_eus.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/detection/object_detection/CMakeFiles/object_detection_generate_messages_eus.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/detection/object_detection/CMakeFiles/object_detection_generate_messages_lisp.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/detection/object_detection/CMakeFiles/object_detection_generate_messages_lisp.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/detection/object_detection/CMakeFiles/object_detection_generate_messages_nodejs.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/detection/object_detection/CMakeFiles/object_detection_generate_messages_nodejs.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/detection/object_detection/CMakeFiles/object_detection_generate_messages_py.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/detection/object_detection/CMakeFiles/object_detection_generate_messages_py.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/detection/object_detection/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/detection/object_detection/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/detection/object_detection/catkin_generated/installspace/object_detectionConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/detection/object_detection/catkin_generated/installspace/object_detectionConfig.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/detection/object_detection/object_detection.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/detection/object_detection/object_detection.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/driver/catkin_generated/installspace/driverConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/driver/catkin_generated/installspace/driverConfig.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/driver/driver.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/driver/driver.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/gtest/googlemock/CMakeFiles/gmock_main.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/gtest/googlemock/CMakeFiles/gmock_main.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/gtest/googlemock/gmock.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/gtest/googlemock/gmock.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/gtest/googlemock/gtest/CMakeFiles/gtest.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/gtest/googlemock/gtest/CMakeFiles/gtest.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/gtest/googlemock/gtest/gtest.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/gtest/googlemock/gtest/gtest.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/gtest/googletest-distribution.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/gtest/googletest-distribution.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/point_cloud/CMakeFiles/planar_segmentation.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/point_cloud/CMakeFiles/planar_segmentation.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/point_cloud/CMakeFiles/planar_segmentation.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/point_cloud/CMakeFiles/planar_segmentation.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/point_cloud/CMakeFiles/planar_segmentation.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/point_cloud/CMakeFiles/planar_segmentation.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/point_cloud/CMakeFiles/point_cloud_transform.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/point_cloud/CMakeFiles/point_cloud_transform.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/point_cloud/CMakeFiles/point_cloud_transform.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/point_cloud/CMakeFiles/point_cloud_transform.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/point_cloud/CMakeFiles/point_cloud_transform.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/point_cloud/CMakeFiles/point_cloud_transform.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/point_cloud/catkin_generated/installspace/point_cloudConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/point_cloud/catkin_generated/installspace/point_cloudConfig.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/point_cloud/point_cloud.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/point_cloud/point_cloud.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/segmentation/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/segmentation/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/segmentation/CMakeFiles/segmentation_generate_messages_cpp.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/segmentation/CMakeFiles/segmentation_generate_messages_cpp.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/segmentation/CMakeFiles/segmentation_generate_messages_eus.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/segmentation/CMakeFiles/segmentation_generate_messages_eus.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/segmentation/CMakeFiles/segmentation_generate_messages_lisp.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/segmentation/CMakeFiles/segmentation_generate_messages_lisp.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/segmentation/CMakeFiles/segmentation_generate_messages_nodejs.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/segmentation/CMakeFiles/segmentation_generate_messages_nodejs.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/segmentation/CMakeFiles/segmentation_generate_messages_py.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/segmentation/CMakeFiles/segmentation_generate_messages_py.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/segmentation/catkin_generated/installspace/segmentationConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/segmentation/catkin_generated/installspace/segmentationConfig.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/segmentation/segmentation.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/segmentation/segmentation.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/gps/catkin_generated/installspace/gpsConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/gps/catkin_generated/installspace/gpsConfig.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/gps/gps.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/gps/gps.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/joystick/CMakeFiles/joy_node.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/joystick/CMakeFiles/joy_node.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/joystick/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/joystick/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/joystick/catkin_generated/installspace/joyConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/joystick/catkin_generated/installspace/joyConfig.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/joystick/joy.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/joystick/joy.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_display_rviz/catkin_generated/installspace/zed_display_rvizConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_display_rviz/catkin_generated/installspace/zed_display_rvizConfig.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_display_rviz/zed_display_rviz.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_display_rviz/zed_display_rviz.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_ros/zed_ros.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_ros/zed_ros.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/ZEDWrapper.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/ZEDWrapper.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/ZEDWrapper.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/ZEDWrapper.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_cpp.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_cpp.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_eus.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_eus.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_lisp.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_lisp.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_nodejs.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_generate_messages_nodejs.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_node.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_node.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_node.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/CMakeFiles/zed_wrapper_node.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/catkin_generated/installspace/zed_wrapperConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/catkin_generated/installspace/zed_wrapperConfig.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/zed_wrapper.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/sensors/zed-ros-wrapper/zed_wrapper/zed_wrapper.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/simulation/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/simulation/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/simulation/CMakeFiles/simulation_gencfg.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/simulation/CMakeFiles/simulation_gencfg.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/simulation/CMakeFiles/simulation_generate_messages_cpp.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/simulation/CMakeFiles/simulation_generate_messages_cpp.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/simulation/CMakeFiles/simulation_generate_messages_eus.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/simulation/CMakeFiles/simulation_generate_messages_eus.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/simulation/CMakeFiles/simulation_generate_messages_lisp.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/simulation/CMakeFiles/simulation_generate_messages_lisp.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/simulation/CMakeFiles/simulation_generate_messages_nodejs.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/simulation/CMakeFiles/simulation_generate_messages_nodejs.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/simulation/CMakeFiles/simulation_generate_messages_py.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/simulation/CMakeFiles/simulation_generate_messages_py.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/simulation/catkin_generated/installspace/simulationConfig.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/simulation/catkin_generated/installspace/simulationConfig.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ros/src/cmake-build-debug/simulation/simulation.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/ros/src/cmake-build-debug/simulation/simulation.cbp" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,46 +107,6 @@
     </option>
     <expand />
     <select />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ros/src/navigation/path_planning/params/base_local_planner_params.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ros/src/navigation/path_planning/params/costmap_global_params.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ros/src/motion_control/scripts/motion_control_node">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="64" column="16" lean-forward="true" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ros/src/driver_control/launch/joystick_control.launch">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -131,119 +163,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/ros/src/segmentation/scripts/helper.py" />
-        <option value="$PROJECT_DIR$/ros/src/sensors/cv_camera/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/ros/src/sensors/cv_camera/scripts/cv_bridge_2.py" />
-        <option value="$PROJECT_DIR$/ros/src/sensors/cv_camera/scripts/python_cam.py" />
-        <option value="$PROJECT_DIR$/ros/src/segmentation/scripts/simpleExample_transformTestResults2BEV.py" />
-        <option value="$PROJECT_DIR$/ros/src/segmentation/scripts/transform2BEV.py" />
-        <option value="$PROJECT_DIR$/ros/src/data_logger/launch/steering_logger.launch" />
-        <option value="$PROJECT_DIR$/ros/src/gui/launch/rqt_with_bag.launch" />
-        <option value="$PROJECT_DIR$/ros/src/simulation/launch/start_camera_sim.launch" />
-        <option value="$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim_node" />
-        <option value="$PROJECT_DIR$/ros/src/sensors/joystick/scripts/camera_select.py" />
-        <option value="$PROJECT_DIR$/ros/src/sensors/camera/launch/start_camera.launch" />
-        <option value="$PROJECT_DIR$/ros/src/sensors/camera/scripts/camera_select.py" />
-        <option value="$PROJECT_DIR$/ros/src/sensors/camera/scripts/python_cam.py" />
-        <option value="$PROJECT_DIR$/ros/README.md" />
-        <option value="$PROJECT_DIR$/ros/src/detection/object_detection/scripts/object_detection_node" />
-        <option value="$PROJECT_DIR$/docs/build/html/_sources/About ROS.rst.txt" />
-        <option value="$PROJECT_DIR$/ros/src/driver/launch/drive.launch" />
-        <option value="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/launch/CHANGES.md" />
-        <option value="$PROJECT_DIR$/ros/src/gui/launch/rqt.launch" />
-        <option value="$PROJECT_DIR$/ros/src/point_cloud/package.xml" />
-        <option value="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/launch/zed_camera.launch" />
-        <option value="$PROJECT_DIR$/ros/src/point_cloud/launch/plane_segmentation.launch" />
-        <option value="$PROJECT_DIR$/ros/src/point_cloud/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/ros/src/point_cloud/src/planar_segmentation.cpp" />
-        <option value="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/scripts/camera_select.py" />
-        <option value="$PROJECT_DIR$/ros/src/segmentation/launch/segmentation.launch" />
-        <option value="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/launch/zed.launch" />
-        <option value="$PROJECT_DIR$/ros/src/segmentation/scripts/segmentor.py" />
-        <option value="$PROJECT_DIR$/ros/src/segmentation/scripts/BirdsEyeView.py" />
-        <option value="$PROJECT_DIR$/ros/src/path_planning/scripts/experiment_node.py" />
-        <option value="$PROJECT_DIR$/ros/src/path_planning/scripts/point_cloud_transform.cpp" />
-        <option value="$PROJECT_DIR$/ros/src/path_planning/scripts/car.py" />
-        <option value="$PROJECT_DIR$/ros/src/path_planning/scripts/reeds_shepp_path_planning.py" />
-        <option value="$PROJECT_DIR$/ros/src/path_planning/scripts/global_path.py" />
-        <option value="$PROJECT_DIR$/ros/src/path_planning/scripts/a_star.py" />
-        <option value="$PROJECT_DIR$/ros/src/path_planning/scripts/hybrid_a_star.py" />
-        <option value="$PROJECT_DIR$/ros/src/path_planning/scripts/has_node.py" />
-        <option value="$PROJECT_DIR$/ros/src/autopilot/launch/autopilot.launch" />
-        <option value="$PROJECT_DIR$/ros/src/autopilot/scripts/autopilot_node" />
-        <option value="$PROJECT_DIR$/ros/src/segmentation/scripts/segmentation_node" />
-        <option value="$PROJECT_DIR$/ros/src/autopilot/scripts/visualization.py" />
-        <option value="$PROJECT_DIR$/ros/src/navigation/path_planning/launch/rtab_mapping_navigation.launch" />
-        <option value="$PROJECT_DIR$/ros/src/navigation/path_planning/params/costmap_common_params.yaml" />
-        <option value="$PROJECT_DIR$/ros/src/navigation/mapping/launch/rtabmap_modified.launch" />
-        <option value="$PROJECT_DIR$/ros/src/navigation/mapping/launch/rtab_mapping.launch" />
-        <option value="$PROJECT_DIR$/ros/src/navigation/path_planning/params/costmap_global_params.yaml" />
-        <option value="$PROJECT_DIR$/ros/src/navigation/path_planning/params/base_local_planner_params.yaml" />
-        <option value="$PROJECT_DIR$/ros/src/navigation/path_planning/params/costmap_local_params.yaml" />
-        <option value="$PROJECT_DIR$/ros/src/driver_control/launch/joystick_control.launch" />
-        <option value="$PROJECT_DIR$/ros/src/motion_control/scripts/motion_control_node" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="72" />
     <option name="y" value="34" />
     <option name="width" value="1528" />
     <option name="height" value="864" />
   </component>
+  <component name="ProjectId" id="1VcKrRg2Z7YkyjN07GahUb1bifP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
-              <item name="ros" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
-              <item name="ros" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
-              <item name="ros" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="driver_control" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="self-driving-golf-cart" type="462c0819:PsiDirectoryNode" />
-              <item name="ros" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="motion_control" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="self-driving-golf-cart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -270,18 +203,6 @@
       <recent name="$PROJECT_DIR$/ros/src/sensors" />
       <recent name="$PROJECT_DIR$/ros/src/AutoPilot" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Python.__init__">
     <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -362,6 +283,18 @@
         <item itemvalue="Python.dataset_viz" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="StructuralSearchPlugin">
     <searchConfiguration name="user defined" created="1545518951805" text="&quot;~/Desktop/self-driving-golf-cart/ros/Makefile&quot;" recursive="true" caseInsensitive="true" type="ActionScript" history="1">
@@ -501,11 +434,10 @@
       <workItem from="1557407791311" duration="4000" />
       <workItem from="1557410238179" duration="286000" />
       <workItem from="1557436349584" duration="1468000" />
+      <workItem from="1558200328056" duration="2000" />
+      <workItem from="1577547155289" duration="4000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="195500000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -515,33 +447,6 @@
       <are-packages-shown value="true" />
       <is-autoscroll-to-source value="true" />
     </todo-panel>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="72" y="34" width="1528" height="864" extended-state="1" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5096525" visible="true" weight="0.22537112" />
-      <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32262382" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32742155" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49730095" visible="true" weight="0.32341" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5026991" side_tool="true" weight="0.32253712" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="Python Console" order="12" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Structure" order="3" sideWeight="0.4903475" weight="0.20374082" />
-      <window_info anchor="right" id="SciView" order="4" weight="0.3299933" />
-      <window_info anchor="right" id="Database" order="5" weight="0.32975152" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -555,262 +460,10 @@
       <path value="$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper" />
     </ignored-roots>
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ros/src/localization/src/helper_functions.h" />
-    <entry file="file://$PROJECT_DIR$/ros/src/sensors/camera/launch/start_camera.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="58" selection-start-line="8" selection-start-column="58" selection-end-line="8" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/driver/launch/drive.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="55" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/sensors/camera/scripts/camera_select.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" lean-forward="true" selection-end-line="67" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/simulation/scripts/camera_sim_node">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-          <folding>
-            <element signature="e#301#311#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/launch/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="360">
-            <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///opt/ros/melodic/lib/python2.7/dist-packages/cv_bridge/core.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-205">
-          <caret line="140" column="8" selection-start-line="140" selection-start-column="8" selection-end-line="140" selection-end-column="8" />
-          <folding>
-            <element signature="e#1638#1660#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-1247972723/cv2/cv2/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="8391" column="4" selection-start-line="8391" selection-start-column="4" selection-end-line="8391" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/launch/CHANGES.md" />
-    <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/models/icnet_fusion.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/perception_pcl-melodic-devel/pcl_ros/cfg/MLS.cfg" />
-    <entry file="file://$PROJECT_DIR$/ros/src/point_cloud/launch/plane_segmentation.launch" />
-    <entry file="file://$PROJECT_DIR$/ros/src/point_cloud/src/planar_segmentation.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/point_cloud/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="176" column="32" selection-start-line="176" selection-start-column="32" selection-end-line="176" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/point_cloud/package.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="51" column="23" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/launch/zed_camera.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" column="29" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/models/icnet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/segmentation/launch/segmentation.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="22" column="110" lean-forward="true" selection-start-line="22" selection-start-column="110" selection-end-line="22" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/gui/launch/rqt.launch" />
-    <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/simpleExample_transformTestResults2BEV.py" />
-    <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/transform2BEV.py" />
-    <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/BirdsEyeView.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="44" column="29" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
-          <folding>
-            <element signature="e#383#401#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/point_cloud/src/ground_plane_detection.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="205" selection-start-line="205" selection-end-line="205" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/launch/zed.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="51" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/point_cloud/src/point_cloud_transform.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="45" column="21" lean-forward="true" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/path_planning/scripts/point_cloud_transform.cpp" />
-    <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-810" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/sensors/zed-ros-wrapper/zed_wrapper/scripts/camera_select.py" />
-    <entry file="file://$PROJECT_DIR$/ros/src/path_planning/scripts/experiment_node.py" />
-    <entry file="file://$PROJECT_DIR$/ros/src/path_planning/scripts/global_path.py" />
-    <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/segmentor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1410">
-          <caret line="94" column="27" lean-forward="true" selection-start-line="94" selection-start-column="21" selection-end-line="94" selection-end-column="27" />
-          <folding>
-            <element signature="e#218#248#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/path_planning/scripts/reeds_shepp_path_planning.py" />
-    <entry file="file://$PROJECT_DIR$/ros/src/path_planning/src/build_map.cpp" />
-    <entry file="file://$PROJECT_DIR$/ros/src/path_planning/scripts/car.py" />
-    <entry file="file://$PROJECT_DIR$/ros/src/path_planning/scripts/a_star.py" />
-    <entry file="file://$PROJECT_DIR$/ros/src/segmentation/scripts/segmentation_node">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="48" column="54" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
-          <folding>
-            <element signature="e#1286#1317#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/autopilot/scripts/autopilot_node">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="31" column="51" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/path_planning/scripts/hybrid_a_star.py" />
-    <entry file="file://$PROJECT_DIR$/ros/src/path_planning/scripts/has_node.py" />
-    <entry file="file://$PROJECT_DIR$/ros/src/autopilot/scripts/visualization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="176" column="51" selection-start-line="176" selection-start-column="51" selection-end-line="176" selection-end-column="51" />
-          <folding>
-            <element signature="e#211#229#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/navigation/path_planning/params/base_global_planner_params.yaml" />
-    <entry file="file://$PROJECT_DIR$/ros/src/autopilot/launch/autopilot.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="43" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/navigation/path_planning/params/costmap_common_params.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/navigation/mapping/launch/rtabmap_modified.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="20" column="54" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/navigation/mapping/launch/rtab_mapping.launch" />
-    <entry file="file://$PROJECT_DIR$/ros/src/navigation/path_planning/launch/rtab_mapping_navigation.launch" />
-    <entry file="file://$PROJECT_DIR$/ros/src/navigation/path_planning/params/costmap_local_params.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="13" lean-forward="true" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/navigation/path_planning/params/costmap_global_params.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/driver_control/launch/joystick_control.launch">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/navigation/path_planning/params/base_local_planner_params.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ros/src/motion_control/scripts/motion_control_node">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="64" column="16" lean-forward="true" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
+  <component name="WindowStateProjectService">
+    <state x="488" y="291" key="com.intellij.ide.util.TipDialog" timestamp="1577547153938">
+      <screen x="65" y="28" width="1535" height="872" />
+    </state>
+    <state x="488" y="291" key="com.intellij.ide.util.TipDialog/65.28.1535.872@65.28.1535.872" timestamp="1577547153938" />
   </component>
 </project>

@@ -28,8 +28,6 @@ Email: contact@neilnie.com
     <arg name="camera_info_topic"       	default="rgb/camera_info" />
     <arg name="depth_camera_info_topic" 	default="depth/camera_info" />
 
-    <include file="$(find point_cloud)/launch/point_cloud_helper.launch" />
-
     <node pkg="tf" type="static_transform_publisher" name="camera_base_link" args="0 0 -1.71 0 0 0 zed_camera_center base_link  80" />
 
     <node pkg="tf" type="static_transform_publisher" name="laser_base_link"  args="0 0 -0.90 0 0 0 zed_camera_center laser_base 80" />
@@ -52,8 +50,6 @@ Email: contact@neilnie.com
 
     <!--    RTAB-map Node   -->
     <include file="$(find mapping)/launch/rtabmap_modified.launch">
-
-<!--        <arg name="rtabmap_args"		        value="&#45;&#45;delete_db_on_start" />-->
 
         <!--    mapping mode   -->
         <arg name="localization"                value="false"                           />
