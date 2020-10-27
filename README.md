@@ -4,6 +4,8 @@
 
 [![Build Status](https://travis-ci.org/sigmaai/self-driving-golf-cart.svg?branch=master)](https://travis-ci.org/sigmaai/self-driving-golf-cart) [![codebeat badge](https://codebeat.co/badges/3b223e1c-a2e3-462f-91ff-b8aaddedf1d2)](https://codebeat.co/projects/github-com-sigmaai-self-driving-golf-cart-master) [![Documentation Status](https://readthedocs.org/projects/self-driving-golf-cart/badge/?version=latest)](https://self-driving-golf-cart.readthedocs.io/en/latest/?badge=latest) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/YongyangNie)
 
+⚠️ This repo is no longer being maintained. Feel free to use the source or send me any questions, unfortunately no new commits or PRs will be added/accepted ⚠️
+
 Welcome! This is an open source self-driving development platform aimed for rapid prototyping, deep learning, and robotics research. The system currently runs on a modified electric golf cart. Here are our goals:
 
 ### Goals:
@@ -25,16 +27,12 @@ For the full documentation of the development process, please visit my website: 
 
 ## Table of Content
 - [Try it out](#Try%20it%20out)
-- [About ROS](#About%20ROS)
+- [About ROS](./ros/README.md)
 - [Simulation](#Simulation)
-- [Autopilot & End-to-End Behavioral Cloning](#autopilot--end-to-end-behavioral-cloning)
-	* [What's Behavioral Cloning](#whats-behavioral-cloning)
-	* [Model](#Model)
-- [Semantic Segmentation](#Semantic%20Segmentation)
-- [The Navigation Stack](#the-navigation-stack)
-	* [RTABMap](#RTABMap)
-	* [Path Planning](#Path%20Planning)
-	* [Vehicle Motion Control](#Vehicle%20Motion%20Control)
+- [Autopilot & End-to-End Behavioral Cloning](./ros/src/autopilot/README.md)
+- [Semantic Segmentation](./ros/src/segmentation/README.md)
+- [The Navigation Stack](./ros/src/navigation/README.md)
+
 
 <a name="Try%20it%20out"></a>
 
@@ -71,102 +69,6 @@ To compile the project:
 </center>
 
 🚙 Bon Voyage 😀
-
-<a name="About%20ROS" > </a>
-
-## About ROS
-This project uses ROS. __For more information on ROS, nodes, topics and others please refer to the ROS [README](./ros/README.md).__
-
-<a name="Simulation" > </a>
-
-## Simulation
-(🏗 Construction Zone 🚧)
-
-Building a self-driving car is hard. Not everyone has access to expensive hardware. I am currently trying to integrate this project with the CARLA self-driving simulator. If you are interested in CARLA, please refer to this [documentation](./ros/src/simulation/README.md). The ROS system in this project can *partially* run on the CARLA simulator. 
-
-__If you want to try out the simulator, please refer to the documentation [here](./ros/src/simulation/README.md).__
-
-<center>
-    <img src="./ros/src/simulation/assets/simulator-1.png" alt="Drawing" width="640"/>
-</center>
-
-<a name="autopilot--end-to-end-behavioral-cloning" ></a>
-
-## Autopilot & End-to-End Behavioral Cloning
-
-The autopilot system, found here in the [autopilot node](./ros/src/autopilot), uses deep learning to predict the steering commands and acceleration commands for the vehicle, only using data collected by the front facing camera. 
-
-<a name="whats-behavioral-cloning" > </a>
-
-### What's Behavioral Cloning
-In 2016, NVIDIA proposed a novel deep learning approach allowed their car to accurately perform real-time end-to-end steering command prediction. Around the same time, Udacity held a challenge that asked researchers to create the best end-to-end steering prediction model. Our goal is to further the work in behavioral cloning for self-driving vehicles. 
-
-<a name="Model" > </a>
-
-### Model
-
-NVIDIA's paper used a convolutional neural network with a single frame input. I believe that the single-frame-input CNN doesn't provide any temporal information which is critical in self-driving. This is the motive behind choosing the i3d architecture, which is rich in spacial-temporal information.
-
-The input of the network is a 3d convolutional block, with the shape of `n * weight * height * 3`. `n` is the length of the input sequence. A flatten layer and a dense layer are added to the back of the network for the purpose of this regression problem. 
-
-<center>
-	<img src="./media/model.png" alt="Drawing" width="640"/>
-</center>
-
-Here is a video demo of deep learning model running on the autonomous golf cart. 
-
-[VIDEO DEMO](https://www.youtube.com/watch?v=4bZ40W4BGoE)
-
-<a name="Semantic%20Segmentation" > </a>
-
-## Semantic Segmentation
-The cart understands its surrounding  through semantic segmentation, which is a technique in computer that classifies each pixel in an image into different categories. The vehicle can also make decisions based on the segmentic segmentation results. The cart can change its speed based on the proximity to nearby obstacles.
-
-<center>
-<img src="./media/seg.png" alt="Drawing" width="640"/>
-</center>
-
-We deployed the ENet architecture for segmentation. ENet is design to work well in realtime applications. For more information, please visit the [paper](http://arxiv.org/pdf/1606.02147.pdf). We used the CityScape dataset for training and the python code for training and inferencing are located in the `./src/segmentation/scripts` directory.
-
-[VIDEO DEMO](https://www.youtube.com/watch?v=_y2RCakRrc4)
-
-<a name="the-navigation-stack" > </a>
-
-## The Navigation Stack
-
-![](./media/nav_stack.png)
-
-The self-driving vehicle uses a modified version of the ROS navigation stack. The flowchart above illustrate the mapping and path planning process. First, I create a detailed map of the environment with `rtabmap_ros`. With that global map, I use the localization feature of `rtabmap_ros` and the odom feature of the zed camera system to localize and plan paths. 
-
-<a name="RTABMap" > </a>
-
-### RTABMap
-
-`rtabmap` (realtime appearance based mapping) allows me to construct a global map of the environment. For more information on the mapping package, please check out this [`.launch` file](./ros/src/navigation/mapping/launch/rtab_mapping.launch). 
-
-<center>
-	<img src="./media/rtab-map.png" alt="Drawing" width="640"/>
-</center> 
-
-<a name="Path%20Planning" > </a>
-
-### Path Planning
-
-The project uses the [`move_base`](http://wiki.ros.org/move_base) node from the navigation stack. The image below shows the costmap (in blue and purple), and the global occupancy grid (in black and gray). `move_base` also plans the local and global path. Global paths are shown in green and yellow below. You can find the `yaml` files [here](./ros/src/navigation/path_planning/params). 
-
-<center>
-	<img src="./media/path_plan_1.png" alt="Drawing" width="640"/>
-</center>
-
-<a name="Vehicle%20Motion%20Control" > </a>
-
-### Vehicle Motion Control
-
-The move base node publishes `/cmd_vel` commands, which are processed and sent directly to the vehicle. 
-
-<center>
-	<img src="./media/vehicle_side.png" alt="Drawing" width="640"/>
-</center>
 
 # Contact / Info
 If you are interested in the detailed development process of this project, you can visit Neil's blog at [neilnie.com](https://neilnie.com) to find out more about it. Neil will make sure to keep you posted about all of the latest development on the club.
