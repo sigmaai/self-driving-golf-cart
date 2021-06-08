@@ -15,7 +15,7 @@ Keras == 2.2.4
 # ros/src/autopilot/scripts/visualization.py: 14,15,16
 # ros/src/detection/object_detection/scripts/object_detector.py: 39
 # ros/src/detection/object_detection/scripts/yolo3/utils.py: 5
-Pillow == 6.2.0
+Pillow == 8.2.0
 
 # ros/src/autopilot/scripts/pilot.py: 11
 # ros/src/segmentation/scripts/segmentor.py: 11
