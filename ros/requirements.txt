@@ -159,7 +159,7 @@ numpy == 1.13.3
 # ros/src/segmentation/scripts/utils.py: 7
 # ros/src/segmentation/scripts/validation_fusion.py: 9
 # ros/src/sensors/camera/scripts/python_cam.py: 7
-opencv_python == 4.0.0.21
+opencv_python == 4.2.0.32
 
 # ros/src/segmentation/scripts/utils.py: 10
 # ros/src/segmentation/scripts/validation_fusion.py: 4
